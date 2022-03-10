@@ -143,62 +143,62 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setFields(@Nullable Input<List<FieldArgs>> fields) {
+        public Builder fields(@Nullable Input<List<FieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<FieldArgs> fields) {
+        public Builder fields(@Nullable List<FieldArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOneofs(@Nullable Input<List<String>> oneofs) {
+        public Builder oneofs(@Nullable Input<List<String>> oneofs) {
             this.oneofs = oneofs;
             return this;
         }
 
-        public Builder setOneofs(@Nullable List<String> oneofs) {
+        public Builder oneofs(@Nullable List<String> oneofs) {
             this.oneofs = Input.ofNullable(oneofs);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
-        public Builder setSourceContext(@Nullable SourceContextArgs sourceContext) {
+        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Input.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<TypeSyntax> syntax) {
+        public Builder syntax(@Nullable Input<TypeSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable TypeSyntax syntax) {
+        public Builder syntax(@Nullable TypeSyntax syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }

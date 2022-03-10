@@ -71,22 +71,22 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
             this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable Input<String> sourceDisk) {
+        public Builder sourceDisk(@Nullable Input<String> sourceDisk) {
             this.sourceDisk = sourceDisk;
             return this;
         }
 
-        public Builder setSourceDisk(@Nullable String sourceDisk) {
+        public Builder sourceDisk(@Nullable String sourceDisk) {
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }

@@ -49,7 +49,7 @@ public final class MultiClusterRoutingUseAnyResponse {
     	      this.clusterIds = defaults.clusterIds;
         }
 
-        public Builder setClusterIds(List<String> clusterIds) {
+        public Builder clusterIds(List<String> clusterIds) {
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }

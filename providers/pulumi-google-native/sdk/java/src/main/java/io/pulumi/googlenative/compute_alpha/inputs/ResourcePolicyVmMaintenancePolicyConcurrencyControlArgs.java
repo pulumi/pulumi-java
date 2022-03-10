@@ -53,12 +53,12 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     	      this.concurrencyLimit = defaults.concurrencyLimit;
         }
 
-        public Builder setConcurrencyLimit(@Nullable Input<Integer> concurrencyLimit) {
+        public Builder concurrencyLimit(@Nullable Input<Integer> concurrencyLimit) {
             this.concurrencyLimit = concurrencyLimit;
             return this;
         }
 
-        public Builder setConcurrencyLimit(@Nullable Integer concurrencyLimit) {
+        public Builder concurrencyLimit(@Nullable Integer concurrencyLimit) {
             this.concurrencyLimit = Input.ofNullable(concurrencyLimit);
             return this;
         }

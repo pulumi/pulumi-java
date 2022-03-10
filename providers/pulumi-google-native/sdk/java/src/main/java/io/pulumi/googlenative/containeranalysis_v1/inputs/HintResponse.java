@@ -55,7 +55,7 @@ public final class HintResponse extends io.pulumi.resources.InvokeArgs {
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder setHumanReadableName(String humanReadableName) {
+        public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }

@@ -190,92 +190,92 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setActive(@Nullable Input<Integer> active) {
+        public Builder active(@Nullable Input<Integer> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Integer active) {
+        public Builder active(@Nullable Integer active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable Input<String> completionTime) {
+        public Builder completionTime(@Nullable Input<String> completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable String completionTime) {
+        public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = Input.ofNullable(completionTime);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<JobConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<JobConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<JobConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<JobConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setFailed(@Nullable Input<Integer> failed) {
+        public Builder failed(@Nullable Input<Integer> failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setFailed(@Nullable Integer failed) {
+        public Builder failed(@Nullable Integer failed) {
             this.failed = Input.ofNullable(failed);
             return this;
         }
 
-        public Builder setImageDigest(@Nullable Input<String> imageDigest) {
+        public Builder imageDigest(@Nullable Input<String> imageDigest) {
             this.imageDigest = imageDigest;
             return this;
         }
 
-        public Builder setImageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(@Nullable String imageDigest) {
             this.imageDigest = Input.ofNullable(imageDigest);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<InstanceStatusArgs>> instances) {
+        public Builder instances(@Nullable Input<List<InstanceStatusArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<InstanceStatusArgs> instances) {
+        public Builder instances(@Nullable List<InstanceStatusArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Input<Integer> succeeded) {
+        public Builder succeeded(@Nullable Input<Integer> succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Integer succeeded) {
+        public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = Input.ofNullable(succeeded);
             return this;
         }

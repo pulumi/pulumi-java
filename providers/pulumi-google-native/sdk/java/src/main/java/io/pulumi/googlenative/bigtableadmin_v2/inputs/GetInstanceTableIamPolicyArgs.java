@@ -74,17 +74,17 @@ public final class GetInstanceTableIamPolicyArgs extends io.pulumi.resources.Inv
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

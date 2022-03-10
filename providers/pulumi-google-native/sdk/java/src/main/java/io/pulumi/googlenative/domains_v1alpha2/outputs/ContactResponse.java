@@ -98,22 +98,22 @@ public final class ContactResponse {
     	      this.postalAddress = defaults.postalAddress;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setFaxNumber(String faxNumber) {
+        public Builder faxNumber(String faxNumber) {
             this.faxNumber = Objects.requireNonNull(faxNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPostalAddress(PostalAddressResponse postalAddress) {
+        public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }

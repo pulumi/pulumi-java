@@ -48,7 +48,7 @@ public final class SecurityPolicyCloudArmorConfigResponse {
     	      this.enableMl = defaults.enableMl;
         }
 
-        public Builder setEnableMl(Boolean enableMl) {
+        public Builder enableMl(Boolean enableMl) {
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }

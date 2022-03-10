@@ -284,77 +284,77 @@ public final class EnvironmentConfigResponse {
     	      this.workloadsConfig = defaults.workloadsConfig;
         }
 
-        public Builder setAirflowUri(String airflowUri) {
+        public Builder airflowUri(String airflowUri) {
             this.airflowUri = Objects.requireNonNull(airflowUri);
             return this;
         }
 
-        public Builder setDagGcsPrefix(String dagGcsPrefix) {
+        public Builder dagGcsPrefix(String dagGcsPrefix) {
             this.dagGcsPrefix = Objects.requireNonNull(dagGcsPrefix);
             return this;
         }
 
-        public Builder setDatabaseConfig(DatabaseConfigResponse databaseConfig) {
+        public Builder databaseConfig(DatabaseConfigResponse databaseConfig) {
             this.databaseConfig = Objects.requireNonNull(databaseConfig);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setEnvironmentSize(String environmentSize) {
+        public Builder environmentSize(String environmentSize) {
             this.environmentSize = Objects.requireNonNull(environmentSize);
             return this;
         }
 
-        public Builder setGkeCluster(String gkeCluster) {
+        public Builder gkeCluster(String gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
 
-        public Builder setMaintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setMasterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig) {
+        public Builder masterAuthorizedNetworksConfig(MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig) {
             this.masterAuthorizedNetworksConfig = Objects.requireNonNull(masterAuthorizedNetworksConfig);
             return this;
         }
 
-        public Builder setNodeConfig(NodeConfigResponse nodeConfig) {
+        public Builder nodeConfig(NodeConfigResponse nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setPrivateEnvironmentConfig(PrivateEnvironmentConfigResponse privateEnvironmentConfig) {
+        public Builder privateEnvironmentConfig(PrivateEnvironmentConfigResponse privateEnvironmentConfig) {
             this.privateEnvironmentConfig = Objects.requireNonNull(privateEnvironmentConfig);
             return this;
         }
 
-        public Builder setSoftwareConfig(SoftwareConfigResponse softwareConfig) {
+        public Builder softwareConfig(SoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
 
-        public Builder setWebServerConfig(WebServerConfigResponse webServerConfig) {
+        public Builder webServerConfig(WebServerConfigResponse webServerConfig) {
             this.webServerConfig = Objects.requireNonNull(webServerConfig);
             return this;
         }
 
-        public Builder setWebServerNetworkAccessControl(WebServerNetworkAccessControlResponse webServerNetworkAccessControl) {
+        public Builder webServerNetworkAccessControl(WebServerNetworkAccessControlResponse webServerNetworkAccessControl) {
             this.webServerNetworkAccessControl = Objects.requireNonNull(webServerNetworkAccessControl);
             return this;
         }
 
-        public Builder setWorkloadsConfig(WorkloadsConfigResponse workloadsConfig) {
+        public Builder workloadsConfig(WorkloadsConfigResponse workloadsConfig) {
             this.workloadsConfig = Objects.requireNonNull(workloadsConfig);
             return this;
         }

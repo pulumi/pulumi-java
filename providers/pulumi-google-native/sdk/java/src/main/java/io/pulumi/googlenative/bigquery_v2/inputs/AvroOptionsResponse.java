@@ -51,7 +51,7 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }

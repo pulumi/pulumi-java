@@ -66,12 +66,12 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse {
     	      this.thresholdPercent = defaults.thresholdPercent;
         }
 
-        public Builder setSpendBasis(String spendBasis) {
+        public Builder spendBasis(String spendBasis) {
             this.spendBasis = Objects.requireNonNull(spendBasis);
             return this;
         }
 
-        public Builder setThresholdPercent(Double thresholdPercent) {
+        public Builder thresholdPercent(Double thresholdPercent) {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }

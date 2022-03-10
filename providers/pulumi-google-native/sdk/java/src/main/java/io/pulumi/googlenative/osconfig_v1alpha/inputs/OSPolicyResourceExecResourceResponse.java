@@ -72,12 +72,12 @@ public final class OSPolicyResourceExecResourceResponse extends io.pulumi.resour
     	      this.validate = defaults.validate;
         }
 
-        public Builder setEnforce(OSPolicyResourceExecResourceExecResponse enforce) {
+        public Builder enforce(OSPolicyResourceExecResourceExecResponse enforce) {
             this.enforce = Objects.requireNonNull(enforce);
             return this;
         }
 
-        public Builder setValidate(OSPolicyResourceExecResourceExecResponse validate) {
+        public Builder validate(OSPolicyResourceExecResourceExecResponse validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }

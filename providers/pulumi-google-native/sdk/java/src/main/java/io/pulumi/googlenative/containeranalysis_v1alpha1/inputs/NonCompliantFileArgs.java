@@ -90,32 +90,32 @@ public final class NonCompliantFileArgs extends io.pulumi.resources.ResourceArgs
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDisplayCommand(@Nullable Input<String> displayCommand) {
+        public Builder displayCommand(@Nullable Input<String> displayCommand) {
             this.displayCommand = displayCommand;
             return this;
         }
 
-        public Builder setDisplayCommand(@Nullable String displayCommand) {
+        public Builder displayCommand(@Nullable String displayCommand) {
             this.displayCommand = Input.ofNullable(displayCommand);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }

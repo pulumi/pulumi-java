@@ -108,42 +108,42 @@ public final class ServicePerimeterConfigArgs extends io.pulumi.resources.Resour
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(@Nullable Input<List<String>> accessLevels) {
+        public Builder accessLevels(@Nullable Input<List<String>> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
-        public Builder setAccessLevels(@Nullable List<String> accessLevels) {
+        public Builder accessLevels(@Nullable List<String> accessLevels) {
             this.accessLevels = Input.ofNullable(accessLevels);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<List<String>> resources) {
+        public Builder resources(@Nullable Input<List<String>> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable Input<List<String>> restrictedServices) {
+        public Builder restrictedServices(@Nullable Input<List<String>> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable List<String> restrictedServices) {
+        public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = Input.ofNullable(restrictedServices);
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable Input<VpcAccessibleServicesArgs> vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable Input<VpcAccessibleServicesArgs> vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable VpcAccessibleServicesArgs vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable VpcAccessibleServicesArgs vpcAccessibleServices) {
             this.vpcAccessibleServices = Input.ofNullable(vpcAccessibleServices);
             return this;
         }

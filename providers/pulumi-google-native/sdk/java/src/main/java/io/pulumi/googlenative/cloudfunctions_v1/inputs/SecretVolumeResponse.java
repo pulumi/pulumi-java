@@ -106,22 +106,22 @@ public final class SecretVolumeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setVersions(List<SecretVersionResponse> versions) {
+        public Builder versions(List<SecretVersionResponse> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }

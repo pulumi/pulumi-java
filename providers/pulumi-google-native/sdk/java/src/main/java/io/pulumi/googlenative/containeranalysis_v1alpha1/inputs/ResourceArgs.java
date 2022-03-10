@@ -91,32 +91,32 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentHash(@Nullable Input<HashArgs> contentHash) {
+        public Builder contentHash(@Nullable Input<HashArgs> contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setContentHash(@Nullable HashArgs contentHash) {
+        public Builder contentHash(@Nullable HashArgs contentHash) {
             this.contentHash = Input.ofNullable(contentHash);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

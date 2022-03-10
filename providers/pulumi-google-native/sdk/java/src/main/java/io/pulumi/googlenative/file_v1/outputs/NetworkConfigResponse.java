@@ -114,27 +114,27 @@ public final class NetworkConfigResponse {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(String connectMode) {
+        public Builder connectMode(String connectMode) {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setModes(List<String> modes) {
+        public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setReservedIpRange(String reservedIpRange) {
+        public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }

@@ -74,22 +74,22 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder setContent(Input<FileReferenceArgs> content) {
+        public Builder content(Input<FileReferenceArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(FileReferenceArgs content) {
+        public Builder content(FileReferenceArgs content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setDevicePath(Input<String> devicePath) {
+        public Builder devicePath(Input<String> devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Input.of(Objects.requireNonNull(devicePath));
             return this;
         }

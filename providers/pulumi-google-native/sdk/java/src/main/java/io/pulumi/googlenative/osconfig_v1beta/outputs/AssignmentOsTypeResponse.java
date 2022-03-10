@@ -81,17 +81,17 @@ public final class AssignmentOsTypeResponse {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsArchitecture(String osArchitecture) {
+        public Builder osArchitecture(String osArchitecture) {
             this.osArchitecture = Objects.requireNonNull(osArchitecture);
             return this;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }

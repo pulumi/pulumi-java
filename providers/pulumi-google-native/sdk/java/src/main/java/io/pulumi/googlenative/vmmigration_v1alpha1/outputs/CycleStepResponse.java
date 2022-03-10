@@ -116,27 +116,27 @@ public final class CycleStepResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setInitializingReplication(InitializingReplicationStepResponse initializingReplication) {
+        public Builder initializingReplication(InitializingReplicationStepResponse initializingReplication) {
             this.initializingReplication = Objects.requireNonNull(initializingReplication);
             return this;
         }
 
-        public Builder setPostProcessing(PostProcessingStepResponse postProcessing) {
+        public Builder postProcessing(PostProcessingStepResponse postProcessing) {
             this.postProcessing = Objects.requireNonNull(postProcessing);
             return this;
         }
 
-        public Builder setReplicating(ReplicatingStepResponse replicating) {
+        public Builder replicating(ReplicatingStepResponse replicating) {
             this.replicating = Objects.requireNonNull(replicating);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

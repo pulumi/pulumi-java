@@ -73,12 +73,12 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse extends io.pulumi.res
     	      this.maxFindings = defaults.maxFindings;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setMaxFindings(Integer maxFindings) {
+        public Builder maxFindings(Integer maxFindings) {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }

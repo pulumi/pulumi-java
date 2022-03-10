@@ -90,32 +90,32 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

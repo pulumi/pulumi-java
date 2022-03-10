@@ -220,122 +220,122 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Input<Map<String,String>> customAttributes) {
+        public Builder customAttributes(@Nullable Input<Map<String,String>> customAttributes) {
             this.customAttributes = customAttributes;
             return this;
         }
 
-        public Builder setCustomAttributes(@Nullable Map<String,String> customAttributes) {
+        public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
             this.customAttributes = Input.ofNullable(customAttributes);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setEventTypes(@Nullable Input<List<String>> eventTypes) {
+        public Builder eventTypes(@Nullable Input<List<String>> eventTypes) {
             this.eventTypes = eventTypes;
             return this;
         }
 
-        public Builder setEventTypes(@Nullable List<String> eventTypes) {
+        public Builder eventTypes(@Nullable List<String> eventTypes) {
             this.eventTypes = Input.ofNullable(eventTypes);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable Input<String> objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable Input<String> objectNamePrefix) {
             this.objectNamePrefix = objectNamePrefix;
             return this;
         }
 
-        public Builder setObjectNamePrefix(@Nullable String objectNamePrefix) {
+        public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
             this.objectNamePrefix = Input.ofNullable(objectNamePrefix);
             return this;
         }
 
-        public Builder setPayloadFormat(@Nullable Input<String> payloadFormat) {
+        public Builder payloadFormat(@Nullable Input<String> payloadFormat) {
             this.payloadFormat = payloadFormat;
             return this;
         }
 
-        public Builder setPayloadFormat(@Nullable String payloadFormat) {
+        public Builder payloadFormat(@Nullable String payloadFormat) {
             this.payloadFormat = Input.ofNullable(payloadFormat);
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable Input<String> provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable Input<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable String provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Input.ofNullable(provisionalUserProject);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }
 
-        public Builder setUserProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Input<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = Input.ofNullable(userProject);
             return this;
         }

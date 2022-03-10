@@ -89,17 +89,17 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setInvertRegex(Boolean invertRegex) {
+        public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

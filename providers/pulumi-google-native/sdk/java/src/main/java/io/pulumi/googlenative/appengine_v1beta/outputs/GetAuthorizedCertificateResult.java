@@ -165,42 +165,42 @@ public final class GetAuthorizedCertificateResult {
     	      this.visibleDomainMappings = defaults.visibleDomainMappings;
         }
 
-        public Builder setCertificateRawData(CertificateRawDataResponse certificateRawData) {
+        public Builder certificateRawData(CertificateRawDataResponse certificateRawData) {
             this.certificateRawData = Objects.requireNonNull(certificateRawData);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDomainMappingsCount(Integer domainMappingsCount) {
+        public Builder domainMappingsCount(Integer domainMappingsCount) {
             this.domainMappingsCount = Objects.requireNonNull(domainMappingsCount);
             return this;
         }
 
-        public Builder setDomainNames(List<String> domainNames) {
+        public Builder domainNames(List<String> domainNames) {
             this.domainNames = Objects.requireNonNull(domainNames);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setManagedCertificate(ManagedCertificateResponse managedCertificate) {
+        public Builder managedCertificate(ManagedCertificateResponse managedCertificate) {
             this.managedCertificate = Objects.requireNonNull(managedCertificate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVisibleDomainMappings(List<String> visibleDomainMappings) {
+        public Builder visibleDomainMappings(List<String> visibleDomainMappings) {
             this.visibleDomainMappings = Objects.requireNonNull(visibleDomainMappings);
             return this;
         }

@@ -251,142 +251,142 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSpecifiedType = defaults.userSpecifiedType;
         }
 
-        public Builder setBigqueryDateShardedSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec) {
+        public Builder bigqueryDateShardedSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec) {
             this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
             return this;
         }
 
-        public Builder setBigqueryDateShardedSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
+        public Builder bigqueryDateShardedSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
             this.bigqueryDateShardedSpec = Input.ofNullable(bigqueryDateShardedSpec);
             return this;
         }
 
-        public Builder setBigqueryTableSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec) {
+        public Builder bigqueryTableSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs> bigqueryTableSpec) {
             this.bigqueryTableSpec = bigqueryTableSpec;
             return this;
         }
 
-        public Builder setBigqueryTableSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs bigqueryTableSpec) {
+        public Builder bigqueryTableSpec(@Nullable GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs bigqueryTableSpec) {
             this.bigqueryTableSpec = Input.ofNullable(bigqueryTableSpec);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntryGroupId(Input<String> entryGroupId) {
+        public Builder entryGroupId(Input<String> entryGroupId) {
             this.entryGroupId = Objects.requireNonNull(entryGroupId);
             return this;
         }
 
-        public Builder setEntryGroupId(String entryGroupId) {
+        public Builder entryGroupId(String entryGroupId) {
             this.entryGroupId = Input.of(Objects.requireNonNull(entryGroupId));
             return this;
         }
 
-        public Builder setEntryId(Input<String> entryId) {
+        public Builder entryId(Input<String> entryId) {
             this.entryId = Objects.requireNonNull(entryId);
             return this;
         }
 
-        public Builder setEntryId(String entryId) {
+        public Builder entryId(String entryId) {
             this.entryId = Input.of(Objects.requireNonNull(entryId));
             return this;
         }
 
-        public Builder setGcsFilesetSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable Input<GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs> gcsFilesetSpec) {
             this.gcsFilesetSpec = gcsFilesetSpec;
             return this;
         }
 
-        public Builder setGcsFilesetSpec(@Nullable GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs gcsFilesetSpec) {
+        public Builder gcsFilesetSpec(@Nullable GoogleCloudDatacatalogV1beta1GcsFilesetSpecArgs gcsFilesetSpec) {
             this.gcsFilesetSpec = Input.ofNullable(gcsFilesetSpec);
             return this;
         }
 
-        public Builder setLinkedResource(@Nullable Input<String> linkedResource) {
+        public Builder linkedResource(@Nullable Input<String> linkedResource) {
             this.linkedResource = linkedResource;
             return this;
         }
 
-        public Builder setLinkedResource(@Nullable String linkedResource) {
+        public Builder linkedResource(@Nullable String linkedResource) {
             this.linkedResource = Input.ofNullable(linkedResource);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<GoogleCloudDatacatalogV1beta1SchemaArgs> schema) {
+        public Builder schema(@Nullable Input<GoogleCloudDatacatalogV1beta1SchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable GoogleCloudDatacatalogV1beta1SchemaArgs schema) {
+        public Builder schema(@Nullable GoogleCloudDatacatalogV1beta1SchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setType(@Nullable Input<EntryType> type) {
+        public Builder type(@Nullable Input<EntryType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable EntryType type) {
+        public Builder type(@Nullable EntryType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserSpecifiedSystem(@Nullable Input<String> userSpecifiedSystem) {
+        public Builder userSpecifiedSystem(@Nullable Input<String> userSpecifiedSystem) {
             this.userSpecifiedSystem = userSpecifiedSystem;
             return this;
         }
 
-        public Builder setUserSpecifiedSystem(@Nullable String userSpecifiedSystem) {
+        public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
             this.userSpecifiedSystem = Input.ofNullable(userSpecifiedSystem);
             return this;
         }
 
-        public Builder setUserSpecifiedType(@Nullable Input<String> userSpecifiedType) {
+        public Builder userSpecifiedType(@Nullable Input<String> userSpecifiedType) {
             this.userSpecifiedType = userSpecifiedType;
             return this;
         }
 
-        public Builder setUserSpecifiedType(@Nullable String userSpecifiedType) {
+        public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
             this.userSpecifiedType = Input.ofNullable(userSpecifiedType);
             return this;
         }

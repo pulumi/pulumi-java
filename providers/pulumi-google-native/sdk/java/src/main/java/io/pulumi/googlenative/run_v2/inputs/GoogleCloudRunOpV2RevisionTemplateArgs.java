@@ -259,132 +259,132 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
     	      this.vpcAccess = defaults.vpcAccess;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setConfidential(@Nullable Input<Boolean> confidential) {
+        public Builder confidential(@Nullable Input<Boolean> confidential) {
             this.confidential = confidential;
             return this;
         }
 
-        public Builder setConfidential(@Nullable Boolean confidential) {
+        public Builder confidential(@Nullable Boolean confidential) {
             this.confidential = Input.ofNullable(confidential);
             return this;
         }
 
-        public Builder setContainerConcurrency(@Nullable Input<Integer> containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Input<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
-        public Builder setContainerConcurrency(@Nullable Integer containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Input.ofNullable(containerConcurrency);
             return this;
         }
 
-        public Builder setContainers(@Nullable Input<List<GoogleCloudRunOpV2ContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<GoogleCloudRunOpV2ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<GoogleCloudRunOpV2ContainerArgs> containers) {
+        public Builder containers(@Nullable List<GoogleCloudRunOpV2ContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<String> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<String> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setExecutionEnvironment(@Nullable Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment) {
+        public Builder executionEnvironment(@Nullable Input<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment) {
             this.executionEnvironment = executionEnvironment;
             return this;
         }
 
-        public Builder setExecutionEnvironment(@Nullable GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
+        public Builder executionEnvironment(@Nullable GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment executionEnvironment) {
             this.executionEnvironment = Input.ofNullable(executionEnvironment);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Input<String> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable String revision) {
+        public Builder revision(@Nullable String revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setScaling(@Nullable Input<GoogleCloudRunOpV2RevisionScalingArgs> scaling) {
+        public Builder scaling(@Nullable Input<GoogleCloudRunOpV2RevisionScalingArgs> scaling) {
             this.scaling = scaling;
             return this;
         }
 
-        public Builder setScaling(@Nullable GoogleCloudRunOpV2RevisionScalingArgs scaling) {
+        public Builder scaling(@Nullable GoogleCloudRunOpV2RevisionScalingArgs scaling) {
             this.scaling = Input.ofNullable(scaling);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<GoogleCloudRunOpV2VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<GoogleCloudRunOpV2VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<GoogleCloudRunOpV2VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<GoogleCloudRunOpV2VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
 
-        public Builder setVpcAccess(@Nullable Input<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
+        public Builder vpcAccess(@Nullable Input<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess) {
             this.vpcAccess = vpcAccess;
             return this;
         }
 
-        public Builder setVpcAccess(@Nullable GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
+        public Builder vpcAccess(@Nullable GoogleCloudRunOpV2VpcAccessArgs vpcAccess) {
             this.vpcAccess = Input.ofNullable(vpcAccess);
             return this;
         }

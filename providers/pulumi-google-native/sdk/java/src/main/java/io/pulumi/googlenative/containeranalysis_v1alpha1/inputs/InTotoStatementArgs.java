@@ -126,52 +126,52 @@ public final class InTotoStatementArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setPredicateType(@Nullable Input<String> predicateType) {
+        public Builder predicateType(@Nullable Input<String> predicateType) {
             this.predicateType = predicateType;
             return this;
         }
 
-        public Builder setPredicateType(@Nullable String predicateType) {
+        public Builder predicateType(@Nullable String predicateType) {
             this.predicateType = Input.ofNullable(predicateType);
             return this;
         }
 
-        public Builder setProvenance(@Nullable Input<InTotoProvenanceArgs> provenance) {
+        public Builder provenance(@Nullable Input<InTotoProvenanceArgs> provenance) {
             this.provenance = provenance;
             return this;
         }
 
-        public Builder setProvenance(@Nullable InTotoProvenanceArgs provenance) {
+        public Builder provenance(@Nullable InTotoProvenanceArgs provenance) {
             this.provenance = Input.ofNullable(provenance);
             return this;
         }
 
-        public Builder setSlsaProvenance(@Nullable Input<SlsaProvenanceArgs> slsaProvenance) {
+        public Builder slsaProvenance(@Nullable Input<SlsaProvenanceArgs> slsaProvenance) {
             this.slsaProvenance = slsaProvenance;
             return this;
         }
 
-        public Builder setSlsaProvenance(@Nullable SlsaProvenanceArgs slsaProvenance) {
+        public Builder slsaProvenance(@Nullable SlsaProvenanceArgs slsaProvenance) {
             this.slsaProvenance = Input.ofNullable(slsaProvenance);
             return this;
         }
 
-        public Builder setSubject(@Nullable Input<List<SubjectArgs>> subject) {
+        public Builder subject(@Nullable Input<List<SubjectArgs>> subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setSubject(@Nullable List<SubjectArgs> subject) {
+        public Builder subject(@Nullable List<SubjectArgs> subject) {
             this.subject = Input.ofNullable(subject);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

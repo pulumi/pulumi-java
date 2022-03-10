@@ -55,7 +55,7 @@ public final class DetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.attestation = defaults.attestation;
         }
 
-        public Builder setAttestation(AttestationResponse attestation) {
+        public Builder attestation(AttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }

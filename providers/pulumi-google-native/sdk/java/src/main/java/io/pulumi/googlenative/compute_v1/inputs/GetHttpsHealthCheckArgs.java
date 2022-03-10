@@ -62,12 +62,12 @@ public final class GetHttpsHealthCheckArgs extends io.pulumi.resources.InvokeArg
     	      this.project = defaults.project;
         }
 
-        public Builder setHttpsHealthCheck(String httpsHealthCheck) {
+        public Builder httpsHealthCheck(String httpsHealthCheck) {
             this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

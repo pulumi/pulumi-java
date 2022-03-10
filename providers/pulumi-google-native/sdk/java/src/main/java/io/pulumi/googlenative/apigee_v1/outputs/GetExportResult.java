@@ -177,47 +177,47 @@ public final class GetExportResult {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setError(String error) {
+        public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setExecutionTime(String executionTime) {
+        public Builder executionTime(String executionTime) {
             this.executionTime = Objects.requireNonNull(executionTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSelf(String self) {
+        public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdated(String updated) {
+        public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

@@ -122,27 +122,27 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
     	      this.sensitiveValueFrequencyUpperBound = defaults.sensitiveValueFrequencyUpperBound;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setSensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
+        public Builder sensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
             this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound);
             return this;
         }
 
-        public Builder setSensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
+        public Builder sensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
             this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
             return this;
         }

@@ -55,7 +55,7 @@ public final class AwsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }

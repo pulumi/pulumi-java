@@ -48,7 +48,7 @@ public final class EndpointMatcherResponse {
     	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
         }
 
-        public Builder setMetadataLabelMatcher(MetadataLabelMatcherResponse metadataLabelMatcher) {
+        public Builder metadataLabelMatcher(MetadataLabelMatcherResponse metadataLabelMatcher) {
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
         }

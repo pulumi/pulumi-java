@@ -132,32 +132,32 @@ public final class DocumentationResponse {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setDocumentationRootUrl(String documentationRootUrl) {
+        public Builder documentationRootUrl(String documentationRootUrl) {
             this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl);
             return this;
         }
 
-        public Builder setOverview(String overview) {
+        public Builder overview(String overview) {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
 
-        public Builder setPages(List<PageResponse> pages) {
+        public Builder pages(List<PageResponse> pages) {
             this.pages = Objects.requireNonNull(pages);
             return this;
         }
 
-        public Builder setRules(List<DocumentationRuleResponse> rules) {
+        public Builder rules(List<DocumentationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setServiceRootUrl(String serviceRootUrl) {
+        public Builder serviceRootUrl(String serviceRootUrl) {
             this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl);
             return this;
         }
 
-        public Builder setSummary(String summary) {
+        public Builder summary(String summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

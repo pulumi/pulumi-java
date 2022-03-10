@@ -75,22 +75,22 @@ public final class TCPSocketActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.port = defaults.port;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }

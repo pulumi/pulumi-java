@@ -109,42 +109,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs e
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMedia(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media) {
+        public Builder media(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs> media) {
             this.media = media;
             return this;
         }
 
-        public Builder setMedia(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs media) {
+        public Builder media(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaArgs media) {
             this.media = Input.ofNullable(media);
             return this;
         }
 
-        public Builder setSuggestions(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions) {
+        public Builder suggestions(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> suggestions) {
             this.suggestions = suggestions;
             return this;
         }
 
-        public Builder setSuggestions(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> suggestions) {
+        public Builder suggestions(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> suggestions) {
             this.suggestions = Input.ofNullable(suggestions);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

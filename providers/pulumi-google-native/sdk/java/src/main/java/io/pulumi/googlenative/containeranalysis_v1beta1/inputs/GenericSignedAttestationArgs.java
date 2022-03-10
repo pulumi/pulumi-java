@@ -93,32 +93,32 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setContentType(@Nullable Input<GenericSignedAttestationContentType> contentType) {
+        public Builder contentType(@Nullable Input<GenericSignedAttestationContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable GenericSignedAttestationContentType contentType) {
+        public Builder contentType(@Nullable GenericSignedAttestationContentType contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setSerializedPayload(@Nullable Input<String> serializedPayload) {
+        public Builder serializedPayload(@Nullable Input<String> serializedPayload) {
             this.serializedPayload = serializedPayload;
             return this;
         }
 
-        public Builder setSerializedPayload(@Nullable String serializedPayload) {
+        public Builder serializedPayload(@Nullable String serializedPayload) {
             this.serializedPayload = Input.ofNullable(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(@Nullable Input<List<SignatureArgs>> signatures) {
+        public Builder signatures(@Nullable Input<List<SignatureArgs>> signatures) {
             this.signatures = signatures;
             return this;
         }
 
-        public Builder setSignatures(@Nullable List<SignatureArgs> signatures) {
+        public Builder signatures(@Nullable List<SignatureArgs> signatures) {
             this.signatures = Input.ofNullable(signatures);
             return this;
         }

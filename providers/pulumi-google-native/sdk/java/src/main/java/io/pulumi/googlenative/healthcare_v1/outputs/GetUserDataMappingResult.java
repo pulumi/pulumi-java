@@ -132,32 +132,32 @@ public final class GetUserDataMappingResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setArchiveTime(String archiveTime) {
+        public Builder archiveTime(String archiveTime) {
             this.archiveTime = Objects.requireNonNull(archiveTime);
             return this;
         }
 
-        public Builder setArchived(Boolean archived) {
+        public Builder archived(Boolean archived) {
             this.archived = Objects.requireNonNull(archived);
             return this;
         }
 
-        public Builder setDataId(String dataId) {
+        public Builder dataId(String dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceAttributes(List<AttributeResponse> resourceAttributes) {
+        public Builder resourceAttributes(List<AttributeResponse> resourceAttributes) {
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

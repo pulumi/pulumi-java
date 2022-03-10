@@ -109,42 +109,42 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAllowNullHeader(@Nullable Input<Boolean> allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Input<Boolean> allowNullHeader) {
             this.allowNullHeader = allowNullHeader;
             return this;
         }
 
-        public Builder setAllowNullHeader(@Nullable Boolean allowNullHeader) {
+        public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
             this.allowNullHeader = Input.ofNullable(allowNullHeader);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<SchemaPackageArgs> schema) {
+        public Builder schema(@Nullable Input<SchemaPackageArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable SchemaPackageArgs schema) {
+        public Builder schema(@Nullable SchemaPackageArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSegmentTerminator(@Nullable Input<String> segmentTerminator) {
+        public Builder segmentTerminator(@Nullable Input<String> segmentTerminator) {
             this.segmentTerminator = segmentTerminator;
             return this;
         }
 
-        public Builder setSegmentTerminator(@Nullable String segmentTerminator) {
+        public Builder segmentTerminator(@Nullable String segmentTerminator) {
             this.segmentTerminator = Input.ofNullable(segmentTerminator);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<ParserConfigVersion> version) {
+        public Builder version(@Nullable Input<ParserConfigVersion> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable ParserConfigVersion version) {
+        public Builder version(@Nullable ParserConfigVersion version) {
             this.version = Input.ofNullable(version);
             return this;
         }

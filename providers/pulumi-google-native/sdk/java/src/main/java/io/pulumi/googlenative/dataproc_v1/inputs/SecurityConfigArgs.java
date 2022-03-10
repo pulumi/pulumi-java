@@ -75,22 +75,22 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setIdentityConfig(@Nullable Input<IdentityConfigArgs> identityConfig) {
+        public Builder identityConfig(@Nullable Input<IdentityConfigArgs> identityConfig) {
             this.identityConfig = identityConfig;
             return this;
         }
 
-        public Builder setIdentityConfig(@Nullable IdentityConfigArgs identityConfig) {
+        public Builder identityConfig(@Nullable IdentityConfigArgs identityConfig) {
             this.identityConfig = Input.ofNullable(identityConfig);
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
+        public Builder kerberosConfig(@Nullable Input<KerberosConfigArgs> kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
+        public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }

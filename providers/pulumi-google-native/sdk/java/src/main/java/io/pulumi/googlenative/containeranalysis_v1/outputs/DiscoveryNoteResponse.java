@@ -48,7 +48,7 @@ public final class DiscoveryNoteResponse {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder setAnalysisKind(String analysisKind) {
+        public Builder analysisKind(String analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }

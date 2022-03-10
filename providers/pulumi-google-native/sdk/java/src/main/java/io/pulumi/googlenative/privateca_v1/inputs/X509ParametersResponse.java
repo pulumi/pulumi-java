@@ -125,27 +125,27 @@ public final class X509ParametersResponse extends io.pulumi.resources.InvokeArgs
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
+        public Builder additionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
             this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
             return this;
         }
 
-        public Builder setAiaOcspServers(List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
             this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers);
             return this;
         }
 
-        public Builder setCaOptions(CaOptionsResponse caOptions) {
+        public Builder caOptions(CaOptionsResponse caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(KeyUsageResponse keyUsage) {
+        public Builder keyUsage(KeyUsageResponse keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(List<ObjectIdResponse> policyIds) {
+        public Builder policyIds(List<ObjectIdResponse> policyIds) {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }

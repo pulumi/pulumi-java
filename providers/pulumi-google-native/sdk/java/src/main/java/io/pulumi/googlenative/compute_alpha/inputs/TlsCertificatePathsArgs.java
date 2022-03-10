@@ -74,22 +74,22 @@ public final class TlsCertificatePathsArgs extends io.pulumi.resources.ResourceA
     	      this.privateKeyPath = defaults.privateKeyPath;
         }
 
-        public Builder setCertificatePath(@Nullable Input<String> certificatePath) {
+        public Builder certificatePath(@Nullable Input<String> certificatePath) {
             this.certificatePath = certificatePath;
             return this;
         }
 
-        public Builder setCertificatePath(@Nullable String certificatePath) {
+        public Builder certificatePath(@Nullable String certificatePath) {
             this.certificatePath = Input.ofNullable(certificatePath);
             return this;
         }
 
-        public Builder setPrivateKeyPath(@Nullable Input<String> privateKeyPath) {
+        public Builder privateKeyPath(@Nullable Input<String> privateKeyPath) {
             this.privateKeyPath = privateKeyPath;
             return this;
         }
 
-        public Builder setPrivateKeyPath(@Nullable String privateKeyPath) {
+        public Builder privateKeyPath(@Nullable String privateKeyPath) {
             this.privateKeyPath = Input.ofNullable(privateKeyPath);
             return this;
         }

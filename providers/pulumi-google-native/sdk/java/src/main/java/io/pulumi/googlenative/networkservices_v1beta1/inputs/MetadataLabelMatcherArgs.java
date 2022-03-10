@@ -76,22 +76,22 @@ public final class MetadataLabelMatcherArgs extends io.pulumi.resources.Resource
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder setMetadataLabelMatchCriteria(@Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(@Nullable Input<MetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
 
-        public Builder setMetadataLabelMatchCriteria(@Nullable MetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(@Nullable MetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = Input.ofNullable(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder setMetadataLabels(@Nullable Input<List<MetadataLabelsArgs>> metadataLabels) {
+        public Builder metadataLabels(@Nullable Input<List<MetadataLabelsArgs>> metadataLabels) {
             this.metadataLabels = metadataLabels;
             return this;
         }
 
-        public Builder setMetadataLabels(@Nullable List<MetadataLabelsArgs> metadataLabels) {
+        public Builder metadataLabels(@Nullable List<MetadataLabelsArgs> metadataLabels) {
             this.metadataLabels = Input.ofNullable(metadataLabels);
             return this;
         }

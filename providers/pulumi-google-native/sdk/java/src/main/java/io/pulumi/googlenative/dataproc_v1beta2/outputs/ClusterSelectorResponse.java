@@ -66,12 +66,12 @@ public final class ClusterSelectorResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -98,22 +98,22 @@ public final class AwsS3DataResponse {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(AwsAccessKeyResponse awsAccessKey) {
+        public Builder awsAccessKey(AwsAccessKeyResponse awsAccessKey) {
             this.awsAccessKey = Objects.requireNonNull(awsAccessKey);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

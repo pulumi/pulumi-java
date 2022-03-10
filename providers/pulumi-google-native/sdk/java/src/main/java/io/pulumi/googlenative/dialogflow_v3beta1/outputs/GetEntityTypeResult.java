@@ -165,42 +165,42 @@ public final class GetEntityTypeResult {
     	      this.redact = defaults.redact;
         }
 
-        public Builder setAutoExpansionMode(String autoExpansionMode) {
+        public Builder autoExpansionMode(String autoExpansionMode) {
             this.autoExpansionMode = Objects.requireNonNull(autoExpansionMode);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(Boolean enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Objects.requireNonNull(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder setEntities(List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities) {
+        public Builder entities(List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
 
-        public Builder setExcludedPhrases(List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases) {
+        public Builder excludedPhrases(List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases) {
             this.excludedPhrases = Objects.requireNonNull(excludedPhrases);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRedact(Boolean redact) {
+        public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }

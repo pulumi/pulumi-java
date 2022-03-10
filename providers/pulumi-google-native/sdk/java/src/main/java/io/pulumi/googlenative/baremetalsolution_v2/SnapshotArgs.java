@@ -138,72 +138,72 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeId = defaults.volumeId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Input<String> sizeBytes) {
+        public Builder sizeBytes(@Nullable Input<String> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable String sizeBytes) {
+        public Builder sizeBytes(@Nullable String sizeBytes) {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }
 
-        public Builder setStorageVolume(@Nullable Input<String> storageVolume) {
+        public Builder storageVolume(@Nullable Input<String> storageVolume) {
             this.storageVolume = storageVolume;
             return this;
         }
 
-        public Builder setStorageVolume(@Nullable String storageVolume) {
+        public Builder storageVolume(@Nullable String storageVolume) {
             this.storageVolume = Input.ofNullable(storageVolume);
             return this;
         }
 
-        public Builder setVolumeId(Input<String> volumeId) {
+        public Builder volumeId(Input<String> volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
-        public Builder setVolumeId(String volumeId) {
+        public Builder volumeId(String volumeId) {
             this.volumeId = Input.of(Objects.requireNonNull(volumeId));
             return this;
         }

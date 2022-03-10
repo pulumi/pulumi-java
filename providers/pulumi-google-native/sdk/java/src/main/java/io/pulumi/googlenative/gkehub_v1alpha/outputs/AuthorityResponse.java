@@ -97,22 +97,22 @@ public final class AuthorityResponse {
     	      this.workloadIdentityPool = defaults.workloadIdentityPool;
         }
 
-        public Builder setIdentityProvider(String identityProvider) {
+        public Builder identityProvider(String identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setOidcJwks(String oidcJwks) {
+        public Builder oidcJwks(String oidcJwks) {
             this.oidcJwks = Objects.requireNonNull(oidcJwks);
             return this;
         }
 
-        public Builder setWorkloadIdentityPool(String workloadIdentityPool) {
+        public Builder workloadIdentityPool(String workloadIdentityPool) {
             this.workloadIdentityPool = Objects.requireNonNull(workloadIdentityPool);
             return this;
         }

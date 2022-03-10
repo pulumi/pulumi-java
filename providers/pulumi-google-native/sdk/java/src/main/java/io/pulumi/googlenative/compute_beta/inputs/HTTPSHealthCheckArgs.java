@@ -153,72 +153,72 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
     	      this.response = defaults.response;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setPortName(@Nullable Input<String> portName) {
+        public Builder portName(@Nullable Input<String> portName) {
             this.portName = portName;
             return this;
         }
 
-        public Builder setPortName(@Nullable String portName) {
+        public Builder portName(@Nullable String portName) {
             this.portName = Input.ofNullable(portName);
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable Input<HTTPSHealthCheckPortSpecification> portSpecification) {
+        public Builder portSpecification(@Nullable Input<HTTPSHealthCheckPortSpecification> portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable HTTPSHealthCheckPortSpecification portSpecification) {
+        public Builder portSpecification(@Nullable HTTPSHealthCheckPortSpecification portSpecification) {
             this.portSpecification = Input.ofNullable(portSpecification);
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable Input<HTTPSHealthCheckProxyHeader> proxyHeader) {
+        public Builder proxyHeader(@Nullable Input<HTTPSHealthCheckProxyHeader> proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable HTTPSHealthCheckProxyHeader proxyHeader) {
+        public Builder proxyHeader(@Nullable HTTPSHealthCheckProxyHeader proxyHeader) {
             this.proxyHeader = Input.ofNullable(proxyHeader);
             return this;
         }
 
-        public Builder setRequestPath(@Nullable Input<String> requestPath) {
+        public Builder requestPath(@Nullable Input<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
-        public Builder setRequestPath(@Nullable String requestPath) {
+        public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = Input.ofNullable(requestPath);
             return this;
         }
 
-        public Builder setResponse(@Nullable Input<String> response) {
+        public Builder response(@Nullable Input<String> response) {
             this.response = response;
             return this;
         }
 
-        public Builder setResponse(@Nullable String response) {
+        public Builder response(@Nullable String response) {
             this.response = Input.ofNullable(response);
             return this;
         }

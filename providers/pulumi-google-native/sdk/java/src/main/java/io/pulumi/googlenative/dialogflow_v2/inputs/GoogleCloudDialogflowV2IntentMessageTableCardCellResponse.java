@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse ext
     	      this.text = defaults.text;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

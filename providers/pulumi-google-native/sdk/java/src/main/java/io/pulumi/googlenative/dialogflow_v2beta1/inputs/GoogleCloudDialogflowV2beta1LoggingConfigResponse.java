@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse extends io.
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
         }
 
-        public Builder setEnableStackdriverLogging(Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }

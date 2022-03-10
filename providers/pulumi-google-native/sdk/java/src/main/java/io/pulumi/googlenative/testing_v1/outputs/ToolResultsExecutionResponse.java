@@ -81,17 +81,17 @@ public final class ToolResultsExecutionResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

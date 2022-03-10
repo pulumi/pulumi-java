@@ -100,22 +100,22 @@ public final class GetTopicResult {
     	      this.retentionConfig = defaults.retentionConfig;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartitionConfig(PartitionConfigResponse partitionConfig) {
+        public Builder partitionConfig(PartitionConfigResponse partitionConfig) {
             this.partitionConfig = Objects.requireNonNull(partitionConfig);
             return this;
         }
 
-        public Builder setReservationConfig(ReservationConfigResponse reservationConfig) {
+        public Builder reservationConfig(ReservationConfigResponse reservationConfig) {
             this.reservationConfig = Objects.requireNonNull(reservationConfig);
             return this;
         }
 
-        public Builder setRetentionConfig(RetentionConfigResponse retentionConfig) {
+        public Builder retentionConfig(RetentionConfigResponse retentionConfig) {
             this.retentionConfig = Objects.requireNonNull(retentionConfig);
             return this;
         }

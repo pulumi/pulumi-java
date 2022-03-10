@@ -147,37 +147,37 @@ public final class GetProjectResult {
     	      this.projectNumber = defaults.projectNumber;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifecycleState(String lifecycleState) {
+        public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(ResourceIdResponse parent) {
+        public Builder parent(ResourceIdResponse parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectNumber(String projectNumber) {
+        public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }

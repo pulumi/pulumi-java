@@ -98,27 +98,27 @@ public final class GetResourceRecordSetArgs extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setManagedZone(String managedZone) {
+        public Builder managedZone(String managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

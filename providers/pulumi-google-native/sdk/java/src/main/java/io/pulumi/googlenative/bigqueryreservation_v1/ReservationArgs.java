@@ -123,62 +123,62 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slotCapacity = defaults.slotCapacity;
         }
 
-        public Builder setIgnoreIdleSlots(@Nullable Input<Boolean> ignoreIdleSlots) {
+        public Builder ignoreIdleSlots(@Nullable Input<Boolean> ignoreIdleSlots) {
             this.ignoreIdleSlots = ignoreIdleSlots;
             return this;
         }
 
-        public Builder setIgnoreIdleSlots(@Nullable Boolean ignoreIdleSlots) {
+        public Builder ignoreIdleSlots(@Nullable Boolean ignoreIdleSlots) {
             this.ignoreIdleSlots = Input.ofNullable(ignoreIdleSlots);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservationId(@Nullable Input<String> reservationId) {
+        public Builder reservationId(@Nullable Input<String> reservationId) {
             this.reservationId = reservationId;
             return this;
         }
 
-        public Builder setReservationId(@Nullable String reservationId) {
+        public Builder reservationId(@Nullable String reservationId) {
             this.reservationId = Input.ofNullable(reservationId);
             return this;
         }
 
-        public Builder setSlotCapacity(@Nullable Input<String> slotCapacity) {
+        public Builder slotCapacity(@Nullable Input<String> slotCapacity) {
             this.slotCapacity = slotCapacity;
             return this;
         }
 
-        public Builder setSlotCapacity(@Nullable String slotCapacity) {
+        public Builder slotCapacity(@Nullable String slotCapacity) {
             this.slotCapacity = Input.ofNullable(slotCapacity);
             return this;
         }

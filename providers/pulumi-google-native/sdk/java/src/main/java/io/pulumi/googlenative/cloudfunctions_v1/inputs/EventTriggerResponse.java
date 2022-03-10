@@ -105,22 +105,22 @@ public final class EventTriggerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setFailurePolicy(FailurePolicyResponse failurePolicy) {
+        public Builder failurePolicy(FailurePolicyResponse failurePolicy) {
             this.failurePolicy = Objects.requireNonNull(failurePolicy);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

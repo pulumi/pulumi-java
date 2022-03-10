@@ -191,47 +191,47 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(AptSettingsResponse apt) {
+        public Builder apt(AptSettingsResponse apt) {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
 
-        public Builder setGoo(GooSettingsResponse goo) {
+        public Builder goo(GooSettingsResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
 
-        public Builder setMigInstancesAllowed(Boolean migInstancesAllowed) {
+        public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
             this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed);
             return this;
         }
 
-        public Builder setPostStep(ExecStepResponse postStep) {
+        public Builder postStep(ExecStepResponse postStep) {
             this.postStep = Objects.requireNonNull(postStep);
             return this;
         }
 
-        public Builder setPreStep(ExecStepResponse preStep) {
+        public Builder preStep(ExecStepResponse preStep) {
             this.preStep = Objects.requireNonNull(preStep);
             return this;
         }
 
-        public Builder setRebootConfig(String rebootConfig) {
+        public Builder rebootConfig(String rebootConfig) {
             this.rebootConfig = Objects.requireNonNull(rebootConfig);
             return this;
         }
 
-        public Builder setWindowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
+        public Builder windowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
 
-        public Builder setYum(YumSettingsResponse yum) {
+        public Builder yum(YumSettingsResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
 
-        public Builder setZypper(ZypperSettingsResponse zypper) {
+        public Builder zypper(ZypperSettingsResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }

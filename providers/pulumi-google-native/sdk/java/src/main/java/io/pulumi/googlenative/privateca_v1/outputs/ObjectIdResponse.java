@@ -49,7 +49,7 @@ public final class ObjectIdResponse {
     	      this.objectIdPath = defaults.objectIdPath;
         }
 
-        public Builder setObjectIdPath(List<Integer> objectIdPath) {
+        public Builder objectIdPath(List<Integer> objectIdPath) {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }

@@ -66,12 +66,12 @@ public final class EnvironmentConfigResponse {
     	      this.peripheralsConfig = defaults.peripheralsConfig;
         }
 
-        public Builder setExecutionConfig(ExecutionConfigResponse executionConfig) {
+        public Builder executionConfig(ExecutionConfigResponse executionConfig) {
             this.executionConfig = Objects.requireNonNull(executionConfig);
             return this;
         }
 
-        public Builder setPeripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
+        public Builder peripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
             this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
             return this;
         }

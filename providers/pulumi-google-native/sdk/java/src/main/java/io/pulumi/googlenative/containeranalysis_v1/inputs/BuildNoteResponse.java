@@ -55,7 +55,7 @@ public final class BuildNoteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.builderVersion = defaults.builderVersion;
         }
 
-        public Builder setBuilderVersion(String builderVersion) {
+        public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }

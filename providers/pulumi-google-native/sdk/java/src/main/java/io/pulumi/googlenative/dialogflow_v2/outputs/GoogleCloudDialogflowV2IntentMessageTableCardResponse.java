@@ -134,32 +134,32 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setColumnProperties(List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties) {
+        public Builder columnProperties(List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties) {
             this.columnProperties = Objects.requireNonNull(columnProperties);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setRows(List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows) {
+        public Builder rows(List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows) {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

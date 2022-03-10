@@ -501,147 +501,147 @@ public final class GetDeviceResult {
     	      this.wifiMacAddresses = defaults.wifiMacAddresses;
         }
 
-        public Builder setAndroidSpecificAttributes(AndroidAttributesResponse androidSpecificAttributes) {
+        public Builder androidSpecificAttributes(AndroidAttributesResponse androidSpecificAttributes) {
             this.androidSpecificAttributes = Objects.requireNonNull(androidSpecificAttributes);
             return this;
         }
 
-        public Builder setAssetTag(String assetTag) {
+        public Builder assetTag(String assetTag) {
             this.assetTag = Objects.requireNonNull(assetTag);
             return this;
         }
 
-        public Builder setBasebandVersion(String basebandVersion) {
+        public Builder basebandVersion(String basebandVersion) {
             this.basebandVersion = Objects.requireNonNull(basebandVersion);
             return this;
         }
 
-        public Builder setBootloaderVersion(String bootloaderVersion) {
+        public Builder bootloaderVersion(String bootloaderVersion) {
             this.bootloaderVersion = Objects.requireNonNull(bootloaderVersion);
             return this;
         }
 
-        public Builder setBrand(String brand) {
+        public Builder brand(String brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
 
-        public Builder setBuildNumber(String buildNumber) {
+        public Builder buildNumber(String buildNumber) {
             this.buildNumber = Objects.requireNonNull(buildNumber);
             return this;
         }
 
-        public Builder setCompromisedState(String compromisedState) {
+        public Builder compromisedState(String compromisedState) {
             this.compromisedState = Objects.requireNonNull(compromisedState);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeviceType(String deviceType) {
+        public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
 
-        public Builder setEnabledDeveloperOptions(Boolean enabledDeveloperOptions) {
+        public Builder enabledDeveloperOptions(Boolean enabledDeveloperOptions) {
             this.enabledDeveloperOptions = Objects.requireNonNull(enabledDeveloperOptions);
             return this;
         }
 
-        public Builder setEnabledUsbDebugging(Boolean enabledUsbDebugging) {
+        public Builder enabledUsbDebugging(Boolean enabledUsbDebugging) {
             this.enabledUsbDebugging = Objects.requireNonNull(enabledUsbDebugging);
             return this;
         }
 
-        public Builder setEncryptionState(String encryptionState) {
+        public Builder encryptionState(String encryptionState) {
             this.encryptionState = Objects.requireNonNull(encryptionState);
             return this;
         }
 
-        public Builder setEndpointVerificationSpecificAttributes(EndpointVerificationSpecificAttributesResponse endpointVerificationSpecificAttributes) {
+        public Builder endpointVerificationSpecificAttributes(EndpointVerificationSpecificAttributesResponse endpointVerificationSpecificAttributes) {
             this.endpointVerificationSpecificAttributes = Objects.requireNonNull(endpointVerificationSpecificAttributes);
             return this;
         }
 
-        public Builder setImei(String imei) {
+        public Builder imei(String imei) {
             this.imei = Objects.requireNonNull(imei);
             return this;
         }
 
-        public Builder setKernelVersion(String kernelVersion) {
+        public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setManagementState(String managementState) {
+        public Builder managementState(String managementState) {
             this.managementState = Objects.requireNonNull(managementState);
             return this;
         }
 
-        public Builder setManufacturer(String manufacturer) {
+        public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
 
-        public Builder setMeid(String meid) {
+        public Builder meid(String meid) {
             this.meid = Objects.requireNonNull(meid);
             return this;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkOperator(String networkOperator) {
+        public Builder networkOperator(String networkOperator) {
             this.networkOperator = Objects.requireNonNull(networkOperator);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
 
-        public Builder setOtherAccounts(List<String> otherAccounts) {
+        public Builder otherAccounts(List<String> otherAccounts) {
             this.otherAccounts = Objects.requireNonNull(otherAccounts);
             return this;
         }
 
-        public Builder setOwnerType(String ownerType) {
+        public Builder ownerType(String ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
 
-        public Builder setReleaseVersion(String releaseVersion) {
+        public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = Objects.requireNonNull(releaseVersion);
             return this;
         }
 
-        public Builder setSecurityPatchTime(String securityPatchTime) {
+        public Builder securityPatchTime(String securityPatchTime) {
             this.securityPatchTime = Objects.requireNonNull(securityPatchTime);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setWifiMacAddresses(List<String> wifiMacAddresses) {
+        public Builder wifiMacAddresses(List<String> wifiMacAddresses) {
             this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
             return this;
         }

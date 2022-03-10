@@ -193,92 +193,92 @@ public final class PatchConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<AptSettingsArgs> apt) {
+        public Builder apt(@Nullable Input<AptSettingsArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable AptSettingsArgs apt) {
+        public Builder apt(@Nullable AptSettingsArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<GooSettingsArgs> goo) {
+        public Builder goo(@Nullable Input<GooSettingsArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable GooSettingsArgs goo) {
+        public Builder goo(@Nullable GooSettingsArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setMigInstancesAllowed(@Nullable Input<Boolean> migInstancesAllowed) {
+        public Builder migInstancesAllowed(@Nullable Input<Boolean> migInstancesAllowed) {
             this.migInstancesAllowed = migInstancesAllowed;
             return this;
         }
 
-        public Builder setMigInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
+        public Builder migInstancesAllowed(@Nullable Boolean migInstancesAllowed) {
             this.migInstancesAllowed = Input.ofNullable(migInstancesAllowed);
             return this;
         }
 
-        public Builder setPostStep(@Nullable Input<ExecStepArgs> postStep) {
+        public Builder postStep(@Nullable Input<ExecStepArgs> postStep) {
             this.postStep = postStep;
             return this;
         }
 
-        public Builder setPostStep(@Nullable ExecStepArgs postStep) {
+        public Builder postStep(@Nullable ExecStepArgs postStep) {
             this.postStep = Input.ofNullable(postStep);
             return this;
         }
 
-        public Builder setPreStep(@Nullable Input<ExecStepArgs> preStep) {
+        public Builder preStep(@Nullable Input<ExecStepArgs> preStep) {
             this.preStep = preStep;
             return this;
         }
 
-        public Builder setPreStep(@Nullable ExecStepArgs preStep) {
+        public Builder preStep(@Nullable ExecStepArgs preStep) {
             this.preStep = Input.ofNullable(preStep);
             return this;
         }
 
-        public Builder setRebootConfig(@Nullable Input<PatchConfigRebootConfig> rebootConfig) {
+        public Builder rebootConfig(@Nullable Input<PatchConfigRebootConfig> rebootConfig) {
             this.rebootConfig = rebootConfig;
             return this;
         }
 
-        public Builder setRebootConfig(@Nullable PatchConfigRebootConfig rebootConfig) {
+        public Builder rebootConfig(@Nullable PatchConfigRebootConfig rebootConfig) {
             this.rebootConfig = Input.ofNullable(rebootConfig);
             return this;
         }
 
-        public Builder setWindowsUpdate(@Nullable Input<WindowsUpdateSettingsArgs> windowsUpdate) {
+        public Builder windowsUpdate(@Nullable Input<WindowsUpdateSettingsArgs> windowsUpdate) {
             this.windowsUpdate = windowsUpdate;
             return this;
         }
 
-        public Builder setWindowsUpdate(@Nullable WindowsUpdateSettingsArgs windowsUpdate) {
+        public Builder windowsUpdate(@Nullable WindowsUpdateSettingsArgs windowsUpdate) {
             this.windowsUpdate = Input.ofNullable(windowsUpdate);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<YumSettingsArgs> yum) {
+        public Builder yum(@Nullable Input<YumSettingsArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable YumSettingsArgs yum) {
+        public Builder yum(@Nullable YumSettingsArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<ZypperSettingsArgs> zypper) {
+        public Builder zypper(@Nullable Input<ZypperSettingsArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable ZypperSettingsArgs zypper) {
+        public Builder zypper(@Nullable ZypperSettingsArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

@@ -91,32 +91,32 @@ public final class RateLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
         }
 
-        public Builder setMaxBurstSize(@Nullable Input<Integer> maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Input<Integer> maxBurstSize) {
             this.maxBurstSize = maxBurstSize;
             return this;
         }
 
-        public Builder setMaxBurstSize(@Nullable Integer maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = Input.ofNullable(maxBurstSize);
             return this;
         }
 
-        public Builder setMaxConcurrentDispatches(@Nullable Input<Integer> maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(@Nullable Input<Integer> maxConcurrentDispatches) {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
-        public Builder setMaxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = Input.ofNullable(maxConcurrentDispatches);
             return this;
         }
 
-        public Builder setMaxDispatchesPerSecond(@Nullable Input<Double> maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(@Nullable Input<Double> maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
 
-        public Builder setMaxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = Input.ofNullable(maxDispatchesPerSecond);
             return this;
         }

@@ -65,12 +65,12 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder setInputUri(String inputUri) {
+        public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }

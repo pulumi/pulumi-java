@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
     	      this.suggestions = defaults.suggestions;
         }
 
-        public Builder setSuggestions(List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
+        public Builder suggestions(List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }

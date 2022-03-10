@@ -62,12 +62,12 @@ public final class GetSecurityPolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.securityPolicy = defaults.securityPolicy;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }

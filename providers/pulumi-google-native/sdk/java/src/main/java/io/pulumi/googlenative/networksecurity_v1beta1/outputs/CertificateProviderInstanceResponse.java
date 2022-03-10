@@ -48,7 +48,7 @@ public final class CertificateProviderInstanceResponse {
     	      this.pluginInstance = defaults.pluginInstance;
         }
 
-        public Builder setPluginInstance(String pluginInstance) {
+        public Builder pluginInstance(String pluginInstance) {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }

@@ -57,12 +57,12 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.certificateId = defaults.certificateId;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }

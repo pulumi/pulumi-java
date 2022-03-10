@@ -106,52 +106,52 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReservationId(Input<String> reservationId) {
+        public Builder reservationId(Input<String> reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
 
-        public Builder setReservationId(String reservationId) {
+        public Builder reservationId(String reservationId) {
             this.reservationId = Input.of(Objects.requireNonNull(reservationId));
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable Input<String> throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Input<String> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable String throughputCapacity) {
+        public Builder throughputCapacity(@Nullable String throughputCapacity) {
             this.throughputCapacity = Input.ofNullable(throughputCapacity);
             return this;
         }

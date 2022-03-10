@@ -91,32 +91,32 @@ public final class MonitoringQueryLanguageConditionArgs extends io.pulumi.resour
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setTrigger(@Nullable Input<TriggerArgs> trigger) {
+        public Builder trigger(@Nullable Input<TriggerArgs> trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setTrigger(@Nullable TriggerArgs trigger) {
+        public Builder trigger(@Nullable TriggerArgs trigger) {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }

@@ -56,7 +56,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.driverLogLevels = defaults.driverLogLevels;
         }
 
-        public Builder setDriverLogLevels(Map<String,String> driverLogLevels) {
+        public Builder driverLogLevels(Map<String,String> driverLogLevels) {
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }

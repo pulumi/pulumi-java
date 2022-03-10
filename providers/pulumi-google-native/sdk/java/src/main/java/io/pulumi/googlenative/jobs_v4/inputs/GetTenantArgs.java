@@ -62,12 +62,12 @@ public final class GetTenantArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

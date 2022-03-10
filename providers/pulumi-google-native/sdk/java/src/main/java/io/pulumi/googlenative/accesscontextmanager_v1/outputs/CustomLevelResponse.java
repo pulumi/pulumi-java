@@ -48,7 +48,7 @@ public final class CustomLevelResponse {
     	      this.expr = defaults.expr;
         }
 
-        public Builder setExpr(ExprResponse expr) {
+        public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }

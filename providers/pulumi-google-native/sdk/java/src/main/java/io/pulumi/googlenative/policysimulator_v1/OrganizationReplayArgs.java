@@ -79,32 +79,32 @@ public final class OrganizationReplayArgs extends io.pulumi.resources.ResourceAr
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setConfig(Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config) {
+        public Builder config(Input<GoogleCloudPolicysimulatorV1ReplayConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(GoogleCloudPolicysimulatorV1ReplayConfigArgs config) {
+        public Builder config(GoogleCloudPolicysimulatorV1ReplayConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }

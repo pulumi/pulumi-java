@@ -93,32 +93,32 @@ public final class GoogleRpcStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Input<Integer> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<List<Map<String,String>>> details) {
+        public Builder details(@Nullable Input<List<Map<String,String>>> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<Map<String,String>> details) {
+        public Builder details(@Nullable List<Map<String,String>> details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }

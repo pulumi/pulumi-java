@@ -143,62 +143,62 @@ public final class GooglePrivacyDlpV2PrivacyMetricArgs extends io.pulumi.resourc
     	      this.numericalStatsConfig = defaults.numericalStatsConfig;
         }
 
-        public Builder setCategoricalStatsConfig(@Nullable Input<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig) {
+        public Builder categoricalStatsConfig(@Nullable Input<GooglePrivacyDlpV2CategoricalStatsConfigArgs> categoricalStatsConfig) {
             this.categoricalStatsConfig = categoricalStatsConfig;
             return this;
         }
 
-        public Builder setCategoricalStatsConfig(@Nullable GooglePrivacyDlpV2CategoricalStatsConfigArgs categoricalStatsConfig) {
+        public Builder categoricalStatsConfig(@Nullable GooglePrivacyDlpV2CategoricalStatsConfigArgs categoricalStatsConfig) {
             this.categoricalStatsConfig = Input.ofNullable(categoricalStatsConfig);
             return this;
         }
 
-        public Builder setDeltaPresenceEstimationConfig(@Nullable Input<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig) {
+        public Builder deltaPresenceEstimationConfig(@Nullable Input<GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs> deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
             return this;
         }
 
-        public Builder setDeltaPresenceEstimationConfig(@Nullable GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs deltaPresenceEstimationConfig) {
+        public Builder deltaPresenceEstimationConfig(@Nullable GooglePrivacyDlpV2DeltaPresenceEstimationConfigArgs deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = Input.ofNullable(deltaPresenceEstimationConfig);
             return this;
         }
 
-        public Builder setKAnonymityConfig(@Nullable Input<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig) {
+        public Builder kAnonymityConfig(@Nullable Input<GooglePrivacyDlpV2KAnonymityConfigArgs> kAnonymityConfig) {
             this.kAnonymityConfig = kAnonymityConfig;
             return this;
         }
 
-        public Builder setKAnonymityConfig(@Nullable GooglePrivacyDlpV2KAnonymityConfigArgs kAnonymityConfig) {
+        public Builder kAnonymityConfig(@Nullable GooglePrivacyDlpV2KAnonymityConfigArgs kAnonymityConfig) {
             this.kAnonymityConfig = Input.ofNullable(kAnonymityConfig);
             return this;
         }
 
-        public Builder setKMapEstimationConfig(@Nullable Input<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig) {
+        public Builder kMapEstimationConfig(@Nullable Input<GooglePrivacyDlpV2KMapEstimationConfigArgs> kMapEstimationConfig) {
             this.kMapEstimationConfig = kMapEstimationConfig;
             return this;
         }
 
-        public Builder setKMapEstimationConfig(@Nullable GooglePrivacyDlpV2KMapEstimationConfigArgs kMapEstimationConfig) {
+        public Builder kMapEstimationConfig(@Nullable GooglePrivacyDlpV2KMapEstimationConfigArgs kMapEstimationConfig) {
             this.kMapEstimationConfig = Input.ofNullable(kMapEstimationConfig);
             return this;
         }
 
-        public Builder setLDiversityConfig(@Nullable Input<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig) {
+        public Builder lDiversityConfig(@Nullable Input<GooglePrivacyDlpV2LDiversityConfigArgs> lDiversityConfig) {
             this.lDiversityConfig = lDiversityConfig;
             return this;
         }
 
-        public Builder setLDiversityConfig(@Nullable GooglePrivacyDlpV2LDiversityConfigArgs lDiversityConfig) {
+        public Builder lDiversityConfig(@Nullable GooglePrivacyDlpV2LDiversityConfigArgs lDiversityConfig) {
             this.lDiversityConfig = Input.ofNullable(lDiversityConfig);
             return this;
         }
 
-        public Builder setNumericalStatsConfig(@Nullable Input<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig) {
+        public Builder numericalStatsConfig(@Nullable Input<GooglePrivacyDlpV2NumericalStatsConfigArgs> numericalStatsConfig) {
             this.numericalStatsConfig = numericalStatsConfig;
             return this;
         }
 
-        public Builder setNumericalStatsConfig(@Nullable GooglePrivacyDlpV2NumericalStatsConfigArgs numericalStatsConfig) {
+        public Builder numericalStatsConfig(@Nullable GooglePrivacyDlpV2NumericalStatsConfigArgs numericalStatsConfig) {
             this.numericalStatsConfig = Input.ofNullable(numericalStatsConfig);
             return this;
         }

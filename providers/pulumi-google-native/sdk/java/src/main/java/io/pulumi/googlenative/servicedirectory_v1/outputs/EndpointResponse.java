@@ -115,27 +115,27 @@ public final class EndpointResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

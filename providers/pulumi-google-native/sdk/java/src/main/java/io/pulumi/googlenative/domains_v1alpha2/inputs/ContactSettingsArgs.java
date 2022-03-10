@@ -106,42 +106,42 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.technicalContact = defaults.technicalContact;
         }
 
-        public Builder setAdminContact(Input<ContactArgs> adminContact) {
+        public Builder adminContact(Input<ContactArgs> adminContact) {
             this.adminContact = Objects.requireNonNull(adminContact);
             return this;
         }
 
-        public Builder setAdminContact(ContactArgs adminContact) {
+        public Builder adminContact(ContactArgs adminContact) {
             this.adminContact = Input.of(Objects.requireNonNull(adminContact));
             return this;
         }
 
-        public Builder setPrivacy(Input<ContactSettingsPrivacy> privacy) {
+        public Builder privacy(Input<ContactSettingsPrivacy> privacy) {
             this.privacy = Objects.requireNonNull(privacy);
             return this;
         }
 
-        public Builder setPrivacy(ContactSettingsPrivacy privacy) {
+        public Builder privacy(ContactSettingsPrivacy privacy) {
             this.privacy = Input.of(Objects.requireNonNull(privacy));
             return this;
         }
 
-        public Builder setRegistrantContact(Input<ContactArgs> registrantContact) {
+        public Builder registrantContact(Input<ContactArgs> registrantContact) {
             this.registrantContact = Objects.requireNonNull(registrantContact);
             return this;
         }
 
-        public Builder setRegistrantContact(ContactArgs registrantContact) {
+        public Builder registrantContact(ContactArgs registrantContact) {
             this.registrantContact = Input.of(Objects.requireNonNull(registrantContact));
             return this;
         }
 
-        public Builder setTechnicalContact(Input<ContactArgs> technicalContact) {
+        public Builder technicalContact(Input<ContactArgs> technicalContact) {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }
 
-        public Builder setTechnicalContact(ContactArgs technicalContact) {
+        public Builder technicalContact(ContactArgs technicalContact) {
             this.technicalContact = Input.of(Objects.requireNonNull(technicalContact));
             return this;
         }

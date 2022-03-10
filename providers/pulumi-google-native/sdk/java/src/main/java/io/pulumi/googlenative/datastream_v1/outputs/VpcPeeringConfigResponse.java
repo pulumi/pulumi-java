@@ -65,12 +65,12 @@ public final class VpcPeeringConfigResponse {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setSubnet(String subnet) {
+        public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

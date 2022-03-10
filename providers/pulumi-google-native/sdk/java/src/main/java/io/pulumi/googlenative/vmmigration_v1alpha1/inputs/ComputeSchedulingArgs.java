@@ -123,52 +123,52 @@ public final class ComputeSchedulingArgs extends io.pulumi.resources.ResourceArg
     	      this.restartType = defaults.restartType;
         }
 
-        public Builder setAutomaticRestart(@Nullable Input<Boolean> automaticRestart) {
+        public Builder automaticRestart(@Nullable Input<Boolean> automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = Input.ofNullable(automaticRestart);
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Input<Integer> minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Input<Integer> minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = Input.ofNullable(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable Input<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
             this.nodeAffinities = Input.ofNullable(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable Input<ComputeSchedulingOnHostMaintenance> onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable Input<ComputeSchedulingOnHostMaintenance> onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable ComputeSchedulingOnHostMaintenance onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable ComputeSchedulingOnHostMaintenance onHostMaintenance) {
             this.onHostMaintenance = Input.ofNullable(onHostMaintenance);
             return this;
         }
 
-        public Builder setRestartType(@Nullable Input<ComputeSchedulingRestartType> restartType) {
+        public Builder restartType(@Nullable Input<ComputeSchedulingRestartType> restartType) {
             this.restartType = restartType;
             return this;
         }
 
-        public Builder setRestartType(@Nullable ComputeSchedulingRestartType restartType) {
+        public Builder restartType(@Nullable ComputeSchedulingRestartType restartType) {
             this.restartType = Input.ofNullable(restartType);
             return this;
         }

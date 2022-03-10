@@ -130,32 +130,32 @@ public final class GetLienResult {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrigin(String origin) {
+        public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRestrictions(List<String> restrictions) {
+        public Builder restrictions(List<String> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }

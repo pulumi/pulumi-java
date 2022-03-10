@@ -97,22 +97,22 @@ public final class NetworkInterfaceResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setExternalIp(String externalIp) {
+        public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
 
-        public Builder setInternalIp(String internalIp) {
+        public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

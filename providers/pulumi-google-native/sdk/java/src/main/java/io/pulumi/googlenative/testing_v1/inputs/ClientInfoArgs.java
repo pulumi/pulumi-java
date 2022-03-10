@@ -76,22 +76,22 @@ public final class ClientInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setClientInfoDetails(@Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails) {
+        public Builder clientInfoDetails(@Nullable Input<List<ClientInfoDetailArgs>> clientInfoDetails) {
             this.clientInfoDetails = clientInfoDetails;
             return this;
         }
 
-        public Builder setClientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
+        public Builder clientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
             this.clientInfoDetails = Input.ofNullable(clientInfoDetails);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

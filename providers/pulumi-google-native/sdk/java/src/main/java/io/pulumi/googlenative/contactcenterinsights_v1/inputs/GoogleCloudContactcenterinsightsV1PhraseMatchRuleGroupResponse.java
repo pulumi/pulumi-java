@@ -74,12 +74,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     	      this.type = defaults.type;
         }
 
-        public Builder setPhraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
+        public Builder phraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
             this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

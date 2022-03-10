@@ -107,52 +107,52 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setConfig(@Nullable Input<JobConfigArgs> config) {
+        public Builder config(@Nullable Input<JobConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable JobConfigArgs config) {
+        public Builder config(@Nullable JobConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setJobTemplateId(Input<String> jobTemplateId) {
+        public Builder jobTemplateId(Input<String> jobTemplateId) {
             this.jobTemplateId = Objects.requireNonNull(jobTemplateId);
             return this;
         }
 
-        public Builder setJobTemplateId(String jobTemplateId) {
+        public Builder jobTemplateId(String jobTemplateId) {
             this.jobTemplateId = Input.of(Objects.requireNonNull(jobTemplateId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

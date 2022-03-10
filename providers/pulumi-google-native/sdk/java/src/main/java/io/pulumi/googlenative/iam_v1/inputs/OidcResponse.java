@@ -73,12 +73,12 @@ public final class OidcResponse extends io.pulumi.resources.InvokeArgs {
     	      this.issuerUri = defaults.issuerUri;
         }
 
-        public Builder setAllowedAudiences(List<String> allowedAudiences) {
+        public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
 
-        public Builder setIssuerUri(String issuerUri) {
+        public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }

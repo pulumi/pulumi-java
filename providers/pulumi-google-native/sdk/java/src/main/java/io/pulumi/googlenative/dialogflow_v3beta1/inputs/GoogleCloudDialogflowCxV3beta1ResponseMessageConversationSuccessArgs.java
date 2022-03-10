@@ -58,12 +58,12 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

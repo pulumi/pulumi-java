@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
     	      this.importedLibraries = defaults.importedLibraries;
         }
 
-        public Builder setImportedLibraries(List<String> importedLibraries) {
+        public Builder importedLibraries(List<String> importedLibraries) {
             this.importedLibraries = Objects.requireNonNull(importedLibraries);
             return this;
         }

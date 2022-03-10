@@ -75,22 +75,22 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     	      this.hourOfDay = defaults.hourOfDay;
         }
 
-        public Builder setDayOfWeek(@Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(@Nullable Input<MaintenanceWindowDayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable MaintenanceWindowDayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(@Nullable MaintenanceWindowDayOfWeek dayOfWeek) {
             this.dayOfWeek = Input.ofNullable(dayOfWeek);
             return this;
         }
 
-        public Builder setHourOfDay(@Nullable Input<Integer> hourOfDay) {
+        public Builder hourOfDay(@Nullable Input<Integer> hourOfDay) {
             this.hourOfDay = hourOfDay;
             return this;
         }
 
-        public Builder setHourOfDay(@Nullable Integer hourOfDay) {
+        public Builder hourOfDay(@Nullable Integer hourOfDay) {
             this.hourOfDay = Input.ofNullable(hourOfDay);
             return this;
         }

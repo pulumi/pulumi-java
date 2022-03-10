@@ -171,47 +171,47 @@ public final class GetLicenseResult {
     	      this.transferable = defaults.transferable;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLicenseCode(String licenseCode) {
+        public Builder licenseCode(String licenseCode) {
             this.licenseCode = Objects.requireNonNull(licenseCode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceRequirements(LicenseResourceRequirementsResponse resourceRequirements) {
+        public Builder resourceRequirements(LicenseResourceRequirementsResponse resourceRequirements) {
             this.resourceRequirements = Objects.requireNonNull(resourceRequirements);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setTransferable(Boolean transferable) {
+        public Builder transferable(Boolean transferable) {
             this.transferable = Objects.requireNonNull(transferable);
             return this;
         }

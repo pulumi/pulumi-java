@@ -104,42 +104,42 @@ public final class RouterNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ruleNumber = defaults.ruleNumber;
         }
 
-        public Builder setAction(@Nullable Input<RouterNatRuleActionArgs> action) {
+        public Builder action(@Nullable Input<RouterNatRuleActionArgs> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable RouterNatRuleActionArgs action) {
+        public Builder action(@Nullable RouterNatRuleActionArgs action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMatch(@Nullable Input<String> match) {
+        public Builder match(@Nullable Input<String> match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMatch(@Nullable String match) {
+        public Builder match(@Nullable String match) {
             this.match = Input.ofNullable(match);
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Input<Integer> ruleNumber) {
+        public Builder ruleNumber(@Nullable Input<Integer> ruleNumber) {
             this.ruleNumber = ruleNumber;
             return this;
         }
 
-        public Builder setRuleNumber(@Nullable Integer ruleNumber) {
+        public Builder ruleNumber(@Nullable Integer ruleNumber) {
             this.ruleNumber = Input.ofNullable(ruleNumber);
             return this;
         }

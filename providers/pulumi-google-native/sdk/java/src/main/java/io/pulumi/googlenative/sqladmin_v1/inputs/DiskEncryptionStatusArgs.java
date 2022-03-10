@@ -74,22 +74,22 @@ public final class DiskEncryptionStatusArgs extends io.pulumi.resources.Resource
     	      this.kmsKeyVersionName = defaults.kmsKeyVersionName;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setKmsKeyVersionName(@Nullable Input<String> kmsKeyVersionName) {
+        public Builder kmsKeyVersionName(@Nullable Input<String> kmsKeyVersionName) {
             this.kmsKeyVersionName = kmsKeyVersionName;
             return this;
         }
 
-        public Builder setKmsKeyVersionName(@Nullable String kmsKeyVersionName) {
+        public Builder kmsKeyVersionName(@Nullable String kmsKeyVersionName) {
             this.kmsKeyVersionName = Input.ofNullable(kmsKeyVersionName);
             return this;
         }

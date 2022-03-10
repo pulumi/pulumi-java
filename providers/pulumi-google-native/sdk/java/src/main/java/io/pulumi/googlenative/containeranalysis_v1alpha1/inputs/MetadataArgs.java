@@ -124,52 +124,52 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.reproducible = defaults.reproducible;
         }
 
-        public Builder setBuildFinishedOn(@Nullable Input<String> buildFinishedOn) {
+        public Builder buildFinishedOn(@Nullable Input<String> buildFinishedOn) {
             this.buildFinishedOn = buildFinishedOn;
             return this;
         }
 
-        public Builder setBuildFinishedOn(@Nullable String buildFinishedOn) {
+        public Builder buildFinishedOn(@Nullable String buildFinishedOn) {
             this.buildFinishedOn = Input.ofNullable(buildFinishedOn);
             return this;
         }
 
-        public Builder setBuildInvocationId(@Nullable Input<String> buildInvocationId) {
+        public Builder buildInvocationId(@Nullable Input<String> buildInvocationId) {
             this.buildInvocationId = buildInvocationId;
             return this;
         }
 
-        public Builder setBuildInvocationId(@Nullable String buildInvocationId) {
+        public Builder buildInvocationId(@Nullable String buildInvocationId) {
             this.buildInvocationId = Input.ofNullable(buildInvocationId);
             return this;
         }
 
-        public Builder setBuildStartedOn(@Nullable Input<String> buildStartedOn) {
+        public Builder buildStartedOn(@Nullable Input<String> buildStartedOn) {
             this.buildStartedOn = buildStartedOn;
             return this;
         }
 
-        public Builder setBuildStartedOn(@Nullable String buildStartedOn) {
+        public Builder buildStartedOn(@Nullable String buildStartedOn) {
             this.buildStartedOn = Input.ofNullable(buildStartedOn);
             return this;
         }
 
-        public Builder setCompleteness(@Nullable Input<CompletenessArgs> completeness) {
+        public Builder completeness(@Nullable Input<CompletenessArgs> completeness) {
             this.completeness = completeness;
             return this;
         }
 
-        public Builder setCompleteness(@Nullable CompletenessArgs completeness) {
+        public Builder completeness(@Nullable CompletenessArgs completeness) {
             this.completeness = Input.ofNullable(completeness);
             return this;
         }
 
-        public Builder setReproducible(@Nullable Input<Boolean> reproducible) {
+        public Builder reproducible(@Nullable Input<Boolean> reproducible) {
             this.reproducible = reproducible;
             return this;
         }
 
-        public Builder setReproducible(@Nullable Boolean reproducible) {
+        public Builder reproducible(@Nullable Boolean reproducible) {
             this.reproducible = Input.ofNullable(reproducible);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetDomainMappingResult {
     	      this.sslSettings = defaults.sslSettings;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceRecords(List<ResourceRecordResponse> resourceRecords) {
+        public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
 
-        public Builder setSslSettings(SslSettingsResponse sslSettings) {
+        public Builder sslSettings(SslSettingsResponse sslSettings) {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
         }

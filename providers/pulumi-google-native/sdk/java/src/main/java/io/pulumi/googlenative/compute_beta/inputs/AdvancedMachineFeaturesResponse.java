@@ -89,17 +89,17 @@ public final class AdvancedMachineFeaturesResponse extends io.pulumi.resources.I
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setEnableNestedVirtualization(Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
 
-        public Builder setEnableUefiNetworking(Boolean enableUefiNetworking) {
+        public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
             return this;
         }
 
-        public Builder setThreadsPerCore(Integer threadsPerCore) {
+        public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }

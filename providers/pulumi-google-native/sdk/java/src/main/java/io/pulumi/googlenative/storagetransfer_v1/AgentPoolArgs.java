@@ -111,52 +111,52 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAgentPoolId(Input<String> agentPoolId) {
+        public Builder agentPoolId(Input<String> agentPoolId) {
             this.agentPoolId = Objects.requireNonNull(agentPoolId);
             return this;
         }
 
-        public Builder setAgentPoolId(String agentPoolId) {
+        public Builder agentPoolId(String agentPoolId) {
             this.agentPoolId = Input.of(Objects.requireNonNull(agentPoolId));
             return this;
         }
 
-        public Builder setBandwidthLimit(@Nullable Input<BandwidthLimitArgs> bandwidthLimit) {
+        public Builder bandwidthLimit(@Nullable Input<BandwidthLimitArgs> bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
             return this;
         }
 
-        public Builder setBandwidthLimit(@Nullable BandwidthLimitArgs bandwidthLimit) {
+        public Builder bandwidthLimit(@Nullable BandwidthLimitArgs bandwidthLimit) {
             this.bandwidthLimit = Input.ofNullable(bandwidthLimit);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

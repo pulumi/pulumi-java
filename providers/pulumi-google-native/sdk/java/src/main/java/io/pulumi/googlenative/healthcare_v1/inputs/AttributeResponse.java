@@ -73,12 +73,12 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setAttributeDefinitionId(String attributeDefinitionId) {
+        public Builder attributeDefinitionId(String attributeDefinitionId) {
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

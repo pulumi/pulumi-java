@@ -58,12 +58,12 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setResourceUri(@Nullable Input<List<String>> resourceUri) {
+        public Builder resourceUri(@Nullable Input<List<String>> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable List<String> resourceUri) {
+        public Builder resourceUri(@Nullable List<String> resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }

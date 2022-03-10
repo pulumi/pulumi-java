@@ -114,27 +114,27 @@ public final class RetryConfigResponse {
     	      this.minBackoff = defaults.minBackoff;
         }
 
-        public Builder setMaxAttempts(Integer maxAttempts) {
+        public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
-        public Builder setMaxBackoff(String maxBackoff) {
+        public Builder maxBackoff(String maxBackoff) {
             this.maxBackoff = Objects.requireNonNull(maxBackoff);
             return this;
         }
 
-        public Builder setMaxDoublings(Integer maxDoublings) {
+        public Builder maxDoublings(Integer maxDoublings) {
             this.maxDoublings = Objects.requireNonNull(maxDoublings);
             return this;
         }
 
-        public Builder setMaxRetryDuration(String maxRetryDuration) {
+        public Builder maxRetryDuration(String maxRetryDuration) {
             this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
             return this;
         }
 
-        public Builder setMinBackoff(String minBackoff) {
+        public Builder minBackoff(String minBackoff) {
             this.minBackoff = Objects.requireNonNull(minBackoff);
             return this;
         }

@@ -49,7 +49,7 @@ public final class AndroidDeviceListResponse {
     	      this.androidDevices = defaults.androidDevices;
         }
 
-        public Builder setAndroidDevices(List<AndroidDeviceResponse> androidDevices) {
+        public Builder androidDevices(List<AndroidDeviceResponse> androidDevices) {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }

@@ -40,7 +40,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
     	      this.concurrencyLimit = defaults.concurrencyLimit;
         }
 
-        public Builder setConcurrencyLimit(Integer concurrencyLimit) {
+        public Builder concurrencyLimit(Integer concurrencyLimit) {
             this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
             return this;
         }

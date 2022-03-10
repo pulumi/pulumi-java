@@ -88,32 +88,32 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
     	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Input<Integer> maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Input<Integer> maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Integer maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
             this.maxRetentionDays = Input.ofNullable(maxRetentionDays);
             return this;
         }
 
-        public Builder setOnPolicySwitch(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch) {
+        public Builder onPolicySwitch(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch) {
             this.onPolicySwitch = onPolicySwitch;
             return this;
         }
 
-        public Builder setOnPolicySwitch(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch onPolicySwitch) {
+        public Builder onPolicySwitch(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch onPolicySwitch) {
             this.onPolicySwitch = Input.ofNullable(onPolicySwitch);
             return this;
         }
 
-        public Builder setOnSourceDiskDelete(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete) {
+        public Builder onSourceDiskDelete(@Nullable Input<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete) {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
 
-        public Builder setOnSourceDiskDelete(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete onSourceDiskDelete) {
+        public Builder onSourceDiskDelete(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete onSourceDiskDelete) {
             this.onSourceDiskDelete = Input.ofNullable(onSourceDiskDelete);
             return this;
         }

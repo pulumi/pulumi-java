@@ -57,12 +57,12 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
     	      this.enableFailureEmail = defaults.enableFailureEmail;
         }
 
-        public Builder setEnableFailureEmail(@Nullable Input<Boolean> enableFailureEmail) {
+        public Builder enableFailureEmail(@Nullable Input<Boolean> enableFailureEmail) {
             this.enableFailureEmail = enableFailureEmail;
             return this;
         }
 
-        public Builder setEnableFailureEmail(@Nullable Boolean enableFailureEmail) {
+        public Builder enableFailureEmail(@Nullable Boolean enableFailureEmail) {
             this.enableFailureEmail = Input.ofNullable(enableFailureEmail);
             return this;
         }

@@ -106,22 +106,22 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
     	      this.resizeUnitCount = defaults.resizeUnitCount;
         }
 
-        public Builder setEnableRenewal(Boolean enableRenewal) {
+        public Builder enableRenewal(Boolean enableRenewal) {
             this.enableRenewal = Objects.requireNonNull(enableRenewal);
             return this;
         }
 
-        public Builder setPaymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
+        public Builder paymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
             this.paymentCycle = Objects.requireNonNull(paymentCycle);
             return this;
         }
 
-        public Builder setPaymentPlan(String paymentPlan) {
+        public Builder paymentPlan(String paymentPlan) {
             this.paymentPlan = Objects.requireNonNull(paymentPlan);
             return this;
         }
 
-        public Builder setResizeUnitCount(Boolean resizeUnitCount) {
+        public Builder resizeUnitCount(Boolean resizeUnitCount) {
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
         }

@@ -65,12 +65,12 @@ public final class GooglePrivacyDlpV2ProximityResponse {
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder setWindowAfter(Integer windowAfter) {
+        public Builder windowAfter(Integer windowAfter) {
             this.windowAfter = Objects.requireNonNull(windowAfter);
             return this;
         }
 
-        public Builder setWindowBefore(Integer windowBefore) {
+        public Builder windowBefore(Integer windowBefore) {
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
         }

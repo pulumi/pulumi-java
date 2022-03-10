@@ -73,12 +73,12 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     	      this.policy = defaults.policy;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

@@ -100,22 +100,22 @@ public final class OSPolicyResourceResponse {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setExec(OSPolicyResourceExecResourceResponse exec) {
+        public Builder exec(OSPolicyResourceExecResourceResponse exec) {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResourceResponse file) {
+        public Builder file(OSPolicyResourceFileResourceResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setPkg(OSPolicyResourcePackageResourceResponse pkg) {
+        public Builder pkg(OSPolicyResourcePackageResourceResponse pkg) {
             this.pkg = Objects.requireNonNull(pkg);
             return this;
         }
 
-        public Builder setRepository(OSPolicyResourceRepositoryResourceResponse repository) {
+        public Builder repository(OSPolicyResourceRepositoryResourceResponse repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }

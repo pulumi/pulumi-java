@@ -183,47 +183,47 @@ public final class GetKeyResult {
     	      this.webSettings = defaults.webSettings;
         }
 
-        public Builder setAndroidSettings(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings) {
+        public Builder androidSettings(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings) {
             this.androidSettings = Objects.requireNonNull(androidSettings);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIosSettings(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings) {
+        public Builder iosSettings(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings) {
             this.iosSettings = Objects.requireNonNull(iosSettings);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions) {
+        public Builder testingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions) {
             this.testingOptions = Objects.requireNonNull(testingOptions);
             return this;
         }
 
-        public Builder setWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings) {
+        public Builder wafSettings(GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings) {
             this.wafSettings = Objects.requireNonNull(wafSettings);
             return this;
         }
 
-        public Builder setWebSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
+        public Builder webSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
             this.webSettings = Objects.requireNonNull(webSettings);
             return this;
         }

@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setWordList(GooglePrivacyDlpV2WordListResponse wordList) {
+        public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }

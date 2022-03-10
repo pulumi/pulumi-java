@@ -122,27 +122,27 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
     	      this.username = defaults.username;
         }
 
-        public Builder setIsCloudFunction(Boolean isCloudFunction) {
+        public Builder isCloudFunction(Boolean isCloudFunction) {
             this.isCloudFunction = Objects.requireNonNull(isCloudFunction);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRequestHeaders(Map<String,String> requestHeaders) {
+        public Builder requestHeaders(Map<String,String> requestHeaders) {
             this.requestHeaders = Objects.requireNonNull(requestHeaders);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

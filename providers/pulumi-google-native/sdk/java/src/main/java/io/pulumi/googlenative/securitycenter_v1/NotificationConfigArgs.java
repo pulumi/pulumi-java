@@ -127,62 +127,62 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.streamingConfig = defaults.streamingConfig;
         }
 
-        public Builder setConfigId(Input<String> configId) {
+        public Builder configId(Input<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Input.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }
 
-        public Builder setStreamingConfig(@Nullable Input<StreamingConfigArgs> streamingConfig) {
+        public Builder streamingConfig(@Nullable Input<StreamingConfigArgs> streamingConfig) {
             this.streamingConfig = streamingConfig;
             return this;
         }
 
-        public Builder setStreamingConfig(@Nullable StreamingConfigArgs streamingConfig) {
+        public Builder streamingConfig(@Nullable StreamingConfigArgs streamingConfig) {
             this.streamingConfig = Input.ofNullable(streamingConfig);
             return this;
         }

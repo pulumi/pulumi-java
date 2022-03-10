@@ -124,52 +124,52 @@ public final class MysqlProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setHostname(Input<String> hostname) {
+        public Builder hostname(Input<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Input.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Input<Integer> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setSslConfig(@Nullable Input<MysqlSslConfigArgs> sslConfig) {
+        public Builder sslConfig(@Nullable Input<MysqlSslConfigArgs> sslConfig) {
             this.sslConfig = sslConfig;
             return this;
         }
 
-        public Builder setSslConfig(@Nullable MysqlSslConfigArgs sslConfig) {
+        public Builder sslConfig(@Nullable MysqlSslConfigArgs sslConfig) {
             this.sslConfig = Input.ofNullable(sslConfig);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

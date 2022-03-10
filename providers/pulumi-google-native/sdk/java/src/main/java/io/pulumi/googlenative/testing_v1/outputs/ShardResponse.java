@@ -82,17 +82,17 @@ public final class ShardResponse {
     	      this.testTargetsForShard = defaults.testTargetsForShard;
         }
 
-        public Builder setNumShards(Integer numShards) {
+        public Builder numShards(Integer numShards) {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
 
-        public Builder setShardIndex(Integer shardIndex) {
+        public Builder shardIndex(Integer shardIndex) {
             this.shardIndex = Objects.requireNonNull(shardIndex);
             return this;
         }
 
-        public Builder setTestTargetsForShard(TestTargetsForShardResponse testTargetsForShard) {
+        public Builder testTargetsForShard(TestTargetsForShardResponse testTargetsForShard) {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }

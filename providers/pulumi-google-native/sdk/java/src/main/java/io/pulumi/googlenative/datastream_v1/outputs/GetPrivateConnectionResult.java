@@ -164,42 +164,42 @@ public final class GetPrivateConnectionResult {
     	      this.vpcPeeringConfig = defaults.vpcPeeringConfig;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setError(ErrorResponse error) {
+        public Builder error(ErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVpcPeeringConfig(VpcPeeringConfigResponse vpcPeeringConfig) {
+        public Builder vpcPeeringConfig(VpcPeeringConfigResponse vpcPeeringConfig) {
             this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
             return this;
         }

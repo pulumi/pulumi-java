@@ -307,87 +307,87 @@ public final class GetServingConfigResult {
     	      this.twowaySynonymsControlIds = defaults.twowaySynonymsControlIds;
         }
 
-        public Builder setBoostControlIds(List<String> boostControlIds) {
+        public Builder boostControlIds(List<String> boostControlIds) {
             this.boostControlIds = Objects.requireNonNull(boostControlIds);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDiversityLevel(String diversityLevel) {
+        public Builder diversityLevel(String diversityLevel) {
             this.diversityLevel = Objects.requireNonNull(diversityLevel);
             return this;
         }
 
-        public Builder setDoNotAssociateControlIds(List<String> doNotAssociateControlIds) {
+        public Builder doNotAssociateControlIds(List<String> doNotAssociateControlIds) {
             this.doNotAssociateControlIds = Objects.requireNonNull(doNotAssociateControlIds);
             return this;
         }
 
-        public Builder setDynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec) {
+        public Builder dynamicFacetSpec(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec) {
             this.dynamicFacetSpec = Objects.requireNonNull(dynamicFacetSpec);
             return this;
         }
 
-        public Builder setEnableCategoryFilterLevel(String enableCategoryFilterLevel) {
+        public Builder enableCategoryFilterLevel(String enableCategoryFilterLevel) {
             this.enableCategoryFilterLevel = Objects.requireNonNull(enableCategoryFilterLevel);
             return this;
         }
 
-        public Builder setFacetControlIds(List<String> facetControlIds) {
+        public Builder facetControlIds(List<String> facetControlIds) {
             this.facetControlIds = Objects.requireNonNull(facetControlIds);
             return this;
         }
 
-        public Builder setFilterControlIds(List<String> filterControlIds) {
+        public Builder filterControlIds(List<String> filterControlIds) {
             this.filterControlIds = Objects.requireNonNull(filterControlIds);
             return this;
         }
 
-        public Builder setIgnoreControlIds(List<String> ignoreControlIds) {
+        public Builder ignoreControlIds(List<String> ignoreControlIds) {
             this.ignoreControlIds = Objects.requireNonNull(ignoreControlIds);
             return this;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOnewaySynonymsControlIds(List<String> onewaySynonymsControlIds) {
+        public Builder onewaySynonymsControlIds(List<String> onewaySynonymsControlIds) {
             this.onewaySynonymsControlIds = Objects.requireNonNull(onewaySynonymsControlIds);
             return this;
         }
 
-        public Builder setPriceRerankingLevel(String priceRerankingLevel) {
+        public Builder priceRerankingLevel(String priceRerankingLevel) {
             this.priceRerankingLevel = Objects.requireNonNull(priceRerankingLevel);
             return this;
         }
 
-        public Builder setRedirectControlIds(List<String> redirectControlIds) {
+        public Builder redirectControlIds(List<String> redirectControlIds) {
             this.redirectControlIds = Objects.requireNonNull(redirectControlIds);
             return this;
         }
 
-        public Builder setReplacementControlIds(List<String> replacementControlIds) {
+        public Builder replacementControlIds(List<String> replacementControlIds) {
             this.replacementControlIds = Objects.requireNonNull(replacementControlIds);
             return this;
         }
 
-        public Builder setSolutionTypes(List<String> solutionTypes) {
+        public Builder solutionTypes(List<String> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
 
-        public Builder setTwowaySynonymsControlIds(List<String> twowaySynonymsControlIds) {
+        public Builder twowaySynonymsControlIds(List<String> twowaySynonymsControlIds) {
             this.twowaySynonymsControlIds = Objects.requireNonNull(twowaySynonymsControlIds);
             return this;
         }

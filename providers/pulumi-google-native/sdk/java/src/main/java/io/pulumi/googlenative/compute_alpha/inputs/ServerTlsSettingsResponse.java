@@ -90,17 +90,17 @@ public final class ServerTlsSettingsResponse extends io.pulumi.resources.InvokeA
     	      this.tlsMode = defaults.tlsMode;
         }
 
-        public Builder setProxyTlsContext(TlsContextResponse proxyTlsContext) {
+        public Builder proxyTlsContext(TlsContextResponse proxyTlsContext) {
             this.proxyTlsContext = Objects.requireNonNull(proxyTlsContext);
             return this;
         }
 
-        public Builder setSubjectAltNames(List<String> subjectAltNames) {
+        public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
 
-        public Builder setTlsMode(String tlsMode) {
+        public Builder tlsMode(String tlsMode) {
             this.tlsMode = Objects.requireNonNull(tlsMode);
             return this;
         }

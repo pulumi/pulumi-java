@@ -48,7 +48,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
     	      this.onHealthCheck = defaults.onHealthCheck;
         }
 
-        public Builder setOnHealthCheck(String onHealthCheck) {
+        public Builder onHealthCheck(String onHealthCheck) {
             this.onHealthCheck = Objects.requireNonNull(onHealthCheck);
             return this;
         }

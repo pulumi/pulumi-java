@@ -56,12 +56,12 @@ public final class HintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder setHumanReadableName(Input<String> humanReadableName) {
+        public Builder humanReadableName(Input<String> humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }
 
-        public Builder setHumanReadableName(String humanReadableName) {
+        public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
             return this;
         }

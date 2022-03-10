@@ -89,17 +89,17 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setHoursInCycle(Integer hoursInCycle) {
+        public Builder hoursInCycle(Integer hoursInCycle) {
             this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

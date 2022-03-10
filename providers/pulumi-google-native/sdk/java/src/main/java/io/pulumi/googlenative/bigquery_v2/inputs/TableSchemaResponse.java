@@ -52,7 +52,7 @@ public final class TableSchemaResponse extends io.pulumi.resources.InvokeArgs {
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(List<TableFieldSchemaResponse> fields) {
+        public Builder fields(List<TableFieldSchemaResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }

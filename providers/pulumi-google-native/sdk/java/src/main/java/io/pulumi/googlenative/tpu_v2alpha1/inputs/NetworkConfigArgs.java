@@ -107,42 +107,42 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setCanIpForward(@Nullable Input<Boolean> canIpForward) {
+        public Builder canIpForward(@Nullable Input<Boolean> canIpForward) {
             this.canIpForward = canIpForward;
             return this;
         }
 
-        public Builder setCanIpForward(@Nullable Boolean canIpForward) {
+        public Builder canIpForward(@Nullable Boolean canIpForward) {
             this.canIpForward = Input.ofNullable(canIpForward);
             return this;
         }
 
-        public Builder setEnableExternalIps(@Nullable Input<Boolean> enableExternalIps) {
+        public Builder enableExternalIps(@Nullable Input<Boolean> enableExternalIps) {
             this.enableExternalIps = enableExternalIps;
             return this;
         }
 
-        public Builder setEnableExternalIps(@Nullable Boolean enableExternalIps) {
+        public Builder enableExternalIps(@Nullable Boolean enableExternalIps) {
             this.enableExternalIps = Input.ofNullable(enableExternalIps);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

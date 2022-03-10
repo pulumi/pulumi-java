@@ -98,22 +98,22 @@ public final class UDPHealthCheckResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setResponse(String response) {
+        public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }

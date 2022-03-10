@@ -71,22 +71,22 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setHealthCheck(@Nullable Input<String> healthCheck) {
+        public Builder healthCheck(@Nullable Input<String> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable String healthCheck) {
+        public Builder healthCheck(@Nullable String healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
-        public Builder setInitialDelaySec(@Nullable Integer initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
             this.initialDelaySec = Input.ofNullable(initialDelaySec);
             return this;
         }

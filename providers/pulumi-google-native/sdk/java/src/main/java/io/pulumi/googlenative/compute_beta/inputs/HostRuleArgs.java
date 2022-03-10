@@ -91,32 +91,32 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pathMatcher = defaults.pathMatcher;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHosts(@Nullable Input<List<String>> hosts) {
+        public Builder hosts(@Nullable Input<List<String>> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = Input.ofNullable(hosts);
             return this;
         }
 
-        public Builder setPathMatcher(@Nullable Input<String> pathMatcher) {
+        public Builder pathMatcher(@Nullable Input<String> pathMatcher) {
             this.pathMatcher = pathMatcher;
             return this;
         }
 
-        public Builder setPathMatcher(@Nullable String pathMatcher) {
+        public Builder pathMatcher(@Nullable String pathMatcher) {
             this.pathMatcher = Input.ofNullable(pathMatcher);
             return this;
         }

@@ -65,12 +65,12 @@ public final class ContainerImageResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

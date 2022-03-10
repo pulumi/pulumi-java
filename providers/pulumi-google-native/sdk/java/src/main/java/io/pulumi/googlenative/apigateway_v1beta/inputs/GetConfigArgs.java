@@ -98,27 +98,27 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }

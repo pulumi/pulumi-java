@@ -472,137 +472,137 @@ public final class GetInterconnectResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAdminEnabled(Boolean adminEnabled) {
+        public Builder adminEnabled(Boolean adminEnabled) {
             this.adminEnabled = Objects.requireNonNull(adminEnabled);
             return this;
         }
 
-        public Builder setCircuitInfos(List<InterconnectCircuitInfoResponse> circuitInfos) {
+        public Builder circuitInfos(List<InterconnectCircuitInfoResponse> circuitInfos) {
             this.circuitInfos = Objects.requireNonNull(circuitInfos);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomerName(String customerName) {
+        public Builder customerName(String customerName) {
             this.customerName = Objects.requireNonNull(customerName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpectedOutages(List<InterconnectOutageNotificationResponse> expectedOutages) {
+        public Builder expectedOutages(List<InterconnectOutageNotificationResponse> expectedOutages) {
             this.expectedOutages = Objects.requireNonNull(expectedOutages);
             return this;
         }
 
-        public Builder setGoogleIpAddress(String googleIpAddress) {
+        public Builder googleIpAddress(String googleIpAddress) {
             this.googleIpAddress = Objects.requireNonNull(googleIpAddress);
             return this;
         }
 
-        public Builder setGoogleReferenceId(String googleReferenceId) {
+        public Builder googleReferenceId(String googleReferenceId) {
             this.googleReferenceId = Objects.requireNonNull(googleReferenceId);
             return this;
         }
 
-        public Builder setInterconnectAttachments(List<String> interconnectAttachments) {
+        public Builder interconnectAttachments(List<String> interconnectAttachments) {
             this.interconnectAttachments = Objects.requireNonNull(interconnectAttachments);
             return this;
         }
 
-        public Builder setInterconnectType(String interconnectType) {
+        public Builder interconnectType(String interconnectType) {
             this.interconnectType = Objects.requireNonNull(interconnectType);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLinkType(String linkType) {
+        public Builder linkType(String linkType) {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMacsec(InterconnectMacsecResponse macsec) {
+        public Builder macsec(InterconnectMacsecResponse macsec) {
             this.macsec = Objects.requireNonNull(macsec);
             return this;
         }
 
-        public Builder setMacsecEnabled(Boolean macsecEnabled) {
+        public Builder macsecEnabled(Boolean macsecEnabled) {
             this.macsecEnabled = Objects.requireNonNull(macsecEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNocContactEmail(String nocContactEmail) {
+        public Builder nocContactEmail(String nocContactEmail) {
             this.nocContactEmail = Objects.requireNonNull(nocContactEmail);
             return this;
         }
 
-        public Builder setOperationalStatus(String operationalStatus) {
+        public Builder operationalStatus(String operationalStatus) {
             this.operationalStatus = Objects.requireNonNull(operationalStatus);
             return this;
         }
 
-        public Builder setPeerIpAddress(String peerIpAddress) {
+        public Builder peerIpAddress(String peerIpAddress) {
             this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
             return this;
         }
 
-        public Builder setProvisionedLinkCount(Integer provisionedLinkCount) {
+        public Builder provisionedLinkCount(Integer provisionedLinkCount) {
             this.provisionedLinkCount = Objects.requireNonNull(provisionedLinkCount);
             return this;
         }
 
-        public Builder setRequestedLinkCount(Integer requestedLinkCount) {
+        public Builder requestedLinkCount(Integer requestedLinkCount) {
             this.requestedLinkCount = Objects.requireNonNull(requestedLinkCount);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

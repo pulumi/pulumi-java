@@ -57,12 +57,12 @@ public final class HttpsTriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.securityLevel = defaults.securityLevel;
         }
 
-        public Builder setSecurityLevel(@Nullable Input<HttpsTriggerSecurityLevel> securityLevel) {
+        public Builder securityLevel(@Nullable Input<HttpsTriggerSecurityLevel> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable HttpsTriggerSecurityLevel securityLevel) {
+        public Builder securityLevel(@Nullable HttpsTriggerSecurityLevel securityLevel) {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }

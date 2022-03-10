@@ -122,27 +122,27 @@ public final class RecipeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setArguments(List<Map<String,String>> arguments) {
+        public Builder arguments(List<Map<String,String>> arguments) {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
 
-        public Builder setDefinedInMaterial(String definedInMaterial) {
+        public Builder definedInMaterial(String definedInMaterial) {
             this.definedInMaterial = Objects.requireNonNull(definedInMaterial);
             return this;
         }
 
-        public Builder setEntryPoint(String entryPoint) {
+        public Builder entryPoint(String entryPoint) {
             this.entryPoint = Objects.requireNonNull(entryPoint);
             return this;
         }
 
-        public Builder setEnvironment(List<Map<String,String>> environment) {
+        public Builder environment(List<Map<String,String>> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

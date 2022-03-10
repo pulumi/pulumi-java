@@ -404,117 +404,117 @@ public final class GetVpnTunnelResult {
     	      this.vpnGatewayInterface = defaults.vpnGatewayInterface;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDetailedStatus(String detailedStatus) {
+        public Builder detailedStatus(String detailedStatus) {
             this.detailedStatus = Objects.requireNonNull(detailedStatus);
             return this;
         }
 
-        public Builder setIkeVersion(Integer ikeVersion) {
+        public Builder ikeVersion(Integer ikeVersion) {
             this.ikeVersion = Objects.requireNonNull(ikeVersion);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLocalTrafficSelector(List<String> localTrafficSelector) {
+        public Builder localTrafficSelector(List<String> localTrafficSelector) {
             this.localTrafficSelector = Objects.requireNonNull(localTrafficSelector);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerExternalGateway(String peerExternalGateway) {
+        public Builder peerExternalGateway(String peerExternalGateway) {
             this.peerExternalGateway = Objects.requireNonNull(peerExternalGateway);
             return this;
         }
 
-        public Builder setPeerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
+        public Builder peerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
             this.peerExternalGatewayInterface = Objects.requireNonNull(peerExternalGatewayInterface);
             return this;
         }
 
-        public Builder setPeerGcpGateway(String peerGcpGateway) {
+        public Builder peerGcpGateway(String peerGcpGateway) {
             this.peerGcpGateway = Objects.requireNonNull(peerGcpGateway);
             return this;
         }
 
-        public Builder setPeerIp(String peerIp) {
+        public Builder peerIp(String peerIp) {
             this.peerIp = Objects.requireNonNull(peerIp);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRemoteTrafficSelector(List<String> remoteTrafficSelector) {
+        public Builder remoteTrafficSelector(List<String> remoteTrafficSelector) {
             this.remoteTrafficSelector = Objects.requireNonNull(remoteTrafficSelector);
             return this;
         }
 
-        public Builder setRouter(String router) {
+        public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSharedSecret(String sharedSecret) {
+        public Builder sharedSecret(String sharedSecret) {
             this.sharedSecret = Objects.requireNonNull(sharedSecret);
             return this;
         }
 
-        public Builder setSharedSecretHash(String sharedSecretHash) {
+        public Builder sharedSecretHash(String sharedSecretHash) {
             this.sharedSecretHash = Objects.requireNonNull(sharedSecretHash);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetVpnGateway(String targetVpnGateway) {
+        public Builder targetVpnGateway(String targetVpnGateway) {
             this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
             return this;
         }
 
-        public Builder setVpnGateway(String vpnGateway) {
+        public Builder vpnGateway(String vpnGateway) {
             this.vpnGateway = Objects.requireNonNull(vpnGateway);
             return this;
         }
 
-        public Builder setVpnGatewayInterface(Integer vpnGatewayInterface) {
+        public Builder vpnGatewayInterface(Integer vpnGatewayInterface) {
             this.vpnGatewayInterface = Objects.requireNonNull(vpnGatewayInterface);
             return this;
         }

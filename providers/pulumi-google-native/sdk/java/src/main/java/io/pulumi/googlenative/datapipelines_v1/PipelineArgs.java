@@ -195,102 +195,102 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workload = defaults.workload;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPipelineSources(@Nullable Input<Map<String,String>> pipelineSources) {
+        public Builder pipelineSources(@Nullable Input<Map<String,String>> pipelineSources) {
             this.pipelineSources = pipelineSources;
             return this;
         }
 
-        public Builder setPipelineSources(@Nullable Map<String,String> pipelineSources) {
+        public Builder pipelineSources(@Nullable Map<String,String> pipelineSources) {
             this.pipelineSources = Input.ofNullable(pipelineSources);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setScheduleInfo(@Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
+        public Builder scheduleInfo(@Nullable Input<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
             this.scheduleInfo = scheduleInfo;
             return this;
         }
 
-        public Builder setScheduleInfo(@Nullable GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
+        public Builder scheduleInfo(@Nullable GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
             this.scheduleInfo = Input.ofNullable(scheduleInfo);
             return this;
         }
 
-        public Builder setSchedulerServiceAccountEmail(@Nullable Input<String> schedulerServiceAccountEmail) {
+        public Builder schedulerServiceAccountEmail(@Nullable Input<String> schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
             return this;
         }
 
-        public Builder setSchedulerServiceAccountEmail(@Nullable String schedulerServiceAccountEmail) {
+        public Builder schedulerServiceAccountEmail(@Nullable String schedulerServiceAccountEmail) {
             this.schedulerServiceAccountEmail = Input.ofNullable(schedulerServiceAccountEmail);
             return this;
         }
 
-        public Builder setState(Input<PipelineState> state) {
+        public Builder state(Input<PipelineState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(PipelineState state) {
+        public Builder state(PipelineState state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setType(Input<PipelineType> type) {
+        public Builder type(Input<PipelineType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(PipelineType type) {
+        public Builder type(PipelineType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWorkload(@Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
+        public Builder workload(@Nullable Input<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
             this.workload = workload;
             return this;
         }
 
-        public Builder setWorkload(@Nullable GoogleCloudDatapipelinesV1WorkloadArgs workload) {
+        public Builder workload(@Nullable GoogleCloudDatapipelinesV1WorkloadArgs workload) {
             this.workload = Input.ofNullable(workload);
             return this;
         }

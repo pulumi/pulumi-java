@@ -108,42 +108,42 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     	      this.useOrchestrator = defaults.useOrchestrator;
         }
 
-        public Builder setTestPackageId(@Nullable Input<String> testPackageId) {
+        public Builder testPackageId(@Nullable Input<String> testPackageId) {
             this.testPackageId = testPackageId;
             return this;
         }
 
-        public Builder setTestPackageId(@Nullable String testPackageId) {
+        public Builder testPackageId(@Nullable String testPackageId) {
             this.testPackageId = Input.ofNullable(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(@Nullable Input<String> testRunnerClass) {
+        public Builder testRunnerClass(@Nullable Input<String> testRunnerClass) {
             this.testRunnerClass = testRunnerClass;
             return this;
         }
 
-        public Builder setTestRunnerClass(@Nullable String testRunnerClass) {
+        public Builder testRunnerClass(@Nullable String testRunnerClass) {
             this.testRunnerClass = Input.ofNullable(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(@Nullable Input<List<String>> testTargets) {
+        public Builder testTargets(@Nullable Input<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
 
-        public Builder setTestTargets(@Nullable List<String> testTargets) {
+        public Builder testTargets(@Nullable List<String> testTargets) {
             this.testTargets = Input.ofNullable(testTargets);
             return this;
         }
 
-        public Builder setUseOrchestrator(@Nullable Input<Boolean> useOrchestrator) {
+        public Builder useOrchestrator(@Nullable Input<Boolean> useOrchestrator) {
             this.useOrchestrator = useOrchestrator;
             return this;
         }
 
-        public Builder setUseOrchestrator(@Nullable Boolean useOrchestrator) {
+        public Builder useOrchestrator(@Nullable Boolean useOrchestrator) {
             this.useOrchestrator = Input.ofNullable(useOrchestrator);
             return this;
         }

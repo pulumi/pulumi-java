@@ -65,12 +65,12 @@ public final class AuthRequirementResponse {
     	      this.providerId = defaults.providerId;
         }
 
-        public Builder setAudiences(String audiences) {
+        public Builder audiences(String audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
-        public Builder setProviderId(String providerId) {
+        public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }

@@ -55,7 +55,7 @@ public final class BandwidthLimitResponse extends io.pulumi.resources.InvokeArgs
     	      this.limitMbps = defaults.limitMbps;
         }
 
-        public Builder setLimitMbps(String limitMbps) {
+        public Builder limitMbps(String limitMbps) {
             this.limitMbps = Objects.requireNonNull(limitMbps);
             return this;
         }

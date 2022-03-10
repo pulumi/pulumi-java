@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFullMatch(Boolean fullMatch) {
+        public Builder fullMatch(Boolean fullMatch) {
             this.fullMatch = Objects.requireNonNull(fullMatch);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

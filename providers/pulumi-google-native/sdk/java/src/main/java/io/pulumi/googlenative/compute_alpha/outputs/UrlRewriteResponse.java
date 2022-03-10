@@ -65,12 +65,12 @@ public final class UrlRewriteResponse {
     	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
         }
 
-        public Builder setHostRewrite(String hostRewrite) {
+        public Builder hostRewrite(String hostRewrite) {
             this.hostRewrite = Objects.requireNonNull(hostRewrite);
             return this;
         }
 
-        public Builder setPathPrefixRewrite(String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(String pathPrefixRewrite) {
             this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite);
             return this;
         }

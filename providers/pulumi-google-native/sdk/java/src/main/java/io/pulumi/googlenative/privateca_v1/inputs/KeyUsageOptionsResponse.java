@@ -184,47 +184,47 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
     	      this.keyEncipherment = defaults.keyEncipherment;
         }
 
-        public Builder setCertSign(Boolean certSign) {
+        public Builder certSign(Boolean certSign) {
             this.certSign = Objects.requireNonNull(certSign);
             return this;
         }
 
-        public Builder setContentCommitment(Boolean contentCommitment) {
+        public Builder contentCommitment(Boolean contentCommitment) {
             this.contentCommitment = Objects.requireNonNull(contentCommitment);
             return this;
         }
 
-        public Builder setCrlSign(Boolean crlSign) {
+        public Builder crlSign(Boolean crlSign) {
             this.crlSign = Objects.requireNonNull(crlSign);
             return this;
         }
 
-        public Builder setDataEncipherment(Boolean dataEncipherment) {
+        public Builder dataEncipherment(Boolean dataEncipherment) {
             this.dataEncipherment = Objects.requireNonNull(dataEncipherment);
             return this;
         }
 
-        public Builder setDecipherOnly(Boolean decipherOnly) {
+        public Builder decipherOnly(Boolean decipherOnly) {
             this.decipherOnly = Objects.requireNonNull(decipherOnly);
             return this;
         }
 
-        public Builder setDigitalSignature(Boolean digitalSignature) {
+        public Builder digitalSignature(Boolean digitalSignature) {
             this.digitalSignature = Objects.requireNonNull(digitalSignature);
             return this;
         }
 
-        public Builder setEncipherOnly(Boolean encipherOnly) {
+        public Builder encipherOnly(Boolean encipherOnly) {
             this.encipherOnly = Objects.requireNonNull(encipherOnly);
             return this;
         }
 
-        public Builder setKeyAgreement(Boolean keyAgreement) {
+        public Builder keyAgreement(Boolean keyAgreement) {
             this.keyAgreement = Objects.requireNonNull(keyAgreement);
             return this;
         }
 
-        public Builder setKeyEncipherment(Boolean keyEncipherment) {
+        public Builder keyEncipherment(Boolean keyEncipherment) {
             this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
             return this;
         }

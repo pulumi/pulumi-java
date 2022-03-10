@@ -66,12 +66,12 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
     	      this.queryStringWhitelist = defaults.queryStringWhitelist;
         }
 
-        public Builder setIncludeHttpHeaders(List<String> includeHttpHeaders) {
+        public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
             return this;
         }
 
-        public Builder setQueryStringWhitelist(List<String> queryStringWhitelist) {
+        public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }

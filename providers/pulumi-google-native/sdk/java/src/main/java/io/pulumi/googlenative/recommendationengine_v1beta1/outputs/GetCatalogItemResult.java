@@ -149,37 +149,37 @@ public final class GetCatalogItemResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setCategoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies) {
+        public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies) {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setItemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes) {
+        public Builder itemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes) {
             this.itemAttributes = Objects.requireNonNull(itemAttributes);
             return this;
         }
 
-        public Builder setItemGroupId(String itemGroupId) {
+        public Builder itemGroupId(String itemGroupId) {
             this.itemGroupId = Objects.requireNonNull(itemGroupId);
             return this;
         }
 
-        public Builder setProductMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
+        public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
             this.productMetadata = Objects.requireNonNull(productMetadata);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

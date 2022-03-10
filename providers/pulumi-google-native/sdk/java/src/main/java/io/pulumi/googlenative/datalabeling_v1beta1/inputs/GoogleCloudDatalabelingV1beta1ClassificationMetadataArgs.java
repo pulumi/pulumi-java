@@ -57,12 +57,12 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataArgs exte
     	      this.isMultiLabel = defaults.isMultiLabel;
         }
 
-        public Builder setIsMultiLabel(@Nullable Input<Boolean> isMultiLabel) {
+        public Builder isMultiLabel(@Nullable Input<Boolean> isMultiLabel) {
             this.isMultiLabel = isMultiLabel;
             return this;
         }
 
-        public Builder setIsMultiLabel(@Nullable Boolean isMultiLabel) {
+        public Builder isMultiLabel(@Nullable Boolean isMultiLabel) {
             this.isMultiLabel = Input.ofNullable(isMultiLabel);
             return this;
         }

@@ -66,12 +66,12 @@ public final class AllowedKeyTypeResponse {
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder setEllipticCurve(EcKeyTypeResponse ellipticCurve) {
+        public Builder ellipticCurve(EcKeyTypeResponse ellipticCurve) {
             this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
             return this;
         }
 
-        public Builder setRsa(RsaKeyTypeResponse rsa) {
+        public Builder rsa(RsaKeyTypeResponse rsa) {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
         }

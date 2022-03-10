@@ -57,12 +57,12 @@ public final class ConditionContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.accessTime = defaults.accessTime;
         }
 
-        public Builder setAccessTime(@Nullable Input<String> accessTime) {
+        public Builder accessTime(@Nullable Input<String> accessTime) {
             this.accessTime = accessTime;
             return this;
         }
 
-        public Builder setAccessTime(@Nullable String accessTime) {
+        public Builder accessTime(@Nullable String accessTime) {
             this.accessTime = Input.ofNullable(accessTime);
             return this;
         }

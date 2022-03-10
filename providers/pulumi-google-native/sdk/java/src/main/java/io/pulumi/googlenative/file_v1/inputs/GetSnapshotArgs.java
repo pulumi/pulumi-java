@@ -86,22 +86,22 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
     	      this.snapshotId = defaults.snapshotId;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }

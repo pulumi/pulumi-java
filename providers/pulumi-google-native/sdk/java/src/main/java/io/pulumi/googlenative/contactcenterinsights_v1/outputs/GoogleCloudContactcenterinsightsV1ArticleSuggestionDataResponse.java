@@ -131,32 +131,32 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
     	      this.uri = defaults.uri;
         }
 
-        public Builder setConfidenceScore(Double confidenceScore) {
+        public Builder confidenceScore(Double confidenceScore) {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setQueryRecord(String queryRecord) {
+        public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

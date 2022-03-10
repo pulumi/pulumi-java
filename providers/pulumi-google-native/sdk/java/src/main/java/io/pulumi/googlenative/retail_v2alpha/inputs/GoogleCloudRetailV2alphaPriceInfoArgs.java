@@ -139,62 +139,62 @@ public final class GoogleCloudRetailV2alphaPriceInfoArgs extends io.pulumi.resou
     	      this.priceExpireTime = defaults.priceExpireTime;
         }
 
-        public Builder setCost(@Nullable Input<Double> cost) {
+        public Builder cost(@Nullable Input<Double> cost) {
             this.cost = cost;
             return this;
         }
 
-        public Builder setCost(@Nullable Double cost) {
+        public Builder cost(@Nullable Double cost) {
             this.cost = Input.ofNullable(cost);
             return this;
         }
 
-        public Builder setCurrencyCode(@Nullable Input<String> currencyCode) {
+        public Builder currencyCode(@Nullable Input<String> currencyCode) {
             this.currencyCode = currencyCode;
             return this;
         }
 
-        public Builder setCurrencyCode(@Nullable String currencyCode) {
+        public Builder currencyCode(@Nullable String currencyCode) {
             this.currencyCode = Input.ofNullable(currencyCode);
             return this;
         }
 
-        public Builder setOriginalPrice(@Nullable Input<Double> originalPrice) {
+        public Builder originalPrice(@Nullable Input<Double> originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
 
-        public Builder setOriginalPrice(@Nullable Double originalPrice) {
+        public Builder originalPrice(@Nullable Double originalPrice) {
             this.originalPrice = Input.ofNullable(originalPrice);
             return this;
         }
 
-        public Builder setPrice(@Nullable Input<Double> price) {
+        public Builder price(@Nullable Input<Double> price) {
             this.price = price;
             return this;
         }
 
-        public Builder setPrice(@Nullable Double price) {
+        public Builder price(@Nullable Double price) {
             this.price = Input.ofNullable(price);
             return this;
         }
 
-        public Builder setPriceEffectiveTime(@Nullable Input<String> priceEffectiveTime) {
+        public Builder priceEffectiveTime(@Nullable Input<String> priceEffectiveTime) {
             this.priceEffectiveTime = priceEffectiveTime;
             return this;
         }
 
-        public Builder setPriceEffectiveTime(@Nullable String priceEffectiveTime) {
+        public Builder priceEffectiveTime(@Nullable String priceEffectiveTime) {
             this.priceEffectiveTime = Input.ofNullable(priceEffectiveTime);
             return this;
         }
 
-        public Builder setPriceExpireTime(@Nullable Input<String> priceExpireTime) {
+        public Builder priceExpireTime(@Nullable Input<String> priceExpireTime) {
             this.priceExpireTime = priceExpireTime;
             return this;
         }
 
-        public Builder setPriceExpireTime(@Nullable String priceExpireTime) {
+        public Builder priceExpireTime(@Nullable String priceExpireTime) {
             this.priceExpireTime = Input.ofNullable(priceExpireTime);
             return this;
         }

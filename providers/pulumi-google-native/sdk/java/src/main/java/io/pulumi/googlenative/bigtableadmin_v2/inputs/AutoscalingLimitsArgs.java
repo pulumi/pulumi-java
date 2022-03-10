@@ -73,22 +73,22 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
     	      this.minServeNodes = defaults.minServeNodes;
         }
 
-        public Builder setMaxServeNodes(Input<Integer> maxServeNodes) {
+        public Builder maxServeNodes(Input<Integer> maxServeNodes) {
             this.maxServeNodes = Objects.requireNonNull(maxServeNodes);
             return this;
         }
 
-        public Builder setMaxServeNodes(Integer maxServeNodes) {
+        public Builder maxServeNodes(Integer maxServeNodes) {
             this.maxServeNodes = Input.of(Objects.requireNonNull(maxServeNodes));
             return this;
         }
 
-        public Builder setMinServeNodes(Input<Integer> minServeNodes) {
+        public Builder minServeNodes(Input<Integer> minServeNodes) {
             this.minServeNodes = Objects.requireNonNull(minServeNodes);
             return this;
         }
 
-        public Builder setMinServeNodes(Integer minServeNodes) {
+        public Builder minServeNodes(Integer minServeNodes) {
             this.minServeNodes = Input.of(Objects.requireNonNull(minServeNodes));
             return this;
         }

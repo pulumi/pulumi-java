@@ -196,52 +196,52 @@ public final class BucketLifecycleRuleItemConditionResponse {
     	      this.numNewerVersions = defaults.numNewerVersions;
         }
 
-        public Builder setAge(Integer age) {
+        public Builder age(Integer age) {
             this.age = Objects.requireNonNull(age);
             return this;
         }
 
-        public Builder setCreatedBefore(String createdBefore) {
+        public Builder createdBefore(String createdBefore) {
             this.createdBefore = Objects.requireNonNull(createdBefore);
             return this;
         }
 
-        public Builder setCustomTimeBefore(String customTimeBefore) {
+        public Builder customTimeBefore(String customTimeBefore) {
             this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
             return this;
         }
 
-        public Builder setDaysSinceCustomTime(Integer daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
             return this;
         }
 
-        public Builder setDaysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
             return this;
         }
 
-        public Builder setIsLive(Boolean isLive) {
+        public Builder isLive(Boolean isLive) {
             this.isLive = Objects.requireNonNull(isLive);
             return this;
         }
 
-        public Builder setMatchesPattern(String matchesPattern) {
+        public Builder matchesPattern(String matchesPattern) {
             this.matchesPattern = Objects.requireNonNull(matchesPattern);
             return this;
         }
 
-        public Builder setMatchesStorageClass(List<String> matchesStorageClass) {
+        public Builder matchesStorageClass(List<String> matchesStorageClass) {
             this.matchesStorageClass = Objects.requireNonNull(matchesStorageClass);
             return this;
         }
 
-        public Builder setNoncurrentTimeBefore(String noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
             return this;
         }
 
-        public Builder setNumNewerVersions(Integer numNewerVersions) {
+        public Builder numNewerVersions(Integer numNewerVersions) {
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
         }

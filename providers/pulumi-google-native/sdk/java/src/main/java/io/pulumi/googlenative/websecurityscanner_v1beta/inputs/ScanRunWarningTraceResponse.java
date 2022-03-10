@@ -55,7 +55,7 @@ public final class ScanRunWarningTraceResponse extends io.pulumi.resources.Invok
     	      this.code = defaults.code;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }

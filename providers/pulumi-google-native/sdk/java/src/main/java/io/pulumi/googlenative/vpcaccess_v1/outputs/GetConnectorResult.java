@@ -212,57 +212,57 @@ public final class GetConnectorResult {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setConnectedProjects(List<String> connectedProjects) {
+        public Builder connectedProjects(List<String> connectedProjects) {
             this.connectedProjects = Objects.requireNonNull(connectedProjects);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
-        public Builder setMaxThroughput(Integer maxThroughput) {
+        public Builder maxThroughput(Integer maxThroughput) {
             this.maxThroughput = Objects.requireNonNull(maxThroughput);
             return this;
         }
 
-        public Builder setMinInstances(Integer minInstances) {
+        public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
 
-        public Builder setMinThroughput(Integer minThroughput) {
+        public Builder minThroughput(Integer minThroughput) {
             this.minThroughput = Objects.requireNonNull(minThroughput);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubnet(SubnetResponse subnet) {
+        public Builder subnet(SubnetResponse subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }

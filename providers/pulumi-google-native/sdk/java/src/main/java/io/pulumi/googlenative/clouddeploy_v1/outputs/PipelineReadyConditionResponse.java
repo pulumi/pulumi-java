@@ -66,12 +66,12 @@ public final class PipelineReadyConditionResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setStatus(Boolean status) {
+        public Builder status(Boolean status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

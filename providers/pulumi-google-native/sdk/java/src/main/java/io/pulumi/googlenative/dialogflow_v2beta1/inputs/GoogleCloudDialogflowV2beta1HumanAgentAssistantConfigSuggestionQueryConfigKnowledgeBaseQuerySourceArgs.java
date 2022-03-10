@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.knowledgeBases = defaults.knowledgeBases;
         }
 
-        public Builder setKnowledgeBases(Input<List<String>> knowledgeBases) {
+        public Builder knowledgeBases(Input<List<String>> knowledgeBases) {
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }
 
-        public Builder setKnowledgeBases(List<String> knowledgeBases) {
+        public Builder knowledgeBases(List<String> knowledgeBases) {
             this.knowledgeBases = Input.of(Objects.requireNonNull(knowledgeBases));
             return this;
         }

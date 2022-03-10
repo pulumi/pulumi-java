@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse {
     	      this.variants = defaults.variants;
         }
 
-        public Builder setVariants(List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants) {
+        public Builder variants(List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants) {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }

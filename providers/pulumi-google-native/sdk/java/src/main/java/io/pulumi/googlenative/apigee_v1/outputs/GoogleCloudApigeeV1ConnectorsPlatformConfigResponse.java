@@ -66,12 +66,12 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
     	      this.expiresAt = defaults.expiresAt;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }

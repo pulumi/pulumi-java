@@ -49,7 +49,7 @@ public final class TestTargetsForShardResponse {
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }

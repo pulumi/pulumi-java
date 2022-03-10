@@ -48,7 +48,7 @@ public final class GoogleCloudDatacatalogV1beta1ViewSpecResponse {
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder setViewQuery(String viewQuery) {
+        public Builder viewQuery(String viewQuery) {
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }

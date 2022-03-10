@@ -153,37 +153,37 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
     	      this.userEmail = defaults.userEmail;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConfig(String config) {
+        public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setDeployTime(String deployTime) {
+        public Builder deployTime(String deployTime) {
             this.deployTime = Objects.requireNonNull(deployTime);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setResourceUri(List<String> resourceUri) {
+        public Builder resourceUri(List<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setUndeployTime(String undeployTime) {
+        public Builder undeployTime(String undeployTime) {
             this.undeployTime = Objects.requireNonNull(undeployTime);
             return this;
         }
 
-        public Builder setUserEmail(String userEmail) {
+        public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }

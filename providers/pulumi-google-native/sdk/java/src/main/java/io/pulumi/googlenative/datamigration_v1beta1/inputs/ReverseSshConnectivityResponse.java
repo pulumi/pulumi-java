@@ -105,22 +105,22 @@ public final class ReverseSshConnectivityResponse extends io.pulumi.resources.In
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setVm(String vm) {
+        public Builder vm(String vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
 
-        public Builder setVmIp(String vmIp) {
+        public Builder vmIp(String vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
 
-        public Builder setVmPort(Integer vmPort) {
+        public Builder vmPort(Integer vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

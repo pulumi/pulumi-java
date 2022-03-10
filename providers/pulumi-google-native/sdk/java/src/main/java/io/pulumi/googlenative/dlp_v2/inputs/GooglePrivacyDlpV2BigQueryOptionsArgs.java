@@ -155,72 +155,72 @@ public final class GooglePrivacyDlpV2BigQueryOptionsArgs extends io.pulumi.resou
     	      this.tableReference = defaults.tableReference;
         }
 
-        public Builder setExcludedFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields) {
+        public Builder excludedFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> excludedFields) {
             this.excludedFields = excludedFields;
             return this;
         }
 
-        public Builder setExcludedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> excludedFields) {
+        public Builder excludedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> excludedFields) {
             this.excludedFields = Input.ofNullable(excludedFields);
             return this;
         }
 
-        public Builder setIdentifyingFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
+        public Builder identifyingFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
             this.identifyingFields = identifyingFields;
             return this;
         }
 
-        public Builder setIdentifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
+        public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
             this.identifyingFields = Input.ofNullable(identifyingFields);
             return this;
         }
 
-        public Builder setIncludedFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields) {
+        public Builder includedFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> includedFields) {
             this.includedFields = includedFields;
             return this;
         }
 
-        public Builder setIncludedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> includedFields) {
+        public Builder includedFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> includedFields) {
             this.includedFields = Input.ofNullable(includedFields);
             return this;
         }
 
-        public Builder setRowsLimit(@Nullable Input<String> rowsLimit) {
+        public Builder rowsLimit(@Nullable Input<String> rowsLimit) {
             this.rowsLimit = rowsLimit;
             return this;
         }
 
-        public Builder setRowsLimit(@Nullable String rowsLimit) {
+        public Builder rowsLimit(@Nullable String rowsLimit) {
             this.rowsLimit = Input.ofNullable(rowsLimit);
             return this;
         }
 
-        public Builder setRowsLimitPercent(@Nullable Input<Integer> rowsLimitPercent) {
+        public Builder rowsLimitPercent(@Nullable Input<Integer> rowsLimitPercent) {
             this.rowsLimitPercent = rowsLimitPercent;
             return this;
         }
 
-        public Builder setRowsLimitPercent(@Nullable Integer rowsLimitPercent) {
+        public Builder rowsLimitPercent(@Nullable Integer rowsLimitPercent) {
             this.rowsLimitPercent = Input.ofNullable(rowsLimitPercent);
             return this;
         }
 
-        public Builder setSampleMethod(@Nullable Input<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod) {
+        public Builder sampleMethod(@Nullable Input<GooglePrivacyDlpV2BigQueryOptionsSampleMethod> sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }
 
-        public Builder setSampleMethod(@Nullable GooglePrivacyDlpV2BigQueryOptionsSampleMethod sampleMethod) {
+        public Builder sampleMethod(@Nullable GooglePrivacyDlpV2BigQueryOptionsSampleMethod sampleMethod) {
             this.sampleMethod = Input.ofNullable(sampleMethod);
             return this;
         }
 
-        public Builder setTableReference(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> tableReference) {
+        public Builder tableReference(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> tableReference) {
             this.tableReference = tableReference;
             return this;
         }
 
-        public Builder setTableReference(@Nullable GooglePrivacyDlpV2BigQueryTableArgs tableReference) {
+        public Builder tableReference(@Nullable GooglePrivacyDlpV2BigQueryTableArgs tableReference) {
             this.tableReference = Input.ofNullable(tableReference);
             return this;
         }

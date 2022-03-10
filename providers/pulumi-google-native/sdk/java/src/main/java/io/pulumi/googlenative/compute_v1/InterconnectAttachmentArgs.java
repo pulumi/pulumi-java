@@ -431,252 +431,252 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
     	      this.vlanTag8021q = defaults.vlanTag8021q;
         }
 
-        public Builder setAdminEnabled(@Nullable Input<Boolean> adminEnabled) {
+        public Builder adminEnabled(@Nullable Input<Boolean> adminEnabled) {
             this.adminEnabled = adminEnabled;
             return this;
         }
 
-        public Builder setAdminEnabled(@Nullable Boolean adminEnabled) {
+        public Builder adminEnabled(@Nullable Boolean adminEnabled) {
             this.adminEnabled = Input.ofNullable(adminEnabled);
             return this;
         }
 
-        public Builder setBandwidth(@Nullable Input<InterconnectAttachmentBandwidth> bandwidth) {
+        public Builder bandwidth(@Nullable Input<InterconnectAttachmentBandwidth> bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
-        public Builder setBandwidth(@Nullable InterconnectAttachmentBandwidth bandwidth) {
+        public Builder bandwidth(@Nullable InterconnectAttachmentBandwidth bandwidth) {
             this.bandwidth = Input.ofNullable(bandwidth);
             return this;
         }
 
-        public Builder setCandidateIpv6Subnets(@Nullable Input<List<String>> candidateIpv6Subnets) {
+        public Builder candidateIpv6Subnets(@Nullable Input<List<String>> candidateIpv6Subnets) {
             this.candidateIpv6Subnets = candidateIpv6Subnets;
             return this;
         }
 
-        public Builder setCandidateIpv6Subnets(@Nullable List<String> candidateIpv6Subnets) {
+        public Builder candidateIpv6Subnets(@Nullable List<String> candidateIpv6Subnets) {
             this.candidateIpv6Subnets = Input.ofNullable(candidateIpv6Subnets);
             return this;
         }
 
-        public Builder setCandidateSubnets(@Nullable Input<List<String>> candidateSubnets) {
+        public Builder candidateSubnets(@Nullable Input<List<String>> candidateSubnets) {
             this.candidateSubnets = candidateSubnets;
             return this;
         }
 
-        public Builder setCandidateSubnets(@Nullable List<String> candidateSubnets) {
+        public Builder candidateSubnets(@Nullable List<String> candidateSubnets) {
             this.candidateSubnets = Input.ofNullable(candidateSubnets);
             return this;
         }
 
-        public Builder setCloudRouterIpv6InterfaceId(@Nullable Input<String> cloudRouterIpv6InterfaceId) {
+        public Builder cloudRouterIpv6InterfaceId(@Nullable Input<String> cloudRouterIpv6InterfaceId) {
             this.cloudRouterIpv6InterfaceId = cloudRouterIpv6InterfaceId;
             return this;
         }
 
-        public Builder setCloudRouterIpv6InterfaceId(@Nullable String cloudRouterIpv6InterfaceId) {
+        public Builder cloudRouterIpv6InterfaceId(@Nullable String cloudRouterIpv6InterfaceId) {
             this.cloudRouterIpv6InterfaceId = Input.ofNullable(cloudRouterIpv6InterfaceId);
             return this;
         }
 
-        public Builder setCustomerRouterIpv6InterfaceId(@Nullable Input<String> customerRouterIpv6InterfaceId) {
+        public Builder customerRouterIpv6InterfaceId(@Nullable Input<String> customerRouterIpv6InterfaceId) {
             this.customerRouterIpv6InterfaceId = customerRouterIpv6InterfaceId;
             return this;
         }
 
-        public Builder setCustomerRouterIpv6InterfaceId(@Nullable String customerRouterIpv6InterfaceId) {
+        public Builder customerRouterIpv6InterfaceId(@Nullable String customerRouterIpv6InterfaceId) {
             this.customerRouterIpv6InterfaceId = Input.ofNullable(customerRouterIpv6InterfaceId);
             return this;
         }
 
-        public Builder setDataplaneVersion(@Nullable Input<Integer> dataplaneVersion) {
+        public Builder dataplaneVersion(@Nullable Input<Integer> dataplaneVersion) {
             this.dataplaneVersion = dataplaneVersion;
             return this;
         }
 
-        public Builder setDataplaneVersion(@Nullable Integer dataplaneVersion) {
+        public Builder dataplaneVersion(@Nullable Integer dataplaneVersion) {
             this.dataplaneVersion = Input.ofNullable(dataplaneVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEdgeAvailabilityDomain(@Nullable Input<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain) {
+        public Builder edgeAvailabilityDomain(@Nullable Input<InterconnectAttachmentEdgeAvailabilityDomain> edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = edgeAvailabilityDomain;
             return this;
         }
 
-        public Builder setEdgeAvailabilityDomain(@Nullable InterconnectAttachmentEdgeAvailabilityDomain edgeAvailabilityDomain) {
+        public Builder edgeAvailabilityDomain(@Nullable InterconnectAttachmentEdgeAvailabilityDomain edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = Input.ofNullable(edgeAvailabilityDomain);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<InterconnectAttachmentEncryption> encryption) {
+        public Builder encryption(@Nullable Input<InterconnectAttachmentEncryption> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable InterconnectAttachmentEncryption encryption) {
+        public Builder encryption(@Nullable InterconnectAttachmentEncryption encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setInterconnect(@Nullable Input<String> interconnect) {
+        public Builder interconnect(@Nullable Input<String> interconnect) {
             this.interconnect = interconnect;
             return this;
         }
 
-        public Builder setInterconnect(@Nullable String interconnect) {
+        public Builder interconnect(@Nullable String interconnect) {
             this.interconnect = Input.ofNullable(interconnect);
             return this;
         }
 
-        public Builder setIpsecInternalAddresses(@Nullable Input<List<String>> ipsecInternalAddresses) {
+        public Builder ipsecInternalAddresses(@Nullable Input<List<String>> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = ipsecInternalAddresses;
             return this;
         }
 
-        public Builder setIpsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
+        public Builder ipsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = Input.ofNullable(ipsecInternalAddresses);
             return this;
         }
 
-        public Builder setMtu(@Nullable Input<Integer> mtu) {
+        public Builder mtu(@Nullable Input<Integer> mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = Input.ofNullable(mtu);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPairingKey(@Nullable Input<String> pairingKey) {
+        public Builder pairingKey(@Nullable Input<String> pairingKey) {
             this.pairingKey = pairingKey;
             return this;
         }
 
-        public Builder setPairingKey(@Nullable String pairingKey) {
+        public Builder pairingKey(@Nullable String pairingKey) {
             this.pairingKey = Input.ofNullable(pairingKey);
             return this;
         }
 
-        public Builder setPartnerAsn(@Nullable Input<String> partnerAsn) {
+        public Builder partnerAsn(@Nullable Input<String> partnerAsn) {
             this.partnerAsn = partnerAsn;
             return this;
         }
 
-        public Builder setPartnerAsn(@Nullable String partnerAsn) {
+        public Builder partnerAsn(@Nullable String partnerAsn) {
             this.partnerAsn = Input.ofNullable(partnerAsn);
             return this;
         }
 
-        public Builder setPartnerMetadata(@Nullable Input<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata) {
+        public Builder partnerMetadata(@Nullable Input<InterconnectAttachmentPartnerMetadataArgs> partnerMetadata) {
             this.partnerMetadata = partnerMetadata;
             return this;
         }
 
-        public Builder setPartnerMetadata(@Nullable InterconnectAttachmentPartnerMetadataArgs partnerMetadata) {
+        public Builder partnerMetadata(@Nullable InterconnectAttachmentPartnerMetadataArgs partnerMetadata) {
             this.partnerMetadata = Input.ofNullable(partnerMetadata);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRouter(@Nullable Input<String> router) {
+        public Builder router(@Nullable Input<String> router) {
             this.router = router;
             return this;
         }
 
-        public Builder setRouter(@Nullable String router) {
+        public Builder router(@Nullable String router) {
             this.router = Input.ofNullable(router);
             return this;
         }
 
-        public Builder setStackType(@Nullable Input<InterconnectAttachmentStackType> stackType) {
+        public Builder stackType(@Nullable Input<InterconnectAttachmentStackType> stackType) {
             this.stackType = stackType;
             return this;
         }
 
-        public Builder setStackType(@Nullable InterconnectAttachmentStackType stackType) {
+        public Builder stackType(@Nullable InterconnectAttachmentStackType stackType) {
             this.stackType = Input.ofNullable(stackType);
             return this;
         }
 
-        public Builder setType(@Nullable Input<InterconnectAttachmentType> type) {
+        public Builder type(@Nullable Input<InterconnectAttachmentType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable InterconnectAttachmentType type) {
+        public Builder type(@Nullable InterconnectAttachmentType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
 
-        public Builder setVlanTag8021q(@Nullable Input<Integer> vlanTag8021q) {
+        public Builder vlanTag8021q(@Nullable Input<Integer> vlanTag8021q) {
             this.vlanTag8021q = vlanTag8021q;
             return this;
         }
 
-        public Builder setVlanTag8021q(@Nullable Integer vlanTag8021q) {
+        public Builder vlanTag8021q(@Nullable Integer vlanTag8021q) {
             this.vlanTag8021q = Input.ofNullable(vlanTag8021q);
             return this;
         }

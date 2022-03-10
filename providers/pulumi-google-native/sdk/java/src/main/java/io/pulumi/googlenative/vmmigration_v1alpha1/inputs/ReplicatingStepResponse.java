@@ -104,22 +104,22 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
     	      this.totalBytes = defaults.totalBytes;
         }
 
-        public Builder setLastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
+        public Builder lastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
             this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond);
             return this;
         }
 
-        public Builder setLastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
+        public Builder lastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
             this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond);
             return this;
         }
 
-        public Builder setReplicatedBytes(String replicatedBytes) {
+        public Builder replicatedBytes(String replicatedBytes) {
             this.replicatedBytes = Objects.requireNonNull(replicatedBytes);
             return this;
         }
 
-        public Builder setTotalBytes(String totalBytes) {
+        public Builder totalBytes(String totalBytes) {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }

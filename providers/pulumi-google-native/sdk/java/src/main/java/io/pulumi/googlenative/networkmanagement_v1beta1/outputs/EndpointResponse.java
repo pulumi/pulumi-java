@@ -179,47 +179,47 @@ public final class EndpointResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setCloudFunction(CloudFunctionEndpointResponse cloudFunction) {
+        public Builder cloudFunction(CloudFunctionEndpointResponse cloudFunction) {
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
 
-        public Builder setCloudSqlInstance(String cloudSqlInstance) {
+        public Builder cloudSqlInstance(String cloudSqlInstance) {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
 
-        public Builder setGkeMasterCluster(String gkeMasterCluster) {
+        public Builder gkeMasterCluster(String gkeMasterCluster) {
             this.gkeMasterCluster = Objects.requireNonNull(gkeMasterCluster);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkType(String networkType) {
+        public Builder networkType(String networkType) {
             this.networkType = Objects.requireNonNull(networkType);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

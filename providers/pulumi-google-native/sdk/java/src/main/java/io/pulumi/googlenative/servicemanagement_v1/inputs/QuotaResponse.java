@@ -74,12 +74,12 @@ public final class QuotaResponse extends io.pulumi.resources.InvokeArgs {
     	      this.metricRules = defaults.metricRules;
         }
 
-        public Builder setLimits(List<QuotaLimitResponse> limits) {
+        public Builder limits(List<QuotaLimitResponse> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
-        public Builder setMetricRules(List<MetricRuleResponse> metricRules) {
+        public Builder metricRules(List<MetricRuleResponse> metricRules) {
             this.metricRules = Objects.requireNonNull(metricRules);
             return this;
         }

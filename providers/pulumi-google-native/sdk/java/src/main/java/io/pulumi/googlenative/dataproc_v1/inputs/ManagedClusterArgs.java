@@ -92,32 +92,32 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setConfig(Input<ClusterConfigArgs> config) {
+        public Builder config(Input<ClusterConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(ClusterConfigArgs config) {
+        public Builder config(ClusterConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }

@@ -88,17 +88,17 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
     	      this.infrastructureFailure = defaults.infrastructureFailure;
         }
 
-        public Builder setAbortedByUser(Boolean abortedByUser) {
+        public Builder abortedByUser(Boolean abortedByUser) {
             this.abortedByUser = Objects.requireNonNull(abortedByUser);
             return this;
         }
 
-        public Builder setHasErrorLogs(Boolean hasErrorLogs) {
+        public Builder hasErrorLogs(Boolean hasErrorLogs) {
             this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs);
             return this;
         }
 
-        public Builder setInfrastructureFailure(Boolean infrastructureFailure) {
+        public Builder infrastructureFailure(Boolean infrastructureFailure) {
             this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
             return this;
         }

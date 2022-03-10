@@ -48,7 +48,7 @@ public final class InstanceTemplateSpecResponse {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setSpec(InstanceSpecResponse spec) {
+        public Builder spec(InstanceSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

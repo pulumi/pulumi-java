@@ -132,32 +132,32 @@ public final class AudioStreamResponse {
     	      this.sampleRateHertz = defaults.sampleRateHertz;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setChannelCount(Integer channelCount) {
+        public Builder channelCount(Integer channelCount) {
             this.channelCount = Objects.requireNonNull(channelCount);
             return this;
         }
 
-        public Builder setChannelLayout(List<String> channelLayout) {
+        public Builder channelLayout(List<String> channelLayout) {
             this.channelLayout = Objects.requireNonNull(channelLayout);
             return this;
         }
 
-        public Builder setCodec(String codec) {
+        public Builder codec(String codec) {
             this.codec = Objects.requireNonNull(codec);
             return this;
         }
 
-        public Builder setMapping(List<AudioMappingResponse> mapping) {
+        public Builder mapping(List<AudioMappingResponse> mapping) {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
 
-        public Builder setSampleRateHertz(Integer sampleRateHertz) {
+        public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }

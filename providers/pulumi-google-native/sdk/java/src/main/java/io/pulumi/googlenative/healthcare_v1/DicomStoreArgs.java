@@ -136,72 +136,72 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDicomStoreId(@Nullable Input<String> dicomStoreId) {
+        public Builder dicomStoreId(@Nullable Input<String> dicomStoreId) {
             this.dicomStoreId = dicomStoreId;
             return this;
         }
 
-        public Builder setDicomStoreId(@Nullable String dicomStoreId) {
+        public Builder dicomStoreId(@Nullable String dicomStoreId) {
             this.dicomStoreId = Input.ofNullable(dicomStoreId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<NotificationConfigArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

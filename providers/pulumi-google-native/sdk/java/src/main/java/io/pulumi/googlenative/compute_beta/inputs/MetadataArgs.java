@@ -58,12 +58,12 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Input<List<MetadataItemsItemArgs>> items) {
+        public Builder items(@Nullable Input<List<MetadataItemsItemArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<MetadataItemsItemArgs> items) {
+        public Builder items(@Nullable List<MetadataItemsItemArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }

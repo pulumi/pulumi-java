@@ -143,62 +143,62 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
     	      this.text = defaults.text;
         }
 
-        public Builder setAudio(@Nullable Input<GoogleCloudDialogflowCxV3AudioInputArgs> audio) {
+        public Builder audio(@Nullable Input<GoogleCloudDialogflowCxV3AudioInputArgs> audio) {
             this.audio = audio;
             return this;
         }
 
-        public Builder setAudio(@Nullable GoogleCloudDialogflowCxV3AudioInputArgs audio) {
+        public Builder audio(@Nullable GoogleCloudDialogflowCxV3AudioInputArgs audio) {
             this.audio = Input.ofNullable(audio);
             return this;
         }
 
-        public Builder setDtmf(@Nullable Input<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf) {
+        public Builder dtmf(@Nullable Input<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf) {
             this.dtmf = dtmf;
             return this;
         }
 
-        public Builder setDtmf(@Nullable GoogleCloudDialogflowCxV3DtmfInputArgs dtmf) {
+        public Builder dtmf(@Nullable GoogleCloudDialogflowCxV3DtmfInputArgs dtmf) {
             this.dtmf = Input.ofNullable(dtmf);
             return this;
         }
 
-        public Builder setEvent(@Nullable Input<GoogleCloudDialogflowCxV3EventInputArgs> event) {
+        public Builder event(@Nullable Input<GoogleCloudDialogflowCxV3EventInputArgs> event) {
             this.event = event;
             return this;
         }
 
-        public Builder setEvent(@Nullable GoogleCloudDialogflowCxV3EventInputArgs event) {
+        public Builder event(@Nullable GoogleCloudDialogflowCxV3EventInputArgs event) {
             this.event = Input.ofNullable(event);
             return this;
         }
 
-        public Builder setIntent(@Nullable Input<GoogleCloudDialogflowCxV3IntentInputArgs> intent) {
+        public Builder intent(@Nullable Input<GoogleCloudDialogflowCxV3IntentInputArgs> intent) {
             this.intent = intent;
             return this;
         }
 
-        public Builder setIntent(@Nullable GoogleCloudDialogflowCxV3IntentInputArgs intent) {
+        public Builder intent(@Nullable GoogleCloudDialogflowCxV3IntentInputArgs intent) {
             this.intent = Input.ofNullable(intent);
             return this;
         }
 
-        public Builder setLanguageCode(Input<String> languageCode) {
+        public Builder languageCode(Input<String> languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Input.of(Objects.requireNonNull(languageCode));
             return this;
         }
 
-        public Builder setText(@Nullable Input<GoogleCloudDialogflowCxV3TextInputArgs> text) {
+        public Builder text(@Nullable Input<GoogleCloudDialogflowCxV3TextInputArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable GoogleCloudDialogflowCxV3TextInputArgs text) {
+        public Builder text(@Nullable GoogleCloudDialogflowCxV3TextInputArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

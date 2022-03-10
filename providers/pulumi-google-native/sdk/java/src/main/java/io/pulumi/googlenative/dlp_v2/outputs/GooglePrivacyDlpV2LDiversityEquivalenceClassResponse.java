@@ -100,22 +100,22 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
     	      this.topSensitiveValues = defaults.topSensitiveValues;
         }
 
-        public Builder setEquivalenceClassSize(String equivalenceClassSize) {
+        public Builder equivalenceClassSize(String equivalenceClassSize) {
             this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
             return this;
         }
 
-        public Builder setNumDistinctSensitiveValues(String numDistinctSensitiveValues) {
+        public Builder numDistinctSensitiveValues(String numDistinctSensitiveValues) {
             this.numDistinctSensitiveValues = Objects.requireNonNull(numDistinctSensitiveValues);
             return this;
         }
 
-        public Builder setQuasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }
 
-        public Builder setTopSensitiveValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
+        public Builder topSensitiveValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
             this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
             return this;
         }

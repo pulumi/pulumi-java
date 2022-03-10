@@ -279,77 +279,77 @@ public final class GetScanConfigResult {
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder setAuthentication(AuthenticationResponse authentication) {
+        public Builder authentication(AuthenticationResponse authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setBlacklistPatterns(List<String> blacklistPatterns) {
+        public Builder blacklistPatterns(List<String> blacklistPatterns) {
             this.blacklistPatterns = Objects.requireNonNull(blacklistPatterns);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExportToSecurityCommandCenter(String exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(String exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Objects.requireNonNull(exportToSecurityCommandCenter);
             return this;
         }
 
-        public Builder setIgnoreHttpStatusErrors(Boolean ignoreHttpStatusErrors) {
+        public Builder ignoreHttpStatusErrors(Boolean ignoreHttpStatusErrors) {
             this.ignoreHttpStatusErrors = Objects.requireNonNull(ignoreHttpStatusErrors);
             return this;
         }
 
-        public Builder setLatestRun(ScanRunResponse latestRun) {
+        public Builder latestRun(ScanRunResponse latestRun) {
             this.latestRun = Objects.requireNonNull(latestRun);
             return this;
         }
 
-        public Builder setManagedScan(Boolean managedScan) {
+        public Builder managedScan(Boolean managedScan) {
             this.managedScan = Objects.requireNonNull(managedScan);
             return this;
         }
 
-        public Builder setMaxQps(Integer maxQps) {
+        public Builder maxQps(Integer maxQps) {
             this.maxQps = Objects.requireNonNull(maxQps);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRiskLevel(String riskLevel) {
+        public Builder riskLevel(String riskLevel) {
             this.riskLevel = Objects.requireNonNull(riskLevel);
             return this;
         }
 
-        public Builder setSchedule(ScheduleResponse schedule) {
+        public Builder schedule(ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStartingUrls(List<String> startingUrls) {
+        public Builder startingUrls(List<String> startingUrls) {
             this.startingUrls = Objects.requireNonNull(startingUrls);
             return this;
         }
 
-        public Builder setStaticIpScan(Boolean staticIpScan) {
+        public Builder staticIpScan(Boolean staticIpScan) {
             this.staticIpScan = Objects.requireNonNull(staticIpScan);
             return this;
         }
 
-        public Builder setTargetPlatforms(List<String> targetPlatforms) {
+        public Builder targetPlatforms(List<String> targetPlatforms) {
             this.targetPlatforms = Objects.requireNonNull(targetPlatforms);
             return this;
         }
 
-        public Builder setUserAgent(String userAgent) {
+        public Builder userAgent(String userAgent) {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetIosAppArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setIosAppId(String iosAppId) {
+        public Builder iosAppId(String iosAppId) {
             this.iosAppId = Objects.requireNonNull(iosAppId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
     	      this.logicalOperator = defaults.logicalOperator;
         }
 
-        public Builder setConditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
+        public Builder conditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLogicalOperator(String logicalOperator) {
+        public Builder logicalOperator(String logicalOperator) {
             this.logicalOperator = Objects.requireNonNull(logicalOperator);
             return this;
         }

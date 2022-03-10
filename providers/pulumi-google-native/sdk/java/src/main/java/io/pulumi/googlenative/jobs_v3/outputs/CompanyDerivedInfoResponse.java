@@ -48,7 +48,7 @@ public final class CompanyDerivedInfoResponse {
     	      this.headquartersLocation = defaults.headquartersLocation;
         }
 
-        public Builder setHeadquartersLocation(LocationResponse headquartersLocation) {
+        public Builder headquartersLocation(LocationResponse headquartersLocation) {
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }

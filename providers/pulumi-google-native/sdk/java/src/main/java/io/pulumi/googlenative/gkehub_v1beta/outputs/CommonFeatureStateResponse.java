@@ -66,12 +66,12 @@ public final class CommonFeatureStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setState(FeatureStateResponse state) {
+        public Builder state(FeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -109,27 +109,27 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
     	      this.timespanConfig = defaults.timespanConfig;
         }
 
-        public Builder setBigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions) {
+        public Builder bigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions) {
             this.bigQueryOptions = Objects.requireNonNull(bigQueryOptions);
             return this;
         }
 
-        public Builder setCloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions) {
+        public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions) {
             this.cloudStorageOptions = Objects.requireNonNull(cloudStorageOptions);
             return this;
         }
 
-        public Builder setDatastoreOptions(GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions) {
+        public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions) {
             this.datastoreOptions = Objects.requireNonNull(datastoreOptions);
             return this;
         }
 
-        public Builder setHybridOptions(GooglePrivacyDlpV2HybridOptionsResponse hybridOptions) {
+        public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsResponse hybridOptions) {
             this.hybridOptions = Objects.requireNonNull(hybridOptions);
             return this;
         }
 
-        public Builder setTimespanConfig(GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
+        public Builder timespanConfig(GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
             this.timespanConfig = Objects.requireNonNull(timespanConfig);
             return this;
         }

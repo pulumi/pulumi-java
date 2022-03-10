@@ -174,92 +174,92 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serveNodes = defaults.serveNodes;
         }
 
-        public Builder setClusterConfig(@Nullable Input<ClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(@Nullable Input<ClusterConfigArgs> clusterConfig) {
             this.clusterConfig = clusterConfig;
             return this;
         }
 
-        public Builder setClusterConfig(@Nullable ClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(@Nullable ClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.ofNullable(clusterConfig);
             return this;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setDefaultStorageType(@Nullable Input<ClusterDefaultStorageType> defaultStorageType) {
+        public Builder defaultStorageType(@Nullable Input<ClusterDefaultStorageType> defaultStorageType) {
             this.defaultStorageType = defaultStorageType;
             return this;
         }
 
-        public Builder setDefaultStorageType(@Nullable ClusterDefaultStorageType defaultStorageType) {
+        public Builder defaultStorageType(@Nullable ClusterDefaultStorageType defaultStorageType) {
             this.defaultStorageType = Input.ofNullable(defaultStorageType);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServeNodes(@Nullable Input<Integer> serveNodes) {
+        public Builder serveNodes(@Nullable Input<Integer> serveNodes) {
             this.serveNodes = serveNodes;
             return this;
         }
 
-        public Builder setServeNodes(@Nullable Integer serveNodes) {
+        public Builder serveNodes(@Nullable Integer serveNodes) {
             this.serveNodes = Input.ofNullable(serveNodes);
             return this;
         }

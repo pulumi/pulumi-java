@@ -81,17 +81,17 @@ public final class GetIdentityAwareProxyClientResult {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

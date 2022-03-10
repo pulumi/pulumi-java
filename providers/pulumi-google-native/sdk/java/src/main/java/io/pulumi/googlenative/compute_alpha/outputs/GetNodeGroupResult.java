@@ -269,82 +269,82 @@ public final class GetNodeGroupResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingPolicy(NodeGroupAutoscalingPolicyResponse autoscalingPolicy) {
+        public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyResponse autoscalingPolicy) {
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setMaintenancePolicy(String maintenancePolicy) {
+        public Builder maintenancePolicy(String maintenancePolicy) {
             this.maintenancePolicy = Objects.requireNonNull(maintenancePolicy);
             return this;
         }
 
-        public Builder setMaintenanceWindow(NodeGroupMaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(NodeGroupMaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeTemplate(String nodeTemplate) {
+        public Builder nodeTemplate(String nodeTemplate) {
             this.nodeTemplate = Objects.requireNonNull(nodeTemplate);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setShareSettings(ShareSettingsResponse shareSettings) {
+        public Builder shareSettings(ShareSettingsResponse shareSettings) {
             this.shareSettings = Objects.requireNonNull(shareSettings);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

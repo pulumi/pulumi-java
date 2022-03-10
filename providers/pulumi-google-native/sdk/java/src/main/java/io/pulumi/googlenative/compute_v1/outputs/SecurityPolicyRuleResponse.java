@@ -183,47 +183,47 @@ public final class SecurityPolicyRuleResponse {
     	      this.redirectOptions = defaults.redirectOptions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHeaderAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
+        public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMatch(SecurityPolicyRuleMatcherResponse match) {
+        public Builder match(SecurityPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setPreview(Boolean preview) {
+        public Builder preview(Boolean preview) {
             this.preview = Objects.requireNonNull(preview);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
+        public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
             return this;
         }
 
-        public Builder setRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
+        public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
         }

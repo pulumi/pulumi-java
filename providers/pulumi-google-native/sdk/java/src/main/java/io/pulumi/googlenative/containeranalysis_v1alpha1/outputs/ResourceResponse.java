@@ -82,17 +82,17 @@ public final class ResourceResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentHash(HashResponse contentHash) {
+        public Builder contentHash(HashResponse contentHash) {
             this.contentHash = Objects.requireNonNull(contentHash);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

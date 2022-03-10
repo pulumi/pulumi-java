@@ -126,52 +126,52 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setFailureDetail(@Nullable Input<FailureDetailArgs> failureDetail) {
+        public Builder failureDetail(@Nullable Input<FailureDetailArgs> failureDetail) {
             this.failureDetail = failureDetail;
             return this;
         }
 
-        public Builder setFailureDetail(@Nullable FailureDetailArgs failureDetail) {
+        public Builder failureDetail(@Nullable FailureDetailArgs failureDetail) {
             this.failureDetail = Input.ofNullable(failureDetail);
             return this;
         }
 
-        public Builder setInconclusiveDetail(@Nullable Input<InconclusiveDetailArgs> inconclusiveDetail) {
+        public Builder inconclusiveDetail(@Nullable Input<InconclusiveDetailArgs> inconclusiveDetail) {
             this.inconclusiveDetail = inconclusiveDetail;
             return this;
         }
 
-        public Builder setInconclusiveDetail(@Nullable InconclusiveDetailArgs inconclusiveDetail) {
+        public Builder inconclusiveDetail(@Nullable InconclusiveDetailArgs inconclusiveDetail) {
             this.inconclusiveDetail = Input.ofNullable(inconclusiveDetail);
             return this;
         }
 
-        public Builder setSkippedDetail(@Nullable Input<SkippedDetailArgs> skippedDetail) {
+        public Builder skippedDetail(@Nullable Input<SkippedDetailArgs> skippedDetail) {
             this.skippedDetail = skippedDetail;
             return this;
         }
 
-        public Builder setSkippedDetail(@Nullable SkippedDetailArgs skippedDetail) {
+        public Builder skippedDetail(@Nullable SkippedDetailArgs skippedDetail) {
             this.skippedDetail = Input.ofNullable(skippedDetail);
             return this;
         }
 
-        public Builder setSuccessDetail(@Nullable Input<SuccessDetailArgs> successDetail) {
+        public Builder successDetail(@Nullable Input<SuccessDetailArgs> successDetail) {
             this.successDetail = successDetail;
             return this;
         }
 
-        public Builder setSuccessDetail(@Nullable SuccessDetailArgs successDetail) {
+        public Builder successDetail(@Nullable SuccessDetailArgs successDetail) {
             this.successDetail = Input.ofNullable(successDetail);
             return this;
         }
 
-        public Builder setSummary(@Nullable Input<OutcomeSummary> summary) {
+        public Builder summary(@Nullable Input<OutcomeSummary> summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setSummary(@Nullable OutcomeSummary summary) {
+        public Builder summary(@Nullable OutcomeSummary summary) {
             this.summary = Input.ofNullable(summary);
             return this;
         }

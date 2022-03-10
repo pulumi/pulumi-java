@@ -104,22 +104,22 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCronJobDuration(String cronJobDuration) {
+        public Builder cronJobDuration(String cronJobDuration) {
             this.cronJobDuration = Objects.requireNonNull(cronJobDuration);
             return this;
         }
 
-        public Builder setCronSpec(String cronSpec) {
+        public Builder cronSpec(String cronSpec) {
             this.cronSpec = Objects.requireNonNull(cronSpec);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

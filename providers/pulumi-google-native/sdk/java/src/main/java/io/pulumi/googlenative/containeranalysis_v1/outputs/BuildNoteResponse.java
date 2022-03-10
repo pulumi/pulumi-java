@@ -48,7 +48,7 @@ public final class BuildNoteResponse {
     	      this.builderVersion = defaults.builderVersion;
         }
 
-        public Builder setBuilderVersion(String builderVersion) {
+        public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }

@@ -115,27 +115,27 @@ public final class VersionResponse {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setEpoch(Integer epoch) {
+        public Builder epoch(Integer epoch) {
             this.epoch = Objects.requireNonNull(epoch);
             return this;
         }
 
-        public Builder setInclusive(Boolean inclusive) {
+        public Builder inclusive(Boolean inclusive) {
             this.inclusive = Objects.requireNonNull(inclusive);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRevision(String revision) {
+        public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

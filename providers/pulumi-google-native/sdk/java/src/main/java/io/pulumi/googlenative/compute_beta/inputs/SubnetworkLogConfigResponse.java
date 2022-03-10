@@ -139,32 +139,32 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
     	      this.metadataFields = defaults.metadataFields;
         }
 
-        public Builder setAggregationInterval(String aggregationInterval) {
+        public Builder aggregationInterval(String aggregationInterval) {
             this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilterExpr(String filterExpr) {
+        public Builder filterExpr(String filterExpr) {
             this.filterExpr = Objects.requireNonNull(filterExpr);
             return this;
         }
 
-        public Builder setFlowSampling(Double flowSampling) {
+        public Builder flowSampling(Double flowSampling) {
             this.flowSampling = Objects.requireNonNull(flowSampling);
             return this;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadataFields(List<String> metadataFields) {
+        public Builder metadataFields(List<String> metadataFields) {
             this.metadataFields = Objects.requireNonNull(metadataFields);
             return this;
         }

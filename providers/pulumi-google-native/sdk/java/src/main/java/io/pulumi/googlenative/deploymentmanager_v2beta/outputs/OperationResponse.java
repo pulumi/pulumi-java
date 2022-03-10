@@ -389,112 +389,112 @@ public final class OperationResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClientOperationId(String clientOperationId) {
+        public Builder clientOperationId(String clientOperationId) {
             this.clientOperationId = Objects.requireNonNull(clientOperationId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(OperationErrorResponse error) {
+        public Builder error(OperationErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setHttpErrorMessage(String httpErrorMessage) {
+        public Builder httpErrorMessage(String httpErrorMessage) {
             this.httpErrorMessage = Objects.requireNonNull(httpErrorMessage);
             return this;
         }
 
-        public Builder setHttpErrorStatusCode(Integer httpErrorStatusCode) {
+        public Builder httpErrorStatusCode(Integer httpErrorStatusCode) {
             this.httpErrorStatusCode = Objects.requireNonNull(httpErrorStatusCode);
             return this;
         }
 
-        public Builder setInsertTime(String insertTime) {
+        public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationGroupId(String operationGroupId) {
+        public Builder operationGroupId(String operationGroupId) {
             this.operationGroupId = Objects.requireNonNull(operationGroupId);
             return this;
         }
 
-        public Builder setOperationType(String operationType) {
+        public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
 
-        public Builder setProgress(Integer progress) {
+        public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setTargetLink(String targetLink) {
+        public Builder targetLink(String targetLink) {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setWarnings(List<OperationWarningsItemResponse> warnings) {
+        public Builder warnings(List<OperationWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

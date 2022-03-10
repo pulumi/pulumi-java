@@ -74,17 +74,17 @@ public final class GetModelIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
     	      this.project = defaults.project;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

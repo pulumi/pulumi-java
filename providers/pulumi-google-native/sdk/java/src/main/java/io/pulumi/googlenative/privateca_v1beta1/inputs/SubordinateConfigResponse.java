@@ -73,12 +73,12 @@ public final class SubordinateConfigResponse extends io.pulumi.resources.InvokeA
     	      this.pemIssuerChain = defaults.pemIssuerChain;
         }
 
-        public Builder setCertificateAuthority(String certificateAuthority) {
+        public Builder certificateAuthority(String certificateAuthority) {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
 
-        public Builder setPemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
+        public Builder pemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }

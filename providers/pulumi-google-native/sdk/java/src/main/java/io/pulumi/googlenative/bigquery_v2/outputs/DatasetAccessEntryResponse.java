@@ -59,12 +59,12 @@ public final class DatasetAccessEntryResponse {
     	      this.targetTypes = defaults.targetTypes;
         }
 
-        public Builder setDataset(DatasetReferenceResponse dataset) {
+        public Builder dataset(DatasetReferenceResponse dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setTargetTypes(List<String> targetTypes) {
+        public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }

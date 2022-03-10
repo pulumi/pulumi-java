@@ -58,12 +58,12 @@ public final class GooglePrivacyDlpV2TableOptionsArgs extends io.pulumi.resource
     	      this.identifyingFields = defaults.identifyingFields;
         }
 
-        public Builder setIdentifyingFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
+        public Builder identifyingFields(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> identifyingFields) {
             this.identifyingFields = identifyingFields;
             return this;
         }
 
-        public Builder setIdentifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
+        public Builder identifyingFields(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> identifyingFields) {
             this.identifyingFields = Input.ofNullable(identifyingFields);
             return this;
         }

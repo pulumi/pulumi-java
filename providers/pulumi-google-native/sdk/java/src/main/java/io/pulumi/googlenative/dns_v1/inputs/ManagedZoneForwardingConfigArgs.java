@@ -68,22 +68,22 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setTargetNameServers(@Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
+        public Builder targetNameServers(@Nullable Input<List<ManagedZoneForwardingConfigNameServerTargetArgs>> targetNameServers) {
             this.targetNameServers = targetNameServers;
             return this;
         }
 
-        public Builder setTargetNameServers(@Nullable List<ManagedZoneForwardingConfigNameServerTargetArgs> targetNameServers) {
+        public Builder targetNameServers(@Nullable List<ManagedZoneForwardingConfigNameServerTargetArgs> targetNameServers) {
             this.targetNameServers = Input.ofNullable(targetNameServers);
             return this;
         }

@@ -90,17 +90,17 @@ public final class ServiceLevelIndicatorResponse extends io.pulumi.resources.Inv
     	      this.windowsBased = defaults.windowsBased;
         }
 
-        public Builder setBasicSli(BasicSliResponse basicSli) {
+        public Builder basicSli(BasicSliResponse basicSli) {
             this.basicSli = Objects.requireNonNull(basicSli);
             return this;
         }
 
-        public Builder setRequestBased(RequestBasedSliResponse requestBased) {
+        public Builder requestBased(RequestBasedSliResponse requestBased) {
             this.requestBased = Objects.requireNonNull(requestBased);
             return this;
         }
 
-        public Builder setWindowsBased(WindowsBasedSliResponse windowsBased) {
+        public Builder windowsBased(WindowsBasedSliResponse windowsBased) {
             this.windowsBased = Objects.requireNonNull(windowsBased);
             return this;
         }

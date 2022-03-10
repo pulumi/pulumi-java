@@ -49,7 +49,7 @@ public final class LanguageCodesSetResponse {
     	      this.languageCodes = defaults.languageCodes;
         }
 
-        public Builder setLanguageCodes(List<String> languageCodes) {
+        public Builder languageCodes(List<String> languageCodes) {
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }

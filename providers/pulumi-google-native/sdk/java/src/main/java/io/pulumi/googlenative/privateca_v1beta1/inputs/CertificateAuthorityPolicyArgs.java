@@ -160,72 +160,72 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
     	      this.overwriteConfigValues = defaults.overwriteConfigValues;
         }
 
-        public Builder setAllowedCommonNames(@Nullable Input<List<String>> allowedCommonNames) {
+        public Builder allowedCommonNames(@Nullable Input<List<String>> allowedCommonNames) {
             this.allowedCommonNames = allowedCommonNames;
             return this;
         }
 
-        public Builder setAllowedCommonNames(@Nullable List<String> allowedCommonNames) {
+        public Builder allowedCommonNames(@Nullable List<String> allowedCommonNames) {
             this.allowedCommonNames = Input.ofNullable(allowedCommonNames);
             return this;
         }
 
-        public Builder setAllowedConfigList(@Nullable Input<AllowedConfigListArgs> allowedConfigList) {
+        public Builder allowedConfigList(@Nullable Input<AllowedConfigListArgs> allowedConfigList) {
             this.allowedConfigList = allowedConfigList;
             return this;
         }
 
-        public Builder setAllowedConfigList(@Nullable AllowedConfigListArgs allowedConfigList) {
+        public Builder allowedConfigList(@Nullable AllowedConfigListArgs allowedConfigList) {
             this.allowedConfigList = Input.ofNullable(allowedConfigList);
             return this;
         }
 
-        public Builder setAllowedIssuanceModes(@Nullable Input<IssuanceModesArgs> allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable Input<IssuanceModesArgs> allowedIssuanceModes) {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
-        public Builder setAllowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
             this.allowedIssuanceModes = Input.ofNullable(allowedIssuanceModes);
             return this;
         }
 
-        public Builder setAllowedLocationsAndOrganizations(@Nullable Input<List<SubjectArgs>> allowedLocationsAndOrganizations) {
+        public Builder allowedLocationsAndOrganizations(@Nullable Input<List<SubjectArgs>> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
             return this;
         }
 
-        public Builder setAllowedLocationsAndOrganizations(@Nullable List<SubjectArgs> allowedLocationsAndOrganizations) {
+        public Builder allowedLocationsAndOrganizations(@Nullable List<SubjectArgs> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = Input.ofNullable(allowedLocationsAndOrganizations);
             return this;
         }
 
-        public Builder setAllowedSans(@Nullable Input<AllowedSubjectAltNamesArgs> allowedSans) {
+        public Builder allowedSans(@Nullable Input<AllowedSubjectAltNamesArgs> allowedSans) {
             this.allowedSans = allowedSans;
             return this;
         }
 
-        public Builder setAllowedSans(@Nullable AllowedSubjectAltNamesArgs allowedSans) {
+        public Builder allowedSans(@Nullable AllowedSubjectAltNamesArgs allowedSans) {
             this.allowedSans = Input.ofNullable(allowedSans);
             return this;
         }
 
-        public Builder setMaximumLifetime(@Nullable Input<String> maximumLifetime) {
+        public Builder maximumLifetime(@Nullable Input<String> maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }
 
-        public Builder setMaximumLifetime(@Nullable String maximumLifetime) {
+        public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = Input.ofNullable(maximumLifetime);
             return this;
         }
 
-        public Builder setOverwriteConfigValues(@Nullable Input<ReusableConfigWrapperArgs> overwriteConfigValues) {
+        public Builder overwriteConfigValues(@Nullable Input<ReusableConfigWrapperArgs> overwriteConfigValues) {
             this.overwriteConfigValues = overwriteConfigValues;
             return this;
         }
 
-        public Builder setOverwriteConfigValues(@Nullable ReusableConfigWrapperArgs overwriteConfigValues) {
+        public Builder overwriteConfigValues(@Nullable ReusableConfigWrapperArgs overwriteConfigValues) {
             this.overwriteConfigValues = Input.ofNullable(overwriteConfigValues);
             return this;
         }

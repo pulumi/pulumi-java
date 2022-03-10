@@ -68,22 +68,22 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
     	      this.targetTypes = defaults.targetTypes;
         }
 
-        public Builder setDataset(@Nullable Input<DatasetReferenceArgs> dataset) {
+        public Builder dataset(@Nullable Input<DatasetReferenceArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable DatasetReferenceArgs dataset) {
+        public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setTargetTypes(@Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
+        public Builder targetTypes(@Nullable Input<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
             this.targetTypes = targetTypes;
             return this;
         }
 
-        public Builder setTargetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
+        public Builder targetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
             this.targetTypes = Input.ofNullable(targetTypes);
             return this;
         }

@@ -172,42 +172,42 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBooleanValue(Boolean booleanValue) {
+        public Builder booleanValue(Boolean booleanValue) {
             this.booleanValue = Objects.requireNonNull(booleanValue);
             return this;
         }
 
-        public Builder setDateValue(GoogleTypeDateResponse dateValue) {
+        public Builder dateValue(GoogleTypeDateResponse dateValue) {
             this.dateValue = Objects.requireNonNull(dateValue);
             return this;
         }
 
-        public Builder setDayOfWeekValue(String dayOfWeekValue) {
+        public Builder dayOfWeekValue(String dayOfWeekValue) {
             this.dayOfWeekValue = Objects.requireNonNull(dayOfWeekValue);
             return this;
         }
 
-        public Builder setFloatValue(Double floatValue) {
+        public Builder floatValue(Double floatValue) {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
 
-        public Builder setIntegerValue(String integerValue) {
+        public Builder integerValue(String integerValue) {
             this.integerValue = Objects.requireNonNull(integerValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
 
-        public Builder setTimeValue(GoogleTypeTimeOfDayResponse timeValue) {
+        public Builder timeValue(GoogleTypeTimeOfDayResponse timeValue) {
             this.timeValue = Objects.requireNonNull(timeValue);
             return this;
         }
 
-        public Builder setTimestampValue(String timestampValue) {
+        public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }

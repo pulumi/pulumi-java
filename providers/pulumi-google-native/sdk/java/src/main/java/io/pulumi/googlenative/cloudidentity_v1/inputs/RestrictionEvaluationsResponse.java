@@ -55,7 +55,7 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
     	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
         }
 
-        public Builder setMemberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+        public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }

@@ -48,7 +48,7 @@ public final class EntityKeyResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

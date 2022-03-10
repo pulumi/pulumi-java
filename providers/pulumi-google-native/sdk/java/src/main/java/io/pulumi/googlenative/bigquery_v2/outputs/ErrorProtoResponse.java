@@ -97,22 +97,22 @@ public final class ErrorProtoResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDebugInfo(String debugInfo) {
+        public Builder debugInfo(String debugInfo) {
             this.debugInfo = Objects.requireNonNull(debugInfo);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

@@ -97,22 +97,22 @@ public final class BackupInfoResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setBackup(String backup) {
+        public Builder backup(String backup) {
             this.backup = Objects.requireNonNull(backup);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

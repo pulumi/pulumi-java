@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2LDiversityConfigArgs extends io.pulumi.reso
     	      this.sensitiveAttribute = defaults.sensitiveAttribute;
         }
 
-        public Builder setQuasiIds(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
+        public Builder quasiIds(@Nullable Input<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
             this.quasiIds = quasiIds;
             return this;
         }
 
-        public Builder setQuasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
+        public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
             this.quasiIds = Input.ofNullable(quasiIds);
             return this;
         }
 
-        public Builder setSensitiveAttribute(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
+        public Builder sensitiveAttribute(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> sensitiveAttribute) {
             this.sensitiveAttribute = sensitiveAttribute;
             return this;
         }
 
-        public Builder setSensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
+        public Builder sensitiveAttribute(@Nullable GooglePrivacyDlpV2FieldIdArgs sensitiveAttribute) {
             this.sensitiveAttribute = Input.ofNullable(sensitiveAttribute);
             return this;
         }

@@ -107,22 +107,22 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
     	      this.tableOptions = defaults.tableOptions;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setRequiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
+        public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys);
             return this;
         }
 
-        public Builder setTableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
+        public Builder tableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
             this.tableOptions = Objects.requireNonNull(tableOptions);
             return this;
         }

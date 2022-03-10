@@ -73,22 +73,22 @@ public final class LocalCopyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setDisk(Input<String> disk) {
+        public Builder disk(Input<String> disk) {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
 
-        public Builder setDisk(String disk) {
+        public Builder disk(String disk) {
             this.disk = Input.of(Objects.requireNonNull(disk));
             return this;
         }
 
-        public Builder setPath(Input<String> path) {
+        public Builder path(Input<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }

@@ -215,122 +215,122 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     	      this.webhookKey = defaults.webhookKey;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setGheConfigId(@Nullable Input<String> gheConfigId) {
+        public Builder gheConfigId(@Nullable Input<String> gheConfigId) {
             this.gheConfigId = gheConfigId;
             return this;
         }
 
-        public Builder setGheConfigId(@Nullable String gheConfigId) {
+        public Builder gheConfigId(@Nullable String gheConfigId) {
             this.gheConfigId = Input.ofNullable(gheConfigId);
             return this;
         }
 
-        public Builder setHostUrl(@Nullable Input<String> hostUrl) {
+        public Builder hostUrl(@Nullable Input<String> hostUrl) {
             this.hostUrl = hostUrl;
             return this;
         }
 
-        public Builder setHostUrl(@Nullable String hostUrl) {
+        public Builder hostUrl(@Nullable String hostUrl) {
             this.hostUrl = Input.ofNullable(hostUrl);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeeredNetwork(@Nullable Input<String> peeredNetwork) {
+        public Builder peeredNetwork(@Nullable Input<String> peeredNetwork) {
             this.peeredNetwork = peeredNetwork;
             return this;
         }
 
-        public Builder setPeeredNetwork(@Nullable String peeredNetwork) {
+        public Builder peeredNetwork(@Nullable String peeredNetwork) {
             this.peeredNetwork = Input.ofNullable(peeredNetwork);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<GitHubEnterpriseSecretsArgs> secrets) {
+        public Builder secrets(@Nullable Input<GitHubEnterpriseSecretsArgs> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
+        public Builder secrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
 
-        public Builder setSslCa(@Nullable Input<String> sslCa) {
+        public Builder sslCa(@Nullable Input<String> sslCa) {
             this.sslCa = sslCa;
             return this;
         }
 
-        public Builder setSslCa(@Nullable String sslCa) {
+        public Builder sslCa(@Nullable String sslCa) {
             this.sslCa = Input.ofNullable(sslCa);
             return this;
         }
 
-        public Builder setWebhookKey(@Nullable Input<String> webhookKey) {
+        public Builder webhookKey(@Nullable Input<String> webhookKey) {
             this.webhookKey = webhookKey;
             return this;
         }
 
-        public Builder setWebhookKey(@Nullable String webhookKey) {
+        public Builder webhookKey(@Nullable String webhookKey) {
             this.webhookKey = Input.ofNullable(webhookKey);
             return this;
         }

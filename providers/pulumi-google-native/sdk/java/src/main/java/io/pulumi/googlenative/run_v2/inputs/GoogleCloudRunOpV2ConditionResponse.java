@@ -200,52 +200,52 @@ public final class GoogleCloudRunOpV2ConditionResponse extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setDomainMappingReason(String domainMappingReason) {
+        public Builder domainMappingReason(String domainMappingReason) {
             this.domainMappingReason = Objects.requireNonNull(domainMappingReason);
             return this;
         }
 
-        public Builder setExecutionReason(String executionReason) {
+        public Builder executionReason(String executionReason) {
             this.executionReason = Objects.requireNonNull(executionReason);
             return this;
         }
 
-        public Builder setInternalReason(String internalReason) {
+        public Builder internalReason(String internalReason) {
             this.internalReason = Objects.requireNonNull(internalReason);
             return this;
         }
 
-        public Builder setLastTransitionTime(String lastTransitionTime) {
+        public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRevisionReason(String revisionReason) {
+        public Builder revisionReason(String revisionReason) {
             this.revisionReason = Objects.requireNonNull(revisionReason);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

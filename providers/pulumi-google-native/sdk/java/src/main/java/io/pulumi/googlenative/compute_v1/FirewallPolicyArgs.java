@@ -129,62 +129,62 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setAssociations(@Nullable Input<List<FirewallPolicyAssociationArgs>> associations) {
+        public Builder associations(@Nullable Input<List<FirewallPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setAssociations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
+        public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
             this.associations = Input.ofNullable(associations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setParentId(@Nullable Input<String> parentId) {
+        public Builder parentId(@Nullable Input<String> parentId) {
             this.parentId = parentId;
             return this;
         }
 
-        public Builder setParentId(@Nullable String parentId) {
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = Input.ofNullable(parentId);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<FirewallPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<FirewallPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<FirewallPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }

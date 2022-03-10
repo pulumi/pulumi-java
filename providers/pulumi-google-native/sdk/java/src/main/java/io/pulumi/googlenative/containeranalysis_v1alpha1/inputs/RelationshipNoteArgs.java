@@ -57,12 +57,12 @@ public final class RelationshipNoteArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable Input<RelationshipNoteType> type) {
+        public Builder type(@Nullable Input<RelationshipNoteType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RelationshipNoteType type) {
+        public Builder type(@Nullable RelationshipNoteType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

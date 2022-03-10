@@ -106,42 +106,42 @@ public final class SqlAclEntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -135,32 +135,32 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setExpectedCommand(List<String> expectedCommand) {
+        public Builder expectedCommand(List<String> expectedCommand) {
             this.expectedCommand = Objects.requireNonNull(expectedCommand);
             return this;
         }
 
-        public Builder setExpectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
+        public Builder expectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
             this.expectedMaterials = Objects.requireNonNull(expectedMaterials);
             return this;
         }
 
-        public Builder setExpectedProducts(List<ArtifactRuleResponse> expectedProducts) {
+        public Builder expectedProducts(List<ArtifactRuleResponse> expectedProducts) {
             this.expectedProducts = Objects.requireNonNull(expectedProducts);
             return this;
         }
 
-        public Builder setSigningKeys(List<SigningKeyResponse> signingKeys) {
+        public Builder signingKeys(List<SigningKeyResponse> signingKeys) {
             this.signingKeys = Objects.requireNonNull(signingKeys);
             return this;
         }
 
-        public Builder setStepName(String stepName) {
+        public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }
 
-        public Builder setThreshold(String threshold) {
+        public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

@@ -88,17 +88,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     	      this.thumbnailUri = defaults.thumbnailUri;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
 
-        public Builder setHeight(String height) {
+        public Builder height(String height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setThumbnailUri(String thumbnailUri) {
+        public Builder thumbnailUri(String thumbnailUri) {
             this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
             return this;
         }

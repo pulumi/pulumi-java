@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse extends io.pulumi.
     	      this.equivalenceClassHistogramBuckets = defaults.equivalenceClassHistogramBuckets;
         }
 
-        public Builder setEquivalenceClassHistogramBuckets(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
+        public Builder equivalenceClassHistogramBuckets(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
             this.equivalenceClassHistogramBuckets = Objects.requireNonNull(equivalenceClassHistogramBuckets);
             return this;
         }

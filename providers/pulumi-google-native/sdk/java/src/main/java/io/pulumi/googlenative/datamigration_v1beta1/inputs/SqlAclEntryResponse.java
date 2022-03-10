@@ -104,22 +104,22 @@ public final class SqlAclEntryResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

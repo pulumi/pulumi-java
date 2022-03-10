@@ -56,7 +56,7 @@ public final class LabelSelectorResponse extends io.pulumi.resources.InvokeArgs 
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

@@ -130,72 +130,72 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPackageId(Input<String> packageId) {
+        public Builder packageId(Input<String> packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
 
-        public Builder setPackageId(String packageId) {
+        public Builder packageId(String packageId) {
             this.packageId = Input.of(Objects.requireNonNull(packageId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRepositoryId(Input<String> repositoryId) {
+        public Builder repositoryId(Input<String> repositoryId) {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
 
-        public Builder setRepositoryId(String repositoryId) {
+        public Builder repositoryId(String repositoryId) {
             this.repositoryId = Input.of(Objects.requireNonNull(repositoryId));
             return this;
         }
 
-        public Builder setTagId(@Nullable Input<String> tagId) {
+        public Builder tagId(@Nullable Input<String> tagId) {
             this.tagId = tagId;
             return this;
         }
 
-        public Builder setTagId(@Nullable String tagId) {
+        public Builder tagId(@Nullable String tagId) {
             this.tagId = Input.ofNullable(tagId);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -72,12 +72,12 @@ public final class SparkChartViewResponse extends io.pulumi.resources.InvokeArgs
     	      this.sparkChartType = defaults.sparkChartType;
         }
 
-        public Builder setMinAlignmentPeriod(String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setSparkChartType(String sparkChartType) {
+        public Builder sparkChartType(String sparkChartType) {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
         }

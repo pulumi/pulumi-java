@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCondition(GooglePrivacyDlpV2RecordConditionResponse condition) {
+        public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

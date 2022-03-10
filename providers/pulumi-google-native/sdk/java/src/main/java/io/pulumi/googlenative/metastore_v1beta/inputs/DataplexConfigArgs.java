@@ -58,12 +58,12 @@ public final class DataplexConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lakeResources = defaults.lakeResources;
         }
 
-        public Builder setLakeResources(@Nullable Input<Map<String,String>> lakeResources) {
+        public Builder lakeResources(@Nullable Input<Map<String,String>> lakeResources) {
             this.lakeResources = lakeResources;
             return this;
         }
 
-        public Builder setLakeResources(@Nullable Map<String,String> lakeResources) {
+        public Builder lakeResources(@Nullable Map<String,String> lakeResources) {
             this.lakeResources = Input.ofNullable(lakeResources);
             return this;
         }

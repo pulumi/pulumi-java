@@ -76,22 +76,22 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppIpa(Input<FileReferenceArgs> appIpa) {
+        public Builder appIpa(Input<FileReferenceArgs> appIpa) {
             this.appIpa = Objects.requireNonNull(appIpa);
             return this;
         }
 
-        public Builder setAppIpa(FileReferenceArgs appIpa) {
+        public Builder appIpa(FileReferenceArgs appIpa) {
             this.appIpa = Input.of(Objects.requireNonNull(appIpa));
             return this;
         }
 
-        public Builder setScenarios(@Nullable Input<List<Integer>> scenarios) {
+        public Builder scenarios(@Nullable Input<List<Integer>> scenarios) {
             this.scenarios = scenarios;
             return this;
         }
 
-        public Builder setScenarios(@Nullable List<Integer> scenarios) {
+        public Builder scenarios(@Nullable List<Integer> scenarios) {
             this.scenarios = Input.ofNullable(scenarios);
             return this;
         }

@@ -55,7 +55,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

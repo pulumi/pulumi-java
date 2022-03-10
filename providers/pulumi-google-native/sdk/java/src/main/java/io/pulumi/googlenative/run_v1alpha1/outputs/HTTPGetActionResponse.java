@@ -99,22 +99,22 @@ public final class HTTPGetActionResponse {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHttpHeaders(List<HTTPHeaderResponse> httpHeaders) {
+        public Builder httpHeaders(List<HTTPHeaderResponse> httpHeaders) {
             this.httpHeaders = Objects.requireNonNull(httpHeaders);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }

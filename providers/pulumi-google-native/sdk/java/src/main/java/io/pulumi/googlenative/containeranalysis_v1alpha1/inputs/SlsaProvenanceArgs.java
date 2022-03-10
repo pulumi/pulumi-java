@@ -110,42 +110,42 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder setBuilder(@Nullable Input<SlsaBuilderArgs> builder) {
+        public Builder builder(@Nullable Input<SlsaBuilderArgs> builder) {
             this.builder = builder;
             return this;
         }
 
-        public Builder setBuilder(@Nullable SlsaBuilderArgs builder) {
+        public Builder builder(@Nullable SlsaBuilderArgs builder) {
             this.builder = Input.ofNullable(builder);
             return this;
         }
 
-        public Builder setMaterials(@Nullable Input<List<MaterialArgs>> materials) {
+        public Builder materials(@Nullable Input<List<MaterialArgs>> materials) {
             this.materials = materials;
             return this;
         }
 
-        public Builder setMaterials(@Nullable List<MaterialArgs> materials) {
+        public Builder materials(@Nullable List<MaterialArgs> materials) {
             this.materials = Input.ofNullable(materials);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<SlsaMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<SlsaMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable SlsaMetadataArgs metadata) {
+        public Builder metadata(@Nullable SlsaMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setRecipe(@Nullable Input<SlsaRecipeArgs> recipe) {
+        public Builder recipe(@Nullable Input<SlsaRecipeArgs> recipe) {
             this.recipe = recipe;
             return this;
         }
 
-        public Builder setRecipe(@Nullable SlsaRecipeArgs recipe) {
+        public Builder recipe(@Nullable SlsaRecipeArgs recipe) {
             this.recipe = Input.ofNullable(recipe);
             return this;
         }

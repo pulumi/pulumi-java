@@ -75,22 +75,22 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setAggregationWindowLength(@Nullable Input<String> aggregationWindowLength) {
+        public Builder aggregationWindowLength(@Nullable Input<String> aggregationWindowLength) {
             this.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
 
-        public Builder setAggregationWindowLength(@Nullable String aggregationWindowLength) {
+        public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
             this.aggregationWindowLength = Input.ofNullable(aggregationWindowLength);
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Input<Double> targetUtilization) {
+        public Builder targetUtilization(@Nullable Input<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Double targetUtilization) {
+        public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = Input.ofNullable(targetUtilization);
             return this;
         }

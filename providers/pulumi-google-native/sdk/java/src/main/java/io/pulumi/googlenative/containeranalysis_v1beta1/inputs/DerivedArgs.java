@@ -76,22 +76,22 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.layerInfo = defaults.layerInfo;
         }
 
-        public Builder setFingerprint(Input<FingerprintArgs> fingerprint) {
+        public Builder fingerprint(Input<FingerprintArgs> fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setFingerprint(FingerprintArgs fingerprint) {
+        public Builder fingerprint(FingerprintArgs fingerprint) {
             this.fingerprint = Input.of(Objects.requireNonNull(fingerprint));
             return this;
         }
 
-        public Builder setLayerInfo(@Nullable Input<List<LayerArgs>> layerInfo) {
+        public Builder layerInfo(@Nullable Input<List<LayerArgs>> layerInfo) {
             this.layerInfo = layerInfo;
             return this;
         }
 
-        public Builder setLayerInfo(@Nullable List<LayerArgs> layerInfo) {
+        public Builder layerInfo(@Nullable List<LayerArgs> layerInfo) {
             this.layerInfo = Input.ofNullable(layerInfo);
             return this;
         }

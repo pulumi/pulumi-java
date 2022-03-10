@@ -72,12 +72,12 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
     	      this.xcodeVersion = defaults.xcodeVersion;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setXcodeVersion(String xcodeVersion) {
+        public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }

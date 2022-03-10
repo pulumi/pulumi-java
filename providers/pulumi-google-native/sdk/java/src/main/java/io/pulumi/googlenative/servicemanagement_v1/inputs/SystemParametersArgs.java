@@ -58,12 +58,12 @@ public final class SystemParametersArgs extends io.pulumi.resources.ResourceArgs
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable Input<List<SystemParameterRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<SystemParameterRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<SystemParameterRuleArgs> rules) {
+        public Builder rules(@Nullable List<SystemParameterRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

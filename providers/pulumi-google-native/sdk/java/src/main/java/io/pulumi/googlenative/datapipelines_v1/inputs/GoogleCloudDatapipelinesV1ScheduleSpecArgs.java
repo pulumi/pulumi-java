@@ -74,22 +74,22 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

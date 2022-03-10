@@ -74,22 +74,22 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder setAcceleratorCount(@Nullable Input<String> acceleratorCount) {
+        public Builder acceleratorCount(@Nullable Input<String> acceleratorCount) {
             this.acceleratorCount = acceleratorCount;
             return this;
         }
 
-        public Builder setAcceleratorCount(@Nullable String acceleratorCount) {
+        public Builder acceleratorCount(@Nullable String acceleratorCount) {
             this.acceleratorCount = Input.ofNullable(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable Input<String> acceleratorType) {
+        public Builder acceleratorType(@Nullable Input<String> acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = Input.ofNullable(acceleratorType);
             return this;
         }

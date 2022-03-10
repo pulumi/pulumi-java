@@ -282,77 +282,77 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.truststoreUri = defaults.truststoreUri;
         }
 
-        public Builder setCrossRealmTrustAdminServer(String crossRealmTrustAdminServer) {
+        public Builder crossRealmTrustAdminServer(String crossRealmTrustAdminServer) {
             this.crossRealmTrustAdminServer = Objects.requireNonNull(crossRealmTrustAdminServer);
             return this;
         }
 
-        public Builder setCrossRealmTrustKdc(String crossRealmTrustKdc) {
+        public Builder crossRealmTrustKdc(String crossRealmTrustKdc) {
             this.crossRealmTrustKdc = Objects.requireNonNull(crossRealmTrustKdc);
             return this;
         }
 
-        public Builder setCrossRealmTrustRealm(String crossRealmTrustRealm) {
+        public Builder crossRealmTrustRealm(String crossRealmTrustRealm) {
             this.crossRealmTrustRealm = Objects.requireNonNull(crossRealmTrustRealm);
             return this;
         }
 
-        public Builder setCrossRealmTrustSharedPasswordUri(String crossRealmTrustSharedPasswordUri) {
+        public Builder crossRealmTrustSharedPasswordUri(String crossRealmTrustSharedPasswordUri) {
             this.crossRealmTrustSharedPasswordUri = Objects.requireNonNull(crossRealmTrustSharedPasswordUri);
             return this;
         }
 
-        public Builder setEnableKerberos(Boolean enableKerberos) {
+        public Builder enableKerberos(Boolean enableKerberos) {
             this.enableKerberos = Objects.requireNonNull(enableKerberos);
             return this;
         }
 
-        public Builder setKdcDbKeyUri(String kdcDbKeyUri) {
+        public Builder kdcDbKeyUri(String kdcDbKeyUri) {
             this.kdcDbKeyUri = Objects.requireNonNull(kdcDbKeyUri);
             return this;
         }
 
-        public Builder setKeyPasswordUri(String keyPasswordUri) {
+        public Builder keyPasswordUri(String keyPasswordUri) {
             this.keyPasswordUri = Objects.requireNonNull(keyPasswordUri);
             return this;
         }
 
-        public Builder setKeystorePasswordUri(String keystorePasswordUri) {
+        public Builder keystorePasswordUri(String keystorePasswordUri) {
             this.keystorePasswordUri = Objects.requireNonNull(keystorePasswordUri);
             return this;
         }
 
-        public Builder setKeystoreUri(String keystoreUri) {
+        public Builder keystoreUri(String keystoreUri) {
             this.keystoreUri = Objects.requireNonNull(keystoreUri);
             return this;
         }
 
-        public Builder setKmsKeyUri(String kmsKeyUri) {
+        public Builder kmsKeyUri(String kmsKeyUri) {
             this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
             return this;
         }
 
-        public Builder setRealm(String realm) {
+        public Builder realm(String realm) {
             this.realm = Objects.requireNonNull(realm);
             return this;
         }
 
-        public Builder setRootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
+        public Builder rootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
             this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
             return this;
         }
 
-        public Builder setTgtLifetimeHours(Integer tgtLifetimeHours) {
+        public Builder tgtLifetimeHours(Integer tgtLifetimeHours) {
             this.tgtLifetimeHours = Objects.requireNonNull(tgtLifetimeHours);
             return this;
         }
 
-        public Builder setTruststorePasswordUri(String truststorePasswordUri) {
+        public Builder truststorePasswordUri(String truststorePasswordUri) {
             this.truststorePasswordUri = Objects.requireNonNull(truststorePasswordUri);
             return this;
         }
 
-        public Builder setTruststoreUri(String truststoreUri) {
+        public Builder truststoreUri(String truststoreUri) {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }

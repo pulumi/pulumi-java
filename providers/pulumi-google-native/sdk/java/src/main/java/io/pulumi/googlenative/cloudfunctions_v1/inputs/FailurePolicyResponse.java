@@ -55,7 +55,7 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
     	      this.retry = defaults.retry;
         }
 
-        public Builder setRetry(RetryResponse retry) {
+        public Builder retry(RetryResponse retry) {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }

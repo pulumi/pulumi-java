@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
     	      this.newValue = defaults.newValue;
         }
 
-        public Builder setNewValue(@Nullable Input<GooglePrivacyDlpV2ValueArgs> newValue) {
+        public Builder newValue(@Nullable Input<GooglePrivacyDlpV2ValueArgs> newValue) {
             this.newValue = newValue;
             return this;
         }
 
-        public Builder setNewValue(@Nullable GooglePrivacyDlpV2ValueArgs newValue) {
+        public Builder newValue(@Nullable GooglePrivacyDlpV2ValueArgs newValue) {
             this.newValue = Input.ofNullable(newValue);
             return this;
         }

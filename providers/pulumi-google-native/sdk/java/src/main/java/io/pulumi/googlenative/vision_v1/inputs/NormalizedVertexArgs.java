@@ -74,22 +74,22 @@ public final class NormalizedVertexArgs extends io.pulumi.resources.ResourceArgs
     	      this.y = defaults.y;
         }
 
-        public Builder setX(@Nullable Input<Double> x) {
+        public Builder x(@Nullable Input<Double> x) {
             this.x = x;
             return this;
         }
 
-        public Builder setX(@Nullable Double x) {
+        public Builder x(@Nullable Double x) {
             this.x = Input.ofNullable(x);
             return this;
         }
 
-        public Builder setY(@Nullable Input<Double> y) {
+        public Builder y(@Nullable Input<Double> y) {
             this.y = y;
             return this;
         }
 
-        public Builder setY(@Nullable Double y) {
+        public Builder y(@Nullable Double y) {
             this.y = Input.ofNullable(y);
             return this;
         }

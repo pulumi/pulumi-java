@@ -108,22 +108,22 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
     	      this.layerInfo = defaults.layerInfo;
         }
 
-        public Builder setBaseResourceUrl(String baseResourceUrl) {
+        public Builder baseResourceUrl(String baseResourceUrl) {
             this.baseResourceUrl = Objects.requireNonNull(baseResourceUrl);
             return this;
         }
 
-        public Builder setDistance(Integer distance) {
+        public Builder distance(Integer distance) {
             this.distance = Objects.requireNonNull(distance);
             return this;
         }
 
-        public Builder setFingerprint(FingerprintResponse fingerprint) {
+        public Builder fingerprint(FingerprintResponse fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setLayerInfo(List<LayerResponse> layerInfo) {
+        public Builder layerInfo(List<LayerResponse> layerInfo) {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }

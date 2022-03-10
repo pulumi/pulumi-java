@@ -177,92 +177,92 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
     	      this.testId = defaults.testId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestination(Input<EndpointArgs> destination) {
+        public Builder destination(Input<EndpointArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(EndpointArgs destination) {
+        public Builder destination(EndpointArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setRelatedProjects(@Nullable Input<List<String>> relatedProjects) {
+        public Builder relatedProjects(@Nullable Input<List<String>> relatedProjects) {
             this.relatedProjects = relatedProjects;
             return this;
         }
 
-        public Builder setRelatedProjects(@Nullable List<String> relatedProjects) {
+        public Builder relatedProjects(@Nullable List<String> relatedProjects) {
             this.relatedProjects = Input.ofNullable(relatedProjects);
             return this;
         }
 
-        public Builder setSource(Input<EndpointArgs> source) {
+        public Builder source(Input<EndpointArgs> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(EndpointArgs source) {
+        public Builder source(EndpointArgs source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setTestId(Input<String> testId) {
+        public Builder testId(Input<String> testId) {
             this.testId = Objects.requireNonNull(testId);
             return this;
         }
 
-        public Builder setTestId(String testId) {
+        public Builder testId(String testId) {
             this.testId = Input.of(Objects.requireNonNull(testId));
             return this;
         }

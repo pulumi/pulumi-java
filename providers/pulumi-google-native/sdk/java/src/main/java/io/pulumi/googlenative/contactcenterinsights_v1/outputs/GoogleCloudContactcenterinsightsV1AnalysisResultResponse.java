@@ -66,12 +66,12 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     	      this.endTime = defaults.endTime;
         }
 
-        public Builder setCallAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
+        public Builder callAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
             this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }

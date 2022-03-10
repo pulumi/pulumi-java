@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     	      this.urlTypeHint = defaults.urlTypeHint;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
 
-        public Builder setUrlTypeHint(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint) {
+        public Builder urlTypeHint(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint> urlTypeHint) {
             this.urlTypeHint = urlTypeHint;
             return this;
         }
 
-        public Builder setUrlTypeHint(@Nullable GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint urlTypeHint) {
+        public Builder urlTypeHint(@Nullable GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionUrlTypeHint urlTypeHint) {
             this.urlTypeHint = Input.ofNullable(urlTypeHint);
             return this;
         }

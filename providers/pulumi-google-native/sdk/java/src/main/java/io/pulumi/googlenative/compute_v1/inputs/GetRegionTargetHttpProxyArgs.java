@@ -74,17 +74,17 @@ public final class GetRegionTargetHttpProxyArgs extends io.pulumi.resources.Invo
     	      this.targetHttpProxy = defaults.targetHttpProxy;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setTargetHttpProxy(String targetHttpProxy) {
+        public Builder targetHttpProxy(String targetHttpProxy) {
             this.targetHttpProxy = Objects.requireNonNull(targetHttpProxy);
             return this;
         }

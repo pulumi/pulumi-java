@@ -106,42 +106,42 @@ public final class ClusterIstioArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable Input<String> serviceNamespace) {
+        public Builder serviceNamespace(@Nullable Input<String> serviceNamespace) {
             this.serviceNamespace = serviceNamespace;
             return this;
         }
 
-        public Builder setServiceNamespace(@Nullable String serviceNamespace) {
+        public Builder serviceNamespace(@Nullable String serviceNamespace) {
             this.serviceNamespace = Input.ofNullable(serviceNamespace);
             return this;
         }

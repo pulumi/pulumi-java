@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setPostback(String postback) {
+        public Builder postback(String postback) {
             this.postback = Objects.requireNonNull(postback);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

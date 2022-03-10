@@ -72,12 +72,12 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setComments(String comments) {
+        public Builder comments(String comments) {
             this.comments = Objects.requireNonNull(comments);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

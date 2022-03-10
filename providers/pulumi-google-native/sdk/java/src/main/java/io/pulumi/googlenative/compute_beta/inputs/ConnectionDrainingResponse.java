@@ -55,7 +55,7 @@ public final class ConnectionDrainingResponse extends io.pulumi.resources.Invoke
     	      this.drainingTimeoutSec = defaults.drainingTimeoutSec;
         }
 
-        public Builder setDrainingTimeoutSec(Integer drainingTimeoutSec) {
+        public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
             this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
             return this;
         }

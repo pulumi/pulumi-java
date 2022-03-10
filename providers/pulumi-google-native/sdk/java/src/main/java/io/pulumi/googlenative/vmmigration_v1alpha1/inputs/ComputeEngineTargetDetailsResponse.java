@@ -318,87 +318,87 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalLicenses(List<String> additionalLicenses) {
+        public Builder additionalLicenses(List<String> additionalLicenses) {
             this.additionalLicenses = Objects.requireNonNull(additionalLicenses);
             return this;
         }
 
-        public Builder setAppliedLicense(AppliedLicenseResponse appliedLicense) {
+        public Builder appliedLicense(AppliedLicenseResponse appliedLicense) {
             this.appliedLicense = Objects.requireNonNull(appliedLicense);
             return this;
         }
 
-        public Builder setBootOption(String bootOption) {
+        public Builder bootOption(String bootOption) {
             this.bootOption = Objects.requireNonNull(bootOption);
             return this;
         }
 
-        public Builder setComputeScheduling(ComputeSchedulingResponse computeScheduling) {
+        public Builder computeScheduling(ComputeSchedulingResponse computeScheduling) {
             this.computeScheduling = Objects.requireNonNull(computeScheduling);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenseType(String licenseType) {
+        public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineTypeSeries(String machineTypeSeries) {
+        public Builder machineTypeSeries(String machineTypeSeries) {
             this.machineTypeSeries = Objects.requireNonNull(machineTypeSeries);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkTags(List<String> networkTags) {
+        public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecureBoot(Boolean secureBoot) {
+        public Builder secureBoot(Boolean secureBoot) {
             this.secureBoot = Objects.requireNonNull(secureBoot);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

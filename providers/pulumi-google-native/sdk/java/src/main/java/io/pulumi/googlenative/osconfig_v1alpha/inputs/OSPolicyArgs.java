@@ -126,52 +126,52 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroups = defaults.resourceGroups;
         }
 
-        public Builder setAllowNoResourceGroupMatch(@Nullable Input<Boolean> allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(@Nullable Input<Boolean> allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
-        public Builder setAllowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = Input.ofNullable(allowNoResourceGroupMatch);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setMode(Input<OSPolicyMode> mode) {
+        public Builder mode(Input<OSPolicyMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(OSPolicyMode mode) {
+        public Builder mode(OSPolicyMode mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setResourceGroups(Input<List<OSPolicyResourceGroupArgs>> resourceGroups) {
+        public Builder resourceGroups(Input<List<OSPolicyResourceGroupArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
 
-        public Builder setResourceGroups(List<OSPolicyResourceGroupArgs> resourceGroups) {
+        public Builder resourceGroups(List<OSPolicyResourceGroupArgs> resourceGroups) {
             this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
             return this;
         }

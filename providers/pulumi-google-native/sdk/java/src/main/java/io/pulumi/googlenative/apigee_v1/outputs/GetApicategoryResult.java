@@ -114,27 +114,27 @@ public final class GetApicategoryResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setData(GoogleCloudApigeeV1ApiCategoryDataResponse data) {
+        public Builder data(GoogleCloudApigeeV1ApiCategoryDataResponse data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setRequestId(String requestId) {
+        public Builder requestId(String requestId) {
             this.requestId = Objects.requireNonNull(requestId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

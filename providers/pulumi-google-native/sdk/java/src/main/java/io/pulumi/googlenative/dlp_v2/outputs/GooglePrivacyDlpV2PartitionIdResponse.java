@@ -65,12 +65,12 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setNamespaceId(String namespaceId) {
+        public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

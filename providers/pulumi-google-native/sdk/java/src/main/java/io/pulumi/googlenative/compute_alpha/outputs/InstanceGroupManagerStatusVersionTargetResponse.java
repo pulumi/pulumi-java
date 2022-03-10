@@ -48,7 +48,7 @@ public final class InstanceGroupManagerStatusVersionTargetResponse {
     	      this.isReached = defaults.isReached;
         }
 
-        public Builder setIsReached(Boolean isReached) {
+        public Builder isReached(Boolean isReached) {
             this.isReached = Objects.requireNonNull(isReached);
             return this;
         }

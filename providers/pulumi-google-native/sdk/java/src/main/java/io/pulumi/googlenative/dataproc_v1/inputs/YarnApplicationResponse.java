@@ -105,22 +105,22 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProgress(Double progress) {
+        public Builder progress(Double progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

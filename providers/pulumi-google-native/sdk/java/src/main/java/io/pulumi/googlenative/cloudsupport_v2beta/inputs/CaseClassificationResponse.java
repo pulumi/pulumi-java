@@ -55,7 +55,7 @@ public final class CaseClassificationResponse extends io.pulumi.resources.Invoke
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }

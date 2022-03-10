@@ -66,12 +66,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setProjectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId) {
+        public Builder projectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId) {
             this.projectRepoId = Objects.requireNonNull(projectRepoId);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

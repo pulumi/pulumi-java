@@ -88,17 +88,17 @@ public final class PositionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.line = defaults.line;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setLength(String length) {
+        public Builder length(String length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
-        public Builder setLine(String line) {
+        public Builder line(String line) {
             this.line = Objects.requireNonNull(line);
             return this;
         }

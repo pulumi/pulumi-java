@@ -90,17 +90,17 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
     	      this.sentimentConfig = defaults.sentimentConfig;
         }
 
-        public Builder setAllowMultiLabel(Boolean allowMultiLabel) {
+        public Builder allowMultiLabel(Boolean allowMultiLabel) {
             this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setSentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
+        public Builder sentimentConfig(GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
             this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
             return this;
         }

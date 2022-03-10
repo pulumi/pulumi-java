@@ -72,17 +72,17 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setDeveloperId(String developerId) {
+        public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

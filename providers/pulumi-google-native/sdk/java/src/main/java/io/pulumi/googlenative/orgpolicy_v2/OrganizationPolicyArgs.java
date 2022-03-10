@@ -83,32 +83,32 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.spec = defaults.spec;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
+        public Builder spec(@Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
+        public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }

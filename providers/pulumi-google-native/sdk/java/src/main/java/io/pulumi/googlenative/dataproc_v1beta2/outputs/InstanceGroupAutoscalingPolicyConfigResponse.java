@@ -81,17 +81,17 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(Integer minInstances) {
+        public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

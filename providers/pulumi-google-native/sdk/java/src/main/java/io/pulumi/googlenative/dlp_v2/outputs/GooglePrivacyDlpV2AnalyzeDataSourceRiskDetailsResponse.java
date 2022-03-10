@@ -185,47 +185,47 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
     	      this.requestedSourceTable = defaults.requestedSourceTable;
         }
 
-        public Builder setCategoricalStatsResult(GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult) {
+        public Builder categoricalStatsResult(GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult) {
             this.categoricalStatsResult = Objects.requireNonNull(categoricalStatsResult);
             return this;
         }
 
-        public Builder setDeltaPresenceEstimationResult(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult) {
+        public Builder deltaPresenceEstimationResult(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult) {
             this.deltaPresenceEstimationResult = Objects.requireNonNull(deltaPresenceEstimationResult);
             return this;
         }
 
-        public Builder setKAnonymityResult(GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult) {
+        public Builder kAnonymityResult(GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult) {
             this.kAnonymityResult = Objects.requireNonNull(kAnonymityResult);
             return this;
         }
 
-        public Builder setKMapEstimationResult(GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult) {
+        public Builder kMapEstimationResult(GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult) {
             this.kMapEstimationResult = Objects.requireNonNull(kMapEstimationResult);
             return this;
         }
 
-        public Builder setLDiversityResult(GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult) {
+        public Builder lDiversityResult(GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult) {
             this.lDiversityResult = Objects.requireNonNull(lDiversityResult);
             return this;
         }
 
-        public Builder setNumericalStatsResult(GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult) {
+        public Builder numericalStatsResult(GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult) {
             this.numericalStatsResult = Objects.requireNonNull(numericalStatsResult);
             return this;
         }
 
-        public Builder setRequestedOptions(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions) {
+        public Builder requestedOptions(GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions) {
             this.requestedOptions = Objects.requireNonNull(requestedOptions);
             return this;
         }
 
-        public Builder setRequestedPrivacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric) {
+        public Builder requestedPrivacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric) {
             this.requestedPrivacyMetric = Objects.requireNonNull(requestedPrivacyMetric);
             return this;
         }
 
-        public Builder setRequestedSourceTable(GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
+        public Builder requestedSourceTable(GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
             this.requestedSourceTable = Objects.requireNonNull(requestedSourceTable);
             return this;
         }

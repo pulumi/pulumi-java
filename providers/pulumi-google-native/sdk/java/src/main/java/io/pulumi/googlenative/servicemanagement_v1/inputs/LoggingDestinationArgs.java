@@ -75,22 +75,22 @@ public final class LoggingDestinationArgs extends io.pulumi.resources.ResourceAr
     	      this.monitoredResource = defaults.monitoredResource;
         }
 
-        public Builder setLogs(@Nullable Input<List<String>> logs) {
+        public Builder logs(@Nullable Input<List<String>> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<String> logs) {
+        public Builder logs(@Nullable List<String> logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setMonitoredResource(@Nullable Input<String> monitoredResource) {
+        public Builder monitoredResource(@Nullable Input<String> monitoredResource) {
             this.monitoredResource = monitoredResource;
             return this;
         }
 
-        public Builder setMonitoredResource(@Nullable String monitoredResource) {
+        public Builder monitoredResource(@Nullable String monitoredResource) {
             this.monitoredResource = Input.ofNullable(monitoredResource);
             return this;
         }

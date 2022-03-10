@@ -111,52 +111,52 @@ public final class OverrideArgs extends io.pulumi.resources.ResourceArgs {
     	      this.samplingConfig = defaults.samplingConfig;
         }
 
-        public Builder setApiProxy(@Nullable Input<String> apiProxy) {
+        public Builder apiProxy(@Nullable Input<String> apiProxy) {
             this.apiProxy = apiProxy;
             return this;
         }
 
-        public Builder setApiProxy(@Nullable String apiProxy) {
+        public Builder apiProxy(@Nullable String apiProxy) {
             this.apiProxy = Input.ofNullable(apiProxy);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setSamplingConfig(@Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
+        public Builder samplingConfig(@Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
             this.samplingConfig = samplingConfig;
             return this;
         }
 
-        public Builder setSamplingConfig(@Nullable GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
+        public Builder samplingConfig(@Nullable GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
             this.samplingConfig = Input.ofNullable(samplingConfig);
             return this;
         }

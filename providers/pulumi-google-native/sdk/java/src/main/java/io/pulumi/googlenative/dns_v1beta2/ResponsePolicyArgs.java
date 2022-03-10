@@ -157,82 +157,82 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.responsePolicyName = defaults.responsePolicyName;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGkeClusters(@Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
+        public Builder gkeClusters(@Nullable Input<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
             this.gkeClusters = gkeClusters;
             return this;
         }
 
-        public Builder setGkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
+        public Builder gkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
             this.gkeClusters = Input.ofNullable(gkeClusters);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setNetworks(@Nullable Input<List<ResponsePolicyNetworkArgs>> networks) {
+        public Builder networks(@Nullable Input<List<ResponsePolicyNetworkArgs>> networks) {
             this.networks = networks;
             return this;
         }
 
-        public Builder setNetworks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
+        public Builder networks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
             this.networks = Input.ofNullable(networks);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResponsePolicyName(@Nullable Input<String> responsePolicyName) {
+        public Builder responsePolicyName(@Nullable Input<String> responsePolicyName) {
             this.responsePolicyName = responsePolicyName;
             return this;
         }
 
-        public Builder setResponsePolicyName(@Nullable String responsePolicyName) {
+        public Builder responsePolicyName(@Nullable String responsePolicyName) {
             this.responsePolicyName = Input.ofNullable(responsePolicyName);
             return this;
         }

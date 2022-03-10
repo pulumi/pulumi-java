@@ -60,12 +60,12 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setSshPublicKeyId(String sshPublicKeyId) {
+        public Builder sshPublicKeyId(String sshPublicKeyId) {
             this.sshPublicKeyId = Objects.requireNonNull(sshPublicKeyId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

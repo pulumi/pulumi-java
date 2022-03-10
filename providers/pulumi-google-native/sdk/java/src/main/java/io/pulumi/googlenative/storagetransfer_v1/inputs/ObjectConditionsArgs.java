@@ -139,62 +139,62 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.minTimeElapsedSinceLastModification = defaults.minTimeElapsedSinceLastModification;
         }
 
-        public Builder setExcludePrefixes(@Nullable Input<List<String>> excludePrefixes) {
+        public Builder excludePrefixes(@Nullable Input<List<String>> excludePrefixes) {
             this.excludePrefixes = excludePrefixes;
             return this;
         }
 
-        public Builder setExcludePrefixes(@Nullable List<String> excludePrefixes) {
+        public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
             this.excludePrefixes = Input.ofNullable(excludePrefixes);
             return this;
         }
 
-        public Builder setIncludePrefixes(@Nullable Input<List<String>> includePrefixes) {
+        public Builder includePrefixes(@Nullable Input<List<String>> includePrefixes) {
             this.includePrefixes = includePrefixes;
             return this;
         }
 
-        public Builder setIncludePrefixes(@Nullable List<String> includePrefixes) {
+        public Builder includePrefixes(@Nullable List<String> includePrefixes) {
             this.includePrefixes = Input.ofNullable(includePrefixes);
             return this;
         }
 
-        public Builder setLastModifiedBefore(@Nullable Input<String> lastModifiedBefore) {
+        public Builder lastModifiedBefore(@Nullable Input<String> lastModifiedBefore) {
             this.lastModifiedBefore = lastModifiedBefore;
             return this;
         }
 
-        public Builder setLastModifiedBefore(@Nullable String lastModifiedBefore) {
+        public Builder lastModifiedBefore(@Nullable String lastModifiedBefore) {
             this.lastModifiedBefore = Input.ofNullable(lastModifiedBefore);
             return this;
         }
 
-        public Builder setLastModifiedSince(@Nullable Input<String> lastModifiedSince) {
+        public Builder lastModifiedSince(@Nullable Input<String> lastModifiedSince) {
             this.lastModifiedSince = lastModifiedSince;
             return this;
         }
 
-        public Builder setLastModifiedSince(@Nullable String lastModifiedSince) {
+        public Builder lastModifiedSince(@Nullable String lastModifiedSince) {
             this.lastModifiedSince = Input.ofNullable(lastModifiedSince);
             return this;
         }
 
-        public Builder setMaxTimeElapsedSinceLastModification(@Nullable Input<String> maxTimeElapsedSinceLastModification) {
+        public Builder maxTimeElapsedSinceLastModification(@Nullable Input<String> maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;
             return this;
         }
 
-        public Builder setMaxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
+        public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
             this.maxTimeElapsedSinceLastModification = Input.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
 
-        public Builder setMinTimeElapsedSinceLastModification(@Nullable Input<String> minTimeElapsedSinceLastModification) {
+        public Builder minTimeElapsedSinceLastModification(@Nullable Input<String> minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = minTimeElapsedSinceLastModification;
             return this;
         }
 
-        public Builder setMinTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
+        public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
             this.minTimeElapsedSinceLastModification = Input.ofNullable(minTimeElapsedSinceLastModification);
             return this;
         }

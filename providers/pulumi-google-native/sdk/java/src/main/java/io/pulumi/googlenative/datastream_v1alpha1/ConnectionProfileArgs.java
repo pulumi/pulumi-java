@@ -238,132 +238,132 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     	      this.staticServiceIpConnectivity = defaults.staticServiceIpConnectivity;
         }
 
-        public Builder setConnectionProfileId(Input<String> connectionProfileId) {
+        public Builder connectionProfileId(Input<String> connectionProfileId) {
             this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
             return this;
         }
 
-        public Builder setConnectionProfileId(String connectionProfileId) {
+        public Builder connectionProfileId(String connectionProfileId) {
             this.connectionProfileId = Input.of(Objects.requireNonNull(connectionProfileId));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setForwardSshConnectivity(@Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
+        public Builder forwardSshConnectivity(@Nullable Input<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
             this.forwardSshConnectivity = forwardSshConnectivity;
             return this;
         }
 
-        public Builder setForwardSshConnectivity(@Nullable ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
+        public Builder forwardSshConnectivity(@Nullable ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
             this.forwardSshConnectivity = Input.ofNullable(forwardSshConnectivity);
             return this;
         }
 
-        public Builder setGcsProfile(@Nullable Input<GcsProfileArgs> gcsProfile) {
+        public Builder gcsProfile(@Nullable Input<GcsProfileArgs> gcsProfile) {
             this.gcsProfile = gcsProfile;
             return this;
         }
 
-        public Builder setGcsProfile(@Nullable GcsProfileArgs gcsProfile) {
+        public Builder gcsProfile(@Nullable GcsProfileArgs gcsProfile) {
             this.gcsProfile = Input.ofNullable(gcsProfile);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMysqlProfile(@Nullable Input<MysqlProfileArgs> mysqlProfile) {
+        public Builder mysqlProfile(@Nullable Input<MysqlProfileArgs> mysqlProfile) {
             this.mysqlProfile = mysqlProfile;
             return this;
         }
 
-        public Builder setMysqlProfile(@Nullable MysqlProfileArgs mysqlProfile) {
+        public Builder mysqlProfile(@Nullable MysqlProfileArgs mysqlProfile) {
             this.mysqlProfile = Input.ofNullable(mysqlProfile);
             return this;
         }
 
-        public Builder setNoConnectivity(@Nullable Input<NoConnectivitySettingsArgs> noConnectivity) {
+        public Builder noConnectivity(@Nullable Input<NoConnectivitySettingsArgs> noConnectivity) {
             this.noConnectivity = noConnectivity;
             return this;
         }
 
-        public Builder setNoConnectivity(@Nullable NoConnectivitySettingsArgs noConnectivity) {
+        public Builder noConnectivity(@Nullable NoConnectivitySettingsArgs noConnectivity) {
             this.noConnectivity = Input.ofNullable(noConnectivity);
             return this;
         }
 
-        public Builder setOracleProfile(@Nullable Input<OracleProfileArgs> oracleProfile) {
+        public Builder oracleProfile(@Nullable Input<OracleProfileArgs> oracleProfile) {
             this.oracleProfile = oracleProfile;
             return this;
         }
 
-        public Builder setOracleProfile(@Nullable OracleProfileArgs oracleProfile) {
+        public Builder oracleProfile(@Nullable OracleProfileArgs oracleProfile) {
             this.oracleProfile = Input.ofNullable(oracleProfile);
             return this;
         }
 
-        public Builder setPrivateConnectivity(@Nullable Input<PrivateConnectivityArgs> privateConnectivity) {
+        public Builder privateConnectivity(@Nullable Input<PrivateConnectivityArgs> privateConnectivity) {
             this.privateConnectivity = privateConnectivity;
             return this;
         }
 
-        public Builder setPrivateConnectivity(@Nullable PrivateConnectivityArgs privateConnectivity) {
+        public Builder privateConnectivity(@Nullable PrivateConnectivityArgs privateConnectivity) {
             this.privateConnectivity = Input.ofNullable(privateConnectivity);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setStaticServiceIpConnectivity(@Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
+        public Builder staticServiceIpConnectivity(@Nullable Input<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = staticServiceIpConnectivity;
             return this;
         }
 
-        public Builder setStaticServiceIpConnectivity(@Nullable StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
+        public Builder staticServiceIpConnectivity(@Nullable StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = Input.ofNullable(staticServiceIpConnectivity);
             return this;
         }

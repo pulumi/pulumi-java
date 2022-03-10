@@ -108,42 +108,42 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     	      this.instantiateFrom = defaults.instantiateFrom;
         }
 
-        public Builder setAutoDelete(@Nullable Input<Boolean> autoDelete) {
+        public Builder autoDelete(@Nullable Input<Boolean> autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = Input.ofNullable(autoDelete);
             return this;
         }
 
-        public Builder setCustomImage(@Nullable Input<String> customImage) {
+        public Builder customImage(@Nullable Input<String> customImage) {
             this.customImage = customImage;
             return this;
         }
 
-        public Builder setCustomImage(@Nullable String customImage) {
+        public Builder customImage(@Nullable String customImage) {
             this.customImage = Input.ofNullable(customImage);
             return this;
         }
 
-        public Builder setDeviceName(@Nullable Input<String> deviceName) {
+        public Builder deviceName(@Nullable Input<String> deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = Input.ofNullable(deviceName);
             return this;
         }
 
-        public Builder setInstantiateFrom(@Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
+        public Builder instantiateFrom(@Nullable Input<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
             this.instantiateFrom = instantiateFrom;
             return this;
         }
 
-        public Builder setInstantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
+        public Builder instantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
             this.instantiateFrom = Input.ofNullable(instantiateFrom);
             return this;
         }

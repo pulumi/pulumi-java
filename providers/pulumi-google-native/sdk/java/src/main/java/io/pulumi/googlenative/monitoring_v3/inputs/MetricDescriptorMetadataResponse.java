@@ -72,12 +72,12 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
     	      this.samplePeriod = defaults.samplePeriod;
         }
 
-        public Builder setIngestDelay(String ingestDelay) {
+        public Builder ingestDelay(String ingestDelay) {
             this.ingestDelay = Objects.requireNonNull(ingestDelay);
             return this;
         }
 
-        public Builder setSamplePeriod(String samplePeriod) {
+        public Builder samplePeriod(String samplePeriod) {
             this.samplePeriod = Objects.requireNonNull(samplePeriod);
             return this;
         }

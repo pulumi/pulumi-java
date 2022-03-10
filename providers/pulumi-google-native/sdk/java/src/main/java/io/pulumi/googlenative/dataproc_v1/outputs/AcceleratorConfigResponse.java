@@ -66,12 +66,12 @@ public final class AcceleratorConfigResponse {
     	      this.acceleratorTypeUri = defaults.acceleratorTypeUri;
         }
 
-        public Builder setAcceleratorCount(Integer acceleratorCount) {
+        public Builder acceleratorCount(Integer acceleratorCount) {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorTypeUri(String acceleratorTypeUri) {
+        public Builder acceleratorTypeUri(String acceleratorTypeUri) {
             this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
             return this;
         }

@@ -67,12 +67,12 @@ public final class RuleResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setDestinations(List<DestinationResponse> destinations) {
+        public Builder destinations(List<DestinationResponse> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setSources(List<SourceResponse> sources) {
+        public Builder sources(List<SourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }

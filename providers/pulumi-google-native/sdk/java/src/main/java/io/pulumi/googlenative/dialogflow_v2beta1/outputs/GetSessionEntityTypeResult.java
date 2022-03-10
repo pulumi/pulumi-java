@@ -83,17 +83,17 @@ public final class GetSessionEntityTypeResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setEntities(List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities) {
+        public Builder entities(List<GoogleCloudDialogflowV2beta1EntityTypeEntityResponse> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
 
-        public Builder setEntityOverrideMode(String entityOverrideMode) {
+        public Builder entityOverrideMode(String entityOverrideMode) {
             this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

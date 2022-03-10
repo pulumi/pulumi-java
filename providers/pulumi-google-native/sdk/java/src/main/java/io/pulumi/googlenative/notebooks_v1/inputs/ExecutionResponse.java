@@ -185,47 +185,47 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExecutionTemplate(ExecutionTemplateResponse executionTemplate) {
+        public Builder executionTemplate(ExecutionTemplateResponse executionTemplate) {
             this.executionTemplate = Objects.requireNonNull(executionTemplate);
             return this;
         }
 
-        public Builder setJobUri(String jobUri) {
+        public Builder jobUri(String jobUri) {
             this.jobUri = Objects.requireNonNull(jobUri);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputNotebookFile(String outputNotebookFile) {
+        public Builder outputNotebookFile(String outputNotebookFile) {
             this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

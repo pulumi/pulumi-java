@@ -150,37 +150,37 @@ public final class GetBudgetResult {
     	      this.thresholdRules = defaults.thresholdRules;
         }
 
-        public Builder setAmount(GoogleCloudBillingBudgetsV1BudgetAmountResponse amount) {
+        public Builder amount(GoogleCloudBillingBudgetsV1BudgetAmountResponse amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setBudgetFilter(GoogleCloudBillingBudgetsV1FilterResponse budgetFilter) {
+        public Builder budgetFilter(GoogleCloudBillingBudgetsV1FilterResponse budgetFilter) {
             this.budgetFilter = Objects.requireNonNull(budgetFilter);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationsRule(GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule) {
+        public Builder notificationsRule(GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule) {
             this.notificationsRule = Objects.requireNonNull(notificationsRule);
             return this;
         }
 
-        public Builder setThresholdRules(List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
+        public Builder thresholdRules(List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }

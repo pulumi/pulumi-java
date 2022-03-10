@@ -54,12 +54,12 @@ public final class TableSchemaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
+        public Builder fields(@Nullable Input<List<TableFieldSchemaArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<TableFieldSchemaArgs> fields) {
+        public Builder fields(@Nullable List<TableFieldSchemaArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }

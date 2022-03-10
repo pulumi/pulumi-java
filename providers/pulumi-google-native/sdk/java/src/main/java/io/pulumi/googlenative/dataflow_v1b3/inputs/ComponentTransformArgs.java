@@ -90,32 +90,32 @@ public final class ComponentTransformArgs extends io.pulumi.resources.ResourceAr
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOriginalTransform(@Nullable Input<String> originalTransform) {
+        public Builder originalTransform(@Nullable Input<String> originalTransform) {
             this.originalTransform = originalTransform;
             return this;
         }
 
-        public Builder setOriginalTransform(@Nullable String originalTransform) {
+        public Builder originalTransform(@Nullable String originalTransform) {
             this.originalTransform = Input.ofNullable(originalTransform);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

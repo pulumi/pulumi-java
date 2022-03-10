@@ -89,17 +89,17 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
     	      this.stackTrace = defaults.stackTrace;
         }
 
-        public Builder setContext(String context) {
+        public Builder context(String context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setStackTrace(StackTraceResponse stackTrace) {
+        public Builder stackTrace(StackTraceResponse stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }

@@ -60,12 +60,12 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
     	      this.domainMappingId = defaults.domainMappingId;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setDomainMappingId(String domainMappingId) {
+        public Builder domainMappingId(String domainMappingId) {
             this.domainMappingId = Objects.requireNonNull(domainMappingId);
             return this;
         }

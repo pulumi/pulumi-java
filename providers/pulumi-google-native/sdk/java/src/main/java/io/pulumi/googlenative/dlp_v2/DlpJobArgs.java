@@ -112,52 +112,52 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.riskJob = defaults.riskJob;
         }
 
-        public Builder setInspectJob(@Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
+        public Builder inspectJob(@Nullable Input<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
             this.inspectJob = inspectJob;
             return this;
         }
 
-        public Builder setInspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
+        public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
             this.inspectJob = Input.ofNullable(inspectJob);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRiskJob(@Nullable Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
+        public Builder riskJob(@Nullable Input<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob) {
             this.riskJob = riskJob;
             return this;
         }
 
-        public Builder setRiskJob(@Nullable GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
+        public Builder riskJob(@Nullable GooglePrivacyDlpV2RiskAnalysisJobConfigArgs riskJob) {
             this.riskJob = Input.ofNullable(riskJob);
             return this;
         }

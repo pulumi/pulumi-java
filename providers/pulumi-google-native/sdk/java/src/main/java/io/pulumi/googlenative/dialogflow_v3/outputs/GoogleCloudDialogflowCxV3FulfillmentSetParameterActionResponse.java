@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
     	      this.value = defaults.value;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

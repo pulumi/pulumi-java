@@ -91,32 +91,32 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs ex
     	      this.trafficPercent = defaults.trafficPercent;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setMinDuration(@Nullable Input<String> minDuration) {
+        public Builder minDuration(@Nullable Input<String> minDuration) {
             this.minDuration = minDuration;
             return this;
         }
 
-        public Builder setMinDuration(@Nullable String minDuration) {
+        public Builder minDuration(@Nullable String minDuration) {
             this.minDuration = Input.ofNullable(minDuration);
             return this;
         }
 
-        public Builder setTrafficPercent(@Nullable Input<Integer> trafficPercent) {
+        public Builder trafficPercent(@Nullable Input<Integer> trafficPercent) {
             this.trafficPercent = trafficPercent;
             return this;
         }
 
-        public Builder setTrafficPercent(@Nullable Integer trafficPercent) {
+        public Builder trafficPercent(@Nullable Integer trafficPercent) {
             this.trafficPercent = Input.ofNullable(trafficPercent);
             return this;
         }

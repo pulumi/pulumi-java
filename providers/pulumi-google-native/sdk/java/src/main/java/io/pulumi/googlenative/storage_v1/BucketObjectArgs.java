@@ -666,412 +666,412 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setAcl(@Nullable Input<List<ObjectAccessControlArgs>> acl) {
+        public Builder acl(@Nullable Input<List<ObjectAccessControlArgs>> acl) {
             this.acl = acl;
             return this;
         }
 
-        public Builder setAcl(@Nullable List<ObjectAccessControlArgs> acl) {
+        public Builder acl(@Nullable List<ObjectAccessControlArgs> acl) {
             this.acl = Input.ofNullable(acl);
             return this;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setCacheControl(@Nullable Input<String> cacheControl) {
+        public Builder cacheControl(@Nullable Input<String> cacheControl) {
             this.cacheControl = cacheControl;
             return this;
         }
 
-        public Builder setCacheControl(@Nullable String cacheControl) {
+        public Builder cacheControl(@Nullable String cacheControl) {
             this.cacheControl = Input.ofNullable(cacheControl);
             return this;
         }
 
-        public Builder setComponentCount(@Nullable Input<Integer> componentCount) {
+        public Builder componentCount(@Nullable Input<Integer> componentCount) {
             this.componentCount = componentCount;
             return this;
         }
 
-        public Builder setComponentCount(@Nullable Integer componentCount) {
+        public Builder componentCount(@Nullable Integer componentCount) {
             this.componentCount = Input.ofNullable(componentCount);
             return this;
         }
 
-        public Builder setContentDisposition(@Nullable Input<String> contentDisposition) {
+        public Builder contentDisposition(@Nullable Input<String> contentDisposition) {
             this.contentDisposition = contentDisposition;
             return this;
         }
 
-        public Builder setContentDisposition(@Nullable String contentDisposition) {
+        public Builder contentDisposition(@Nullable String contentDisposition) {
             this.contentDisposition = Input.ofNullable(contentDisposition);
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable Input<String> contentEncoding) {
+        public Builder contentEncoding(@Nullable Input<String> contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable String contentEncoding) {
+        public Builder contentEncoding(@Nullable String contentEncoding) {
             this.contentEncoding = Input.ofNullable(contentEncoding);
             return this;
         }
 
-        public Builder setContentLanguage(@Nullable Input<String> contentLanguage) {
+        public Builder contentLanguage(@Nullable Input<String> contentLanguage) {
             this.contentLanguage = contentLanguage;
             return this;
         }
 
-        public Builder setContentLanguage(@Nullable String contentLanguage) {
+        public Builder contentLanguage(@Nullable String contentLanguage) {
             this.contentLanguage = Input.ofNullable(contentLanguage);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setCrc32c(@Nullable Input<String> crc32c) {
+        public Builder crc32c(@Nullable Input<String> crc32c) {
             this.crc32c = crc32c;
             return this;
         }
 
-        public Builder setCrc32c(@Nullable String crc32c) {
+        public Builder crc32c(@Nullable String crc32c) {
             this.crc32c = Input.ofNullable(crc32c);
             return this;
         }
 
-        public Builder setCustomTime(@Nullable Input<String> customTime) {
+        public Builder customTime(@Nullable Input<String> customTime) {
             this.customTime = customTime;
             return this;
         }
 
-        public Builder setCustomTime(@Nullable String customTime) {
+        public Builder customTime(@Nullable String customTime) {
             this.customTime = Input.ofNullable(customTime);
             return this;
         }
 
-        public Builder setCustomerEncryption(@Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption) {
+        public Builder customerEncryption(@Nullable Input<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             this.customerEncryption = customerEncryption;
             return this;
         }
 
-        public Builder setCustomerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
+        public Builder customerEncryption(@Nullable BucketObjectCustomerEncryptionArgs customerEncryption) {
             this.customerEncryption = Input.ofNullable(customerEncryption);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setEventBasedHold(@Nullable Input<Boolean> eventBasedHold) {
+        public Builder eventBasedHold(@Nullable Input<Boolean> eventBasedHold) {
             this.eventBasedHold = eventBasedHold;
             return this;
         }
 
-        public Builder setEventBasedHold(@Nullable Boolean eventBasedHold) {
+        public Builder eventBasedHold(@Nullable Boolean eventBasedHold) {
             this.eventBasedHold = Input.ofNullable(eventBasedHold);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<String> generation) {
+        public Builder generation(@Nullable Input<String> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable String generation) {
+        public Builder generation(@Nullable String generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIfGenerationMatch(@Nullable Input<String> ifGenerationMatch) {
+        public Builder ifGenerationMatch(@Nullable Input<String> ifGenerationMatch) {
             this.ifGenerationMatch = ifGenerationMatch;
             return this;
         }
 
-        public Builder setIfGenerationMatch(@Nullable String ifGenerationMatch) {
+        public Builder ifGenerationMatch(@Nullable String ifGenerationMatch) {
             this.ifGenerationMatch = Input.ofNullable(ifGenerationMatch);
             return this;
         }
 
-        public Builder setIfGenerationNotMatch(@Nullable Input<String> ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(@Nullable Input<String> ifGenerationNotMatch) {
             this.ifGenerationNotMatch = ifGenerationNotMatch;
             return this;
         }
 
-        public Builder setIfGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
+        public Builder ifGenerationNotMatch(@Nullable String ifGenerationNotMatch) {
             this.ifGenerationNotMatch = Input.ofNullable(ifGenerationNotMatch);
             return this;
         }
 
-        public Builder setIfMetagenerationMatch(@Nullable Input<String> ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable Input<String> ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
-        public Builder setIfMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = Input.ofNullable(ifMetagenerationMatch);
             return this;
         }
 
-        public Builder setIfMetagenerationNotMatch(@Nullable Input<String> ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable Input<String> ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
-        public Builder setIfMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = Input.ofNullable(ifMetagenerationNotMatch);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setMd5Hash(@Nullable Input<String> md5Hash) {
+        public Builder md5Hash(@Nullable Input<String> md5Hash) {
             this.md5Hash = md5Hash;
             return this;
         }
 
-        public Builder setMd5Hash(@Nullable String md5Hash) {
+        public Builder md5Hash(@Nullable String md5Hash) {
             this.md5Hash = Input.ofNullable(md5Hash);
             return this;
         }
 
-        public Builder setMediaLink(@Nullable Input<String> mediaLink) {
+        public Builder mediaLink(@Nullable Input<String> mediaLink) {
             this.mediaLink = mediaLink;
             return this;
         }
 
-        public Builder setMediaLink(@Nullable String mediaLink) {
+        public Builder mediaLink(@Nullable String mediaLink) {
             this.mediaLink = Input.ofNullable(mediaLink);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMetageneration(@Nullable Input<String> metageneration) {
+        public Builder metageneration(@Nullable Input<String> metageneration) {
             this.metageneration = metageneration;
             return this;
         }
 
-        public Builder setMetageneration(@Nullable String metageneration) {
+        public Builder metageneration(@Nullable String metageneration) {
             this.metageneration = Input.ofNullable(metageneration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<BucketObjectOwnerArgs> owner) {
+        public Builder owner(@Nullable Input<BucketObjectOwnerArgs> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable BucketObjectOwnerArgs owner) {
+        public Builder owner(@Nullable BucketObjectOwnerArgs owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable String predefinedAcl) {
+        public Builder predefinedAcl(@Nullable String predefinedAcl) {
             this.predefinedAcl = Input.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder setProjection(@Nullable Input<String> projection) {
+        public Builder projection(@Nullable Input<String> projection) {
             this.projection = projection;
             return this;
         }
 
-        public Builder setProjection(@Nullable String projection) {
+        public Builder projection(@Nullable String projection) {
             this.projection = Input.ofNullable(projection);
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable Input<String> provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable Input<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable String provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Input.ofNullable(provisionalUserProject);
             return this;
         }
 
-        public Builder setRetentionExpirationTime(@Nullable Input<String> retentionExpirationTime) {
+        public Builder retentionExpirationTime(@Nullable Input<String> retentionExpirationTime) {
             this.retentionExpirationTime = retentionExpirationTime;
             return this;
         }
 
-        public Builder setRetentionExpirationTime(@Nullable String retentionExpirationTime) {
+        public Builder retentionExpirationTime(@Nullable String retentionExpirationTime) {
             this.retentionExpirationTime = Input.ofNullable(retentionExpirationTime);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<AssetOrArchive> source) {
+        public Builder source(@Nullable Input<AssetOrArchive> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable AssetOrArchive source) {
+        public Builder source(@Nullable AssetOrArchive source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setTemporaryHold(@Nullable Input<Boolean> temporaryHold) {
+        public Builder temporaryHold(@Nullable Input<Boolean> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
 
-        public Builder setTemporaryHold(@Nullable Boolean temporaryHold) {
+        public Builder temporaryHold(@Nullable Boolean temporaryHold) {
             this.temporaryHold = Input.ofNullable(temporaryHold);
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Input<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Input.ofNullable(timeCreated);
             return this;
         }
 
-        public Builder setTimeDeleted(@Nullable Input<String> timeDeleted) {
+        public Builder timeDeleted(@Nullable Input<String> timeDeleted) {
             this.timeDeleted = timeDeleted;
             return this;
         }
 
-        public Builder setTimeDeleted(@Nullable String timeDeleted) {
+        public Builder timeDeleted(@Nullable String timeDeleted) {
             this.timeDeleted = Input.ofNullable(timeDeleted);
             return this;
         }
 
-        public Builder setTimeStorageClassUpdated(@Nullable Input<String> timeStorageClassUpdated) {
+        public Builder timeStorageClassUpdated(@Nullable Input<String> timeStorageClassUpdated) {
             this.timeStorageClassUpdated = timeStorageClassUpdated;
             return this;
         }
 
-        public Builder setTimeStorageClassUpdated(@Nullable String timeStorageClassUpdated) {
+        public Builder timeStorageClassUpdated(@Nullable String timeStorageClassUpdated) {
             this.timeStorageClassUpdated = Input.ofNullable(timeStorageClassUpdated);
             return this;
         }
 
-        public Builder setUpdated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Input<String> updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = Input.ofNullable(updated);
             return this;
         }
 
-        public Builder setUserProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Input<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = Input.ofNullable(userProject);
             return this;
         }

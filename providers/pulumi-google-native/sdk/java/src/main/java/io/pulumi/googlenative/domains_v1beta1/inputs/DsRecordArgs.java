@@ -109,42 +109,42 @@ public final class DsRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyTag = defaults.keyTag;
         }
 
-        public Builder setAlgorithm(@Nullable Input<DsRecordAlgorithm> algorithm) {
+        public Builder algorithm(@Nullable Input<DsRecordAlgorithm> algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setAlgorithm(@Nullable DsRecordAlgorithm algorithm) {
+        public Builder algorithm(@Nullable DsRecordAlgorithm algorithm) {
             this.algorithm = Input.ofNullable(algorithm);
             return this;
         }
 
-        public Builder setDigest(@Nullable Input<String> digest) {
+        public Builder digest(@Nullable Input<String> digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = Input.ofNullable(digest);
             return this;
         }
 
-        public Builder setDigestType(@Nullable Input<DsRecordDigestType> digestType) {
+        public Builder digestType(@Nullable Input<DsRecordDigestType> digestType) {
             this.digestType = digestType;
             return this;
         }
 
-        public Builder setDigestType(@Nullable DsRecordDigestType digestType) {
+        public Builder digestType(@Nullable DsRecordDigestType digestType) {
             this.digestType = Input.ofNullable(digestType);
             return this;
         }
 
-        public Builder setKeyTag(@Nullable Input<Integer> keyTag) {
+        public Builder keyTag(@Nullable Input<Integer> keyTag) {
             this.keyTag = keyTag;
             return this;
         }
 
-        public Builder setKeyTag(@Nullable Integer keyTag) {
+        public Builder keyTag(@Nullable Integer keyTag) {
             this.keyTag = Input.ofNullable(keyTag);
             return this;
         }

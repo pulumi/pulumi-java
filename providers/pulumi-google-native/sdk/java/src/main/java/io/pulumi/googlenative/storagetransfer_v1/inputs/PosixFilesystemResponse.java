@@ -55,7 +55,7 @@ public final class PosixFilesystemResponse extends io.pulumi.resources.InvokeArg
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setRootDirectory(String rootDirectory) {
+        public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }

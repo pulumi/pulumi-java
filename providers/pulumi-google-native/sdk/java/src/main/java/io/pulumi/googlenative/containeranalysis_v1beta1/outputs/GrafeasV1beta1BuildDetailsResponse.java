@@ -66,12 +66,12 @@ public final class GrafeasV1beta1BuildDetailsResponse {
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder setProvenance(BuildProvenanceResponse provenance) {
+        public Builder provenance(BuildProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
-        public Builder setProvenanceBytes(String provenanceBytes) {
+        public Builder provenanceBytes(String provenanceBytes) {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }

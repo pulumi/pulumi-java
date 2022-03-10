@@ -75,22 +75,22 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
     	      this.queryStringWhitelist = defaults.queryStringWhitelist;
         }
 
-        public Builder setIncludeHttpHeaders(@Nullable Input<List<String>> includeHttpHeaders) {
+        public Builder includeHttpHeaders(@Nullable Input<List<String>> includeHttpHeaders) {
             this.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
 
-        public Builder setIncludeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
+        public Builder includeHttpHeaders(@Nullable List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Input.ofNullable(includeHttpHeaders);
             return this;
         }
 
-        public Builder setQueryStringWhitelist(@Nullable Input<List<String>> queryStringWhitelist) {
+        public Builder queryStringWhitelist(@Nullable Input<List<String>> queryStringWhitelist) {
             this.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
 
-        public Builder setQueryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
+        public Builder queryStringWhitelist(@Nullable List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Input.ofNullable(queryStringWhitelist);
             return this;
         }

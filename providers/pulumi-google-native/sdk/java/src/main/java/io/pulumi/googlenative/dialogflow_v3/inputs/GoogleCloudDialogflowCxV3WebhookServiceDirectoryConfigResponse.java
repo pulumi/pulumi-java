@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
     	      this.service = defaults.service;
         }
 
-        public Builder setGenericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService) {
+        public Builder genericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService) {
             this.genericWebService = Objects.requireNonNull(genericWebService);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

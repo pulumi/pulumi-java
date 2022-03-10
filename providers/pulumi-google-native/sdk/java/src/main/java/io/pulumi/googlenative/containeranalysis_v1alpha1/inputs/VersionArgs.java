@@ -125,52 +125,52 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setEpoch(@Nullable Input<Integer> epoch) {
+        public Builder epoch(@Nullable Input<Integer> epoch) {
             this.epoch = epoch;
             return this;
         }
 
-        public Builder setEpoch(@Nullable Integer epoch) {
+        public Builder epoch(@Nullable Integer epoch) {
             this.epoch = Input.ofNullable(epoch);
             return this;
         }
 
-        public Builder setInclusive(@Nullable Input<Boolean> inclusive) {
+        public Builder inclusive(@Nullable Input<Boolean> inclusive) {
             this.inclusive = inclusive;
             return this;
         }
 
-        public Builder setInclusive(@Nullable Boolean inclusive) {
+        public Builder inclusive(@Nullable Boolean inclusive) {
             this.inclusive = Input.ofNullable(inclusive);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<VersionKind> kind) {
+        public Builder kind(@Nullable Input<VersionKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable VersionKind kind) {
+        public Builder kind(@Nullable VersionKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Input<String> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable String revision) {
+        public Builder revision(@Nullable String revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }

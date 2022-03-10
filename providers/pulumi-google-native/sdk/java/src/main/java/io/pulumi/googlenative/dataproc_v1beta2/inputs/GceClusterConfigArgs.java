@@ -241,122 +241,122 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.zoneUri = defaults.zoneUri;
         }
 
-        public Builder setInternalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Input<Boolean> internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
-        public Builder setInternalIpOnly(@Nullable Boolean internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = Input.ofNullable(internalIpOnly);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setNetworkUri(@Nullable Input<String> networkUri) {
+        public Builder networkUri(@Nullable Input<String> networkUri) {
             this.networkUri = networkUri;
             return this;
         }
 
-        public Builder setNetworkUri(@Nullable String networkUri) {
+        public Builder networkUri(@Nullable String networkUri) {
             this.networkUri = Input.ofNullable(networkUri);
             return this;
         }
 
-        public Builder setNodeGroupAffinity(@Nullable Input<NodeGroupAffinityArgs> nodeGroupAffinity) {
+        public Builder nodeGroupAffinity(@Nullable Input<NodeGroupAffinityArgs> nodeGroupAffinity) {
             this.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
 
-        public Builder setNodeGroupAffinity(@Nullable NodeGroupAffinityArgs nodeGroupAffinity) {
+        public Builder nodeGroupAffinity(@Nullable NodeGroupAffinityArgs nodeGroupAffinity) {
             this.nodeGroupAffinity = Input.ofNullable(nodeGroupAffinity);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable Input<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable Input<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable GceClusterConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable GceClusterConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Input.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable Input<ReservationAffinityArgs> reservationAffinity) {
+        public Builder reservationAffinity(@Nullable Input<ReservationAffinityArgs> reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
+        public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
             this.reservationAffinity = Input.ofNullable(reservationAffinity);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setServiceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable Input<List<String>> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
-        public Builder setServiceAccountScopes(@Nullable List<String> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Input.ofNullable(serviceAccountScopes);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSubnetworkUri(@Nullable Input<String> subnetworkUri) {
+        public Builder subnetworkUri(@Nullable Input<String> subnetworkUri) {
             this.subnetworkUri = subnetworkUri;
             return this;
         }
 
-        public Builder setSubnetworkUri(@Nullable String subnetworkUri) {
+        public Builder subnetworkUri(@Nullable String subnetworkUri) {
             this.subnetworkUri = Input.ofNullable(subnetworkUri);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZoneUri(@Nullable Input<String> zoneUri) {
+        public Builder zoneUri(@Nullable Input<String> zoneUri) {
             this.zoneUri = zoneUri;
             return this;
         }
 
-        public Builder setZoneUri(@Nullable String zoneUri) {
+        public Builder zoneUri(@Nullable String zoneUri) {
             this.zoneUri = Input.ofNullable(zoneUri);
             return this;
         }

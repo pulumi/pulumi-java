@@ -86,17 +86,17 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(List<String> exemptedMembers) {
+        public Builder exemptedMembers(List<String> exemptedMembers) {
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
 
-        public Builder setIgnoreChildExemptions(Boolean ignoreChildExemptions) {
+        public Builder ignoreChildExemptions(Boolean ignoreChildExemptions) {
             this.ignoreChildExemptions = Objects.requireNonNull(ignoreChildExemptions);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

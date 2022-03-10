@@ -174,92 +174,92 @@ public final class ServerTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serverTlsPolicyId = defaults.serverTlsPolicyId;
         }
 
-        public Builder setAllowOpen(@Nullable Input<Boolean> allowOpen) {
+        public Builder allowOpen(@Nullable Input<Boolean> allowOpen) {
             this.allowOpen = allowOpen;
             return this;
         }
 
-        public Builder setAllowOpen(@Nullable Boolean allowOpen) {
+        public Builder allowOpen(@Nullable Boolean allowOpen) {
             this.allowOpen = Input.ofNullable(allowOpen);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMtlsPolicy(@Nullable Input<MTLSPolicyArgs> mtlsPolicy) {
+        public Builder mtlsPolicy(@Nullable Input<MTLSPolicyArgs> mtlsPolicy) {
             this.mtlsPolicy = mtlsPolicy;
             return this;
         }
 
-        public Builder setMtlsPolicy(@Nullable MTLSPolicyArgs mtlsPolicy) {
+        public Builder mtlsPolicy(@Nullable MTLSPolicyArgs mtlsPolicy) {
             this.mtlsPolicy = Input.ofNullable(mtlsPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServerCertificate(@Nullable Input<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate) {
+        public Builder serverCertificate(@Nullable Input<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
 
-        public Builder setServerCertificate(@Nullable GoogleCloudNetworksecurityV1beta1CertificateProviderArgs serverCertificate) {
+        public Builder serverCertificate(@Nullable GoogleCloudNetworksecurityV1beta1CertificateProviderArgs serverCertificate) {
             this.serverCertificate = Input.ofNullable(serverCertificate);
             return this;
         }
 
-        public Builder setServerTlsPolicyId(Input<String> serverTlsPolicyId) {
+        public Builder serverTlsPolicyId(Input<String> serverTlsPolicyId) {
             this.serverTlsPolicyId = Objects.requireNonNull(serverTlsPolicyId);
             return this;
         }
 
-        public Builder setServerTlsPolicyId(String serverTlsPolicyId) {
+        public Builder serverTlsPolicyId(String serverTlsPolicyId) {
             this.serverTlsPolicyId = Input.of(Objects.requireNonNull(serverTlsPolicyId));
             return this;
         }

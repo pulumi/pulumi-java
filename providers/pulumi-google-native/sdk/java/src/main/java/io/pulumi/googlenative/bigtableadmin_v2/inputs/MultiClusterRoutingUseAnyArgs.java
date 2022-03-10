@@ -58,12 +58,12 @@ public final class MultiClusterRoutingUseAnyArgs extends io.pulumi.resources.Res
     	      this.clusterIds = defaults.clusterIds;
         }
 
-        public Builder setClusterIds(@Nullable Input<List<String>> clusterIds) {
+        public Builder clusterIds(@Nullable Input<List<String>> clusterIds) {
             this.clusterIds = clusterIds;
             return this;
         }
 
-        public Builder setClusterIds(@Nullable List<String> clusterIds) {
+        public Builder clusterIds(@Nullable List<String> clusterIds) {
             this.clusterIds = Input.ofNullable(clusterIds);
             return this;
         }

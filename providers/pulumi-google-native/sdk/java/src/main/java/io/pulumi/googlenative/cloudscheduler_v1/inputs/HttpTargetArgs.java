@@ -142,62 +142,62 @@ public final class HttpTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<Map<String,String>> headers) {
+        public Builder headers(@Nullable Input<Map<String,String>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable Input<HttpTargetHttpMethod> httpMethod) {
+        public Builder httpMethod(@Nullable Input<HttpTargetHttpMethod> httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable HttpTargetHttpMethod httpMethod) {
+        public Builder httpMethod(@Nullable HttpTargetHttpMethod httpMethod) {
             this.httpMethod = Input.ofNullable(httpMethod);
             return this;
         }
 
-        public Builder setOauthToken(@Nullable Input<OAuthTokenArgs> oauthToken) {
+        public Builder oauthToken(@Nullable Input<OAuthTokenArgs> oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
-        public Builder setOauthToken(@Nullable OAuthTokenArgs oauthToken) {
+        public Builder oauthToken(@Nullable OAuthTokenArgs oauthToken) {
             this.oauthToken = Input.ofNullable(oauthToken);
             return this;
         }
 
-        public Builder setOidcToken(@Nullable Input<OidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Input<OidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable OidcTokenArgs oidcToken) {
+        public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
             this.oidcToken = Input.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

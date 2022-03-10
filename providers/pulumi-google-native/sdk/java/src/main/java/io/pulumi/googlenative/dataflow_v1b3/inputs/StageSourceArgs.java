@@ -106,42 +106,42 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOriginalTransformOrCollection(@Nullable Input<String> originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(@Nullable Input<String> originalTransformOrCollection) {
             this.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
 
-        public Builder setOriginalTransformOrCollection(@Nullable String originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(@Nullable String originalTransformOrCollection) {
             this.originalTransformOrCollection = Input.ofNullable(originalTransformOrCollection);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Input<String> sizeBytes) {
+        public Builder sizeBytes(@Nullable Input<String> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable String sizeBytes) {
+        public Builder sizeBytes(@Nullable String sizeBytes) {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

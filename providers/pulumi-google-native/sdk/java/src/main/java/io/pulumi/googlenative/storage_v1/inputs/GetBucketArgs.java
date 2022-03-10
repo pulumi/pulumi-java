@@ -110,32 +110,32 @@ public final class GetBucketArgs extends io.pulumi.resources.InvokeArgs {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setIfMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
+        public Builder ifMetagenerationMatch(@Nullable String ifMetagenerationMatch) {
             this.ifMetagenerationMatch = ifMetagenerationMatch;
             return this;
         }
 
-        public Builder setIfMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
+        public Builder ifMetagenerationNotMatch(@Nullable String ifMetagenerationNotMatch) {
             this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
             return this;
         }
 
-        public Builder setProjection(@Nullable String projection) {
+        public Builder projection(@Nullable String projection) {
             this.projection = projection;
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable String provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
         }

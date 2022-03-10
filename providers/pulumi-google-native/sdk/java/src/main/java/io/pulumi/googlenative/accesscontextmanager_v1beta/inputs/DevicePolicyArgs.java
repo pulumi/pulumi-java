@@ -142,62 +142,62 @@ public final class DevicePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireScreenlock = defaults.requireScreenlock;
         }
 
-        public Builder setAllowedDeviceManagementLevels(@Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable Input<List<DevicePolicyAllowedDeviceManagementLevelsItem>> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
-        public Builder setAllowedDeviceManagementLevels(@Nullable List<DevicePolicyAllowedDeviceManagementLevelsItem> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable List<DevicePolicyAllowedDeviceManagementLevelsItem> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = Input.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(@Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable Input<List<DevicePolicyAllowedEncryptionStatusesItem>> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(@Nullable List<DevicePolicyAllowedEncryptionStatusesItem> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable List<DevicePolicyAllowedEncryptionStatusesItem> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = Input.ofNullable(allowedEncryptionStatuses);
             return this;
         }
 
-        public Builder setOsConstraints(@Nullable Input<List<OsConstraintArgs>> osConstraints) {
+        public Builder osConstraints(@Nullable Input<List<OsConstraintArgs>> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
 
-        public Builder setOsConstraints(@Nullable List<OsConstraintArgs> osConstraints) {
+        public Builder osConstraints(@Nullable List<OsConstraintArgs> osConstraints) {
             this.osConstraints = Input.ofNullable(osConstraints);
             return this;
         }
 
-        public Builder setRequireAdminApproval(@Nullable Input<Boolean> requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Input<Boolean> requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
-        public Builder setRequireAdminApproval(@Nullable Boolean requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
             this.requireAdminApproval = Input.ofNullable(requireAdminApproval);
             return this;
         }
 
-        public Builder setRequireCorpOwned(@Nullable Input<Boolean> requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Input<Boolean> requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
-        public Builder setRequireCorpOwned(@Nullable Boolean requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
             this.requireCorpOwned = Input.ofNullable(requireCorpOwned);
             return this;
         }
 
-        public Builder setRequireScreenlock(@Nullable Input<Boolean> requireScreenlock) {
+        public Builder requireScreenlock(@Nullable Input<Boolean> requireScreenlock) {
             this.requireScreenlock = requireScreenlock;
             return this;
         }
 
-        public Builder setRequireScreenlock(@Nullable Boolean requireScreenlock) {
+        public Builder requireScreenlock(@Nullable Boolean requireScreenlock) {
             this.requireScreenlock = Input.ofNullable(requireScreenlock);
             return this;
         }

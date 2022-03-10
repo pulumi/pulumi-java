@@ -92,32 +92,32 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder setConfig(@Nullable Input<SecurityPolicyRuleMatcherConfigArgs> config) {
+        public Builder config(@Nullable Input<SecurityPolicyRuleMatcherConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable SecurityPolicyRuleMatcherConfigArgs config) {
+        public Builder config(@Nullable SecurityPolicyRuleMatcherConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setExpr(@Nullable Input<ExprArgs> expr) {
+        public Builder expr(@Nullable Input<ExprArgs> expr) {
             this.expr = expr;
             return this;
         }
 
-        public Builder setExpr(@Nullable ExprArgs expr) {
+        public Builder expr(@Nullable ExprArgs expr) {
             this.expr = Input.ofNullable(expr);
             return this;
         }
 
-        public Builder setVersionedExpr(@Nullable Input<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr) {
+        public Builder versionedExpr(@Nullable Input<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr) {
             this.versionedExpr = versionedExpr;
             return this;
         }
 
-        public Builder setVersionedExpr(@Nullable SecurityPolicyRuleMatcherVersionedExpr versionedExpr) {
+        public Builder versionedExpr(@Nullable SecurityPolicyRuleMatcherVersionedExpr versionedExpr) {
             this.versionedExpr = Input.ofNullable(versionedExpr);
             return this;
         }

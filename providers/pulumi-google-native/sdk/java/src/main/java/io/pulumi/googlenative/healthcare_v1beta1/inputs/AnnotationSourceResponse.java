@@ -55,7 +55,7 @@ public final class AnnotationSourceResponse extends io.pulumi.resources.InvokeAr
     	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
         }
 
-        public Builder setCloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
+        public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
             this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
             return this;
         }

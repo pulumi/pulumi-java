@@ -55,7 +55,7 @@ public final class GrafeasV1beta1ImageDetailsResponse extends io.pulumi.resource
     	      this.derivedImage = defaults.derivedImage;
         }
 
-        public Builder setDerivedImage(DerivedResponse derivedImage) {
+        public Builder derivedImage(DerivedResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }

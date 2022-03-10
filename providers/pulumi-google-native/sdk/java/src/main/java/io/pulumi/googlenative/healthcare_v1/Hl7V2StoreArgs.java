@@ -171,92 +171,92 @@ public final class Hl7V2StoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rejectDuplicateMessage = defaults.rejectDuplicateMessage;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setHl7V2StoreId(@Nullable Input<String> hl7V2StoreId) {
+        public Builder hl7V2StoreId(@Nullable Input<String> hl7V2StoreId) {
             this.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
 
-        public Builder setHl7V2StoreId(@Nullable String hl7V2StoreId) {
+        public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
             this.hl7V2StoreId = Input.ofNullable(hl7V2StoreId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationConfigs(@Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable Input<List<Hl7V2NotificationConfigArgs>> notificationConfigs) {
             this.notificationConfigs = notificationConfigs;
             return this;
         }
 
-        public Builder setNotificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
+        public Builder notificationConfigs(@Nullable List<Hl7V2NotificationConfigArgs> notificationConfigs) {
             this.notificationConfigs = Input.ofNullable(notificationConfigs);
             return this;
         }
 
-        public Builder setParserConfig(@Nullable Input<ParserConfigArgs> parserConfig) {
+        public Builder parserConfig(@Nullable Input<ParserConfigArgs> parserConfig) {
             this.parserConfig = parserConfig;
             return this;
         }
 
-        public Builder setParserConfig(@Nullable ParserConfigArgs parserConfig) {
+        public Builder parserConfig(@Nullable ParserConfigArgs parserConfig) {
             this.parserConfig = Input.ofNullable(parserConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRejectDuplicateMessage(@Nullable Input<Boolean> rejectDuplicateMessage) {
+        public Builder rejectDuplicateMessage(@Nullable Input<Boolean> rejectDuplicateMessage) {
             this.rejectDuplicateMessage = rejectDuplicateMessage;
             return this;
         }
 
-        public Builder setRejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
+        public Builder rejectDuplicateMessage(@Nullable Boolean rejectDuplicateMessage) {
             this.rejectDuplicateMessage = Input.ofNullable(rejectDuplicateMessage);
             return this;
         }

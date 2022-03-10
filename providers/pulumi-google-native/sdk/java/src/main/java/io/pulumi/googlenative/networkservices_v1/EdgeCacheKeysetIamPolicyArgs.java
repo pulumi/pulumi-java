@@ -158,82 +158,82 @@ public final class EdgeCacheKeysetIamPolicyArgs extends io.pulumi.resources.Reso
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
+        public Builder auditConfigs(@Nullable Input<List<AuditConfigArgs>> auditConfigs) {
             this.auditConfigs = auditConfigs;
             return this;
         }
 
-        public Builder setAuditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
+        public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
             this.auditConfigs = Input.ofNullable(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEdgeCacheKeysetId(Input<String> edgeCacheKeysetId) {
+        public Builder edgeCacheKeysetId(Input<String> edgeCacheKeysetId) {
             this.edgeCacheKeysetId = Objects.requireNonNull(edgeCacheKeysetId);
             return this;
         }
 
-        public Builder setEdgeCacheKeysetId(String edgeCacheKeysetId) {
+        public Builder edgeCacheKeysetId(String edgeCacheKeysetId) {
             this.edgeCacheKeysetId = Input.of(Objects.requireNonNull(edgeCacheKeysetId));
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable Input<String> updateMask) {
+        public Builder updateMask(@Nullable Input<String> updateMask) {
             this.updateMask = updateMask;
             return this;
         }
 
-        public Builder setUpdateMask(@Nullable String updateMask) {
+        public Builder updateMask(@Nullable String updateMask) {
             this.updateMask = Input.ofNullable(updateMask);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

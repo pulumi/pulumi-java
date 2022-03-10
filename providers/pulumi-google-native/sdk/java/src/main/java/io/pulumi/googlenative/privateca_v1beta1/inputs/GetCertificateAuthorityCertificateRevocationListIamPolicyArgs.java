@@ -98,27 +98,27 @@ public final class GetCertificateAuthorityCertificateRevocationListIamPolicyArgs
     	      this.project = defaults.project;
         }
 
-        public Builder setCertificateAuthorityId(String certificateAuthorityId) {
+        public Builder certificateAuthorityId(String certificateAuthorityId) {
             this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
             return this;
         }
 
-        public Builder setCertificateRevocationListId(String certificateRevocationListId) {
+        public Builder certificateRevocationListId(String certificateRevocationListId) {
             this.certificateRevocationListId = Objects.requireNonNull(certificateRevocationListId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

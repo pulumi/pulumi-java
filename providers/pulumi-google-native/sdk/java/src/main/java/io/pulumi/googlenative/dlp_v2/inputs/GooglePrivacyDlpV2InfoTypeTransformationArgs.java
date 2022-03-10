@@ -76,22 +76,22 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setInfoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
+        public Builder primitiveTransformation(Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
+        public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
             this.primitiveTransformation = Input.of(Objects.requireNonNull(primitiveTransformation));
             return this;
         }

@@ -156,72 +156,72 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs ex
     	      this.restrictedValues = defaults.restrictedValues;
         }
 
-        public Builder setContains(@Nullable Input<List<String>> contains) {
+        public Builder contains(@Nullable Input<List<String>> contains) {
             this.contains = contains;
             return this;
         }
 
-        public Builder setContains(@Nullable List<String> contains) {
+        public Builder contains(@Nullable List<String> contains) {
             this.contains = Input.ofNullable(contains);
             return this;
         }
 
-        public Builder setIntervals(@Nullable Input<List<GoogleCloudRetailV2alphaIntervalArgs>> intervals) {
+        public Builder intervals(@Nullable Input<List<GoogleCloudRetailV2alphaIntervalArgs>> intervals) {
             this.intervals = intervals;
             return this;
         }
 
-        public Builder setIntervals(@Nullable List<GoogleCloudRetailV2alphaIntervalArgs> intervals) {
+        public Builder intervals(@Nullable List<GoogleCloudRetailV2alphaIntervalArgs> intervals) {
             this.intervals = Input.ofNullable(intervals);
             return this;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setOrderBy(@Nullable Input<String> orderBy) {
+        public Builder orderBy(@Nullable Input<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
-        public Builder setOrderBy(@Nullable String orderBy) {
+        public Builder orderBy(@Nullable String orderBy) {
             this.orderBy = Input.ofNullable(orderBy);
             return this;
         }
 
-        public Builder setPrefixes(@Nullable Input<List<String>> prefixes) {
+        public Builder prefixes(@Nullable Input<List<String>> prefixes) {
             this.prefixes = prefixes;
             return this;
         }
 
-        public Builder setPrefixes(@Nullable List<String> prefixes) {
+        public Builder prefixes(@Nullable List<String> prefixes) {
             this.prefixes = Input.ofNullable(prefixes);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setRestrictedValues(@Nullable Input<List<String>> restrictedValues) {
+        public Builder restrictedValues(@Nullable Input<List<String>> restrictedValues) {
             this.restrictedValues = restrictedValues;
             return this;
         }
 
-        public Builder setRestrictedValues(@Nullable List<String> restrictedValues) {
+        public Builder restrictedValues(@Nullable List<String> restrictedValues) {
             this.restrictedValues = Input.ofNullable(restrictedValues);
             return this;
         }

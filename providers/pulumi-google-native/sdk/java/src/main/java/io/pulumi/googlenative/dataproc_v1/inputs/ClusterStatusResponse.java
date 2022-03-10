@@ -104,22 +104,22 @@ public final class ClusterStatusResponse extends io.pulumi.resources.InvokeArgs 
     	      this.substate = defaults.substate;
         }
 
-        public Builder setDetail(String detail) {
+        public Builder detail(String detail) {
             this.detail = Objects.requireNonNull(detail);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateStartTime(String stateStartTime) {
+        public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }
 
-        public Builder setSubstate(String substate) {
+        public Builder substate(String substate) {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }

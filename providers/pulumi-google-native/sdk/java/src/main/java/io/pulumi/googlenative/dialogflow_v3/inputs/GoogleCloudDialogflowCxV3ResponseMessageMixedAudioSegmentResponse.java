@@ -89,17 +89,17 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResp
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setAudio(String audio) {
+        public Builder audio(String audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -90,17 +90,17 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setPayloadType(String payloadType) {
+        public Builder payloadType(String payloadType) {
             this.payloadType = Objects.requireNonNull(payloadType);
             return this;
         }
 
-        public Builder setSignatures(List<EnvelopeSignatureResponse> signatures) {
+        public Builder signatures(List<EnvelopeSignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

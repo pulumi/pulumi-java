@@ -242,67 +242,67 @@ public final class GetHttpsHealthCheckResult {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setCheckIntervalSec(Integer checkIntervalSec) {
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
             this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setRequestPath(String requestPath) {
+        public Builder requestPath(String requestPath) {
             this.requestPath = Objects.requireNonNull(requestPath);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }

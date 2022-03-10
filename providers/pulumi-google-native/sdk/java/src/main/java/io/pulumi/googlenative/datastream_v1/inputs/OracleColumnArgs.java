@@ -188,92 +188,92 @@ public final class OracleColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setColumn(@Nullable Input<String> column) {
+        public Builder column(@Nullable Input<String> column) {
             this.column = column;
             return this;
         }
 
-        public Builder setColumn(@Nullable String column) {
+        public Builder column(@Nullable String column) {
             this.column = Input.ofNullable(column);
             return this;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setLength(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Input<Integer> length) {
             this.length = length;
             return this;
         }
 
-        public Builder setLength(@Nullable Integer length) {
+        public Builder length(@Nullable Integer length) {
             this.length = Input.ofNullable(length);
             return this;
         }
 
-        public Builder setNullable(@Nullable Input<Boolean> nullable) {
+        public Builder nullable(@Nullable Input<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
 
-        public Builder setNullable(@Nullable Boolean nullable) {
+        public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = Input.ofNullable(nullable);
             return this;
         }
 
-        public Builder setOrdinalPosition(@Nullable Input<Integer> ordinalPosition) {
+        public Builder ordinalPosition(@Nullable Input<Integer> ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
             return this;
         }
 
-        public Builder setOrdinalPosition(@Nullable Integer ordinalPosition) {
+        public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
             this.ordinalPosition = Input.ofNullable(ordinalPosition);
             return this;
         }
 
-        public Builder setPrecision(@Nullable Input<Integer> precision) {
+        public Builder precision(@Nullable Input<Integer> precision) {
             this.precision = precision;
             return this;
         }
 
-        public Builder setPrecision(@Nullable Integer precision) {
+        public Builder precision(@Nullable Integer precision) {
             this.precision = Input.ofNullable(precision);
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Input<Boolean> primaryKey) {
+        public Builder primaryKey(@Nullable Input<Boolean> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Boolean primaryKey) {
+        public Builder primaryKey(@Nullable Boolean primaryKey) {
             this.primaryKey = Input.ofNullable(primaryKey);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<Integer> scale) {
+        public Builder scale(@Nullable Input<Integer> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable Integer scale) {
+        public Builder scale(@Nullable Integer scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }

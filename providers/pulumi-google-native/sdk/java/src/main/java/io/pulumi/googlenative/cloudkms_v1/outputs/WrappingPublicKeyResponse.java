@@ -48,7 +48,7 @@ public final class WrappingPublicKeyResponse {
     	      this.pem = defaults.pem;
         }
 
-        public Builder setPem(String pem) {
+        public Builder pem(String pem) {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }

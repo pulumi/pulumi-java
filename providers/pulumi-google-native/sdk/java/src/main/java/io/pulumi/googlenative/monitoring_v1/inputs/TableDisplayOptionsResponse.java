@@ -56,7 +56,7 @@ public final class TableDisplayOptionsResponse extends io.pulumi.resources.Invok
     	      this.shownColumns = defaults.shownColumns;
         }
 
-        public Builder setShownColumns(List<String> shownColumns) {
+        public Builder shownColumns(List<String> shownColumns) {
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }

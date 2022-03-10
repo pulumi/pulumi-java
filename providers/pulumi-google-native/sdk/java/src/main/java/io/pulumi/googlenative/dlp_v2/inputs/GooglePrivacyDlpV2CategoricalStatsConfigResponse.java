@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse extends io.p
     	      this.field = defaults.field;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }

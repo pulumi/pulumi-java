@@ -73,12 +73,12 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse extends io.pu
     	      this.entryOverview = defaults.entryOverview;
         }
 
-        public Builder setContacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
+        public Builder contacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
             this.contacts = Objects.requireNonNull(contacts);
             return this;
         }
 
-        public Builder setEntryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
+        public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
             this.entryOverview = Objects.requireNonNull(entryOverview);
             return this;
         }

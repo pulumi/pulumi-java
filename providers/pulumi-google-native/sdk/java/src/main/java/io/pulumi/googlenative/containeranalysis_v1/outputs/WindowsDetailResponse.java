@@ -99,22 +99,22 @@ public final class WindowsDetailResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFixingKbs(List<KnowledgeBaseResponse> fixingKbs) {
+        public Builder fixingKbs(List<KnowledgeBaseResponse> fixingKbs) {
             this.fixingKbs = Objects.requireNonNull(fixingKbs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

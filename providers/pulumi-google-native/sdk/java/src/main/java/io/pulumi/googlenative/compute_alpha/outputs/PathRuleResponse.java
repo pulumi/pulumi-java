@@ -100,22 +100,22 @@ public final class PathRuleResponse {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setRouteAction(HttpRouteActionResponse routeAction) {
+        public Builder routeAction(HttpRouteActionResponse routeAction) {
             this.routeAction = Objects.requireNonNull(routeAction);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setUrlRedirect(HttpRedirectActionResponse urlRedirect) {
+        public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }

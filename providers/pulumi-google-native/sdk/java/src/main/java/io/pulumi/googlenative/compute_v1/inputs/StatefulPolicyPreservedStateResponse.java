@@ -56,7 +56,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
     	      this.disks = defaults.disks;
         }
 
-        public Builder setDisks(Map<String,String> disks) {
+        public Builder disks(Map<String,String> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }

@@ -175,92 +175,92 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAutoExpansionMode(@Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable Input<EntityTypeAutoExpansionMode> autoExpansionMode) {
             this.autoExpansionMode = autoExpansionMode;
             return this;
         }
 
-        public Builder setAutoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
+        public Builder autoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
             this.autoExpansionMode = Input.ofNullable(autoExpansionMode);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Input<Boolean> enableFuzzyExtraction) {
             this.enableFuzzyExtraction = enableFuzzyExtraction;
             return this;
         }
 
-        public Builder setEnableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
+        public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
             this.enableFuzzyExtraction = Input.ofNullable(enableFuzzyExtraction);
             return this;
         }
 
-        public Builder setEntities(@Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities) {
+        public Builder entities(@Nullable Input<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities) {
             this.entities = entities;
             return this;
         }
 
-        public Builder setEntities(@Nullable List<GoogleCloudDialogflowV2EntityTypeEntityArgs> entities) {
+        public Builder entities(@Nullable List<GoogleCloudDialogflowV2EntityTypeEntityArgs> entities) {
             this.entities = Input.ofNullable(entities);
             return this;
         }
 
-        public Builder setKind(Input<EntityTypeKind> kind) {
+        public Builder kind(Input<EntityTypeKind> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(EntityTypeKind kind) {
+        public Builder kind(EntityTypeKind kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

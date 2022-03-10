@@ -244,142 +244,142 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setBackfillAll(@Nullable Input<BackfillAllStrategyArgs> backfillAll) {
+        public Builder backfillAll(@Nullable Input<BackfillAllStrategyArgs> backfillAll) {
             this.backfillAll = backfillAll;
             return this;
         }
 
-        public Builder setBackfillAll(@Nullable BackfillAllStrategyArgs backfillAll) {
+        public Builder backfillAll(@Nullable BackfillAllStrategyArgs backfillAll) {
             this.backfillAll = Input.ofNullable(backfillAll);
             return this;
         }
 
-        public Builder setBackfillNone(@Nullable Input<BackfillNoneStrategyArgs> backfillNone) {
+        public Builder backfillNone(@Nullable Input<BackfillNoneStrategyArgs> backfillNone) {
             this.backfillNone = backfillNone;
             return this;
         }
 
-        public Builder setBackfillNone(@Nullable BackfillNoneStrategyArgs backfillNone) {
+        public Builder backfillNone(@Nullable BackfillNoneStrategyArgs backfillNone) {
             this.backfillNone = Input.ofNullable(backfillNone);
             return this;
         }
 
-        public Builder setCustomerManagedEncryptionKey(@Nullable Input<String> customerManagedEncryptionKey) {
+        public Builder customerManagedEncryptionKey(@Nullable Input<String> customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = customerManagedEncryptionKey;
             return this;
         }
 
-        public Builder setCustomerManagedEncryptionKey(@Nullable String customerManagedEncryptionKey) {
+        public Builder customerManagedEncryptionKey(@Nullable String customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = Input.ofNullable(customerManagedEncryptionKey);
             return this;
         }
 
-        public Builder setDestinationConfig(Input<DestinationConfigArgs> destinationConfig) {
+        public Builder destinationConfig(Input<DestinationConfigArgs> destinationConfig) {
             this.destinationConfig = Objects.requireNonNull(destinationConfig);
             return this;
         }
 
-        public Builder setDestinationConfig(DestinationConfigArgs destinationConfig) {
+        public Builder destinationConfig(DestinationConfigArgs destinationConfig) {
             this.destinationConfig = Input.of(Objects.requireNonNull(destinationConfig));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setForce(@Nullable Input<String> force) {
+        public Builder force(@Nullable Input<String> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable String force) {
+        public Builder force(@Nullable String force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSourceConfig(Input<SourceConfigArgs> sourceConfig) {
+        public Builder sourceConfig(Input<SourceConfigArgs> sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
 
-        public Builder setSourceConfig(SourceConfigArgs sourceConfig) {
+        public Builder sourceConfig(SourceConfigArgs sourceConfig) {
             this.sourceConfig = Input.of(Objects.requireNonNull(sourceConfig));
             return this;
         }
 
-        public Builder setState(@Nullable Input<StreamState> state) {
+        public Builder state(@Nullable Input<StreamState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable StreamState state) {
+        public Builder state(@Nullable StreamState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStreamId(Input<String> streamId) {
+        public Builder streamId(Input<String> streamId) {
             this.streamId = Objects.requireNonNull(streamId);
             return this;
         }
 
-        public Builder setStreamId(String streamId) {
+        public Builder streamId(String streamId) {
             this.streamId = Input.of(Objects.requireNonNull(streamId));
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }

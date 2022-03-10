@@ -49,7 +49,7 @@ public final class TableFieldSchemaPolicyTagsResponse {
     	      this.names = defaults.names;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

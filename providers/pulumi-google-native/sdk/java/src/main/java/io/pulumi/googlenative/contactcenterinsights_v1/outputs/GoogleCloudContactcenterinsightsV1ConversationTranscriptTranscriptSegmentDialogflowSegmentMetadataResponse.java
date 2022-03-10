@@ -48,7 +48,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
     	      this.smartReplyAllowlistCovered = defaults.smartReplyAllowlistCovered;
         }
 
-        public Builder setSmartReplyAllowlistCovered(Boolean smartReplyAllowlistCovered) {
+        public Builder smartReplyAllowlistCovered(Boolean smartReplyAllowlistCovered) {
             this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
             return this;
         }

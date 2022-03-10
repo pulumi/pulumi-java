@@ -58,12 +58,12 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
     	      this.importedLibraries = defaults.importedLibraries;
         }
 
-        public Builder setImportedLibraries(@Nullable Input<List<String>> importedLibraries) {
+        public Builder importedLibraries(@Nullable Input<List<String>> importedLibraries) {
             this.importedLibraries = importedLibraries;
             return this;
         }
 
-        public Builder setImportedLibraries(@Nullable List<String> importedLibraries) {
+        public Builder importedLibraries(@Nullable List<String> importedLibraries) {
             this.importedLibraries = Input.ofNullable(importedLibraries);
             return this;
         }

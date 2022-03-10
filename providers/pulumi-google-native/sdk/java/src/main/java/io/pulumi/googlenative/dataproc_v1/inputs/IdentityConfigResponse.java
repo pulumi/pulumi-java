@@ -56,7 +56,7 @@ public final class IdentityConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.userServiceAccountMapping = defaults.userServiceAccountMapping;
         }
 
-        public Builder setUserServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
+        public Builder userServiceAccountMapping(Map<String,String> userServiceAccountMapping) {
             this.userServiceAccountMapping = Objects.requireNonNull(userServiceAccountMapping);
             return this;
         }

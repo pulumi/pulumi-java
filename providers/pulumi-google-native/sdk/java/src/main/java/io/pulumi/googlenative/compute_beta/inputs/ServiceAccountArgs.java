@@ -75,22 +75,22 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Input<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }

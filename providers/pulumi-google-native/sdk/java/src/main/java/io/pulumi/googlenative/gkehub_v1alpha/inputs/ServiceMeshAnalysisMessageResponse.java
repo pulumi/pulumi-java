@@ -107,22 +107,22 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
     	      this.resourcePaths = defaults.resourcePaths;
         }
 
-        public Builder setArgs(Map<String,String> args) {
+        public Builder args(Map<String,String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMessageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
+        public Builder messageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
             this.messageBase = Objects.requireNonNull(messageBase);
             return this;
         }
 
-        public Builder setResourcePaths(List<String> resourcePaths) {
+        public Builder resourcePaths(List<String> resourcePaths) {
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }

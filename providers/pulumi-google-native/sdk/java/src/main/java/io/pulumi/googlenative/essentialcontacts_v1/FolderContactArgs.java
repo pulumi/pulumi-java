@@ -149,72 +149,72 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setFolderId(Input<String> folderId) {
+        public Builder folderId(Input<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Input.of(Objects.requireNonNull(folderId));
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable Input<String> languageTag) {
+        public Builder languageTag(@Nullable Input<String> languageTag) {
             this.languageTag = languageTag;
             return this;
         }
 
-        public Builder setLanguageTag(@Nullable String languageTag) {
+        public Builder languageTag(@Nullable String languageTag) {
             this.languageTag = Input.ofNullable(languageTag);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable Input<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable Input<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(@Nullable List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(@Nullable List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Input.ofNullable(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder setValidateTime(@Nullable Input<String> validateTime) {
+        public Builder validateTime(@Nullable Input<String> validateTime) {
             this.validateTime = validateTime;
             return this;
         }
 
-        public Builder setValidateTime(@Nullable String validateTime) {
+        public Builder validateTime(@Nullable String validateTime) {
             this.validateTime = Input.ofNullable(validateTime);
             return this;
         }
 
-        public Builder setValidationState(@Nullable Input<FolderContactValidationState> validationState) {
+        public Builder validationState(@Nullable Input<FolderContactValidationState> validationState) {
             this.validationState = validationState;
             return this;
         }
 
-        public Builder setValidationState(@Nullable FolderContactValidationState validationState) {
+        public Builder validationState(@Nullable FolderContactValidationState validationState) {
             this.validationState = Input.ofNullable(validationState);
             return this;
         }

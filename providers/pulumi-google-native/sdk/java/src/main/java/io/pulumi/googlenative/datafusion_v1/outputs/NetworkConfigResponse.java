@@ -65,12 +65,12 @@ public final class NetworkConfigResponse {
     	      this.network = defaults.network;
         }
 
-        public Builder setIpAllocation(String ipAllocation) {
+        public Builder ipAllocation(String ipAllocation) {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }

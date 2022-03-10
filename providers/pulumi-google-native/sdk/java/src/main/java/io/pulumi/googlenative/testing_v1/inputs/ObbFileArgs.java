@@ -74,22 +74,22 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.obbFileName = defaults.obbFileName;
         }
 
-        public Builder setObb(Input<FileReferenceArgs> obb) {
+        public Builder obb(Input<FileReferenceArgs> obb) {
             this.obb = Objects.requireNonNull(obb);
             return this;
         }
 
-        public Builder setObb(FileReferenceArgs obb) {
+        public Builder obb(FileReferenceArgs obb) {
             this.obb = Input.of(Objects.requireNonNull(obb));
             return this;
         }
 
-        public Builder setObbFileName(Input<String> obbFileName) {
+        public Builder obbFileName(Input<String> obbFileName) {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }
 
-        public Builder setObbFileName(String obbFileName) {
+        public Builder obbFileName(String obbFileName) {
             this.obbFileName = Input.of(Objects.requireNonNull(obbFileName));
             return this;
         }

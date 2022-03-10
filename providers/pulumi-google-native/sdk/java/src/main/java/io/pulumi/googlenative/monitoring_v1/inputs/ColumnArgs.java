@@ -76,22 +76,22 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder setWeight(@Nullable Input<String> weight) {
+        public Builder weight(@Nullable Input<String> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable String weight) {
+        public Builder weight(@Nullable String weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }
 
-        public Builder setWidgets(@Nullable Input<List<WidgetArgs>> widgets) {
+        public Builder widgets(@Nullable Input<List<WidgetArgs>> widgets) {
             this.widgets = widgets;
             return this;
         }
 
-        public Builder setWidgets(@Nullable List<WidgetArgs> widgets) {
+        public Builder widgets(@Nullable List<WidgetArgs> widgets) {
             this.widgets = Input.ofNullable(widgets);
             return this;
         }

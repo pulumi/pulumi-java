@@ -215,112 +215,112 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.yearlyPrice = defaults.yearlyPrice;
         }
 
-        public Builder setContactNotices(@Nullable Input<List<RegistrationContactNoticesItem>> contactNotices) {
+        public Builder contactNotices(@Nullable Input<List<RegistrationContactNoticesItem>> contactNotices) {
             this.contactNotices = contactNotices;
             return this;
         }
 
-        public Builder setContactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
+        public Builder contactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
             this.contactNotices = Input.ofNullable(contactNotices);
             return this;
         }
 
-        public Builder setContactSettings(Input<ContactSettingsArgs> contactSettings) {
+        public Builder contactSettings(Input<ContactSettingsArgs> contactSettings) {
             this.contactSettings = Objects.requireNonNull(contactSettings);
             return this;
         }
 
-        public Builder setContactSettings(ContactSettingsArgs contactSettings) {
+        public Builder contactSettings(ContactSettingsArgs contactSettings) {
             this.contactSettings = Input.of(Objects.requireNonNull(contactSettings));
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<DnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setDomainNotices(@Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices) {
+        public Builder domainNotices(@Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices) {
             this.domainNotices = domainNotices;
             return this;
         }
 
-        public Builder setDomainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
+        public Builder domainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
             this.domainNotices = Input.ofNullable(domainNotices);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagementSettings(@Nullable Input<ManagementSettingsArgs> managementSettings) {
+        public Builder managementSettings(@Nullable Input<ManagementSettingsArgs> managementSettings) {
             this.managementSettings = managementSettings;
             return this;
         }
 
-        public Builder setManagementSettings(@Nullable ManagementSettingsArgs managementSettings) {
+        public Builder managementSettings(@Nullable ManagementSettingsArgs managementSettings) {
             this.managementSettings = Input.ofNullable(managementSettings);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<Boolean> validateOnly) {
+        public Builder validateOnly(@Nullable Input<Boolean> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Boolean validateOnly) {
+        public Builder validateOnly(@Nullable Boolean validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
 
-        public Builder setYearlyPrice(Input<MoneyArgs> yearlyPrice) {
+        public Builder yearlyPrice(Input<MoneyArgs> yearlyPrice) {
             this.yearlyPrice = Objects.requireNonNull(yearlyPrice);
             return this;
         }
 
-        public Builder setYearlyPrice(MoneyArgs yearlyPrice) {
+        public Builder yearlyPrice(MoneyArgs yearlyPrice) {
             this.yearlyPrice = Input.of(Objects.requireNonNull(yearlyPrice));
             return this;
         }

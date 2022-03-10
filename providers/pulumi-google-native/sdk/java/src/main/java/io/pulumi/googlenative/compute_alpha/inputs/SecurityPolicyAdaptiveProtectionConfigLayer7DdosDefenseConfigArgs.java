@@ -75,22 +75,22 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setRuleVisibility(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
+        public Builder ruleVisibility(@Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility> ruleVisibility) {
             this.ruleVisibility = ruleVisibility;
             return this;
         }
 
-        public Builder setRuleVisibility(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility ruleVisibility) {
+        public Builder ruleVisibility(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigRuleVisibility ruleVisibility) {
             this.ruleVisibility = Input.ofNullable(ruleVisibility);
             return this;
         }

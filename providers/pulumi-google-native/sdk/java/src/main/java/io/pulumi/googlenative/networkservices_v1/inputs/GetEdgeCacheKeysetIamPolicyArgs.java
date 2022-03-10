@@ -86,22 +86,22 @@ public final class GetEdgeCacheKeysetIamPolicyArgs extends io.pulumi.resources.I
     	      this.project = defaults.project;
         }
 
-        public Builder setEdgeCacheKeysetId(String edgeCacheKeysetId) {
+        public Builder edgeCacheKeysetId(String edgeCacheKeysetId) {
             this.edgeCacheKeysetId = Objects.requireNonNull(edgeCacheKeysetId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -66,12 +66,12 @@ public final class RegularFileResponse {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder setContent(FileReferenceResponse content) {
+        public Builder content(FileReferenceResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }

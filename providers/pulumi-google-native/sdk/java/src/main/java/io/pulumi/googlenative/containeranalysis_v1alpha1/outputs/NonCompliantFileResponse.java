@@ -81,17 +81,17 @@ public final class NonCompliantFileResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDisplayCommand(String displayCommand) {
+        public Builder displayCommand(String displayCommand) {
             this.displayCommand = Objects.requireNonNull(displayCommand);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

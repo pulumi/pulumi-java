@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
     	      this.dividerAfter = defaults.dividerAfter;
         }
 
-        public Builder setCells(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells) {
+        public Builder cells(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells) {
             this.cells = Objects.requireNonNull(cells);
             return this;
         }
 
-        public Builder setDividerAfter(Boolean dividerAfter) {
+        public Builder dividerAfter(Boolean dividerAfter) {
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
         }

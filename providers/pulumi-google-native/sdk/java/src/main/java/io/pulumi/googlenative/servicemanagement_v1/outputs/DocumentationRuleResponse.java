@@ -81,17 +81,17 @@ public final class DocumentationRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setDeprecationDescription(String deprecationDescription) {
+        public Builder deprecationDescription(String deprecationDescription) {
             this.deprecationDescription = Objects.requireNonNull(deprecationDescription);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

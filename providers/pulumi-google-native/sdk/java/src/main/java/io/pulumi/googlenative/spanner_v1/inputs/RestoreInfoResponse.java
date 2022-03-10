@@ -73,12 +73,12 @@ public final class RestoreInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setBackupInfo(BackupInfoResponse backupInfo) {
+        public Builder backupInfo(BackupInfoResponse backupInfo) {
             this.backupInfo = Objects.requireNonNull(backupInfo);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }

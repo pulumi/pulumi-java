@@ -55,7 +55,7 @@ public final class AuthorityResponse extends io.pulumi.resources.InvokeArgs {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(HintResponse hint) {
+        public Builder hint(HintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

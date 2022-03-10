@@ -55,7 +55,7 @@ public final class AccessConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.externalIp = defaults.externalIp;
         }
 
-        public Builder setExternalIp(String externalIp) {
+        public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }

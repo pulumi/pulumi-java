@@ -58,12 +58,12 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
     	      this.names = defaults.names;
         }
 
-        public Builder setNames(@Nullable Input<List<String>> names) {
+        public Builder names(@Nullable Input<List<String>> names) {
             this.names = names;
             return this;
         }
 
-        public Builder setNames(@Nullable List<String> names) {
+        public Builder names(@Nullable List<String> names) {
             this.names = Input.ofNullable(names);
             return this;
         }

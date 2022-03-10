@@ -73,12 +73,12 @@ public final class MonthlyScheduleResponse extends io.pulumi.resources.InvokeArg
     	      this.weekDayOfMonth = defaults.weekDayOfMonth;
         }
 
-        public Builder setMonthDay(Integer monthDay) {
+        public Builder monthDay(Integer monthDay) {
             this.monthDay = Objects.requireNonNull(monthDay);
             return this;
         }
 
-        public Builder setWeekDayOfMonth(WeekDayOfMonthResponse weekDayOfMonth) {
+        public Builder weekDayOfMonth(WeekDayOfMonthResponse weekDayOfMonth) {
             this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
             return this;
         }

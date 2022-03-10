@@ -146,37 +146,37 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDelegateeProject(String delegateeProject) {
+        public Builder delegateeProject(String delegateeProject) {
             this.delegateeProject = Objects.requireNonNull(delegateeProject);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setIsAddress(Boolean isAddress) {
+        public Builder isAddress(Boolean isAddress) {
             this.isAddress = Objects.requireNonNull(isAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

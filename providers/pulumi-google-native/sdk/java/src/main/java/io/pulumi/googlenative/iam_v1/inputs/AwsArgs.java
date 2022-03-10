@@ -56,12 +56,12 @@ public final class AwsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }

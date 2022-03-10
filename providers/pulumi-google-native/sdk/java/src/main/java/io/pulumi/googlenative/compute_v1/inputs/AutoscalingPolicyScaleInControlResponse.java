@@ -73,12 +73,12 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledInReplicas(FixedOrPercentResponse maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(FixedOrPercentResponse maxScaledInReplicas) {
             this.maxScaledInReplicas = Objects.requireNonNull(maxScaledInReplicas);
             return this;
         }
 
-        public Builder setTimeWindowSec(Integer timeWindowSec) {
+        public Builder timeWindowSec(Integer timeWindowSec) {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }

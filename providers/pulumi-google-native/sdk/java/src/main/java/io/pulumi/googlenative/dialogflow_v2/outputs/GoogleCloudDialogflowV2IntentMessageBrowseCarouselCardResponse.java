@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
     	      this.items = defaults.items;
         }
 
-        public Builder setImageDisplayOptions(String imageDisplayOptions) {
+        public Builder imageDisplayOptions(String imageDisplayOptions) {
             this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions);
             return this;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

@@ -119,27 +119,27 @@ public final class BigtableColumnFamilyResponse extends io.pulumi.resources.Invo
     	      this.type = defaults.type;
         }
 
-        public Builder setColumns(List<BigtableColumnResponse> columns) {
+        public Builder columns(List<BigtableColumnResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFamilyId(String familyId) {
+        public Builder familyId(String familyId) {
             this.familyId = Objects.requireNonNull(familyId);
             return this;
         }
 
-        public Builder setOnlyReadLatest(Boolean onlyReadLatest) {
+        public Builder onlyReadLatest(Boolean onlyReadLatest) {
             this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

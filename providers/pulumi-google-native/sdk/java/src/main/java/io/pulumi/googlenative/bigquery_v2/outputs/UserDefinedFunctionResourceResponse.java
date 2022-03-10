@@ -65,12 +65,12 @@ public final class UserDefinedFunctionResourceResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setInlineCode(String inlineCode) {
+        public Builder inlineCode(String inlineCode) {
             this.inlineCode = Objects.requireNonNull(inlineCode);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

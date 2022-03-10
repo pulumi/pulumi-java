@@ -66,12 +66,12 @@ public final class LogMatchResponse {
     	      this.labelExtractors = defaults.labelExtractors;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setLabelExtractors(Map<String,String> labelExtractors) {
+        public Builder labelExtractors(Map<String,String> labelExtractors) {
             this.labelExtractors = Objects.requireNonNull(labelExtractors);
             return this;
         }

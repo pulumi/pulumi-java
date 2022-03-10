@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends io.pulumi.reso
     	      this.partitionId = defaults.partitionId;
         }
 
-        public Builder setKind(@Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind) {
+        public Builder kind(@Nullable Input<GooglePrivacyDlpV2KindExpressionArgs> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable GooglePrivacyDlpV2KindExpressionArgs kind) {
+        public Builder kind(@Nullable GooglePrivacyDlpV2KindExpressionArgs kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setPartitionId(@Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
+        public Builder partitionId(@Nullable Input<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
             this.partitionId = partitionId;
             return this;
         }
 
-        public Builder setPartitionId(@Nullable GooglePrivacyDlpV2PartitionIdArgs partitionId) {
+        public Builder partitionId(@Nullable GooglePrivacyDlpV2PartitionIdArgs partitionId) {
             this.partitionId = Input.ofNullable(partitionId);
             return this;
         }

@@ -75,22 +75,22 @@ public final class InstancePropertiesPatchArgs extends io.pulumi.resources.Resou
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }

@@ -76,22 +76,22 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorArgs extend
     	      this.repromptEventHandlers = defaults.repromptEventHandlers;
         }
 
-        public Builder setInitialPromptFulfillment(Input<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(Input<GoogleCloudDialogflowCxV3FulfillmentArgs> initialPromptFulfillment) {
             this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
             return this;
         }
 
-        public Builder setInitialPromptFulfillment(GoogleCloudDialogflowCxV3FulfillmentArgs initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3FulfillmentArgs initialPromptFulfillment) {
             this.initialPromptFulfillment = Input.of(Objects.requireNonNull(initialPromptFulfillment));
             return this;
         }
 
-        public Builder setRepromptEventHandlers(@Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers) {
+        public Builder repromptEventHandlers(@Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> repromptEventHandlers) {
             this.repromptEventHandlers = repromptEventHandlers;
             return this;
         }
 
-        public Builder setRepromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> repromptEventHandlers) {
+        public Builder repromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> repromptEventHandlers) {
             this.repromptEventHandlers = Input.ofNullable(repromptEventHandlers);
             return this;
         }

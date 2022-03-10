@@ -168,42 +168,42 @@ public final class HttpRouteActionResponse {
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(CorsPolicyResponse corsPolicy) {
+        public Builder corsPolicy(CorsPolicyResponse corsPolicy) {
             this.corsPolicy = Objects.requireNonNull(corsPolicy);
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(HttpFaultInjectionResponse faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(HttpFaultInjectionResponse faultInjectionPolicy) {
             this.faultInjectionPolicy = Objects.requireNonNull(faultInjectionPolicy);
             return this;
         }
 
-        public Builder setMaxStreamDuration(DurationResponse maxStreamDuration) {
+        public Builder maxStreamDuration(DurationResponse maxStreamDuration) {
             this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(RequestMirrorPolicyResponse requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(RequestMirrorPolicyResponse requestMirrorPolicy) {
             this.requestMirrorPolicy = Objects.requireNonNull(requestMirrorPolicy);
             return this;
         }
 
-        public Builder setRetryPolicy(HttpRetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(HttpRetryPolicyResponse retryPolicy) {
             this.retryPolicy = Objects.requireNonNull(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(DurationResponse timeout) {
+        public Builder timeout(DurationResponse timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setUrlRewrite(UrlRewriteResponse urlRewrite) {
+        public Builder urlRewrite(UrlRewriteResponse urlRewrite) {
             this.urlRewrite = Objects.requireNonNull(urlRewrite);
             return this;
         }
 
-        public Builder setWeightedBackendServices(List<WeightedBackendServiceResponse> weightedBackendServices) {
+        public Builder weightedBackendServices(List<WeightedBackendServiceResponse> weightedBackendServices) {
             this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
             return this;
         }

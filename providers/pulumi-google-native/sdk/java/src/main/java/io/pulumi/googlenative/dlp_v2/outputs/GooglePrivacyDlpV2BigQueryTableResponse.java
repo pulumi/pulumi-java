@@ -81,17 +81,17 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

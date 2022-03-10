@@ -198,52 +198,52 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
     	      this.upgradeSettings = defaults.upgradeSettings;
         }
 
-        public Builder setBootDiskKmsKey(String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setManagement(NodeManagementResponse management) {
+        public Builder management(NodeManagementResponse management) {
             this.management = Objects.requireNonNull(management);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setUpgradeSettings(UpgradeSettingsResponse upgradeSettings) {
+        public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }

@@ -92,32 +92,32 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDesiredState(@Nullable Input<PackageDesiredState> desiredState) {
+        public Builder desiredState(@Nullable Input<PackageDesiredState> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable PackageDesiredState desiredState) {
+        public Builder desiredState(@Nullable PackageDesiredState desiredState) {
             this.desiredState = Input.ofNullable(desiredState);
             return this;
         }
 
-        public Builder setManager(@Nullable Input<PackageManager> manager) {
+        public Builder manager(@Nullable Input<PackageManager> manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setManager(@Nullable PackageManager manager) {
+        public Builder manager(@Nullable PackageManager manager) {
             this.manager = Input.ofNullable(manager);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

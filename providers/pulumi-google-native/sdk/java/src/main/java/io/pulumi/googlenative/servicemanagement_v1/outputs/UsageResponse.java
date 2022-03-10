@@ -83,17 +83,17 @@ public final class UsageResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setProducerNotificationChannel(String producerNotificationChannel) {
+        public Builder producerNotificationChannel(String producerNotificationChannel) {
             this.producerNotificationChannel = Objects.requireNonNull(producerNotificationChannel);
             return this;
         }
 
-        public Builder setRequirements(List<String> requirements) {
+        public Builder requirements(List<String> requirements) {
             this.requirements = Objects.requireNonNull(requirements);
             return this;
         }
 
-        public Builder setRules(List<UsageRuleResponse> rules) {
+        public Builder rules(List<UsageRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

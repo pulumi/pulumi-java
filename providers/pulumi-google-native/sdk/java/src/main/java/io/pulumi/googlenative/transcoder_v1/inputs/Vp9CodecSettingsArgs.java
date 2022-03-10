@@ -204,102 +204,102 @@ public final class Vp9CodecSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.widthPixels = defaults.widthPixels;
         }
 
-        public Builder setBitrateBps(Input<Integer> bitrateBps) {
+        public Builder bitrateBps(Input<Integer> bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Input.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
 
-        public Builder setCrfLevel(@Nullable Input<Integer> crfLevel) {
+        public Builder crfLevel(@Nullable Input<Integer> crfLevel) {
             this.crfLevel = crfLevel;
             return this;
         }
 
-        public Builder setCrfLevel(@Nullable Integer crfLevel) {
+        public Builder crfLevel(@Nullable Integer crfLevel) {
             this.crfLevel = Input.ofNullable(crfLevel);
             return this;
         }
 
-        public Builder setFrameRate(Input<Double> frameRate) {
+        public Builder frameRate(Input<Double> frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
 
-        public Builder setFrameRate(Double frameRate) {
+        public Builder frameRate(Double frameRate) {
             this.frameRate = Input.of(Objects.requireNonNull(frameRate));
             return this;
         }
 
-        public Builder setGopDuration(@Nullable Input<String> gopDuration) {
+        public Builder gopDuration(@Nullable Input<String> gopDuration) {
             this.gopDuration = gopDuration;
             return this;
         }
 
-        public Builder setGopDuration(@Nullable String gopDuration) {
+        public Builder gopDuration(@Nullable String gopDuration) {
             this.gopDuration = Input.ofNullable(gopDuration);
             return this;
         }
 
-        public Builder setGopFrameCount(@Nullable Input<Integer> gopFrameCount) {
+        public Builder gopFrameCount(@Nullable Input<Integer> gopFrameCount) {
             this.gopFrameCount = gopFrameCount;
             return this;
         }
 
-        public Builder setGopFrameCount(@Nullable Integer gopFrameCount) {
+        public Builder gopFrameCount(@Nullable Integer gopFrameCount) {
             this.gopFrameCount = Input.ofNullable(gopFrameCount);
             return this;
         }
 
-        public Builder setHeightPixels(@Nullable Input<Integer> heightPixels) {
+        public Builder heightPixels(@Nullable Input<Integer> heightPixels) {
             this.heightPixels = heightPixels;
             return this;
         }
 
-        public Builder setHeightPixels(@Nullable Integer heightPixels) {
+        public Builder heightPixels(@Nullable Integer heightPixels) {
             this.heightPixels = Input.ofNullable(heightPixels);
             return this;
         }
 
-        public Builder setPixelFormat(@Nullable Input<String> pixelFormat) {
+        public Builder pixelFormat(@Nullable Input<String> pixelFormat) {
             this.pixelFormat = pixelFormat;
             return this;
         }
 
-        public Builder setPixelFormat(@Nullable String pixelFormat) {
+        public Builder pixelFormat(@Nullable String pixelFormat) {
             this.pixelFormat = Input.ofNullable(pixelFormat);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<String> profile) {
+        public Builder profile(@Nullable Input<String> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable String profile) {
+        public Builder profile(@Nullable String profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setRateControlMode(@Nullable Input<String> rateControlMode) {
+        public Builder rateControlMode(@Nullable Input<String> rateControlMode) {
             this.rateControlMode = rateControlMode;
             return this;
         }
 
-        public Builder setRateControlMode(@Nullable String rateControlMode) {
+        public Builder rateControlMode(@Nullable String rateControlMode) {
             this.rateControlMode = Input.ofNullable(rateControlMode);
             return this;
         }
 
-        public Builder setWidthPixels(@Nullable Input<Integer> widthPixels) {
+        public Builder widthPixels(@Nullable Input<Integer> widthPixels) {
             this.widthPixels = widthPixels;
             return this;
         }
 
-        public Builder setWidthPixels(@Nullable Integer widthPixels) {
+        public Builder widthPixels(@Nullable Integer widthPixels) {
             this.widthPixels = Input.ofNullable(widthPixels);
             return this;
         }

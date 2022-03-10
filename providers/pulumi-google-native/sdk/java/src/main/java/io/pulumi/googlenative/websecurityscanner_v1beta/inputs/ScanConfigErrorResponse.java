@@ -72,12 +72,12 @@ public final class ScanConfigErrorResponse extends io.pulumi.resources.InvokeArg
     	      this.fieldName = defaults.fieldName;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }

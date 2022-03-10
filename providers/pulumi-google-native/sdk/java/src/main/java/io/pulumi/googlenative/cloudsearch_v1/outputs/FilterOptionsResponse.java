@@ -66,12 +66,12 @@ public final class FilterOptionsResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setFilter(FilterResponse filter) {
+        public Builder filter(FilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

@@ -101,22 +101,22 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
     	      this.storageConfig = defaults.storageConfig;
         }
 
-        public Builder setActions(List<GooglePrivacyDlpV2ActionResponse> actions) {
+        public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setInspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
+        public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
             this.inspectConfig = Objects.requireNonNull(inspectConfig);
             return this;
         }
 
-        public Builder setInspectTemplateName(String inspectTemplateName) {
+        public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
 
-        public Builder setStorageConfig(GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
+        public Builder storageConfig(GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }

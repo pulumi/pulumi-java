@@ -75,22 +75,22 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     	      this.samplingPercentage = defaults.samplingPercentage;
         }
 
-        public Builder setBigqueryTableName(Input<String> bigqueryTableName) {
+        public Builder bigqueryTableName(Input<String> bigqueryTableName) {
             this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
             return this;
         }
 
-        public Builder setBigqueryTableName(String bigqueryTableName) {
+        public Builder bigqueryTableName(String bigqueryTableName) {
             this.bigqueryTableName = Input.of(Objects.requireNonNull(bigqueryTableName));
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Input<Double> samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Input<Double> samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Double samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = Input.ofNullable(samplingPercentage);
             return this;
         }

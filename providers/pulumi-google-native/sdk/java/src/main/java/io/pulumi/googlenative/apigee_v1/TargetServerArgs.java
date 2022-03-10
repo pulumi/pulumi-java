@@ -178,92 +178,92 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sSLInfo = defaults.sSLInfo;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(Input<String> environmentId) {
+        public Builder environmentId(Input<String> environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Input.of(Objects.requireNonNull(environmentId));
             return this;
         }
 
-        public Builder setHost(Input<String> host) {
+        public Builder host(Input<String> host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Input.of(Objects.requireNonNull(host));
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<TargetServerProtocol> protocol) {
+        public Builder protocol(@Nullable Input<TargetServerProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable TargetServerProtocol protocol) {
+        public Builder protocol(@Nullable TargetServerProtocol protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setSSLInfo(@Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
+        public Builder sSLInfo(@Nullable Input<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo) {
             this.sSLInfo = sSLInfo;
             return this;
         }
 
-        public Builder setSSLInfo(@Nullable GoogleCloudApigeeV1TlsInfoArgs sSLInfo) {
+        public Builder sSLInfo(@Nullable GoogleCloudApigeeV1TlsInfoArgs sSLInfo) {
             this.sSLInfo = Input.ofNullable(sSLInfo);
             return this;
         }

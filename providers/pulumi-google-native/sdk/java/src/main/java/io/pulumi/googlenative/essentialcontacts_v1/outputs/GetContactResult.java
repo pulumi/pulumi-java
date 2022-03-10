@@ -130,32 +130,32 @@ public final class GetContactResult {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setLanguageTag(String languageTag) {
+        public Builder languageTag(String languageTag) {
             this.languageTag = Objects.requireNonNull(languageTag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder setValidateTime(String validateTime) {
+        public Builder validateTime(String validateTime) {
             this.validateTime = Objects.requireNonNull(validateTime);
             return this;
         }
 
-        public Builder setValidationState(String validationState) {
+        public Builder validationState(String validationState) {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
         }

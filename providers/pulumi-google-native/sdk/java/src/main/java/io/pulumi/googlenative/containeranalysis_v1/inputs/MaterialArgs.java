@@ -63,22 +63,22 @@ public final class MaterialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDigest(@Nullable Input<Map<String,String>> digest) {
+        public Builder digest(@Nullable Input<Map<String,String>> digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setDigest(@Nullable Map<String,String> digest) {
+        public Builder digest(@Nullable Map<String,String> digest) {
             this.digest = Input.ofNullable(digest);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

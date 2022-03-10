@@ -74,17 +74,17 @@ public final class GetRegionNetworkFirewallPolicyArgs extends io.pulumi.resource
     	      this.region = defaults.region;
         }
 
-        public Builder setFirewallPolicy(String firewallPolicy) {
+        public Builder firewallPolicy(String firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

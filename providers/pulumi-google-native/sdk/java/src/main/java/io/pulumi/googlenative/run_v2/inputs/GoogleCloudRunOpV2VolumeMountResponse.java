@@ -72,12 +72,12 @@ public final class GoogleCloudRunOpV2VolumeMountResponse extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

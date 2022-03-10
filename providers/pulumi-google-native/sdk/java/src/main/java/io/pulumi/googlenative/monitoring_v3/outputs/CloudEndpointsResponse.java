@@ -48,7 +48,7 @@ public final class CloudEndpointsResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

@@ -82,17 +82,17 @@ public final class ReservationAffinityResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setConsumeReservationType(String consumeReservationType) {
+        public Builder consumeReservationType(String consumeReservationType) {
             this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

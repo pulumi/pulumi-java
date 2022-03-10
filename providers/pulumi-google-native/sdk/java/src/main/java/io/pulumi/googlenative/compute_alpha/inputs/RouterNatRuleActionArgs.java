@@ -103,42 +103,42 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     	      this.sourceNatDrainRanges = defaults.sourceNatDrainRanges;
         }
 
-        public Builder setSourceNatActiveIps(@Nullable Input<List<String>> sourceNatActiveIps) {
+        public Builder sourceNatActiveIps(@Nullable Input<List<String>> sourceNatActiveIps) {
             this.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
 
-        public Builder setSourceNatActiveIps(@Nullable List<String> sourceNatActiveIps) {
+        public Builder sourceNatActiveIps(@Nullable List<String> sourceNatActiveIps) {
             this.sourceNatActiveIps = Input.ofNullable(sourceNatActiveIps);
             return this;
         }
 
-        public Builder setSourceNatActiveRanges(@Nullable Input<List<String>> sourceNatActiveRanges) {
+        public Builder sourceNatActiveRanges(@Nullable Input<List<String>> sourceNatActiveRanges) {
             this.sourceNatActiveRanges = sourceNatActiveRanges;
             return this;
         }
 
-        public Builder setSourceNatActiveRanges(@Nullable List<String> sourceNatActiveRanges) {
+        public Builder sourceNatActiveRanges(@Nullable List<String> sourceNatActiveRanges) {
             this.sourceNatActiveRanges = Input.ofNullable(sourceNatActiveRanges);
             return this;
         }
 
-        public Builder setSourceNatDrainIps(@Nullable Input<List<String>> sourceNatDrainIps) {
+        public Builder sourceNatDrainIps(@Nullable Input<List<String>> sourceNatDrainIps) {
             this.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
 
-        public Builder setSourceNatDrainIps(@Nullable List<String> sourceNatDrainIps) {
+        public Builder sourceNatDrainIps(@Nullable List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Input.ofNullable(sourceNatDrainIps);
             return this;
         }
 
-        public Builder setSourceNatDrainRanges(@Nullable Input<List<String>> sourceNatDrainRanges) {
+        public Builder sourceNatDrainRanges(@Nullable Input<List<String>> sourceNatDrainRanges) {
             this.sourceNatDrainRanges = sourceNatDrainRanges;
             return this;
         }
 
-        public Builder setSourceNatDrainRanges(@Nullable List<String> sourceNatDrainRanges) {
+        public Builder sourceNatDrainRanges(@Nullable List<String> sourceNatDrainRanges) {
             this.sourceNatDrainRanges = Input.ofNullable(sourceNatDrainRanges);
             return this;
         }

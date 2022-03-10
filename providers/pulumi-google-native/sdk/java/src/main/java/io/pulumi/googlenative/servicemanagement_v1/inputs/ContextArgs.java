@@ -58,12 +58,12 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable Input<List<ContextRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<ContextRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<ContextRuleArgs> rules) {
+        public Builder rules(@Nullable List<ContextRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

@@ -312,192 +312,192 @@ public final class RegionHealthCheckArgs extends io.pulumi.resources.ResourceArg
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setCheckIntervalSec(@Nullable Input<Integer> checkIntervalSec) {
+        public Builder checkIntervalSec(@Nullable Input<Integer> checkIntervalSec) {
             this.checkIntervalSec = checkIntervalSec;
             return this;
         }
 
-        public Builder setCheckIntervalSec(@Nullable Integer checkIntervalSec) {
+        public Builder checkIntervalSec(@Nullable Integer checkIntervalSec) {
             this.checkIntervalSec = Input.ofNullable(checkIntervalSec);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGrpcHealthCheck(@Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck) {
+        public Builder grpcHealthCheck(@Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck) {
             this.grpcHealthCheck = grpcHealthCheck;
             return this;
         }
 
-        public Builder setGrpcHealthCheck(@Nullable GRPCHealthCheckArgs grpcHealthCheck) {
+        public Builder grpcHealthCheck(@Nullable GRPCHealthCheckArgs grpcHealthCheck) {
             this.grpcHealthCheck = Input.ofNullable(grpcHealthCheck);
             return this;
         }
 
-        public Builder setHealthyThreshold(@Nullable Input<Integer> healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Input<Integer> healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
-        public Builder setHealthyThreshold(@Nullable Integer healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = Input.ofNullable(healthyThreshold);
             return this;
         }
 
-        public Builder setHttp2HealthCheck(@Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck) {
+        public Builder http2HealthCheck(@Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck) {
             this.http2HealthCheck = http2HealthCheck;
             return this;
         }
 
-        public Builder setHttp2HealthCheck(@Nullable HTTP2HealthCheckArgs http2HealthCheck) {
+        public Builder http2HealthCheck(@Nullable HTTP2HealthCheckArgs http2HealthCheck) {
             this.http2HealthCheck = Input.ofNullable(http2HealthCheck);
             return this;
         }
 
-        public Builder setHttpHealthCheck(@Nullable Input<HTTPHealthCheckArgs> httpHealthCheck) {
+        public Builder httpHealthCheck(@Nullable Input<HTTPHealthCheckArgs> httpHealthCheck) {
             this.httpHealthCheck = httpHealthCheck;
             return this;
         }
 
-        public Builder setHttpHealthCheck(@Nullable HTTPHealthCheckArgs httpHealthCheck) {
+        public Builder httpHealthCheck(@Nullable HTTPHealthCheckArgs httpHealthCheck) {
             this.httpHealthCheck = Input.ofNullable(httpHealthCheck);
             return this;
         }
 
-        public Builder setHttpsHealthCheck(@Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck) {
+        public Builder httpsHealthCheck(@Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck) {
             this.httpsHealthCheck = httpsHealthCheck;
             return this;
         }
 
-        public Builder setHttpsHealthCheck(@Nullable HTTPSHealthCheckArgs httpsHealthCheck) {
+        public Builder httpsHealthCheck(@Nullable HTTPSHealthCheckArgs httpsHealthCheck) {
             this.httpsHealthCheck = Input.ofNullable(httpsHealthCheck);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<HealthCheckLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<HealthCheckLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable HealthCheckLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable HealthCheckLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSslHealthCheck(@Nullable Input<SSLHealthCheckArgs> sslHealthCheck) {
+        public Builder sslHealthCheck(@Nullable Input<SSLHealthCheckArgs> sslHealthCheck) {
             this.sslHealthCheck = sslHealthCheck;
             return this;
         }
 
-        public Builder setSslHealthCheck(@Nullable SSLHealthCheckArgs sslHealthCheck) {
+        public Builder sslHealthCheck(@Nullable SSLHealthCheckArgs sslHealthCheck) {
             this.sslHealthCheck = Input.ofNullable(sslHealthCheck);
             return this;
         }
 
-        public Builder setTcpHealthCheck(@Nullable Input<TCPHealthCheckArgs> tcpHealthCheck) {
+        public Builder tcpHealthCheck(@Nullable Input<TCPHealthCheckArgs> tcpHealthCheck) {
             this.tcpHealthCheck = tcpHealthCheck;
             return this;
         }
 
-        public Builder setTcpHealthCheck(@Nullable TCPHealthCheckArgs tcpHealthCheck) {
+        public Builder tcpHealthCheck(@Nullable TCPHealthCheckArgs tcpHealthCheck) {
             this.tcpHealthCheck = Input.ofNullable(tcpHealthCheck);
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Input<Integer> timeoutSec) {
+        public Builder timeoutSec(@Nullable Input<Integer> timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Integer timeoutSec) {
+        public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
 
-        public Builder setType(@Nullable Input<RegionHealthCheckType> type) {
+        public Builder type(@Nullable Input<RegionHealthCheckType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RegionHealthCheckType type) {
+        public Builder type(@Nullable RegionHealthCheckType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUdpHealthCheck(@Nullable Input<UDPHealthCheckArgs> udpHealthCheck) {
+        public Builder udpHealthCheck(@Nullable Input<UDPHealthCheckArgs> udpHealthCheck) {
             this.udpHealthCheck = udpHealthCheck;
             return this;
         }
 
-        public Builder setUdpHealthCheck(@Nullable UDPHealthCheckArgs udpHealthCheck) {
+        public Builder udpHealthCheck(@Nullable UDPHealthCheckArgs udpHealthCheck) {
             this.udpHealthCheck = Input.ofNullable(udpHealthCheck);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Input<Integer> unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }

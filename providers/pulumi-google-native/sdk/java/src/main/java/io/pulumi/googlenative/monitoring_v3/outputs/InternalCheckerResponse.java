@@ -129,32 +129,32 @@ public final class InternalCheckerResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGcpZone(String gcpZone) {
+        public Builder gcpZone(String gcpZone) {
             this.gcpZone = Objects.requireNonNull(gcpZone);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPeerProjectId(String peerProjectId) {
+        public Builder peerProjectId(String peerProjectId) {
             this.peerProjectId = Objects.requireNonNull(peerProjectId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -242,132 +242,132 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v3Id1 = defaults.v3Id1;
         }
 
-        public Builder setAppEngine(@Nullable Input<AppEngineArgs> appEngine) {
+        public Builder appEngine(@Nullable Input<AppEngineArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
 
-        public Builder setAppEngine(@Nullable AppEngineArgs appEngine) {
+        public Builder appEngine(@Nullable AppEngineArgs appEngine) {
             this.appEngine = Input.ofNullable(appEngine);
             return this;
         }
 
-        public Builder setCloudEndpoints(@Nullable Input<CloudEndpointsArgs> cloudEndpoints) {
+        public Builder cloudEndpoints(@Nullable Input<CloudEndpointsArgs> cloudEndpoints) {
             this.cloudEndpoints = cloudEndpoints;
             return this;
         }
 
-        public Builder setCloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
+        public Builder cloudEndpoints(@Nullable CloudEndpointsArgs cloudEndpoints) {
             this.cloudEndpoints = Input.ofNullable(cloudEndpoints);
             return this;
         }
 
-        public Builder setClusterIstio(@Nullable Input<ClusterIstioArgs> clusterIstio) {
+        public Builder clusterIstio(@Nullable Input<ClusterIstioArgs> clusterIstio) {
             this.clusterIstio = clusterIstio;
             return this;
         }
 
-        public Builder setClusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
+        public Builder clusterIstio(@Nullable ClusterIstioArgs clusterIstio) {
             this.clusterIstio = Input.ofNullable(clusterIstio);
             return this;
         }
 
-        public Builder setCustom(@Nullable Input<CustomArgs> custom) {
+        public Builder custom(@Nullable Input<CustomArgs> custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setCustom(@Nullable CustomArgs custom) {
+        public Builder custom(@Nullable CustomArgs custom) {
             this.custom = Input.ofNullable(custom);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIstioCanonicalService(@Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService) {
+        public Builder istioCanonicalService(@Nullable Input<IstioCanonicalServiceArgs> istioCanonicalService) {
             this.istioCanonicalService = istioCanonicalService;
             return this;
         }
 
-        public Builder setIstioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
+        public Builder istioCanonicalService(@Nullable IstioCanonicalServiceArgs istioCanonicalService) {
             this.istioCanonicalService = Input.ofNullable(istioCanonicalService);
             return this;
         }
 
-        public Builder setMeshIstio(@Nullable Input<MeshIstioArgs> meshIstio) {
+        public Builder meshIstio(@Nullable Input<MeshIstioArgs> meshIstio) {
             this.meshIstio = meshIstio;
             return this;
         }
 
-        public Builder setMeshIstio(@Nullable MeshIstioArgs meshIstio) {
+        public Builder meshIstio(@Nullable MeshIstioArgs meshIstio) {
             this.meshIstio = Input.ofNullable(meshIstio);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServiceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Input<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = Input.ofNullable(serviceId);
             return this;
         }
 
-        public Builder setTelemetry(@Nullable Input<TelemetryArgs> telemetry) {
+        public Builder telemetry(@Nullable Input<TelemetryArgs> telemetry) {
             this.telemetry = telemetry;
             return this;
         }
 
-        public Builder setTelemetry(@Nullable TelemetryArgs telemetry) {
+        public Builder telemetry(@Nullable TelemetryArgs telemetry) {
             this.telemetry = Input.ofNullable(telemetry);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setV3Id(Input<String> v3Id) {
+        public Builder v3Id(Input<String> v3Id) {
             this.v3Id = Objects.requireNonNull(v3Id);
             return this;
         }
 
-        public Builder setV3Id(String v3Id) {
+        public Builder v3Id(String v3Id) {
             this.v3Id = Input.of(Objects.requireNonNull(v3Id));
             return this;
         }
 
-        public Builder setV3Id1(Input<String> v3Id1) {
+        public Builder v3Id1(Input<String> v3Id1) {
             this.v3Id1 = Objects.requireNonNull(v3Id1);
             return this;
         }
 
-        public Builder setV3Id1(String v3Id1) {
+        public Builder v3Id1(String v3Id1) {
             this.v3Id1 = Input.of(Objects.requireNonNull(v3Id1));
             return this;
         }

@@ -70,22 +70,22 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs 
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder setMaxValue(@Nullable Input<Double> maxValue) {
+        public Builder maxValue(@Nullable Input<Double> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
-        public Builder setMaxValue(@Nullable Double maxValue) {
+        public Builder maxValue(@Nullable Double maxValue) {
             this.maxValue = Input.ofNullable(maxValue);
             return this;
         }
 
-        public Builder setMinValue(@Nullable Input<Double> minValue) {
+        public Builder minValue(@Nullable Input<Double> minValue) {
             this.minValue = minValue;
             return this;
         }
 
-        public Builder setMinValue(@Nullable Double minValue) {
+        public Builder minValue(@Nullable Double minValue) {
             this.minValue = Input.ofNullable(minValue);
             return this;
         }

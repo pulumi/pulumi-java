@@ -65,12 +65,12 @@ public final class DefaultPoolResponse {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setArtifactStorage(String artifactStorage) {
+        public Builder artifactStorage(String artifactStorage) {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }

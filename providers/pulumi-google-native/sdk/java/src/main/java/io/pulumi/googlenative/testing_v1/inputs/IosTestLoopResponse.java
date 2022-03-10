@@ -91,17 +91,17 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppBundleId(String appBundleId) {
+        public Builder appBundleId(String appBundleId) {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
 
-        public Builder setAppIpa(FileReferenceResponse appIpa) {
+        public Builder appIpa(FileReferenceResponse appIpa) {
             this.appIpa = Objects.requireNonNull(appIpa);
             return this;
         }
 
-        public Builder setScenarios(List<Integer> scenarios) {
+        public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }

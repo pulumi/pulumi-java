@@ -60,12 +60,12 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
     	      this.providerId = defaults.providerId;
         }
 
-        public Builder setNoteId(String noteId) {
+        public Builder noteId(String noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
 
-        public Builder setProviderId(String providerId) {
+        public Builder providerId(String providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }

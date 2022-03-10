@@ -65,12 +65,12 @@ public final class SourceCrowdingConfigResponse {
     	      this.numSuggestions = defaults.numSuggestions;
         }
 
-        public Builder setNumResults(Integer numResults) {
+        public Builder numResults(Integer numResults) {
             this.numResults = Objects.requireNonNull(numResults);
             return this;
         }
 
-        public Builder setNumSuggestions(Integer numSuggestions) {
+        public Builder numSuggestions(Integer numSuggestions) {
             this.numSuggestions = Objects.requireNonNull(numSuggestions);
             return this;
         }

@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
     	      this.iouThreshold = defaults.iouThreshold;
         }
 
-        public Builder setIouThreshold(Double iouThreshold) {
+        public Builder iouThreshold(Double iouThreshold) {
             this.iouThreshold = Objects.requireNonNull(iouThreshold);
             return this;
         }

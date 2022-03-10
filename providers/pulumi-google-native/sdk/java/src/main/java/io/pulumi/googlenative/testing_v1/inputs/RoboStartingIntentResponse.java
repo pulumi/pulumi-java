@@ -90,17 +90,17 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setLauncherActivity(LauncherActivityIntentResponse launcherActivity) {
+        public Builder launcherActivity(LauncherActivityIntentResponse launcherActivity) {
             this.launcherActivity = Objects.requireNonNull(launcherActivity);
             return this;
         }
 
-        public Builder setStartActivity(StartActivityIntentResponse startActivity) {
+        public Builder startActivity(StartActivityIntentResponse startActivity) {
             this.startActivity = Objects.requireNonNull(startActivity);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

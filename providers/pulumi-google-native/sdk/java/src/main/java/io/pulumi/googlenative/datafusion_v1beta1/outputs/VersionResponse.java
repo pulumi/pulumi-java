@@ -99,22 +99,22 @@ public final class VersionResponse {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setAvailableFeatures(List<String> availableFeatures) {
+        public Builder availableFeatures(List<String> availableFeatures) {
             this.availableFeatures = Objects.requireNonNull(availableFeatures);
             return this;
         }
 
-        public Builder setDefaultVersion(Boolean defaultVersion) {
+        public Builder defaultVersion(Boolean defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersionNumber(String versionNumber) {
+        public Builder versionNumber(String versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }

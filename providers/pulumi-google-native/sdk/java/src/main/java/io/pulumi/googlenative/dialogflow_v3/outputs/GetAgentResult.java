@@ -245,67 +245,67 @@ public final class GetAgentResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettingsResponse advancedSettings) {
+        public Builder advancedSettings(GoogleCloudDialogflowCxV3AdvancedSettingsResponse advancedSettings) {
             this.advancedSettings = Objects.requireNonNull(advancedSettings);
             return this;
         }
 
-        public Builder setAvatarUri(String avatarUri) {
+        public Builder avatarUri(String avatarUri) {
             this.avatarUri = Objects.requireNonNull(avatarUri);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(String defaultLanguageCode) {
+        public Builder defaultLanguageCode(String defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableSpellCorrection(Boolean enableSpellCorrection) {
+        public Builder enableSpellCorrection(Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Objects.requireNonNull(enableSpellCorrection);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecuritySettings(String securitySettings) {
+        public Builder securitySettings(String securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSpeechToTextSettings(GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings) {
+        public Builder speechToTextSettings(GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse speechToTextSettings) {
             this.speechToTextSettings = Objects.requireNonNull(speechToTextSettings);
             return this;
         }
 
-        public Builder setStartFlow(String startFlow) {
+        public Builder startFlow(String startFlow) {
             this.startFlow = Objects.requireNonNull(startFlow);
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(List<String> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Objects.requireNonNull(supportedLanguageCodes);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

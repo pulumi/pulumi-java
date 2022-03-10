@@ -95,42 +95,42 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscription = defaults.subscription;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSnapshotId(Input<String> snapshotId) {
+        public Builder snapshotId(Input<String> snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Input.of(Objects.requireNonNull(snapshotId));
             return this;
         }
 
-        public Builder setSubscription(Input<String> subscription) {
+        public Builder subscription(Input<String> subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Input.of(Objects.requireNonNull(subscription));
             return this;
         }

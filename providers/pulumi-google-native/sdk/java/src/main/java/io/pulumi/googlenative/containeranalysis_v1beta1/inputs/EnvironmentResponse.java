@@ -52,7 +52,7 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.customValues = defaults.customValues;
         }
 
-        public Builder setCustomValues(Map<String,String> customValues) {
+        public Builder customValues(Map<String,String> customValues) {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }

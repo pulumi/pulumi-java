@@ -123,52 +123,52 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     	      this.sourceInfo = defaults.sourceInfo;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setFilename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Input<String> filename) {
             this.filename = filename;
             return this;
         }
 
-        public Builder setFilename(@Nullable String filename) {
+        public Builder filename(@Nullable String filename) {
             this.filename = Input.ofNullable(filename);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLicenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
+        public Builder licenseConcluded(@Nullable Input<LicenseArgs> licenseConcluded) {
             this.licenseConcluded = licenseConcluded;
             return this;
         }
 
-        public Builder setLicenseConcluded(@Nullable LicenseArgs licenseConcluded) {
+        public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
             this.licenseConcluded = Input.ofNullable(licenseConcluded);
             return this;
         }
 
-        public Builder setSourceInfo(@Nullable Input<String> sourceInfo) {
+        public Builder sourceInfo(@Nullable Input<String> sourceInfo) {
             this.sourceInfo = sourceInfo;
             return this;
         }
 
-        public Builder setSourceInfo(@Nullable String sourceInfo) {
+        public Builder sourceInfo(@Nullable String sourceInfo) {
             this.sourceInfo = Input.ofNullable(sourceInfo);
             return this;
         }

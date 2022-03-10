@@ -92,32 +92,32 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.source = defaults.source;
         }
 
-        public Builder setCrowdingConfig(@Nullable Input<SourceCrowdingConfigArgs> crowdingConfig) {
+        public Builder crowdingConfig(@Nullable Input<SourceCrowdingConfigArgs> crowdingConfig) {
             this.crowdingConfig = crowdingConfig;
             return this;
         }
 
-        public Builder setCrowdingConfig(@Nullable SourceCrowdingConfigArgs crowdingConfig) {
+        public Builder crowdingConfig(@Nullable SourceCrowdingConfigArgs crowdingConfig) {
             this.crowdingConfig = Input.ofNullable(crowdingConfig);
             return this;
         }
 
-        public Builder setScoringConfig(@Nullable Input<SourceScoringConfigArgs> scoringConfig) {
+        public Builder scoringConfig(@Nullable Input<SourceScoringConfigArgs> scoringConfig) {
             this.scoringConfig = scoringConfig;
             return this;
         }
 
-        public Builder setScoringConfig(@Nullable SourceScoringConfigArgs scoringConfig) {
+        public Builder scoringConfig(@Nullable SourceScoringConfigArgs scoringConfig) {
             this.scoringConfig = Input.ofNullable(scoringConfig);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<SourceArgs> source) {
+        public Builder source(@Nullable Input<SourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable SourceArgs source) {
+        public Builder source(@Nullable SourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }

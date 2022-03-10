@@ -67,12 +67,12 @@ public final class ScriptStatisticsResponse {
     	      this.stackFrames = defaults.stackFrames;
         }
 
-        public Builder setEvaluationKind(String evaluationKind) {
+        public Builder evaluationKind(String evaluationKind) {
             this.evaluationKind = Objects.requireNonNull(evaluationKind);
             return this;
         }
 
-        public Builder setStackFrames(List<ScriptStackFrameResponse> stackFrames) {
+        public Builder stackFrames(List<ScriptStackFrameResponse> stackFrames) {
             this.stackFrames = Objects.requireNonNull(stackFrames);
             return this;
         }

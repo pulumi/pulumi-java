@@ -66,12 +66,12 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setRuleVisibility(String ruleVisibility) {
+        public Builder ruleVisibility(String ruleVisibility) {
             this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
             return this;
         }

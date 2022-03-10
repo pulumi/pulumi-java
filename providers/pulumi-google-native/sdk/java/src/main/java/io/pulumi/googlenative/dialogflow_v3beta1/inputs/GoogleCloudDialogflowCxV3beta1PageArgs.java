@@ -159,72 +159,72 @@ public final class GoogleCloudDialogflowCxV3beta1PageArgs extends io.pulumi.reso
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEntryFulfillment(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> entryFulfillment) {
+        public Builder entryFulfillment(@Nullable Input<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> entryFulfillment) {
             this.entryFulfillment = entryFulfillment;
             return this;
         }
 
-        public Builder setEntryFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs entryFulfillment) {
+        public Builder entryFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs entryFulfillment) {
             this.entryFulfillment = Input.ofNullable(entryFulfillment);
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> eventHandlers) {
+        public Builder eventHandlers(@Nullable List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> eventHandlers) {
             this.eventHandlers = Input.ofNullable(eventHandlers);
             return this;
         }
 
-        public Builder setForm(@Nullable Input<GoogleCloudDialogflowCxV3beta1FormArgs> form) {
+        public Builder form(@Nullable Input<GoogleCloudDialogflowCxV3beta1FormArgs> form) {
             this.form = form;
             return this;
         }
 
-        public Builder setForm(@Nullable GoogleCloudDialogflowCxV3beta1FormArgs form) {
+        public Builder form(@Nullable GoogleCloudDialogflowCxV3beta1FormArgs form) {
             this.form = Input.ofNullable(form);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Input.ofNullable(transitionRouteGroups);
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Input<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs> transitionRoutes) {
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }

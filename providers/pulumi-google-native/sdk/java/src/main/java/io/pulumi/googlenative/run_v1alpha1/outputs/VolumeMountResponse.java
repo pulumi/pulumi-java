@@ -98,22 +98,22 @@ public final class VolumeMountResponse {
     	      this.subPath = defaults.subPath;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(Boolean readOnly) {
+        public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
 
-        public Builder setSubPath(String subPath) {
+        public Builder subPath(String subPath) {
             this.subPath = Objects.requireNonNull(subPath);
             return this;
         }

@@ -92,32 +92,32 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceConnectionProfile = defaults.sourceConnectionProfile;
         }
 
-        public Builder setMysqlSourceConfig(@Nullable Input<MysqlSourceConfigArgs> mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(@Nullable Input<MysqlSourceConfigArgs> mysqlSourceConfig) {
             this.mysqlSourceConfig = mysqlSourceConfig;
             return this;
         }
 
-        public Builder setMysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
             this.mysqlSourceConfig = Input.ofNullable(mysqlSourceConfig);
             return this;
         }
 
-        public Builder setOracleSourceConfig(@Nullable Input<OracleSourceConfigArgs> oracleSourceConfig) {
+        public Builder oracleSourceConfig(@Nullable Input<OracleSourceConfigArgs> oracleSourceConfig) {
             this.oracleSourceConfig = oracleSourceConfig;
             return this;
         }
 
-        public Builder setOracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
+        public Builder oracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
             this.oracleSourceConfig = Input.ofNullable(oracleSourceConfig);
             return this;
         }
 
-        public Builder setSourceConnectionProfile(Input<String> sourceConnectionProfile) {
+        public Builder sourceConnectionProfile(Input<String> sourceConnectionProfile) {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }
 
-        public Builder setSourceConnectionProfile(String sourceConnectionProfile) {
+        public Builder sourceConnectionProfile(String sourceConnectionProfile) {
             this.sourceConnectionProfile = Input.of(Objects.requireNonNull(sourceConnectionProfile));
             return this;
         }

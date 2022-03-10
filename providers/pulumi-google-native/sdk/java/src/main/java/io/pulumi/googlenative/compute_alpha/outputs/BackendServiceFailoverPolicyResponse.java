@@ -82,17 +82,17 @@ public final class BackendServiceFailoverPolicyResponse {
     	      this.failoverRatio = defaults.failoverRatio;
         }
 
-        public Builder setDisableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
+        public Builder disableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
             this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover);
             return this;
         }
 
-        public Builder setDropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
+        public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy);
             return this;
         }
 
-        public Builder setFailoverRatio(Double failoverRatio) {
+        public Builder failoverRatio(Double failoverRatio) {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }

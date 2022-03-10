@@ -108,42 +108,42 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourceBackup = defaults.sourceBackup;
         }
 
-        public Builder setCapacityGb(@Nullable Input<String> capacityGb) {
+        public Builder capacityGb(@Nullable Input<String> capacityGb) {
             this.capacityGb = capacityGb;
             return this;
         }
 
-        public Builder setCapacityGb(@Nullable String capacityGb) {
+        public Builder capacityGb(@Nullable String capacityGb) {
             this.capacityGb = Input.ofNullable(capacityGb);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNfsExportOptions(@Nullable Input<List<NfsExportOptionsArgs>> nfsExportOptions) {
+        public Builder nfsExportOptions(@Nullable Input<List<NfsExportOptionsArgs>> nfsExportOptions) {
             this.nfsExportOptions = nfsExportOptions;
             return this;
         }
 
-        public Builder setNfsExportOptions(@Nullable List<NfsExportOptionsArgs> nfsExportOptions) {
+        public Builder nfsExportOptions(@Nullable List<NfsExportOptionsArgs> nfsExportOptions) {
             this.nfsExportOptions = Input.ofNullable(nfsExportOptions);
             return this;
         }
 
-        public Builder setSourceBackup(@Nullable Input<String> sourceBackup) {
+        public Builder sourceBackup(@Nullable Input<String> sourceBackup) {
             this.sourceBackup = sourceBackup;
             return this;
         }
 
-        public Builder setSourceBackup(@Nullable String sourceBackup) {
+        public Builder sourceBackup(@Nullable String sourceBackup) {
             this.sourceBackup = Input.ofNullable(sourceBackup);
             return this;
         }

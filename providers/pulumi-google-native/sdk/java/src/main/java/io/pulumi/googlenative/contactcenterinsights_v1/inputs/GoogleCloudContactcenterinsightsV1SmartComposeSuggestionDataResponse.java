@@ -106,22 +106,22 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
     	      this.suggestion = defaults.suggestion;
         }
 
-        public Builder setConfidenceScore(Double confidenceScore) {
+        public Builder confidenceScore(Double confidenceScore) {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setQueryRecord(String queryRecord) {
+        public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
 
-        public Builder setSuggestion(String suggestion) {
+        public Builder suggestion(String suggestion) {
             this.suggestion = Objects.requireNonNull(suggestion);
             return this;
         }

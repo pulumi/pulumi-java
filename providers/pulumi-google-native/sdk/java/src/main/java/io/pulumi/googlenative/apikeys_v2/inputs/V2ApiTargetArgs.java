@@ -75,22 +75,22 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setMethods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Input<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

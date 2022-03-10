@@ -118,27 +118,27 @@ public final class PollingOptionsResponse extends io.pulumi.resources.InvokeArgs
     	      this.targetLink = defaults.targetLink;
         }
 
-        public Builder setDiagnostics(List<DiagnosticResponse> diagnostics) {
+        public Builder diagnostics(List<DiagnosticResponse> diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
 
-        public Builder setFailCondition(String failCondition) {
+        public Builder failCondition(String failCondition) {
             this.failCondition = Objects.requireNonNull(failCondition);
             return this;
         }
 
-        public Builder setFinishCondition(String finishCondition) {
+        public Builder finishCondition(String finishCondition) {
             this.finishCondition = Objects.requireNonNull(finishCondition);
             return this;
         }
 
-        public Builder setPollingLink(String pollingLink) {
+        public Builder pollingLink(String pollingLink) {
             this.pollingLink = Objects.requireNonNull(pollingLink);
             return this;
         }
 
-        public Builder setTargetLink(String targetLink) {
+        public Builder targetLink(String targetLink) {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }

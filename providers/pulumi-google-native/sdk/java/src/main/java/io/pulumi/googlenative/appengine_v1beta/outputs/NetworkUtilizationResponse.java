@@ -97,22 +97,22 @@ public final class NetworkUtilizationResponse {
     	      this.targetSentPacketsPerSecond = defaults.targetSentPacketsPerSecond;
         }
 
-        public Builder setTargetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
+        public Builder targetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = Objects.requireNonNull(targetReceivedBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
+        public Builder targetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = Objects.requireNonNull(targetReceivedPacketsPerSecond);
             return this;
         }
 
-        public Builder setTargetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
+        public Builder targetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = Objects.requireNonNull(targetSentBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
+        public Builder targetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
             return this;
         }

@@ -74,22 +74,22 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }

@@ -104,42 +104,42 @@ public final class BucketCorsItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.responseHeader = defaults.responseHeader;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Input<Integer> maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Input<Integer> maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = Input.ofNullable(maxAgeSeconds);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<List<String>> method) {
+        public Builder method(@Nullable Input<List<String>> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable List<String> method) {
+        public Builder method(@Nullable List<String> method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setOrigin(@Nullable Input<List<String>> origin) {
+        public Builder origin(@Nullable Input<List<String>> origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setOrigin(@Nullable List<String> origin) {
+        public Builder origin(@Nullable List<String> origin) {
             this.origin = Input.ofNullable(origin);
             return this;
         }
 
-        public Builder setResponseHeader(@Nullable Input<List<String>> responseHeader) {
+        public Builder responseHeader(@Nullable Input<List<String>> responseHeader) {
             this.responseHeader = responseHeader;
             return this;
         }
 
-        public Builder setResponseHeader(@Nullable List<String> responseHeader) {
+        public Builder responseHeader(@Nullable List<String> responseHeader) {
             this.responseHeader = Input.ofNullable(responseHeader);
             return this;
         }

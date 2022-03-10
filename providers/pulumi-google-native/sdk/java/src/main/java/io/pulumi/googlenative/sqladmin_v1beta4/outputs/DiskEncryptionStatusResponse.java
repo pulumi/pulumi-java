@@ -65,12 +65,12 @@ public final class DiskEncryptionStatusResponse {
     	      this.kmsKeyVersionName = defaults.kmsKeyVersionName;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKmsKeyVersionName(String kmsKeyVersionName) {
+        public Builder kmsKeyVersionName(String kmsKeyVersionName) {
             this.kmsKeyVersionName = Objects.requireNonNull(kmsKeyVersionName);
             return this;
         }

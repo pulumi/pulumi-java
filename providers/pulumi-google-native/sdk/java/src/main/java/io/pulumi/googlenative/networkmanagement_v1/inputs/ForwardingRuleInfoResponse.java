@@ -152,37 +152,37 @@ public final class ForwardingRuleInfoResponse extends io.pulumi.resources.Invoke
     	      this.vip = defaults.vip;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMatchedPortRange(String matchedPortRange) {
+        public Builder matchedPortRange(String matchedPortRange) {
             this.matchedPortRange = Objects.requireNonNull(matchedPortRange);
             return this;
         }
 
-        public Builder setMatchedProtocol(String matchedProtocol) {
+        public Builder matchedProtocol(String matchedProtocol) {
             this.matchedProtocol = Objects.requireNonNull(matchedProtocol);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVip(String vip) {
+        public Builder vip(String vip) {
             this.vip = Objects.requireNonNull(vip);
             return this;
         }

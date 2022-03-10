@@ -92,32 +92,32 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<FilterArgs> filter) {
+        public Builder filter(@Nullable Input<FilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable FilterArgs filter) {
+        public Builder filter(@Nullable FilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

@@ -129,32 +129,32 @@ public final class GoogleCloudRunV1ConditionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastTransitionTime(String lastTransitionTime) {
+        public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

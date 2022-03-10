@@ -49,12 +49,12 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.preservedState = defaults.preservedState;
         }
 
-        public Builder setPreservedState(@Nullable Input<StatefulPolicyPreservedStateArgs> preservedState) {
+        public Builder preservedState(@Nullable Input<StatefulPolicyPreservedStateArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
 
-        public Builder setPreservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
+        public Builder preservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
             this.preservedState = Input.ofNullable(preservedState);
             return this;
         }

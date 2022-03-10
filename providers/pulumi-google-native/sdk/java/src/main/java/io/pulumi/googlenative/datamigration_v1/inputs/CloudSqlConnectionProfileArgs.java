@@ -57,12 +57,12 @@ public final class CloudSqlConnectionProfileArgs extends io.pulumi.resources.Res
     	      this.settings = defaults.settings;
         }
 
-        public Builder setSettings(@Nullable Input<CloudSqlSettingsArgs> settings) {
+        public Builder settings(@Nullable Input<CloudSqlSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable CloudSqlSettingsArgs settings) {
+        public Builder settings(@Nullable CloudSqlSettingsArgs settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

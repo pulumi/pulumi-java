@@ -91,32 +91,32 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionArgs extends i
     	      this.terms = defaults.terms;
         }
 
-        public Builder setDoNotAssociateTerms(@Nullable Input<List<String>> doNotAssociateTerms) {
+        public Builder doNotAssociateTerms(@Nullable Input<List<String>> doNotAssociateTerms) {
             this.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
 
-        public Builder setDoNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
+        public Builder doNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
             this.doNotAssociateTerms = Input.ofNullable(doNotAssociateTerms);
             return this;
         }
 
-        public Builder setQueryTerms(@Nullable Input<List<String>> queryTerms) {
+        public Builder queryTerms(@Nullable Input<List<String>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
-        public Builder setQueryTerms(@Nullable List<String> queryTerms) {
+        public Builder queryTerms(@Nullable List<String> queryTerms) {
             this.queryTerms = Input.ofNullable(queryTerms);
             return this;
         }
 
-        public Builder setTerms(@Nullable Input<List<String>> terms) {
+        public Builder terms(@Nullable Input<List<String>> terms) {
             this.terms = terms;
             return this;
         }
 
-        public Builder setTerms(@Nullable List<String> terms) {
+        public Builder terms(@Nullable List<String> terms) {
             this.terms = Input.ofNullable(terms);
             return this;
         }

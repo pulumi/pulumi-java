@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__EncryptionConfigResponse {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

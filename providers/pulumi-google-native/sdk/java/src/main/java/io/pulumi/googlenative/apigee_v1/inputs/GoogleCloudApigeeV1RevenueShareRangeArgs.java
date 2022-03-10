@@ -91,32 +91,32 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends io.pulumi.re
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(@Nullable Input<String> end) {
+        public Builder end(@Nullable Input<String> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = Input.ofNullable(end);
             return this;
         }
 
-        public Builder setSharePercentage(@Nullable Input<Double> sharePercentage) {
+        public Builder sharePercentage(@Nullable Input<Double> sharePercentage) {
             this.sharePercentage = sharePercentage;
             return this;
         }
 
-        public Builder setSharePercentage(@Nullable Double sharePercentage) {
+        public Builder sharePercentage(@Nullable Double sharePercentage) {
             this.sharePercentage = Input.ofNullable(sharePercentage);
             return this;
         }
 
-        public Builder setStart(@Nullable Input<String> start) {
+        public Builder start(@Nullable Input<String> start) {
             this.start = start;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = Input.ofNullable(start);
             return this;
         }

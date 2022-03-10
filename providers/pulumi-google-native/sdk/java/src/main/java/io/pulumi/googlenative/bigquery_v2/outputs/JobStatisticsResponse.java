@@ -315,87 +315,87 @@ public final class JobStatisticsResponse {
     	      this.transactionInfo = defaults.transactionInfo;
         }
 
-        public Builder setCompletionRatio(Double completionRatio) {
+        public Builder completionRatio(Double completionRatio) {
             this.completionRatio = Objects.requireNonNull(completionRatio);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setExtract(JobStatistics4Response extract) {
+        public Builder extract(JobStatistics4Response extract) {
             this.extract = Objects.requireNonNull(extract);
             return this;
         }
 
-        public Builder setLoad(JobStatistics3Response load) {
+        public Builder load(JobStatistics3Response load) {
             this.load = Objects.requireNonNull(load);
             return this;
         }
 
-        public Builder setNumChildJobs(String numChildJobs) {
+        public Builder numChildJobs(String numChildJobs) {
             this.numChildJobs = Objects.requireNonNull(numChildJobs);
             return this;
         }
 
-        public Builder setParentJobId(String parentJobId) {
+        public Builder parentJobId(String parentJobId) {
             this.parentJobId = Objects.requireNonNull(parentJobId);
             return this;
         }
 
-        public Builder setQuery(JobStatistics2Response query) {
+        public Builder query(JobStatistics2Response query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuotaDeferments(List<String> quotaDeferments) {
+        public Builder quotaDeferments(List<String> quotaDeferments) {
             this.quotaDeferments = Objects.requireNonNull(quotaDeferments);
             return this;
         }
 
-        public Builder setReservationId(String reservationId) {
+        public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
 
-        public Builder setReservationUsage(List<JobStatisticsReservationUsageItemResponse> reservationUsage) {
+        public Builder reservationUsage(List<JobStatisticsReservationUsageItemResponse> reservationUsage) {
             this.reservationUsage = Objects.requireNonNull(reservationUsage);
             return this;
         }
 
-        public Builder setRowLevelSecurityStatistics(RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics) {
+        public Builder rowLevelSecurityStatistics(RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics) {
             this.rowLevelSecurityStatistics = Objects.requireNonNull(rowLevelSecurityStatistics);
             return this;
         }
 
-        public Builder setScriptStatistics(ScriptStatisticsResponse scriptStatistics) {
+        public Builder scriptStatistics(ScriptStatisticsResponse scriptStatistics) {
             this.scriptStatistics = Objects.requireNonNull(scriptStatistics);
             return this;
         }
 
-        public Builder setSessionInfo(SessionInfoResponse sessionInfo) {
+        public Builder sessionInfo(SessionInfoResponse sessionInfo) {
             this.sessionInfo = Objects.requireNonNull(sessionInfo);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTotalSlotMs(String totalSlotMs) {
+        public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
 
-        public Builder setTransactionInfo(TransactionInfoResponse transactionInfo) {
+        public Builder transactionInfo(TransactionInfoResponse transactionInfo) {
             this.transactionInfo = Objects.requireNonNull(transactionInfo);
             return this;
         }

@@ -58,12 +58,12 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable Input<List<Double>> values) {
+        public Builder values(@Nullable Input<List<Double>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<Double> values) {
+        public Builder values(@Nullable List<Double> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

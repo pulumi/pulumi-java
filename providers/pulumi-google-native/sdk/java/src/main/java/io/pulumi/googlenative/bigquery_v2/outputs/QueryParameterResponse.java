@@ -83,17 +83,17 @@ public final class QueryParameterResponse {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameterType(QueryParameterTypeResponse parameterType) {
+        public Builder parameterType(QueryParameterTypeResponse parameterType) {
             this.parameterType = Objects.requireNonNull(parameterType);
             return this;
         }
 
-        public Builder setParameterValue(QueryParameterValueResponse parameterValue) {
+        public Builder parameterValue(QueryParameterValueResponse parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

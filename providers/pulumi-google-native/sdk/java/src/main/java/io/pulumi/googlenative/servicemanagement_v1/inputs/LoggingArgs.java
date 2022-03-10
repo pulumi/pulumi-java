@@ -75,22 +75,22 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder setConsumerDestinations(@Nullable Input<List<LoggingDestinationArgs>> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable Input<List<LoggingDestinationArgs>> consumerDestinations) {
             this.consumerDestinations = consumerDestinations;
             return this;
         }
 
-        public Builder setConsumerDestinations(@Nullable List<LoggingDestinationArgs> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable List<LoggingDestinationArgs> consumerDestinations) {
             this.consumerDestinations = Input.ofNullable(consumerDestinations);
             return this;
         }
 
-        public Builder setProducerDestinations(@Nullable Input<List<LoggingDestinationArgs>> producerDestinations) {
+        public Builder producerDestinations(@Nullable Input<List<LoggingDestinationArgs>> producerDestinations) {
             this.producerDestinations = producerDestinations;
             return this;
         }
 
-        public Builder setProducerDestinations(@Nullable List<LoggingDestinationArgs> producerDestinations) {
+        public Builder producerDestinations(@Nullable List<LoggingDestinationArgs> producerDestinations) {
             this.producerDestinations = Input.ofNullable(producerDestinations);
             return this;
         }

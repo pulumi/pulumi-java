@@ -74,17 +74,17 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
     	      this.regionId = defaults.regionId;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegionId(String regionId) {
+        public Builder regionId(String regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }

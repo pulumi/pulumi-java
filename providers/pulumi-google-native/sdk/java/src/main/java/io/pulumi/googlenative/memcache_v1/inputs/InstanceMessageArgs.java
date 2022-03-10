@@ -71,22 +71,22 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(@Nullable Input<InstanceMessageCode> code) {
+        public Builder code(@Nullable Input<InstanceMessageCode> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable InstanceMessageCode code) {
+        public Builder code(@Nullable InstanceMessageCode code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }

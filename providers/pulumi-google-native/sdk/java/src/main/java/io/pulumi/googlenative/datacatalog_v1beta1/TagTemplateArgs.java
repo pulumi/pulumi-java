@@ -123,62 +123,62 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagTemplateId = defaults.tagTemplateId;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFields(Input<Map<String,String>> fields) {
+        public Builder fields(Input<Map<String,String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(Map<String,String> fields) {
+        public Builder fields(Map<String,String> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTagTemplateId(Input<String> tagTemplateId) {
+        public Builder tagTemplateId(Input<String> tagTemplateId) {
             this.tagTemplateId = Objects.requireNonNull(tagTemplateId);
             return this;
         }
 
-        public Builder setTagTemplateId(String tagTemplateId) {
+        public Builder tagTemplateId(String tagTemplateId) {
             this.tagTemplateId = Input.of(Objects.requireNonNull(tagTemplateId));
             return this;
         }

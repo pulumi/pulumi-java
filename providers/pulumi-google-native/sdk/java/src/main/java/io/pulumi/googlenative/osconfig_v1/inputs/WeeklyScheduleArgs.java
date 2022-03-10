@@ -56,12 +56,12 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder setDayOfWeek(Input<WeeklyScheduleDayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(Input<WeeklyScheduleDayOfWeek> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOfWeek(WeeklyScheduleDayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(WeeklyScheduleDayOfWeek dayOfWeek) {
             this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }

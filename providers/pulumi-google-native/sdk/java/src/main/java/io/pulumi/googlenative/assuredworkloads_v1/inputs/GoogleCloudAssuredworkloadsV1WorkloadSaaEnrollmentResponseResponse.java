@@ -73,12 +73,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     	      this.setupStatus = defaults.setupStatus;
         }
 
-        public Builder setSetupErrors(List<String> setupErrors) {
+        public Builder setupErrors(List<String> setupErrors) {
             this.setupErrors = Objects.requireNonNull(setupErrors);
             return this;
         }
 
-        public Builder setSetupStatus(String setupStatus) {
+        public Builder setupStatus(String setupStatus) {
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
         }

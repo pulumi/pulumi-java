@@ -150,72 +150,72 @@ public final class IosAppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.teamId = defaults.teamId;
         }
 
-        public Builder setAppId(@Nullable Input<String> appId) {
+        public Builder appId(@Nullable Input<String> appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = Input.ofNullable(appId);
             return this;
         }
 
-        public Builder setAppStoreId(@Nullable Input<String> appStoreId) {
+        public Builder appStoreId(@Nullable Input<String> appStoreId) {
             this.appStoreId = appStoreId;
             return this;
         }
 
-        public Builder setAppStoreId(@Nullable String appStoreId) {
+        public Builder appStoreId(@Nullable String appStoreId) {
             this.appStoreId = Input.ofNullable(appStoreId);
             return this;
         }
 
-        public Builder setBundleId(@Nullable Input<String> bundleId) {
+        public Builder bundleId(@Nullable Input<String> bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = Input.ofNullable(bundleId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTeamId(@Nullable Input<String> teamId) {
+        public Builder teamId(@Nullable Input<String> teamId) {
             this.teamId = teamId;
             return this;
         }
 
-        public Builder setTeamId(@Nullable String teamId) {
+        public Builder teamId(@Nullable String teamId) {
             this.teamId = Input.ofNullable(teamId);
             return this;
         }

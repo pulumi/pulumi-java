@@ -48,7 +48,7 @@ public final class VpcPeeringConnectivityResponse {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

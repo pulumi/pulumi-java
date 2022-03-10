@@ -74,12 +74,12 @@ public final class MetadataLabelMatcherResponse extends io.pulumi.resources.Invo
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder setMetadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder setMetadataLabels(List<MetadataLabelsResponse> metadataLabels) {
+        public Builder metadataLabels(List<MetadataLabelsResponse> metadataLabels) {
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }

@@ -125,52 +125,52 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setLegendTemplate(@Nullable Input<String> legendTemplate) {
+        public Builder legendTemplate(@Nullable Input<String> legendTemplate) {
             this.legendTemplate = legendTemplate;
             return this;
         }
 
-        public Builder setLegendTemplate(@Nullable String legendTemplate) {
+        public Builder legendTemplate(@Nullable String legendTemplate) {
             this.legendTemplate = Input.ofNullable(legendTemplate);
             return this;
         }
 
-        public Builder setMinAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable Input<String> minAlignmentPeriod) {
             this.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
 
-        public Builder setMinAlignmentPeriod(@Nullable String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
             this.minAlignmentPeriod = Input.ofNullable(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setPlotType(@Nullable Input<DataSetPlotType> plotType) {
+        public Builder plotType(@Nullable Input<DataSetPlotType> plotType) {
             this.plotType = plotType;
             return this;
         }
 
-        public Builder setPlotType(@Nullable DataSetPlotType plotType) {
+        public Builder plotType(@Nullable DataSetPlotType plotType) {
             this.plotType = Input.ofNullable(plotType);
             return this;
         }
 
-        public Builder setTargetAxis(@Nullable Input<DataSetTargetAxis> targetAxis) {
+        public Builder targetAxis(@Nullable Input<DataSetTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
 
-        public Builder setTargetAxis(@Nullable DataSetTargetAxis targetAxis) {
+        public Builder targetAxis(@Nullable DataSetTargetAxis targetAxis) {
             this.targetAxis = Input.ofNullable(targetAxis);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
+        public Builder timeSeriesQuery(Input<TimeSeriesQueryArgs> timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryArgs timeSeriesQuery) {
             this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }

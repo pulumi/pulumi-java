@@ -70,22 +70,22 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder setAttachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Input<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder setAttachmentId(@Nullable String attachmentId) {
+        public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Input.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

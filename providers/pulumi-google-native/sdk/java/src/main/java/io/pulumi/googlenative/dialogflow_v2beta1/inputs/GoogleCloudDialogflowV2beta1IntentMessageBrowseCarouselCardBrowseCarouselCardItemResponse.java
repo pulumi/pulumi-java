@@ -122,27 +122,27 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFooter(String footer) {
+        public Builder footer(String footer) {
             this.footer = Objects.requireNonNull(footer);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction) {
+        public Builder openUriAction(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

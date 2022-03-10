@@ -73,12 +73,12 @@ public final class AnimationStaticResponse extends io.pulumi.resources.InvokeArg
     	      this.xy = defaults.xy;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
 
-        public Builder setXy(NormalizedCoordinateResponse xy) {
+        public Builder xy(NormalizedCoordinateResponse xy) {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }

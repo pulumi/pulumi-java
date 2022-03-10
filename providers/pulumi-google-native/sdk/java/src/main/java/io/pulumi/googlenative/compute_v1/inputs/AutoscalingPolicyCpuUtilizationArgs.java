@@ -75,22 +75,22 @@ public final class AutoscalingPolicyCpuUtilizationArgs extends io.pulumi.resourc
     	      this.utilizationTarget = defaults.utilizationTarget;
         }
 
-        public Builder setPredictiveMethod(@Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod) {
+        public Builder predictiveMethod(@Nullable Input<AutoscalingPolicyCpuUtilizationPredictiveMethod> predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
-        public Builder setPredictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
+        public Builder predictiveMethod(@Nullable AutoscalingPolicyCpuUtilizationPredictiveMethod predictiveMethod) {
             this.predictiveMethod = Input.ofNullable(predictiveMethod);
             return this;
         }
 
-        public Builder setUtilizationTarget(@Nullable Input<Double> utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Input<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
 
-        public Builder setUtilizationTarget(@Nullable Double utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Double utilizationTarget) {
             this.utilizationTarget = Input.ofNullable(utilizationTarget);
             return this;
         }

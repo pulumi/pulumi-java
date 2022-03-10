@@ -138,32 +138,32 @@ public final class GitHubEventsConfigResponse extends io.pulumi.resources.Invoke
     	      this.push = defaults.push;
         }
 
-        public Builder setEnterpriseConfigResourceName(String enterpriseConfigResourceName) {
+        public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName);
             return this;
         }
 
-        public Builder setInstallationId(String installationId) {
+        public Builder installationId(String installationId) {
             this.installationId = Objects.requireNonNull(installationId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setPullRequest(PullRequestFilterResponse pullRequest) {
+        public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             this.pullRequest = Objects.requireNonNull(pullRequest);
             return this;
         }
 
-        public Builder setPush(PushFilterResponse push) {
+        public Builder push(PushFilterResponse push) {
             this.push = Objects.requireNonNull(push);
             return this;
         }

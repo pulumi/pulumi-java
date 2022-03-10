@@ -120,52 +120,52 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
     	      this.trainingLoss = defaults.trainingLoss;
         }
 
-        public Builder setDurationMs(@Nullable Input<String> durationMs) {
+        public Builder durationMs(@Nullable Input<String> durationMs) {
             this.durationMs = durationMs;
             return this;
         }
 
-        public Builder setDurationMs(@Nullable String durationMs) {
+        public Builder durationMs(@Nullable String durationMs) {
             this.durationMs = Input.ofNullable(durationMs);
             return this;
         }
 
-        public Builder setEvalLoss(@Nullable Input<Double> evalLoss) {
+        public Builder evalLoss(@Nullable Input<Double> evalLoss) {
             this.evalLoss = evalLoss;
             return this;
         }
 
-        public Builder setEvalLoss(@Nullable Double evalLoss) {
+        public Builder evalLoss(@Nullable Double evalLoss) {
             this.evalLoss = Input.ofNullable(evalLoss);
             return this;
         }
 
-        public Builder setIndex(@Nullable Input<Integer> index) {
+        public Builder index(@Nullable Input<Integer> index) {
             this.index = index;
             return this;
         }
 
-        public Builder setIndex(@Nullable Integer index) {
+        public Builder index(@Nullable Integer index) {
             this.index = Input.ofNullable(index);
             return this;
         }
 
-        public Builder setLearnRate(@Nullable Input<Double> learnRate) {
+        public Builder learnRate(@Nullable Input<Double> learnRate) {
             this.learnRate = learnRate;
             return this;
         }
 
-        public Builder setLearnRate(@Nullable Double learnRate) {
+        public Builder learnRate(@Nullable Double learnRate) {
             this.learnRate = Input.ofNullable(learnRate);
             return this;
         }
 
-        public Builder setTrainingLoss(@Nullable Input<Double> trainingLoss) {
+        public Builder trainingLoss(@Nullable Input<Double> trainingLoss) {
             this.trainingLoss = trainingLoss;
             return this;
         }
 
-        public Builder setTrainingLoss(@Nullable Double trainingLoss) {
+        public Builder trainingLoss(@Nullable Double trainingLoss) {
             this.trainingLoss = Input.ofNullable(trainingLoss);
             return this;
         }

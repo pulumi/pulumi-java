@@ -149,82 +149,82 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
     	      this.vms = defaults.vms;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSourceId(Input<String> sourceId) {
+        public Builder sourceId(Input<String> sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Input.of(Objects.requireNonNull(sourceId));
             return this;
         }
 
-        public Builder setTimeFrame(@Nullable Input<UtilizationReportTimeFrame> timeFrame) {
+        public Builder timeFrame(@Nullable Input<UtilizationReportTimeFrame> timeFrame) {
             this.timeFrame = timeFrame;
             return this;
         }
 
-        public Builder setTimeFrame(@Nullable UtilizationReportTimeFrame timeFrame) {
+        public Builder timeFrame(@Nullable UtilizationReportTimeFrame timeFrame) {
             this.timeFrame = Input.ofNullable(timeFrame);
             return this;
         }
 
-        public Builder setUtilizationReportId(Input<String> utilizationReportId) {
+        public Builder utilizationReportId(Input<String> utilizationReportId) {
             this.utilizationReportId = Objects.requireNonNull(utilizationReportId);
             return this;
         }
 
-        public Builder setUtilizationReportId(String utilizationReportId) {
+        public Builder utilizationReportId(String utilizationReportId) {
             this.utilizationReportId = Input.of(Objects.requireNonNull(utilizationReportId));
             return this;
         }
 
-        public Builder setVms(@Nullable Input<List<VmUtilizationInfoArgs>> vms) {
+        public Builder vms(@Nullable Input<List<VmUtilizationInfoArgs>> vms) {
             this.vms = vms;
             return this;
         }
 
-        public Builder setVms(@Nullable List<VmUtilizationInfoArgs> vms) {
+        public Builder vms(@Nullable List<VmUtilizationInfoArgs> vms) {
             this.vms = Input.ofNullable(vms);
             return this;
         }

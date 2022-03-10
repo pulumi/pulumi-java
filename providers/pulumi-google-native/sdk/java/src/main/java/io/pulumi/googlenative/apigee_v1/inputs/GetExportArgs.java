@@ -72,17 +72,17 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setExportId(String exportId) {
+        public Builder exportId(String exportId) {
             this.exportId = Objects.requireNonNull(exportId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

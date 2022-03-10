@@ -65,12 +65,12 @@ public final class SchematizedDataResponse {
     	      this.error = defaults.error;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setError(String error) {
+        public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }

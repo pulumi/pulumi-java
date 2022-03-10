@@ -158,82 +158,82 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(Input<AuthorizationPolicyAction> action) {
+        public Builder action(Input<AuthorizationPolicyAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(AuthorizationPolicyAction action) {
+        public Builder action(AuthorizationPolicyAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setAuthorizationPolicyId(Input<String> authorizationPolicyId) {
+        public Builder authorizationPolicyId(Input<String> authorizationPolicyId) {
             this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
             return this;
         }
 
-        public Builder setAuthorizationPolicyId(String authorizationPolicyId) {
+        public Builder authorizationPolicyId(String authorizationPolicyId) {
             this.authorizationPolicyId = Input.of(Objects.requireNonNull(authorizationPolicyId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RuleArgs> rules) {
+        public Builder rules(@Nullable List<RuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

@@ -90,17 +90,17 @@ public final class SoftwareRecipeStepInstallMsiResponse extends io.pulumi.resour
     	      this.flags = defaults.flags;
         }
 
-        public Builder setAllowedExitCodes(List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setFlags(List<String> flags) {
+        public Builder flags(List<String> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }

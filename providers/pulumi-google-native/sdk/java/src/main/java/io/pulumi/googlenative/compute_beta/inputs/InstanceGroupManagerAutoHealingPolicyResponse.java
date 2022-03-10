@@ -69,12 +69,12 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setHealthCheck(String healthCheck) {
+        public Builder healthCheck(String healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }

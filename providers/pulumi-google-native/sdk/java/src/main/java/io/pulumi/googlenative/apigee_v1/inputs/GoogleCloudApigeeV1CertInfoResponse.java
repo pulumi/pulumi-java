@@ -218,57 +218,57 @@ public final class GoogleCloudApigeeV1CertInfoResponse extends io.pulumi.resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setBasicConstraints(String basicConstraints) {
+        public Builder basicConstraints(String basicConstraints) {
             this.basicConstraints = Objects.requireNonNull(basicConstraints);
             return this;
         }
 
-        public Builder setExpiryDate(String expiryDate) {
+        public Builder expiryDate(String expiryDate) {
             this.expiryDate = Objects.requireNonNull(expiryDate);
             return this;
         }
 
-        public Builder setIsValid(String isValid) {
+        public Builder isValid(String isValid) {
             this.isValid = Objects.requireNonNull(isValid);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSigAlgName(String sigAlgName) {
+        public Builder sigAlgName(String sigAlgName) {
             this.sigAlgName = Objects.requireNonNull(sigAlgName);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setValidFrom(String validFrom) {
+        public Builder validFrom(String validFrom) {
             this.validFrom = Objects.requireNonNull(validFrom);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

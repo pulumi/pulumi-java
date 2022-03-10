@@ -74,22 +74,22 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
         }
 
-        public Builder setSplitHealthChecks(@Nullable Input<Boolean> splitHealthChecks) {
+        public Builder splitHealthChecks(@Nullable Input<Boolean> splitHealthChecks) {
             this.splitHealthChecks = splitHealthChecks;
             return this;
         }
 
-        public Builder setSplitHealthChecks(@Nullable Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(@Nullable Boolean splitHealthChecks) {
             this.splitHealthChecks = Input.ofNullable(splitHealthChecks);
             return this;
         }
 
-        public Builder setUseContainerOptimizedOs(@Nullable Input<Boolean> useContainerOptimizedOs) {
+        public Builder useContainerOptimizedOs(@Nullable Input<Boolean> useContainerOptimizedOs) {
             this.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
         }
 
-        public Builder setUseContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
+        public Builder useContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
             this.useContainerOptimizedOs = Input.ofNullable(useContainerOptimizedOs);
             return this;
         }

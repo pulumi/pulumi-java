@@ -141,62 +141,62 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sampleRateHertz = defaults.sampleRateHertz;
         }
 
-        public Builder setBitrateBps(Input<Integer> bitrateBps) {
+        public Builder bitrateBps(Input<Integer> bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Input.of(Objects.requireNonNull(bitrateBps));
             return this;
         }
 
-        public Builder setChannelCount(@Nullable Input<Integer> channelCount) {
+        public Builder channelCount(@Nullable Input<Integer> channelCount) {
             this.channelCount = channelCount;
             return this;
         }
 
-        public Builder setChannelCount(@Nullable Integer channelCount) {
+        public Builder channelCount(@Nullable Integer channelCount) {
             this.channelCount = Input.ofNullable(channelCount);
             return this;
         }
 
-        public Builder setChannelLayout(@Nullable Input<List<String>> channelLayout) {
+        public Builder channelLayout(@Nullable Input<List<String>> channelLayout) {
             this.channelLayout = channelLayout;
             return this;
         }
 
-        public Builder setChannelLayout(@Nullable List<String> channelLayout) {
+        public Builder channelLayout(@Nullable List<String> channelLayout) {
             this.channelLayout = Input.ofNullable(channelLayout);
             return this;
         }
 
-        public Builder setCodec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Input<String> codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = Input.ofNullable(codec);
             return this;
         }
 
-        public Builder setMapping(@Nullable Input<List<AudioMappingArgs>> mapping) {
+        public Builder mapping(@Nullable Input<List<AudioMappingArgs>> mapping) {
             this.mapping = mapping;
             return this;
         }
 
-        public Builder setMapping(@Nullable List<AudioMappingArgs> mapping) {
+        public Builder mapping(@Nullable List<AudioMappingArgs> mapping) {
             this.mapping = Input.ofNullable(mapping);
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Integer sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
             return this;
         }

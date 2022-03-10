@@ -53,12 +53,12 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
     	      this.metadataBasedReadinessSignal = defaults.metadataBasedReadinessSignal;
         }
 
-        public Builder setMetadataBasedReadinessSignal(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
+        public Builder metadataBasedReadinessSignal(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
             this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
             return this;
         }
 
-        public Builder setMetadataBasedReadinessSignal(@Nullable InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
+        public Builder metadataBasedReadinessSignal(@Nullable InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
             this.metadataBasedReadinessSignal = Input.ofNullable(metadataBasedReadinessSignal);
             return this;
         }

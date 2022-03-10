@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse {
     	      this.kMapEstimationHistogram = defaults.kMapEstimationHistogram;
         }
 
-        public Builder setKMapEstimationHistogram(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
+        public Builder kMapEstimationHistogram(List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram) {
             this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram);
             return this;
         }

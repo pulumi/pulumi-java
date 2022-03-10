@@ -65,12 +65,12 @@ public final class IngressSourceResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setAccessLevel(String accessLevel) {
+        public Builder accessLevel(String accessLevel) {
             this.accessLevel = Objects.requireNonNull(accessLevel);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

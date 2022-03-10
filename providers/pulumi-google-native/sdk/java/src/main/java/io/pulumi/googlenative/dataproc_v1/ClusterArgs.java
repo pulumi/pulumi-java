@@ -140,72 +140,72 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setActionOnFailedPrimaryWorkers(@Nullable Input<String> actionOnFailedPrimaryWorkers) {
+        public Builder actionOnFailedPrimaryWorkers(@Nullable Input<String> actionOnFailedPrimaryWorkers) {
             this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
             return this;
         }
 
-        public Builder setActionOnFailedPrimaryWorkers(@Nullable String actionOnFailedPrimaryWorkers) {
+        public Builder actionOnFailedPrimaryWorkers(@Nullable String actionOnFailedPrimaryWorkers) {
             this.actionOnFailedPrimaryWorkers = Input.ofNullable(actionOnFailedPrimaryWorkers);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<ClusterConfigArgs> config) {
+        public Builder config(@Nullable Input<ClusterConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable ClusterConfigArgs config) {
+        public Builder config(@Nullable ClusterConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

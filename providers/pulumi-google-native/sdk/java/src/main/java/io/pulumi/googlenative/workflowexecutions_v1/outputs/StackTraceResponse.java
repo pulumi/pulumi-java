@@ -49,7 +49,7 @@ public final class StackTraceResponse {
     	      this.elements = defaults.elements;
         }
 
-        public Builder setElements(List<StackTraceElementResponse> elements) {
+        public Builder elements(List<StackTraceElementResponse> elements) {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }

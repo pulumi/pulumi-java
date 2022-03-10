@@ -124,27 +124,27 @@ public final class DomainMappingStatusResponse extends io.pulumi.resources.Invok
     	      this.url = defaults.url;
         }
 
-        public Builder setConditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setMappedRouteName(String mappedRouteName) {
+        public Builder mappedRouteName(String mappedRouteName) {
             this.mappedRouteName = Objects.requireNonNull(mappedRouteName);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setResourceRecords(List<ResourceRecordResponse> resourceRecords) {
+        public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

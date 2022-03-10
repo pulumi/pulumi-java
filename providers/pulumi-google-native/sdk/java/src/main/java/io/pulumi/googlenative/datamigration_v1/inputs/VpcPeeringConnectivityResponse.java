@@ -55,7 +55,7 @@ public final class VpcPeeringConnectivityResponse extends io.pulumi.resources.In
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

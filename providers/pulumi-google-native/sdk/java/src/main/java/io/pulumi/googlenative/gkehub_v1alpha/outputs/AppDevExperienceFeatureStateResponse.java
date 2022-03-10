@@ -48,7 +48,7 @@ public final class AppDevExperienceFeatureStateResponse {
     	      this.networkingInstallSucceeded = defaults.networkingInstallSucceeded;
         }
 
-        public Builder setNetworkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
+        public Builder networkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }

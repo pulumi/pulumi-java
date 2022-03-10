@@ -134,32 +134,32 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setAudio(GoogleCloudDialogflowCxV3AudioInputResponse audio) {
+        public Builder audio(GoogleCloudDialogflowCxV3AudioInputResponse audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
 
-        public Builder setDtmf(GoogleCloudDialogflowCxV3DtmfInputResponse dtmf) {
+        public Builder dtmf(GoogleCloudDialogflowCxV3DtmfInputResponse dtmf) {
             this.dtmf = Objects.requireNonNull(dtmf);
             return this;
         }
 
-        public Builder setEvent(GoogleCloudDialogflowCxV3EventInputResponse event) {
+        public Builder event(GoogleCloudDialogflowCxV3EventInputResponse event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setIntent(GoogleCloudDialogflowCxV3IntentInputResponse intent) {
+        public Builder intent(GoogleCloudDialogflowCxV3IntentInputResponse intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setText(GoogleCloudDialogflowCxV3TextInputResponse text) {
+        public Builder text(GoogleCloudDialogflowCxV3TextInputResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

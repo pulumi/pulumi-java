@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends io.pulumi.r
     	      this.expressions = defaults.expressions;
         }
 
-        public Builder setExpressions(GooglePrivacyDlpV2ExpressionsResponse expressions) {
+        public Builder expressions(GooglePrivacyDlpV2ExpressionsResponse expressions) {
             this.expressions = Objects.requireNonNull(expressions);
             return this;
         }

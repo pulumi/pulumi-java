@@ -74,17 +74,17 @@ public final class GetTransferConfigArgs extends io.pulumi.resources.InvokeArgs 
     	      this.transferConfigId = defaults.transferConfigId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTransferConfigId(String transferConfigId) {
+        public Builder transferConfigId(String transferConfigId) {
             this.transferConfigId = Objects.requireNonNull(transferConfigId);
             return this;
         }

@@ -75,22 +75,22 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.updateId = defaults.updateId;
         }
 
-        public Builder setRevision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Input<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setUpdateId(@Nullable Input<String> updateId) {
+        public Builder updateId(@Nullable Input<String> updateId) {
             this.updateId = updateId;
             return this;
         }
 
-        public Builder setUpdateId(@Nullable String updateId) {
+        public Builder updateId(@Nullable String updateId) {
             this.updateId = Input.ofNullable(updateId);
             return this;
         }

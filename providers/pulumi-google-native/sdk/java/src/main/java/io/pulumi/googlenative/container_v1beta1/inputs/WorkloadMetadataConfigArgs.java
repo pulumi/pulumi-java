@@ -75,22 +75,22 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
     	      this.nodeMetadata = defaults.nodeMetadata;
         }
 
-        public Builder setMode(@Nullable Input<WorkloadMetadataConfigMode> mode) {
+        public Builder mode(@Nullable Input<WorkloadMetadataConfigMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable WorkloadMetadataConfigMode mode) {
+        public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setNodeMetadata(@Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
+        public Builder nodeMetadata(@Nullable Input<WorkloadMetadataConfigNodeMetadata> nodeMetadata) {
             this.nodeMetadata = nodeMetadata;
             return this;
         }
 
-        public Builder setNodeMetadata(@Nullable WorkloadMetadataConfigNodeMetadata nodeMetadata) {
+        public Builder nodeMetadata(@Nullable WorkloadMetadataConfigNodeMetadata nodeMetadata) {
             this.nodeMetadata = Input.ofNullable(nodeMetadata);
             return this;
         }

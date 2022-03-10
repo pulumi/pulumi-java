@@ -185,92 +185,92 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setDisableModifications(@Nullable Input<Boolean> disableModifications) {
+        public Builder disableModifications(@Nullable Input<Boolean> disableModifications) {
             this.disableModifications = disableModifications;
             return this;
         }
 
-        public Builder setDisableModifications(@Nullable Boolean disableModifications) {
+        public Builder disableModifications(@Nullable Boolean disableModifications) {
             this.disableModifications = Input.ofNullable(disableModifications);
             return this;
         }
 
-        public Builder setDisableServing(@Nullable Input<Boolean> disableServing) {
+        public Builder disableServing(@Nullable Input<Boolean> disableServing) {
             this.disableServing = disableServing;
             return this;
         }
 
-        public Builder setDisableServing(@Nullable Boolean disableServing) {
+        public Builder disableServing(@Nullable Boolean disableServing) {
             this.disableServing = Input.ofNullable(disableServing);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setIndexingServiceAccounts(@Nullable Input<List<String>> indexingServiceAccounts) {
+        public Builder indexingServiceAccounts(@Nullable Input<List<String>> indexingServiceAccounts) {
             this.indexingServiceAccounts = indexingServiceAccounts;
             return this;
         }
 
-        public Builder setIndexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
+        public Builder indexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
             this.indexingServiceAccounts = Input.ofNullable(indexingServiceAccounts);
             return this;
         }
 
-        public Builder setItemsVisibility(@Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility) {
+        public Builder itemsVisibility(@Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility) {
             this.itemsVisibility = itemsVisibility;
             return this;
         }
 
-        public Builder setItemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
+        public Builder itemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
             this.itemsVisibility = Input.ofNullable(itemsVisibility);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperationIds(@Nullable Input<List<String>> operationIds) {
+        public Builder operationIds(@Nullable Input<List<String>> operationIds) {
             this.operationIds = operationIds;
             return this;
         }
 
-        public Builder setOperationIds(@Nullable List<String> operationIds) {
+        public Builder operationIds(@Nullable List<String> operationIds) {
             this.operationIds = Input.ofNullable(operationIds);
             return this;
         }
 
-        public Builder setReturnThumbnailUrls(@Nullable Input<Boolean> returnThumbnailUrls) {
+        public Builder returnThumbnailUrls(@Nullable Input<Boolean> returnThumbnailUrls) {
             this.returnThumbnailUrls = returnThumbnailUrls;
             return this;
         }
 
-        public Builder setReturnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
+        public Builder returnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
             this.returnThumbnailUrls = Input.ofNullable(returnThumbnailUrls);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }

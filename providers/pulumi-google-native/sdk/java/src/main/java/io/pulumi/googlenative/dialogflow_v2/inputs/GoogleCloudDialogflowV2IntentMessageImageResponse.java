@@ -72,12 +72,12 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse extends io.
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder setAccessibilityText(String accessibilityText) {
+        public Builder accessibilityText(String accessibilityText) {
             this.accessibilityText = Objects.requireNonNull(accessibilityText);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }

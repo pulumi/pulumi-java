@@ -81,17 +81,17 @@ public final class IstioCanonicalServiceResponse {
     	      this.meshUid = defaults.meshUid;
         }
 
-        public Builder setCanonicalService(String canonicalService) {
+        public Builder canonicalService(String canonicalService) {
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
 
-        public Builder setCanonicalServiceNamespace(String canonicalServiceNamespace) {
+        public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
 
-        public Builder setMeshUid(String meshUid) {
+        public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }

@@ -92,32 +92,32 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setCommonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Input<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setSubject(Input<SubjectArgs> subject) {
+        public Builder subject(Input<SubjectArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(SubjectArgs subject) {
+        public Builder subject(SubjectArgs subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable Input<SubjectAltNamesArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Input<SubjectAltNamesArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
+        public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }

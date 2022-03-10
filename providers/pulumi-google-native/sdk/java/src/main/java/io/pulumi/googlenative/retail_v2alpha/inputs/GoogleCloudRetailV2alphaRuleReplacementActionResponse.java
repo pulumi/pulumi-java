@@ -89,17 +89,17 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
     	      this.term = defaults.term;
         }
 
-        public Builder setQueryTerms(List<String> queryTerms) {
+        public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
 
-        public Builder setReplacementTerm(String replacementTerm) {
+        public Builder replacementTerm(String replacementTerm) {
             this.replacementTerm = Objects.requireNonNull(replacementTerm);
             return this;
         }
 
-        public Builder setTerm(String term) {
+        public Builder term(String term) {
             this.term = Objects.requireNonNull(term);
             return this;
         }

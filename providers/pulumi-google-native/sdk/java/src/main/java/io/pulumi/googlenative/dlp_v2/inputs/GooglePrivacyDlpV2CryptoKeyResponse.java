@@ -90,17 +90,17 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse extends io.pulumi.resourc
     	      this.unwrapped = defaults.unwrapped;
         }
 
-        public Builder setKmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped) {
+        public Builder kmsWrapped(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped) {
             this.kmsWrapped = Objects.requireNonNull(kmsWrapped);
             return this;
         }
 
-        public Builder set$transient(GooglePrivacyDlpV2TransientCryptoKeyResponse $transient) {
+        public Builder $transient(GooglePrivacyDlpV2TransientCryptoKeyResponse $transient) {
             this.$transient = Objects.requireNonNull($transient);
             return this;
         }
 
-        public Builder setUnwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
+        public Builder unwrapped(GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }

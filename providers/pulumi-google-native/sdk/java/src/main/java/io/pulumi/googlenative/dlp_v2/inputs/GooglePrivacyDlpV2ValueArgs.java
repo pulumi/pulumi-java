@@ -175,82 +175,82 @@ public final class GooglePrivacyDlpV2ValueArgs extends io.pulumi.resources.Resou
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBooleanValue(@Nullable Input<Boolean> booleanValue) {
+        public Builder booleanValue(@Nullable Input<Boolean> booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setBooleanValue(@Nullable Boolean booleanValue) {
+        public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = Input.ofNullable(booleanValue);
             return this;
         }
 
-        public Builder setDateValue(@Nullable Input<GoogleTypeDateArgs> dateValue) {
+        public Builder dateValue(@Nullable Input<GoogleTypeDateArgs> dateValue) {
             this.dateValue = dateValue;
             return this;
         }
 
-        public Builder setDateValue(@Nullable GoogleTypeDateArgs dateValue) {
+        public Builder dateValue(@Nullable GoogleTypeDateArgs dateValue) {
             this.dateValue = Input.ofNullable(dateValue);
             return this;
         }
 
-        public Builder setDayOfWeekValue(@Nullable Input<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue) {
+        public Builder dayOfWeekValue(@Nullable Input<GooglePrivacyDlpV2ValueDayOfWeekValue> dayOfWeekValue) {
             this.dayOfWeekValue = dayOfWeekValue;
             return this;
         }
 
-        public Builder setDayOfWeekValue(@Nullable GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
+        public Builder dayOfWeekValue(@Nullable GooglePrivacyDlpV2ValueDayOfWeekValue dayOfWeekValue) {
             this.dayOfWeekValue = Input.ofNullable(dayOfWeekValue);
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Input<Double> floatValue) {
+        public Builder floatValue(@Nullable Input<Double> floatValue) {
             this.floatValue = floatValue;
             return this;
         }
 
-        public Builder setFloatValue(@Nullable Double floatValue) {
+        public Builder floatValue(@Nullable Double floatValue) {
             this.floatValue = Input.ofNullable(floatValue);
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable Input<String> integerValue) {
+        public Builder integerValue(@Nullable Input<String> integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable String integerValue) {
+        public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = Input.ofNullable(integerValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
 
-        public Builder setTimeValue(@Nullable Input<GoogleTypeTimeOfDayArgs> timeValue) {
+        public Builder timeValue(@Nullable Input<GoogleTypeTimeOfDayArgs> timeValue) {
             this.timeValue = timeValue;
             return this;
         }
 
-        public Builder setTimeValue(@Nullable GoogleTypeTimeOfDayArgs timeValue) {
+        public Builder timeValue(@Nullable GoogleTypeTimeOfDayArgs timeValue) {
             this.timeValue = Input.ofNullable(timeValue);
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable Input<String> timestampValue) {
+        public Builder timestampValue(@Nullable Input<String> timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = Input.ofNullable(timestampValue);
             return this;
         }

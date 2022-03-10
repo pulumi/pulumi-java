@@ -74,22 +74,22 @@ public final class BuildArtifactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setImage(@Nullable Input<String> image) {
+        public Builder image(@Nullable Input<String> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

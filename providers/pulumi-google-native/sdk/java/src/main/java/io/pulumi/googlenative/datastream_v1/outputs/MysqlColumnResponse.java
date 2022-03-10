@@ -147,37 +147,37 @@ public final class MysqlColumnResponse {
     	      this.primaryKey = defaults.primaryKey;
         }
 
-        public Builder setCollation(String collation) {
+        public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setDataType(String dataType) {
+        public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setLength(Integer length) {
+        public Builder length(Integer length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
-        public Builder setNullable(Boolean nullable) {
+        public Builder nullable(Boolean nullable) {
             this.nullable = Objects.requireNonNull(nullable);
             return this;
         }
 
-        public Builder setOrdinalPosition(Integer ordinalPosition) {
+        public Builder ordinalPosition(Integer ordinalPosition) {
             this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
             return this;
         }
 
-        public Builder setPrimaryKey(Boolean primaryKey) {
+        public Builder primaryKey(Boolean primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }

@@ -121,27 +121,27 @@ public final class LoadBalancerBackendResponse extends io.pulumi.resources.Invok
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHealthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
+        public Builder healthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
             this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules);
             return this;
         }
 
-        public Builder setHealthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
+        public Builder healthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
             this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules);
             return this;
         }
 
-        public Builder setHealthCheckFirewallState(String healthCheckFirewallState) {
+        public Builder healthCheckFirewallState(String healthCheckFirewallState) {
             this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

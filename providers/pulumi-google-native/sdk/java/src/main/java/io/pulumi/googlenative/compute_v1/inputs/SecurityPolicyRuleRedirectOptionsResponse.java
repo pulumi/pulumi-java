@@ -68,12 +68,12 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

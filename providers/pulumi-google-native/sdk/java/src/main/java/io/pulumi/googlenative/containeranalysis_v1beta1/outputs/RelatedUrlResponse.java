@@ -65,12 +65,12 @@ public final class RelatedUrlResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

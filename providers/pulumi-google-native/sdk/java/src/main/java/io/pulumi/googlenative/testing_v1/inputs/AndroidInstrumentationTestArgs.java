@@ -191,92 +191,92 @@ public final class AndroidInstrumentationTestArgs extends io.pulumi.resources.Re
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setAppApk(@Nullable Input<FileReferenceArgs> appApk) {
+        public Builder appApk(@Nullable Input<FileReferenceArgs> appApk) {
             this.appApk = appApk;
             return this;
         }
 
-        public Builder setAppApk(@Nullable FileReferenceArgs appApk) {
+        public Builder appApk(@Nullable FileReferenceArgs appApk) {
             this.appApk = Input.ofNullable(appApk);
             return this;
         }
 
-        public Builder setAppBundle(@Nullable Input<AppBundleArgs> appBundle) {
+        public Builder appBundle(@Nullable Input<AppBundleArgs> appBundle) {
             this.appBundle = appBundle;
             return this;
         }
 
-        public Builder setAppBundle(@Nullable AppBundleArgs appBundle) {
+        public Builder appBundle(@Nullable AppBundleArgs appBundle) {
             this.appBundle = Input.ofNullable(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable Input<String> appPackageId) {
+        public Builder appPackageId(@Nullable Input<String> appPackageId) {
             this.appPackageId = appPackageId;
             return this;
         }
 
-        public Builder setAppPackageId(@Nullable String appPackageId) {
+        public Builder appPackageId(@Nullable String appPackageId) {
             this.appPackageId = Input.ofNullable(appPackageId);
             return this;
         }
 
-        public Builder setOrchestratorOption(@Nullable Input<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
+        public Builder orchestratorOption(@Nullable Input<AndroidInstrumentationTestOrchestratorOption> orchestratorOption) {
             this.orchestratorOption = orchestratorOption;
             return this;
         }
 
-        public Builder setOrchestratorOption(@Nullable AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
+        public Builder orchestratorOption(@Nullable AndroidInstrumentationTestOrchestratorOption orchestratorOption) {
             this.orchestratorOption = Input.ofNullable(orchestratorOption);
             return this;
         }
 
-        public Builder setShardingOption(@Nullable Input<ShardingOptionArgs> shardingOption) {
+        public Builder shardingOption(@Nullable Input<ShardingOptionArgs> shardingOption) {
             this.shardingOption = shardingOption;
             return this;
         }
 
-        public Builder setShardingOption(@Nullable ShardingOptionArgs shardingOption) {
+        public Builder shardingOption(@Nullable ShardingOptionArgs shardingOption) {
             this.shardingOption = Input.ofNullable(shardingOption);
             return this;
         }
 
-        public Builder setTestApk(Input<FileReferenceArgs> testApk) {
+        public Builder testApk(Input<FileReferenceArgs> testApk) {
             this.testApk = Objects.requireNonNull(testApk);
             return this;
         }
 
-        public Builder setTestApk(FileReferenceArgs testApk) {
+        public Builder testApk(FileReferenceArgs testApk) {
             this.testApk = Input.of(Objects.requireNonNull(testApk));
             return this;
         }
 
-        public Builder setTestPackageId(@Nullable Input<String> testPackageId) {
+        public Builder testPackageId(@Nullable Input<String> testPackageId) {
             this.testPackageId = testPackageId;
             return this;
         }
 
-        public Builder setTestPackageId(@Nullable String testPackageId) {
+        public Builder testPackageId(@Nullable String testPackageId) {
             this.testPackageId = Input.ofNullable(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(@Nullable Input<String> testRunnerClass) {
+        public Builder testRunnerClass(@Nullable Input<String> testRunnerClass) {
             this.testRunnerClass = testRunnerClass;
             return this;
         }
 
-        public Builder setTestRunnerClass(@Nullable String testRunnerClass) {
+        public Builder testRunnerClass(@Nullable String testRunnerClass) {
             this.testRunnerClass = Input.ofNullable(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(@Nullable Input<List<String>> testTargets) {
+        public Builder testTargets(@Nullable Input<List<String>> testTargets) {
             this.testTargets = testTargets;
             return this;
         }
 
-        public Builder setTestTargets(@Nullable List<String> testTargets) {
+        public Builder testTargets(@Nullable List<String> testTargets) {
             this.testTargets = Input.ofNullable(testTargets);
             return this;
         }

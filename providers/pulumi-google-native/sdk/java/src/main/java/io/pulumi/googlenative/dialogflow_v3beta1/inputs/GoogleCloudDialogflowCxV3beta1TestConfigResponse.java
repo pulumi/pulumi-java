@@ -73,12 +73,12 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse extends io.p
     	      this.trackingParameters = defaults.trackingParameters;
         }
 
-        public Builder setFlow(String flow) {
+        public Builder flow(String flow) {
             this.flow = Objects.requireNonNull(flow);
             return this;
         }
 
-        public Builder setTrackingParameters(List<String> trackingParameters) {
+        public Builder trackingParameters(List<String> trackingParameters) {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }

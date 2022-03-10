@@ -178,47 +178,47 @@ public final class GetEnvironmentResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setApiProxyType(String apiProxyType) {
+        public Builder apiProxyType(String apiProxyType) {
             this.apiProxyType = Objects.requireNonNull(apiProxyType);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDeploymentType(String deploymentType) {
+        public Builder deploymentType(String deploymentType) {
             this.deploymentType = Objects.requireNonNull(deploymentType);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(GoogleCloudApigeeV1PropertiesResponse properties) {
+        public Builder properties(GoogleCloudApigeeV1PropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

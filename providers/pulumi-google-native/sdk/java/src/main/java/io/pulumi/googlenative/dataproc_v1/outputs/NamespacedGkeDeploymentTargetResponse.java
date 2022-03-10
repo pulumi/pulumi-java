@@ -65,12 +65,12 @@ public final class NamespacedGkeDeploymentTargetResponse {
     	      this.targetGkeCluster = defaults.targetGkeCluster;
         }
 
-        public Builder setClusterNamespace(String clusterNamespace) {
+        public Builder clusterNamespace(String clusterNamespace) {
             this.clusterNamespace = Objects.requireNonNull(clusterNamespace);
             return this;
         }
 
-        public Builder setTargetGkeCluster(String targetGkeCluster) {
+        public Builder targetGkeCluster(String targetGkeCluster) {
             this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
             return this;
         }

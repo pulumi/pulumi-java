@@ -116,27 +116,27 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
+        public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
+        public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
 
-        public Builder setRegex(GooglePrivacyDlpV2RegexResponse regex) {
+        public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }

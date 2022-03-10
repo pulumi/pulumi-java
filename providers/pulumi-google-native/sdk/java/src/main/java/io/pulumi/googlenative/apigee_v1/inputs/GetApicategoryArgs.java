@@ -72,17 +72,17 @@ public final class GetApicategoryArgs extends io.pulumi.resources.InvokeArgs {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder setApicategoryId(String apicategoryId) {
+        public Builder apicategoryId(String apicategoryId) {
             this.apicategoryId = Objects.requireNonNull(apicategoryId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }

@@ -206,102 +206,102 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     	      this.sourceConfig = defaults.sourceConfig;
         }
 
-        public Builder setDataSourceRestrictions(@Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
+        public Builder dataSourceRestrictions(@Nullable Input<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
             this.dataSourceRestrictions = dataSourceRestrictions;
             return this;
         }
 
-        public Builder setDataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
+        public Builder dataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
             this.dataSourceRestrictions = Input.ofNullable(dataSourceRestrictions);
             return this;
         }
 
-        public Builder setDefaultFacetOptions(@Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions) {
+        public Builder defaultFacetOptions(@Nullable Input<List<FacetOptionsArgs>> defaultFacetOptions) {
             this.defaultFacetOptions = defaultFacetOptions;
             return this;
         }
 
-        public Builder setDefaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
+        public Builder defaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
             this.defaultFacetOptions = Input.ofNullable(defaultFacetOptions);
             return this;
         }
 
-        public Builder setDefaultSortOptions(@Nullable Input<SortOptionsArgs> defaultSortOptions) {
+        public Builder defaultSortOptions(@Nullable Input<SortOptionsArgs> defaultSortOptions) {
             this.defaultSortOptions = defaultSortOptions;
             return this;
         }
 
-        public Builder setDefaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
+        public Builder defaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
             this.defaultSortOptions = Input.ofNullable(defaultSortOptions);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnableAuditLog(@Nullable Input<Boolean> enableAuditLog) {
+        public Builder enableAuditLog(@Nullable Input<Boolean> enableAuditLog) {
             this.enableAuditLog = enableAuditLog;
             return this;
         }
 
-        public Builder setEnableAuditLog(@Nullable Boolean enableAuditLog) {
+        public Builder enableAuditLog(@Nullable Boolean enableAuditLog) {
             this.enableAuditLog = Input.ofNullable(enableAuditLog);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setQueryInterpretationConfig(@Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig) {
+        public Builder queryInterpretationConfig(@Nullable Input<QueryInterpretationConfigArgs> queryInterpretationConfig) {
             this.queryInterpretationConfig = queryInterpretationConfig;
             return this;
         }
 
-        public Builder setQueryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
+        public Builder queryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
             this.queryInterpretationConfig = Input.ofNullable(queryInterpretationConfig);
             return this;
         }
 
-        public Builder setReturnResultThumbnailUrls(@Nullable Input<Boolean> returnResultThumbnailUrls) {
+        public Builder returnResultThumbnailUrls(@Nullable Input<Boolean> returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = returnResultThumbnailUrls;
             return this;
         }
 
-        public Builder setReturnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
+        public Builder returnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = Input.ofNullable(returnResultThumbnailUrls);
             return this;
         }
 
-        public Builder setScoringConfig(@Nullable Input<ScoringConfigArgs> scoringConfig) {
+        public Builder scoringConfig(@Nullable Input<ScoringConfigArgs> scoringConfig) {
             this.scoringConfig = scoringConfig;
             return this;
         }
 
-        public Builder setScoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
+        public Builder scoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
             this.scoringConfig = Input.ofNullable(scoringConfig);
             return this;
         }
 
-        public Builder setSourceConfig(@Nullable Input<List<SourceConfigArgs>> sourceConfig) {
+        public Builder sourceConfig(@Nullable Input<List<SourceConfigArgs>> sourceConfig) {
             this.sourceConfig = sourceConfig;
             return this;
         }
 
-        public Builder setSourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
+        public Builder sourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
             this.sourceConfig = Input.ofNullable(sourceConfig);
             return this;
         }

@@ -55,7 +55,7 @@ public final class MembershipRoleRestrictionEvaluationResponse extends io.pulumi
     	      this.state = defaults.state;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

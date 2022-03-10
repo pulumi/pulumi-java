@@ -207,102 +207,102 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
     	      this.upgradeSettings = defaults.upgradeSettings;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
             this.bootDiskKmsKey = Input.ofNullable(bootDiskKmsKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setImageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Input<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = Input.ofNullable(imageType);
             return this;
         }
 
-        public Builder setManagement(@Nullable Input<NodeManagementArgs> management) {
+        public Builder management(@Nullable Input<NodeManagementArgs> management) {
             this.management = management;
             return this;
         }
 
-        public Builder setManagement(@Nullable NodeManagementArgs management) {
+        public Builder management(@Nullable NodeManagementArgs management) {
             this.management = Input.ofNullable(management);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Input.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
+        public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
             this.upgradeSettings = Input.ofNullable(upgradeSettings);
             return this;
         }

@@ -65,12 +65,12 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }

@@ -92,32 +92,32 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dataAccess = defaults.dataAccess;
         }
 
-        public Builder setCloudAudit(@Nullable Input<CloudAuditOptionsArgs> cloudAudit) {
+        public Builder cloudAudit(@Nullable Input<CloudAuditOptionsArgs> cloudAudit) {
             this.cloudAudit = cloudAudit;
             return this;
         }
 
-        public Builder setCloudAudit(@Nullable CloudAuditOptionsArgs cloudAudit) {
+        public Builder cloudAudit(@Nullable CloudAuditOptionsArgs cloudAudit) {
             this.cloudAudit = Input.ofNullable(cloudAudit);
             return this;
         }
 
-        public Builder setCounter(@Nullable Input<CounterOptionsArgs> counter) {
+        public Builder counter(@Nullable Input<CounterOptionsArgs> counter) {
             this.counter = counter;
             return this;
         }
 
-        public Builder setCounter(@Nullable CounterOptionsArgs counter) {
+        public Builder counter(@Nullable CounterOptionsArgs counter) {
             this.counter = Input.ofNullable(counter);
             return this;
         }
 
-        public Builder setDataAccess(@Nullable Input<DataAccessOptionsArgs> dataAccess) {
+        public Builder dataAccess(@Nullable Input<DataAccessOptionsArgs> dataAccess) {
             this.dataAccess = dataAccess;
             return this;
         }
 
-        public Builder setDataAccess(@Nullable DataAccessOptionsArgs dataAccess) {
+        public Builder dataAccess(@Nullable DataAccessOptionsArgs dataAccess) {
             this.dataAccess = Input.ofNullable(dataAccess);
             return this;
         }

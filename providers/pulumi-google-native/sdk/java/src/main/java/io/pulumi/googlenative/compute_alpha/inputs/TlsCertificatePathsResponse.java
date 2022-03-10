@@ -72,12 +72,12 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
     	      this.privateKeyPath = defaults.privateKeyPath;
         }
 
-        public Builder setCertificatePath(String certificatePath) {
+        public Builder certificatePath(String certificatePath) {
             this.certificatePath = Objects.requireNonNull(certificatePath);
             return this;
         }
 
-        public Builder setPrivateKeyPath(String privateKeyPath) {
+        public Builder privateKeyPath(String privateKeyPath) {
             this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
             return this;
         }

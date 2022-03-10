@@ -74,12 +74,12 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorRespon
     	      this.repromptEventHandlers = defaults.repromptEventHandlers;
         }
 
-        public Builder setInitialPromptFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse initialPromptFulfillment) {
             this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
             return this;
         }
 
-        public Builder setRepromptEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
+        public Builder repromptEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> repromptEventHandlers) {
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }

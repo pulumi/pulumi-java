@@ -72,12 +72,12 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }

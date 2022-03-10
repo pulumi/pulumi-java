@@ -91,32 +91,32 @@ public final class HttpHeaderOptionArgs extends io.pulumi.resources.ResourceArgs
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(@Nullable Input<String> headerName) {
+        public Builder headerName(@Nullable Input<String> headerName) {
             this.headerName = headerName;
             return this;
         }
 
-        public Builder setHeaderName(@Nullable String headerName) {
+        public Builder headerName(@Nullable String headerName) {
             this.headerName = Input.ofNullable(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(@Nullable Input<String> headerValue) {
+        public Builder headerValue(@Nullable Input<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
 
-        public Builder setHeaderValue(@Nullable String headerValue) {
+        public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = Input.ofNullable(headerValue);
             return this;
         }
 
-        public Builder setReplace(@Nullable Input<Boolean> replace) {
+        public Builder replace(@Nullable Input<Boolean> replace) {
             this.replace = replace;
             return this;
         }
 
-        public Builder setReplace(@Nullable Boolean replace) {
+        public Builder replace(@Nullable Boolean replace) {
             this.replace = Input.ofNullable(replace);
             return this;
         }

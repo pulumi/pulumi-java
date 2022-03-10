@@ -88,17 +88,17 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse extends i
     	      this.type = defaults.type;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

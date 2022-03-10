@@ -303,162 +303,162 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends io.p
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalExperiments(@Nullable Input<List<String>> additionalExperiments) {
+        public Builder additionalExperiments(@Nullable Input<List<String>> additionalExperiments) {
             this.additionalExperiments = additionalExperiments;
             return this;
         }
 
-        public Builder setAdditionalExperiments(@Nullable List<String> additionalExperiments) {
+        public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
             this.additionalExperiments = Input.ofNullable(additionalExperiments);
             return this;
         }
 
-        public Builder setAdditionalUserLabels(@Nullable Input<Map<String,String>> additionalUserLabels) {
+        public Builder additionalUserLabels(@Nullable Input<Map<String,String>> additionalUserLabels) {
             this.additionalUserLabels = additionalUserLabels;
             return this;
         }
 
-        public Builder setAdditionalUserLabels(@Nullable Map<String,String> additionalUserLabels) {
+        public Builder additionalUserLabels(@Nullable Map<String,String> additionalUserLabels) {
             this.additionalUserLabels = Input.ofNullable(additionalUserLabels);
             return this;
         }
 
-        public Builder setBypassTempDirValidation(@Nullable Input<Boolean> bypassTempDirValidation) {
+        public Builder bypassTempDirValidation(@Nullable Input<Boolean> bypassTempDirValidation) {
             this.bypassTempDirValidation = bypassTempDirValidation;
             return this;
         }
 
-        public Builder setBypassTempDirValidation(@Nullable Boolean bypassTempDirValidation) {
+        public Builder bypassTempDirValidation(@Nullable Boolean bypassTempDirValidation) {
             this.bypassTempDirValidation = Input.ofNullable(bypassTempDirValidation);
             return this;
         }
 
-        public Builder setEnableStreamingEngine(@Nullable Input<Boolean> enableStreamingEngine) {
+        public Builder enableStreamingEngine(@Nullable Input<Boolean> enableStreamingEngine) {
             this.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
 
-        public Builder setEnableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
+        public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Input.ofNullable(enableStreamingEngine);
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable Input<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration ipConfiguration) {
+        public Builder ipConfiguration(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration ipConfiguration) {
             this.ipConfiguration = Input.ofNullable(ipConfiguration);
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Input<Integer> maxWorkers) {
+        public Builder maxWorkers(@Nullable Input<Integer> maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Integer maxWorkers) {
+        public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = Input.ofNullable(maxWorkers);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNumWorkers(@Nullable Input<Integer> numWorkers) {
+        public Builder numWorkers(@Nullable Input<Integer> numWorkers) {
             this.numWorkers = numWorkers;
             return this;
         }
 
-        public Builder setNumWorkers(@Nullable Integer numWorkers) {
+        public Builder numWorkers(@Nullable Integer numWorkers) {
             this.numWorkers = Input.ofNullable(numWorkers);
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
 
-        public Builder setTempLocation(@Nullable Input<String> tempLocation) {
+        public Builder tempLocation(@Nullable Input<String> tempLocation) {
             this.tempLocation = tempLocation;
             return this;
         }
 
-        public Builder setTempLocation(@Nullable String tempLocation) {
+        public Builder tempLocation(@Nullable String tempLocation) {
             this.tempLocation = Input.ofNullable(tempLocation);
             return this;
         }
 
-        public Builder setWorkerRegion(@Nullable Input<String> workerRegion) {
+        public Builder workerRegion(@Nullable Input<String> workerRegion) {
             this.workerRegion = workerRegion;
             return this;
         }
 
-        public Builder setWorkerRegion(@Nullable String workerRegion) {
+        public Builder workerRegion(@Nullable String workerRegion) {
             this.workerRegion = Input.ofNullable(workerRegion);
             return this;
         }
 
-        public Builder setWorkerZone(@Nullable Input<String> workerZone) {
+        public Builder workerZone(@Nullable Input<String> workerZone) {
             this.workerZone = workerZone;
             return this;
         }
 
-        public Builder setWorkerZone(@Nullable String workerZone) {
+        public Builder workerZone(@Nullable String workerZone) {
             this.workerZone = Input.ofNullable(workerZone);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

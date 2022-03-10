@@ -110,42 +110,42 @@ public final class TestExecutionStepArgs extends io.pulumi.resources.ResourceArg
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder setTestIssues(@Nullable Input<List<TestIssueArgs>> testIssues) {
+        public Builder testIssues(@Nullable Input<List<TestIssueArgs>> testIssues) {
             this.testIssues = testIssues;
             return this;
         }
 
-        public Builder setTestIssues(@Nullable List<TestIssueArgs> testIssues) {
+        public Builder testIssues(@Nullable List<TestIssueArgs> testIssues) {
             this.testIssues = Input.ofNullable(testIssues);
             return this;
         }
 
-        public Builder setTestSuiteOverviews(@Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
+        public Builder testSuiteOverviews(@Nullable Input<List<TestSuiteOverviewArgs>> testSuiteOverviews) {
             this.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
 
-        public Builder setTestSuiteOverviews(@Nullable List<TestSuiteOverviewArgs> testSuiteOverviews) {
+        public Builder testSuiteOverviews(@Nullable List<TestSuiteOverviewArgs> testSuiteOverviews) {
             this.testSuiteOverviews = Input.ofNullable(testSuiteOverviews);
             return this;
         }
 
-        public Builder setTestTiming(@Nullable Input<TestTimingArgs> testTiming) {
+        public Builder testTiming(@Nullable Input<TestTimingArgs> testTiming) {
             this.testTiming = testTiming;
             return this;
         }
 
-        public Builder setTestTiming(@Nullable TestTimingArgs testTiming) {
+        public Builder testTiming(@Nullable TestTimingArgs testTiming) {
             this.testTiming = Input.ofNullable(testTiming);
             return this;
         }
 
-        public Builder setToolExecution(@Nullable Input<ToolExecutionArgs> toolExecution) {
+        public Builder toolExecution(@Nullable Input<ToolExecutionArgs> toolExecution) {
             this.toolExecution = toolExecution;
             return this;
         }
 
-        public Builder setToolExecution(@Nullable ToolExecutionArgs toolExecution) {
+        public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
             this.toolExecution = Input.ofNullable(toolExecution);
             return this;
         }

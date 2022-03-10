@@ -90,32 +90,32 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setAudience(@Nullable Input<String> audience) {
+        public Builder audience(@Nullable Input<String> audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = Input.ofNullable(audience);
             return this;
         }
 
-        public Builder setIssuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Input<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = Input.ofNullable(issuer);
             return this;
         }
 
-        public Builder setSubject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Input<String> subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setSubject(@Nullable String subject) {
+        public Builder subject(@Nullable String subject) {
             this.subject = Input.ofNullable(subject);
             return this;
         }

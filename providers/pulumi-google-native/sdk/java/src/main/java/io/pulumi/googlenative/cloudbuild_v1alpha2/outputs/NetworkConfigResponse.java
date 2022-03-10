@@ -48,7 +48,7 @@ public final class NetworkConfigResponse {
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }

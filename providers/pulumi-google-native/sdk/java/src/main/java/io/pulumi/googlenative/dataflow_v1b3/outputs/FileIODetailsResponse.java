@@ -48,7 +48,7 @@ public final class FileIODetailsResponse {
     	      this.filePattern = defaults.filePattern;
         }
 
-        public Builder setFilePattern(String filePattern) {
+        public Builder filePattern(String filePattern) {
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
         }

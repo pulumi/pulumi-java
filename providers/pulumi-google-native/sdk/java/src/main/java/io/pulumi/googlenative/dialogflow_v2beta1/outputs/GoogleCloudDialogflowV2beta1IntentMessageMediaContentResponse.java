@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setMediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
+        public Builder mediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
 
-        public Builder setMediaType(String mediaType) {
+        public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }

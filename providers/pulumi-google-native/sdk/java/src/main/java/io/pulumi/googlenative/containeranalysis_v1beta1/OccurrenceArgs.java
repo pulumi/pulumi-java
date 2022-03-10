@@ -303,162 +303,162 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestation(@Nullable Input<DetailsArgs> attestation) {
+        public Builder attestation(@Nullable Input<DetailsArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
-        public Builder setAttestation(@Nullable DetailsArgs attestation) {
+        public Builder attestation(@Nullable DetailsArgs attestation) {
             this.attestation = Input.ofNullable(attestation);
             return this;
         }
 
-        public Builder setBuild(@Nullable Input<GrafeasV1beta1BuildDetailsArgs> build) {
+        public Builder build(@Nullable Input<GrafeasV1beta1BuildDetailsArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable GrafeasV1beta1BuildDetailsArgs build) {
+        public Builder build(@Nullable GrafeasV1beta1BuildDetailsArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setDeployment(@Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment) {
+        public Builder deployment(@Nullable Input<GrafeasV1beta1DeploymentDetailsArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
-        public Builder setDeployment(@Nullable GrafeasV1beta1DeploymentDetailsArgs deployment) {
+        public Builder deployment(@Nullable GrafeasV1beta1DeploymentDetailsArgs deployment) {
             this.deployment = Input.ofNullable(deployment);
             return this;
         }
 
-        public Builder setDerivedImage(@Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage) {
+        public Builder derivedImage(@Nullable Input<GrafeasV1beta1ImageDetailsArgs> derivedImage) {
             this.derivedImage = derivedImage;
             return this;
         }
 
-        public Builder setDerivedImage(@Nullable GrafeasV1beta1ImageDetailsArgs derivedImage) {
+        public Builder derivedImage(@Nullable GrafeasV1beta1ImageDetailsArgs derivedImage) {
             this.derivedImage = Input.ofNullable(derivedImage);
             return this;
         }
 
-        public Builder setDiscovered(@Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered) {
+        public Builder discovered(@Nullable Input<GrafeasV1beta1DiscoveryDetailsArgs> discovered) {
             this.discovered = discovered;
             return this;
         }
 
-        public Builder setDiscovered(@Nullable GrafeasV1beta1DiscoveryDetailsArgs discovered) {
+        public Builder discovered(@Nullable GrafeasV1beta1DiscoveryDetailsArgs discovered) {
             this.discovered = Input.ofNullable(discovered);
             return this;
         }
 
-        public Builder setInstallation(@Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation) {
+        public Builder installation(@Nullable Input<GrafeasV1beta1PackageDetailsArgs> installation) {
             this.installation = installation;
             return this;
         }
 
-        public Builder setInstallation(@Nullable GrafeasV1beta1PackageDetailsArgs installation) {
+        public Builder installation(@Nullable GrafeasV1beta1PackageDetailsArgs installation) {
             this.installation = Input.ofNullable(installation);
             return this;
         }
 
-        public Builder setIntoto(@Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto) {
+        public Builder intoto(@Nullable Input<GrafeasV1beta1IntotoDetailsArgs> intoto) {
             this.intoto = intoto;
             return this;
         }
 
-        public Builder setIntoto(@Nullable GrafeasV1beta1IntotoDetailsArgs intoto) {
+        public Builder intoto(@Nullable GrafeasV1beta1IntotoDetailsArgs intoto) {
             this.intoto = Input.ofNullable(intoto);
             return this;
         }
 
-        public Builder setNoteName(Input<String> noteName) {
+        public Builder noteName(Input<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
-        public Builder setNoteName(String noteName) {
+        public Builder noteName(String noteName) {
             this.noteName = Input.of(Objects.requireNonNull(noteName));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRemediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Input<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
-        public Builder setRemediation(@Nullable String remediation) {
+        public Builder remediation(@Nullable String remediation) {
             this.remediation = Input.ofNullable(remediation);
             return this;
         }
 
-        public Builder setResource(Input<ResourceArgs> resource) {
+        public Builder resource(Input<ResourceArgs> resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResource(ResourceArgs resource) {
+        public Builder resource(ResourceArgs resource) {
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
 
-        public Builder setSbom(@Nullable Input<DocumentOccurrenceArgs> sbom) {
+        public Builder sbom(@Nullable Input<DocumentOccurrenceArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
 
-        public Builder setSbom(@Nullable DocumentOccurrenceArgs sbom) {
+        public Builder sbom(@Nullable DocumentOccurrenceArgs sbom) {
             this.sbom = Input.ofNullable(sbom);
             return this;
         }
 
-        public Builder setSpdxFile(@Nullable Input<FileOccurrenceArgs> spdxFile) {
+        public Builder spdxFile(@Nullable Input<FileOccurrenceArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
 
-        public Builder setSpdxFile(@Nullable FileOccurrenceArgs spdxFile) {
+        public Builder spdxFile(@Nullable FileOccurrenceArgs spdxFile) {
             this.spdxFile = Input.ofNullable(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(@Nullable Input<PackageInfoOccurrenceArgs> spdxPackage) {
+        public Builder spdxPackage(@Nullable Input<PackageInfoOccurrenceArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
 
-        public Builder setSpdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
+        public Builder spdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
             this.spdxPackage = Input.ofNullable(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(@Nullable Input<RelationshipOccurrenceArgs> spdxRelationship) {
+        public Builder spdxRelationship(@Nullable Input<RelationshipOccurrenceArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
 
-        public Builder setSpdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
+        public Builder spdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
             this.spdxRelationship = Input.ofNullable(spdxRelationship);
             return this;
         }
 
-        public Builder setVulnerability(@Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
+        public Builder vulnerability(@Nullable Input<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
 
-        public Builder setVulnerability(@Nullable GrafeasV1beta1VulnerabilityDetailsArgs vulnerability) {
+        public Builder vulnerability(@Nullable GrafeasV1beta1VulnerabilityDetailsArgs vulnerability) {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }

@@ -190,102 +190,102 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testConfig = defaults.testConfig;
         }
 
-        public Builder setAgentId(Input<String> agentId) {
+        public Builder agentId(Input<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Input.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLastTestResult(@Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult) {
+        public Builder lastTestResult(@Nullable Input<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult) {
             this.lastTestResult = lastTestResult;
             return this;
         }
 
-        public Builder setLastTestResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultArgs lastTestResult) {
+        public Builder lastTestResult(@Nullable GoogleCloudDialogflowCxV3TestCaseResultArgs lastTestResult) {
             this.lastTestResult = Input.ofNullable(lastTestResult);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTestCaseConversationTurns(@Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns) {
+        public Builder testCaseConversationTurns(@Nullable Input<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns) {
             this.testCaseConversationTurns = testCaseConversationTurns;
             return this;
         }
 
-        public Builder setTestCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> testCaseConversationTurns) {
+        public Builder testCaseConversationTurns(@Nullable List<GoogleCloudDialogflowCxV3ConversationTurnArgs> testCaseConversationTurns) {
             this.testCaseConversationTurns = Input.ofNullable(testCaseConversationTurns);
             return this;
         }
 
-        public Builder setTestConfig(@Nullable Input<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig) {
+        public Builder testConfig(@Nullable Input<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig) {
             this.testConfig = testConfig;
             return this;
         }
 
-        public Builder setTestConfig(@Nullable GoogleCloudDialogflowCxV3TestConfigArgs testConfig) {
+        public Builder testConfig(@Nullable GoogleCloudDialogflowCxV3TestConfigArgs testConfig) {
             this.testConfig = Input.ofNullable(testConfig);
             return this;
         }

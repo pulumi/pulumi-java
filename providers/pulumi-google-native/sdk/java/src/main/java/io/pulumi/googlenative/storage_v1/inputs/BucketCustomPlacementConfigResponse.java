@@ -56,7 +56,7 @@ public final class BucketCustomPlacementConfigResponse extends io.pulumi.resourc
     	      this.dataLocations = defaults.dataLocations;
         }
 
-        public Builder setDataLocations(List<String> dataLocations) {
+        public Builder dataLocations(List<String> dataLocations) {
             this.dataLocations = Objects.requireNonNull(dataLocations);
             return this;
         }

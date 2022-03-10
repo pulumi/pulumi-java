@@ -72,12 +72,12 @@ public final class ManagementSettingsResponse extends io.pulumi.resources.Invoke
     	      this.transferLockState = defaults.transferLockState;
         }
 
-        public Builder setRenewalMethod(String renewalMethod) {
+        public Builder renewalMethod(String renewalMethod) {
             this.renewalMethod = Objects.requireNonNull(renewalMethod);
             return this;
         }
 
-        public Builder setTransferLockState(String transferLockState) {
+        public Builder transferLockState(String transferLockState) {
             this.transferLockState = Objects.requireNonNull(transferLockState);
             return this;
         }

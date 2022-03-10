@@ -180,47 +180,47 @@ public final class GetSecuritySettingResult {
     	      this.retentionWindowDays = defaults.retentionWindowDays;
         }
 
-        public Builder setDeidentifyTemplate(String deidentifyTemplate) {
+        public Builder deidentifyTemplate(String deidentifyTemplate) {
             this.deidentifyTemplate = Objects.requireNonNull(deidentifyTemplate);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInsightsExportSettings(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse insightsExportSettings) {
+        public Builder insightsExportSettings(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse insightsExportSettings) {
             this.insightsExportSettings = Objects.requireNonNull(insightsExportSettings);
             return this;
         }
 
-        public Builder setInspectTemplate(String inspectTemplate) {
+        public Builder inspectTemplate(String inspectTemplate) {
             this.inspectTemplate = Objects.requireNonNull(inspectTemplate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPurgeDataTypes(List<String> purgeDataTypes) {
+        public Builder purgeDataTypes(List<String> purgeDataTypes) {
             this.purgeDataTypes = Objects.requireNonNull(purgeDataTypes);
             return this;
         }
 
-        public Builder setRedactionScope(String redactionScope) {
+        public Builder redactionScope(String redactionScope) {
             this.redactionScope = Objects.requireNonNull(redactionScope);
             return this;
         }
 
-        public Builder setRedactionStrategy(String redactionStrategy) {
+        public Builder redactionStrategy(String redactionStrategy) {
             this.redactionStrategy = Objects.requireNonNull(redactionStrategy);
             return this;
         }
 
-        public Builder setRetentionWindowDays(Integer retentionWindowDays) {
+        public Builder retentionWindowDays(Integer retentionWindowDays) {
             this.retentionWindowDays = Objects.requireNonNull(retentionWindowDays);
             return this;
         }

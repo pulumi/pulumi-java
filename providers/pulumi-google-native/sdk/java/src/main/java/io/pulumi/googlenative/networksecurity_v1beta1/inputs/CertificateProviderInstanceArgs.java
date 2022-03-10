@@ -56,12 +56,12 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
     	      this.pluginInstance = defaults.pluginInstance;
         }
 
-        public Builder setPluginInstance(Input<String> pluginInstance) {
+        public Builder pluginInstance(Input<String> pluginInstance) {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }
 
-        public Builder setPluginInstance(String pluginInstance) {
+        public Builder pluginInstance(String pluginInstance) {
             this.pluginInstance = Input.of(Objects.requireNonNull(pluginInstance));
             return this;
         }

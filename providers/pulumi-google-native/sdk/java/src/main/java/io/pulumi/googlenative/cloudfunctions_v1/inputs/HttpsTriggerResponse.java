@@ -72,12 +72,12 @@ public final class HttpsTriggerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setSecurityLevel(String securityLevel) {
+        public Builder securityLevel(String securityLevel) {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

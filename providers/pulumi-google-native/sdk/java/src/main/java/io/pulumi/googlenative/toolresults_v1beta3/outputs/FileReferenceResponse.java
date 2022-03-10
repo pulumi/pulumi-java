@@ -48,7 +48,7 @@ public final class FileReferenceResponse {
     	      this.fileUri = defaults.fileUri;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }

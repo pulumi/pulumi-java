@@ -93,32 +93,32 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logActions = defaults.logActions;
         }
 
-        public Builder setEnableOnpremGcsTransferLogs(@Nullable Input<Boolean> enableOnpremGcsTransferLogs) {
+        public Builder enableOnpremGcsTransferLogs(@Nullable Input<Boolean> enableOnpremGcsTransferLogs) {
             this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
             return this;
         }
 
-        public Builder setEnableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
+        public Builder enableOnpremGcsTransferLogs(@Nullable Boolean enableOnpremGcsTransferLogs) {
             this.enableOnpremGcsTransferLogs = Input.ofNullable(enableOnpremGcsTransferLogs);
             return this;
         }
 
-        public Builder setLogActionStates(@Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates) {
+        public Builder logActionStates(@Nullable Input<List<LoggingConfigLogActionStatesItem>> logActionStates) {
             this.logActionStates = logActionStates;
             return this;
         }
 
-        public Builder setLogActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
+        public Builder logActionStates(@Nullable List<LoggingConfigLogActionStatesItem> logActionStates) {
             this.logActionStates = Input.ofNullable(logActionStates);
             return this;
         }
 
-        public Builder setLogActions(@Nullable Input<List<LoggingConfigLogActionsItem>> logActions) {
+        public Builder logActions(@Nullable Input<List<LoggingConfigLogActionsItem>> logActions) {
             this.logActions = logActions;
             return this;
         }
 
-        public Builder setLogActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
+        public Builder logActions(@Nullable List<LoggingConfigLogActionsItem> logActions) {
             this.logActions = Input.ofNullable(logActions);
             return this;
         }

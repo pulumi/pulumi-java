@@ -75,22 +75,22 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(@Nullable Input<String> coreCount) {
+        public Builder coreCount(@Nullable Input<String> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable String coreCount) {
+        public Builder coreCount(@Nullable String coreCount) {
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
 
-        public Builder setType(@Nullable Input<AcceleratorConfigType> type) {
+        public Builder type(@Nullable Input<AcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable AcceleratorConfigType type) {
+        public Builder type(@Nullable AcceleratorConfigType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

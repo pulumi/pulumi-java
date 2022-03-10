@@ -125,52 +125,52 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
     	      this.lastScanTime = defaults.lastScanTime;
         }
 
-        public Builder setAnalysisStatus(@Nullable Input<DiscoveryOccurrenceAnalysisStatus> analysisStatus) {
+        public Builder analysisStatus(@Nullable Input<DiscoveryOccurrenceAnalysisStatus> analysisStatus) {
             this.analysisStatus = analysisStatus;
             return this;
         }
 
-        public Builder setAnalysisStatus(@Nullable DiscoveryOccurrenceAnalysisStatus analysisStatus) {
+        public Builder analysisStatus(@Nullable DiscoveryOccurrenceAnalysisStatus analysisStatus) {
             this.analysisStatus = Input.ofNullable(analysisStatus);
             return this;
         }
 
-        public Builder setAnalysisStatusError(@Nullable Input<StatusArgs> analysisStatusError) {
+        public Builder analysisStatusError(@Nullable Input<StatusArgs> analysisStatusError) {
             this.analysisStatusError = analysisStatusError;
             return this;
         }
 
-        public Builder setAnalysisStatusError(@Nullable StatusArgs analysisStatusError) {
+        public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
             this.analysisStatusError = Input.ofNullable(analysisStatusError);
             return this;
         }
 
-        public Builder setContinuousAnalysis(@Nullable Input<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
+        public Builder continuousAnalysis(@Nullable Input<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
             this.continuousAnalysis = continuousAnalysis;
             return this;
         }
 
-        public Builder setContinuousAnalysis(@Nullable DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
+        public Builder continuousAnalysis(@Nullable DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
             this.continuousAnalysis = Input.ofNullable(continuousAnalysis);
             return this;
         }
 
-        public Builder setCpe(@Nullable Input<String> cpe) {
+        public Builder cpe(@Nullable Input<String> cpe) {
             this.cpe = cpe;
             return this;
         }
 
-        public Builder setCpe(@Nullable String cpe) {
+        public Builder cpe(@Nullable String cpe) {
             this.cpe = Input.ofNullable(cpe);
             return this;
         }
 
-        public Builder setLastScanTime(@Nullable Input<String> lastScanTime) {
+        public Builder lastScanTime(@Nullable Input<String> lastScanTime) {
             this.lastScanTime = lastScanTime;
             return this;
         }
 
-        public Builder setLastScanTime(@Nullable String lastScanTime) {
+        public Builder lastScanTime(@Nullable String lastScanTime) {
             this.lastScanTime = Input.ofNullable(lastScanTime);
             return this;
         }

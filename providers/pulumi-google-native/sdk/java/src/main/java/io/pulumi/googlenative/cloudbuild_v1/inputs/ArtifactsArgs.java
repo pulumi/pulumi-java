@@ -76,22 +76,22 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.objects = defaults.objects;
         }
 
-        public Builder setImages(@Nullable Input<List<String>> images) {
+        public Builder images(@Nullable Input<List<String>> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setImages(@Nullable List<String> images) {
+        public Builder images(@Nullable List<String> images) {
             this.images = Input.ofNullable(images);
             return this;
         }
 
-        public Builder setObjects(@Nullable Input<ArtifactObjectsArgs> objects) {
+        public Builder objects(@Nullable Input<ArtifactObjectsArgs> objects) {
             this.objects = objects;
             return this;
         }
 
-        public Builder setObjects(@Nullable ArtifactObjectsArgs objects) {
+        public Builder objects(@Nullable ArtifactObjectsArgs objects) {
             this.objects = Input.ofNullable(objects);
             return this;
         }

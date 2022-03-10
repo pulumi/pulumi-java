@@ -197,57 +197,57 @@ public final class GetResourcePolicyResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGroupPlacementPolicy(ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy) {
+        public Builder groupPlacementPolicy(ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy) {
             this.groupPlacementPolicy = Objects.requireNonNull(groupPlacementPolicy);
             return this;
         }
 
-        public Builder setInstanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy) {
+        public Builder instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy) {
             this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setResourceStatus(ResourcePolicyResourceStatusResponse resourceStatus) {
+        public Builder resourceStatus(ResourcePolicyResourceStatusResponse resourceStatus) {
             this.resourceStatus = Objects.requireNonNull(resourceStatus);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSnapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy) {
+        public Builder snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy) {
             this.snapshotSchedulePolicy = Objects.requireNonNull(snapshotSchedulePolicy);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

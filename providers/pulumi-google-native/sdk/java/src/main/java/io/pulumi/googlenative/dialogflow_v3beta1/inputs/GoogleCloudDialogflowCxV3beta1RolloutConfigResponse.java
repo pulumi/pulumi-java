@@ -90,17 +90,17 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigResponse extends i
     	      this.rolloutSteps = defaults.rolloutSteps;
         }
 
-        public Builder setFailureCondition(String failureCondition) {
+        public Builder failureCondition(String failureCondition) {
             this.failureCondition = Objects.requireNonNull(failureCondition);
             return this;
         }
 
-        public Builder setRolloutCondition(String rolloutCondition) {
+        public Builder rolloutCondition(String rolloutCondition) {
             this.rolloutCondition = Objects.requireNonNull(rolloutCondition);
             return this;
         }
 
-        public Builder setRolloutSteps(List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> rolloutSteps) {
+        public Builder rolloutSteps(List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse> rolloutSteps) {
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }

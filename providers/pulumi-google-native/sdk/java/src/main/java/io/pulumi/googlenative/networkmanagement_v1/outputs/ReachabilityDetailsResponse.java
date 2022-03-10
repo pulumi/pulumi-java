@@ -100,22 +100,22 @@ public final class ReachabilityDetailsResponse {
     	      this.verifyTime = defaults.verifyTime;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setTraces(List<TraceResponse> traces) {
+        public Builder traces(List<TraceResponse> traces) {
             this.traces = Objects.requireNonNull(traces);
             return this;
         }
 
-        public Builder setVerifyTime(String verifyTime) {
+        public Builder verifyTime(String verifyTime) {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }

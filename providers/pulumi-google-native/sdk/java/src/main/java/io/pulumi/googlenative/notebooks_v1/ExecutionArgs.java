@@ -123,62 +123,62 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionId(Input<String> executionId) {
+        public Builder executionId(Input<String> executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Input.of(Objects.requireNonNull(executionId));
             return this;
         }
 
-        public Builder setExecutionTemplate(@Nullable Input<ExecutionTemplateArgs> executionTemplate) {
+        public Builder executionTemplate(@Nullable Input<ExecutionTemplateArgs> executionTemplate) {
             this.executionTemplate = executionTemplate;
             return this;
         }
 
-        public Builder setExecutionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
+        public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
             this.executionTemplate = Input.ofNullable(executionTemplate);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOutputNotebookFile(@Nullable Input<String> outputNotebookFile) {
+        public Builder outputNotebookFile(@Nullable Input<String> outputNotebookFile) {
             this.outputNotebookFile = outputNotebookFile;
             return this;
         }
 
-        public Builder setOutputNotebookFile(@Nullable String outputNotebookFile) {
+        public Builder outputNotebookFile(@Nullable String outputNotebookFile) {
             this.outputNotebookFile = Input.ofNullable(outputNotebookFile);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

@@ -57,12 +57,12 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder setFileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Input<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable String fileName) {
+        public Builder fileName(@Nullable String fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }

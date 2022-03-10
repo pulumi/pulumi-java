@@ -75,22 +75,22 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setProfiles(@Nullable Input<List<String>> profiles) {
+        public Builder profiles(@Nullable Input<List<String>> profiles) {
             this.profiles = profiles;
             return this;
         }
 
-        public Builder setProfiles(@Nullable List<String> profiles) {
+        public Builder profiles(@Nullable List<String> profiles) {
             this.profiles = Input.ofNullable(profiles);
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }

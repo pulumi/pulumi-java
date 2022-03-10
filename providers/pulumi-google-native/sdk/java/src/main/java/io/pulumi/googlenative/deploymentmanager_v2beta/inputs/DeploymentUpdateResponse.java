@@ -86,17 +86,17 @@ public final class DeploymentUpdateResponse extends io.pulumi.resources.InvokeAr
     	      this.manifest = defaults.manifest;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(List<DeploymentUpdateLabelEntryResponse> labels) {
+        public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }

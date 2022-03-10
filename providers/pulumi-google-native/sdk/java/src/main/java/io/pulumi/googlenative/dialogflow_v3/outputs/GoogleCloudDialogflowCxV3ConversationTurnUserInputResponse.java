@@ -100,22 +100,22 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
     	      this.isWebhookEnabled = defaults.isWebhookEnabled;
         }
 
-        public Builder setEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }
 
-        public Builder setInjectedParameters(Map<String,String> injectedParameters) {
+        public Builder injectedParameters(Map<String,String> injectedParameters) {
             this.injectedParameters = Objects.requireNonNull(injectedParameters);
             return this;
         }
 
-        public Builder setInput(GoogleCloudDialogflowCxV3QueryInputResponse input) {
+        public Builder input(GoogleCloudDialogflowCxV3QueryInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setIsWebhookEnabled(Boolean isWebhookEnabled) {
+        public Builder isWebhookEnabled(Boolean isWebhookEnabled) {
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
         }

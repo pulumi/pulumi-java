@@ -192,47 +192,47 @@ public final class GoogleCloudRetailV2alphaRuleResponse extends io.pulumi.resour
     	      this.twowaySynonymsAction = defaults.twowaySynonymsAction;
         }
 
-        public Builder setBoostAction(GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction) {
+        public Builder boostAction(GoogleCloudRetailV2alphaRuleBoostActionResponse boostAction) {
             this.boostAction = Objects.requireNonNull(boostAction);
             return this;
         }
 
-        public Builder setCondition(GoogleCloudRetailV2alphaConditionResponse condition) {
+        public Builder condition(GoogleCloudRetailV2alphaConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setDoNotAssociateAction(GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction) {
+        public Builder doNotAssociateAction(GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse doNotAssociateAction) {
             this.doNotAssociateAction = Objects.requireNonNull(doNotAssociateAction);
             return this;
         }
 
-        public Builder setFilterAction(GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction) {
+        public Builder filterAction(GoogleCloudRetailV2alphaRuleFilterActionResponse filterAction) {
             this.filterAction = Objects.requireNonNull(filterAction);
             return this;
         }
 
-        public Builder setIgnoreAction(GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction) {
+        public Builder ignoreAction(GoogleCloudRetailV2alphaRuleIgnoreActionResponse ignoreAction) {
             this.ignoreAction = Objects.requireNonNull(ignoreAction);
             return this;
         }
 
-        public Builder setOnewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction) {
+        public Builder onewaySynonymsAction(GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse onewaySynonymsAction) {
             this.onewaySynonymsAction = Objects.requireNonNull(onewaySynonymsAction);
             return this;
         }
 
-        public Builder setRedirectAction(GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction) {
+        public Builder redirectAction(GoogleCloudRetailV2alphaRuleRedirectActionResponse redirectAction) {
             this.redirectAction = Objects.requireNonNull(redirectAction);
             return this;
         }
 
-        public Builder setReplacementAction(GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction) {
+        public Builder replacementAction(GoogleCloudRetailV2alphaRuleReplacementActionResponse replacementAction) {
             this.replacementAction = Objects.requireNonNull(replacementAction);
             return this;
         }
 
-        public Builder setTwowaySynonymsAction(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
+        public Builder twowaySynonymsAction(GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
             this.twowaySynonymsAction = Objects.requireNonNull(twowaySynonymsAction);
             return this;
         }

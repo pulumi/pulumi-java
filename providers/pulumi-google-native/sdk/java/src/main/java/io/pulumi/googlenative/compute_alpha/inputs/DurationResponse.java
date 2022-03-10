@@ -73,12 +73,12 @@ public final class DurationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(Integer nanos) {
+        public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
 
-        public Builder setSeconds(String seconds) {
+        public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

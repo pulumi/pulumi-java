@@ -124,52 +124,52 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBoolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
-        public Builder setBoolValue(@Nullable Boolean boolValue) {
+        public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Input.ofNullable(boolValue);
             return this;
         }
 
-        public Builder setIntValue(@Nullable Input<String> intValue) {
+        public Builder intValue(@Nullable Input<String> intValue) {
             this.intValue = intValue;
             return this;
         }
 
-        public Builder setIntValue(@Nullable String intValue) {
+        public Builder intValue(@Nullable String intValue) {
             this.intValue = Input.ofNullable(intValue);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setSecretValue(@Nullable Input<SecretArgs> secretValue) {
+        public Builder secretValue(@Nullable Input<SecretArgs> secretValue) {
             this.secretValue = secretValue;
             return this;
         }
 
-        public Builder setSecretValue(@Nullable SecretArgs secretValue) {
+        public Builder secretValue(@Nullable SecretArgs secretValue) {
             this.secretValue = Input.ofNullable(secretValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }

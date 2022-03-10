@@ -72,12 +72,12 @@ public final class RetentionConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.period = defaults.period;
         }
 
-        public Builder setPerPartitionBytes(String perPartitionBytes) {
+        public Builder perPartitionBytes(String perPartitionBytes) {
             this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
             return this;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }

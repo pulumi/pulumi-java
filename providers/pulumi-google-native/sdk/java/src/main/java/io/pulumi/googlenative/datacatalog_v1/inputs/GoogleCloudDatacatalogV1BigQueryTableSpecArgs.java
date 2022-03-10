@@ -75,22 +75,22 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
     	      this.viewSpec = defaults.viewSpec;
         }
 
-        public Builder setTableSpec(@Nullable Input<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec) {
+        public Builder tableSpec(@Nullable Input<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec) {
             this.tableSpec = tableSpec;
             return this;
         }
 
-        public Builder setTableSpec(@Nullable GoogleCloudDatacatalogV1TableSpecArgs tableSpec) {
+        public Builder tableSpec(@Nullable GoogleCloudDatacatalogV1TableSpecArgs tableSpec) {
             this.tableSpec = Input.ofNullable(tableSpec);
             return this;
         }
 
-        public Builder setViewSpec(@Nullable Input<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec) {
+        public Builder viewSpec(@Nullable Input<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec) {
             this.viewSpec = viewSpec;
             return this;
         }
 
-        public Builder setViewSpec(@Nullable GoogleCloudDatacatalogV1ViewSpecArgs viewSpec) {
+        public Builder viewSpec(@Nullable GoogleCloudDatacatalogV1ViewSpecArgs viewSpec) {
             this.viewSpec = Input.ofNullable(viewSpec);
             return this;
         }

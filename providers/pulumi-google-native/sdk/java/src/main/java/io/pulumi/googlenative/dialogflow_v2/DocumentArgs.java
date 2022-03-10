@@ -206,112 +206,112 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rawContent = defaults.rawContent;
         }
 
-        public Builder setContentUri(@Nullable Input<String> contentUri) {
+        public Builder contentUri(@Nullable Input<String> contentUri) {
             this.contentUri = contentUri;
             return this;
         }
 
-        public Builder setContentUri(@Nullable String contentUri) {
+        public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = Input.ofNullable(contentUri);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnableAutoReload(@Nullable Input<Boolean> enableAutoReload) {
+        public Builder enableAutoReload(@Nullable Input<Boolean> enableAutoReload) {
             this.enableAutoReload = enableAutoReload;
             return this;
         }
 
-        public Builder setEnableAutoReload(@Nullable Boolean enableAutoReload) {
+        public Builder enableAutoReload(@Nullable Boolean enableAutoReload) {
             this.enableAutoReload = Input.ofNullable(enableAutoReload);
             return this;
         }
 
-        public Builder setKnowledgeBaseId(Input<String> knowledgeBaseId) {
+        public Builder knowledgeBaseId(Input<String> knowledgeBaseId) {
             this.knowledgeBaseId = Objects.requireNonNull(knowledgeBaseId);
             return this;
         }
 
-        public Builder setKnowledgeBaseId(String knowledgeBaseId) {
+        public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = Input.of(Objects.requireNonNull(knowledgeBaseId));
             return this;
         }
 
-        public Builder setKnowledgeTypes(Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
+        public Builder knowledgeTypes(Input<List<DocumentKnowledgeTypesItem>> knowledgeTypes) {
             this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
             return this;
         }
 
-        public Builder setKnowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
+        public Builder knowledgeTypes(List<DocumentKnowledgeTypesItem> knowledgeTypes) {
             this.knowledgeTypes = Input.of(Objects.requireNonNull(knowledgeTypes));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMimeType(Input<String> mimeType) {
+        public Builder mimeType(Input<String> mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Input.of(Objects.requireNonNull(mimeType));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRawContent(@Nullable Input<String> rawContent) {
+        public Builder rawContent(@Nullable Input<String> rawContent) {
             this.rawContent = rawContent;
             return this;
         }
 
-        public Builder setRawContent(@Nullable String rawContent) {
+        public Builder rawContent(@Nullable String rawContent) {
             this.rawContent = Input.ofNullable(rawContent);
             return this;
         }

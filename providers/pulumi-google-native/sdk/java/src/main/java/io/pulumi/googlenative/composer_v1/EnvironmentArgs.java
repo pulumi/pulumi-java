@@ -129,62 +129,62 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(@Nullable Input<EnvironmentConfigArgs> config) {
+        public Builder config(@Nullable Input<EnvironmentConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable EnvironmentConfigArgs config) {
+        public Builder config(@Nullable EnvironmentConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<EnvironmentState> state) {
+        public Builder state(@Nullable Input<EnvironmentState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable EnvironmentState state) {
+        public Builder state(@Nullable EnvironmentState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

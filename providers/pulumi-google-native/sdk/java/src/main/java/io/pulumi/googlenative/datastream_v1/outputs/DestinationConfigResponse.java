@@ -66,12 +66,12 @@ public final class DestinationConfigResponse {
     	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
         }
 
-        public Builder setDestinationConnectionProfile(String destinationConnectionProfile) {
+        public Builder destinationConnectionProfile(String destinationConnectionProfile) {
             this.destinationConnectionProfile = Objects.requireNonNull(destinationConnectionProfile);
             return this;
         }
 
-        public Builder setGcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
+        public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
         }

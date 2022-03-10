@@ -96,22 +96,22 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse extends i
     	      this.kind = defaults.kind;
         }
 
-        public Builder setForwardingPath(String forwardingPath) {
+        public Builder forwardingPath(String forwardingPath) {
             this.forwardingPath = Objects.requireNonNull(forwardingPath);
             return this;
         }
 
-        public Builder setIpv4Address(String ipv4Address) {
+        public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

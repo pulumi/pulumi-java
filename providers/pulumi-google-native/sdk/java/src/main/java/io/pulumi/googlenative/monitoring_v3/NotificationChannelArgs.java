@@ -215,112 +215,112 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     	      this.verificationStatus = defaults.verificationStatus;
         }
 
-        public Builder setCreationRecord(@Nullable Input<MutationRecordArgs> creationRecord) {
+        public Builder creationRecord(@Nullable Input<MutationRecordArgs> creationRecord) {
             this.creationRecord = creationRecord;
             return this;
         }
 
-        public Builder setCreationRecord(@Nullable MutationRecordArgs creationRecord) {
+        public Builder creationRecord(@Nullable MutationRecordArgs creationRecord) {
             this.creationRecord = Input.ofNullable(creationRecord);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMutationRecords(@Nullable Input<List<MutationRecordArgs>> mutationRecords) {
+        public Builder mutationRecords(@Nullable Input<List<MutationRecordArgs>> mutationRecords) {
             this.mutationRecords = mutationRecords;
             return this;
         }
 
-        public Builder setMutationRecords(@Nullable List<MutationRecordArgs> mutationRecords) {
+        public Builder mutationRecords(@Nullable List<MutationRecordArgs> mutationRecords) {
             this.mutationRecords = Input.ofNullable(mutationRecords);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Input<Map<String,String>> userLabels) {
+        public Builder userLabels(@Nullable Input<Map<String,String>> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = Input.ofNullable(userLabels);
             return this;
         }
 
-        public Builder setVerificationStatus(@Nullable Input<NotificationChannelVerificationStatus> verificationStatus) {
+        public Builder verificationStatus(@Nullable Input<NotificationChannelVerificationStatus> verificationStatus) {
             this.verificationStatus = verificationStatus;
             return this;
         }
 
-        public Builder setVerificationStatus(@Nullable NotificationChannelVerificationStatus verificationStatus) {
+        public Builder verificationStatus(@Nullable NotificationChannelVerificationStatus verificationStatus) {
             this.verificationStatus = Input.ofNullable(verificationStatus);
             return this;
         }

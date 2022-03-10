@@ -212,102 +212,102 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs extends
     	      this.textClassificationConfig = defaults.textClassificationConfig;
         }
 
-        public Builder setBigqueryImportKeys(Input<Map<String,String>> bigqueryImportKeys) {
+        public Builder bigqueryImportKeys(Input<Map<String,String>> bigqueryImportKeys) {
             this.bigqueryImportKeys = Objects.requireNonNull(bigqueryImportKeys);
             return this;
         }
 
-        public Builder setBigqueryImportKeys(Map<String,String> bigqueryImportKeys) {
+        public Builder bigqueryImportKeys(Map<String,String> bigqueryImportKeys) {
             this.bigqueryImportKeys = Input.of(Objects.requireNonNull(bigqueryImportKeys));
             return this;
         }
 
-        public Builder setBoundingPolyConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig) {
+        public Builder boundingPolyConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs> boundingPolyConfig) {
             this.boundingPolyConfig = boundingPolyConfig;
             return this;
         }
 
-        public Builder setBoundingPolyConfig(@Nullable GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs boundingPolyConfig) {
+        public Builder boundingPolyConfig(@Nullable GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs boundingPolyConfig) {
             this.boundingPolyConfig = Input.ofNullable(boundingPolyConfig);
             return this;
         }
 
-        public Builder setEvaluationConfig(Input<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig) {
+        public Builder evaluationConfig(Input<GoogleCloudDatalabelingV1beta1EvaluationConfigArgs> evaluationConfig) {
             this.evaluationConfig = Objects.requireNonNull(evaluationConfig);
             return this;
         }
 
-        public Builder setEvaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs evaluationConfig) {
+        public Builder evaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs evaluationConfig) {
             this.evaluationConfig = Input.of(Objects.requireNonNull(evaluationConfig));
             return this;
         }
 
-        public Builder setEvaluationJobAlertConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig) {
+        public Builder evaluationJobAlertConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs> evaluationJobAlertConfig) {
             this.evaluationJobAlertConfig = evaluationJobAlertConfig;
             return this;
         }
 
-        public Builder setEvaluationJobAlertConfig(@Nullable GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs evaluationJobAlertConfig) {
+        public Builder evaluationJobAlertConfig(@Nullable GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs evaluationJobAlertConfig) {
             this.evaluationJobAlertConfig = Input.ofNullable(evaluationJobAlertConfig);
             return this;
         }
 
-        public Builder setExampleCount(Input<Integer> exampleCount) {
+        public Builder exampleCount(Input<Integer> exampleCount) {
             this.exampleCount = Objects.requireNonNull(exampleCount);
             return this;
         }
 
-        public Builder setExampleCount(Integer exampleCount) {
+        public Builder exampleCount(Integer exampleCount) {
             this.exampleCount = Input.of(Objects.requireNonNull(exampleCount));
             return this;
         }
 
-        public Builder setExampleSamplePercentage(Input<Double> exampleSamplePercentage) {
+        public Builder exampleSamplePercentage(Input<Double> exampleSamplePercentage) {
             this.exampleSamplePercentage = Objects.requireNonNull(exampleSamplePercentage);
             return this;
         }
 
-        public Builder setExampleSamplePercentage(Double exampleSamplePercentage) {
+        public Builder exampleSamplePercentage(Double exampleSamplePercentage) {
             this.exampleSamplePercentage = Input.of(Objects.requireNonNull(exampleSamplePercentage));
             return this;
         }
 
-        public Builder setHumanAnnotationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig) {
+        public Builder humanAnnotationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs> humanAnnotationConfig) {
             this.humanAnnotationConfig = humanAnnotationConfig;
             return this;
         }
 
-        public Builder setHumanAnnotationConfig(@Nullable GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs humanAnnotationConfig) {
+        public Builder humanAnnotationConfig(@Nullable GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs humanAnnotationConfig) {
             this.humanAnnotationConfig = Input.ofNullable(humanAnnotationConfig);
             return this;
         }
 
-        public Builder setImageClassificationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig) {
+        public Builder imageClassificationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs> imageClassificationConfig) {
             this.imageClassificationConfig = imageClassificationConfig;
             return this;
         }
 
-        public Builder setImageClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs imageClassificationConfig) {
+        public Builder imageClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1ImageClassificationConfigArgs imageClassificationConfig) {
             this.imageClassificationConfig = Input.ofNullable(imageClassificationConfig);
             return this;
         }
 
-        public Builder setInputConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig) {
+        public Builder inputConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1InputConfigArgs> inputConfig) {
             this.inputConfig = inputConfig;
             return this;
         }
 
-        public Builder setInputConfig(@Nullable GoogleCloudDatalabelingV1beta1InputConfigArgs inputConfig) {
+        public Builder inputConfig(@Nullable GoogleCloudDatalabelingV1beta1InputConfigArgs inputConfig) {
             this.inputConfig = Input.ofNullable(inputConfig);
             return this;
         }
 
-        public Builder setTextClassificationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig) {
+        public Builder textClassificationConfig(@Nullable Input<GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs> textClassificationConfig) {
             this.textClassificationConfig = textClassificationConfig;
             return this;
         }
 
-        public Builder setTextClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs textClassificationConfig) {
+        public Builder textClassificationConfig(@Nullable GoogleCloudDatalabelingV1beta1TextClassificationConfigArgs textClassificationConfig) {
             this.textClassificationConfig = Input.ofNullable(textClassificationConfig);
             return this;
         }

@@ -230,62 +230,62 @@ public final class GetTaskResult {
     	      this.view = defaults.view;
         }
 
-        public Builder setAppEngineHttpRequest(AppEngineHttpRequestResponse appEngineHttpRequest) {
+        public Builder appEngineHttpRequest(AppEngineHttpRequestResponse appEngineHttpRequest) {
             this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDispatchCount(Integer dispatchCount) {
+        public Builder dispatchCount(Integer dispatchCount) {
             this.dispatchCount = Objects.requireNonNull(dispatchCount);
             return this;
         }
 
-        public Builder setDispatchDeadline(String dispatchDeadline) {
+        public Builder dispatchDeadline(String dispatchDeadline) {
             this.dispatchDeadline = Objects.requireNonNull(dispatchDeadline);
             return this;
         }
 
-        public Builder setFirstAttempt(AttemptResponse firstAttempt) {
+        public Builder firstAttempt(AttemptResponse firstAttempt) {
             this.firstAttempt = Objects.requireNonNull(firstAttempt);
             return this;
         }
 
-        public Builder setHttpRequest(HttpRequestResponse httpRequest) {
+        public Builder httpRequest(HttpRequestResponse httpRequest) {
             this.httpRequest = Objects.requireNonNull(httpRequest);
             return this;
         }
 
-        public Builder setLastAttempt(AttemptResponse lastAttempt) {
+        public Builder lastAttempt(AttemptResponse lastAttempt) {
             this.lastAttempt = Objects.requireNonNull(lastAttempt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPullMessage(PullMessageResponse pullMessage) {
+        public Builder pullMessage(PullMessageResponse pullMessage) {
             this.pullMessage = Objects.requireNonNull(pullMessage);
             return this;
         }
 
-        public Builder setResponseCount(Integer responseCount) {
+        public Builder responseCount(Integer responseCount) {
             this.responseCount = Objects.requireNonNull(responseCount);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
 
-        public Builder setView(String view) {
+        public Builder view(String view) {
             this.view = Objects.requireNonNull(view);
             return this;
         }

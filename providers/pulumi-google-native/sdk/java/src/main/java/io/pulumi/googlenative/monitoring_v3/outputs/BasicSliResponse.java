@@ -116,27 +116,27 @@ public final class BasicSliResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAvailability(AvailabilityCriteriaResponse availability) {
+        public Builder availability(AvailabilityCriteriaResponse availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setLatency(LatencyCriteriaResponse latency) {
+        public Builder latency(LatencyCriteriaResponse latency) {
             this.latency = Objects.requireNonNull(latency);
             return this;
         }
 
-        public Builder setLocation(List<String> location) {
+        public Builder location(List<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMethod(List<String> method) {
+        public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setVersion(List<String> version) {
+        public Builder version(List<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

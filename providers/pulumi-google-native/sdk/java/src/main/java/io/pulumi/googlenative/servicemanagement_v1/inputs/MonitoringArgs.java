@@ -75,22 +75,22 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder setConsumerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations) {
             this.consumerDestinations = consumerDestinations;
             return this;
         }
 
-        public Builder setConsumerDestinations(@Nullable List<MonitoringDestinationArgs> consumerDestinations) {
+        public Builder consumerDestinations(@Nullable List<MonitoringDestinationArgs> consumerDestinations) {
             this.consumerDestinations = Input.ofNullable(consumerDestinations);
             return this;
         }
 
-        public Builder setProducerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> producerDestinations) {
+        public Builder producerDestinations(@Nullable Input<List<MonitoringDestinationArgs>> producerDestinations) {
             this.producerDestinations = producerDestinations;
             return this;
         }
 
-        public Builder setProducerDestinations(@Nullable List<MonitoringDestinationArgs> producerDestinations) {
+        public Builder producerDestinations(@Nullable List<MonitoringDestinationArgs> producerDestinations) {
             this.producerDestinations = Input.ofNullable(producerDestinations);
             return this;
         }

@@ -58,12 +58,12 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clientValidationCa = defaults.clientValidationCa;
         }
 
-        public Builder setClientValidationCa(@Nullable Input<List<ValidationCAArgs>> clientValidationCa) {
+        public Builder clientValidationCa(@Nullable Input<List<ValidationCAArgs>> clientValidationCa) {
             this.clientValidationCa = clientValidationCa;
             return this;
         }
 
-        public Builder setClientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
+        public Builder clientValidationCa(@Nullable List<ValidationCAArgs> clientValidationCa) {
             this.clientValidationCa = Input.ofNullable(clientValidationCa);
             return this;
         }

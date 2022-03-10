@@ -129,32 +129,32 @@ public final class RestoreResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackup(String backup) {
+        public Builder backup(String backup) {
             this.backup = Objects.requireNonNull(backup);
             return this;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

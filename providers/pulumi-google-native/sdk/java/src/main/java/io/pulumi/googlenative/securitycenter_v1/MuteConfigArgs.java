@@ -126,62 +126,62 @@ public final class MuteConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder setMuteConfigId(Input<String> muteConfigId) {
+        public Builder muteConfigId(Input<String> muteConfigId) {
             this.muteConfigId = Objects.requireNonNull(muteConfigId);
             return this;
         }
 
-        public Builder setMuteConfigId(String muteConfigId) {
+        public Builder muteConfigId(String muteConfigId) {
             this.muteConfigId = Input.of(Objects.requireNonNull(muteConfigId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

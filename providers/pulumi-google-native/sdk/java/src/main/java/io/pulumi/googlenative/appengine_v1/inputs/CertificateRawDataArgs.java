@@ -74,22 +74,22 @@ public final class CertificateRawDataArgs extends io.pulumi.resources.ResourceAr
     	      this.publicCertificate = defaults.publicCertificate;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setPublicCertificate(@Nullable Input<String> publicCertificate) {
+        public Builder publicCertificate(@Nullable Input<String> publicCertificate) {
             this.publicCertificate = publicCertificate;
             return this;
         }
 
-        public Builder setPublicCertificate(@Nullable String publicCertificate) {
+        public Builder publicCertificate(@Nullable String publicCertificate) {
             this.publicCertificate = Input.ofNullable(publicCertificate);
             return this;
         }

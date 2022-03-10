@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse {
     	      this.trafficPercent = defaults.trafficPercent;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMinDuration(String minDuration) {
+        public Builder minDuration(String minDuration) {
             this.minDuration = Objects.requireNonNull(minDuration);
             return this;
         }
 
-        public Builder setTrafficPercent(Integer trafficPercent) {
+        public Builder trafficPercent(Integer trafficPercent) {
             this.trafficPercent = Objects.requireNonNull(trafficPercent);
             return this;
         }

@@ -108,22 +108,22 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
 
-        public Builder setDistributions(List<UpgradeDistributionResponse> distributions) {
+        public Builder distributions(List<UpgradeDistributionResponse> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
 
-        public Builder set$package(String $package) {
+        public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setVersion(VersionResponse version) {
+        public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setWindowsUpdate(WindowsUpdateResponse windowsUpdate) {
+        public Builder windowsUpdate(WindowsUpdateResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }

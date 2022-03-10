@@ -243,67 +243,67 @@ public final class GetQueryResult {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setEnvgroupHostname(String envgroupHostname) {
+        public Builder envgroupHostname(String envgroupHostname) {
             this.envgroupHostname = Objects.requireNonNull(envgroupHostname);
             return this;
         }
 
-        public Builder setError(String error) {
+        public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setExecutionTime(String executionTime) {
+        public Builder executionTime(String executionTime) {
             this.executionTime = Objects.requireNonNull(executionTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueryParams(GoogleCloudApigeeV1QueryMetadataResponse queryParams) {
+        public Builder queryParams(GoogleCloudApigeeV1QueryMetadataResponse queryParams) {
             this.queryParams = Objects.requireNonNull(queryParams);
             return this;
         }
 
-        public Builder setReportDefinitionId(String reportDefinitionId) {
+        public Builder reportDefinitionId(String reportDefinitionId) {
             this.reportDefinitionId = Objects.requireNonNull(reportDefinitionId);
             return this;
         }
 
-        public Builder setResult(GoogleCloudApigeeV1AsyncQueryResultResponse result) {
+        public Builder result(GoogleCloudApigeeV1AsyncQueryResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setResultFileSize(String resultFileSize) {
+        public Builder resultFileSize(String resultFileSize) {
             this.resultFileSize = Objects.requireNonNull(resultFileSize);
             return this;
         }
 
-        public Builder setResultRows(String resultRows) {
+        public Builder resultRows(String resultRows) {
             this.resultRows = Objects.requireNonNull(resultRows);
             return this;
         }
 
-        public Builder setSelf(String self) {
+        public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdated(String updated) {
+        public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

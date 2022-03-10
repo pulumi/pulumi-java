@@ -74,12 +74,12 @@ public final class ServiceSpecResponse extends io.pulumi.resources.InvokeArgs {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder setTemplate(RevisionTemplateResponse template) {
+        public Builder template(RevisionTemplateResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTraffic(List<TrafficTargetResponse> traffic) {
+        public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }

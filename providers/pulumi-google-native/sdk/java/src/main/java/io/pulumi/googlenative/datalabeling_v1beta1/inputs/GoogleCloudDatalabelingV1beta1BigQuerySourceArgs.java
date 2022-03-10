@@ -56,12 +56,12 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends io.p
     	      this.inputUri = defaults.inputUri;
         }
 
-        public Builder setInputUri(Input<String> inputUri) {
+        public Builder inputUri(Input<String> inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
 
-        public Builder setInputUri(String inputUri) {
+        public Builder inputUri(String inputUri) {
             this.inputUri = Input.of(Objects.requireNonNull(inputUri));
             return this;
         }

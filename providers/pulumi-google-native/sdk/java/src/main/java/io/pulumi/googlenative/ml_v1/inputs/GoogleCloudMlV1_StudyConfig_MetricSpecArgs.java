@@ -74,22 +74,22 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     	      this.metric = defaults.metric;
         }
 
-        public Builder setGoal(Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
+        public Builder goal(Input<GoogleCloudMlV1_StudyConfig_MetricSpecGoal> goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setGoal(GoogleCloudMlV1_StudyConfig_MetricSpecGoal goal) {
+        public Builder goal(GoogleCloudMlV1_StudyConfig_MetricSpecGoal goal) {
             this.goal = Input.of(Objects.requireNonNull(goal));
             return this;
         }
 
-        public Builder setMetric(Input<String> metric) {
+        public Builder metric(Input<String> metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Input.of(Objects.requireNonNull(metric));
             return this;
         }

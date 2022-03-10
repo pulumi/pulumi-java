@@ -105,22 +105,22 @@ public final class SparkRBatchResponse extends io.pulumi.resources.InvokeArgs {
     	      this.mainRFileUri = defaults.mainRFileUri;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setMainRFileUri(String mainRFileUri) {
+        public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }

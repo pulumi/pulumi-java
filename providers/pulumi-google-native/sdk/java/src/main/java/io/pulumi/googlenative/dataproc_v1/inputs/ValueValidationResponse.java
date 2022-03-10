@@ -56,7 +56,7 @@ public final class ValueValidationResponse extends io.pulumi.resources.InvokeArg
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

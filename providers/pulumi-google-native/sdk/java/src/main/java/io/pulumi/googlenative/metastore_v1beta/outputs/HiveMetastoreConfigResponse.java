@@ -115,27 +115,27 @@ public final class HiveMetastoreConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuxiliaryVersions(Map<String,String> auxiliaryVersions) {
+        public Builder auxiliaryVersions(Map<String,String> auxiliaryVersions) {
             this.auxiliaryVersions = Objects.requireNonNull(auxiliaryVersions);
             return this;
         }
 
-        public Builder setConfigOverrides(Map<String,String> configOverrides) {
+        public Builder configOverrides(Map<String,String> configOverrides) {
             this.configOverrides = Objects.requireNonNull(configOverrides);
             return this;
         }
 
-        public Builder setEndpointProtocol(String endpointProtocol) {
+        public Builder endpointProtocol(String endpointProtocol) {
             this.endpointProtocol = Objects.requireNonNull(endpointProtocol);
             return this;
         }
 
-        public Builder setKerberosConfig(KerberosConfigResponse kerberosConfig) {
+        public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

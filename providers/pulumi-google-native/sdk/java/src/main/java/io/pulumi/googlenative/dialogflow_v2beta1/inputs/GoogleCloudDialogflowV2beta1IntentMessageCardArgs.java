@@ -108,42 +108,42 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardArgs extends io.
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons) {
+        public Builder buttons(@Nullable Input<List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs>> buttons) {
             this.buttons = buttons;
             return this;
         }
 
-        public Builder setButtons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs> buttons) {
+        public Builder buttons(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonArgs> buttons) {
             this.buttons = Input.ofNullable(buttons);
             return this;
         }
 
-        public Builder setImageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Input<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Input.ofNullable(imageUri);
             return this;
         }
 
-        public Builder setSubtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Input<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Input.ofNullable(subtitle);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

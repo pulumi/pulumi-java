@@ -241,132 +241,132 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteUri = defaults.websiteUri;
         }
 
-        public Builder setCareerSiteUri(@Nullable Input<String> careerSiteUri) {
+        public Builder careerSiteUri(@Nullable Input<String> careerSiteUri) {
             this.careerSiteUri = careerSiteUri;
             return this;
         }
 
-        public Builder setCareerSiteUri(@Nullable String careerSiteUri) {
+        public Builder careerSiteUri(@Nullable String careerSiteUri) {
             this.careerSiteUri = Input.ofNullable(careerSiteUri);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEeoText(@Nullable Input<String> eeoText) {
+        public Builder eeoText(@Nullable Input<String> eeoText) {
             this.eeoText = eeoText;
             return this;
         }
 
-        public Builder setEeoText(@Nullable String eeoText) {
+        public Builder eeoText(@Nullable String eeoText) {
             this.eeoText = Input.ofNullable(eeoText);
             return this;
         }
 
-        public Builder setExternalId(Input<String> externalId) {
+        public Builder externalId(Input<String> externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Input.of(Objects.requireNonNull(externalId));
             return this;
         }
 
-        public Builder setHeadquartersAddress(@Nullable Input<String> headquartersAddress) {
+        public Builder headquartersAddress(@Nullable Input<String> headquartersAddress) {
             this.headquartersAddress = headquartersAddress;
             return this;
         }
 
-        public Builder setHeadquartersAddress(@Nullable String headquartersAddress) {
+        public Builder headquartersAddress(@Nullable String headquartersAddress) {
             this.headquartersAddress = Input.ofNullable(headquartersAddress);
             return this;
         }
 
-        public Builder setHiringAgency(@Nullable Input<Boolean> hiringAgency) {
+        public Builder hiringAgency(@Nullable Input<Boolean> hiringAgency) {
             this.hiringAgency = hiringAgency;
             return this;
         }
 
-        public Builder setHiringAgency(@Nullable Boolean hiringAgency) {
+        public Builder hiringAgency(@Nullable Boolean hiringAgency) {
             this.hiringAgency = Input.ofNullable(hiringAgency);
             return this;
         }
 
-        public Builder setImageUri(@Nullable Input<String> imageUri) {
+        public Builder imageUri(@Nullable Input<String> imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = Input.ofNullable(imageUri);
             return this;
         }
 
-        public Builder setKeywordSearchableJobCustomAttributes(@Nullable Input<List<String>> keywordSearchableJobCustomAttributes) {
+        public Builder keywordSearchableJobCustomAttributes(@Nullable Input<List<String>> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = keywordSearchableJobCustomAttributes;
             return this;
         }
 
-        public Builder setKeywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
+        public Builder keywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = Input.ofNullable(keywordSearchableJobCustomAttributes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<CompanySize> size) {
+        public Builder size(@Nullable Input<CompanySize> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable CompanySize size) {
+        public Builder size(@Nullable CompanySize size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setTenantId(Input<String> tenantId) {
+        public Builder tenantId(Input<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
 
-        public Builder setWebsiteUri(@Nullable Input<String> websiteUri) {
+        public Builder websiteUri(@Nullable Input<String> websiteUri) {
             this.websiteUri = websiteUri;
             return this;
         }
 
-        public Builder setWebsiteUri(@Nullable String websiteUri) {
+        public Builder websiteUri(@Nullable String websiteUri) {
             this.websiteUri = Input.ofNullable(websiteUri);
             return this;
         }

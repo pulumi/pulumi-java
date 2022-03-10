@@ -74,12 +74,12 @@ public final class GooglePrivacyDlpV2ErrorResponse extends io.pulumi.resources.I
     	      this.timestamps = defaults.timestamps;
         }
 
-        public Builder setDetails(GoogleRpcStatusResponse details) {
+        public Builder details(GoogleRpcStatusResponse details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setTimestamps(List<String> timestamps) {
+        public Builder timestamps(List<String> timestamps) {
             this.timestamps = Objects.requireNonNull(timestamps);
             return this;
         }

@@ -81,17 +81,17 @@ public final class OperationErrorErrorsItemResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

@@ -207,52 +207,52 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
     	      this.startBoundary = defaults.startBoundary;
         }
 
-        public Builder setAnnotationId(String annotationId) {
+        public Builder annotationId(String annotationId) {
             this.annotationId = Objects.requireNonNull(annotationId);
             return this;
         }
 
-        public Builder setAnswerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
+        public Builder answerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
             this.answerFeedback = Objects.requireNonNull(answerFeedback);
             return this;
         }
 
-        public Builder setArticleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
+        public Builder articleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
             this.articleSuggestion = Objects.requireNonNull(articleSuggestion);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
+        public Builder dialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
             this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction);
             return this;
         }
 
-        public Builder setEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
+        public Builder endBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
             this.endBoundary = Objects.requireNonNull(endBoundary);
             return this;
         }
 
-        public Builder setFaqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
+        public Builder faqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
             this.faqAnswer = Objects.requireNonNull(faqAnswer);
             return this;
         }
 
-        public Builder setSmartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
+        public Builder smartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
             this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion);
             return this;
         }
 
-        public Builder setSmartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
+        public Builder smartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
             this.smartReply = Objects.requireNonNull(smartReply);
             return this;
         }
 
-        public Builder setStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
+        public Builder startBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
             this.startBoundary = Objects.requireNonNull(startBoundary);
             return this;
         }

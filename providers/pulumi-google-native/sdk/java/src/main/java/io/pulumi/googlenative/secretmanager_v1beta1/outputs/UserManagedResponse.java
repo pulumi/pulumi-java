@@ -49,7 +49,7 @@ public final class UserManagedResponse {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(List<ReplicaResponse> replicas) {
+        public Builder replicas(List<ReplicaResponse> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }

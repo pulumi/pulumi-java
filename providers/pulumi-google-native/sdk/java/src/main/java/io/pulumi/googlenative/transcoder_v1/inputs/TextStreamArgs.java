@@ -76,22 +76,22 @@ public final class TextStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mapping = defaults.mapping;
         }
 
-        public Builder setCodec(@Nullable Input<String> codec) {
+        public Builder codec(@Nullable Input<String> codec) {
             this.codec = codec;
             return this;
         }
 
-        public Builder setCodec(@Nullable String codec) {
+        public Builder codec(@Nullable String codec) {
             this.codec = Input.ofNullable(codec);
             return this;
         }
 
-        public Builder setMapping(@Nullable Input<List<TextMappingArgs>> mapping) {
+        public Builder mapping(@Nullable Input<List<TextMappingArgs>> mapping) {
             this.mapping = mapping;
             return this;
         }
 
-        public Builder setMapping(@Nullable List<TextMappingArgs> mapping) {
+        public Builder mapping(@Nullable List<TextMappingArgs> mapping) {
             this.mapping = Input.ofNullable(mapping);
             return this;
         }

@@ -91,32 +91,32 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs ex
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
+        public Builder type(@Nullable Input<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
+        public Builder type(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

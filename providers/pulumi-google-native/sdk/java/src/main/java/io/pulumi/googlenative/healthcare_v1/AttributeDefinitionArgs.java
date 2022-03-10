@@ -196,112 +196,112 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.project = defaults.project;
         }
 
-        public Builder setAllowedValues(Input<List<String>> allowedValues) {
+        public Builder allowedValues(Input<List<String>> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Input.of(Objects.requireNonNull(allowedValues));
             return this;
         }
 
-        public Builder setAttributeDefinitionId(Input<String> attributeDefinitionId) {
+        public Builder attributeDefinitionId(Input<String> attributeDefinitionId) {
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
 
-        public Builder setAttributeDefinitionId(String attributeDefinitionId) {
+        public Builder attributeDefinitionId(String attributeDefinitionId) {
             this.attributeDefinitionId = Input.of(Objects.requireNonNull(attributeDefinitionId));
             return this;
         }
 
-        public Builder setCategory(Input<AttributeDefinitionCategory> category) {
+        public Builder category(Input<AttributeDefinitionCategory> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCategory(AttributeDefinitionCategory category) {
+        public Builder category(AttributeDefinitionCategory category) {
             this.category = Input.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder setConsentDefaultValues(@Nullable Input<List<String>> consentDefaultValues) {
+        public Builder consentDefaultValues(@Nullable Input<List<String>> consentDefaultValues) {
             this.consentDefaultValues = consentDefaultValues;
             return this;
         }
 
-        public Builder setConsentDefaultValues(@Nullable List<String> consentDefaultValues) {
+        public Builder consentDefaultValues(@Nullable List<String> consentDefaultValues) {
             this.consentDefaultValues = Input.ofNullable(consentDefaultValues);
             return this;
         }
 
-        public Builder setConsentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Input<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
-        public Builder setConsentStoreId(String consentStoreId) {
+        public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder setDataMappingDefaultValue(@Nullable Input<String> dataMappingDefaultValue) {
+        public Builder dataMappingDefaultValue(@Nullable Input<String> dataMappingDefaultValue) {
             this.dataMappingDefaultValue = dataMappingDefaultValue;
             return this;
         }
 
-        public Builder setDataMappingDefaultValue(@Nullable String dataMappingDefaultValue) {
+        public Builder dataMappingDefaultValue(@Nullable String dataMappingDefaultValue) {
             this.dataMappingDefaultValue = Input.ofNullable(dataMappingDefaultValue);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

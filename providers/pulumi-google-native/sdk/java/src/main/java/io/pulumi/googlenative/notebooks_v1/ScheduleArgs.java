@@ -152,82 +152,82 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setCronSchedule(@Nullable Input<String> cronSchedule) {
+        public Builder cronSchedule(@Nullable Input<String> cronSchedule) {
             this.cronSchedule = cronSchedule;
             return this;
         }
 
-        public Builder setCronSchedule(@Nullable String cronSchedule) {
+        public Builder cronSchedule(@Nullable String cronSchedule) {
             this.cronSchedule = Input.ofNullable(cronSchedule);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionTemplate(@Nullable Input<ExecutionTemplateArgs> executionTemplate) {
+        public Builder executionTemplate(@Nullable Input<ExecutionTemplateArgs> executionTemplate) {
             this.executionTemplate = executionTemplate;
             return this;
         }
 
-        public Builder setExecutionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
+        public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
             this.executionTemplate = Input.ofNullable(executionTemplate);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setScheduleId(Input<String> scheduleId) {
+        public Builder scheduleId(Input<String> scheduleId) {
             this.scheduleId = Objects.requireNonNull(scheduleId);
             return this;
         }
 
-        public Builder setScheduleId(String scheduleId) {
+        public Builder scheduleId(String scheduleId) {
             this.scheduleId = Input.of(Objects.requireNonNull(scheduleId));
             return this;
         }
 
-        public Builder setState(@Nullable Input<ScheduleState> state) {
+        public Builder state(@Nullable Input<ScheduleState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ScheduleState state) {
+        public Builder state(@Nullable ScheduleState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

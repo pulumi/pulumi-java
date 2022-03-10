@@ -66,12 +66,12 @@ public final class BasicAutoscalingAlgorithmResponse {
     	      this.yarnConfig = defaults.yarnConfig;
         }
 
-        public Builder setCooldownPeriod(String cooldownPeriod) {
+        public Builder cooldownPeriod(String cooldownPeriod) {
             this.cooldownPeriod = Objects.requireNonNull(cooldownPeriod);
             return this;
         }
 
-        public Builder setYarnConfig(BasicYarnAutoscalingConfigResponse yarnConfig) {
+        public Builder yarnConfig(BasicYarnAutoscalingConfigResponse yarnConfig) {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }

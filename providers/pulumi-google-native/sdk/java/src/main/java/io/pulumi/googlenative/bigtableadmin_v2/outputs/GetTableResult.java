@@ -115,27 +115,27 @@ public final class GetTableResult {
     	      this.restoreInfo = defaults.restoreInfo;
         }
 
-        public Builder setClusterStates(Map<String,String> clusterStates) {
+        public Builder clusterStates(Map<String,String> clusterStates) {
             this.clusterStates = Objects.requireNonNull(clusterStates);
             return this;
         }
 
-        public Builder setColumnFamilies(Map<String,String> columnFamilies) {
+        public Builder columnFamilies(Map<String,String> columnFamilies) {
             this.columnFamilies = Objects.requireNonNull(columnFamilies);
             return this;
         }
 
-        public Builder setGranularity(String granularity) {
+        public Builder granularity(String granularity) {
             this.granularity = Objects.requireNonNull(granularity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoreInfo(RestoreInfoResponse restoreInfo) {
+        public Builder restoreInfo(RestoreInfoResponse restoreInfo) {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
         }

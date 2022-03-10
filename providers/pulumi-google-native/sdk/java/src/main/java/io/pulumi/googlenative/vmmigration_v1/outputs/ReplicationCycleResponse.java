@@ -66,12 +66,12 @@ public final class ReplicationCycleResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setProgressPercent(Integer progressPercent) {
+        public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

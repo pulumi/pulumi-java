@@ -116,27 +116,27 @@ public final class OperationResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setDone(Boolean done) {
+        public Builder done(Boolean done) {
             this.done = Objects.requireNonNull(done);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResponse(Map<String,String> response) {
+        public Builder response(Map<String,String> response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }

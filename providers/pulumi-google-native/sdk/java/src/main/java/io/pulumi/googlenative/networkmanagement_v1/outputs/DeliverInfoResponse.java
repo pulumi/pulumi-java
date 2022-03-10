@@ -65,12 +65,12 @@ public final class DeliverInfoResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

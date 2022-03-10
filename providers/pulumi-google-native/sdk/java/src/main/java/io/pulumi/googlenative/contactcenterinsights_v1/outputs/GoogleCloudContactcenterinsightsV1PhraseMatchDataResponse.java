@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     	      this.phraseMatcher = defaults.phraseMatcher;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setPhraseMatcher(String phraseMatcher) {
+        public Builder phraseMatcher(String phraseMatcher) {
             this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
             return this;
         }

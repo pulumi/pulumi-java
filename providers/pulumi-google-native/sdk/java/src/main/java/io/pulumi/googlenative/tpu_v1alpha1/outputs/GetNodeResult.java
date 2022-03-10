@@ -311,87 +311,87 @@ public final class GetNodeResult {
     	      this.useServiceNetworking = defaults.useServiceNetworking;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthDescription(String healthDescription) {
+        public Builder healthDescription(String healthDescription) {
             this.healthDescription = Objects.requireNonNull(healthDescription);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkEndpoints(List<NetworkEndpointResponse> networkEndpoints) {
+        public Builder networkEndpoints(List<NetworkEndpointResponse> networkEndpoints) {
             this.networkEndpoints = Objects.requireNonNull(networkEndpoints);
             return this;
         }
 
-        public Builder setSchedulingConfig(SchedulingConfigResponse schedulingConfig) {
+        public Builder schedulingConfig(SchedulingConfigResponse schedulingConfig) {
             this.schedulingConfig = Objects.requireNonNull(schedulingConfig);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSymptoms(List<SymptomResponse> symptoms) {
+        public Builder symptoms(List<SymptomResponse> symptoms) {
             this.symptoms = Objects.requireNonNull(symptoms);
             return this;
         }
 
-        public Builder setTensorflowVersion(String tensorflowVersion) {
+        public Builder tensorflowVersion(String tensorflowVersion) {
             this.tensorflowVersion = Objects.requireNonNull(tensorflowVersion);
             return this;
         }
 
-        public Builder setUseServiceNetworking(Boolean useServiceNetworking) {
+        public Builder useServiceNetworking(Boolean useServiceNetworking) {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }

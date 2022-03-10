@@ -110,32 +110,32 @@ public final class GetMessageArgs extends io.pulumi.resources.InvokeArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setHl7V2StoreId(String hl7V2StoreId) {
+        public Builder hl7V2StoreId(String hl7V2StoreId) {
             this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }

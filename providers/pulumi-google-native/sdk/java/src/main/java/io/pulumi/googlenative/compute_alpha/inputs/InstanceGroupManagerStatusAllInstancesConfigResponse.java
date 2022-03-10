@@ -69,12 +69,12 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse extends 
     	      this.effective = defaults.effective;
         }
 
-        public Builder setCurrentRevision(String currentRevision) {
+        public Builder currentRevision(String currentRevision) {
             this.currentRevision = Objects.requireNonNull(currentRevision);
             return this;
         }
 
-        public Builder setEffective(Boolean effective) {
+        public Builder effective(Boolean effective) {
             this.effective = Objects.requireNonNull(effective);
             return this;
         }

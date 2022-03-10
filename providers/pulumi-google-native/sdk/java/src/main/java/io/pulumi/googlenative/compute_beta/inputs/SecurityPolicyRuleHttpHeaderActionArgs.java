@@ -54,12 +54,12 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
     	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable Input<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
             this.requestHeadersToAdds = Input.ofNullable(requestHeadersToAdds);
             return this;
         }

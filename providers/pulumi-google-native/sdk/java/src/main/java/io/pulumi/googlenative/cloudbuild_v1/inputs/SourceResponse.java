@@ -90,17 +90,17 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.storageSourceManifest = defaults.storageSourceManifest;
         }
 
-        public Builder setRepoSource(RepoSourceResponse repoSource) {
+        public Builder repoSource(RepoSourceResponse repoSource) {
             this.repoSource = Objects.requireNonNull(repoSource);
             return this;
         }
 
-        public Builder setStorageSource(StorageSourceResponse storageSource) {
+        public Builder storageSource(StorageSourceResponse storageSource) {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
 
-        public Builder setStorageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
+        public Builder storageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
         }

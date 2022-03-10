@@ -74,12 +74,12 @@ public final class GooglePrivacyDlpV2RegexResponse extends io.pulumi.resources.I
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setGroupIndexes(List<Integer> groupIndexes) {
+        public Builder groupIndexes(List<Integer> groupIndexes) {
             this.groupIndexes = Objects.requireNonNull(groupIndexes);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }

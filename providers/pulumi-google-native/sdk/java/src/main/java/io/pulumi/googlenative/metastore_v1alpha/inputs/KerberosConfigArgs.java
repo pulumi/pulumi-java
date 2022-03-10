@@ -91,32 +91,32 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setKeytab(@Nullable Input<SecretArgs> keytab) {
+        public Builder keytab(@Nullable Input<SecretArgs> keytab) {
             this.keytab = keytab;
             return this;
         }
 
-        public Builder setKeytab(@Nullable SecretArgs keytab) {
+        public Builder keytab(@Nullable SecretArgs keytab) {
             this.keytab = Input.ofNullable(keytab);
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(@Nullable Input<String> krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(@Nullable Input<String> krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = krb5ConfigGcsUri;
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(@Nullable String krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(@Nullable String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Input.ofNullable(krb5ConfigGcsUri);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }

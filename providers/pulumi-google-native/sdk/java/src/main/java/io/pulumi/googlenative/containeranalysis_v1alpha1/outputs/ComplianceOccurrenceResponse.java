@@ -67,12 +67,12 @@ public final class ComplianceOccurrenceResponse {
     	      this.nonCompliantFiles = defaults.nonCompliantFiles;
         }
 
-        public Builder setNonComplianceReason(String nonComplianceReason) {
+        public Builder nonComplianceReason(String nonComplianceReason) {
             this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason);
             return this;
         }
 
-        public Builder setNonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
+        public Builder nonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }

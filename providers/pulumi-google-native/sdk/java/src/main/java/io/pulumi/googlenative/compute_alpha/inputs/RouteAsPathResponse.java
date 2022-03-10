@@ -70,12 +70,12 @@ public final class RouteAsPathResponse extends io.pulumi.resources.InvokeArgs {
     	      this.pathSegmentType = defaults.pathSegmentType;
         }
 
-        public Builder setAsLists(List<Integer> asLists) {
+        public Builder asLists(List<Integer> asLists) {
             this.asLists = Objects.requireNonNull(asLists);
             return this;
         }
 
-        public Builder setPathSegmentType(String pathSegmentType) {
+        public Builder pathSegmentType(String pathSegmentType) {
             this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
             return this;
         }

@@ -116,27 +116,27 @@ public final class QueryTimelineSampleResponse extends io.pulumi.resources.Invok
     	      this.totalSlotMs = defaults.totalSlotMs;
         }
 
-        public Builder setActiveUnits(String activeUnits) {
+        public Builder activeUnits(String activeUnits) {
             this.activeUnits = Objects.requireNonNull(activeUnits);
             return this;
         }
 
-        public Builder setCompletedUnits(String completedUnits) {
+        public Builder completedUnits(String completedUnits) {
             this.completedUnits = Objects.requireNonNull(completedUnits);
             return this;
         }
 
-        public Builder setElapsedMs(String elapsedMs) {
+        public Builder elapsedMs(String elapsedMs) {
             this.elapsedMs = Objects.requireNonNull(elapsedMs);
             return this;
         }
 
-        public Builder setPendingUnits(String pendingUnits) {
+        public Builder pendingUnits(String pendingUnits) {
             this.pendingUnits = Objects.requireNonNull(pendingUnits);
             return this;
         }
 
-        public Builder setTotalSlotMs(String totalSlotMs) {
+        public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }

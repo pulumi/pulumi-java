@@ -74,22 +74,22 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     	      this.parameter = defaults.parameter;
         }
 
-        public Builder setCanonicalUrl(@Nullable Input<String> canonicalUrl) {
+        public Builder canonicalUrl(@Nullable Input<String> canonicalUrl) {
             this.canonicalUrl = canonicalUrl;
             return this;
         }
 
-        public Builder setCanonicalUrl(@Nullable String canonicalUrl) {
+        public Builder canonicalUrl(@Nullable String canonicalUrl) {
             this.canonicalUrl = Input.ofNullable(canonicalUrl);
             return this;
         }
 
-        public Builder setParameter(@Nullable Input<String> parameter) {
+        public Builder parameter(@Nullable Input<String> parameter) {
             this.parameter = parameter;
             return this;
         }
 
-        public Builder setParameter(@Nullable String parameter) {
+        public Builder parameter(@Nullable String parameter) {
             this.parameter = Input.ofNullable(parameter);
             return this;
         }

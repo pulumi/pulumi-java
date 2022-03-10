@@ -72,12 +72,12 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

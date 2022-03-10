@@ -154,72 +154,72 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streetAddress = defaults.streetAddress;
         }
 
-        public Builder setCountryCode(@Nullable Input<String> countryCode) {
+        public Builder countryCode(@Nullable Input<String> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
-        public Builder setCountryCode(@Nullable String countryCode) {
+        public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = Input.ofNullable(countryCode);
             return this;
         }
 
-        public Builder setLocality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Input<String> locality) {
             this.locality = locality;
             return this;
         }
 
-        public Builder setLocality(@Nullable String locality) {
+        public Builder locality(@Nullable String locality) {
             this.locality = Input.ofNullable(locality);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Input.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder setPostalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Input<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Input.ofNullable(postalCode);
             return this;
         }
 
-        public Builder setProvince(@Nullable Input<String> province) {
+        public Builder province(@Nullable Input<String> province) {
             this.province = province;
             return this;
         }
 
-        public Builder setProvince(@Nullable String province) {
+        public Builder province(@Nullable String province) {
             this.province = Input.ofNullable(province);
             return this;
         }
 
-        public Builder setStreetAddress(@Nullable Input<String> streetAddress) {
+        public Builder streetAddress(@Nullable Input<String> streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }
 
-        public Builder setStreetAddress(@Nullable String streetAddress) {
+        public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = Input.ofNullable(streetAddress);
             return this;
         }

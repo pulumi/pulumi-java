@@ -75,12 +75,12 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
     	      this.version = defaults.version;
         }
 
-        public Builder setMessageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
+        public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
             this.messageSchemaConfigs = Objects.requireNonNull(messageSchemaConfigs);
             return this;
         }
 
-        public Builder setVersion(List<VersionSourceResponse> version) {
+        public Builder version(List<VersionSourceResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

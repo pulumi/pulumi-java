@@ -99,22 +99,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

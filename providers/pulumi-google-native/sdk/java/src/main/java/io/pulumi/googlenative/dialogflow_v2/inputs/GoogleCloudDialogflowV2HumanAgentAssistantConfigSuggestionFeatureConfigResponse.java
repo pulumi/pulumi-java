@@ -141,32 +141,32 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
     	      this.suggestionTriggerSettings = defaults.suggestionTriggerSettings;
         }
 
-        public Builder setConversationModelConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig) {
+        public Builder conversationModelConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig) {
             this.conversationModelConfig = Objects.requireNonNull(conversationModelConfig);
             return this;
         }
 
-        public Builder setConversationProcessConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig) {
+        public Builder conversationProcessConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig) {
             this.conversationProcessConfig = Objects.requireNonNull(conversationProcessConfig);
             return this;
         }
 
-        public Builder setEnableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
+        public Builder enableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
             this.enableEventBasedSuggestion = Objects.requireNonNull(enableEventBasedSuggestion);
             return this;
         }
 
-        public Builder setQueryConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig) {
+        public Builder queryConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig) {
             this.queryConfig = Objects.requireNonNull(queryConfig);
             return this;
         }
 
-        public Builder setSuggestionFeature(GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature) {
+        public Builder suggestionFeature(GoogleCloudDialogflowV2SuggestionFeatureResponse suggestionFeature) {
             this.suggestionFeature = Objects.requireNonNull(suggestionFeature);
             return this;
         }
 
-        public Builder setSuggestionTriggerSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
+        public Builder suggestionTriggerSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
             this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
             return this;
         }

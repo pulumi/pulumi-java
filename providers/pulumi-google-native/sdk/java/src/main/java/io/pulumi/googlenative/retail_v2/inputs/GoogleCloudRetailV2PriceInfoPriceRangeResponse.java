@@ -72,12 +72,12 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse extends io.pul
     	      this.price = defaults.price;
         }
 
-        public Builder setOriginalPrice(GoogleCloudRetailV2IntervalResponse originalPrice) {
+        public Builder originalPrice(GoogleCloudRetailV2IntervalResponse originalPrice) {
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
 
-        public Builder setPrice(GoogleCloudRetailV2IntervalResponse price) {
+        public Builder price(GoogleCloudRetailV2IntervalResponse price) {
             this.price = Objects.requireNonNull(price);
             return this;
         }

@@ -534,157 +534,157 @@ public final class GetSnapshotResult {
     	      this.userLicenses = defaults.userLicenses;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setAutoCreated(Boolean autoCreated) {
+        public Builder autoCreated(Boolean autoCreated) {
             this.autoCreated = Objects.requireNonNull(autoCreated);
             return this;
         }
 
-        public Builder setChainName(String chainName) {
+        public Builder chainName(String chainName) {
             this.chainName = Objects.requireNonNull(chainName);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDownloadBytes(String downloadBytes) {
+        public Builder downloadBytes(String downloadBytes) {
             this.downloadBytes = Objects.requireNonNull(downloadBytes);
             return this;
         }
 
-        public Builder setGuestFlush(Boolean guestFlush) {
+        public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
 
-        public Builder setGuestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
+        public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenseCodes(List<String> licenseCodes) {
+        public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSnapshotEncryptionKey(CustomerEncryptionKeyResponse snapshotEncryptionKey) {
+        public Builder snapshotEncryptionKey(CustomerEncryptionKeyResponse snapshotEncryptionKey) {
             this.snapshotEncryptionKey = Objects.requireNonNull(snapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSnapshotType(String snapshotType) {
+        public Builder snapshotType(String snapshotType) {
             this.snapshotType = Objects.requireNonNull(snapshotType);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDiskId(String sourceDiskId) {
+        public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(String sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
             return this;
         }
 
-        public Builder setSourceInstantSnapshotId(String sourceInstantSnapshotId) {
+        public Builder sourceInstantSnapshotId(String sourceInstantSnapshotId) {
             this.sourceInstantSnapshotId = Objects.requireNonNull(sourceInstantSnapshotId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageBytes(String storageBytes) {
+        public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
 
-        public Builder setStorageBytesStatus(String storageBytesStatus) {
+        public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }
 
-        public Builder setStorageLocations(List<String> storageLocations) {
+        public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
 
-        public Builder setUserLicenses(List<String> userLicenses) {
+        public Builder userLicenses(List<String> userLicenses) {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }

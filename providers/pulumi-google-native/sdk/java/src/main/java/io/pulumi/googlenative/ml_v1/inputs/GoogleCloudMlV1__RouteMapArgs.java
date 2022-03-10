@@ -74,22 +74,22 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     	      this.predict = defaults.predict;
         }
 
-        public Builder setHealth(@Nullable Input<String> health) {
+        public Builder health(@Nullable Input<String> health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealth(@Nullable String health) {
+        public Builder health(@Nullable String health) {
             this.health = Input.ofNullable(health);
             return this;
         }
 
-        public Builder setPredict(@Nullable Input<String> predict) {
+        public Builder predict(@Nullable Input<String> predict) {
             this.predict = predict;
             return this;
         }
 
-        public Builder setPredict(@Nullable String predict) {
+        public Builder predict(@Nullable String predict) {
             this.predict = Input.ofNullable(predict);
             return this;
         }

@@ -106,42 +106,42 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publicKeyValue = defaults.publicKeyValue;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setKeyScheme(@Nullable Input<String> keyScheme) {
+        public Builder keyScheme(@Nullable Input<String> keyScheme) {
             this.keyScheme = keyScheme;
             return this;
         }
 
-        public Builder setKeyScheme(@Nullable String keyScheme) {
+        public Builder keyScheme(@Nullable String keyScheme) {
             this.keyScheme = Input.ofNullable(keyScheme);
             return this;
         }
 
-        public Builder setKeyType(@Nullable Input<String> keyType) {
+        public Builder keyType(@Nullable Input<String> keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = Input.ofNullable(keyType);
             return this;
         }
 
-        public Builder setPublicKeyValue(@Nullable Input<String> publicKeyValue) {
+        public Builder publicKeyValue(@Nullable Input<String> publicKeyValue) {
             this.publicKeyValue = publicKeyValue;
             return this;
         }
 
-        public Builder setPublicKeyValue(@Nullable String publicKeyValue) {
+        public Builder publicKeyValue(@Nullable String publicKeyValue) {
             this.publicKeyValue = Input.ofNullable(publicKeyValue);
             return this;
         }

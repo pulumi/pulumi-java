@@ -62,12 +62,12 @@ public final class GetExternalVpnGatewayArgs extends io.pulumi.resources.InvokeA
     	      this.project = defaults.project;
         }
 
-        public Builder setExternalVpnGateway(String externalVpnGateway) {
+        public Builder externalVpnGateway(String externalVpnGateway) {
             this.externalVpnGateway = Objects.requireNonNull(externalVpnGateway);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

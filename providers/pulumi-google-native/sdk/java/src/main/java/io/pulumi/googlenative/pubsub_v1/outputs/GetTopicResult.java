@@ -149,37 +149,37 @@ public final class GetTopicResult {
     	      this.schemaSettings = defaults.schemaSettings;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(String messageRetentionDuration) {
+        public Builder messageRetentionDuration(String messageRetentionDuration) {
             this.messageRetentionDuration = Objects.requireNonNull(messageRetentionDuration);
             return this;
         }
 
-        public Builder setMessageStoragePolicy(MessageStoragePolicyResponse messageStoragePolicy) {
+        public Builder messageStoragePolicy(MessageStoragePolicyResponse messageStoragePolicy) {
             this.messageStoragePolicy = Objects.requireNonNull(messageStoragePolicy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSchemaSettings(SchemaSettingsResponse schemaSettings) {
+        public Builder schemaSettings(SchemaSettingsResponse schemaSettings) {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }

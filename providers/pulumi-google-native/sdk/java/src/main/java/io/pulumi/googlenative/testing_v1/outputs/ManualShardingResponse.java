@@ -49,7 +49,7 @@ public final class ManualShardingResponse {
     	      this.testTargetsForShard = defaults.testTargetsForShard;
         }
 
-        public Builder setTestTargetsForShard(List<TestTargetsForShardResponse> testTargetsForShard) {
+        public Builder testTargetsForShard(List<TestTargetsForShardResponse> testTargetsForShard) {
             this.testTargetsForShard = Objects.requireNonNull(testTargetsForShard);
             return this;
         }

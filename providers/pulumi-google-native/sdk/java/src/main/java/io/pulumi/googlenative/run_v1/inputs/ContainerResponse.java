@@ -316,87 +316,87 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnv(List<EnvVarResponse> env) {
+        public Builder env(List<EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setEnvFrom(List<EnvFromSourceResponse> envFrom) {
+        public Builder envFrom(List<EnvFromSourceResponse> envFrom) {
             this.envFrom = Objects.requireNonNull(envFrom);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImagePullPolicy(String imagePullPolicy) {
+        public Builder imagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy);
             return this;
         }
 
-        public Builder setLivenessProbe(ProbeResponse livenessProbe) {
+        public Builder livenessProbe(ProbeResponse livenessProbe) {
             this.livenessProbe = Objects.requireNonNull(livenessProbe);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPorts(List<ContainerPortResponse> ports) {
+        public Builder ports(List<ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setReadinessProbe(ProbeResponse readinessProbe) {
+        public Builder readinessProbe(ProbeResponse readinessProbe) {
             this.readinessProbe = Objects.requireNonNull(readinessProbe);
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsResponse resources) {
+        public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSecurityContext(SecurityContextResponse securityContext) {
+        public Builder securityContext(SecurityContextResponse securityContext) {
             this.securityContext = Objects.requireNonNull(securityContext);
             return this;
         }
 
-        public Builder setStartupProbe(ProbeResponse startupProbe) {
+        public Builder startupProbe(ProbeResponse startupProbe) {
             this.startupProbe = Objects.requireNonNull(startupProbe);
             return this;
         }
 
-        public Builder setTerminationMessagePath(String terminationMessagePath) {
+        public Builder terminationMessagePath(String terminationMessagePath) {
             this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath);
             return this;
         }
 
-        public Builder setTerminationMessagePolicy(String terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(String terminationMessagePolicy) {
             this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy);
             return this;
         }
 
-        public Builder setVolumeMounts(List<VolumeMountResponse> volumeMounts) {
+        public Builder volumeMounts(List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
 
-        public Builder setWorkingDir(String workingDir) {
+        public Builder workingDir(String workingDir) {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }

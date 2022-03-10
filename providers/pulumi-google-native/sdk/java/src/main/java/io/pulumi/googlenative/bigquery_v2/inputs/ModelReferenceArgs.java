@@ -86,32 +86,32 @@ public final class ModelReferenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDatasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Input<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }
 
-        public Builder setModelId(@Nullable Input<String> modelId) {
+        public Builder modelId(@Nullable Input<String> modelId) {
             this.modelId = modelId;
             return this;
         }
 
-        public Builder setModelId(@Nullable String modelId) {
+        public Builder modelId(@Nullable String modelId) {
             this.modelId = Input.ofNullable(modelId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

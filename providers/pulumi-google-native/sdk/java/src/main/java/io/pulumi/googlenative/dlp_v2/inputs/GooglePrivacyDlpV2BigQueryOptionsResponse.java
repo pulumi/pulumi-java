@@ -152,37 +152,37 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse extends io.pulumi.r
     	      this.tableReference = defaults.tableReference;
         }
 
-        public Builder setExcludedFields(List<GooglePrivacyDlpV2FieldIdResponse> excludedFields) {
+        public Builder excludedFields(List<GooglePrivacyDlpV2FieldIdResponse> excludedFields) {
             this.excludedFields = Objects.requireNonNull(excludedFields);
             return this;
         }
 
-        public Builder setIdentifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
+        public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
 
-        public Builder setIncludedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
+        public Builder includedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
             this.includedFields = Objects.requireNonNull(includedFields);
             return this;
         }
 
-        public Builder setRowsLimit(String rowsLimit) {
+        public Builder rowsLimit(String rowsLimit) {
             this.rowsLimit = Objects.requireNonNull(rowsLimit);
             return this;
         }
 
-        public Builder setRowsLimitPercent(Integer rowsLimitPercent) {
+        public Builder rowsLimitPercent(Integer rowsLimitPercent) {
             this.rowsLimitPercent = Objects.requireNonNull(rowsLimitPercent);
             return this;
         }
 
-        public Builder setSampleMethod(String sampleMethod) {
+        public Builder sampleMethod(String sampleMethod) {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
 
-        public Builder setTableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
+        public Builder tableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }

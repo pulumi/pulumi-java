@@ -74,17 +74,17 @@ public final class GetAttestorIamPolicyArgs extends io.pulumi.resources.InvokeAr
     	      this.project = defaults.project;
         }
 
-        public Builder setAttestorId(String attestorId) {
+        public Builder attestorId(String attestorId) {
             this.attestorId = Objects.requireNonNull(attestorId);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

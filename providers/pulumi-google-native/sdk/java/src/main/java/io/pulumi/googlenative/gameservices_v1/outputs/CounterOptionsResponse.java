@@ -83,17 +83,17 @@ public final class CounterOptionsResponse {
     	      this.metric = defaults.metric;
         }
 
-        public Builder setCustomFields(List<CustomFieldResponse> customFields) {
+        public Builder customFields(List<CustomFieldResponse> customFields) {
             this.customFields = Objects.requireNonNull(customFields);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }

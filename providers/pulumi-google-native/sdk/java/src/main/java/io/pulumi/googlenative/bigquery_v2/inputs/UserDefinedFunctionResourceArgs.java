@@ -74,22 +74,22 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setInlineCode(@Nullable Input<String> inlineCode) {
+        public Builder inlineCode(@Nullable Input<String> inlineCode) {
             this.inlineCode = inlineCode;
             return this;
         }
 
-        public Builder setInlineCode(@Nullable String inlineCode) {
+        public Builder inlineCode(@Nullable String inlineCode) {
             this.inlineCode = Input.ofNullable(inlineCode);
             return this;
         }
 
-        public Builder setResourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Input<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }

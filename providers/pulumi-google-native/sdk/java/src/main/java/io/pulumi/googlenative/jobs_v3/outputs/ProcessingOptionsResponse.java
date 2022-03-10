@@ -66,12 +66,12 @@ public final class ProcessingOptionsResponse {
     	      this.htmlSanitization = defaults.htmlSanitization;
         }
 
-        public Builder setDisableStreetAddressResolution(Boolean disableStreetAddressResolution) {
+        public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
             this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution);
             return this;
         }
 
-        public Builder setHtmlSanitization(String htmlSanitization) {
+        public Builder htmlSanitization(String htmlSanitization) {
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
         }

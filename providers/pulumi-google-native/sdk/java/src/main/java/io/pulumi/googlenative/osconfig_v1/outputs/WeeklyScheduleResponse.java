@@ -48,7 +48,7 @@ public final class WeeklyScheduleResponse {
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }

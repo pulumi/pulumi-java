@@ -88,17 +88,17 @@ public final class ComponentSourceResponse extends io.pulumi.resources.InvokeArg
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginalTransformOrCollection(String originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

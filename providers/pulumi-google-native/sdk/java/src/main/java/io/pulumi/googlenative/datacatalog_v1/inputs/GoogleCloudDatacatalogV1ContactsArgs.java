@@ -58,12 +58,12 @@ public final class GoogleCloudDatacatalogV1ContactsArgs extends io.pulumi.resour
     	      this.people = defaults.people;
         }
 
-        public Builder setPeople(@Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
+        public Builder people(@Nullable Input<List<GoogleCloudDatacatalogV1ContactsPersonArgs>> people) {
             this.people = people;
             return this;
         }
 
-        public Builder setPeople(@Nullable List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
+        public Builder people(@Nullable List<GoogleCloudDatacatalogV1ContactsPersonArgs> people) {
             this.people = Input.ofNullable(people);
             return this;
         }

@@ -246,67 +246,67 @@ public final class GetJobResult {
     	      this.trainingOutput = defaults.trainingOutput;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobPosition(String jobPosition) {
+        public Builder jobPosition(String jobPosition) {
             this.jobPosition = Objects.requireNonNull(jobPosition);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setPredictionInput(GoogleCloudMlV1__PredictionInputResponse predictionInput) {
+        public Builder predictionInput(GoogleCloudMlV1__PredictionInputResponse predictionInput) {
             this.predictionInput = Objects.requireNonNull(predictionInput);
             return this;
         }
 
-        public Builder setPredictionOutput(GoogleCloudMlV1__PredictionOutputResponse predictionOutput) {
+        public Builder predictionOutput(GoogleCloudMlV1__PredictionOutputResponse predictionOutput) {
             this.predictionOutput = Objects.requireNonNull(predictionOutput);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrainingInput(GoogleCloudMlV1__TrainingInputResponse trainingInput) {
+        public Builder trainingInput(GoogleCloudMlV1__TrainingInputResponse trainingInput) {
             this.trainingInput = Objects.requireNonNull(trainingInput);
             return this;
         }
 
-        public Builder setTrainingOutput(GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
+        public Builder trainingOutput(GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
             this.trainingOutput = Objects.requireNonNull(trainingOutput);
             return this;
         }

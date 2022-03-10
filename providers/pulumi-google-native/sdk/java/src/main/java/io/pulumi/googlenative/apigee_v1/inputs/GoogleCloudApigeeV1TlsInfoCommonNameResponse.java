@@ -69,12 +69,12 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
     	      this.wildcardMatch = defaults.wildcardMatch;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setWildcardMatch(Boolean wildcardMatch) {
+        public Builder wildcardMatch(Boolean wildcardMatch) {
             this.wildcardMatch = Objects.requireNonNull(wildcardMatch);
             return this;
         }

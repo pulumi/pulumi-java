@@ -183,92 +183,92 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.posixGroups = defaults.posixGroups;
         }
 
-        public Builder setAdditionalGroupKeys(@Nullable Input<List<EntityKeyArgs>> additionalGroupKeys) {
+        public Builder additionalGroupKeys(@Nullable Input<List<EntityKeyArgs>> additionalGroupKeys) {
             this.additionalGroupKeys = additionalGroupKeys;
             return this;
         }
 
-        public Builder setAdditionalGroupKeys(@Nullable List<EntityKeyArgs> additionalGroupKeys) {
+        public Builder additionalGroupKeys(@Nullable List<EntityKeyArgs> additionalGroupKeys) {
             this.additionalGroupKeys = Input.ofNullable(additionalGroupKeys);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setDynamicGroupMetadata(@Nullable Input<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
+        public Builder dynamicGroupMetadata(@Nullable Input<DynamicGroupMetadataArgs> dynamicGroupMetadata) {
             this.dynamicGroupMetadata = dynamicGroupMetadata;
             return this;
         }
 
-        public Builder setDynamicGroupMetadata(@Nullable DynamicGroupMetadataArgs dynamicGroupMetadata) {
+        public Builder dynamicGroupMetadata(@Nullable DynamicGroupMetadataArgs dynamicGroupMetadata) {
             this.dynamicGroupMetadata = Input.ofNullable(dynamicGroupMetadata);
             return this;
         }
 
-        public Builder setGroupKey(Input<EntityKeyArgs> groupKey) {
+        public Builder groupKey(Input<EntityKeyArgs> groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
-        public Builder setGroupKey(EntityKeyArgs groupKey) {
+        public Builder groupKey(EntityKeyArgs groupKey) {
             this.groupKey = Input.of(Objects.requireNonNull(groupKey));
             return this;
         }
 
-        public Builder setInitialGroupConfig(Input<String> initialGroupConfig) {
+        public Builder initialGroupConfig(Input<String> initialGroupConfig) {
             this.initialGroupConfig = Objects.requireNonNull(initialGroupConfig);
             return this;
         }
 
-        public Builder setInitialGroupConfig(String initialGroupConfig) {
+        public Builder initialGroupConfig(String initialGroupConfig) {
             this.initialGroupConfig = Input.of(Objects.requireNonNull(initialGroupConfig));
             return this;
         }
 
-        public Builder setLabels(Input<Map<String,String>> labels) {
+        public Builder labels(Input<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder setPosixGroups(@Nullable Input<List<PosixGroupArgs>> posixGroups) {
+        public Builder posixGroups(@Nullable Input<List<PosixGroupArgs>> posixGroups) {
             this.posixGroups = posixGroups;
             return this;
         }
 
-        public Builder setPosixGroups(@Nullable List<PosixGroupArgs> posixGroups) {
+        public Builder posixGroups(@Nullable List<PosixGroupArgs> posixGroups) {
             this.posixGroups = Input.ofNullable(posixGroups);
             return this;
         }

@@ -99,42 +99,42 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(@Nullable Input<String> expirationMs) {
+        public Builder expirationMs(@Nullable Input<String> expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
-        public Builder setExpirationMs(@Nullable String expirationMs) {
+        public Builder expirationMs(@Nullable String expirationMs) {
             this.expirationMs = Input.ofNullable(expirationMs);
             return this;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Input.ofNullable(requirePartitionFilter);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

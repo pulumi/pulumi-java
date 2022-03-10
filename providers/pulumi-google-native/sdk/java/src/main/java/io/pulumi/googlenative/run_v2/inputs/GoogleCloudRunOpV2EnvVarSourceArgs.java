@@ -57,12 +57,12 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setSecretKeyRef(@Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
+        public Builder secretKeyRef(@Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef) {
             this.secretKeyRef = secretKeyRef;
             return this;
         }
 
-        public Builder setSecretKeyRef(@Nullable GoogleCloudRunOpV2SecretKeySelectorArgs secretKeyRef) {
+        public Builder secretKeyRef(@Nullable GoogleCloudRunOpV2SecretKeySelectorArgs secretKeyRef) {
             this.secretKeyRef = Input.ofNullable(secretKeyRef);
             return this;
         }

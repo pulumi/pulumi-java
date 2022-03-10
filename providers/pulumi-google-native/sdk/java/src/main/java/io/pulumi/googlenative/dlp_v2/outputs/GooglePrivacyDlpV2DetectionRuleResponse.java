@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setHotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }

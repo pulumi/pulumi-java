@@ -89,17 +89,17 @@ public final class StartActivityIntentResponse extends io.pulumi.resources.Invok
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -106,42 +106,42 @@ public final class AndroidMatrixArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orientations = defaults.orientations;
         }
 
-        public Builder setAndroidModelIds(Input<List<String>> androidModelIds) {
+        public Builder androidModelIds(Input<List<String>> androidModelIds) {
             this.androidModelIds = Objects.requireNonNull(androidModelIds);
             return this;
         }
 
-        public Builder setAndroidModelIds(List<String> androidModelIds) {
+        public Builder androidModelIds(List<String> androidModelIds) {
             this.androidModelIds = Input.of(Objects.requireNonNull(androidModelIds));
             return this;
         }
 
-        public Builder setAndroidVersionIds(Input<List<String>> androidVersionIds) {
+        public Builder androidVersionIds(Input<List<String>> androidVersionIds) {
             this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
             return this;
         }
 
-        public Builder setAndroidVersionIds(List<String> androidVersionIds) {
+        public Builder androidVersionIds(List<String> androidVersionIds) {
             this.androidVersionIds = Input.of(Objects.requireNonNull(androidVersionIds));
             return this;
         }
 
-        public Builder setLocales(Input<List<String>> locales) {
+        public Builder locales(Input<List<String>> locales) {
             this.locales = Objects.requireNonNull(locales);
             return this;
         }
 
-        public Builder setLocales(List<String> locales) {
+        public Builder locales(List<String> locales) {
             this.locales = Input.of(Objects.requireNonNull(locales));
             return this;
         }
 
-        public Builder setOrientations(Input<List<String>> orientations) {
+        public Builder orientations(Input<List<String>> orientations) {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
 
-        public Builder setOrientations(List<String> orientations) {
+        public Builder orientations(List<String> orientations) {
             this.orientations = Input.of(Objects.requireNonNull(orientations));
             return this;
         }

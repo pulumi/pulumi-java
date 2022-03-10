@@ -118,27 +118,27 @@ public final class V2RestrictionsResponse {
     	      this.serverKeyRestrictions = defaults.serverKeyRestrictions;
         }
 
-        public Builder setAndroidKeyRestrictions(V2AndroidKeyRestrictionsResponse androidKeyRestrictions) {
+        public Builder androidKeyRestrictions(V2AndroidKeyRestrictionsResponse androidKeyRestrictions) {
             this.androidKeyRestrictions = Objects.requireNonNull(androidKeyRestrictions);
             return this;
         }
 
-        public Builder setApiTargets(List<V2ApiTargetResponse> apiTargets) {
+        public Builder apiTargets(List<V2ApiTargetResponse> apiTargets) {
             this.apiTargets = Objects.requireNonNull(apiTargets);
             return this;
         }
 
-        public Builder setBrowserKeyRestrictions(V2BrowserKeyRestrictionsResponse browserKeyRestrictions) {
+        public Builder browserKeyRestrictions(V2BrowserKeyRestrictionsResponse browserKeyRestrictions) {
             this.browserKeyRestrictions = Objects.requireNonNull(browserKeyRestrictions);
             return this;
         }
 
-        public Builder setIosKeyRestrictions(V2IosKeyRestrictionsResponse iosKeyRestrictions) {
+        public Builder iosKeyRestrictions(V2IosKeyRestrictionsResponse iosKeyRestrictions) {
             this.iosKeyRestrictions = Objects.requireNonNull(iosKeyRestrictions);
             return this;
         }
 
-        public Builder setServerKeyRestrictions(V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
+        public Builder serverKeyRestrictions(V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
             this.serverKeyRestrictions = Objects.requireNonNull(serverKeyRestrictions);
             return this;
         }

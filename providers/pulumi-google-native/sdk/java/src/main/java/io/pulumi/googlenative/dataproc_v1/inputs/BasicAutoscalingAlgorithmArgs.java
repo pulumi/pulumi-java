@@ -92,32 +92,32 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
     	      this.yarnConfig = defaults.yarnConfig;
         }
 
-        public Builder setCooldownPeriod(@Nullable Input<String> cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Input<String> cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
-        public Builder setCooldownPeriod(@Nullable String cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
             this.cooldownPeriod = Input.ofNullable(cooldownPeriod);
             return this;
         }
 
-        public Builder setSparkStandaloneConfig(@Nullable Input<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig) {
+        public Builder sparkStandaloneConfig(@Nullable Input<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig) {
             this.sparkStandaloneConfig = sparkStandaloneConfig;
             return this;
         }
 
-        public Builder setSparkStandaloneConfig(@Nullable SparkStandaloneAutoscalingConfigArgs sparkStandaloneConfig) {
+        public Builder sparkStandaloneConfig(@Nullable SparkStandaloneAutoscalingConfigArgs sparkStandaloneConfig) {
             this.sparkStandaloneConfig = Input.ofNullable(sparkStandaloneConfig);
             return this;
         }
 
-        public Builder setYarnConfig(@Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig) {
+        public Builder yarnConfig(@Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig) {
             this.yarnConfig = yarnConfig;
             return this;
         }
 
-        public Builder setYarnConfig(@Nullable BasicYarnAutoscalingConfigArgs yarnConfig) {
+        public Builder yarnConfig(@Nullable BasicYarnAutoscalingConfigArgs yarnConfig) {
             this.yarnConfig = Input.ofNullable(yarnConfig);
             return this;
         }

@@ -161,42 +161,42 @@ public final class GetTagValueResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespacedName(String namespacedName) {
+        public Builder namespacedName(String namespacedName) {
             this.namespacedName = Objects.requireNonNull(namespacedName);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

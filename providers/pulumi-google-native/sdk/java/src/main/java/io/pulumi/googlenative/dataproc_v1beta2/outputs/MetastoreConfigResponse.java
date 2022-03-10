@@ -48,7 +48,7 @@ public final class MetastoreConfigResponse {
     	      this.dataprocMetastoreService = defaults.dataprocMetastoreService;
         }
 
-        public Builder setDataprocMetastoreService(String dataprocMetastoreService) {
+        public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             this.dataprocMetastoreService = Objects.requireNonNull(dataprocMetastoreService);
             return this;
         }

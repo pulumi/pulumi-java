@@ -76,22 +76,22 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends io.pulumi.resou
     	      this.queryTerms = defaults.queryTerms;
         }
 
-        public Builder setActiveTimeRange(@Nullable Input<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> activeTimeRange) {
+        public Builder activeTimeRange(@Nullable Input<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> activeTimeRange) {
             this.activeTimeRange = activeTimeRange;
             return this;
         }
 
-        public Builder setActiveTimeRange(@Nullable List<GoogleCloudRetailV2alphaConditionTimeRangeArgs> activeTimeRange) {
+        public Builder activeTimeRange(@Nullable List<GoogleCloudRetailV2alphaConditionTimeRangeArgs> activeTimeRange) {
             this.activeTimeRange = Input.ofNullable(activeTimeRange);
             return this;
         }
 
-        public Builder setQueryTerms(@Nullable Input<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> queryTerms) {
+        public Builder queryTerms(@Nullable Input<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> queryTerms) {
             this.queryTerms = queryTerms;
             return this;
         }
 
-        public Builder setQueryTerms(@Nullable List<GoogleCloudRetailV2alphaConditionQueryTermArgs> queryTerms) {
+        public Builder queryTerms(@Nullable List<GoogleCloudRetailV2alphaConditionQueryTermArgs> queryTerms) {
             this.queryTerms = Input.ofNullable(queryTerms);
             return this;
         }

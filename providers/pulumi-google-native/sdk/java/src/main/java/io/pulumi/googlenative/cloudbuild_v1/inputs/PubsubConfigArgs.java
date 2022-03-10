@@ -91,32 +91,32 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setState(@Nullable Input<PubsubConfigState> state) {
+        public Builder state(@Nullable Input<PubsubConfigState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable PubsubConfigState state) {
+        public Builder state(@Nullable PubsubConfigState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

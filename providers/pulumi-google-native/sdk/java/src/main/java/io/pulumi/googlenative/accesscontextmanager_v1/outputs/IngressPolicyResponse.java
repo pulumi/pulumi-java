@@ -66,12 +66,12 @@ public final class IngressPolicyResponse {
     	      this.ingressTo = defaults.ingressTo;
         }
 
-        public Builder setIngressFrom(IngressFromResponse ingressFrom) {
+        public Builder ingressFrom(IngressFromResponse ingressFrom) {
             this.ingressFrom = Objects.requireNonNull(ingressFrom);
             return this;
         }
 
-        public Builder setIngressTo(IngressToResponse ingressTo) {
+        public Builder ingressTo(IngressToResponse ingressTo) {
             this.ingressTo = Objects.requireNonNull(ingressTo);
             return this;
         }

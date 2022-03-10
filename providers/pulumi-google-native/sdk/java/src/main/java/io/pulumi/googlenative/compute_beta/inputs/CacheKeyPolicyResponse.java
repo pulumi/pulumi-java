@@ -154,37 +154,37 @@ public final class CacheKeyPolicyResponse extends io.pulumi.resources.InvokeArgs
     	      this.queryStringWhitelist = defaults.queryStringWhitelist;
         }
 
-        public Builder setIncludeHost(Boolean includeHost) {
+        public Builder includeHost(Boolean includeHost) {
             this.includeHost = Objects.requireNonNull(includeHost);
             return this;
         }
 
-        public Builder setIncludeHttpHeaders(List<String> includeHttpHeaders) {
+        public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
             this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
             return this;
         }
 
-        public Builder setIncludeNamedCookies(List<String> includeNamedCookies) {
+        public Builder includeNamedCookies(List<String> includeNamedCookies) {
             this.includeNamedCookies = Objects.requireNonNull(includeNamedCookies);
             return this;
         }
 
-        public Builder setIncludeProtocol(Boolean includeProtocol) {
+        public Builder includeProtocol(Boolean includeProtocol) {
             this.includeProtocol = Objects.requireNonNull(includeProtocol);
             return this;
         }
 
-        public Builder setIncludeQueryString(Boolean includeQueryString) {
+        public Builder includeQueryString(Boolean includeQueryString) {
             this.includeQueryString = Objects.requireNonNull(includeQueryString);
             return this;
         }
 
-        public Builder setQueryStringBlacklist(List<String> queryStringBlacklist) {
+        public Builder queryStringBlacklist(List<String> queryStringBlacklist) {
             this.queryStringBlacklist = Objects.requireNonNull(queryStringBlacklist);
             return this;
         }
 
-        public Builder setQueryStringWhitelist(List<String> queryStringWhitelist) {
+        public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }

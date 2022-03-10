@@ -48,7 +48,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setSecretKeyRef(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
+        public Builder secretKeyRef(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }

@@ -181,47 +181,47 @@ public final class JobConfigurationExtractResponse {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setDestinationFormat(String destinationFormat) {
+        public Builder destinationFormat(String destinationFormat) {
             this.destinationFormat = Objects.requireNonNull(destinationFormat);
             return this;
         }
 
-        public Builder setDestinationUri(String destinationUri) {
+        public Builder destinationUri(String destinationUri) {
             this.destinationUri = Objects.requireNonNull(destinationUri);
             return this;
         }
 
-        public Builder setDestinationUris(List<String> destinationUris) {
+        public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
 
-        public Builder setFieldDelimiter(String fieldDelimiter) {
+        public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
 
-        public Builder setPrintHeader(Boolean printHeader) {
+        public Builder printHeader(Boolean printHeader) {
             this.printHeader = Objects.requireNonNull(printHeader);
             return this;
         }
 
-        public Builder setSourceModel(ModelReferenceResponse sourceModel) {
+        public Builder sourceModel(ModelReferenceResponse sourceModel) {
             this.sourceModel = Objects.requireNonNull(sourceModel);
             return this;
         }
 
-        public Builder setSourceTable(TableReferenceResponse sourceTable) {
+        public Builder sourceTable(TableReferenceResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }

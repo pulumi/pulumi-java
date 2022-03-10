@@ -57,12 +57,12 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
     	      this.customerManagedEncryption = defaults.customerManagedEncryption;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable Input<CustomerManagedEncryptionArgs> customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
             this.customerManagedEncryption = Input.ofNullable(customerManagedEncryption);
             return this;
         }

@@ -97,22 +97,22 @@ public final class SymptomResponse {
     	      this.workerId = defaults.workerId;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setSymptomType(String symptomType) {
+        public Builder symptomType(String symptomType) {
             this.symptomType = Objects.requireNonNull(symptomType);
             return this;
         }
 
-        public Builder setWorkerId(String workerId) {
+        public Builder workerId(String workerId) {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }

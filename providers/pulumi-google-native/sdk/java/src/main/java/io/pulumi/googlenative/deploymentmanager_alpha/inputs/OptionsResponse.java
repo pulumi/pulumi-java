@@ -108,22 +108,22 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setAsyncOptions(List<AsyncOptionsResponse> asyncOptions) {
+        public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
             this.asyncOptions = Objects.requireNonNull(asyncOptions);
             return this;
         }
 
-        public Builder setInputMappings(List<InputMappingResponse> inputMappings) {
+        public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             this.inputMappings = Objects.requireNonNull(inputMappings);
             return this;
         }
 
-        public Builder setNameProperty(String nameProperty) {
+        public Builder nameProperty(String nameProperty) {
             this.nameProperty = Objects.requireNonNull(nameProperty);
             return this;
         }
 
-        public Builder setValidationOptions(ValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }

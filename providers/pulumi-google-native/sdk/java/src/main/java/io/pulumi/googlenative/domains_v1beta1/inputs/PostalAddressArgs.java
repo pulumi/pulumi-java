@@ -220,112 +220,112 @@ public final class PostalAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sublocality = defaults.sublocality;
         }
 
-        public Builder setAddressLines(@Nullable Input<List<String>> addressLines) {
+        public Builder addressLines(@Nullable Input<List<String>> addressLines) {
             this.addressLines = addressLines;
             return this;
         }
 
-        public Builder setAddressLines(@Nullable List<String> addressLines) {
+        public Builder addressLines(@Nullable List<String> addressLines) {
             this.addressLines = Input.ofNullable(addressLines);
             return this;
         }
 
-        public Builder setAdministrativeArea(@Nullable Input<String> administrativeArea) {
+        public Builder administrativeArea(@Nullable Input<String> administrativeArea) {
             this.administrativeArea = administrativeArea;
             return this;
         }
 
-        public Builder setAdministrativeArea(@Nullable String administrativeArea) {
+        public Builder administrativeArea(@Nullable String administrativeArea) {
             this.administrativeArea = Input.ofNullable(administrativeArea);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setLocality(@Nullable Input<String> locality) {
+        public Builder locality(@Nullable Input<String> locality) {
             this.locality = locality;
             return this;
         }
 
-        public Builder setLocality(@Nullable String locality) {
+        public Builder locality(@Nullable String locality) {
             this.locality = Input.ofNullable(locality);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setPostalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Input<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Input.ofNullable(postalCode);
             return this;
         }
 
-        public Builder setRecipients(@Nullable Input<List<String>> recipients) {
+        public Builder recipients(@Nullable Input<List<String>> recipients) {
             this.recipients = recipients;
             return this;
         }
 
-        public Builder setRecipients(@Nullable List<String> recipients) {
+        public Builder recipients(@Nullable List<String> recipients) {
             this.recipients = Input.ofNullable(recipients);
             return this;
         }
 
-        public Builder setRegionCode(Input<String> regionCode) {
+        public Builder regionCode(Input<String> regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
 
-        public Builder setRegionCode(String regionCode) {
+        public Builder regionCode(String regionCode) {
             this.regionCode = Input.of(Objects.requireNonNull(regionCode));
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<Integer> revision) {
+        public Builder revision(@Nullable Input<Integer> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setSortingCode(@Nullable Input<String> sortingCode) {
+        public Builder sortingCode(@Nullable Input<String> sortingCode) {
             this.sortingCode = sortingCode;
             return this;
         }
 
-        public Builder setSortingCode(@Nullable String sortingCode) {
+        public Builder sortingCode(@Nullable String sortingCode) {
             this.sortingCode = Input.ofNullable(sortingCode);
             return this;
         }
 
-        public Builder setSublocality(@Nullable Input<String> sublocality) {
+        public Builder sublocality(@Nullable Input<String> sublocality) {
             this.sublocality = sublocality;
             return this;
         }
 
-        public Builder setSublocality(@Nullable String sublocality) {
+        public Builder sublocality(@Nullable String sublocality) {
             this.sublocality = Input.ofNullable(sublocality);
             return this;
         }

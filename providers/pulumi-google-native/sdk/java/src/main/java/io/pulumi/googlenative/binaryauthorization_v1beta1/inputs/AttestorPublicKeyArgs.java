@@ -107,42 +107,42 @@ public final class AttestorPublicKeyArgs extends io.pulumi.resources.ResourceArg
     	      this.pkixPublicKey = defaults.pkixPublicKey;
         }
 
-        public Builder setAsciiArmoredPgpPublicKey(@Nullable Input<String> asciiArmoredPgpPublicKey) {
+        public Builder asciiArmoredPgpPublicKey(@Nullable Input<String> asciiArmoredPgpPublicKey) {
             this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
 
-        public Builder setAsciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
+        public Builder asciiArmoredPgpPublicKey(@Nullable String asciiArmoredPgpPublicKey) {
             this.asciiArmoredPgpPublicKey = Input.ofNullable(asciiArmoredPgpPublicKey);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setPkixPublicKey(@Nullable Input<PkixPublicKeyArgs> pkixPublicKey) {
+        public Builder pkixPublicKey(@Nullable Input<PkixPublicKeyArgs> pkixPublicKey) {
             this.pkixPublicKey = pkixPublicKey;
             return this;
         }
 
-        public Builder setPkixPublicKey(@Nullable PkixPublicKeyArgs pkixPublicKey) {
+        public Builder pkixPublicKey(@Nullable PkixPublicKeyArgs pkixPublicKey) {
             this.pkixPublicKey = Input.ofNullable(pkixPublicKey);
             return this;
         }

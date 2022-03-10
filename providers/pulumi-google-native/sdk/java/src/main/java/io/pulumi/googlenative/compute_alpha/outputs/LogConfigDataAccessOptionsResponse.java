@@ -48,7 +48,7 @@ public final class LogConfigDataAccessOptionsResponse {
     	      this.logMode = defaults.logMode;
         }
 
-        public Builder setLogMode(String logMode) {
+        public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }

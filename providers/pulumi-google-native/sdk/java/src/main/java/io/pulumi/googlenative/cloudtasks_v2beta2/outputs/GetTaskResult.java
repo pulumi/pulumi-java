@@ -148,37 +148,37 @@ public final class GetTaskResult {
     	      this.view = defaults.view;
         }
 
-        public Builder setAppEngineHttpRequest(AppEngineHttpRequestResponse appEngineHttpRequest) {
+        public Builder appEngineHttpRequest(AppEngineHttpRequestResponse appEngineHttpRequest) {
             this.appEngineHttpRequest = Objects.requireNonNull(appEngineHttpRequest);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPullMessage(PullMessageResponse pullMessage) {
+        public Builder pullMessage(PullMessageResponse pullMessage) {
             this.pullMessage = Objects.requireNonNull(pullMessage);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
 
-        public Builder setStatus(TaskStatusResponse status) {
+        public Builder status(TaskStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setView(String view) {
+        public Builder view(String view) {
             this.view = Objects.requireNonNull(view);
             return this;
         }

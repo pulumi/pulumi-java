@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputArgs extends io.pulumi
     	      this.finishDigit = defaults.finishDigit;
         }
 
-        public Builder setDigits(@Nullable Input<String> digits) {
+        public Builder digits(@Nullable Input<String> digits) {
             this.digits = digits;
             return this;
         }
 
-        public Builder setDigits(@Nullable String digits) {
+        public Builder digits(@Nullable String digits) {
             this.digits = Input.ofNullable(digits);
             return this;
         }
 
-        public Builder setFinishDigit(@Nullable Input<String> finishDigit) {
+        public Builder finishDigit(@Nullable Input<String> finishDigit) {
             this.finishDigit = finishDigit;
             return this;
         }
 
-        public Builder setFinishDigit(@Nullable String finishDigit) {
+        public Builder finishDigit(@Nullable String finishDigit) {
             this.finishDigit = Input.ofNullable(finishDigit);
             return this;
         }

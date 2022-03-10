@@ -58,12 +58,12 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
     	      this.allowedApplications = defaults.allowedApplications;
         }
 
-        public Builder setAllowedApplications(@Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications) {
+        public Builder allowedApplications(@Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications) {
             this.allowedApplications = allowedApplications;
             return this;
         }
 
-        public Builder setAllowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
+        public Builder allowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
             this.allowedApplications = Input.ofNullable(allowedApplications);
             return this;
         }

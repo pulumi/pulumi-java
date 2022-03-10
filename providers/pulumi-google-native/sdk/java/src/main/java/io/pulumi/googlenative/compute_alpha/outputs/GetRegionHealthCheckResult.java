@@ -306,102 +306,102 @@ public final class GetRegionHealthCheckResult {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setCheckIntervalSec(Integer checkIntervalSec) {
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
             this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGrpcHealthCheck(GRPCHealthCheckResponse grpcHealthCheck) {
+        public Builder grpcHealthCheck(GRPCHealthCheckResponse grpcHealthCheck) {
             this.grpcHealthCheck = Objects.requireNonNull(grpcHealthCheck);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setHttp2HealthCheck(HTTP2HealthCheckResponse http2HealthCheck) {
+        public Builder http2HealthCheck(HTTP2HealthCheckResponse http2HealthCheck) {
             this.http2HealthCheck = Objects.requireNonNull(http2HealthCheck);
             return this;
         }
 
-        public Builder setHttpHealthCheck(HTTPHealthCheckResponse httpHealthCheck) {
+        public Builder httpHealthCheck(HTTPHealthCheckResponse httpHealthCheck) {
             this.httpHealthCheck = Objects.requireNonNull(httpHealthCheck);
             return this;
         }
 
-        public Builder setHttpsHealthCheck(HTTPSHealthCheckResponse httpsHealthCheck) {
+        public Builder httpsHealthCheck(HTTPSHealthCheckResponse httpsHealthCheck) {
             this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLogConfig(HealthCheckLogConfigResponse logConfig) {
+        public Builder logConfig(HealthCheckLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSslHealthCheck(SSLHealthCheckResponse sslHealthCheck) {
+        public Builder sslHealthCheck(SSLHealthCheckResponse sslHealthCheck) {
             this.sslHealthCheck = Objects.requireNonNull(sslHealthCheck);
             return this;
         }
 
-        public Builder setTcpHealthCheck(TCPHealthCheckResponse tcpHealthCheck) {
+        public Builder tcpHealthCheck(TCPHealthCheckResponse tcpHealthCheck) {
             this.tcpHealthCheck = Objects.requireNonNull(tcpHealthCheck);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUdpHealthCheck(UDPHealthCheckResponse udpHealthCheck) {
+        public Builder udpHealthCheck(UDPHealthCheckResponse udpHealthCheck) {
             this.udpHealthCheck = Objects.requireNonNull(udpHealthCheck);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }

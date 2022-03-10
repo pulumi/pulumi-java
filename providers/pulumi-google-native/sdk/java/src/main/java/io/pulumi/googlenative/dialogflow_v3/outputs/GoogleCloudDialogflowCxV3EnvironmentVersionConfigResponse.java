@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

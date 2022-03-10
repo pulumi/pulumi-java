@@ -49,7 +49,7 @@ public final class ResourcePolicyWeeklyCycleResponse {
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder setDayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
+        public Builder dayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }

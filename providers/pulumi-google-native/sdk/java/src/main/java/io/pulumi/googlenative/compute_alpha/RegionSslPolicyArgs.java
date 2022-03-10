@@ -174,92 +174,92 @@ public final class RegionSslPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tlsSettings = defaults.tlsSettings;
         }
 
-        public Builder setCustomFeatures(@Nullable Input<List<String>> customFeatures) {
+        public Builder customFeatures(@Nullable Input<List<String>> customFeatures) {
             this.customFeatures = customFeatures;
             return this;
         }
 
-        public Builder setCustomFeatures(@Nullable List<String> customFeatures) {
+        public Builder customFeatures(@Nullable List<String> customFeatures) {
             this.customFeatures = Input.ofNullable(customFeatures);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable Input<RegionSslPolicyMinTlsVersion> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Input<RegionSslPolicyMinTlsVersion> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable RegionSslPolicyMinTlsVersion minTlsVersion) {
+        public Builder minTlsVersion(@Nullable RegionSslPolicyMinTlsVersion minTlsVersion) {
             this.minTlsVersion = Input.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<RegionSslPolicyProfile> profile) {
+        public Builder profile(@Nullable Input<RegionSslPolicyProfile> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable RegionSslPolicyProfile profile) {
+        public Builder profile(@Nullable RegionSslPolicyProfile profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setTlsSettings(@Nullable Input<ServerTlsSettingsArgs> tlsSettings) {
+        public Builder tlsSettings(@Nullable Input<ServerTlsSettingsArgs> tlsSettings) {
             this.tlsSettings = tlsSettings;
             return this;
         }
 
-        public Builder setTlsSettings(@Nullable ServerTlsSettingsArgs tlsSettings) {
+        public Builder tlsSettings(@Nullable ServerTlsSettingsArgs tlsSettings) {
             this.tlsSettings = Input.ofNullable(tlsSettings);
             return this;
         }

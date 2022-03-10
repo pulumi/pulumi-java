@@ -88,17 +88,17 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setAutomlModel(String automlModel) {
+        public Builder automlModel(String automlModel) {
             this.automlModel = Objects.requireNonNull(automlModel);
             return this;
         }
 
-        public Builder setGcsTfliteUri(String gcsTfliteUri) {
+        public Builder gcsTfliteUri(String gcsTfliteUri) {
             this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }

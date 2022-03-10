@@ -47,7 +47,7 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }

@@ -99,22 +99,22 @@ public final class BucketCorsItemResponse {
     	      this.responseHeader = defaults.responseHeader;
         }
 
-        public Builder setMaxAgeSeconds(Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(Integer maxAgeSeconds) {
             this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
             return this;
         }
 
-        public Builder setMethod(List<String> method) {
+        public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setOrigin(List<String> origin) {
+        public Builder origin(List<String> origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setResponseHeader(List<String> responseHeader) {
+        public Builder responseHeader(List<String> responseHeader) {
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }

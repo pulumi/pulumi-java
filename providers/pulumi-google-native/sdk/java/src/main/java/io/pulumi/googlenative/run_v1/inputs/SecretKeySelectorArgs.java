@@ -108,42 +108,42 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
     	      this.optional = defaults.optional;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setLocalObjectReference(@Nullable Input<LocalObjectReferenceArgs> localObjectReference) {
+        public Builder localObjectReference(@Nullable Input<LocalObjectReferenceArgs> localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
-        public Builder setLocalObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
+        public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
             this.localObjectReference = Input.ofNullable(localObjectReference);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptional(@Nullable Input<Boolean> optional) {
+        public Builder optional(@Nullable Input<Boolean> optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = Input.ofNullable(optional);
             return this;
         }

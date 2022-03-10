@@ -55,7 +55,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder setSecretVersion(String secretVersion) {
+        public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }

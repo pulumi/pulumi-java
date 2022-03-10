@@ -74,12 +74,12 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setDsRecords(List<DsRecordResponse> dsRecords) {
+        public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }

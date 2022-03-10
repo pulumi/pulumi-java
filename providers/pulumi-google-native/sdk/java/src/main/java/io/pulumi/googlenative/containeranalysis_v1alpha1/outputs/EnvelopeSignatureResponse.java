@@ -65,12 +65,12 @@ public final class EnvelopeSignatureResponse {
     	      this.sig = defaults.sig;
         }
 
-        public Builder setKeyid(String keyid) {
+        public Builder keyid(String keyid) {
             this.keyid = Objects.requireNonNull(keyid);
             return this;
         }
 
-        public Builder setSig(String sig) {
+        public Builder sig(String sig) {
             this.sig = Objects.requireNonNull(sig);
             return this;
         }

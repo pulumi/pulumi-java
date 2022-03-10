@@ -98,22 +98,22 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
     	      this.supportsWorkProfile = defaults.supportsWorkProfile;
         }
 
-        public Builder setEnabledUnknownSources(Boolean enabledUnknownSources) {
+        public Builder enabledUnknownSources(Boolean enabledUnknownSources) {
             this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
             return this;
         }
 
-        public Builder setOwnerProfileAccount(Boolean ownerProfileAccount) {
+        public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
             this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
             return this;
         }
 
-        public Builder setOwnershipPrivilege(String ownershipPrivilege) {
+        public Builder ownershipPrivilege(String ownershipPrivilege) {
             this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
             return this;
         }
 
-        public Builder setSupportsWorkProfile(Boolean supportsWorkProfile) {
+        public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }

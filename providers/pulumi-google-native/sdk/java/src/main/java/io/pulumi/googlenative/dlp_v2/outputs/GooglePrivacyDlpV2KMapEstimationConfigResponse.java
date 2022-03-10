@@ -84,17 +84,17 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
     	      this.regionCode = defaults.regionCode;
         }
 
-        public Builder setAuxiliaryTables(List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables) {
+        public Builder auxiliaryTables(List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables) {
             this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
             return this;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setRegionCode(String regionCode) {
+        public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }

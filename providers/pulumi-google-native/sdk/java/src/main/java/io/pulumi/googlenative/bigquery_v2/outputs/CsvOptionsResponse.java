@@ -146,37 +146,37 @@ public final class CsvOptionsResponse {
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setAllowJaggedRows(Boolean allowJaggedRows) {
+        public Builder allowJaggedRows(Boolean allowJaggedRows) {
             this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(Boolean allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
             return this;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(String fieldDelimiter) {
+        public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
 
-        public Builder setNullMarker(String nullMarker) {
+        public Builder nullMarker(String nullMarker) {
             this.nullMarker = Objects.requireNonNull(nullMarker);
             return this;
         }
 
-        public Builder setQuote(String quote) {
+        public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
 
-        public Builder setSkipLeadingRows(String skipLeadingRows) {
+        public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }

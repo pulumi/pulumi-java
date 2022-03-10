@@ -124,52 +124,52 @@ public final class MuxStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.segmentSettings = defaults.segmentSettings;
         }
 
-        public Builder setContainer(@Nullable Input<String> container) {
+        public Builder container(@Nullable Input<String> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setElementaryStreams(@Nullable Input<List<String>> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable Input<List<String>> elementaryStreams) {
             this.elementaryStreams = elementaryStreams;
             return this;
         }
 
-        public Builder setElementaryStreams(@Nullable List<String> elementaryStreams) {
+        public Builder elementaryStreams(@Nullable List<String> elementaryStreams) {
             this.elementaryStreams = Input.ofNullable(elementaryStreams);
             return this;
         }
 
-        public Builder setFileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Input<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable String fileName) {
+        public Builder fileName(@Nullable String fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setSegmentSettings(@Nullable Input<SegmentSettingsArgs> segmentSettings) {
+        public Builder segmentSettings(@Nullable Input<SegmentSettingsArgs> segmentSettings) {
             this.segmentSettings = segmentSettings;
             return this;
         }
 
-        public Builder setSegmentSettings(@Nullable SegmentSettingsArgs segmentSettings) {
+        public Builder segmentSettings(@Nullable SegmentSettingsArgs segmentSettings) {
             this.segmentSettings = Input.ofNullable(segmentSettings);
             return this;
         }

@@ -160,72 +160,72 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(@Nullable Input<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction) {
+        public Builder archiveExtraction(@Nullable Input<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction) {
             this.archiveExtraction = archiveExtraction;
             return this;
         }
 
-        public Builder setArchiveExtraction(@Nullable SoftwareRecipeStepExtractArchiveArgs archiveExtraction) {
+        public Builder archiveExtraction(@Nullable SoftwareRecipeStepExtractArchiveArgs archiveExtraction) {
             this.archiveExtraction = Input.ofNullable(archiveExtraction);
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable Input<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable Input<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable SoftwareRecipeStepInstallDpkgArgs dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable SoftwareRecipeStepInstallDpkgArgs dpkgInstallation) {
             this.dpkgInstallation = Input.ofNullable(dpkgInstallation);
             return this;
         }
 
-        public Builder setFileCopy(@Nullable Input<SoftwareRecipeStepCopyFileArgs> fileCopy) {
+        public Builder fileCopy(@Nullable Input<SoftwareRecipeStepCopyFileArgs> fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
 
-        public Builder setFileCopy(@Nullable SoftwareRecipeStepCopyFileArgs fileCopy) {
+        public Builder fileCopy(@Nullable SoftwareRecipeStepCopyFileArgs fileCopy) {
             this.fileCopy = Input.ofNullable(fileCopy);
             return this;
         }
 
-        public Builder setFileExec(@Nullable Input<SoftwareRecipeStepExecFileArgs> fileExec) {
+        public Builder fileExec(@Nullable Input<SoftwareRecipeStepExecFileArgs> fileExec) {
             this.fileExec = fileExec;
             return this;
         }
 
-        public Builder setFileExec(@Nullable SoftwareRecipeStepExecFileArgs fileExec) {
+        public Builder fileExec(@Nullable SoftwareRecipeStepExecFileArgs fileExec) {
             this.fileExec = Input.ofNullable(fileExec);
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable Input<SoftwareRecipeStepInstallMsiArgs> msiInstallation) {
+        public Builder msiInstallation(@Nullable Input<SoftwareRecipeStepInstallMsiArgs> msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable SoftwareRecipeStepInstallMsiArgs msiInstallation) {
+        public Builder msiInstallation(@Nullable SoftwareRecipeStepInstallMsiArgs msiInstallation) {
             this.msiInstallation = Input.ofNullable(msiInstallation);
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable Input<SoftwareRecipeStepInstallRpmArgs> rpmInstallation) {
+        public Builder rpmInstallation(@Nullable Input<SoftwareRecipeStepInstallRpmArgs> rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable SoftwareRecipeStepInstallRpmArgs rpmInstallation) {
+        public Builder rpmInstallation(@Nullable SoftwareRecipeStepInstallRpmArgs rpmInstallation) {
             this.rpmInstallation = Input.ofNullable(rpmInstallation);
             return this;
         }
 
-        public Builder setScriptRun(@Nullable Input<SoftwareRecipeStepRunScriptArgs> scriptRun) {
+        public Builder scriptRun(@Nullable Input<SoftwareRecipeStepRunScriptArgs> scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }
 
-        public Builder setScriptRun(@Nullable SoftwareRecipeStepRunScriptArgs scriptRun) {
+        public Builder scriptRun(@Nullable SoftwareRecipeStepRunScriptArgs scriptRun) {
             this.scriptRun = Input.ofNullable(scriptRun);
             return this;
         }

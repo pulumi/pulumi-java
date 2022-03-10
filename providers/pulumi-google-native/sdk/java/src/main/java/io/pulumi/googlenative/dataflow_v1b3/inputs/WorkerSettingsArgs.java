@@ -139,62 +139,62 @@ public final class WorkerSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerId = defaults.workerId;
         }
 
-        public Builder setBaseUrl(@Nullable Input<String> baseUrl) {
+        public Builder baseUrl(@Nullable Input<String> baseUrl) {
             this.baseUrl = baseUrl;
             return this;
         }
 
-        public Builder setBaseUrl(@Nullable String baseUrl) {
+        public Builder baseUrl(@Nullable String baseUrl) {
             this.baseUrl = Input.ofNullable(baseUrl);
             return this;
         }
 
-        public Builder setReportingEnabled(@Nullable Input<Boolean> reportingEnabled) {
+        public Builder reportingEnabled(@Nullable Input<Boolean> reportingEnabled) {
             this.reportingEnabled = reportingEnabled;
             return this;
         }
 
-        public Builder setReportingEnabled(@Nullable Boolean reportingEnabled) {
+        public Builder reportingEnabled(@Nullable Boolean reportingEnabled) {
             this.reportingEnabled = Input.ofNullable(reportingEnabled);
             return this;
         }
 
-        public Builder setServicePath(@Nullable Input<String> servicePath) {
+        public Builder servicePath(@Nullable Input<String> servicePath) {
             this.servicePath = servicePath;
             return this;
         }
 
-        public Builder setServicePath(@Nullable String servicePath) {
+        public Builder servicePath(@Nullable String servicePath) {
             this.servicePath = Input.ofNullable(servicePath);
             return this;
         }
 
-        public Builder setShuffleServicePath(@Nullable Input<String> shuffleServicePath) {
+        public Builder shuffleServicePath(@Nullable Input<String> shuffleServicePath) {
             this.shuffleServicePath = shuffleServicePath;
             return this;
         }
 
-        public Builder setShuffleServicePath(@Nullable String shuffleServicePath) {
+        public Builder shuffleServicePath(@Nullable String shuffleServicePath) {
             this.shuffleServicePath = Input.ofNullable(shuffleServicePath);
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable Input<String> tempStoragePrefix) {
             this.tempStoragePrefix = tempStoragePrefix;
             return this;
         }
 
-        public Builder setTempStoragePrefix(@Nullable String tempStoragePrefix) {
+        public Builder tempStoragePrefix(@Nullable String tempStoragePrefix) {
             this.tempStoragePrefix = Input.ofNullable(tempStoragePrefix);
             return this;
         }
 
-        public Builder setWorkerId(@Nullable Input<String> workerId) {
+        public Builder workerId(@Nullable Input<String> workerId) {
             this.workerId = workerId;
             return this;
         }
 
-        public Builder setWorkerId(@Nullable String workerId) {
+        public Builder workerId(@Nullable String workerId) {
             this.workerId = Input.ofNullable(workerId);
             return this;
         }

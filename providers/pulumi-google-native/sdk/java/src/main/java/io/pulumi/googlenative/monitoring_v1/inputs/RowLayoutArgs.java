@@ -58,12 +58,12 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rows = defaults.rows;
         }
 
-        public Builder setRows(@Nullable Input<List<RowArgs>> rows) {
+        public Builder rows(@Nullable Input<List<RowArgs>> rows) {
             this.rows = rows;
             return this;
         }
 
-        public Builder setRows(@Nullable List<RowArgs> rows) {
+        public Builder rows(@Nullable List<RowArgs> rows) {
             this.rows = Input.ofNullable(rows);
             return this;
         }

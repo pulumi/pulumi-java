@@ -197,52 +197,52 @@ public final class GetDatabaseResult {
     	      this.versionRetentionPeriod = defaults.versionRetentionPeriod;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDatabaseDialect(String databaseDialect) {
+        public Builder databaseDialect(String databaseDialect) {
             this.databaseDialect = Objects.requireNonNull(databaseDialect);
             return this;
         }
 
-        public Builder setDefaultLeader(String defaultLeader) {
+        public Builder defaultLeader(String defaultLeader) {
             this.defaultLeader = Objects.requireNonNull(defaultLeader);
             return this;
         }
 
-        public Builder setEarliestVersionTime(String earliestVersionTime) {
+        public Builder earliestVersionTime(String earliestVersionTime) {
             this.earliestVersionTime = Objects.requireNonNull(earliestVersionTime);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setEncryptionInfo(List<EncryptionInfoResponse> encryptionInfo) {
+        public Builder encryptionInfo(List<EncryptionInfoResponse> encryptionInfo) {
             this.encryptionInfo = Objects.requireNonNull(encryptionInfo);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoreInfo(RestoreInfoResponse restoreInfo) {
+        public Builder restoreInfo(RestoreInfoResponse restoreInfo) {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVersionRetentionPeriod(String versionRetentionPeriod) {
+        public Builder versionRetentionPeriod(String versionRetentionPeriod) {
             this.versionRetentionPeriod = Objects.requireNonNull(versionRetentionPeriod);
             return this;
         }

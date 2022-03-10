@@ -100,42 +100,42 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs extends io.pulum
     	      this.weight = defaults.weight;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setRrdatas(@Nullable Input<List<String>> rrdatas) {
+        public Builder rrdatas(@Nullable Input<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
 
-        public Builder setRrdatas(@Nullable List<String> rrdatas) {
+        public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Input.ofNullable(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
             this.signatureRrdatas = Input.ofNullable(signatureRrdatas);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Double> weight) {
+        public Builder weight(@Nullable Input<Double> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

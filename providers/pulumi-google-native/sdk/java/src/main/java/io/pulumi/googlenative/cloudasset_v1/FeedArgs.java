@@ -194,102 +194,102 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.v1Id1 = defaults.v1Id1;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<ExprArgs> condition) {
+        public Builder condition(@Nullable Input<ExprArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable ExprArgs condition) {
+        public Builder condition(@Nullable ExprArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<FeedContentType> contentType) {
+        public Builder contentType(@Nullable Input<FeedContentType> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable FeedContentType contentType) {
+        public Builder contentType(@Nullable FeedContentType contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(Input<String> feedId) {
+        public Builder feedId(Input<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
-        public Builder setFeedId(String feedId) {
+        public Builder feedId(String feedId) {
             this.feedId = Input.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder setFeedOutputConfig(Input<FeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Input<FeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setFeedOutputConfig(FeedOutputConfigArgs feedOutputConfig) {
+        public Builder feedOutputConfig(FeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setRelationshipTypes(@Nullable Input<List<String>> relationshipTypes) {
+        public Builder relationshipTypes(@Nullable Input<List<String>> relationshipTypes) {
             this.relationshipTypes = relationshipTypes;
             return this;
         }
 
-        public Builder setRelationshipTypes(@Nullable List<String> relationshipTypes) {
+        public Builder relationshipTypes(@Nullable List<String> relationshipTypes) {
             this.relationshipTypes = Input.ofNullable(relationshipTypes);
             return this;
         }
 
-        public Builder setV1Id(Input<String> v1Id) {
+        public Builder v1Id(Input<String> v1Id) {
             this.v1Id = Objects.requireNonNull(v1Id);
             return this;
         }
 
-        public Builder setV1Id(String v1Id) {
+        public Builder v1Id(String v1Id) {
             this.v1Id = Input.of(Objects.requireNonNull(v1Id));
             return this;
         }
 
-        public Builder setV1Id1(Input<String> v1Id1) {
+        public Builder v1Id1(Input<String> v1Id1) {
             this.v1Id1 = Objects.requireNonNull(v1Id1);
             return this;
         }
 
-        public Builder setV1Id1(String v1Id1) {
+        public Builder v1Id1(String v1Id1) {
             this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
             return this;
         }

@@ -114,27 +114,27 @@ public final class GetVersionResult {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersionNumber(Integer versionNumber) {
+        public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }

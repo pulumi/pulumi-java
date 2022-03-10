@@ -75,22 +75,22 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder setAlgorithm(Input<CryptoKeyVersionTemplateAlgorithm> algorithm) {
+        public Builder algorithm(Input<CryptoKeyVersionTemplateAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAlgorithm(CryptoKeyVersionTemplateAlgorithm algorithm) {
+        public Builder algorithm(CryptoKeyVersionTemplateAlgorithm algorithm) {
             this.algorithm = Input.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder setProtectionLevel(@Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
+        public Builder protectionLevel(@Nullable Input<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
 
-        public Builder setProtectionLevel(@Nullable CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
+        public Builder protectionLevel(@Nullable CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
             this.protectionLevel = Input.ofNullable(protectionLevel);
             return this;
         }

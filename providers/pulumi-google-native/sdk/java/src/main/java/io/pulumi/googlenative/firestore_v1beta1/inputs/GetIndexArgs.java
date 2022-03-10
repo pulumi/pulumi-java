@@ -74,17 +74,17 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setIndexId(String indexId) {
+        public Builder indexId(String indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

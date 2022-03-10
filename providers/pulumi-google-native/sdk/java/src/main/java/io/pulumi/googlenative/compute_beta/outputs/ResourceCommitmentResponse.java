@@ -81,17 +81,17 @@ public final class ResourceCommitmentResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
-        public Builder setAmount(String amount) {
+        public Builder amount(String amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

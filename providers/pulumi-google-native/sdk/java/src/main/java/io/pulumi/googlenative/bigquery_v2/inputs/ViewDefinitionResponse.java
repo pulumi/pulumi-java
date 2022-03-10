@@ -103,22 +103,22 @@ public final class ViewDefinitionResponse extends io.pulumi.resources.InvokeArgs
     	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setUseExplicitColumnNames(Boolean useExplicitColumnNames) {
+        public Builder useExplicitColumnNames(Boolean useExplicitColumnNames) {
             this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames);
             return this;
         }
 
-        public Builder setUseLegacySql(Boolean useLegacySql) {
+        public Builder useLegacySql(Boolean useLegacySql) {
             this.useLegacySql = Objects.requireNonNull(useLegacySql);
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }

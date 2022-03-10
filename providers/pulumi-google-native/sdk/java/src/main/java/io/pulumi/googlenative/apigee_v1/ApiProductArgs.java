@@ -306,172 +306,172 @@ public final class ApiProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setApiResources(@Nullable Input<List<String>> apiResources) {
+        public Builder apiResources(@Nullable Input<List<String>> apiResources) {
             this.apiResources = apiResources;
             return this;
         }
 
-        public Builder setApiResources(@Nullable List<String> apiResources) {
+        public Builder apiResources(@Nullable List<String> apiResources) {
             this.apiResources = Input.ofNullable(apiResources);
             return this;
         }
 
-        public Builder setApprovalType(@Nullable Input<String> approvalType) {
+        public Builder approvalType(@Nullable Input<String> approvalType) {
             this.approvalType = approvalType;
             return this;
         }
 
-        public Builder setApprovalType(@Nullable String approvalType) {
+        public Builder approvalType(@Nullable String approvalType) {
             this.approvalType = Input.ofNullable(approvalType);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
+        public Builder attributes(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnvironments(@Nullable Input<List<String>> environments) {
+        public Builder environments(@Nullable Input<List<String>> environments) {
             this.environments = environments;
             return this;
         }
 
-        public Builder setEnvironments(@Nullable List<String> environments) {
+        public Builder environments(@Nullable List<String> environments) {
             this.environments = Input.ofNullable(environments);
             return this;
         }
 
-        public Builder setGraphqlOperationGroup(@Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
+        public Builder graphqlOperationGroup(@Nullable Input<GoogleCloudApigeeV1GraphQLOperationGroupArgs> graphqlOperationGroup) {
             this.graphqlOperationGroup = graphqlOperationGroup;
             return this;
         }
 
-        public Builder setGraphqlOperationGroup(@Nullable GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
+        public Builder graphqlOperationGroup(@Nullable GoogleCloudApigeeV1GraphQLOperationGroupArgs graphqlOperationGroup) {
             this.graphqlOperationGroup = Input.ofNullable(graphqlOperationGroup);
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
-        public Builder setLastModifiedAt(@Nullable String lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
             this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperationGroup(@Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
+        public Builder operationGroup(@Nullable Input<GoogleCloudApigeeV1OperationGroupArgs> operationGroup) {
             this.operationGroup = operationGroup;
             return this;
         }
 
-        public Builder setOperationGroup(@Nullable GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
+        public Builder operationGroup(@Nullable GoogleCloudApigeeV1OperationGroupArgs operationGroup) {
             this.operationGroup = Input.ofNullable(operationGroup);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setProxies(@Nullable Input<List<String>> proxies) {
+        public Builder proxies(@Nullable Input<List<String>> proxies) {
             this.proxies = proxies;
             return this;
         }
 
-        public Builder setProxies(@Nullable List<String> proxies) {
+        public Builder proxies(@Nullable List<String> proxies) {
             this.proxies = Input.ofNullable(proxies);
             return this;
         }
 
-        public Builder setQuota(@Nullable Input<String> quota) {
+        public Builder quota(@Nullable Input<String> quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setQuota(@Nullable String quota) {
+        public Builder quota(@Nullable String quota) {
             this.quota = Input.ofNullable(quota);
             return this;
         }
 
-        public Builder setQuotaInterval(@Nullable Input<String> quotaInterval) {
+        public Builder quotaInterval(@Nullable Input<String> quotaInterval) {
             this.quotaInterval = quotaInterval;
             return this;
         }
 
-        public Builder setQuotaInterval(@Nullable String quotaInterval) {
+        public Builder quotaInterval(@Nullable String quotaInterval) {
             this.quotaInterval = Input.ofNullable(quotaInterval);
             return this;
         }
 
-        public Builder setQuotaTimeUnit(@Nullable Input<String> quotaTimeUnit) {
+        public Builder quotaTimeUnit(@Nullable Input<String> quotaTimeUnit) {
             this.quotaTimeUnit = quotaTimeUnit;
             return this;
         }
 
-        public Builder setQuotaTimeUnit(@Nullable String quotaTimeUnit) {
+        public Builder quotaTimeUnit(@Nullable String quotaTimeUnit) {
             this.quotaTimeUnit = Input.ofNullable(quotaTimeUnit);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Input<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }

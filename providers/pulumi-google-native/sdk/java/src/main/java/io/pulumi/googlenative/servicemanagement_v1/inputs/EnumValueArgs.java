@@ -93,32 +93,32 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.options = defaults.options;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumber(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Input<Integer> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = Input.ofNullable(number);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }

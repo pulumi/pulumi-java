@@ -142,62 +142,62 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setConditionAbsent(@Nullable Input<MetricAbsenceArgs> conditionAbsent) {
+        public Builder conditionAbsent(@Nullable Input<MetricAbsenceArgs> conditionAbsent) {
             this.conditionAbsent = conditionAbsent;
             return this;
         }
 
-        public Builder setConditionAbsent(@Nullable MetricAbsenceArgs conditionAbsent) {
+        public Builder conditionAbsent(@Nullable MetricAbsenceArgs conditionAbsent) {
             this.conditionAbsent = Input.ofNullable(conditionAbsent);
             return this;
         }
 
-        public Builder setConditionMatchedLog(@Nullable Input<LogMatchArgs> conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable Input<LogMatchArgs> conditionMatchedLog) {
             this.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
 
-        public Builder setConditionMatchedLog(@Nullable LogMatchArgs conditionMatchedLog) {
+        public Builder conditionMatchedLog(@Nullable LogMatchArgs conditionMatchedLog) {
             this.conditionMatchedLog = Input.ofNullable(conditionMatchedLog);
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(@Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable Input<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(@Nullable MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(@Nullable MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Input.ofNullable(conditionMonitoringQueryLanguage);
             return this;
         }
 
-        public Builder setConditionThreshold(@Nullable Input<MetricThresholdArgs> conditionThreshold) {
+        public Builder conditionThreshold(@Nullable Input<MetricThresholdArgs> conditionThreshold) {
             this.conditionThreshold = conditionThreshold;
             return this;
         }
 
-        public Builder setConditionThreshold(@Nullable MetricThresholdArgs conditionThreshold) {
+        public Builder conditionThreshold(@Nullable MetricThresholdArgs conditionThreshold) {
             this.conditionThreshold = Input.ofNullable(conditionThreshold);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

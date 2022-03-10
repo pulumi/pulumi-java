@@ -73,12 +73,12 @@ public final class SqlServerDatabaseDetailsResponse extends io.pulumi.resources.
     	      this.recoveryModel = defaults.recoveryModel;
         }
 
-        public Builder setCompatibilityLevel(Integer compatibilityLevel) {
+        public Builder compatibilityLevel(Integer compatibilityLevel) {
             this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
             return this;
         }
 
-        public Builder setRecoveryModel(String recoveryModel) {
+        public Builder recoveryModel(String recoveryModel) {
             this.recoveryModel = Objects.requireNonNull(recoveryModel);
             return this;
         }

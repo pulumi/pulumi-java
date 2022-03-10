@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
     	      this.valueFrequencyHistogramBuckets = defaults.valueFrequencyHistogramBuckets;
         }
 
-        public Builder setValueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
+        public Builder valueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
             this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
             return this;
         }

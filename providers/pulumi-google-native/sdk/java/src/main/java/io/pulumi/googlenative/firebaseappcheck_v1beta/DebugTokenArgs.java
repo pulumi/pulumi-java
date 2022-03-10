@@ -110,52 +110,52 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     	      this.token = defaults.token;
         }
 
-        public Builder setAppId(Input<String> appId) {
+        public Builder appId(Input<String> appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Input.of(Objects.requireNonNull(appId));
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setToken(Input<String> token) {
+        public Builder token(Input<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Input.of(Objects.requireNonNull(token));
             return this;
         }

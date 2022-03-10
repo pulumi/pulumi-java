@@ -66,12 +66,12 @@ public final class ZipInfoResponse {
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder setFilesCount(Integer filesCount) {
+        public Builder filesCount(Integer filesCount) {
             this.filesCount = Objects.requireNonNull(filesCount);
             return this;
         }
 
-        public Builder setSourceUrl(String sourceUrl) {
+        public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }

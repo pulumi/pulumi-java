@@ -111,52 +111,52 @@ public final class DataCollectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataCollectorId(@Nullable Input<String> dataCollectorId) {
+        public Builder dataCollectorId(@Nullable Input<String> dataCollectorId) {
             this.dataCollectorId = dataCollectorId;
             return this;
         }
 
-        public Builder setDataCollectorId(@Nullable String dataCollectorId) {
+        public Builder dataCollectorId(@Nullable String dataCollectorId) {
             this.dataCollectorId = Input.ofNullable(dataCollectorId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setType(@Nullable Input<DataCollectorType> type) {
+        public Builder type(@Nullable Input<DataCollectorType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable DataCollectorType type) {
+        public Builder type(@Nullable DataCollectorType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

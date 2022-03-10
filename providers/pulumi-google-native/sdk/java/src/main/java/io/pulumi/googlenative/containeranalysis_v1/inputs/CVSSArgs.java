@@ -203,122 +203,122 @@ public final class CVSSArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userInteraction = defaults.userInteraction;
         }
 
-        public Builder setAttackComplexity(@Nullable Input<CVSSAttackComplexity> attackComplexity) {
+        public Builder attackComplexity(@Nullable Input<CVSSAttackComplexity> attackComplexity) {
             this.attackComplexity = attackComplexity;
             return this;
         }
 
-        public Builder setAttackComplexity(@Nullable CVSSAttackComplexity attackComplexity) {
+        public Builder attackComplexity(@Nullable CVSSAttackComplexity attackComplexity) {
             this.attackComplexity = Input.ofNullable(attackComplexity);
             return this;
         }
 
-        public Builder setAttackVector(@Nullable Input<CVSSAttackVector> attackVector) {
+        public Builder attackVector(@Nullable Input<CVSSAttackVector> attackVector) {
             this.attackVector = attackVector;
             return this;
         }
 
-        public Builder setAttackVector(@Nullable CVSSAttackVector attackVector) {
+        public Builder attackVector(@Nullable CVSSAttackVector attackVector) {
             this.attackVector = Input.ofNullable(attackVector);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<CVSSAuthentication> authentication) {
+        public Builder authentication(@Nullable Input<CVSSAuthentication> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable CVSSAuthentication authentication) {
+        public Builder authentication(@Nullable CVSSAuthentication authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setAvailabilityImpact(@Nullable Input<CVSSAvailabilityImpact> availabilityImpact) {
+        public Builder availabilityImpact(@Nullable Input<CVSSAvailabilityImpact> availabilityImpact) {
             this.availabilityImpact = availabilityImpact;
             return this;
         }
 
-        public Builder setAvailabilityImpact(@Nullable CVSSAvailabilityImpact availabilityImpact) {
+        public Builder availabilityImpact(@Nullable CVSSAvailabilityImpact availabilityImpact) {
             this.availabilityImpact = Input.ofNullable(availabilityImpact);
             return this;
         }
 
-        public Builder setBaseScore(@Nullable Input<Double> baseScore) {
+        public Builder baseScore(@Nullable Input<Double> baseScore) {
             this.baseScore = baseScore;
             return this;
         }
 
-        public Builder setBaseScore(@Nullable Double baseScore) {
+        public Builder baseScore(@Nullable Double baseScore) {
             this.baseScore = Input.ofNullable(baseScore);
             return this;
         }
 
-        public Builder setConfidentialityImpact(@Nullable Input<CVSSConfidentialityImpact> confidentialityImpact) {
+        public Builder confidentialityImpact(@Nullable Input<CVSSConfidentialityImpact> confidentialityImpact) {
             this.confidentialityImpact = confidentialityImpact;
             return this;
         }
 
-        public Builder setConfidentialityImpact(@Nullable CVSSConfidentialityImpact confidentialityImpact) {
+        public Builder confidentialityImpact(@Nullable CVSSConfidentialityImpact confidentialityImpact) {
             this.confidentialityImpact = Input.ofNullable(confidentialityImpact);
             return this;
         }
 
-        public Builder setExploitabilityScore(@Nullable Input<Double> exploitabilityScore) {
+        public Builder exploitabilityScore(@Nullable Input<Double> exploitabilityScore) {
             this.exploitabilityScore = exploitabilityScore;
             return this;
         }
 
-        public Builder setExploitabilityScore(@Nullable Double exploitabilityScore) {
+        public Builder exploitabilityScore(@Nullable Double exploitabilityScore) {
             this.exploitabilityScore = Input.ofNullable(exploitabilityScore);
             return this;
         }
 
-        public Builder setImpactScore(@Nullable Input<Double> impactScore) {
+        public Builder impactScore(@Nullable Input<Double> impactScore) {
             this.impactScore = impactScore;
             return this;
         }
 
-        public Builder setImpactScore(@Nullable Double impactScore) {
+        public Builder impactScore(@Nullable Double impactScore) {
             this.impactScore = Input.ofNullable(impactScore);
             return this;
         }
 
-        public Builder setIntegrityImpact(@Nullable Input<CVSSIntegrityImpact> integrityImpact) {
+        public Builder integrityImpact(@Nullable Input<CVSSIntegrityImpact> integrityImpact) {
             this.integrityImpact = integrityImpact;
             return this;
         }
 
-        public Builder setIntegrityImpact(@Nullable CVSSIntegrityImpact integrityImpact) {
+        public Builder integrityImpact(@Nullable CVSSIntegrityImpact integrityImpact) {
             this.integrityImpact = Input.ofNullable(integrityImpact);
             return this;
         }
 
-        public Builder setPrivilegesRequired(@Nullable Input<CVSSPrivilegesRequired> privilegesRequired) {
+        public Builder privilegesRequired(@Nullable Input<CVSSPrivilegesRequired> privilegesRequired) {
             this.privilegesRequired = privilegesRequired;
             return this;
         }
 
-        public Builder setPrivilegesRequired(@Nullable CVSSPrivilegesRequired privilegesRequired) {
+        public Builder privilegesRequired(@Nullable CVSSPrivilegesRequired privilegesRequired) {
             this.privilegesRequired = Input.ofNullable(privilegesRequired);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<CVSSScope> scope) {
+        public Builder scope(@Nullable Input<CVSSScope> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable CVSSScope scope) {
+        public Builder scope(@Nullable CVSSScope scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setUserInteraction(@Nullable Input<CVSSUserInteraction> userInteraction) {
+        public Builder userInteraction(@Nullable Input<CVSSUserInteraction> userInteraction) {
             this.userInteraction = userInteraction;
             return this;
         }
 
-        public Builder setUserInteraction(@Nullable CVSSUserInteraction userInteraction) {
+        public Builder userInteraction(@Nullable CVSSUserInteraction userInteraction) {
             this.userInteraction = Input.ofNullable(userInteraction);
             return this;
         }

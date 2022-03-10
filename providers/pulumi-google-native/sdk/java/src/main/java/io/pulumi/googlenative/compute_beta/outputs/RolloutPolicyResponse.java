@@ -66,12 +66,12 @@ public final class RolloutPolicyResponse {
     	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
         }
 
-        public Builder setDefaultRolloutTime(String defaultRolloutTime) {
+        public Builder defaultRolloutTime(String defaultRolloutTime) {
             this.defaultRolloutTime = Objects.requireNonNull(defaultRolloutTime);
             return this;
         }
 
-        public Builder setLocationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
+        public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
             this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
             return this;
         }

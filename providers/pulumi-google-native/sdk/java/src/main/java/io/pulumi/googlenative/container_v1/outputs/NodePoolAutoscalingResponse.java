@@ -98,22 +98,22 @@ public final class NodePoolAutoscalingResponse {
     	      this.minNodeCount = defaults.minNodeCount;
         }
 
-        public Builder setAutoprovisioned(Boolean autoprovisioned) {
+        public Builder autoprovisioned(Boolean autoprovisioned) {
             this.autoprovisioned = Objects.requireNonNull(autoprovisioned);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setMaxNodeCount(Integer maxNodeCount) {
+        public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
 
-        public Builder setMinNodeCount(Integer minNodeCount) {
+        public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }

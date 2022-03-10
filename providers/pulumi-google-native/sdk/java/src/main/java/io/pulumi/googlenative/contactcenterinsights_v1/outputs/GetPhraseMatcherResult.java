@@ -212,57 +212,57 @@ public final class GetPhraseMatcherResult {
     	      this.versionTag = defaults.versionTag;
         }
 
-        public Builder setActivationUpdateTime(String activationUpdateTime) {
+        public Builder activationUpdateTime(String activationUpdateTime) {
             this.activationUpdateTime = Objects.requireNonNull(activationUpdateTime);
             return this;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups) {
+        public Builder phraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = Objects.requireNonNull(phraseMatchRuleGroups);
             return this;
         }
 
-        public Builder setRevisionCreateTime(String revisionCreateTime) {
+        public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setRoleMatch(String roleMatch) {
+        public Builder roleMatch(String roleMatch) {
             this.roleMatch = Objects.requireNonNull(roleMatch);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersionTag(String versionTag) {
+        public Builder versionTag(String versionTag) {
             this.versionTag = Objects.requireNonNull(versionTag);
             return this;
         }

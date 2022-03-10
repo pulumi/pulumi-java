@@ -67,12 +67,12 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
     	      this.limits = defaults.limits;
         }
 
-        public Builder setCpuIdle(Boolean cpuIdle) {
+        public Builder cpuIdle(Boolean cpuIdle) {
             this.cpuIdle = Objects.requireNonNull(cpuIdle);
             return this;
         }
 
-        public Builder setLimits(Map<String,String> limits) {
+        public Builder limits(Map<String,String> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }

@@ -188,92 +188,92 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigArgs exten
     	      this.userEmailAddress = defaults.userEmailAddress;
         }
 
-        public Builder setAnnotatedDatasetDescription(@Nullable Input<String> annotatedDatasetDescription) {
+        public Builder annotatedDatasetDescription(@Nullable Input<String> annotatedDatasetDescription) {
             this.annotatedDatasetDescription = annotatedDatasetDescription;
             return this;
         }
 
-        public Builder setAnnotatedDatasetDescription(@Nullable String annotatedDatasetDescription) {
+        public Builder annotatedDatasetDescription(@Nullable String annotatedDatasetDescription) {
             this.annotatedDatasetDescription = Input.ofNullable(annotatedDatasetDescription);
             return this;
         }
 
-        public Builder setAnnotatedDatasetDisplayName(Input<String> annotatedDatasetDisplayName) {
+        public Builder annotatedDatasetDisplayName(Input<String> annotatedDatasetDisplayName) {
             this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
             return this;
         }
 
-        public Builder setAnnotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
+        public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
             this.annotatedDatasetDisplayName = Input.of(Objects.requireNonNull(annotatedDatasetDisplayName));
             return this;
         }
 
-        public Builder setContributorEmails(@Nullable Input<List<String>> contributorEmails) {
+        public Builder contributorEmails(@Nullable Input<List<String>> contributorEmails) {
             this.contributorEmails = contributorEmails;
             return this;
         }
 
-        public Builder setContributorEmails(@Nullable List<String> contributorEmails) {
+        public Builder contributorEmails(@Nullable List<String> contributorEmails) {
             this.contributorEmails = Input.ofNullable(contributorEmails);
             return this;
         }
 
-        public Builder setInstruction(Input<String> instruction) {
+        public Builder instruction(Input<String> instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
 
-        public Builder setInstruction(String instruction) {
+        public Builder instruction(String instruction) {
             this.instruction = Input.of(Objects.requireNonNull(instruction));
             return this;
         }
 
-        public Builder setLabelGroup(@Nullable Input<String> labelGroup) {
+        public Builder labelGroup(@Nullable Input<String> labelGroup) {
             this.labelGroup = labelGroup;
             return this;
         }
 
-        public Builder setLabelGroup(@Nullable String labelGroup) {
+        public Builder labelGroup(@Nullable String labelGroup) {
             this.labelGroup = Input.ofNullable(labelGroup);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setQuestionDuration(@Nullable Input<String> questionDuration) {
+        public Builder questionDuration(@Nullable Input<String> questionDuration) {
             this.questionDuration = questionDuration;
             return this;
         }
 
-        public Builder setQuestionDuration(@Nullable String questionDuration) {
+        public Builder questionDuration(@Nullable String questionDuration) {
             this.questionDuration = Input.ofNullable(questionDuration);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Input<Integer> replicaCount) {
+        public Builder replicaCount(@Nullable Input<Integer> replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = Input.ofNullable(replicaCount);
             return this;
         }
 
-        public Builder setUserEmailAddress(@Nullable Input<String> userEmailAddress) {
+        public Builder userEmailAddress(@Nullable Input<String> userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
 
-        public Builder setUserEmailAddress(@Nullable String userEmailAddress) {
+        public Builder userEmailAddress(@Nullable String userEmailAddress) {
             this.userEmailAddress = Input.ofNullable(userEmailAddress);
             return this;
         }

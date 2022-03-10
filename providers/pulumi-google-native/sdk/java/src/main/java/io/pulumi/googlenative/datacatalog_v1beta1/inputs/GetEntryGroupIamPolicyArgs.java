@@ -74,17 +74,17 @@ public final class GetEntryGroupIamPolicyArgs extends io.pulumi.resources.Invoke
     	      this.project = defaults.project;
         }
 
-        public Builder setEntryGroupId(String entryGroupId) {
+        public Builder entryGroupId(String entryGroupId) {
             this.entryGroupId = Objects.requireNonNull(entryGroupId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

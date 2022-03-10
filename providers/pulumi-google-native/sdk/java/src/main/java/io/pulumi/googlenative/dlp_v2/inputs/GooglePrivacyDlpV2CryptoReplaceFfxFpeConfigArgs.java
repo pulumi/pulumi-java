@@ -143,62 +143,62 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setCommonAlphabet(@Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet) {
+        public Builder commonAlphabet(@Nullable Input<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet) {
             this.commonAlphabet = commonAlphabet;
             return this;
         }
 
-        public Builder setCommonAlphabet(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet commonAlphabet) {
+        public Builder commonAlphabet(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet commonAlphabet) {
             this.commonAlphabet = Input.ofNullable(commonAlphabet);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
+        public Builder context(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
+        public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setCryptoKey(Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Input.of(Objects.requireNonNull(cryptoKey));
             return this;
         }
 
-        public Builder setCustomAlphabet(@Nullable Input<String> customAlphabet) {
+        public Builder customAlphabet(@Nullable Input<String> customAlphabet) {
             this.customAlphabet = customAlphabet;
             return this;
         }
 
-        public Builder setCustomAlphabet(@Nullable String customAlphabet) {
+        public Builder customAlphabet(@Nullable String customAlphabet) {
             this.customAlphabet = Input.ofNullable(customAlphabet);
             return this;
         }
 
-        public Builder setRadix(@Nullable Input<Integer> radix) {
+        public Builder radix(@Nullable Input<Integer> radix) {
             this.radix = radix;
             return this;
         }
 
-        public Builder setRadix(@Nullable Integer radix) {
+        public Builder radix(@Nullable Integer radix) {
             this.radix = Input.ofNullable(radix);
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
             this.surrogateInfoType = surrogateInfoType;
             return this;
         }
 
-        public Builder setSurrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
+        public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
             this.surrogateInfoType = Input.ofNullable(surrogateInfoType);
             return this;
         }

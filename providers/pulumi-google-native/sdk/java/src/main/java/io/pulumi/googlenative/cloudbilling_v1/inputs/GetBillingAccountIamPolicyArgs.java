@@ -62,12 +62,12 @@ public final class GetBillingAccountIamPolicyArgs extends io.pulumi.resources.In
     	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }

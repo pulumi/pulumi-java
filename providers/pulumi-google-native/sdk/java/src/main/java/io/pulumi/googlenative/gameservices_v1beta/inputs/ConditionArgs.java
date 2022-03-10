@@ -126,52 +126,52 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setIam(@Nullable Input<ConditionIam> iam) {
+        public Builder iam(@Nullable Input<ConditionIam> iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setIam(@Nullable ConditionIam iam) {
+        public Builder iam(@Nullable ConditionIam iam) {
             this.iam = Input.ofNullable(iam);
             return this;
         }
 
-        public Builder setOp(@Nullable Input<ConditionOp> op) {
+        public Builder op(@Nullable Input<ConditionOp> op) {
             this.op = op;
             return this;
         }
 
-        public Builder setOp(@Nullable ConditionOp op) {
+        public Builder op(@Nullable ConditionOp op) {
             this.op = Input.ofNullable(op);
             return this;
         }
 
-        public Builder setSvc(@Nullable Input<String> svc) {
+        public Builder svc(@Nullable Input<String> svc) {
             this.svc = svc;
             return this;
         }
 
-        public Builder setSvc(@Nullable String svc) {
+        public Builder svc(@Nullable String svc) {
             this.svc = Input.ofNullable(svc);
             return this;
         }
 
-        public Builder setSys(@Nullable Input<ConditionSys> sys) {
+        public Builder sys(@Nullable Input<ConditionSys> sys) {
             this.sys = sys;
             return this;
         }
 
-        public Builder setSys(@Nullable ConditionSys sys) {
+        public Builder sys(@Nullable ConditionSys sys) {
             this.sys = Input.ofNullable(sys);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

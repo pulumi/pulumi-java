@@ -66,12 +66,12 @@ public final class ResourceManifestResponse {
     	      this.manifest = defaults.manifest;
         }
 
-        public Builder setClusterScoped(Boolean clusterScoped) {
+        public Builder clusterScoped(Boolean clusterScoped) {
             this.clusterScoped = Objects.requireNonNull(clusterScoped);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }

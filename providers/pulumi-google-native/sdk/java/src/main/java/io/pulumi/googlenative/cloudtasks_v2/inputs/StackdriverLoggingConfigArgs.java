@@ -57,12 +57,12 @@ public final class StackdriverLoggingConfigArgs extends io.pulumi.resources.Reso
     	      this.samplingRatio = defaults.samplingRatio;
         }
 
-        public Builder setSamplingRatio(@Nullable Input<Double> samplingRatio) {
+        public Builder samplingRatio(@Nullable Input<Double> samplingRatio) {
             this.samplingRatio = samplingRatio;
             return this;
         }
 
-        public Builder setSamplingRatio(@Nullable Double samplingRatio) {
+        public Builder samplingRatio(@Nullable Double samplingRatio) {
             this.samplingRatio = Input.ofNullable(samplingRatio);
             return this;
         }

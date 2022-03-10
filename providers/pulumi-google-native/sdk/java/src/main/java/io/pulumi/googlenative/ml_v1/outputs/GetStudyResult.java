@@ -114,27 +114,27 @@ public final class GetStudyResult {
     	      this.studyConfig = defaults.studyConfig;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setInactiveReason(String inactiveReason) {
+        public Builder inactiveReason(String inactiveReason) {
             this.inactiveReason = Objects.requireNonNull(inactiveReason);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStudyConfig(GoogleCloudMlV1__StudyConfigResponse studyConfig) {
+        public Builder studyConfig(GoogleCloudMlV1__StudyConfigResponse studyConfig) {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }

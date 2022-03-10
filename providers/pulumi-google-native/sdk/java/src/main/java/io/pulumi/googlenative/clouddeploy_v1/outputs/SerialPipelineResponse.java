@@ -49,7 +49,7 @@ public final class SerialPipelineResponse {
     	      this.stages = defaults.stages;
         }
 
-        public Builder setStages(List<StageResponse> stages) {
+        public Builder stages(List<StageResponse> stages) {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }

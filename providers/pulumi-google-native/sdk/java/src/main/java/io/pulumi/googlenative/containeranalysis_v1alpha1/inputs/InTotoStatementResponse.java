@@ -124,27 +124,27 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
     	      this.type = defaults.type;
         }
 
-        public Builder setPredicateType(String predicateType) {
+        public Builder predicateType(String predicateType) {
             this.predicateType = Objects.requireNonNull(predicateType);
             return this;
         }
 
-        public Builder setProvenance(InTotoProvenanceResponse provenance) {
+        public Builder provenance(InTotoProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
-        public Builder setSlsaProvenance(SlsaProvenanceResponse slsaProvenance) {
+        public Builder slsaProvenance(SlsaProvenanceResponse slsaProvenance) {
             this.slsaProvenance = Objects.requireNonNull(slsaProvenance);
             return this;
         }
 
-        public Builder setSubject(List<SubjectResponse> subject) {
+        public Builder subject(List<SubjectResponse> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
