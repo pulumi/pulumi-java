@@ -20,10 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse {
      */
     private final String mimeType;
 
-    @OutputCustomType.Constructor({"inputUri","mimeType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1GcsSourceResponse(
-        String inputUri,
-        String mimeType) {
+        @OutputCustomType.Parameter("inputUri") String inputUri,
+        @OutputCustomType.Parameter("mimeType") String mimeType) {
         this.inputUri = inputUri;
         this.mimeType = mimeType;
     }

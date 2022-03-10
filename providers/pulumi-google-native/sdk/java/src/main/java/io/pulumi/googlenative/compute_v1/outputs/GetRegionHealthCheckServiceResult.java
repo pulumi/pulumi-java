@@ -66,19 +66,19 @@ public final class GetRegionHealthCheckServiceResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","healthChecks","healthStatusAggregationPolicy","kind","name","networkEndpointGroups","notificationEndpoints","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRegionHealthCheckServiceResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        List<String> healthChecks,
-        String healthStatusAggregationPolicy,
-        String kind,
-        String name,
-        List<String> networkEndpointGroups,
-        List<String> notificationEndpoints,
-        String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
+        @OutputCustomType.Parameter("healthStatusAggregationPolicy") String healthStatusAggregationPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkEndpointGroups") List<String> networkEndpointGroups,
+        @OutputCustomType.Parameter("notificationEndpoints") List<String> notificationEndpoints,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

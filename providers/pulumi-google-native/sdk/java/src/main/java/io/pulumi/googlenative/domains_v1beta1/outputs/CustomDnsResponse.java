@@ -22,10 +22,10 @@ public final class CustomDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor({"dsRecords","nameServers"})
+    @OutputCustomType.Constructor
     private CustomDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        List<String> nameServers) {
+        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.nameServers = nameServers;
     }

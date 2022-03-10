@@ -63,18 +63,18 @@ public final class DeliveryPipelineResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"annotations","condition","createTime","description","etag","labels","name","serialPipeline","uid","updateTime"})
+    @OutputCustomType.Constructor
     private DeliveryPipelineResponse(
-        Map<String,String> annotations,
-        PipelineConditionResponse condition,
-        String createTime,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        SerialPipelineResponse serialPipeline,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("condition") PipelineConditionResponse condition,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serialPipeline") SerialPipelineResponse serialPipeline,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.annotations = annotations;
         this.condition = condition;
         this.createTime = createTime;

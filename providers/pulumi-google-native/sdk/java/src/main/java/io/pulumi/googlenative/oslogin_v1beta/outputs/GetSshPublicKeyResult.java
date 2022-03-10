@@ -30,12 +30,12 @@ public final class GetSshPublicKeyResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"expirationTimeUsec","fingerprint","key","name"})
+    @OutputCustomType.Constructor
     private GetSshPublicKeyResult(
-        String expirationTimeUsec,
-        String fingerprint,
-        String key,
-        String name) {
+        @OutputCustomType.Parameter("expirationTimeUsec") String expirationTimeUsec,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") String name) {
         this.expirationTimeUsec = expirationTimeUsec;
         this.fingerprint = fingerprint;
         this.key = key;

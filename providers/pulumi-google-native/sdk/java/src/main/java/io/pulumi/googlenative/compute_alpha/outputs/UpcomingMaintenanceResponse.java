@@ -27,11 +27,11 @@ public final class UpcomingMaintenanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"canReschedule","startTimeWindow","type"})
+    @OutputCustomType.Constructor
     private UpcomingMaintenanceResponse(
-        Boolean canReschedule,
-        UpcomingMaintenanceTimeWindowResponse startTimeWindow,
-        String type) {
+        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
+        @OutputCustomType.Parameter("startTimeWindow") UpcomingMaintenanceTimeWindowResponse startTimeWindow,
+        @OutputCustomType.Parameter("type") String type) {
         this.canReschedule = canReschedule;
         this.startTimeWindow = startTimeWindow;
         this.type = type;

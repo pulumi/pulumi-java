@@ -27,11 +27,11 @@ public final class SecurityPolicyRuleMatcherResponse {
      */
     private final String versionedExpr;
 
-    @OutputCustomType.Constructor({"config","expr","versionedExpr"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleMatcherResponse(
-        SecurityPolicyRuleMatcherConfigResponse config,
-        ExprResponse expr,
-        String versionedExpr) {
+        @OutputCustomType.Parameter("config") SecurityPolicyRuleMatcherConfigResponse config,
+        @OutputCustomType.Parameter("expr") ExprResponse expr,
+        @OutputCustomType.Parameter("versionedExpr") String versionedExpr) {
         this.config = config;
         this.expr = expr;
         this.versionedExpr = versionedExpr;

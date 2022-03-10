@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor({"context","cryptoKey","surrogateInfoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CryptoDeterministicConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.surrogateInfoType = surrogateInfoType;

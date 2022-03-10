@@ -20,10 +20,10 @@ public final class AttachedDiskResponse {
      */
     private final String sourceDisk;
 
-    @OutputCustomType.Constructor({"mode","sourceDisk"})
+    @OutputCustomType.Constructor
     private AttachedDiskResponse(
-        String mode,
-        String sourceDisk) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk) {
         this.mode = mode;
         this.sourceDisk = sourceDisk;
     }

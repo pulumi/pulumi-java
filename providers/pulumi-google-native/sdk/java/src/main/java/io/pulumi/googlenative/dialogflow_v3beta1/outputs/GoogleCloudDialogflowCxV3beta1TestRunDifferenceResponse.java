@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1TestRunDifferenceResponse(
-        String description,
-        String type) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.type = type;
     }

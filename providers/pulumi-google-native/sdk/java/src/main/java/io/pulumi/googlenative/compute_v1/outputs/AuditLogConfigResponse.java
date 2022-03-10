@@ -27,11 +27,11 @@ public final class AuditLogConfigResponse {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"exemptedMembers","ignoreChildExemptions","logType"})
+    @OutputCustomType.Constructor
     private AuditLogConfigResponse(
-        List<String> exemptedMembers,
-        Boolean ignoreChildExemptions,
-        String logType) {
+        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @OutputCustomType.Parameter("ignoreChildExemptions") Boolean ignoreChildExemptions,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.ignoreChildExemptions = ignoreChildExemptions;
         this.logType = logType;

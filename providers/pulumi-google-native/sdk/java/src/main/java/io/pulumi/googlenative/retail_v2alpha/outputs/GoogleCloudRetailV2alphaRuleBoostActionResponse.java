@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse {
      */
     private final String productsFilter;
 
-    @OutputCustomType.Constructor({"boost","productsFilter"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaRuleBoostActionResponse(
-        Double boost,
-        String productsFilter) {
+        @OutputCustomType.Parameter("boost") Double boost,
+        @OutputCustomType.Parameter("productsFilter") String productsFilter) {
         this.boost = boost;
         this.productsFilter = productsFilter;
     }

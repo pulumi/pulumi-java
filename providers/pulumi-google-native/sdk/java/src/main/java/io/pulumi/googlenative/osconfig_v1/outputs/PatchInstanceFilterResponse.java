@@ -38,13 +38,13 @@ public final class PatchInstanceFilterResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"all","groupLabels","instanceNamePrefixes","instances","zones"})
+    @OutputCustomType.Constructor
     private PatchInstanceFilterResponse(
-        Boolean all,
-        List<PatchInstanceFilterGroupLabelResponse> groupLabels,
-        List<String> instanceNamePrefixes,
-        List<String> instances,
-        List<String> zones) {
+        @OutputCustomType.Parameter("all") Boolean all,
+        @OutputCustomType.Parameter("groupLabels") List<PatchInstanceFilterGroupLabelResponse> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;

@@ -73,20 +73,20 @@ public final class DiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskSizeGb","guestOsFeatures","index","$interface","kind","licenses","mode","source","type"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        String diskSizeGb,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        String index,
-        String $interface,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("index") String index,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

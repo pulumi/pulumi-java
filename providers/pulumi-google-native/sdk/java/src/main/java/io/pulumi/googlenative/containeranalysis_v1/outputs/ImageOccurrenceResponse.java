@@ -34,12 +34,12 @@ public final class ImageOccurrenceResponse {
      */
     private final List<LayerResponse> layerInfo;
 
-    @OutputCustomType.Constructor({"baseResourceUrl","distance","fingerprint","layerInfo"})
+    @OutputCustomType.Constructor
     private ImageOccurrenceResponse(
-        String baseResourceUrl,
-        Integer distance,
-        FingerprintResponse fingerprint,
-        List<LayerResponse> layerInfo) {
+        @OutputCustomType.Parameter("baseResourceUrl") String baseResourceUrl,
+        @OutputCustomType.Parameter("distance") Integer distance,
+        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @OutputCustomType.Parameter("layerInfo") List<LayerResponse> layerInfo) {
         this.baseResourceUrl = baseResourceUrl;
         this.distance = distance;
         this.fingerprint = fingerprint;

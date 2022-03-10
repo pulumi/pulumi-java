@@ -20,10 +20,10 @@ public final class Hl7V2NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"filter","pubsubTopic"})
+    @OutputCustomType.Constructor
     private Hl7V2NotificationConfigResponse(
-        String filter,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }

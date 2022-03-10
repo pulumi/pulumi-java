@@ -54,16 +54,16 @@ public final class GetEntityTypeResult {
      */
     private final Boolean redact;
 
-    @OutputCustomType.Constructor({"autoExpansionMode","displayName","enableFuzzyExtraction","entities","excludedPhrases","kind","name","redact"})
+    @OutputCustomType.Constructor
     private GetEntityTypeResult(
-        String autoExpansionMode,
-        String displayName,
-        Boolean enableFuzzyExtraction,
-        List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
-        List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases,
-        String kind,
-        String name,
-        Boolean redact) {
+        @OutputCustomType.Parameter("autoExpansionMode") String autoExpansionMode,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableFuzzyExtraction") Boolean enableFuzzyExtraction,
+        @OutputCustomType.Parameter("entities") List<GoogleCloudDialogflowCxV3beta1EntityTypeEntityResponse> entities,
+        @OutputCustomType.Parameter("excludedPhrases") List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse> excludedPhrases,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("redact") Boolean redact) {
         this.autoExpansionMode = autoExpansionMode;
         this.displayName = displayName;
         this.enableFuzzyExtraction = enableFuzzyExtraction;

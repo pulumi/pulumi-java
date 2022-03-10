@@ -37,13 +37,13 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
      */
     private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 
-    @OutputCustomType.Constructor({"allowAll","condition","denyAll","enforce","values"})
+    @OutputCustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(
-        Boolean allowAll,
-        GoogleTypeExprResponse condition,
-        Boolean denyAll,
-        Boolean enforce,
-        GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
+        @OutputCustomType.Parameter("allowAll") Boolean allowAll,
+        @OutputCustomType.Parameter("condition") GoogleTypeExprResponse condition,
+        @OutputCustomType.Parameter("denyAll") Boolean denyAll,
+        @OutputCustomType.Parameter("enforce") Boolean enforce,
+        @OutputCustomType.Parameter("values") GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;

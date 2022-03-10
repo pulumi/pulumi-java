@@ -31,12 +31,12 @@ public final class GetAnalysisResult {
      */
     private final String requestTime;
 
-    @OutputCustomType.Constructor({"analysisResult","createTime","name","requestTime"})
+    @OutputCustomType.Constructor
     private GetAnalysisResult(
-        GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
-        String createTime,
-        String name,
-        String requestTime) {
+        @OutputCustomType.Parameter("analysisResult") GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requestTime") String requestTime) {
         this.analysisResult = analysisResult;
         this.createTime = createTime;
         this.name = name;

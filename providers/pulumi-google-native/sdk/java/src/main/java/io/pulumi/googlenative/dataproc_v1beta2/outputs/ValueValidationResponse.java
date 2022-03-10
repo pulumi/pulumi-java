@@ -16,8 +16,8 @@ public final class ValueValidationResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ValueValidationResponse(List<String> values) {
+    @OutputCustomType.Constructor
+    private ValueValidationResponse(@OutputCustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

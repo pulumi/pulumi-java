@@ -15,8 +15,8 @@ public final class IosAppInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private IosAppInfoResponse(String name) {
+    @OutputCustomType.Constructor
+    private IosAppInfoResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

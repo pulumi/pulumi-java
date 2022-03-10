@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveA
      */
     private final String organizationId;
 
-    @OutputCustomType.Constructor({"buttonId","deploymentId","endpointDomain","organizationId"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(
-        String buttonId,
-        String deploymentId,
-        String endpointDomain,
-        String organizationId) {
+        @OutputCustomType.Parameter("buttonId") String buttonId,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("endpointDomain") String endpointDomain,
+        @OutputCustomType.Parameter("organizationId") String organizationId) {
         this.buttonId = buttonId;
         this.deploymentId = deploymentId;
         this.endpointDomain = endpointDomain;

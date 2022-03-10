@@ -15,8 +15,8 @@ public final class ManualScalingResponse {
      */
     private final Integer instances;
 
-    @OutputCustomType.Constructor({"instances"})
-    private ManualScalingResponse(Integer instances) {
+    @OutputCustomType.Constructor
+    private ManualScalingResponse(@OutputCustomType.Parameter("instances") Integer instances) {
         this.instances = instances;
     }
 

@@ -20,10 +20,10 @@ public final class GetConfigResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","name"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        String description,
-        String name) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.name = name;
     }

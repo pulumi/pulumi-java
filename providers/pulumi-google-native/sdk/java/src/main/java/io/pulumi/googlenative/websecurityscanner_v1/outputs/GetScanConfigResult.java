@@ -80,21 +80,21 @@ public final class GetScanConfigResult {
      */
     private final String userAgent;
 
-    @OutputCustomType.Constructor({"authentication","blacklistPatterns","displayName","exportToSecurityCommandCenter","ignoreHttpStatusErrors","managedScan","maxQps","name","riskLevel","schedule","startingUrls","staticIpScan","userAgent"})
+    @OutputCustomType.Constructor
     private GetScanConfigResult(
-        AuthenticationResponse authentication,
-        List<String> blacklistPatterns,
-        String displayName,
-        String exportToSecurityCommandCenter,
-        Boolean ignoreHttpStatusErrors,
-        Boolean managedScan,
-        Integer maxQps,
-        String name,
-        String riskLevel,
-        ScheduleResponse schedule,
-        List<String> startingUrls,
-        Boolean staticIpScan,
-        String userAgent) {
+        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("blacklistPatterns") List<String> blacklistPatterns,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("exportToSecurityCommandCenter") String exportToSecurityCommandCenter,
+        @OutputCustomType.Parameter("ignoreHttpStatusErrors") Boolean ignoreHttpStatusErrors,
+        @OutputCustomType.Parameter("managedScan") Boolean managedScan,
+        @OutputCustomType.Parameter("maxQps") Integer maxQps,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("riskLevel") String riskLevel,
+        @OutputCustomType.Parameter("schedule") ScheduleResponse schedule,
+        @OutputCustomType.Parameter("startingUrls") List<String> startingUrls,
+        @OutputCustomType.Parameter("staticIpScan") Boolean staticIpScan,
+        @OutputCustomType.Parameter("userAgent") String userAgent) {
         this.authentication = authentication;
         this.blacklistPatterns = blacklistPatterns;
         this.displayName = displayName;

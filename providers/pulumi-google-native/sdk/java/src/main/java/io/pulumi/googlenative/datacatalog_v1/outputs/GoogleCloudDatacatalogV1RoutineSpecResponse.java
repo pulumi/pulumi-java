@@ -43,14 +43,14 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
      */
     private final String routineType;
 
-    @OutputCustomType.Constructor({"bigqueryRoutineSpec","definitionBody","language","returnType","routineArguments","routineType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1RoutineSpecResponse(
-        GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
-        String definitionBody,
-        String language,
-        String returnType,
-        List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
-        String routineType) {
+        @OutputCustomType.Parameter("bigqueryRoutineSpec") GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
+        @OutputCustomType.Parameter("definitionBody") String definitionBody,
+        @OutputCustomType.Parameter("language") String language,
+        @OutputCustomType.Parameter("returnType") String returnType,
+        @OutputCustomType.Parameter("routineArguments") List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
+        @OutputCustomType.Parameter("routineType") String routineType) {
         this.bigqueryRoutineSpec = bigqueryRoutineSpec;
         this.definitionBody = definitionBody;
         this.language = language;

@@ -37,13 +37,13 @@ public final class PollingOptionsResponse {
      */
     private final String targetLink;
 
-    @OutputCustomType.Constructor({"diagnostics","failCondition","finishCondition","pollingLink","targetLink"})
+    @OutputCustomType.Constructor
     private PollingOptionsResponse(
-        List<DiagnosticResponse> diagnostics,
-        String failCondition,
-        String finishCondition,
-        String pollingLink,
-        String targetLink) {
+        @OutputCustomType.Parameter("diagnostics") List<DiagnosticResponse> diagnostics,
+        @OutputCustomType.Parameter("failCondition") String failCondition,
+        @OutputCustomType.Parameter("finishCondition") String finishCondition,
+        @OutputCustomType.Parameter("pollingLink") String pollingLink,
+        @OutputCustomType.Parameter("targetLink") String targetLink) {
         this.diagnostics = diagnostics;
         this.failCondition = failCondition;
         this.finishCondition = finishCondition;

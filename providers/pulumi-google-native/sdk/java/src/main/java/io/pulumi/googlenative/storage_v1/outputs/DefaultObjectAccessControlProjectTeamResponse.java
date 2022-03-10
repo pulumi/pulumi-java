@@ -20,10 +20,10 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
      */
     private final String team;
 
-    @OutputCustomType.Constructor({"projectNumber","team"})
+    @OutputCustomType.Constructor
     private DefaultObjectAccessControlProjectTeamResponse(
-        String projectNumber,
-        String team) {
+        @OutputCustomType.Parameter("projectNumber") String projectNumber,
+        @OutputCustomType.Parameter("team") String team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }

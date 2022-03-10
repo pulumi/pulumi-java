@@ -43,14 +43,14 @@ public final class SoftwareRecipeResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"artifacts","desiredState","installSteps","name","updateSteps","version"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeResponse(
-        List<SoftwareRecipeArtifactResponse> artifacts,
-        String desiredState,
-        List<SoftwareRecipeStepResponse> installSteps,
-        String name,
-        List<SoftwareRecipeStepResponse> updateSteps,
-        String version) {
+        @OutputCustomType.Parameter("artifacts") List<SoftwareRecipeArtifactResponse> artifacts,
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("installSteps") List<SoftwareRecipeStepResponse> installSteps,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateSteps") List<SoftwareRecipeStepResponse> updateSteps,
+        @OutputCustomType.Parameter("version") String version) {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;

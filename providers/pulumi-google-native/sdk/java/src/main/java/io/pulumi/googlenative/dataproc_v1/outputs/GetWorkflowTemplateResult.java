@@ -61,17 +61,17 @@ public final class GetWorkflowTemplateResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"createTime","dagTimeout","jobs","labels","name","parameters","placement","updateTime","version"})
+    @OutputCustomType.Constructor
     private GetWorkflowTemplateResult(
-        String createTime,
-        String dagTimeout,
-        List<OrderedJobResponse> jobs,
-        Map<String,String> labels,
-        String name,
-        List<TemplateParameterResponse> parameters,
-        WorkflowTemplatePlacementResponse placement,
-        String updateTime,
-        Integer version) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dagTimeout") String dagTimeout,
+        @OutputCustomType.Parameter("jobs") List<OrderedJobResponse> jobs,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<TemplateParameterResponse> parameters,
+        @OutputCustomType.Parameter("placement") WorkflowTemplatePlacementResponse placement,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.createTime = createTime;
         this.dagTimeout = dagTimeout;
         this.jobs = jobs;

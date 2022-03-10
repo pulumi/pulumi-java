@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
      */
     private final String phraseMatcher;
 
-    @OutputCustomType.Constructor({"displayName","phraseMatcher"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(
-        String displayName,
-        String phraseMatcher) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("phraseMatcher") String phraseMatcher) {
         this.displayName = displayName;
         this.phraseMatcher = phraseMatcher;
     }

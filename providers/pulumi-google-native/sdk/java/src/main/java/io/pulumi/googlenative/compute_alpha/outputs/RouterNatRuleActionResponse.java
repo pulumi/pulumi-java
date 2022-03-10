@@ -31,12 +31,12 @@ public final class RouterNatRuleActionResponse {
      */
     private final List<String> sourceNatDrainRanges;
 
-    @OutputCustomType.Constructor({"sourceNatActiveIps","sourceNatActiveRanges","sourceNatDrainIps","sourceNatDrainRanges"})
+    @OutputCustomType.Constructor
     private RouterNatRuleActionResponse(
-        List<String> sourceNatActiveIps,
-        List<String> sourceNatActiveRanges,
-        List<String> sourceNatDrainIps,
-        List<String> sourceNatDrainRanges) {
+        @OutputCustomType.Parameter("sourceNatActiveIps") List<String> sourceNatActiveIps,
+        @OutputCustomType.Parameter("sourceNatActiveRanges") List<String> sourceNatActiveRanges,
+        @OutputCustomType.Parameter("sourceNatDrainIps") List<String> sourceNatDrainIps,
+        @OutputCustomType.Parameter("sourceNatDrainRanges") List<String> sourceNatDrainRanges) {
         this.sourceNatActiveIps = sourceNatActiveIps;
         this.sourceNatActiveRanges = sourceNatActiveRanges;
         this.sourceNatDrainIps = sourceNatDrainIps;

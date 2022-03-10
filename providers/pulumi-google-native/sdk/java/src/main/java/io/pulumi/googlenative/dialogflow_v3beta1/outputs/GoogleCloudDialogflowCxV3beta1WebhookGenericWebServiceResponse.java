@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceRespons
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"allowedCaCerts","password","requestHeaders","uri","username"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse(
-        List<String> allowedCaCerts,
-        String password,
-        Map<String,String> requestHeaders,
-        String uri,
-        String username) {
+        @OutputCustomType.Parameter("allowedCaCerts") List<String> allowedCaCerts,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("requestHeaders") Map<String,String> requestHeaders,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") String username) {
         this.allowedCaCerts = allowedCaCerts;
         this.password = password;
         this.requestHeaders = requestHeaders;

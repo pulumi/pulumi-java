@@ -31,12 +31,12 @@ public final class InitialStateConfigResponse {
      */
     private final FileContentBufferResponse pk;
 
-    @OutputCustomType.Constructor({"dbs","dbxs","keks","pk"})
+    @OutputCustomType.Constructor
     private InitialStateConfigResponse(
-        List<FileContentBufferResponse> dbs,
-        List<FileContentBufferResponse> dbxs,
-        List<FileContentBufferResponse> keks,
-        FileContentBufferResponse pk) {
+        @OutputCustomType.Parameter("dbs") List<FileContentBufferResponse> dbs,
+        @OutputCustomType.Parameter("dbxs") List<FileContentBufferResponse> dbxs,
+        @OutputCustomType.Parameter("keks") List<FileContentBufferResponse> keks,
+        @OutputCustomType.Parameter("pk") FileContentBufferResponse pk) {
         this.dbs = dbs;
         this.dbxs = dbxs;
         this.keks = keks;

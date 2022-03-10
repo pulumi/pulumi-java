@@ -47,15 +47,15 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String webServerIpv4ReservedRange;
 
-    @OutputCustomType.Constructor({"cloudComposerNetworkIpv4CidrBlock","cloudComposerNetworkIpv4ReservedRange","cloudSqlIpv4CidrBlock","enablePrivateEnvironment","privateClusterConfig","webServerIpv4CidrBlock","webServerIpv4ReservedRange"})
+    @OutputCustomType.Constructor
     private PrivateEnvironmentConfigResponse(
-        String cloudComposerNetworkIpv4CidrBlock,
-        String cloudComposerNetworkIpv4ReservedRange,
-        String cloudSqlIpv4CidrBlock,
-        Boolean enablePrivateEnvironment,
-        PrivateClusterConfigResponse privateClusterConfig,
-        String webServerIpv4CidrBlock,
-        String webServerIpv4ReservedRange) {
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
+        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
+        @OutputCustomType.Parameter("enablePrivateEnvironment") Boolean enablePrivateEnvironment,
+        @OutputCustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
+        @OutputCustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
+        @OutputCustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;

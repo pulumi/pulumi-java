@@ -20,10 +20,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
      */
     private final Double min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse(
-        Double max,
-        Double min) {
+        @OutputCustomType.Parameter("max") Double max,
+        @OutputCustomType.Parameter("min") Double min) {
         this.max = max;
         this.min = min;
     }

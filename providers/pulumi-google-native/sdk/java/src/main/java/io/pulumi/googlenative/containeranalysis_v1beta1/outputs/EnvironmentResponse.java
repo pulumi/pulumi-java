@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class EnvironmentResponse {
     private final Map<String,String> customValues;
 
-    @OutputCustomType.Constructor({"customValues"})
-    private EnvironmentResponse(Map<String,String> customValues) {
+    @OutputCustomType.Constructor
+    private EnvironmentResponse(@OutputCustomType.Parameter("customValues") Map<String,String> customValues) {
         this.customValues = customValues;
     }
 

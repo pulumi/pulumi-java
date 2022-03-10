@@ -41,14 +41,14 @@ public final class SparkBatchResponse {
      */
     private final String mainJarFileUri;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","mainClass","mainJarFileUri"})
+    @OutputCustomType.Constructor
     private SparkBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        String mainClass,
-        String mainJarFileUri) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("mainClass") String mainClass,
+        @OutputCustomType.Parameter("mainJarFileUri") String mainJarFileUri) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

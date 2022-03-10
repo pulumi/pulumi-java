@@ -27,11 +27,11 @@ public final class BigtableOptionsResponse {
      */
     private final Boolean readRowkeyAsString;
 
-    @OutputCustomType.Constructor({"columnFamilies","ignoreUnspecifiedColumnFamilies","readRowkeyAsString"})
+    @OutputCustomType.Constructor
     private BigtableOptionsResponse(
-        List<BigtableColumnFamilyResponse> columnFamilies,
-        Boolean ignoreUnspecifiedColumnFamilies,
-        Boolean readRowkeyAsString) {
+        @OutputCustomType.Parameter("columnFamilies") List<BigtableColumnFamilyResponse> columnFamilies,
+        @OutputCustomType.Parameter("ignoreUnspecifiedColumnFamilies") Boolean ignoreUnspecifiedColumnFamilies,
+        @OutputCustomType.Parameter("readRowkeyAsString") Boolean readRowkeyAsString) {
         this.columnFamilies = columnFamilies;
         this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
         this.readRowkeyAsString = readRowkeyAsString;

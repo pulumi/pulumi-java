@@ -15,8 +15,8 @@ public final class VpcPeeringConnectivityResponse {
      */
     private final String vpc;
 
-    @OutputCustomType.Constructor({"vpc"})
-    private VpcPeeringConnectivityResponse(String vpc) {
+    @OutputCustomType.Constructor
+    private VpcPeeringConnectivityResponse(@OutputCustomType.Parameter("vpc") String vpc) {
         this.vpc = vpc;
     }
 

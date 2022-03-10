@@ -20,10 +20,10 @@ public final class DynamicGroupQueryResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"query","resourceType"})
+    @OutputCustomType.Constructor
     private DynamicGroupQueryResponse(
-        String query,
-        String resourceType) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.query = query;
         this.resourceType = resourceType;
     }

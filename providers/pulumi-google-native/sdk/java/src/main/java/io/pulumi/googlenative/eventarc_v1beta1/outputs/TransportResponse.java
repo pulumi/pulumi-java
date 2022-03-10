@@ -15,8 +15,8 @@ public final class TransportResponse {
      */
     private final PubsubResponse pubsub;
 
-    @OutputCustomType.Constructor({"pubsub"})
-    private TransportResponse(PubsubResponse pubsub) {
+    @OutputCustomType.Constructor
+    private TransportResponse(@OutputCustomType.Parameter("pubsub") PubsubResponse pubsub) {
         this.pubsub = pubsub;
     }
 

@@ -30,12 +30,12 @@ public final class AppEngineRoutingResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"host","instance","service","version"})
+    @OutputCustomType.Constructor
     private AppEngineRoutingResponse(
-        String host,
-        String instance,
-        String service,
-        String version) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("version") String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;

@@ -79,21 +79,21 @@ public final class GetDomainResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"auditLogsEnabled","authorizedNetworks","createTime","fqdn","labels","locations","managedIdentitiesAdminName","name","reservedIpRange","state","statusMessage","trusts","updateTime"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        Boolean auditLogsEnabled,
-        List<String> authorizedNetworks,
-        String createTime,
-        String fqdn,
-        Map<String,String> labels,
-        List<String> locations,
-        String managedIdentitiesAdminName,
-        String name,
-        String reservedIpRange,
-        String state,
-        String statusMessage,
-        List<TrustResponse> trusts,
-        String updateTime) {
+        @OutputCustomType.Parameter("auditLogsEnabled") Boolean auditLogsEnabled,
+        @OutputCustomType.Parameter("authorizedNetworks") List<String> authorizedNetworks,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("managedIdentitiesAdminName") String managedIdentitiesAdminName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("trusts") List<TrustResponse> trusts,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.auditLogsEnabled = auditLogsEnabled;
         this.authorizedNetworks = authorizedNetworks;
         this.createTime = createTime;

@@ -25,11 +25,11 @@ public final class GetIdentityAwareProxyClientResult {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"displayName","name","secret"})
+    @OutputCustomType.Constructor
     private GetIdentityAwareProxyClientResult(
-        String displayName,
-        String name,
-        String secret) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.displayName = displayName;
         this.name = name;
         this.secret = secret;

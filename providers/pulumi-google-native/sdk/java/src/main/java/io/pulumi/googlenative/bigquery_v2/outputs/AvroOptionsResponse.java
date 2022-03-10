@@ -15,8 +15,8 @@ public final class AvroOptionsResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"useAvroLogicalTypes"})
-    private AvroOptionsResponse(Boolean useAvroLogicalTypes) {
+    @OutputCustomType.Constructor
+    private AvroOptionsResponse(@OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
     }
 

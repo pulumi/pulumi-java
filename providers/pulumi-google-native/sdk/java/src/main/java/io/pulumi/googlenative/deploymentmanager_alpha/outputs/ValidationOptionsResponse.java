@@ -20,10 +20,10 @@ public final class ValidationOptionsResponse {
      */
     private final String undeclaredProperties;
 
-    @OutputCustomType.Constructor({"schemaValidation","undeclaredProperties"})
+    @OutputCustomType.Constructor
     private ValidationOptionsResponse(
-        String schemaValidation,
-        String undeclaredProperties) {
+        @OutputCustomType.Parameter("schemaValidation") String schemaValidation,
+        @OutputCustomType.Parameter("undeclaredProperties") String undeclaredProperties) {
         this.schemaValidation = schemaValidation;
         this.undeclaredProperties = undeclaredProperties;
     }

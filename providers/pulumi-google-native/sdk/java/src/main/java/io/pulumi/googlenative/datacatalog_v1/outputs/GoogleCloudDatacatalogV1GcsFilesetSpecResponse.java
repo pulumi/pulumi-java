@@ -22,10 +22,10 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecResponse {
      */
     private final List<GoogleCloudDatacatalogV1GcsFileSpecResponse> sampleGcsFileSpecs;
 
-    @OutputCustomType.Constructor({"filePatterns","sampleGcsFileSpecs"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1GcsFilesetSpecResponse(
-        List<String> filePatterns,
-        List<GoogleCloudDatacatalogV1GcsFileSpecResponse> sampleGcsFileSpecs) {
+        @OutputCustomType.Parameter("filePatterns") List<String> filePatterns,
+        @OutputCustomType.Parameter("sampleGcsFileSpecs") List<GoogleCloudDatacatalogV1GcsFileSpecResponse> sampleGcsFileSpecs) {
         this.filePatterns = filePatterns;
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }

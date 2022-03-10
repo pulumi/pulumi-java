@@ -30,12 +30,12 @@ public final class GKEMasterInfoResponse {
      */
     private final String internalIp;
 
-    @OutputCustomType.Constructor({"clusterNetworkUri","clusterUri","externalIp","internalIp"})
+    @OutputCustomType.Constructor
     private GKEMasterInfoResponse(
-        String clusterNetworkUri,
-        String clusterUri,
-        String externalIp,
-        String internalIp) {
+        @OutputCustomType.Parameter("clusterNetworkUri") String clusterNetworkUri,
+        @OutputCustomType.Parameter("clusterUri") String clusterUri,
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("internalIp") String internalIp) {
         this.clusterNetworkUri = clusterNetworkUri;
         this.clusterUri = clusterUri;
         this.externalIp = externalIp;

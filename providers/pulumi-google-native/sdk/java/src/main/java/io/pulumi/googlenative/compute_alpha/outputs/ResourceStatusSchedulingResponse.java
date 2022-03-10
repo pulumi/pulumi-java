@@ -15,8 +15,8 @@ public final class ResourceStatusSchedulingResponse {
      */
     private final Integer availabilityDomain;
 
-    @OutputCustomType.Constructor({"availabilityDomain"})
-    private ResourceStatusSchedulingResponse(Integer availabilityDomain) {
+    @OutputCustomType.Constructor
+    private ResourceStatusSchedulingResponse(@OutputCustomType.Parameter("availabilityDomain") Integer availabilityDomain) {
         this.availabilityDomain = availabilityDomain;
     }
 

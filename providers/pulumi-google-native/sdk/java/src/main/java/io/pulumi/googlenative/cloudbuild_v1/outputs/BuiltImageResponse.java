@@ -26,11 +26,11 @@ public final class BuiltImageResponse {
      */
     private final TimeSpanResponse pushTiming;
 
-    @OutputCustomType.Constructor({"digest","name","pushTiming"})
+    @OutputCustomType.Constructor
     private BuiltImageResponse(
-        String digest,
-        String name,
-        TimeSpanResponse pushTiming) {
+        @OutputCustomType.Parameter("digest") String digest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pushTiming") TimeSpanResponse pushTiming) {
         this.digest = digest;
         this.name = name;
         this.pushTiming = pushTiming;

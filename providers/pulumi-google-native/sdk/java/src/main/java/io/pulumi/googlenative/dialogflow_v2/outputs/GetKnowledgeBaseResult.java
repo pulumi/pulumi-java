@@ -25,11 +25,11 @@ public final class GetKnowledgeBaseResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","languageCode","name"})
+    @OutputCustomType.Constructor
     private GetKnowledgeBaseResult(
-        String displayName,
-        String languageCode,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.languageCode = languageCode;
         this.name = name;

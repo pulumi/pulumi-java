@@ -25,11 +25,11 @@ public final class ErrorHandlerResponse {
      */
     private final String staticFile;
 
-    @OutputCustomType.Constructor({"errorCode","mimeType","staticFile"})
+    @OutputCustomType.Constructor
     private ErrorHandlerResponse(
-        String errorCode,
-        String mimeType,
-        String staticFile) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("staticFile") String staticFile) {
         this.errorCode = errorCode;
         this.mimeType = mimeType;
         this.staticFile = staticFile;

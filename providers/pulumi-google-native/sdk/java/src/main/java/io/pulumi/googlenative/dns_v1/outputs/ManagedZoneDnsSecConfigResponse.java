@@ -28,12 +28,12 @@ public final class ManagedZoneDnsSecConfigResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"defaultKeySpecs","kind","nonExistence","state"})
+    @OutputCustomType.Constructor
     private ManagedZoneDnsSecConfigResponse(
-        List<DnsKeySpecResponse> defaultKeySpecs,
-        String kind,
-        String nonExistence,
-        String state) {
+        @OutputCustomType.Parameter("defaultKeySpecs") List<DnsKeySpecResponse> defaultKeySpecs,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("nonExistence") String nonExistence,
+        @OutputCustomType.Parameter("state") String state) {
         this.defaultKeySpecs = defaultKeySpecs;
         this.kind = kind;
         this.nonExistence = nonExistence;

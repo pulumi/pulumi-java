@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
      */
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
-    @OutputCustomType.Constructor({"expressions"})
-    private GooglePrivacyDlpV2RecordConditionResponse(GooglePrivacyDlpV2ExpressionsResponse expressions) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2RecordConditionResponse(@OutputCustomType.Parameter("expressions") GooglePrivacyDlpV2ExpressionsResponse expressions) {
         this.expressions = expressions;
     }
 

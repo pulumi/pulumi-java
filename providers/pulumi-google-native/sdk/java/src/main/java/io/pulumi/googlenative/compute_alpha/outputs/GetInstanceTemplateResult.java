@@ -57,17 +57,17 @@ public final class GetInstanceTemplateResult {
      */
     private final SourceInstanceParamsResponse sourceInstanceParams;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","name","properties","selfLink","selfLinkWithId","sourceInstance","sourceInstanceParams"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        InstancePropertiesResponse properties,
-        String selfLink,
-        String selfLinkWithId,
-        String sourceInstance,
-        SourceInstanceParamsResponse sourceInstanceParams) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") InstancePropertiesResponse properties,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
+        @OutputCustomType.Parameter("sourceInstanceParams") SourceInstanceParamsResponse sourceInstanceParams) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

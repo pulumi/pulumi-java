@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
      */
     private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
 
-    @OutputCustomType.Constructor({"failureCondition","rolloutCondition","rolloutSteps"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutConfigResponse(
-        String failureCondition,
-        String rolloutCondition,
-        List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
+        @OutputCustomType.Parameter("failureCondition") String failureCondition,
+        @OutputCustomType.Parameter("rolloutCondition") String rolloutCondition,
+        @OutputCustomType.Parameter("rolloutSteps") List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
         this.failureCondition = failureCondition;
         this.rolloutCondition = rolloutCondition;
         this.rolloutSteps = rolloutSteps;

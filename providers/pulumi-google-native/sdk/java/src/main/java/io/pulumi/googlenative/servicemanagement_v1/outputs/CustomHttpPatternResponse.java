@@ -20,10 +20,10 @@ public final class CustomHttpPatternResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"kind","path"})
+    @OutputCustomType.Constructor
     private CustomHttpPatternResponse(
-        String kind,
-        String path) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("path") String path) {
         this.kind = kind;
         this.path = path;
     }

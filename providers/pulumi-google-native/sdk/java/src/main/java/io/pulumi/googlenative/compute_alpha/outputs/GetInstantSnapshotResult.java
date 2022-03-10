@@ -103,26 +103,26 @@ public final class GetInstantSnapshotResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"architecture","creationTimestamp","description","diskSizeGb","guestFlush","kind","labelFingerprint","labels","name","region","resourceStatus","satisfiesPzs","selfLink","selfLinkWithId","sourceDisk","sourceDiskId","status","zone"})
+    @OutputCustomType.Constructor
     private GetInstantSnapshotResult(
-        String architecture,
-        String creationTimestamp,
-        String description,
-        String diskSizeGb,
-        Boolean guestFlush,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String region,
-        InstantSnapshotResourceStatusResponse resourceStatus,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String selfLinkWithId,
-        String sourceDisk,
-        String sourceDiskId,
-        String status,
-        String zone) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("resourceStatus") InstantSnapshotResourceStatusResponse resourceStatus,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.architecture = architecture;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

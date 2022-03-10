@@ -33,12 +33,12 @@ public final class ResultStorageResponse {
      */
     private final ToolResultsHistoryResponse toolResultsHistory;
 
-    @OutputCustomType.Constructor({"googleCloudStorage","resultsUrl","toolResultsExecution","toolResultsHistory"})
+    @OutputCustomType.Constructor
     private ResultStorageResponse(
-        GoogleCloudStorageResponse googleCloudStorage,
-        String resultsUrl,
-        ToolResultsExecutionResponse toolResultsExecution,
-        ToolResultsHistoryResponse toolResultsHistory) {
+        @OutputCustomType.Parameter("googleCloudStorage") GoogleCloudStorageResponse googleCloudStorage,
+        @OutputCustomType.Parameter("resultsUrl") String resultsUrl,
+        @OutputCustomType.Parameter("toolResultsExecution") ToolResultsExecutionResponse toolResultsExecution,
+        @OutputCustomType.Parameter("toolResultsHistory") ToolResultsHistoryResponse toolResultsHistory) {
         this.googleCloudStorage = googleCloudStorage;
         this.resultsUrl = resultsUrl;
         this.toolResultsExecution = toolResultsExecution;

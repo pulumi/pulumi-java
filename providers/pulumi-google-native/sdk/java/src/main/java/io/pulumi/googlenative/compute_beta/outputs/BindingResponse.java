@@ -32,12 +32,12 @@ public final class BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"bindingId","condition","members","role"})
+    @OutputCustomType.Constructor
     private BindingResponse(
-        String bindingId,
-        ExprResponse condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("bindingId") String bindingId,
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.bindingId = bindingId;
         this.condition = condition;
         this.members = members;

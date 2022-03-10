@@ -56,17 +56,17 @@ public final class OnPremisesConfigurationResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","dumpFilePath","hostPort","kind","password","sourceInstance","username"})
+    @OutputCustomType.Constructor
     private OnPremisesConfigurationResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        String dumpFilePath,
-        String hostPort,
-        String kind,
-        String password,
-        InstanceReferenceResponse sourceInstance,
-        String username) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @OutputCustomType.Parameter("hostPort") String hostPort,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("sourceInstance") InstanceReferenceResponse sourceInstance,
+        @OutputCustomType.Parameter("username") String username) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

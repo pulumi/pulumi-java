@@ -75,21 +75,21 @@ public final class InstanceGroupManagerActionsSummaryResponse {
      */
     private final Integer verifying;
 
-    @OutputCustomType.Constructor({"abandoning","creating","creatingWithoutRetries","deleting","none","recreating","refreshing","restarting","resuming","starting","stopping","suspending","verifying"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerActionsSummaryResponse(
-        Integer abandoning,
-        Integer creating,
-        Integer creatingWithoutRetries,
-        Integer deleting,
-        Integer none,
-        Integer recreating,
-        Integer refreshing,
-        Integer restarting,
-        Integer resuming,
-        Integer starting,
-        Integer stopping,
-        Integer suspending,
-        Integer verifying) {
+        @OutputCustomType.Parameter("abandoning") Integer abandoning,
+        @OutputCustomType.Parameter("creating") Integer creating,
+        @OutputCustomType.Parameter("creatingWithoutRetries") Integer creatingWithoutRetries,
+        @OutputCustomType.Parameter("deleting") Integer deleting,
+        @OutputCustomType.Parameter("none") Integer none,
+        @OutputCustomType.Parameter("recreating") Integer recreating,
+        @OutputCustomType.Parameter("refreshing") Integer refreshing,
+        @OutputCustomType.Parameter("restarting") Integer restarting,
+        @OutputCustomType.Parameter("resuming") Integer resuming,
+        @OutputCustomType.Parameter("starting") Integer starting,
+        @OutputCustomType.Parameter("stopping") Integer stopping,
+        @OutputCustomType.Parameter("suspending") Integer suspending,
+        @OutputCustomType.Parameter("verifying") Integer verifying) {
         this.abandoning = abandoning;
         this.creating = creating;
         this.creatingWithoutRetries = creatingWithoutRetries;

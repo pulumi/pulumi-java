@@ -55,16 +55,16 @@ public final class GoogleCloudRunOpV2ContainerResponse {
      */
     private final List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"args","command","env","image","name","ports","resources","volumeMounts"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudRunOpV2EnvVarResponse> env,
-        String image,
-        String name,
-        List<GoogleCloudRunOpV2ContainerPortResponse> ports,
-        GoogleCloudRunOpV2ResourceRequirementsResponse resources,
-        List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<GoogleCloudRunOpV2EnvVarResponse> env,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") List<GoogleCloudRunOpV2ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("resources") GoogleCloudRunOpV2ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("volumeMounts") List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
         this.args = args;
         this.command = command;
         this.env = env;

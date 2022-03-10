@@ -93,23 +93,23 @@ public final class VirtualMachineConfigResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImages","dataDisk","encryptionConfig","guestAttributes","internalIpOnly","labels","machineType","metadata","network","nicType","shieldedInstanceConfig","subnet","tags","zone"})
+    @OutputCustomType.Constructor
     private VirtualMachineConfigResponse(
-        RuntimeAcceleratorConfigResponse acceleratorConfig,
-        List<ContainerImageResponse> containerImages,
-        LocalDiskResponse dataDisk,
-        EncryptionConfigResponse encryptionConfig,
-        Map<String,String> guestAttributes,
-        Boolean internalIpOnly,
-        Map<String,String> labels,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        String nicType,
-        RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String subnet,
-        List<String> tags,
-        String zone) {
+        @OutputCustomType.Parameter("acceleratorConfig") RuntimeAcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("containerImages") List<ContainerImageResponse> containerImages,
+        @OutputCustomType.Parameter("dataDisk") LocalDiskResponse dataDisk,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("guestAttributes") Map<String,String> guestAttributes,
+        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnet") String subnet,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;

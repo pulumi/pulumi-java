@@ -56,17 +56,17 @@ public final class GetExecutionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","executionTemplate","jobUri","name","outputNotebookFile","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetExecutionResult(
-        String createTime,
-        String description,
-        String displayName,
-        ExecutionTemplateResponse executionTemplate,
-        String jobUri,
-        String name,
-        String outputNotebookFile,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
+        @OutputCustomType.Parameter("jobUri") String jobUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputNotebookFile") String outputNotebookFile,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

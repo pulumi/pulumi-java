@@ -15,8 +15,8 @@ public final class AlertChartResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private AlertChartResponse(String name) {
+    @OutputCustomType.Constructor
+    private AlertChartResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

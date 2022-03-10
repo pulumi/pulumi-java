@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor({"field"})
-    private GooglePrivacyDlpV2EntityIdResponse(GooglePrivacyDlpV2FieldIdResponse field) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2EntityIdResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 

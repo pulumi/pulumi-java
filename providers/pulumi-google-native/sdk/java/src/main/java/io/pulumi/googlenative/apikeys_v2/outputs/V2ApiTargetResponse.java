@@ -21,10 +21,10 @@ public final class V2ApiTargetResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"methods","service"})
+    @OutputCustomType.Constructor
     private V2ApiTargetResponse(
-        List<String> methods,
-        String service) {
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("service") String service) {
         this.methods = methods;
         this.service = service;
     }

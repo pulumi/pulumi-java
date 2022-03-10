@@ -16,8 +16,8 @@ public final class SourceInstanceParamsResponse {
      */
     private final List<DiskInstantiationConfigResponse> diskConfigs;
 
-    @OutputCustomType.Constructor({"diskConfigs"})
-    private SourceInstanceParamsResponse(List<DiskInstantiationConfigResponse> diskConfigs) {
+    @OutputCustomType.Constructor
+    private SourceInstanceParamsResponse(@OutputCustomType.Parameter("diskConfigs") List<DiskInstantiationConfigResponse> diskConfigs) {
         this.diskConfigs = diskConfigs;
     }
 

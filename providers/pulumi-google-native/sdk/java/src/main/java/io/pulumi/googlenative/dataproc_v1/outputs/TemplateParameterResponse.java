@@ -32,12 +32,12 @@ public final class TemplateParameterResponse {
      */
     private final ParameterValidationResponse validation;
 
-    @OutputCustomType.Constructor({"description","fields","name","validation"})
+    @OutputCustomType.Constructor
     private TemplateParameterResponse(
-        String description,
-        List<String> fields,
-        String name,
-        ParameterValidationResponse validation) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fields") List<String> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("validation") ParameterValidationResponse validation) {
         this.description = description;
         this.fields = fields;
         this.name = name;

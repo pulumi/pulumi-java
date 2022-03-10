@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse {
      */
     private final Double samplingPercentage;
 
-    @OutputCustomType.Constructor({"bigqueryTableName","samplingPercentage"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__RequestLoggingConfigResponse(
-        String bigqueryTableName,
-        Double samplingPercentage) {
+        @OutputCustomType.Parameter("bigqueryTableName") String bigqueryTableName,
+        @OutputCustomType.Parameter("samplingPercentage") Double samplingPercentage) {
         this.bigqueryTableName = bigqueryTableName;
         this.samplingPercentage = samplingPercentage;
     }

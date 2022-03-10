@@ -40,14 +40,14 @@ public final class GoogleCloudRunV1ConditionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","reason","severity","status","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunV1ConditionResponse(
-        String lastTransitionTime,
-        String message,
-        String reason,
-        String severity,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;

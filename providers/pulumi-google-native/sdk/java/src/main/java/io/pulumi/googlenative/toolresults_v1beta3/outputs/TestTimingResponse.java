@@ -15,8 +15,8 @@ public final class TestTimingResponse {
      */
     private final DurationResponse testProcessDuration;
 
-    @OutputCustomType.Constructor({"testProcessDuration"})
-    private TestTimingResponse(DurationResponse testProcessDuration) {
+    @OutputCustomType.Constructor
+    private TestTimingResponse(@OutputCustomType.Parameter("testProcessDuration") DurationResponse testProcessDuration) {
         this.testProcessDuration = testProcessDuration;
     }
 

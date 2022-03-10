@@ -43,14 +43,14 @@ public final class GetUserDataMappingResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"archiveTime","archived","dataId","name","resourceAttributes","userId"})
+    @OutputCustomType.Constructor
     private GetUserDataMappingResult(
-        String archiveTime,
-        Boolean archived,
-        String dataId,
-        String name,
-        List<AttributeResponse> resourceAttributes,
-        String userId) {
+        @OutputCustomType.Parameter("archiveTime") String archiveTime,
+        @OutputCustomType.Parameter("archived") Boolean archived,
+        @OutputCustomType.Parameter("dataId") String dataId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.archiveTime = archiveTime;
         this.archived = archived;
         this.dataId = dataId;

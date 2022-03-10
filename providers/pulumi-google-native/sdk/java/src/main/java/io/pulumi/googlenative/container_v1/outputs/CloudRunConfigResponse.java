@@ -21,10 +21,10 @@ public final class CloudRunConfigResponse {
      */
     private final String loadBalancerType;
 
-    @OutputCustomType.Constructor({"disabled","loadBalancerType"})
+    @OutputCustomType.Constructor
     private CloudRunConfigResponse(
-        Boolean disabled,
-        String loadBalancerType) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }

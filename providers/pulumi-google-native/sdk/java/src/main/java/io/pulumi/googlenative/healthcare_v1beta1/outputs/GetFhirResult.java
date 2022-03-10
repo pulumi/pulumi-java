@@ -27,11 +27,11 @@ public final class GetFhirResult {
      */
     private final List<Map<String,String>> extensions;
 
-    @OutputCustomType.Constructor({"contentType","data","extensions"})
+    @OutputCustomType.Constructor
     private GetFhirResult(
-        String contentType,
-        String data,
-        List<Map<String,String>> extensions) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("extensions") List<Map<String,String>> extensions) {
         this.contentType = contentType;
         this.data = data;
         this.extensions = extensions;

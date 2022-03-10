@@ -21,10 +21,10 @@ public final class CaOptionsResponse {
      */
     private final Integer maxIssuerPathLength;
 
-    @OutputCustomType.Constructor({"isCa","maxIssuerPathLength"})
+    @OutputCustomType.Constructor
     private CaOptionsResponse(
-        Boolean isCa,
-        Integer maxIssuerPathLength) {
+        @OutputCustomType.Parameter("isCa") Boolean isCa,
+        @OutputCustomType.Parameter("maxIssuerPathLength") Integer maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }

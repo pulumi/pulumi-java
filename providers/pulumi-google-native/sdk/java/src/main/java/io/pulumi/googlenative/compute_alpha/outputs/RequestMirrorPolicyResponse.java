@@ -15,8 +15,8 @@ public final class RequestMirrorPolicyResponse {
      */
     private final String backendService;
 
-    @OutputCustomType.Constructor({"backendService"})
-    private RequestMirrorPolicyResponse(String backendService) {
+    @OutputCustomType.Constructor
+    private RequestMirrorPolicyResponse(@OutputCustomType.Parameter("backendService") String backendService) {
         this.backendService = backendService;
     }
 

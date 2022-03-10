@@ -30,12 +30,12 @@ public final class GatewayConfigResponse {
      */
     private final String lastAccessedGatewayTime;
 
-    @OutputCustomType.Constructor({"gatewayAuthMethod","gatewayType","lastAccessedGatewayId","lastAccessedGatewayTime"})
+    @OutputCustomType.Constructor
     private GatewayConfigResponse(
-        String gatewayAuthMethod,
-        String gatewayType,
-        String lastAccessedGatewayId,
-        String lastAccessedGatewayTime) {
+        @OutputCustomType.Parameter("gatewayAuthMethod") String gatewayAuthMethod,
+        @OutputCustomType.Parameter("gatewayType") String gatewayType,
+        @OutputCustomType.Parameter("lastAccessedGatewayId") String lastAccessedGatewayId,
+        @OutputCustomType.Parameter("lastAccessedGatewayTime") String lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;

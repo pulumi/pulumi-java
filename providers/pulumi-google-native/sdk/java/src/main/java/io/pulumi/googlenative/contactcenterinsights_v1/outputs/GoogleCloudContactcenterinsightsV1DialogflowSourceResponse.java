@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
      */
     private final String dialogflowConversation;
 
-    @OutputCustomType.Constructor({"audioUri","dialogflowConversation"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(
-        String audioUri,
-        String dialogflowConversation) {
+        @OutputCustomType.Parameter("audioUri") String audioUri,
+        @OutputCustomType.Parameter("dialogflowConversation") String dialogflowConversation) {
         this.audioUri = audioUri;
         this.dialogflowConversation = dialogflowConversation;
     }

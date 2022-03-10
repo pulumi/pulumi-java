@@ -21,10 +21,10 @@ public final class SourceResponse {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor({"ipBlocks","principals"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<String> ipBlocks,
-        List<String> principals) {
+        @OutputCustomType.Parameter("ipBlocks") List<String> ipBlocks,
+        @OutputCustomType.Parameter("principals") List<String> principals) {
         this.ipBlocks = ipBlocks;
         this.principals = principals;
     }

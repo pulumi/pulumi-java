@@ -16,8 +16,8 @@ public final class RowLayoutResponse {
      */
     private final List<RowResponse> rows;
 
-    @OutputCustomType.Constructor({"rows"})
-    private RowLayoutResponse(List<RowResponse> rows) {
+    @OutputCustomType.Constructor
+    private RowLayoutResponse(@OutputCustomType.Parameter("rows") List<RowResponse> rows) {
         this.rows = rows;
     }
 

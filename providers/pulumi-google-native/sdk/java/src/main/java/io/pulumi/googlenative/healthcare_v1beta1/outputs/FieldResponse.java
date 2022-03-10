@@ -36,13 +36,13 @@ public final class FieldResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"maxOccurs","minOccurs","name","table","type"})
+    @OutputCustomType.Constructor
     private FieldResponse(
-        Integer maxOccurs,
-        Integer minOccurs,
-        String name,
-        String table,
-        String type) {
+        @OutputCustomType.Parameter("maxOccurs") Integer maxOccurs,
+        @OutputCustomType.Parameter("minOccurs") Integer minOccurs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("table") String table,
+        @OutputCustomType.Parameter("type") String type) {
         this.maxOccurs = maxOccurs;
         this.minOccurs = minOccurs;
         this.name = name;

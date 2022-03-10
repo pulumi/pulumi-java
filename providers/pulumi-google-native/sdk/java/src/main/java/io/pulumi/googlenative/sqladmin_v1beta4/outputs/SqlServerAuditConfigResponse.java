@@ -20,10 +20,10 @@ public final class SqlServerAuditConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"bucket","kind"})
+    @OutputCustomType.Constructor
     private SqlServerAuditConfigResponse(
-        String bucket,
-        String kind) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.bucket = bucket;
         this.kind = kind;
     }

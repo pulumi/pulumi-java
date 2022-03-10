@@ -20,10 +20,10 @@ public final class GoogleMonitoringV3RangeResponse {
      */
     private final Double min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private GoogleMonitoringV3RangeResponse(
-        Double max,
-        Double min) {
+        @OutputCustomType.Parameter("max") Double max,
+        @OutputCustomType.Parameter("min") Double min) {
         this.max = max;
         this.min = min;
     }

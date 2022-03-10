@@ -15,8 +15,8 @@ public final class SuccessDetailResponse {
      */
     private final Boolean otherNativeCrash;
 
-    @OutputCustomType.Constructor({"otherNativeCrash"})
-    private SuccessDetailResponse(Boolean otherNativeCrash) {
+    @OutputCustomType.Constructor
+    private SuccessDetailResponse(@OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash) {
         this.otherNativeCrash = otherNativeCrash;
     }
 

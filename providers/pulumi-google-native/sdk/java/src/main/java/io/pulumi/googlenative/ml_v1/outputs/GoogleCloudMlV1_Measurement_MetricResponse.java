@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"metric","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_Measurement_MetricResponse(
-        String metric,
-        Double value) {
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("value") Double value) {
         this.metric = metric;
         this.value = value;
     }

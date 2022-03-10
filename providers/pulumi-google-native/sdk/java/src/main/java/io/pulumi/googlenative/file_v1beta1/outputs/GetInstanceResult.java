@@ -80,21 +80,21 @@ public final class GetInstanceResult {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"createTime","description","etag","fileShares","kmsKeyName","labels","name","networks","satisfiesPzs","state","statusMessage","suspensionReasons","tier"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String createTime,
-        String description,
-        String etag,
-        List<FileShareConfigResponse> fileShares,
-        String kmsKeyName,
-        Map<String,String> labels,
-        String name,
-        List<NetworkConfigResponse> networks,
-        Boolean satisfiesPzs,
-        String state,
-        String statusMessage,
-        List<String> suspensionReasons,
-        String tier) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fileShares") List<FileShareConfigResponse> fileShares,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networks") List<NetworkConfigResponse> networks,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

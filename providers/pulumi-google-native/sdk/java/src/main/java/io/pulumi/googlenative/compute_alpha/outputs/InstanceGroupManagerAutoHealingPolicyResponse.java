@@ -34,13 +34,13 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
     private final FixedOrPercentResponse maxUnavailable;
     private final String updateInstances;
 
-    @OutputCustomType.Constructor({"autoHealingTriggers","healthCheck","initialDelaySec","maxUnavailable","updateInstances"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerAutoHealingPolicyResponse(
-        InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
-        String healthCheck,
-        Integer initialDelaySec,
-        FixedOrPercentResponse maxUnavailable,
-        String updateInstances) {
+        @OutputCustomType.Parameter("autoHealingTriggers") InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
+        @OutputCustomType.Parameter("healthCheck") String healthCheck,
+        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec,
+        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @OutputCustomType.Parameter("updateInstances") String updateInstances) {
         this.autoHealingTriggers = autoHealingTriggers;
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;

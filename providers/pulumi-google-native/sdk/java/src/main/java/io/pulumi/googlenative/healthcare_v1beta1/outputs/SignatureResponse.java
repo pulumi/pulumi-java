@@ -32,12 +32,12 @@ public final class SignatureResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"image","metadata","signatureTime","userId"})
+    @OutputCustomType.Constructor
     private SignatureResponse(
-        ImageResponse image,
-        Map<String,String> metadata,
-        String signatureTime,
-        String userId) {
+        @OutputCustomType.Parameter("image") ImageResponse image,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("signatureTime") String signatureTime,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.image = image;
         this.metadata = metadata;
         this.signatureTime = signatureTime;

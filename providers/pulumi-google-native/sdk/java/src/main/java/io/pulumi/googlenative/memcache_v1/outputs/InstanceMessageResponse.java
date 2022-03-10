@@ -20,10 +20,10 @@ public final class InstanceMessageResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","message"})
+    @OutputCustomType.Constructor
     private InstanceMessageResponse(
-        String code,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

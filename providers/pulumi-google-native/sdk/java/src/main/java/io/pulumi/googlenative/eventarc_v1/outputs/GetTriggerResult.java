@@ -65,18 +65,18 @@ public final class GetTriggerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","destination","etag","eventFilters","labels","name","serviceAccount","transport","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetTriggerResult(
-        String createTime,
-        DestinationResponse destination,
-        String etag,
-        List<EventFilterResponse> eventFilters,
-        Map<String,String> labels,
-        String name,
-        String serviceAccount,
-        TransportResponse transport,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destination") DestinationResponse destination,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventFilters") List<EventFilterResponse> eventFilters,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("transport") TransportResponse transport,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destination = destination;
         this.etag = etag;

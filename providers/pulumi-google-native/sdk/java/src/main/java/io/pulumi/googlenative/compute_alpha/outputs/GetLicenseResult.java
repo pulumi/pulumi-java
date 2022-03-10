@@ -53,17 +53,17 @@ public final class GetLicenseResult {
      */
     private final Boolean transferable;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","licenseCode","name","resourceRequirements","selfLink","selfLinkWithId","transferable"})
+    @OutputCustomType.Constructor
     private GetLicenseResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String licenseCode,
-        String name,
-        LicenseResourceRequirementsResponse resourceRequirements,
-        String selfLink,
-        String selfLinkWithId,
-        Boolean transferable) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseCode") String licenseCode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceRequirements") LicenseResourceRequirementsResponse resourceRequirements,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("transferable") Boolean transferable) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

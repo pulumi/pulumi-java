@@ -64,18 +64,18 @@ public final class GetDatabaseResult {
      */
     private final String versionRetentionPeriod;
 
-    @OutputCustomType.Constructor({"createTime","databaseDialect","defaultLeader","earliestVersionTime","encryptionConfig","encryptionInfo","name","restoreInfo","state","versionRetentionPeriod"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        String createTime,
-        String databaseDialect,
-        String defaultLeader,
-        String earliestVersionTime,
-        EncryptionConfigResponse encryptionConfig,
-        List<EncryptionInfoResponse> encryptionInfo,
-        String name,
-        RestoreInfoResponse restoreInfo,
-        String state,
-        String versionRetentionPeriod) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("databaseDialect") String databaseDialect,
+        @OutputCustomType.Parameter("defaultLeader") String defaultLeader,
+        @OutputCustomType.Parameter("earliestVersionTime") String earliestVersionTime,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("encryptionInfo") List<EncryptionInfoResponse> encryptionInfo,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("versionRetentionPeriod") String versionRetentionPeriod) {
         this.createTime = createTime;
         this.databaseDialect = databaseDialect;
         this.defaultLeader = defaultLeader;

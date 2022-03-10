@@ -20,10 +20,10 @@ public final class ForwardInfoResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"resourceUri","target"})
+    @OutputCustomType.Constructor
     private ForwardInfoResponse(
-        String resourceUri,
-        String target) {
+        @OutputCustomType.Parameter("resourceUri") String resourceUri,
+        @OutputCustomType.Parameter("target") String target) {
         this.resourceUri = resourceUri;
         this.target = target;
     }

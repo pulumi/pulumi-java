@@ -26,11 +26,11 @@ public final class BitbucketServerRepositoryIdResponse {
      */
     private final Integer webhookId;
 
-    @OutputCustomType.Constructor({"projectKey","repoSlug","webhookId"})
+    @OutputCustomType.Constructor
     private BitbucketServerRepositoryIdResponse(
-        String projectKey,
-        String repoSlug,
-        Integer webhookId) {
+        @OutputCustomType.Parameter("projectKey") String projectKey,
+        @OutputCustomType.Parameter("repoSlug") String repoSlug,
+        @OutputCustomType.Parameter("webhookId") Integer webhookId) {
         this.projectKey = projectKey;
         this.repoSlug = repoSlug;
         this.webhookId = webhookId;

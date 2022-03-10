@@ -81,20 +81,20 @@ public final class GooglePrivacyDlpV2PrimitiveTransformationResponse {
      */
     private final GooglePrivacyDlpV2TimePartConfigResponse timePartConfig;
 
-    @OutputCustomType.Constructor({"bucketingConfig","characterMaskConfig","cryptoDeterministicConfig","cryptoHashConfig","cryptoReplaceFfxFpeConfig","dateShiftConfig","fixedSizeBucketingConfig","redactConfig","replaceConfig","replaceDictionaryConfig","replaceWithInfoTypeConfig","timePartConfig"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2PrimitiveTransformationResponse(
-        GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig,
-        GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig,
-        GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig,
-        GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig,
-        GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig,
-        GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig,
-        GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig,
-        GooglePrivacyDlpV2RedactConfigResponse redactConfig,
-        GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig,
-        GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
-        GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
-        GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
+        @OutputCustomType.Parameter("bucketingConfig") GooglePrivacyDlpV2BucketingConfigResponse bucketingConfig,
+        @OutputCustomType.Parameter("characterMaskConfig") GooglePrivacyDlpV2CharacterMaskConfigResponse characterMaskConfig,
+        @OutputCustomType.Parameter("cryptoDeterministicConfig") GooglePrivacyDlpV2CryptoDeterministicConfigResponse cryptoDeterministicConfig,
+        @OutputCustomType.Parameter("cryptoHashConfig") GooglePrivacyDlpV2CryptoHashConfigResponse cryptoHashConfig,
+        @OutputCustomType.Parameter("cryptoReplaceFfxFpeConfig") GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse cryptoReplaceFfxFpeConfig,
+        @OutputCustomType.Parameter("dateShiftConfig") GooglePrivacyDlpV2DateShiftConfigResponse dateShiftConfig,
+        @OutputCustomType.Parameter("fixedSizeBucketingConfig") GooglePrivacyDlpV2FixedSizeBucketingConfigResponse fixedSizeBucketingConfig,
+        @OutputCustomType.Parameter("redactConfig") GooglePrivacyDlpV2RedactConfigResponse redactConfig,
+        @OutputCustomType.Parameter("replaceConfig") GooglePrivacyDlpV2ReplaceValueConfigResponse replaceConfig,
+        @OutputCustomType.Parameter("replaceDictionaryConfig") GooglePrivacyDlpV2ReplaceDictionaryConfigResponse replaceDictionaryConfig,
+        @OutputCustomType.Parameter("replaceWithInfoTypeConfig") GooglePrivacyDlpV2ReplaceWithInfoTypeConfigResponse replaceWithInfoTypeConfig,
+        @OutputCustomType.Parameter("timePartConfig") GooglePrivacyDlpV2TimePartConfigResponse timePartConfig) {
         this.bucketingConfig = bucketingConfig;
         this.characterMaskConfig = characterMaskConfig;
         this.cryptoDeterministicConfig = cryptoDeterministicConfig;

@@ -21,10 +21,10 @@ public final class NodeGroupMaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"maintenanceDuration","startTime"})
+    @OutputCustomType.Constructor
     private NodeGroupMaintenanceWindowResponse(
-        DurationResponse maintenanceDuration,
-        String startTime) {
+        @OutputCustomType.Parameter("maintenanceDuration") DurationResponse maintenanceDuration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.maintenanceDuration = maintenanceDuration;
         this.startTime = startTime;
     }

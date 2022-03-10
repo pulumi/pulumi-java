@@ -36,13 +36,13 @@ public final class GetApicategoryResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"data","errorCode","message","requestId","status"})
+    @OutputCustomType.Constructor
     private GetApicategoryResult(
-        GoogleCloudApigeeV1ApiCategoryDataResponse data,
-        String errorCode,
-        String message,
-        String requestId,
-        String status) {
+        @OutputCustomType.Parameter("data") GoogleCloudApigeeV1ApiCategoryDataResponse data,
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("requestId") String requestId,
+        @OutputCustomType.Parameter("status") String status) {
         this.data = data;
         this.errorCode = errorCode;
         this.message = message;

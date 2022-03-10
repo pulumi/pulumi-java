@@ -26,11 +26,11 @@ public final class ScheduleOptionsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"disableAutoScheduling","endTime","startTime"})
+    @OutputCustomType.Constructor
     private ScheduleOptionsResponse(
-        Boolean disableAutoScheduling,
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("disableAutoScheduling") Boolean disableAutoScheduling,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.disableAutoScheduling = disableAutoScheduling;
         this.endTime = endTime;
         this.startTime = startTime;

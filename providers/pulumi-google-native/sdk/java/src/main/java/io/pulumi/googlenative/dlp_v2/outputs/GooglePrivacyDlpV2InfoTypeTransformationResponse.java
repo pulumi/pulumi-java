@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor({"infoTypes","primitiveTransformation"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeTransformationResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.infoTypes = infoTypes;
         this.primitiveTransformation = primitiveTransformation;
     }

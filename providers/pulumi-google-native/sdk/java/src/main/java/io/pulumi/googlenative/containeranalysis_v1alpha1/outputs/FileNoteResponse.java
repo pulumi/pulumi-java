@@ -26,11 +26,11 @@ public final class FileNoteResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"checksum","fileType","title"})
+    @OutputCustomType.Constructor
     private FileNoteResponse(
-        List<String> checksum,
-        String fileType,
-        String title) {
+        @OutputCustomType.Parameter("checksum") List<String> checksum,
+        @OutputCustomType.Parameter("fileType") String fileType,
+        @OutputCustomType.Parameter("title") String title) {
         this.checksum = checksum;
         this.fileType = fileType;
         this.title = title;

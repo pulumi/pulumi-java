@@ -39,13 +39,13 @@ public final class AndroidTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor({"androidAppInfo","androidInstrumentationTest","androidRoboTest","androidTestLoop","testTimeout"})
+    @OutputCustomType.Constructor
     private AndroidTestResponse(
-        AndroidAppInfoResponse androidAppInfo,
-        AndroidInstrumentationTestResponse androidInstrumentationTest,
-        AndroidRoboTestResponse androidRoboTest,
-        AndroidTestLoopResponse androidTestLoop,
-        DurationResponse testTimeout) {
+        @OutputCustomType.Parameter("androidAppInfo") AndroidAppInfoResponse androidAppInfo,
+        @OutputCustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
+        @OutputCustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
+        @OutputCustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
+        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.androidAppInfo = androidAppInfo;
         this.androidInstrumentationTest = androidInstrumentationTest;
         this.androidRoboTest = androidRoboTest;

@@ -27,11 +27,11 @@ public final class TypeResponse {
      */
     private final String primitive;
 
-    @OutputCustomType.Constructor({"fields","name","primitive"})
+    @OutputCustomType.Constructor
     private TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        String primitive) {
+        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primitive") String primitive) {
         this.fields = fields;
         this.name = name;
         this.primitive = primitive;

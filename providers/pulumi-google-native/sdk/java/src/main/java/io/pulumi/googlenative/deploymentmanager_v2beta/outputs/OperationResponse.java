@@ -124,30 +124,30 @@ public final class OperationResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"clientOperationId","description","endTime","error","httpErrorMessage","httpErrorStatusCode","insertTime","kind","name","operationGroupId","operationType","progress","region","selfLink","startTime","status","statusMessage","targetId","targetLink","user","warnings","zone"})
+    @OutputCustomType.Constructor
     private OperationResponse(
-        String clientOperationId,
-        String description,
-        String endTime,
-        OperationErrorResponse error,
-        String httpErrorMessage,
-        Integer httpErrorStatusCode,
-        String insertTime,
-        String kind,
-        String name,
-        String operationGroupId,
-        String operationType,
-        Integer progress,
-        String region,
-        String selfLink,
-        String startTime,
-        String status,
-        String statusMessage,
-        String targetId,
-        String targetLink,
-        String user,
-        List<OperationWarningsItemResponse> warnings,
-        String zone) {
+        @OutputCustomType.Parameter("clientOperationId") String clientOperationId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") OperationErrorResponse error,
+        @OutputCustomType.Parameter("httpErrorMessage") String httpErrorMessage,
+        @OutputCustomType.Parameter("httpErrorStatusCode") Integer httpErrorStatusCode,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationGroupId") String operationGroupId,
+        @OutputCustomType.Parameter("operationType") String operationType,
+        @OutputCustomType.Parameter("progress") Integer progress,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("targetId") String targetId,
+        @OutputCustomType.Parameter("targetLink") String targetLink,
+        @OutputCustomType.Parameter("user") String user,
+        @OutputCustomType.Parameter("warnings") List<OperationWarningsItemResponse> warnings,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.clientOperationId = clientOperationId;
         this.description = description;
         this.endTime = endTime;

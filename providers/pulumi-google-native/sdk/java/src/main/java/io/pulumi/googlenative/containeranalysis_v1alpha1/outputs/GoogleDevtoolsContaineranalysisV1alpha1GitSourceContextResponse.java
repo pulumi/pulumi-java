@@ -20,10 +20,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextRespon
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"revisionId","url"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse(
-        String revisionId,
-        String url) {
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("url") String url) {
         this.revisionId = revisionId;
         this.url = url;
     }

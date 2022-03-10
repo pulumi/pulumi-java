@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1EduDataResponse {
      */
     private final String website;
 
-    @OutputCustomType.Constructor({"instituteSize","instituteType","website"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1EduDataResponse(
-        String instituteSize,
-        String instituteType,
-        String website) {
+        @OutputCustomType.Parameter("instituteSize") String instituteSize,
+        @OutputCustomType.Parameter("instituteType") String instituteType,
+        @OutputCustomType.Parameter("website") String website) {
         this.instituteSize = instituteSize;
         this.instituteType = instituteType;
         this.website = website;

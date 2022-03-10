@@ -100,25 +100,25 @@ public final class RouterBgpPeerResponse {
      */
     private final String routerApplianceInstance;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","advertisedRoutePriority","bfd","enable","enableIpv6","interfaceName","ipAddress","ipv6NexthopAddress","managementType","md5AuthenticationKeyName","name","peerAsn","peerIpAddress","peerIpv6NexthopAddress","routerApplianceInstance"})
+    @OutputCustomType.Constructor
     private RouterBgpPeerResponse(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        Integer advertisedRoutePriority,
-        RouterBgpPeerBfdResponse bfd,
-        String enable,
-        Boolean enableIpv6,
-        String interfaceName,
-        String ipAddress,
-        String ipv6NexthopAddress,
-        String managementType,
-        String md5AuthenticationKeyName,
-        String name,
-        Integer peerAsn,
-        String peerIpAddress,
-        String peerIpv6NexthopAddress,
-        String routerApplianceInstance) {
+        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
+        @OutputCustomType.Parameter("advertisedRoutePriority") Integer advertisedRoutePriority,
+        @OutputCustomType.Parameter("bfd") RouterBgpPeerBfdResponse bfd,
+        @OutputCustomType.Parameter("enable") String enable,
+        @OutputCustomType.Parameter("enableIpv6") Boolean enableIpv6,
+        @OutputCustomType.Parameter("interfaceName") String interfaceName,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("ipv6NexthopAddress") String ipv6NexthopAddress,
+        @OutputCustomType.Parameter("managementType") String managementType,
+        @OutputCustomType.Parameter("md5AuthenticationKeyName") String md5AuthenticationKeyName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerAsn") Integer peerAsn,
+        @OutputCustomType.Parameter("peerIpAddress") String peerIpAddress,
+        @OutputCustomType.Parameter("peerIpv6NexthopAddress") String peerIpv6NexthopAddress,
+        @OutputCustomType.Parameter("routerApplianceInstance") String routerApplianceInstance) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

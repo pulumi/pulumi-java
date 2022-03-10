@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowV2ContextResponse {
      */
     private final Map<String,String> parameters;
 
-    @OutputCustomType.Constructor({"lifespanCount","name","parameters"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2ContextResponse(
-        Integer lifespanCount,
-        String name,
-        Map<String,String> parameters) {
+        @OutputCustomType.Parameter("lifespanCount") Integer lifespanCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters) {
         this.lifespanCount = lifespanCount;
         this.name = name;
         this.parameters = parameters;

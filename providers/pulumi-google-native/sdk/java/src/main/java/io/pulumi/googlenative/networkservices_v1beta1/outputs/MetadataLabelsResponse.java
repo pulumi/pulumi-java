@@ -20,10 +20,10 @@ public final class MetadataLabelsResponse {
      */
     private final String labelValue;
 
-    @OutputCustomType.Constructor({"labelName","labelValue"})
+    @OutputCustomType.Constructor
     private MetadataLabelsResponse(
-        String labelName,
-        String labelValue) {
+        @OutputCustomType.Parameter("labelName") String labelName,
+        @OutputCustomType.Parameter("labelValue") String labelValue) {
         this.labelName = labelName;
         this.labelValue = labelValue;
     }

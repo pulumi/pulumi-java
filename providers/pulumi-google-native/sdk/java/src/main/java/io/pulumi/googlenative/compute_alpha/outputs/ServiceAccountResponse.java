@@ -21,10 +21,10 @@ public final class ServiceAccountResponse {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"email","scopes"})
+    @OutputCustomType.Constructor
     private ServiceAccountResponse(
-        String email,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }

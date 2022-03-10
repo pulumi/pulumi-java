@@ -27,11 +27,11 @@ public final class MetadataResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"fingerprint","items","kind"})
+    @OutputCustomType.Constructor
     private MetadataResponse(
-        String fingerprint,
-        List<MetadataItemsItemResponse> items,
-        String kind) {
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("items") List<MetadataItemsItemResponse> items,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.fingerprint = fingerprint;
         this.items = items;
         this.kind = kind;

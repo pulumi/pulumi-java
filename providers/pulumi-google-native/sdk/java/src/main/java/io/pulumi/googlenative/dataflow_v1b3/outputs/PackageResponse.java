@@ -20,10 +20,10 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"location","name"})
+    @OutputCustomType.Constructor
     private PackageResponse(
-        String location,
-        String name) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name) {
         this.location = location;
         this.name = name;
     }

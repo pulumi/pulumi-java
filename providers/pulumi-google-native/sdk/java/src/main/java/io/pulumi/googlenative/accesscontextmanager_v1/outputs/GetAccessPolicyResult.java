@@ -36,13 +36,13 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"etag","name","parent","scopes","title"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        String etag,
-        String name,
-        String parent,
-        List<String> scopes,
-        String title) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("title") String title) {
         this.etag = etag;
         this.name = name;
         this.parent = parent;

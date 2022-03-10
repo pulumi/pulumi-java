@@ -26,11 +26,11 @@ public final class ErrorResponse {
      */
     private final StackTraceResponse stackTrace;
 
-    @OutputCustomType.Constructor({"context","payload","stackTrace"})
+    @OutputCustomType.Constructor
     private ErrorResponse(
-        String context,
-        String payload,
-        StackTraceResponse stackTrace) {
+        @OutputCustomType.Parameter("context") String context,
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("stackTrace") StackTraceResponse stackTrace) {
         this.context = context;
         this.payload = payload;
         this.stackTrace = stackTrace;

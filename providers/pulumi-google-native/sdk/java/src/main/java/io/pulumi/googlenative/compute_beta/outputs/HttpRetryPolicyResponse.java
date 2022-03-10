@@ -28,11 +28,11 @@ public final class HttpRetryPolicyResponse {
      */
     private final List<String> retryConditions;
 
-    @OutputCustomType.Constructor({"numRetries","perTryTimeout","retryConditions"})
+    @OutputCustomType.Constructor
     private HttpRetryPolicyResponse(
-        Integer numRetries,
-        DurationResponse perTryTimeout,
-        List<String> retryConditions) {
+        @OutputCustomType.Parameter("numRetries") Integer numRetries,
+        @OutputCustomType.Parameter("perTryTimeout") DurationResponse perTryTimeout,
+        @OutputCustomType.Parameter("retryConditions") List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;

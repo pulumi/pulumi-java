@@ -61,18 +61,18 @@ public final class GetProjectResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","displayName","etag","labels","name","parent","projectId","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        String projectId,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

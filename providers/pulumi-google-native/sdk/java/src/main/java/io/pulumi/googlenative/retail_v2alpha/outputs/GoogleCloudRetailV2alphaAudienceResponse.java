@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2alphaAudienceResponse {
      */
     private final List<String> genders;
 
-    @OutputCustomType.Constructor({"ageGroups","genders"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaAudienceResponse(
-        List<String> ageGroups,
-        List<String> genders) {
+        @OutputCustomType.Parameter("ageGroups") List<String> ageGroups,
+        @OutputCustomType.Parameter("genders") List<String> genders) {
         this.ageGroups = ageGroups;
         this.genders = genders;
     }

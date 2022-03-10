@@ -62,18 +62,18 @@ public final class GetImportJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"attestation","createTime","expireEventTime","expireTime","generateTime","importMethod","name","protectionLevel","publicKey","state"})
+    @OutputCustomType.Constructor
     private GetImportJobResult(
-        KeyOperationAttestationResponse attestation,
-        String createTime,
-        String expireEventTime,
-        String expireTime,
-        String generateTime,
-        String importMethod,
-        String name,
-        String protectionLevel,
-        WrappingPublicKeyResponse publicKey,
-        String state) {
+        @OutputCustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireEventTime") String expireEventTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("generateTime") String generateTime,
+        @OutputCustomType.Parameter("importMethod") String importMethod,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
+        @OutputCustomType.Parameter("publicKey") WrappingPublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("state") String state) {
         this.attestation = attestation;
         this.createTime = createTime;
         this.expireEventTime = expireEventTime;

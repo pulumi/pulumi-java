@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse {
      */
     private final List<String> text;
 
-    @OutputCustomType.Constructor({"text"})
-    private GoogleCloudDialogflowV2IntentMessageTextResponse(List<String> text) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageTextResponse(@OutputCustomType.Parameter("text") List<String> text) {
         this.text = text;
     }
 

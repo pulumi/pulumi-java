@@ -25,11 +25,11 @@ public final class DenyMaintenancePeriodResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"endDate","startDate","time"})
+    @OutputCustomType.Constructor
     private DenyMaintenancePeriodResponse(
-        String endDate,
-        String startDate,
-        String time) {
+        @OutputCustomType.Parameter("endDate") String endDate,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("time") String time) {
         this.endDate = endDate;
         this.startDate = startDate;
         this.time = time;

@@ -21,10 +21,10 @@ public final class UserPasswordResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","username"})
+    @OutputCustomType.Constructor
     private UserPasswordResponse(
-        SecretResponse password,
-        String username) {
+        @OutputCustomType.Parameter("password") SecretResponse password,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

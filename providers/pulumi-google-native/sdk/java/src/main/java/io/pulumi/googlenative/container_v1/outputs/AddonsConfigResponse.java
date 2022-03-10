@@ -63,17 +63,17 @@ public final class AddonsConfigResponse {
      */
     private final NetworkPolicyConfigResponse networkPolicyConfig;
 
-    @OutputCustomType.Constructor({"cloudRunConfig","configConnectorConfig","dnsCacheConfig","gcePersistentDiskCsiDriverConfig","gcpFilestoreCsiDriverConfig","horizontalPodAutoscaling","httpLoadBalancing","kubernetesDashboard","networkPolicyConfig"})
+    @OutputCustomType.Constructor
     private AddonsConfigResponse(
-        CloudRunConfigResponse cloudRunConfig,
-        ConfigConnectorConfigResponse configConnectorConfig,
-        DnsCacheConfigResponse dnsCacheConfig,
-        GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
-        GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
-        HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
-        HttpLoadBalancingResponse httpLoadBalancing,
-        KubernetesDashboardResponse kubernetesDashboard,
-        NetworkPolicyConfigResponse networkPolicyConfig) {
+        @OutputCustomType.Parameter("cloudRunConfig") CloudRunConfigResponse cloudRunConfig,
+        @OutputCustomType.Parameter("configConnectorConfig") ConfigConnectorConfigResponse configConnectorConfig,
+        @OutputCustomType.Parameter("dnsCacheConfig") DnsCacheConfigResponse dnsCacheConfig,
+        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
+        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
+        @OutputCustomType.Parameter("horizontalPodAutoscaling") HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
+        @OutputCustomType.Parameter("httpLoadBalancing") HttpLoadBalancingResponse httpLoadBalancing,
+        @OutputCustomType.Parameter("kubernetesDashboard") KubernetesDashboardResponse kubernetesDashboard,
+        @OutputCustomType.Parameter("networkPolicyConfig") NetworkPolicyConfigResponse networkPolicyConfig) {
         this.cloudRunConfig = cloudRunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;

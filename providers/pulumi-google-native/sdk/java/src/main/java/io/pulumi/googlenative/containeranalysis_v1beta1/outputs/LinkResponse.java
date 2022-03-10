@@ -39,13 +39,13 @@ public final class LinkResponse {
      */
     private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
-    @OutputCustomType.Constructor({"byproducts","command","environment","materials","products"})
+    @OutputCustomType.Constructor
     private LinkResponse(
-        ByProductsResponse byproducts,
-        List<String> command,
-        EnvironmentResponse environment,
-        List<GrafeasV1beta1IntotoArtifactResponse> materials,
-        List<GrafeasV1beta1IntotoArtifactResponse> products) {
+        @OutputCustomType.Parameter("byproducts") ByProductsResponse byproducts,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
+        @OutputCustomType.Parameter("materials") List<GrafeasV1beta1IntotoArtifactResponse> materials,
+        @OutputCustomType.Parameter("products") List<GrafeasV1beta1IntotoArtifactResponse> products) {
         this.byproducts = byproducts;
         this.command = command;
         this.environment = environment;

@@ -26,11 +26,11 @@ public final class GetSubscriptionResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"deliveryConfig","name","topic"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        DeliveryConfigResponse deliveryConfig,
-        String name,
-        String topic) {
+        @OutputCustomType.Parameter("deliveryConfig") DeliveryConfigResponse deliveryConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.deliveryConfig = deliveryConfig;
         this.name = name;
         this.topic = topic;

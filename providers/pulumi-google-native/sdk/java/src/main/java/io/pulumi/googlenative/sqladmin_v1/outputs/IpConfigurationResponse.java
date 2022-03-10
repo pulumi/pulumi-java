@@ -38,13 +38,13 @@ public final class IpConfigurationResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor({"allocatedIpRange","authorizedNetworks","ipv4Enabled","privateNetwork","requireSsl"})
+    @OutputCustomType.Constructor
     private IpConfigurationResponse(
-        String allocatedIpRange,
-        List<AclEntryResponse> authorizedNetworks,
-        Boolean ipv4Enabled,
-        String privateNetwork,
-        Boolean requireSsl) {
+        @OutputCustomType.Parameter("allocatedIpRange") String allocatedIpRange,
+        @OutputCustomType.Parameter("authorizedNetworks") List<AclEntryResponse> authorizedNetworks,
+        @OutputCustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
+        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
+        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;

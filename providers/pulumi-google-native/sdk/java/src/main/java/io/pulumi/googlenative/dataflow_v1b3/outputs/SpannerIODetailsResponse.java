@@ -25,11 +25,11 @@ public final class SpannerIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"databaseId","instanceId","project"})
+    @OutputCustomType.Constructor
     private SpannerIODetailsResponse(
-        String databaseId,
-        String instanceId,
-        String project) {
+        @OutputCustomType.Parameter("databaseId") String databaseId,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("project") String project) {
         this.databaseId = databaseId;
         this.instanceId = instanceId;
         this.project = project;

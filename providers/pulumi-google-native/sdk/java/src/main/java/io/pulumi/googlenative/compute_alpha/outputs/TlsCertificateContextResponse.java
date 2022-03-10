@@ -27,11 +27,11 @@ public final class TlsCertificateContextResponse {
      */
     private final SdsConfigResponse sdsConfig;
 
-    @OutputCustomType.Constructor({"certificatePaths","certificateSource","sdsConfig"})
+    @OutputCustomType.Constructor
     private TlsCertificateContextResponse(
-        TlsCertificatePathsResponse certificatePaths,
-        String certificateSource,
-        SdsConfigResponse sdsConfig) {
+        @OutputCustomType.Parameter("certificatePaths") TlsCertificatePathsResponse certificatePaths,
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig) {
         this.certificatePaths = certificatePaths;
         this.certificateSource = certificateSource;
         this.sdsConfig = sdsConfig;

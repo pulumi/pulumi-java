@@ -39,14 +39,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
     private final Integer filesLimitPercent;
     private final String sampleMethod;
 
-    @OutputCustomType.Constructor({"bytesLimitPerFile","bytesLimitPerFilePercent","fileSet","fileTypes","filesLimitPercent","sampleMethod"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CloudStorageOptionsResponse(
-        String bytesLimitPerFile,
-        Integer bytesLimitPerFilePercent,
-        GooglePrivacyDlpV2FileSetResponse fileSet,
-        List<String> fileTypes,
-        Integer filesLimitPercent,
-        String sampleMethod) {
+        @OutputCustomType.Parameter("bytesLimitPerFile") String bytesLimitPerFile,
+        @OutputCustomType.Parameter("bytesLimitPerFilePercent") Integer bytesLimitPerFilePercent,
+        @OutputCustomType.Parameter("fileSet") GooglePrivacyDlpV2FileSetResponse fileSet,
+        @OutputCustomType.Parameter("fileTypes") List<String> fileTypes,
+        @OutputCustomType.Parameter("filesLimitPercent") Integer filesLimitPercent,
+        @OutputCustomType.Parameter("sampleMethod") String sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         this.fileSet = fileSet;

@@ -13,10 +13,10 @@ public final class FilterResponse {
     private final CompositeFilterResponse compositeFilter;
     private final ValueFilterResponse valueFilter;
 
-    @OutputCustomType.Constructor({"compositeFilter","valueFilter"})
+    @OutputCustomType.Constructor
     private FilterResponse(
-        CompositeFilterResponse compositeFilter,
-        ValueFilterResponse valueFilter) {
+        @OutputCustomType.Parameter("compositeFilter") CompositeFilterResponse compositeFilter,
+        @OutputCustomType.Parameter("valueFilter") ValueFilterResponse valueFilter) {
         this.compositeFilter = compositeFilter;
         this.valueFilter = valueFilter;
     }

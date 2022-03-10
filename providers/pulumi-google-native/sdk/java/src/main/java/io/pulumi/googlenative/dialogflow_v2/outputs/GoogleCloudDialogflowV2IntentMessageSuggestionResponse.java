@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"title"})
-    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse(String title) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageSuggestionResponse(@OutputCustomType.Parameter("title") String title) {
         this.title = title;
     }
 

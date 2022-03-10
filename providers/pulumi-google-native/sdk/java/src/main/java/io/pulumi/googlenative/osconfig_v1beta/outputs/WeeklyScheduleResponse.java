@@ -15,8 +15,8 @@ public final class WeeklyScheduleResponse {
      */
     private final String dayOfWeek;
 
-    @OutputCustomType.Constructor({"dayOfWeek"})
-    private WeeklyScheduleResponse(String dayOfWeek) {
+    @OutputCustomType.Constructor
+    private WeeklyScheduleResponse(@OutputCustomType.Parameter("dayOfWeek") String dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
     }
 

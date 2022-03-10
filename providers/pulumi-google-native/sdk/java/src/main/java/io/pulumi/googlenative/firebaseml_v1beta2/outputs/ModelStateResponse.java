@@ -21,10 +21,10 @@ public final class ModelStateResponse {
      */
     private final StatusResponse validationError;
 
-    @OutputCustomType.Constructor({"published","validationError"})
+    @OutputCustomType.Constructor
     private ModelStateResponse(
-        Boolean published,
-        StatusResponse validationError) {
+        @OutputCustomType.Parameter("published") Boolean published,
+        @OutputCustomType.Parameter("validationError") StatusResponse validationError) {
         this.published = published;
         this.validationError = validationError;
     }

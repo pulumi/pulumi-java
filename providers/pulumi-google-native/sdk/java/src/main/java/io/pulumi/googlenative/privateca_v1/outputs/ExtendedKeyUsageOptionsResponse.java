@@ -40,14 +40,14 @@ public final class ExtendedKeyUsageOptionsResponse {
      */
     private final Boolean timeStamping;
 
-    @OutputCustomType.Constructor({"clientAuth","codeSigning","emailProtection","ocspSigning","serverAuth","timeStamping"})
+    @OutputCustomType.Constructor
     private ExtendedKeyUsageOptionsResponse(
-        Boolean clientAuth,
-        Boolean codeSigning,
-        Boolean emailProtection,
-        Boolean ocspSigning,
-        Boolean serverAuth,
-        Boolean timeStamping) {
+        @OutputCustomType.Parameter("clientAuth") Boolean clientAuth,
+        @OutputCustomType.Parameter("codeSigning") Boolean codeSigning,
+        @OutputCustomType.Parameter("emailProtection") Boolean emailProtection,
+        @OutputCustomType.Parameter("ocspSigning") Boolean ocspSigning,
+        @OutputCustomType.Parameter("serverAuth") Boolean serverAuth,
+        @OutputCustomType.Parameter("timeStamping") Boolean timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;

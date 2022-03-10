@@ -44,14 +44,14 @@ public final class ServicePerimeterConfigResponse {
      */
     private final VpcAccessibleServicesResponse vpcAccessibleServices;
 
-    @OutputCustomType.Constructor({"accessLevels","egressPolicies","ingressPolicies","resources","restrictedServices","vpcAccessibleServices"})
+    @OutputCustomType.Constructor
     private ServicePerimeterConfigResponse(
-        List<String> accessLevels,
-        List<EgressPolicyResponse> egressPolicies,
-        List<IngressPolicyResponse> ingressPolicies,
-        List<String> resources,
-        List<String> restrictedServices,
-        VpcAccessibleServicesResponse vpcAccessibleServices) {
+        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
+        @OutputCustomType.Parameter("egressPolicies") List<EgressPolicyResponse> egressPolicies,
+        @OutputCustomType.Parameter("ingressPolicies") List<IngressPolicyResponse> ingressPolicies,
+        @OutputCustomType.Parameter("resources") List<String> resources,
+        @OutputCustomType.Parameter("restrictedServices") List<String> restrictedServices,
+        @OutputCustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;

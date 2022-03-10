@@ -105,25 +105,25 @@ public final class GetBatchResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"createTime","creator","environmentConfig","labels","name","operation","pysparkBatch","runtimeConfig","runtimeInfo","sparkBatch","sparkRBatch","sparkSqlBatch","state","stateHistory","stateMessage","stateTime","uuid"})
+    @OutputCustomType.Constructor
     private GetBatchResult(
-        String createTime,
-        String creator,
-        EnvironmentConfigResponse environmentConfig,
-        Map<String,String> labels,
-        String name,
-        String operation,
-        PySparkBatchResponse pysparkBatch,
-        RuntimeConfigResponse runtimeConfig,
-        RuntimeInfoResponse runtimeInfo,
-        SparkBatchResponse sparkBatch,
-        SparkRBatchResponse sparkRBatch,
-        SparkSqlBatchResponse sparkSqlBatch,
-        String state,
-        List<StateHistoryResponse> stateHistory,
-        String stateMessage,
-        String stateTime,
-        String uuid) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("environmentConfig") EnvironmentConfigResponse environmentConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("pysparkBatch") PySparkBatchResponse pysparkBatch,
+        @OutputCustomType.Parameter("runtimeConfig") RuntimeConfigResponse runtimeConfig,
+        @OutputCustomType.Parameter("runtimeInfo") RuntimeInfoResponse runtimeInfo,
+        @OutputCustomType.Parameter("sparkBatch") SparkBatchResponse sparkBatch,
+        @OutputCustomType.Parameter("sparkRBatch") SparkRBatchResponse sparkRBatch,
+        @OutputCustomType.Parameter("sparkSqlBatch") SparkSqlBatchResponse sparkSqlBatch,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateHistory") List<StateHistoryResponse> stateHistory,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateTime") String stateTime,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.createTime = createTime;
         this.creator = creator;
         this.environmentConfig = environmentConfig;

@@ -33,12 +33,12 @@ public final class OSPolicyResourceRepositoryResourceResponse {
      */
     private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceRepositoryResourceResponse(
-        OSPolicyResourceRepositoryResourceAptRepositoryResponse apt,
-        OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
-        OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
-        OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
+        @OutputCustomType.Parameter("apt") OSPolicyResourceRepositoryResourceAptRepositoryResponse apt,
+        @OutputCustomType.Parameter("goo") OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
+        @OutputCustomType.Parameter("yum") OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
+        @OutputCustomType.Parameter("zypper") OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

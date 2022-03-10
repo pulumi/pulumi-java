@@ -82,22 +82,22 @@ public final class GetDeveloperResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"accessType","appFamily","apps","attributes","companies","createdAt","developerId","email","firstName","lastModifiedAt","lastName","organizationName","status","userName"})
+    @OutputCustomType.Constructor
     private GetDeveloperResult(
-        String accessType,
-        String appFamily,
-        List<String> apps,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        List<String> companies,
-        String createdAt,
-        String developerId,
-        String email,
-        String firstName,
-        String lastModifiedAt,
-        String lastName,
-        String organizationName,
-        String status,
-        String userName) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("appFamily") String appFamily,
+        @OutputCustomType.Parameter("apps") List<String> apps,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("companies") List<String> companies,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("developerId") String developerId,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("firstName") String firstName,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastName") String lastName,
+        @OutputCustomType.Parameter("organizationName") String organizationName,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.accessType = accessType;
         this.appFamily = appFamily;
         this.apps = apps;

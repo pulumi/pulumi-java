@@ -15,11 +15,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
     private final ResourcePolicyHourlyCycleResponse hourlySchedule;
     private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","hourlySchedule","weeklySchedule"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleResponse(
-        ResourcePolicyDailyCycleResponse dailySchedule,
-        ResourcePolicyHourlyCycleResponse hourlySchedule,
-        ResourcePolicyWeeklyCycleResponse weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") ResourcePolicyDailyCycleResponse dailySchedule,
+        @OutputCustomType.Parameter("hourlySchedule") ResourcePolicyHourlyCycleResponse hourlySchedule,
+        @OutputCustomType.Parameter("weeklySchedule") ResourcePolicyWeeklyCycleResponse weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;

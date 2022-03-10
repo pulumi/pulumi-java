@@ -25,11 +25,11 @@ public final class NetworkInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","matchedIpRange","uri"})
+    @OutputCustomType.Constructor
     private NetworkInfoResponse(
-        String displayName,
-        String matchedIpRange,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("matchedIpRange") String matchedIpRange,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.matchedIpRange = matchedIpRange;
         this.uri = uri;

@@ -86,22 +86,22 @@ public final class GetConversationProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"automatedAgentConfig","createTime","displayName","humanAgentAssistantConfig","humanAgentHandoffConfig","languageCode","loggingConfig","name","newMessageEventNotificationConfig","notificationConfig","securitySettings","sttConfig","timeZone","updateTime"})
+    @OutputCustomType.Constructor
     private GetConversationProfileResult(
-        GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse automatedAgentConfig,
-        String createTime,
-        String displayName,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
-        String languageCode,
-        GoogleCloudDialogflowV2beta1LoggingConfigResponse loggingConfig,
-        String name,
-        GoogleCloudDialogflowV2beta1NotificationConfigResponse newMessageEventNotificationConfig,
-        GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig,
-        String securitySettings,
-        GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse sttConfig,
-        String timeZone,
-        String updateTime) {
+        @OutputCustomType.Parameter("automatedAgentConfig") GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse automatedAgentConfig,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("humanAgentAssistantConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
+        @OutputCustomType.Parameter("humanAgentHandoffConfig") GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("loggingConfig") GoogleCloudDialogflowV2beta1LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newMessageEventNotificationConfig") GoogleCloudDialogflowV2beta1NotificationConfigResponse newMessageEventNotificationConfig,
+        @OutputCustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("securitySettings") String securitySettings,
+        @OutputCustomType.Parameter("sttConfig") GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse sttConfig,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.automatedAgentConfig = automatedAgentConfig;
         this.createTime = createTime;
         this.displayName = displayName;

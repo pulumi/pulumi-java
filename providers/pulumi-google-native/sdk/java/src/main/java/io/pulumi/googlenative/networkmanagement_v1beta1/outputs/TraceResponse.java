@@ -22,10 +22,10 @@ public final class TraceResponse {
      */
     private final List<StepResponse> steps;
 
-    @OutputCustomType.Constructor({"endpointInfo","steps"})
+    @OutputCustomType.Constructor
     private TraceResponse(
-        EndpointInfoResponse endpointInfo,
-        List<StepResponse> steps) {
+        @OutputCustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
+        @OutputCustomType.Parameter("steps") List<StepResponse> steps) {
         this.endpointInfo = endpointInfo;
         this.steps = steps;
     }

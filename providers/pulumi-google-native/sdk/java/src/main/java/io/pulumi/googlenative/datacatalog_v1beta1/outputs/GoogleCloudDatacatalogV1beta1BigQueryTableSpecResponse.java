@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
      */
     private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 
-    @OutputCustomType.Constructor({"tableSourceType","tableSpec","viewSpec"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse(
-        String tableSourceType,
-        GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
-        GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
+        @OutputCustomType.Parameter("tableSourceType") String tableSourceType,
+        @OutputCustomType.Parameter("tableSpec") GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
+        @OutputCustomType.Parameter("viewSpec") GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
         this.tableSourceType = tableSourceType;
         this.tableSpec = tableSpec;
         this.viewSpec = viewSpec;

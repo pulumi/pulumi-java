@@ -21,10 +21,10 @@ public final class MaintenanceWindowResponse {
      */
     private final Integer hourOfDay;
 
-    @OutputCustomType.Constructor({"dayOfWeek","hourOfDay"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        String dayOfWeek,
-        Integer hourOfDay) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("hourOfDay") Integer hourOfDay) {
         this.dayOfWeek = dayOfWeek;
         this.hourOfDay = hourOfDay;
     }

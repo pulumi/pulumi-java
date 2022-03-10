@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
      */
     private final String finishDigit;
 
-    @OutputCustomType.Constructor({"digits","finishDigit"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3DtmfInputResponse(
-        String digits,
-        String finishDigit) {
+        @OutputCustomType.Parameter("digits") String digits,
+        @OutputCustomType.Parameter("finishDigit") String finishDigit) {
         this.digits = digits;
         this.finishDigit = finishDigit;
     }

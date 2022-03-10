@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
      */
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
-    @OutputCustomType.Constructor({"jobConfig","snapshotInspectTemplate"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RequestedOptionsResponse(
-        GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
-        GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
+        @OutputCustomType.Parameter("jobConfig") GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
+        @OutputCustomType.Parameter("snapshotInspectTemplate") GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
         this.jobConfig = jobConfig;
         this.snapshotInspectTemplate = snapshotInspectTemplate;
     }

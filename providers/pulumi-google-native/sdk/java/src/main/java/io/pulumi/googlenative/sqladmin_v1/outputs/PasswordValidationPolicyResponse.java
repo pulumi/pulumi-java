@@ -37,13 +37,13 @@ public final class PasswordValidationPolicyResponse {
      */
     private final Integer reuseInterval;
 
-    @OutputCustomType.Constructor({"complexity","disallowUsernameSubstring","minLength","passwordChangeInterval","reuseInterval"})
+    @OutputCustomType.Constructor
     private PasswordValidationPolicyResponse(
-        String complexity,
-        Boolean disallowUsernameSubstring,
-        Integer minLength,
-        String passwordChangeInterval,
-        Integer reuseInterval) {
+        @OutputCustomType.Parameter("complexity") String complexity,
+        @OutputCustomType.Parameter("disallowUsernameSubstring") Boolean disallowUsernameSubstring,
+        @OutputCustomType.Parameter("minLength") Integer minLength,
+        @OutputCustomType.Parameter("passwordChangeInterval") String passwordChangeInterval,
+        @OutputCustomType.Parameter("reuseInterval") Integer reuseInterval) {
         this.complexity = complexity;
         this.disallowUsernameSubstring = disallowUsernameSubstring;
         this.minLength = minLength;

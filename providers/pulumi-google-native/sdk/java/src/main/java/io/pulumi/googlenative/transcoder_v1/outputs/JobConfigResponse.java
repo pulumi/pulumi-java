@@ -70,18 +70,18 @@ public final class JobConfigResponse {
      */
     private final List<SpriteSheetResponse> spriteSheets;
 
-    @OutputCustomType.Constructor({"adBreaks","editList","elementaryStreams","inputs","manifests","muxStreams","output","overlays","pubsubDestination","spriteSheets"})
+    @OutputCustomType.Constructor
     private JobConfigResponse(
-        List<AdBreakResponse> adBreaks,
-        List<EditAtomResponse> editList,
-        List<ElementaryStreamResponse> elementaryStreams,
-        List<InputResponse> inputs,
-        List<ManifestResponse> manifests,
-        List<MuxStreamResponse> muxStreams,
-        OutputResponse output,
-        List<OverlayResponse> overlays,
-        PubsubDestinationResponse pubsubDestination,
-        List<SpriteSheetResponse> spriteSheets) {
+        @OutputCustomType.Parameter("adBreaks") List<AdBreakResponse> adBreaks,
+        @OutputCustomType.Parameter("editList") List<EditAtomResponse> editList,
+        @OutputCustomType.Parameter("elementaryStreams") List<ElementaryStreamResponse> elementaryStreams,
+        @OutputCustomType.Parameter("inputs") List<InputResponse> inputs,
+        @OutputCustomType.Parameter("manifests") List<ManifestResponse> manifests,
+        @OutputCustomType.Parameter("muxStreams") List<MuxStreamResponse> muxStreams,
+        @OutputCustomType.Parameter("output") OutputResponse output,
+        @OutputCustomType.Parameter("overlays") List<OverlayResponse> overlays,
+        @OutputCustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination,
+        @OutputCustomType.Parameter("spriteSheets") List<SpriteSheetResponse> spriteSheets) {
         this.adBreaks = adBreaks;
         this.editList = editList;
         this.elementaryStreams = elementaryStreams;

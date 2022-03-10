@@ -15,8 +15,8 @@ public final class GrafeasV1beta1PackageDetailsResponse {
      */
     private final InstallationResponse installation;
 
-    @OutputCustomType.Constructor({"installation"})
-    private GrafeasV1beta1PackageDetailsResponse(InstallationResponse installation) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1PackageDetailsResponse(@OutputCustomType.Parameter("installation") InstallationResponse installation) {
         this.installation = installation;
     }
 

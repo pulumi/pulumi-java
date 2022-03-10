@@ -108,27 +108,27 @@ public final class H265CodecSettingsResponse {
      */
     private final Integer widthPixels;
 
-    @OutputCustomType.Constructor({"allowOpenGop","aqStrength","bFrameCount","bPyramid","bitrateBps","crfLevel","enableTwoPass","frameRate","gopDuration","gopFrameCount","heightPixels","pixelFormat","preset","profile","rateControlMode","tune","vbvFullnessBits","vbvSizeBits","widthPixels"})
+    @OutputCustomType.Constructor
     private H265CodecSettingsResponse(
-        Boolean allowOpenGop,
-        Double aqStrength,
-        Integer bFrameCount,
-        Boolean bPyramid,
-        Integer bitrateBps,
-        Integer crfLevel,
-        Boolean enableTwoPass,
-        Double frameRate,
-        String gopDuration,
-        Integer gopFrameCount,
-        Integer heightPixels,
-        String pixelFormat,
-        String preset,
-        String profile,
-        String rateControlMode,
-        String tune,
-        Integer vbvFullnessBits,
-        Integer vbvSizeBits,
-        Integer widthPixels) {
+        @OutputCustomType.Parameter("allowOpenGop") Boolean allowOpenGop,
+        @OutputCustomType.Parameter("aqStrength") Double aqStrength,
+        @OutputCustomType.Parameter("bFrameCount") Integer bFrameCount,
+        @OutputCustomType.Parameter("bPyramid") Boolean bPyramid,
+        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @OutputCustomType.Parameter("crfLevel") Integer crfLevel,
+        @OutputCustomType.Parameter("enableTwoPass") Boolean enableTwoPass,
+        @OutputCustomType.Parameter("frameRate") Double frameRate,
+        @OutputCustomType.Parameter("gopDuration") String gopDuration,
+        @OutputCustomType.Parameter("gopFrameCount") Integer gopFrameCount,
+        @OutputCustomType.Parameter("heightPixels") Integer heightPixels,
+        @OutputCustomType.Parameter("pixelFormat") String pixelFormat,
+        @OutputCustomType.Parameter("preset") String preset,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("rateControlMode") String rateControlMode,
+        @OutputCustomType.Parameter("tune") String tune,
+        @OutputCustomType.Parameter("vbvFullnessBits") Integer vbvFullnessBits,
+        @OutputCustomType.Parameter("vbvSizeBits") Integer vbvSizeBits,
+        @OutputCustomType.Parameter("widthPixels") Integer widthPixels) {
         this.allowOpenGop = allowOpenGop;
         this.aqStrength = aqStrength;
         this.bFrameCount = bFrameCount;

@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
      */
     private final Integer upperBoundDays;
 
-    @OutputCustomType.Constructor({"context","cryptoKey","lowerBoundDays","upperBoundDays"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DateShiftConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        Integer lowerBoundDays,
-        Integer upperBoundDays) {
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("lowerBoundDays") Integer lowerBoundDays,
+        @OutputCustomType.Parameter("upperBoundDays") Integer upperBoundDays) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.lowerBoundDays = lowerBoundDays;

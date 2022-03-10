@@ -30,12 +30,12 @@ public final class ApigatewayExprResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","expression","location","title"})
+    @OutputCustomType.Constructor
     private ApigatewayExprResponse(
-        String description,
-        String expression,
-        String location,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;

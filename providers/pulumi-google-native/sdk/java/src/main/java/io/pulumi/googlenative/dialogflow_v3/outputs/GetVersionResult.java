@@ -41,14 +41,14 @@ public final class GetVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","name","nluSettings","state"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        String createTime,
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
-        String state) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
+        @OutputCustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

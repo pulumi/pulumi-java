@@ -27,11 +27,11 @@ public final class AuthenticationResponse {
      */
     private final IapCredentialResponse iapCredential;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount","iapCredential"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        CustomAccountResponse customAccount,
-        GoogleAccountResponse googleAccount,
-        IapCredentialResponse iapCredential) {
+        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount,
+        @OutputCustomType.Parameter("iapCredential") IapCredentialResponse iapCredential) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
         this.iapCredential = iapCredential;

@@ -72,18 +72,18 @@ public final class BucketAccessControlResponse {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bucket","domain","email","entity","entityId","etag","kind","projectTeam","role","selfLink"})
+    @OutputCustomType.Constructor
     private BucketAccessControlResponse(
-        String bucket,
-        String domain,
-        String email,
-        String entity,
-        String entityId,
-        String etag,
-        String kind,
-        BucketAccessControlProjectTeamResponse projectTeam,
-        String role,
-        String selfLink) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("entity") String entity,
+        @OutputCustomType.Parameter("entityId") String entityId,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("projectTeam") BucketAccessControlProjectTeamResponse projectTeam,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bucket = bucket;
         this.domain = domain;
         this.email = email;

@@ -31,12 +31,12 @@ public final class AndroidMatrixResponse {
      */
     private final List<String> orientations;
 
-    @OutputCustomType.Constructor({"androidModelIds","androidVersionIds","locales","orientations"})
+    @OutputCustomType.Constructor
     private AndroidMatrixResponse(
-        List<String> androidModelIds,
-        List<String> androidVersionIds,
-        List<String> locales,
-        List<String> orientations) {
+        @OutputCustomType.Parameter("androidModelIds") List<String> androidModelIds,
+        @OutputCustomType.Parameter("androidVersionIds") List<String> androidVersionIds,
+        @OutputCustomType.Parameter("locales") List<String> locales,
+        @OutputCustomType.Parameter("orientations") List<String> orientations) {
         this.androidModelIds = androidModelIds;
         this.androidVersionIds = androidVersionIds;
         this.locales = locales;

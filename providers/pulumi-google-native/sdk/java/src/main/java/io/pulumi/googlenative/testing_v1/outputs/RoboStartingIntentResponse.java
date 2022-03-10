@@ -27,11 +27,11 @@ public final class RoboStartingIntentResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"launcherActivity","startActivity","timeout"})
+    @OutputCustomType.Constructor
     private RoboStartingIntentResponse(
-        LauncherActivityIntentResponse launcherActivity,
-        StartActivityIntentResponse startActivity,
-        String timeout) {
+        @OutputCustomType.Parameter("launcherActivity") LauncherActivityIntentResponse launcherActivity,
+        @OutputCustomType.Parameter("startActivity") StartActivityIntentResponse startActivity,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.launcherActivity = launcherActivity;
         this.startActivity = startActivity;
         this.timeout = timeout;

@@ -33,12 +33,12 @@ public final class OSPolicyResponse {
      */
     private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
-    @OutputCustomType.Constructor({"allowNoResourceGroupMatch","description","mode","resourceGroups"})
+    @OutputCustomType.Constructor
     private OSPolicyResponse(
-        Boolean allowNoResourceGroupMatch,
-        String description,
-        String mode,
-        List<OSPolicyResourceGroupResponse> resourceGroups) {
+        @OutputCustomType.Parameter("allowNoResourceGroupMatch") Boolean allowNoResourceGroupMatch,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("resourceGroups") List<OSPolicyResourceGroupResponse> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.mode = mode;

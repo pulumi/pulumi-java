@@ -30,12 +30,12 @@ public final class SecurityPolicyAssociationResponse {
      */
     private final String securityPolicyId;
 
-    @OutputCustomType.Constructor({"attachmentId","displayName","name","securityPolicyId"})
+    @OutputCustomType.Constructor
     private SecurityPolicyAssociationResponse(
-        String attachmentId,
-        String displayName,
-        String name,
-        String securityPolicyId) {
+        @OutputCustomType.Parameter("attachmentId") String attachmentId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityPolicyId") String securityPolicyId) {
         this.attachmentId = attachmentId;
         this.displayName = displayName;
         this.name = name;

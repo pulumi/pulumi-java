@@ -21,10 +21,10 @@ public final class GetKeystoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"aliases","name"})
+    @OutputCustomType.Constructor
     private GetKeystoreResult(
-        List<String> aliases,
-        String name) {
+        @OutputCustomType.Parameter("aliases") List<String> aliases,
+        @OutputCustomType.Parameter("name") String name) {
         this.aliases = aliases;
         this.name = name;
     }

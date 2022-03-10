@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1beta1UsageSignalResponse {
      */
     private final Map<String,String> usageWithinTimeRange;
 
-    @OutputCustomType.Constructor({"updateTime","usageWithinTimeRange"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1UsageSignalResponse(
-        String updateTime,
-        Map<String,String> usageWithinTimeRange) {
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("usageWithinTimeRange") Map<String,String> usageWithinTimeRange) {
         this.updateTime = updateTime;
         this.usageWithinTimeRange = usageWithinTimeRange;
     }

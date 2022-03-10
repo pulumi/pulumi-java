@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","columnProperties","image","rows","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageTableCardResponse(
-        List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons,
-        List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("columnProperties") List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse> columnProperties,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("rows") List<GoogleCloudDialogflowV2IntentMessageTableCardRowResponse> rows,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.columnProperties = columnProperties;
         this.image = image;

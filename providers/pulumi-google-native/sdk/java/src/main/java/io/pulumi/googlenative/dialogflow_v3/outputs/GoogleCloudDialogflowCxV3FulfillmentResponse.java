@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse {
      */
     private final String webhook;
 
-    @OutputCustomType.Constructor({"conditionalCases","messages","returnPartialResponses","setParameterActions","tag","webhook"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3FulfillmentResponse(
-        List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases,
-        List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages,
-        Boolean returnPartialResponses,
-        List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions,
-        String tag,
-        String webhook) {
+        @OutputCustomType.Parameter("conditionalCases") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases,
+        @OutputCustomType.Parameter("messages") List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages,
+        @OutputCustomType.Parameter("returnPartialResponses") Boolean returnPartialResponses,
+        @OutputCustomType.Parameter("setParameterActions") List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("webhook") String webhook) {
         this.conditionalCases = conditionalCases;
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;

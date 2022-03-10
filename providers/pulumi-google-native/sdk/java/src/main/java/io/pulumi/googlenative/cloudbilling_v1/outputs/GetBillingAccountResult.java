@@ -31,12 +31,12 @@ public final class GetBillingAccountResult {
      */
     private final Boolean open;
 
-    @OutputCustomType.Constructor({"displayName","masterBillingAccount","name","open"})
+    @OutputCustomType.Constructor
     private GetBillingAccountResult(
-        String displayName,
-        String masterBillingAccount,
-        String name,
-        Boolean open) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("masterBillingAccount") String masterBillingAccount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("open") Boolean open) {
         this.displayName = displayName;
         this.masterBillingAccount = masterBillingAccount;
         this.name = name;

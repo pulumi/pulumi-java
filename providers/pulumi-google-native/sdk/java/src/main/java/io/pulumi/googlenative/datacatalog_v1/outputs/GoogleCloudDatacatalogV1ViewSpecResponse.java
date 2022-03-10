@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse {
      */
     private final String viewQuery;
 
-    @OutputCustomType.Constructor({"viewQuery"})
-    private GoogleCloudDatacatalogV1ViewSpecResponse(String viewQuery) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1ViewSpecResponse(@OutputCustomType.Parameter("viewQuery") String viewQuery) {
         this.viewQuery = viewQuery;
     }
 

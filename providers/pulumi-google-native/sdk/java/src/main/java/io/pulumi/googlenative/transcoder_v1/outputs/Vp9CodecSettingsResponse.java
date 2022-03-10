@@ -62,18 +62,18 @@ public final class Vp9CodecSettingsResponse {
      */
     private final Integer widthPixels;
 
-    @OutputCustomType.Constructor({"bitrateBps","crfLevel","frameRate","gopDuration","gopFrameCount","heightPixels","pixelFormat","profile","rateControlMode","widthPixels"})
+    @OutputCustomType.Constructor
     private Vp9CodecSettingsResponse(
-        Integer bitrateBps,
-        Integer crfLevel,
-        Double frameRate,
-        String gopDuration,
-        Integer gopFrameCount,
-        Integer heightPixels,
-        String pixelFormat,
-        String profile,
-        String rateControlMode,
-        Integer widthPixels) {
+        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @OutputCustomType.Parameter("crfLevel") Integer crfLevel,
+        @OutputCustomType.Parameter("frameRate") Double frameRate,
+        @OutputCustomType.Parameter("gopDuration") String gopDuration,
+        @OutputCustomType.Parameter("gopFrameCount") Integer gopFrameCount,
+        @OutputCustomType.Parameter("heightPixels") Integer heightPixels,
+        @OutputCustomType.Parameter("pixelFormat") String pixelFormat,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("rateControlMode") String rateControlMode,
+        @OutputCustomType.Parameter("widthPixels") Integer widthPixels) {
         this.bitrateBps = bitrateBps;
         this.crfLevel = crfLevel;
         this.frameRate = frameRate;

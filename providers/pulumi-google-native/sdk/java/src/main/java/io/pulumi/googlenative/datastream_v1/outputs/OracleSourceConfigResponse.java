@@ -20,10 +20,10 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse includeObjects;
 
-    @OutputCustomType.Constructor({"excludeObjects","includeObjects"})
+    @OutputCustomType.Constructor
     private OracleSourceConfigResponse(
-        OracleRdbmsResponse excludeObjects,
-        OracleRdbmsResponse includeObjects) {
+        @OutputCustomType.Parameter("excludeObjects") OracleRdbmsResponse excludeObjects,
+        @OutputCustomType.Parameter("includeObjects") OracleRdbmsResponse includeObjects) {
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }

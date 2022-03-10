@@ -41,14 +41,14 @@ public final class GetLienResult {
      */
     private final List<String> restrictions;
 
-    @OutputCustomType.Constructor({"createTime","name","origin","parent","reason","restrictions"})
+    @OutputCustomType.Constructor
     private GetLienResult(
-        String createTime,
-        String name,
-        String origin,
-        String parent,
-        String reason,
-        List<String> restrictions) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("restrictions") List<String> restrictions) {
         this.createTime = createTime;
         this.name = name;
         this.origin = origin;

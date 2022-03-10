@@ -67,19 +67,19 @@ public final class NetworkPeeringResponse {
      */
     private final String stateDetails;
 
-    @OutputCustomType.Constructor({"autoCreateRoutes","exchangeSubnetRoutes","exportCustomRoutes","exportSubnetRoutesWithPublicIp","importCustomRoutes","importSubnetRoutesWithPublicIp","name","network","peerMtu","state","stateDetails"})
+    @OutputCustomType.Constructor
     private NetworkPeeringResponse(
-        Boolean autoCreateRoutes,
-        Boolean exchangeSubnetRoutes,
-        Boolean exportCustomRoutes,
-        Boolean exportSubnetRoutesWithPublicIp,
-        Boolean importCustomRoutes,
-        Boolean importSubnetRoutesWithPublicIp,
-        String name,
-        String network,
-        Integer peerMtu,
-        String state,
-        String stateDetails) {
+        @OutputCustomType.Parameter("autoCreateRoutes") Boolean autoCreateRoutes,
+        @OutputCustomType.Parameter("exchangeSubnetRoutes") Boolean exchangeSubnetRoutes,
+        @OutputCustomType.Parameter("exportCustomRoutes") Boolean exportCustomRoutes,
+        @OutputCustomType.Parameter("exportSubnetRoutesWithPublicIp") Boolean exportSubnetRoutesWithPublicIp,
+        @OutputCustomType.Parameter("importCustomRoutes") Boolean importCustomRoutes,
+        @OutputCustomType.Parameter("importSubnetRoutesWithPublicIp") Boolean importSubnetRoutesWithPublicIp,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("peerMtu") Integer peerMtu,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateDetails") String stateDetails) {
         this.autoCreateRoutes = autoCreateRoutes;
         this.exchangeSubnetRoutes = exchangeSubnetRoutes;
         this.exportCustomRoutes = exportCustomRoutes;

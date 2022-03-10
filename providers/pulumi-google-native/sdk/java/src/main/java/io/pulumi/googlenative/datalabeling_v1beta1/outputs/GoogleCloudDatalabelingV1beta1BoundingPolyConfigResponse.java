@@ -20,10 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
      */
     private final String instructionMessage;
 
-    @OutputCustomType.Constructor({"annotationSpecSet","instructionMessage"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(
-        String annotationSpecSet,
-        String instructionMessage) {
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("instructionMessage") String instructionMessage) {
         this.annotationSpecSet = annotationSpecSet;
         this.instructionMessage = instructionMessage;
     }

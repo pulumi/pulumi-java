@@ -15,8 +15,8 @@ public final class CryptoKeyConfigResponse {
      */
     private final String keyReference;
 
-    @OutputCustomType.Constructor({"keyReference"})
-    private CryptoKeyConfigResponse(String keyReference) {
+    @OutputCustomType.Constructor
+    private CryptoKeyConfigResponse(@OutputCustomType.Parameter("keyReference") String keyReference) {
         this.keyReference = keyReference;
     }
 

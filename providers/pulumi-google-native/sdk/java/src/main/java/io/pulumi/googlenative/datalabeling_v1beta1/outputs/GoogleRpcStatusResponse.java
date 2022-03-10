@@ -28,11 +28,11 @@ public final class GoogleRpcStatusResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private GoogleRpcStatusResponse(
-        Integer code,
-        List<Map<String,String>> details,
-        String message) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("details") List<Map<String,String>> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

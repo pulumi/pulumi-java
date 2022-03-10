@@ -30,12 +30,12 @@ public final class LocationPreferenceResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"followGaeApplication","kind","secondaryZone","zone"})
+    @OutputCustomType.Constructor
     private LocationPreferenceResponse(
-        String followGaeApplication,
-        String kind,
-        String secondaryZone,
-        String zone) {
+        @OutputCustomType.Parameter("followGaeApplication") String followGaeApplication,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("secondaryZone") String secondaryZone,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.followGaeApplication = followGaeApplication;
         this.kind = kind;
         this.secondaryZone = secondaryZone;

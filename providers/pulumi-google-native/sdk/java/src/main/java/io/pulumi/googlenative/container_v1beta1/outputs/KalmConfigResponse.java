@@ -15,8 +15,8 @@ public final class KalmConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private KalmConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private KalmConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

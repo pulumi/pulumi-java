@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      */
     private final String parentFollowupIntentName;
 
-    @OutputCustomType.Constructor({"followupIntentName","parentFollowupIntentName"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(
-        String followupIntentName,
-        String parentFollowupIntentName) {
+        @OutputCustomType.Parameter("followupIntentName") String followupIntentName,
+        @OutputCustomType.Parameter("parentFollowupIntentName") String parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }

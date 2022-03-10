@@ -37,13 +37,13 @@ public final class EndpointResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"address","annotations","name","network","port"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        String address,
-        Map<String,String> annotations,
-        String name,
-        String network,
-        Integer port) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.address = address;
         this.annotations = annotations;
         this.name = name;

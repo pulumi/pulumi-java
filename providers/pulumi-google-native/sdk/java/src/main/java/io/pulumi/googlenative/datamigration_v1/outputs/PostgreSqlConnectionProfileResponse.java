@@ -48,15 +48,15 @@ public final class PostgreSqlConnectionProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"cloudSqlId","host","password","passwordSet","port","ssl","username"})
+    @OutputCustomType.Constructor
     private PostgreSqlConnectionProfileResponse(
-        String cloudSqlId,
-        String host,
-        String password,
-        Boolean passwordSet,
-        Integer port,
-        SslConfigResponse ssl,
-        String username) {
+        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("passwordSet") Boolean passwordSet,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("ssl") SslConfigResponse ssl,
+        @OutputCustomType.Parameter("username") String username) {
         this.cloudSqlId = cloudSqlId;
         this.host = host;
         this.password = password;

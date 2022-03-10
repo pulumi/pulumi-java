@@ -56,17 +56,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      */
     private final String linuxIsolation;
 
-    @OutputCustomType.Constructor({"containerImageSources","dockerAddCapabilities","dockerChrootPath","dockerNetwork","dockerPrivileged","dockerRunAsRoot","dockerRuntime","dockerSiblingContainers","linuxIsolation"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
-        String linuxIsolation) {
+        @OutputCustomType.Parameter("containerImageSources") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
+        @OutputCustomType.Parameter("dockerAddCapabilities") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
+        @OutputCustomType.Parameter("dockerChrootPath") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
+        @OutputCustomType.Parameter("dockerNetwork") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
+        @OutputCustomType.Parameter("dockerPrivileged") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
+        @OutputCustomType.Parameter("dockerRunAsRoot") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
+        @OutputCustomType.Parameter("dockerRuntime") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
+        @OutputCustomType.Parameter("dockerSiblingContainers") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
+        @OutputCustomType.Parameter("linuxIsolation") String linuxIsolation) {
         this.containerImageSources = containerImageSources;
         this.dockerAddCapabilities = dockerAddCapabilities;
         this.dockerChrootPath = dockerChrootPath;

@@ -35,13 +35,13 @@ public final class GKEResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"cluster","location","namespace","path","service"})
+    @OutputCustomType.Constructor
     private GKEResponse(
-        String cluster,
-        String location,
-        String namespace,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("cluster") String cluster,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.cluster = cluster;
         this.location = location;
         this.namespace = namespace;

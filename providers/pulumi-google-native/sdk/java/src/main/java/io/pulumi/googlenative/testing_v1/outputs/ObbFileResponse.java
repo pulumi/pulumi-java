@@ -21,10 +21,10 @@ public final class ObbFileResponse {
      */
     private final String obbFileName;
 
-    @OutputCustomType.Constructor({"obb","obbFileName"})
+    @OutputCustomType.Constructor
     private ObbFileResponse(
-        FileReferenceResponse obb,
-        String obbFileName) {
+        @OutputCustomType.Parameter("obb") FileReferenceResponse obb,
+        @OutputCustomType.Parameter("obbFileName") String obbFileName) {
         this.obb = obb;
         this.obbFileName = obbFileName;
     }

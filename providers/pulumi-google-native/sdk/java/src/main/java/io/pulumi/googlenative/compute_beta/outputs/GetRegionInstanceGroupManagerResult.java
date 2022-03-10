@@ -135,31 +135,31 @@ public final class GetRegionInstanceGroupManagerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoHealingPolicies","baseInstanceName","creationTimestamp","currentActions","description","distributionPolicy","failoverAction","fingerprint","instanceGroup","instanceTemplate","kind","name","namedPorts","region","selfLink","serviceAccount","statefulPolicy","status","targetPools","targetSize","updatePolicy","versions","zone"})
+    @OutputCustomType.Constructor
     private GetRegionInstanceGroupManagerResult(
-        List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
-        String baseInstanceName,
-        String creationTimestamp,
-        InstanceGroupManagerActionsSummaryResponse currentActions,
-        String description,
-        DistributionPolicyResponse distributionPolicy,
-        String failoverAction,
-        String fingerprint,
-        String instanceGroup,
-        String instanceTemplate,
-        String kind,
-        String name,
-        List<NamedPortResponse> namedPorts,
-        String region,
-        String selfLink,
-        String serviceAccount,
-        StatefulPolicyResponse statefulPolicy,
-        InstanceGroupManagerStatusResponse status,
-        List<String> targetPools,
-        Integer targetSize,
-        InstanceGroupManagerUpdatePolicyResponse updatePolicy,
-        List<InstanceGroupManagerVersionResponse> versions,
-        String zone) {
+        @OutputCustomType.Parameter("autoHealingPolicies") List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
+        @OutputCustomType.Parameter("baseInstanceName") String baseInstanceName,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("currentActions") InstanceGroupManagerActionsSummaryResponse currentActions,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributionPolicy") DistributionPolicyResponse distributionPolicy,
+        @OutputCustomType.Parameter("failoverAction") String failoverAction,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("instanceGroup") String instanceGroup,
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("statefulPolicy") StatefulPolicyResponse statefulPolicy,
+        @OutputCustomType.Parameter("status") InstanceGroupManagerStatusResponse status,
+        @OutputCustomType.Parameter("targetPools") List<String> targetPools,
+        @OutputCustomType.Parameter("targetSize") Integer targetSize,
+        @OutputCustomType.Parameter("updatePolicy") InstanceGroupManagerUpdatePolicyResponse updatePolicy,
+        @OutputCustomType.Parameter("versions") List<InstanceGroupManagerVersionResponse> versions,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoHealingPolicies = autoHealingPolicies;
         this.baseInstanceName = baseInstanceName;
         this.creationTimestamp = creationTimestamp;

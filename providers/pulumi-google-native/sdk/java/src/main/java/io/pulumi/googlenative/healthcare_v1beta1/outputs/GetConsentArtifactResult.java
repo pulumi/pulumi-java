@@ -54,16 +54,16 @@ public final class GetConsentArtifactResult {
      */
     private final SignatureResponse witnessSignature;
 
-    @OutputCustomType.Constructor({"consentContentScreenshots","consentContentVersion","guardianSignature","metadata","name","userId","userSignature","witnessSignature"})
+    @OutputCustomType.Constructor
     private GetConsentArtifactResult(
-        List<ImageResponse> consentContentScreenshots,
-        String consentContentVersion,
-        SignatureResponse guardianSignature,
-        Map<String,String> metadata,
-        String name,
-        String userId,
-        SignatureResponse userSignature,
-        SignatureResponse witnessSignature) {
+        @OutputCustomType.Parameter("consentContentScreenshots") List<ImageResponse> consentContentScreenshots,
+        @OutputCustomType.Parameter("consentContentVersion") String consentContentVersion,
+        @OutputCustomType.Parameter("guardianSignature") SignatureResponse guardianSignature,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userSignature") SignatureResponse userSignature,
+        @OutputCustomType.Parameter("witnessSignature") SignatureResponse witnessSignature) {
         this.consentContentScreenshots = consentContentScreenshots;
         this.consentContentVersion = consentContentVersion;
         this.guardianSignature = guardianSignature;

@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final Integer maxResults;
 
-    @OutputCustomType.Constructor({"confidenceThreshold","contextFilterSettings","dialogflowQuerySource","documentQuerySource","knowledgeBaseQuerySource","maxResults"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse(
-        Double confidenceThreshold,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
-        Integer maxResults) {
+        @OutputCustomType.Parameter("confidenceThreshold") Double confidenceThreshold,
+        @OutputCustomType.Parameter("contextFilterSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
+        @OutputCustomType.Parameter("dialogflowQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
+        @OutputCustomType.Parameter("documentQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
+        @OutputCustomType.Parameter("knowledgeBaseQuerySource") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
+        @OutputCustomType.Parameter("maxResults") Integer maxResults) {
         this.confidenceThreshold = confidenceThreshold;
         this.contextFilterSettings = contextFilterSettings;
         this.dialogflowQuerySource = dialogflowQuerySource;

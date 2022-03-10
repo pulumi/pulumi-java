@@ -16,8 +16,8 @@ public final class OSPolicyAssignmentLabelSetResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private OSPolicyAssignmentLabelSetResponse(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private OSPolicyAssignmentLabelSetResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

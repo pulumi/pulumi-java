@@ -28,11 +28,11 @@ public final class MaintenanceWindowResponse {
      */
     private final RecurringTimeWindowResponse recurringWindow;
 
-    @OutputCustomType.Constructor({"dailyMaintenanceWindow","maintenanceExclusions","recurringWindow"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        DailyMaintenanceWindowResponse dailyMaintenanceWindow,
-        Map<String,String> maintenanceExclusions,
-        RecurringTimeWindowResponse recurringWindow) {
+        @OutputCustomType.Parameter("dailyMaintenanceWindow") DailyMaintenanceWindowResponse dailyMaintenanceWindow,
+        @OutputCustomType.Parameter("maintenanceExclusions") Map<String,String> maintenanceExclusions,
+        @OutputCustomType.Parameter("recurringWindow") RecurringTimeWindowResponse recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;

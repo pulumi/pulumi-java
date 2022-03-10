@@ -75,20 +75,20 @@ public final class LocalDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","guestOsFeatures","index","initializeParams","$interface","kind","licenses","mode","source","type"})
+    @OutputCustomType.Constructor
     private LocalDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        List<RuntimeGuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        LocalDiskInitializeParamsResponse initializeParams,
-        String $interface,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("guestOsFeatures") List<RuntimeGuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("initializeParams") LocalDiskInitializeParamsResponse initializeParams,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

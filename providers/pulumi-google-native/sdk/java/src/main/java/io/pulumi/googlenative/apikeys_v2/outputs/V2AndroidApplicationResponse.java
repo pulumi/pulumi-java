@@ -20,10 +20,10 @@ public final class V2AndroidApplicationResponse {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"packageName","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private V2AndroidApplicationResponse(
-        String packageName,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("packageName") String packageName,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.packageName = packageName;
         this.sha1Fingerprint = sha1Fingerprint;
     }

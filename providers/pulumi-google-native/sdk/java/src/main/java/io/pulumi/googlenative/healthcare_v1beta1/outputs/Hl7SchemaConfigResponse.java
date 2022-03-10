@@ -23,10 +23,10 @@ public final class Hl7SchemaConfigResponse {
      */
     private final List<VersionSourceResponse> version;
 
-    @OutputCustomType.Constructor({"messageSchemaConfigs","version"})
+    @OutputCustomType.Constructor
     private Hl7SchemaConfigResponse(
-        Map<String,String> messageSchemaConfigs,
-        List<VersionSourceResponse> version) {
+        @OutputCustomType.Parameter("messageSchemaConfigs") Map<String,String> messageSchemaConfigs,
+        @OutputCustomType.Parameter("version") List<VersionSourceResponse> version) {
         this.messageSchemaConfigs = messageSchemaConfigs;
         this.version = version;
     }

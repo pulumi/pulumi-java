@@ -31,12 +31,12 @@ public final class YarnApplicationResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"name","progress","state","trackingUrl"})
+    @OutputCustomType.Constructor
     private YarnApplicationResponse(
-        String name,
-        Double progress,
-        String state,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progress") Double progress,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.name = name;
         this.progress = progress;
         this.state = state;

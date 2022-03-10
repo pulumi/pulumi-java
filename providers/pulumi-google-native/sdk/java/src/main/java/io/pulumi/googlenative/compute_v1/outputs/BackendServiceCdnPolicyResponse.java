@@ -76,20 +76,20 @@ public final class BackendServiceCdnPolicyResponse {
      */
     private final List<String> signedUrlKeyNames;
 
-    @OutputCustomType.Constructor({"bypassCacheOnRequestHeaders","cacheKeyPolicy","cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicy","requestCoalescing","serveWhileStale","signedUrlCacheMaxAgeSec","signedUrlKeyNames"})
+    @OutputCustomType.Constructor
     private BackendServiceCdnPolicyResponse(
-        List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
-        CacheKeyPolicyResponse cacheKeyPolicy,
-        String cacheMode,
-        Integer clientTtl,
-        Integer defaultTtl,
-        Integer maxTtl,
-        Boolean negativeCaching,
-        List<BackendServiceCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
-        Boolean requestCoalescing,
-        Integer serveWhileStale,
-        String signedUrlCacheMaxAgeSec,
-        List<String> signedUrlKeyNames) {
+        @OutputCustomType.Parameter("bypassCacheOnRequestHeaders") List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
+        @OutputCustomType.Parameter("cacheKeyPolicy") CacheKeyPolicyResponse cacheKeyPolicy,
+        @OutputCustomType.Parameter("cacheMode") String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicy") List<BackendServiceCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
+        @OutputCustomType.Parameter("requestCoalescing") Boolean requestCoalescing,
+        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") String signedUrlCacheMaxAgeSec,
+        @OutputCustomType.Parameter("signedUrlKeyNames") List<String> signedUrlKeyNames) {
         this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;

@@ -69,19 +69,19 @@ public final class GetConnectivityTestResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","destination","displayName","labels","name","protocol","reachabilityDetails","relatedProjects","source","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectivityTestResult(
-        String createTime,
-        String description,
-        EndpointResponse destination,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        String protocol,
-        ReachabilityDetailsResponse reachabilityDetails,
-        List<String> relatedProjects,
-        EndpointResponse source,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destination") EndpointResponse destination,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("reachabilityDetails") ReachabilityDetailsResponse reachabilityDetails,
+        @OutputCustomType.Parameter("relatedProjects") List<String> relatedProjects,
+        @OutputCustomType.Parameter("source") EndpointResponse source,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.destination = destination;

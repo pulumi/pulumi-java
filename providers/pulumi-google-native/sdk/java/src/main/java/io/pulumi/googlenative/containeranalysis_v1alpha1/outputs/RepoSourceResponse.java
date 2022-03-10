@@ -35,13 +35,13 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","project","repoName","tagName"})
+    @OutputCustomType.Constructor
     private RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String project,
-        String repoName,
-        String tagName) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("commitSha") String commitSha,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.project = project;

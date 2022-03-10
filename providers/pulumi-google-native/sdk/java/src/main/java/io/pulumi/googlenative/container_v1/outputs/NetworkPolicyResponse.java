@@ -21,10 +21,10 @@ public final class NetworkPolicyResponse {
      */
     private final String provider;
 
-    @OutputCustomType.Constructor({"enabled","provider"})
+    @OutputCustomType.Constructor
     private NetworkPolicyResponse(
-        Boolean enabled,
-        String provider) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("provider") String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }

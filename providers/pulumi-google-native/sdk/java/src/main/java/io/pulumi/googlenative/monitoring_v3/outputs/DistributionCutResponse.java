@@ -21,10 +21,10 @@ public final class DistributionCutResponse {
      */
     private final GoogleMonitoringV3RangeResponse range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private DistributionCutResponse(
-        String distributionFilter,
-        GoogleMonitoringV3RangeResponse range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }

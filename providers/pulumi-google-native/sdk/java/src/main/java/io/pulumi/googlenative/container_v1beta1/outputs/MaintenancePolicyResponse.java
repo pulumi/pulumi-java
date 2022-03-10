@@ -21,10 +21,10 @@ public final class MaintenancePolicyResponse {
      */
     private final MaintenanceWindowResponse window;
 
-    @OutputCustomType.Constructor({"resourceVersion","window"})
+    @OutputCustomType.Constructor
     private MaintenancePolicyResponse(
-        String resourceVersion,
-        MaintenanceWindowResponse window) {
+        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
+        @OutputCustomType.Parameter("window") MaintenanceWindowResponse window) {
         this.resourceVersion = resourceVersion;
         this.window = window;
     }

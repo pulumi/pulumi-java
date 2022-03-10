@@ -25,11 +25,11 @@ public final class StorageSourceResponse {
      */
     private final String object;
 
-    @OutputCustomType.Constructor({"bucket","generation","object"})
+    @OutputCustomType.Constructor
     private StorageSourceResponse(
-        String bucket,
-        String generation,
-        String object) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("generation") String generation,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

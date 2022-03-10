@@ -32,12 +32,12 @@ public final class TimeSeriesQueryResponse {
      */
     private final String unitOverride;
 
-    @OutputCustomType.Constructor({"timeSeriesFilter","timeSeriesFilterRatio","timeSeriesQueryLanguage","unitOverride"})
+    @OutputCustomType.Constructor
     private TimeSeriesQueryResponse(
-        TimeSeriesFilterResponse timeSeriesFilter,
-        TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
-        String timeSeriesQueryLanguage,
-        String unitOverride) {
+        @OutputCustomType.Parameter("timeSeriesFilter") TimeSeriesFilterResponse timeSeriesFilter,
+        @OutputCustomType.Parameter("timeSeriesFilterRatio") TimeSeriesFilterRatioResponse timeSeriesFilterRatio,
+        @OutputCustomType.Parameter("timeSeriesQueryLanguage") String timeSeriesQueryLanguage,
+        @OutputCustomType.Parameter("unitOverride") String unitOverride) {
         this.timeSeriesFilter = timeSeriesFilter;
         this.timeSeriesFilterRatio = timeSeriesFilterRatio;
         this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;

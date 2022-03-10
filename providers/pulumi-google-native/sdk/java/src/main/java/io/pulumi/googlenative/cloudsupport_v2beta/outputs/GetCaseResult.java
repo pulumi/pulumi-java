@@ -79,21 +79,21 @@ public final class GetCaseResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"classification","createTime","creator","description","displayName","escalated","name","priority","state","subscriberEmailAddresses","testCase","timeZone","updateTime"})
+    @OutputCustomType.Constructor
     private GetCaseResult(
-        CaseClassificationResponse classification,
-        String createTime,
-        ActorResponse creator,
-        String description,
-        String displayName,
-        Boolean escalated,
-        String name,
-        String priority,
-        String state,
-        List<String> subscriberEmailAddresses,
-        Boolean testCase,
-        String timeZone,
-        String updateTime) {
+        @OutputCustomType.Parameter("classification") CaseClassificationResponse classification,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") ActorResponse creator,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("escalated") Boolean escalated,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") String priority,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subscriberEmailAddresses") List<String> subscriberEmailAddresses,
+        @OutputCustomType.Parameter("testCase") Boolean testCase,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.classification = classification;
         this.createTime = createTime;
         this.creator = creator;

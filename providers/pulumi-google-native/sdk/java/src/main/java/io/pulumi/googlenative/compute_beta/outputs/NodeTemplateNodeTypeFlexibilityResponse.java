@@ -13,11 +13,11 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
     private final String localSsd;
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpus","localSsd","memory"})
+    @OutputCustomType.Constructor
     private NodeTemplateNodeTypeFlexibilityResponse(
-        String cpus,
-        String localSsd,
-        String memory) {
+        @OutputCustomType.Parameter("cpus") String cpus,
+        @OutputCustomType.Parameter("localSsd") String localSsd,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;

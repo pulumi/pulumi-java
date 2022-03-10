@@ -68,19 +68,19 @@ public final class GetPhraseMatcherResult {
      */
     private final String versionTag;
 
-    @OutputCustomType.Constructor({"activationUpdateTime","active","displayName","name","phraseMatchRuleGroups","revisionCreateTime","revisionId","roleMatch","type","updateTime","versionTag"})
+    @OutputCustomType.Constructor
     private GetPhraseMatcherResult(
-        String activationUpdateTime,
-        Boolean active,
-        String displayName,
-        String name,
-        List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
-        String revisionCreateTime,
-        String revisionId,
-        String roleMatch,
-        String type,
-        String updateTime,
-        String versionTag) {
+        @OutputCustomType.Parameter("activationUpdateTime") String activationUpdateTime,
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phraseMatchRuleGroups") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
+        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("roleMatch") String roleMatch,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("versionTag") String versionTag) {
         this.activationUpdateTime = activationUpdateTime;
         this.active = active;
         this.displayName = displayName;

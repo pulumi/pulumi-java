@@ -20,10 +20,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse {
      */
     private final Integer ttl;
 
-    @OutputCustomType.Constructor({"code","ttl"})
+    @OutputCustomType.Constructor
     private BackendBucketCdnPolicyNegativeCachingPolicyResponse(
-        Integer code,
-        Integer ttl) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("ttl") Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

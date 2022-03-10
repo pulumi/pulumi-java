@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleItemActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"storageClass","type"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleItemActionResponse(
-        String storageClass,
-        String type) {
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

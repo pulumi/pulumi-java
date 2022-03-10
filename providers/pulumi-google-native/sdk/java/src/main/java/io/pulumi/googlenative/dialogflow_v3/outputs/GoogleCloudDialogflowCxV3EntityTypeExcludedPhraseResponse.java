@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(String value) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

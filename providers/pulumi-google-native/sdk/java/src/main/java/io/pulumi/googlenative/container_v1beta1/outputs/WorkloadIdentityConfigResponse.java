@@ -25,11 +25,11 @@ public final class WorkloadIdentityConfigResponse {
      */
     private final String workloadPool;
 
-    @OutputCustomType.Constructor({"identityNamespace","identityProvider","workloadPool"})
+    @OutputCustomType.Constructor
     private WorkloadIdentityConfigResponse(
-        String identityNamespace,
-        String identityProvider,
-        String workloadPool) {
+        @OutputCustomType.Parameter("identityNamespace") String identityNamespace,
+        @OutputCustomType.Parameter("identityProvider") String identityProvider,
+        @OutputCustomType.Parameter("workloadPool") String workloadPool) {
         this.identityNamespace = identityNamespace;
         this.identityProvider = identityProvider;
         this.workloadPool = workloadPool;

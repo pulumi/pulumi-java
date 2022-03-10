@@ -26,11 +26,11 @@ public final class StackTraceElementResponse {
      */
     private final String step;
 
-    @OutputCustomType.Constructor({"position","routine","step"})
+    @OutputCustomType.Constructor
     private StackTraceElementResponse(
-        PositionResponse position,
-        String routine,
-        String step) {
+        @OutputCustomType.Parameter("position") PositionResponse position,
+        @OutputCustomType.Parameter("routine") String routine,
+        @OutputCustomType.Parameter("step") String step) {
         this.position = position;
         this.routine = routine;
         this.step = step;

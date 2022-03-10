@@ -53,16 +53,16 @@ public final class GetGameServerClusterResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"clusterState","connectionInfo","createTime","description","etag","labels","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetGameServerClusterResult(
-        KubernetesClusterStateResponse clusterState,
-        GameServerClusterConnectionInfoResponse connectionInfo,
-        String createTime,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("clusterState") KubernetesClusterStateResponse clusterState,
+        @OutputCustomType.Parameter("connectionInfo") GameServerClusterConnectionInfoResponse connectionInfo,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.clusterState = clusterState;
         this.connectionInfo = connectionInfo;
         this.createTime = createTime;

@@ -48,15 +48,15 @@ public final class WindowsUpdateResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"categories","description","identity","kbArticleIds","lastPublishedTimestamp","supportUrl","title"})
+    @OutputCustomType.Constructor
     private WindowsUpdateResponse(
-        List<CategoryResponse> categories,
-        String description,
-        IdentityResponse identity,
-        List<String> kbArticleIds,
-        String lastPublishedTimestamp,
-        String supportUrl,
-        String title) {
+        @OutputCustomType.Parameter("categories") List<CategoryResponse> categories,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("identity") IdentityResponse identity,
+        @OutputCustomType.Parameter("kbArticleIds") List<String> kbArticleIds,
+        @OutputCustomType.Parameter("lastPublishedTimestamp") String lastPublishedTimestamp,
+        @OutputCustomType.Parameter("supportUrl") String supportUrl,
+        @OutputCustomType.Parameter("title") String title) {
         this.categories = categories;
         this.description = description;
         this.identity = identity;

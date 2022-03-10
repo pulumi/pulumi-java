@@ -25,11 +25,11 @@ public final class TfLiteModelResponse {
      */
     private final String sizeBytes;
 
-    @OutputCustomType.Constructor({"automlModel","gcsTfliteUri","sizeBytes"})
+    @OutputCustomType.Constructor
     private TfLiteModelResponse(
-        String automlModel,
-        String gcsTfliteUri,
-        String sizeBytes) {
+        @OutputCustomType.Parameter("automlModel") String automlModel,
+        @OutputCustomType.Parameter("gcsTfliteUri") String gcsTfliteUri,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes) {
         this.automlModel = automlModel;
         this.gcsTfliteUri = gcsTfliteUri;
         this.sizeBytes = sizeBytes;

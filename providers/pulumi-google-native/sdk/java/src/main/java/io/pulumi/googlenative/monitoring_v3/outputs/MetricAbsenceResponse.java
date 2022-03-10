@@ -33,12 +33,12 @@ public final class MetricAbsenceResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"aggregations","duration","filter","trigger"})
+    @OutputCustomType.Constructor
     private MetricAbsenceResponse(
-        List<AggregationResponse> aggregations,
-        String duration,
-        String filter,
-        TriggerResponse trigger) {
+        @OutputCustomType.Parameter("aggregations") List<AggregationResponse> aggregations,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;

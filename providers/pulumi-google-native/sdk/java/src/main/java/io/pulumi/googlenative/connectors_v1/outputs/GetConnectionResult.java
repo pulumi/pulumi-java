@@ -97,24 +97,24 @@ public final class GetConnectionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authConfig","configVariables","connectorVersion","createTime","description","egressBackends","envoyImageLocation","imageLocation","labels","lockConfig","name","serviceAccount","serviceDirectory","status","suspended","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        AuthConfigResponse authConfig,
-        List<ConfigVariableResponse> configVariables,
-        String connectorVersion,
-        String createTime,
-        String description,
-        List<String> egressBackends,
-        String envoyImageLocation,
-        String imageLocation,
-        Map<String,String> labels,
-        LockConfigResponse lockConfig,
-        String name,
-        String serviceAccount,
-        String serviceDirectory,
-        ConnectionStatusResponse status,
-        Boolean suspended,
-        String updateTime) {
+        @OutputCustomType.Parameter("authConfig") AuthConfigResponse authConfig,
+        @OutputCustomType.Parameter("configVariables") List<ConfigVariableResponse> configVariables,
+        @OutputCustomType.Parameter("connectorVersion") String connectorVersion,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("egressBackends") List<String> egressBackends,
+        @OutputCustomType.Parameter("envoyImageLocation") String envoyImageLocation,
+        @OutputCustomType.Parameter("imageLocation") String imageLocation,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lockConfig") LockConfigResponse lockConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("serviceDirectory") String serviceDirectory,
+        @OutputCustomType.Parameter("status") ConnectionStatusResponse status,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authConfig = authConfig;
         this.configVariables = configVariables;
         this.connectorVersion = connectorVersion;

@@ -39,14 +39,14 @@ public final class InTotoResponse {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor({"expectedCommand","expectedMaterials","expectedProducts","signingKeys","stepName","threshold"})
+    @OutputCustomType.Constructor
     private InTotoResponse(
-        List<String> expectedCommand,
-        List<ArtifactRuleResponse> expectedMaterials,
-        List<ArtifactRuleResponse> expectedProducts,
-        List<SigningKeyResponse> signingKeys,
-        String stepName,
-        String threshold) {
+        @OutputCustomType.Parameter("expectedCommand") List<String> expectedCommand,
+        @OutputCustomType.Parameter("expectedMaterials") List<ArtifactRuleResponse> expectedMaterials,
+        @OutputCustomType.Parameter("expectedProducts") List<ArtifactRuleResponse> expectedProducts,
+        @OutputCustomType.Parameter("signingKeys") List<SigningKeyResponse> signingKeys,
+        @OutputCustomType.Parameter("stepName") String stepName,
+        @OutputCustomType.Parameter("threshold") String threshold) {
         this.expectedCommand = expectedCommand;
         this.expectedMaterials = expectedMaterials;
         this.expectedProducts = expectedProducts;

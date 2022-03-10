@@ -26,11 +26,11 @@ public final class ContainerPortResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"containerPort","name","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPortResponse(
-        Integer containerPort,
-        String name,
-        String protocol) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;

@@ -27,12 +27,12 @@ public final class SqlScheduledMaintenanceResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"canDefer","canReschedule","scheduleDeadlineTime","startTime"})
+    @OutputCustomType.Constructor
     private SqlScheduledMaintenanceResponse(
-        Boolean canDefer,
-        Boolean canReschedule,
-        String scheduleDeadlineTime,
-        String startTime) {
+        @OutputCustomType.Parameter("canDefer") Boolean canDefer,
+        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
+        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.canDefer = canDefer;
         this.canReschedule = canReschedule;
         this.scheduleDeadlineTime = scheduleDeadlineTime;

@@ -32,12 +32,12 @@ public final class ConfigMapKeySelectorResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"key","localObjectReference","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapKeySelectorResponse(
-        String key,
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.key = key;
         this.localObjectReference = localObjectReference;
         this.name = name;

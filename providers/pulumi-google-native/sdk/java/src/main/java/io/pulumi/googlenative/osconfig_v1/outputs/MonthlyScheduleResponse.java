@@ -21,10 +21,10 @@ public final class MonthlyScheduleResponse {
      */
     private final WeekDayOfMonthResponse weekDayOfMonth;
 
-    @OutputCustomType.Constructor({"monthDay","weekDayOfMonth"})
+    @OutputCustomType.Constructor
     private MonthlyScheduleResponse(
-        Integer monthDay,
-        WeekDayOfMonthResponse weekDayOfMonth) {
+        @OutputCustomType.Parameter("monthDay") Integer monthDay,
+        @OutputCustomType.Parameter("weekDayOfMonth") WeekDayOfMonthResponse weekDayOfMonth) {
         this.monthDay = monthDay;
         this.weekDayOfMonth = weekDayOfMonth;
     }

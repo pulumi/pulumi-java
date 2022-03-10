@@ -86,22 +86,22 @@ public final class GetEntryResult {
      */
     private final String userSpecifiedType;
 
-    @OutputCustomType.Constructor({"bigqueryDateShardedSpec","bigqueryTableSpec","description","displayName","gcsFilesetSpec","integratedSystem","linkedResource","name","schema","sourceSystemTimestamps","type","usageSignal","userSpecifiedSystem","userSpecifiedType"})
+    @OutputCustomType.Constructor
     private GetEntryResult(
-        GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
-        GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse bigqueryTableSpec,
-        String description,
-        String displayName,
-        GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse gcsFilesetSpec,
-        String integratedSystem,
-        String linkedResource,
-        String name,
-        GoogleCloudDatacatalogV1beta1SchemaResponse schema,
-        GoogleCloudDatacatalogV1beta1SystemTimestampsResponse sourceSystemTimestamps,
-        String type,
-        GoogleCloudDatacatalogV1beta1UsageSignalResponse usageSignal,
-        String userSpecifiedSystem,
-        String userSpecifiedType) {
+        @OutputCustomType.Parameter("bigqueryDateShardedSpec") GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
+        @OutputCustomType.Parameter("bigqueryTableSpec") GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse bigqueryTableSpec,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("gcsFilesetSpec") GoogleCloudDatacatalogV1beta1GcsFilesetSpecResponse gcsFilesetSpec,
+        @OutputCustomType.Parameter("integratedSystem") String integratedSystem,
+        @OutputCustomType.Parameter("linkedResource") String linkedResource,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") GoogleCloudDatacatalogV1beta1SchemaResponse schema,
+        @OutputCustomType.Parameter("sourceSystemTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse sourceSystemTimestamps,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usageSignal") GoogleCloudDatacatalogV1beta1UsageSignalResponse usageSignal,
+        @OutputCustomType.Parameter("userSpecifiedSystem") String userSpecifiedSystem,
+        @OutputCustomType.Parameter("userSpecifiedType") String userSpecifiedType) {
         this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
         this.bigqueryTableSpec = bigqueryTableSpec;
         this.description = description;

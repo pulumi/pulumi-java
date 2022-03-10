@@ -25,11 +25,11 @@ public final class TestCaseReferenceResponse {
      */
     private final String testSuiteName;
 
-    @OutputCustomType.Constructor({"className","name","testSuiteName"})
+    @OutputCustomType.Constructor
     private TestCaseReferenceResponse(
-        String className,
-        String name,
-        String testSuiteName) {
+        @OutputCustomType.Parameter("className") String className,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testSuiteName") String testSuiteName) {
         this.className = className;
         this.name = name;
         this.testSuiteName = testSuiteName;

@@ -35,13 +35,13 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor({"bucketName","datasetName","path","project","tablePrefix"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1DatastoreConfigResponse(
-        String bucketName,
-        String datasetName,
-        String path,
-        String project,
-        String tablePrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("datasetName") String datasetName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
         this.bucketName = bucketName;
         this.datasetName = datasetName;
         this.path = path;

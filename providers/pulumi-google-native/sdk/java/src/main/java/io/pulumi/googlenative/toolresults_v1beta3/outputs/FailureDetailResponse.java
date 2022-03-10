@@ -45,15 +45,15 @@ public final class FailureDetailResponse {
      */
     private final Boolean unableToCrawl;
 
-    @OutputCustomType.Constructor({"crashed","deviceOutOfMemory","failedRoboscript","notInstalled","otherNativeCrash","timedOut","unableToCrawl"})
+    @OutputCustomType.Constructor
     private FailureDetailResponse(
-        Boolean crashed,
-        Boolean deviceOutOfMemory,
-        Boolean failedRoboscript,
-        Boolean notInstalled,
-        Boolean otherNativeCrash,
-        Boolean timedOut,
-        Boolean unableToCrawl) {
+        @OutputCustomType.Parameter("crashed") Boolean crashed,
+        @OutputCustomType.Parameter("deviceOutOfMemory") Boolean deviceOutOfMemory,
+        @OutputCustomType.Parameter("failedRoboscript") Boolean failedRoboscript,
+        @OutputCustomType.Parameter("notInstalled") Boolean notInstalled,
+        @OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash,
+        @OutputCustomType.Parameter("timedOut") Boolean timedOut,
+        @OutputCustomType.Parameter("unableToCrawl") Boolean unableToCrawl) {
         this.crashed = crashed;
         this.deviceOutOfMemory = deviceOutOfMemory;
         this.failedRoboscript = failedRoboscript;

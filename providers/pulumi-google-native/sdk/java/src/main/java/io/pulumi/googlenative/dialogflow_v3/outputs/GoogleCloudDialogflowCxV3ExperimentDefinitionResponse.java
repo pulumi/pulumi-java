@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentDefinitionResponse {
      */
     private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
-    @OutputCustomType.Constructor({"condition","versionVariants"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ExperimentDefinitionResponse(
-        String condition,
-        GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
         this.condition = condition;
         this.versionVariants = versionVariants;
     }

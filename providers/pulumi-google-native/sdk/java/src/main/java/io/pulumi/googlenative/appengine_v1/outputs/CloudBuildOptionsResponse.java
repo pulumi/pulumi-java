@@ -20,10 +20,10 @@ public final class CloudBuildOptionsResponse {
      */
     private final String cloudBuildTimeout;
 
-    @OutputCustomType.Constructor({"appYamlPath","cloudBuildTimeout"})
+    @OutputCustomType.Constructor
     private CloudBuildOptionsResponse(
-        String appYamlPath,
-        String cloudBuildTimeout) {
+        @OutputCustomType.Parameter("appYamlPath") String appYamlPath,
+        @OutputCustomType.Parameter("cloudBuildTimeout") String cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }

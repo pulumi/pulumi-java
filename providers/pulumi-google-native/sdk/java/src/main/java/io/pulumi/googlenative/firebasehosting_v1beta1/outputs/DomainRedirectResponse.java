@@ -20,10 +20,10 @@ public final class DomainRedirectResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"domainName","type"})
+    @OutputCustomType.Constructor
     private DomainRedirectResponse(
-        String domainName,
-        String type) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("type") String type) {
         this.domainName = domainName;
         this.type = type;
     }

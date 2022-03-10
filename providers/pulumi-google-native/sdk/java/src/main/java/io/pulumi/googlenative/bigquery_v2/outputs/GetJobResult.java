@@ -54,16 +54,16 @@ public final class GetJobResult {
      */
     private final String userEmail;
 
-    @OutputCustomType.Constructor({"configuration","etag","jobReference","kind","selfLink","statistics","status","userEmail"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        JobConfigurationResponse configuration,
-        String etag,
-        JobReferenceResponse jobReference,
-        String kind,
-        String selfLink,
-        JobStatisticsResponse statistics,
-        JobStatusResponse status,
-        String userEmail) {
+        @OutputCustomType.Parameter("configuration") JobConfigurationResponse configuration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("jobReference") JobReferenceResponse jobReference,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("statistics") JobStatisticsResponse statistics,
+        @OutputCustomType.Parameter("status") JobStatusResponse status,
+        @OutputCustomType.Parameter("userEmail") String userEmail) {
         this.configuration = configuration;
         this.etag = etag;
         this.jobReference = jobReference;

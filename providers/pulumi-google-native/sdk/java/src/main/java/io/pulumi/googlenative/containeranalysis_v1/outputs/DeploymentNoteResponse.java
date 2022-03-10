@@ -16,8 +16,8 @@ public final class DeploymentNoteResponse {
      */
     private final List<String> resourceUri;
 
-    @OutputCustomType.Constructor({"resourceUri"})
-    private DeploymentNoteResponse(List<String> resourceUri) {
+    @OutputCustomType.Constructor
+    private DeploymentNoteResponse(@OutputCustomType.Parameter("resourceUri") List<String> resourceUri) {
         this.resourceUri = resourceUri;
     }
 

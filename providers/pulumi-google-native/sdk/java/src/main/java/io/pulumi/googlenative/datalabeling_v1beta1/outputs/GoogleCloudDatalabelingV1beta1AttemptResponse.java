@@ -18,10 +18,10 @@ public final class GoogleCloudDatalabelingV1beta1AttemptResponse {
      */
     private final List<GoogleRpcStatusResponse> partialFailures;
 
-    @OutputCustomType.Constructor({"attemptTime","partialFailures"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1AttemptResponse(
-        String attemptTime,
-        List<GoogleRpcStatusResponse> partialFailures) {
+        @OutputCustomType.Parameter("attemptTime") String attemptTime,
+        @OutputCustomType.Parameter("partialFailures") List<GoogleRpcStatusResponse> partialFailures) {
         this.attemptTime = attemptTime;
         this.partialFailures = partialFailures;
     }

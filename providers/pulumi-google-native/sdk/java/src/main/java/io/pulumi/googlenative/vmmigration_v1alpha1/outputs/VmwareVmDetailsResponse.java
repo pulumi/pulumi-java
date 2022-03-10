@@ -76,21 +76,21 @@ public final class VmwareVmDetailsResponse {
      */
     private final String vmId;
 
-    @OutputCustomType.Constructor({"bootOption","committedStorage","committedStorageMb","cpuCount","datacenterDescription","datacenterId","diskCount","displayName","guestDescription","memoryMb","powerState","uuid","vmId"})
+    @OutputCustomType.Constructor
     private VmwareVmDetailsResponse(
-        String bootOption,
-        String committedStorage,
-        String committedStorageMb,
-        Integer cpuCount,
-        String datacenterDescription,
-        String datacenterId,
-        Integer diskCount,
-        String displayName,
-        String guestDescription,
-        Integer memoryMb,
-        String powerState,
-        String uuid,
-        String vmId) {
+        @OutputCustomType.Parameter("bootOption") String bootOption,
+        @OutputCustomType.Parameter("committedStorage") String committedStorage,
+        @OutputCustomType.Parameter("committedStorageMb") String committedStorageMb,
+        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
+        @OutputCustomType.Parameter("datacenterDescription") String datacenterDescription,
+        @OutputCustomType.Parameter("datacenterId") String datacenterId,
+        @OutputCustomType.Parameter("diskCount") Integer diskCount,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("guestDescription") String guestDescription,
+        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
+        @OutputCustomType.Parameter("powerState") String powerState,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("vmId") String vmId) {
         this.bootOption = bootOption;
         this.committedStorage = committedStorage;
         this.committedStorageMb = committedStorageMb;

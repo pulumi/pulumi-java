@@ -20,10 +20,10 @@ public final class SchemaConfigResponse {
      */
     private final String schemaType;
 
-    @OutputCustomType.Constructor({"recursiveStructureDepth","schemaType"})
+    @OutputCustomType.Constructor
     private SchemaConfigResponse(
-        String recursiveStructureDepth,
-        String schemaType) {
+        @OutputCustomType.Parameter("recursiveStructureDepth") String recursiveStructureDepth,
+        @OutputCustomType.Parameter("schemaType") String schemaType) {
         this.recursiveStructureDepth = recursiveStructureDepth;
         this.schemaType = schemaType;
     }

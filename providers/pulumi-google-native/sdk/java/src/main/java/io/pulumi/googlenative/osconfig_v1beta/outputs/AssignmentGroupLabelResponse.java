@@ -16,8 +16,8 @@ public final class AssignmentGroupLabelResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private AssignmentGroupLabelResponse(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private AssignmentGroupLabelResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

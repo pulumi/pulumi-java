@@ -21,10 +21,10 @@ public final class MonitoringDestinationResponse {
      */
     private final String monitoredResource;
 
-    @OutputCustomType.Constructor({"metrics","monitoredResource"})
+    @OutputCustomType.Constructor
     private MonitoringDestinationResponse(
-        List<String> metrics,
-        String monitoredResource) {
+        @OutputCustomType.Parameter("metrics") List<String> metrics,
+        @OutputCustomType.Parameter("monitoredResource") String monitoredResource) {
         this.metrics = metrics;
         this.monitoredResource = monitoredResource;
     }

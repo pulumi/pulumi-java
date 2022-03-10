@@ -15,8 +15,8 @@ public final class AcceleratorResponse {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorType"})
-    private AcceleratorResponse(String acceleratorType) {
+    @OutputCustomType.Constructor
+    private AcceleratorResponse(@OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorType = acceleratorType;
     }
 

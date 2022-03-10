@@ -21,10 +21,10 @@ public final class GameServerClusterConnectionInfoResponse {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"gkeClusterReference","namespace"})
+    @OutputCustomType.Constructor
     private GameServerClusterConnectionInfoResponse(
-        GkeClusterReferenceResponse gkeClusterReference,
-        String namespace) {
+        @OutputCustomType.Parameter("gkeClusterReference") GkeClusterReferenceResponse gkeClusterReference,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.gkeClusterReference = gkeClusterReference;
         this.namespace = namespace;
     }

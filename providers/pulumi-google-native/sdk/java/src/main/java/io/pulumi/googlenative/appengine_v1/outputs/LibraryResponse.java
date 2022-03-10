@@ -20,10 +20,10 @@ public final class LibraryResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private LibraryResponse(
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

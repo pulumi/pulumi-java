@@ -21,10 +21,10 @@ public final class ChannelCredentialsResponse {
      */
     private final String channelCredentialType;
 
-    @OutputCustomType.Constructor({"certificates","channelCredentialType"})
+    @OutputCustomType.Constructor
     private ChannelCredentialsResponse(
-        TlsCertificatePathsResponse certificates,
-        String channelCredentialType) {
+        @OutputCustomType.Parameter("certificates") TlsCertificatePathsResponse certificates,
+        @OutputCustomType.Parameter("channelCredentialType") String channelCredentialType) {
         this.certificates = certificates;
         this.channelCredentialType = channelCredentialType;
     }

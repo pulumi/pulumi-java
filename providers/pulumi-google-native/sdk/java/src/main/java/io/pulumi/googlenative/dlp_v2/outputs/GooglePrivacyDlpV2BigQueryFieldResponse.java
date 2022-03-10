@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor({"field","table"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2BigQueryFieldResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.field = field;
         this.table = table;
     }

@@ -15,8 +15,8 @@ public final class QueryContentResponse {
      */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
-    @OutputCustomType.Constructor({"iamPolicyAnalysisQuery"})
-    private QueryContentResponse(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
+    @OutputCustomType.Constructor
+    private QueryContentResponse(@OutputCustomType.Parameter("iamPolicyAnalysisQuery") IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
         this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
     }
 

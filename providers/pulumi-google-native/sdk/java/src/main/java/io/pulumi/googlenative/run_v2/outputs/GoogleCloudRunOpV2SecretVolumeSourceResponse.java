@@ -28,11 +28,11 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"defaultMode","items","secret"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<GoogleCloudRunOpV2VersionToPathResponse> items,
-        String secret) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<GoogleCloudRunOpV2VersionToPathResponse> items,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secret = secret;

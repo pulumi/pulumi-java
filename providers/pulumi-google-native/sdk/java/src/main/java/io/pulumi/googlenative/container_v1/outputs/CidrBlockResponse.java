@@ -20,10 +20,10 @@ public final class CidrBlockResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor({"cidrBlock","displayName"})
+    @OutputCustomType.Constructor
     private CidrBlockResponse(
-        String cidrBlock,
-        String displayName) {
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("displayName") String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }

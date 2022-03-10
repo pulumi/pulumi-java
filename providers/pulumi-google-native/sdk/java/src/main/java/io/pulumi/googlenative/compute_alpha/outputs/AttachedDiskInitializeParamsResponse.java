@@ -110,27 +110,27 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    @OutputCustomType.Constructor({"architecture","description","diskName","diskSizeGb","diskType","guestOsFeatures","labels","licenseCodes","licenses","multiWriter","onUpdateAction","provisionedIops","replicaZones","resourcePolicies","sourceImage","sourceImageEncryptionKey","sourceInstantSnapshot","sourceSnapshot","sourceSnapshotEncryptionKey"})
+    @OutputCustomType.Constructor
     private AttachedDiskInitializeParamsResponse(
-        String architecture,
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Map<String,String> labels,
-        List<String> licenseCodes,
-        List<String> licenses,
-        Boolean multiWriter,
-        String onUpdateAction,
-        String provisionedIops,
-        List<String> replicaZones,
-        List<String> resourcePolicies,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceInstantSnapshot,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
+        @OutputCustomType.Parameter("onUpdateAction") String onUpdateAction,
+        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
+        @OutputCustomType.Parameter("replicaZones") List<String> replicaZones,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
         this.architecture = architecture;
         this.description = description;
         this.diskName = diskName;

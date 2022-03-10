@@ -61,17 +61,17 @@ public final class GetKeyResult {
      */
     private final GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings;
 
-    @OutputCustomType.Constructor({"androidSettings","createTime","displayName","iosSettings","labels","name","testingOptions","wafSettings","webSettings"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings,
-        String createTime,
-        String displayName,
-        GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings,
-        Map<String,String> labels,
-        String name,
-        GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions,
-        GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings,
-        GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
+        @OutputCustomType.Parameter("androidSettings") GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("iosSettings") GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testingOptions") GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions,
+        @OutputCustomType.Parameter("wafSettings") GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings,
+        @OutputCustomType.Parameter("webSettings") GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
         this.androidSettings = androidSettings;
         this.createTime = createTime;
         this.displayName = displayName;

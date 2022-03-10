@@ -26,11 +26,11 @@ public final class SdkHarnessContainerImageResponse {
      */
     private final Boolean useSingleCorePerContainer;
 
-    @OutputCustomType.Constructor({"containerImage","environmentId","useSingleCorePerContainer"})
+    @OutputCustomType.Constructor
     private SdkHarnessContainerImageResponse(
-        String containerImage,
-        String environmentId,
-        Boolean useSingleCorePerContainer) {
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("environmentId") String environmentId,
+        @OutputCustomType.Parameter("useSingleCorePerContainer") Boolean useSingleCorePerContainer) {
         this.containerImage = containerImage;
         this.environmentId = environmentId;
         this.useSingleCorePerContainer = useSingleCorePerContainer;

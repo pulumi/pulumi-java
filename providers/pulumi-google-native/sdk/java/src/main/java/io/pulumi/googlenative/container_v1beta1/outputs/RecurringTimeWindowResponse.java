@@ -21,10 +21,10 @@ public final class RecurringTimeWindowResponse {
      */
     private final TimeWindowResponse window;
 
-    @OutputCustomType.Constructor({"recurrence","window"})
+    @OutputCustomType.Constructor
     private RecurringTimeWindowResponse(
-        String recurrence,
-        TimeWindowResponse window) {
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("window") TimeWindowResponse window) {
         this.recurrence = recurrence;
         this.window = window;
     }

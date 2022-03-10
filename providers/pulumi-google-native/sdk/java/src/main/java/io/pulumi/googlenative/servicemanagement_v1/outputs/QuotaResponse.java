@@ -22,10 +22,10 @@ public final class QuotaResponse {
      */
     private final List<MetricRuleResponse> metricRules;
 
-    @OutputCustomType.Constructor({"limits","metricRules"})
+    @OutputCustomType.Constructor
     private QuotaResponse(
-        List<QuotaLimitResponse> limits,
-        List<MetricRuleResponse> metricRules) {
+        @OutputCustomType.Parameter("limits") List<QuotaLimitResponse> limits,
+        @OutputCustomType.Parameter("metricRules") List<MetricRuleResponse> metricRules) {
         this.limits = limits;
         this.metricRules = metricRules;
     }

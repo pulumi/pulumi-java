@@ -40,14 +40,14 @@ public final class OptionsResponse {
      */
     private final Boolean outputResourceEdges;
 
-    @OutputCustomType.Constructor({"analyzeServiceAccountImpersonation","expandGroups","expandResources","expandRoles","outputGroupEdges","outputResourceEdges"})
+    @OutputCustomType.Constructor
     private OptionsResponse(
-        Boolean analyzeServiceAccountImpersonation,
-        Boolean expandGroups,
-        Boolean expandResources,
-        Boolean expandRoles,
-        Boolean outputGroupEdges,
-        Boolean outputResourceEdges) {
+        @OutputCustomType.Parameter("analyzeServiceAccountImpersonation") Boolean analyzeServiceAccountImpersonation,
+        @OutputCustomType.Parameter("expandGroups") Boolean expandGroups,
+        @OutputCustomType.Parameter("expandResources") Boolean expandResources,
+        @OutputCustomType.Parameter("expandRoles") Boolean expandRoles,
+        @OutputCustomType.Parameter("outputGroupEdges") Boolean outputGroupEdges,
+        @OutputCustomType.Parameter("outputResourceEdges") Boolean outputResourceEdges) {
         this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
         this.expandGroups = expandGroups;
         this.expandResources = expandResources;

@@ -25,11 +25,11 @@ public final class PositionResponse {
      */
     private final String line;
 
-    @OutputCustomType.Constructor({"column","length","line"})
+    @OutputCustomType.Constructor
     private PositionResponse(
-        String column,
-        String length,
-        String line) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("length") String length,
+        @OutputCustomType.Parameter("line") String line) {
         this.column = column;
         this.length = length;
         this.line = line;

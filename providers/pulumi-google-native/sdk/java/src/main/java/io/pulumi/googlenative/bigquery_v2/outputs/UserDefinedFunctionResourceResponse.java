@@ -20,10 +20,10 @@ public final class UserDefinedFunctionResourceResponse {
      */
     private final String resourceUri;
 
-    @OutputCustomType.Constructor({"inlineCode","resourceUri"})
+    @OutputCustomType.Constructor
     private UserDefinedFunctionResourceResponse(
-        String inlineCode,
-        String resourceUri) {
+        @OutputCustomType.Parameter("inlineCode") String inlineCode,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
         this.inlineCode = inlineCode;
         this.resourceUri = resourceUri;
     }

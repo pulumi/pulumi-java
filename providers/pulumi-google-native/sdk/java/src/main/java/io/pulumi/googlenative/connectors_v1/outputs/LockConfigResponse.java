@@ -21,10 +21,10 @@ public final class LockConfigResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"locked","reason"})
+    @OutputCustomType.Constructor
     private LockConfigResponse(
-        Boolean locked,
-        String reason) {
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.locked = locked;
         this.reason = reason;
     }

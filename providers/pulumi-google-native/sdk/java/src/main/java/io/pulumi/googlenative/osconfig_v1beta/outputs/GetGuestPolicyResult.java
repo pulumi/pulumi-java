@@ -60,17 +60,17 @@ public final class GetGuestPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"assignment","createTime","description","etag","name","packageRepositories","packages","recipes","updateTime"})
+    @OutputCustomType.Constructor
     private GetGuestPolicyResult(
-        AssignmentResponse assignment,
-        String createTime,
-        String description,
-        String etag,
-        String name,
-        List<PackageRepositoryResponse> packageRepositories,
-        List<PackageResponse> packages,
-        List<SoftwareRecipeResponse> recipes,
-        String updateTime) {
+        @OutputCustomType.Parameter("assignment") AssignmentResponse assignment,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageRepositories") List<PackageRepositoryResponse> packageRepositories,
+        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
+        @OutputCustomType.Parameter("recipes") List<SoftwareRecipeResponse> recipes,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.assignment = assignment;
         this.createTime = createTime;
         this.description = description;

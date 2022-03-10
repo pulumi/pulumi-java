@@ -40,13 +40,13 @@ public final class AuthConfigResponse {
      */
     private final UserPasswordResponse userPassword;
 
-    @OutputCustomType.Constructor({"additionalVariables","authType","oauth2ClientCredentials","oauth2JwtBearer","userPassword"})
+    @OutputCustomType.Constructor
     private AuthConfigResponse(
-        List<ConfigVariableResponse> additionalVariables,
-        String authType,
-        Oauth2ClientCredentialsResponse oauth2ClientCredentials,
-        Oauth2JwtBearerResponse oauth2JwtBearer,
-        UserPasswordResponse userPassword) {
+        @OutputCustomType.Parameter("additionalVariables") List<ConfigVariableResponse> additionalVariables,
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("oauth2ClientCredentials") Oauth2ClientCredentialsResponse oauth2ClientCredentials,
+        @OutputCustomType.Parameter("oauth2JwtBearer") Oauth2JwtBearerResponse oauth2JwtBearer,
+        @OutputCustomType.Parameter("userPassword") UserPasswordResponse userPassword) {
         this.additionalVariables = additionalVariables;
         this.authType = authType;
         this.oauth2ClientCredentials = oauth2ClientCredentials;

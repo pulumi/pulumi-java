@@ -26,11 +26,11 @@ public final class PrivateClusterConfigResponse {
      */
     private final String masterIpv4ReservedRange;
 
-    @OutputCustomType.Constructor({"enablePrivateEndpoint","masterIpv4CidrBlock","masterIpv4ReservedRange"})
+    @OutputCustomType.Constructor
     private PrivateClusterConfigResponse(
-        Boolean enablePrivateEndpoint,
-        String masterIpv4CidrBlock,
-        String masterIpv4ReservedRange) {
+        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("masterIpv4ReservedRange") String masterIpv4ReservedRange) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         this.masterIpv4ReservedRange = masterIpv4ReservedRange;

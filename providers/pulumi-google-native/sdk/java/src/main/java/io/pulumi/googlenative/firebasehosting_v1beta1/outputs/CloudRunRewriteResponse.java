@@ -20,10 +20,10 @@ public final class CloudRunRewriteResponse {
      */
     private final String serviceId;
 
-    @OutputCustomType.Constructor({"region","serviceId"})
+    @OutputCustomType.Constructor
     private CloudRunRewriteResponse(
-        String region,
-        String serviceId) {
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("serviceId") String serviceId) {
         this.region = region;
         this.serviceId = serviceId;
     }

@@ -57,17 +57,17 @@ public final class CertificateResponse {
      */
     private final List<String> subjectAlternativeDnsNames;
 
-    @OutputCustomType.Constructor({"issuer","notAfterTime","notBeforeTime","parsed","rawDer","serialNumber","sha256Fingerprint","subject","subjectAlternativeDnsNames"})
+    @OutputCustomType.Constructor
     private CertificateResponse(
-        String issuer,
-        String notAfterTime,
-        String notBeforeTime,
-        Boolean parsed,
-        String rawDer,
-        String serialNumber,
-        String sha256Fingerprint,
-        String subject,
-        List<String> subjectAlternativeDnsNames) {
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @OutputCustomType.Parameter("parsed") Boolean parsed,
+        @OutputCustomType.Parameter("rawDer") String rawDer,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sha256Fingerprint") String sha256Fingerprint,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("subjectAlternativeDnsNames") List<String> subjectAlternativeDnsNames) {
         this.issuer = issuer;
         this.notAfterTime = notAfterTime;
         this.notBeforeTime = notBeforeTime;

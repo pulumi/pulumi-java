@@ -68,19 +68,19 @@ public final class GetVpnGatewayResult {
      */
     private final List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","labelFingerprint","labels","name","network","region","selfLink","stackType","vpnInterfaces"})
+    @OutputCustomType.Constructor
     private GetVpnGatewayResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String network,
-        String region,
-        String selfLink,
-        String stackType,
-        List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("vpnInterfaces") List<VpnGatewayVpnGatewayInterfaceResponse> vpnInterfaces) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

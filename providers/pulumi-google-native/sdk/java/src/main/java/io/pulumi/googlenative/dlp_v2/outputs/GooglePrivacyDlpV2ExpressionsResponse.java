@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
      */
     private final String logicalOperator;
 
-    @OutputCustomType.Constructor({"conditions","logicalOperator"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ExpressionsResponse(
-        GooglePrivacyDlpV2ConditionsResponse conditions,
-        String logicalOperator) {
+        @OutputCustomType.Parameter("conditions") GooglePrivacyDlpV2ConditionsResponse conditions,
+        @OutputCustomType.Parameter("logicalOperator") String logicalOperator) {
         this.conditions = conditions;
         this.logicalOperator = logicalOperator;
     }

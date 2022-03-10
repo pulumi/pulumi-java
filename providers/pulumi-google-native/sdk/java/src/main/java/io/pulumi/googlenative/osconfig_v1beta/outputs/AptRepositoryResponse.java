@@ -36,13 +36,13 @@ public final class AptRepositoryResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"archiveType","components","distribution","gpgKey","uri"})
+    @OutputCustomType.Constructor
     private AptRepositoryResponse(
-        String archiveType,
-        List<String> components,
-        String distribution,
-        String gpgKey,
-        String uri) {
+        @OutputCustomType.Parameter("archiveType") String archiveType,
+        @OutputCustomType.Parameter("components") List<String> components,
+        @OutputCustomType.Parameter("distribution") String distribution,
+        @OutputCustomType.Parameter("gpgKey") String gpgKey,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.archiveType = archiveType;
         this.components = components;
         this.distribution = distribution;

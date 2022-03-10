@@ -20,10 +20,10 @@ public final class SecretManagerSecretResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor({"env","versionName"})
+    @OutputCustomType.Constructor
     private SecretManagerSecretResponse(
-        String env,
-        String versionName) {
+        @OutputCustomType.Parameter("env") String env,
+        @OutputCustomType.Parameter("versionName") String versionName) {
         this.env = env;
         this.versionName = versionName;
     }

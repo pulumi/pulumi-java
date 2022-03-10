@@ -103,26 +103,26 @@ public final class GetDatasetResult {
      */
     private final List<DatasetTagsItemResponse> tags;
 
-    @OutputCustomType.Constructor({"access","creationTime","datasetReference","defaultCollation","defaultEncryptionConfiguration","defaultPartitionExpirationMs","defaultTableExpirationMs","description","etag","friendlyName","isCaseInsensitive","kind","labels","lastModifiedTime","location","satisfiesPZS","selfLink","tags"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        List<DatasetAccessItemResponse> access,
-        String creationTime,
-        DatasetReferenceResponse datasetReference,
-        String defaultCollation,
-        EncryptionConfigurationResponse defaultEncryptionConfiguration,
-        String defaultPartitionExpirationMs,
-        String defaultTableExpirationMs,
-        String description,
-        String etag,
-        String friendlyName,
-        Boolean isCaseInsensitive,
-        String kind,
-        Map<String,String> labels,
-        String lastModifiedTime,
-        String location,
-        Boolean satisfiesPZS,
-        String selfLink,
-        List<DatasetTagsItemResponse> tags) {
+        @OutputCustomType.Parameter("access") List<DatasetAccessItemResponse> access,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("datasetReference") DatasetReferenceResponse datasetReference,
+        @OutputCustomType.Parameter("defaultCollation") String defaultCollation,
+        @OutputCustomType.Parameter("defaultEncryptionConfiguration") EncryptionConfigurationResponse defaultEncryptionConfiguration,
+        @OutputCustomType.Parameter("defaultPartitionExpirationMs") String defaultPartitionExpirationMs,
+        @OutputCustomType.Parameter("defaultTableExpirationMs") String defaultTableExpirationMs,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("isCaseInsensitive") Boolean isCaseInsensitive,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("tags") List<DatasetTagsItemResponse> tags) {
         this.access = access;
         this.creationTime = creationTime;
         this.datasetReference = datasetReference;

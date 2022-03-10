@@ -31,12 +31,12 @@ public final class GetNamespaceResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","labels","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetNamespaceResult(
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;

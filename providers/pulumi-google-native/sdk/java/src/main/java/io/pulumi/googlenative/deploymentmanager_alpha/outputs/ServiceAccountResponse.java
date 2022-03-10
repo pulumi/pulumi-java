@@ -15,8 +15,8 @@ public final class ServiceAccountResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor({"email"})
-    private ServiceAccountResponse(String email) {
+    @OutputCustomType.Constructor
+    private ServiceAccountResponse(@OutputCustomType.Parameter("email") String email) {
         this.email = email;
     }
 

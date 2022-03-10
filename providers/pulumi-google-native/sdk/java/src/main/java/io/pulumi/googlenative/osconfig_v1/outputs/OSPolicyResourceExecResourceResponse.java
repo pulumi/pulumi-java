@@ -20,10 +20,10 @@ public final class OSPolicyResourceExecResourceResponse {
      */
     private final OSPolicyResourceExecResourceExecResponse validate;
 
-    @OutputCustomType.Constructor({"enforce","validate"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceExecResourceResponse(
-        OSPolicyResourceExecResourceExecResponse enforce,
-        OSPolicyResourceExecResourceExecResponse validate) {
+        @OutputCustomType.Parameter("enforce") OSPolicyResourceExecResourceExecResponse enforce,
+        @OutputCustomType.Parameter("validate") OSPolicyResourceExecResourceExecResponse validate) {
         this.enforce = enforce;
         this.validate = validate;
     }

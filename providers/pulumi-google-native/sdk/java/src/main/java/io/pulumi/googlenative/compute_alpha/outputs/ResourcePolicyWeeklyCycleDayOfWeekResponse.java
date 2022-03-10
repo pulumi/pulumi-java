@@ -25,11 +25,11 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicyWeeklyCycleDayOfWeekResponse(
-        String day,
-        String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

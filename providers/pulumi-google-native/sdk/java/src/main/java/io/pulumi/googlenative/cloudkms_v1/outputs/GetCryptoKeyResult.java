@@ -69,19 +69,19 @@ public final class GetCryptoKeyResult {
      */
     private final CryptoKeyVersionTemplateResponse versionTemplate;
 
-    @OutputCustomType.Constructor({"createTime","cryptoKeyBackend","destroyScheduledDuration","importOnly","labels","name","nextRotationTime","primary","purpose","rotationPeriod","versionTemplate"})
+    @OutputCustomType.Constructor
     private GetCryptoKeyResult(
-        String createTime,
-        String cryptoKeyBackend,
-        String destroyScheduledDuration,
-        Boolean importOnly,
-        Map<String,String> labels,
-        String name,
-        String nextRotationTime,
-        CryptoKeyVersionResponse primary,
-        String purpose,
-        String rotationPeriod,
-        CryptoKeyVersionTemplateResponse versionTemplate) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("cryptoKeyBackend") String cryptoKeyBackend,
+        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("primary") CryptoKeyVersionResponse primary,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @OutputCustomType.Parameter("versionTemplate") CryptoKeyVersionTemplateResponse versionTemplate) {
         this.createTime = createTime;
         this.cryptoKeyBackend = cryptoKeyBackend;
         this.destroyScheduledDuration = destroyScheduledDuration;

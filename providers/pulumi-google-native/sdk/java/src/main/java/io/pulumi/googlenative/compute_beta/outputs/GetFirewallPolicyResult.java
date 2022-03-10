@@ -74,20 +74,20 @@ public final class GetFirewallPolicyResult {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor({"associations","creationTimestamp","description","fingerprint","kind","name","parent","ruleTupleCount","rules","selfLink","selfLinkWithId","shortName"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyResult(
-        List<FirewallPolicyAssociationResponse> associations,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        String parent,
-        Integer ruleTupleCount,
-        List<FirewallPolicyRuleResponse> rules,
-        String selfLink,
-        String selfLinkWithId,
-        String shortName) {
+        @OutputCustomType.Parameter("associations") List<FirewallPolicyAssociationResponse> associations,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("rules") List<FirewallPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("shortName") String shortName) {
         this.associations = associations;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

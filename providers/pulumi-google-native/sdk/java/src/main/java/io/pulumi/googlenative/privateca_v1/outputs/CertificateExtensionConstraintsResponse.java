@@ -22,10 +22,10 @@ public final class CertificateExtensionConstraintsResponse {
      */
     private final List<String> knownExtensions;
 
-    @OutputCustomType.Constructor({"additionalExtensions","knownExtensions"})
+    @OutputCustomType.Constructor
     private CertificateExtensionConstraintsResponse(
-        List<ObjectIdResponse> additionalExtensions,
-        List<String> knownExtensions) {
+        @OutputCustomType.Parameter("additionalExtensions") List<ObjectIdResponse> additionalExtensions,
+        @OutputCustomType.Parameter("knownExtensions") List<String> knownExtensions) {
         this.additionalExtensions = additionalExtensions;
         this.knownExtensions = knownExtensions;
     }

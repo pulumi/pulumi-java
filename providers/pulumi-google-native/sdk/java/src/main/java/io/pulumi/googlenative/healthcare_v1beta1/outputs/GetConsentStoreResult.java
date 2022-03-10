@@ -32,12 +32,12 @@ public final class GetConsentStoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"defaultConsentTtl","enableConsentCreateOnUpdate","labels","name"})
+    @OutputCustomType.Constructor
     private GetConsentStoreResult(
-        String defaultConsentTtl,
-        Boolean enableConsentCreateOnUpdate,
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("defaultConsentTtl") String defaultConsentTtl,
+        @OutputCustomType.Parameter("enableConsentCreateOnUpdate") Boolean enableConsentCreateOnUpdate,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.defaultConsentTtl = defaultConsentTtl;
         this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
         this.labels = labels;

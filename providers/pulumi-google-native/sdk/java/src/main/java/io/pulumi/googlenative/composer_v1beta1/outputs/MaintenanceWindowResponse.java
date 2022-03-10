@@ -25,11 +25,11 @@ public final class MaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","recurrence","startTime"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        String endTime,
-        String recurrence,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.recurrence = recurrence;
         this.startTime = startTime;

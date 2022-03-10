@@ -20,10 +20,10 @@ public final class AutoscalerStatusDetailsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private AutoscalerStatusDetailsResponse(
-        String message,
-        String type) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("type") String type) {
         this.message = message;
         this.type = type;
     }

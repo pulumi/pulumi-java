@@ -67,19 +67,19 @@ public final class GoogleTypePostalAddressResponse {
      */
     private final String sublocality;
 
-    @OutputCustomType.Constructor({"addressLines","administrativeArea","languageCode","locality","organization","postalCode","recipients","regionCode","revision","sortingCode","sublocality"})
+    @OutputCustomType.Constructor
     private GoogleTypePostalAddressResponse(
-        List<String> addressLines,
-        String administrativeArea,
-        String languageCode,
-        String locality,
-        String organization,
-        String postalCode,
-        List<String> recipients,
-        String regionCode,
-        Integer revision,
-        String sortingCode,
-        String sublocality) {
+        @OutputCustomType.Parameter("addressLines") List<String> addressLines,
+        @OutputCustomType.Parameter("administrativeArea") String administrativeArea,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("recipients") List<String> recipients,
+        @OutputCustomType.Parameter("regionCode") String regionCode,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("sortingCode") String sortingCode,
+        @OutputCustomType.Parameter("sublocality") String sublocality) {
         this.addressLines = addressLines;
         this.administrativeArea = administrativeArea;
         this.languageCode = languageCode;

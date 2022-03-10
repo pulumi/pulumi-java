@@ -20,10 +20,10 @@ public final class RevocationDetailsResponse {
      */
     private final String revocationTime;
 
-    @OutputCustomType.Constructor({"revocationState","revocationTime"})
+    @OutputCustomType.Constructor
     private RevocationDetailsResponse(
-        String revocationState,
-        String revocationTime) {
+        @OutputCustomType.Parameter("revocationState") String revocationState,
+        @OutputCustomType.Parameter("revocationTime") String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }

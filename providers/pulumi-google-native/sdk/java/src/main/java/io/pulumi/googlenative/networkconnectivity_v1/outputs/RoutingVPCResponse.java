@@ -21,10 +21,10 @@ public final class RoutingVPCResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"requiredForNewSiteToSiteDataTransferSpokes","uri"})
+    @OutputCustomType.Constructor
     private RoutingVPCResponse(
-        Boolean requiredForNewSiteToSiteDataTransferSpokes,
-        String uri) {
+        @OutputCustomType.Parameter("requiredForNewSiteToSiteDataTransferSpokes") Boolean requiredForNewSiteToSiteDataTransferSpokes,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.requiredForNewSiteToSiteDataTransferSpokes = requiredForNewSiteToSiteDataTransferSpokes;
         this.uri = uri;
     }

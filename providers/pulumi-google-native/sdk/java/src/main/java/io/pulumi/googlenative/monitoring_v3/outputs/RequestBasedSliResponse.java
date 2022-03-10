@@ -21,10 +21,10 @@ public final class RequestBasedSliResponse {
      */
     private final TimeSeriesRatioResponse goodTotalRatio;
 
-    @OutputCustomType.Constructor({"distributionCut","goodTotalRatio"})
+    @OutputCustomType.Constructor
     private RequestBasedSliResponse(
-        DistributionCutResponse distributionCut,
-        TimeSeriesRatioResponse goodTotalRatio) {
+        @OutputCustomType.Parameter("distributionCut") DistributionCutResponse distributionCut,
+        @OutputCustomType.Parameter("goodTotalRatio") TimeSeriesRatioResponse goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

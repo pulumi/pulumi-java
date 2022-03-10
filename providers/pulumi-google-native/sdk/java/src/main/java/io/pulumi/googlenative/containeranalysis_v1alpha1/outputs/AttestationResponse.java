@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AttestationResponse {
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor({"pgpSignedAttestation"})
-    private AttestationResponse(PgpSignedAttestationResponse pgpSignedAttestation) {
+    @OutputCustomType.Constructor
+    private AttestationResponse(@OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 

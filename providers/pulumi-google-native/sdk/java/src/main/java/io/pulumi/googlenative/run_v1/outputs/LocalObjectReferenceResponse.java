@@ -15,8 +15,8 @@ public final class LocalObjectReferenceResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private LocalObjectReferenceResponse(String name) {
+    @OutputCustomType.Constructor
+    private LocalObjectReferenceResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

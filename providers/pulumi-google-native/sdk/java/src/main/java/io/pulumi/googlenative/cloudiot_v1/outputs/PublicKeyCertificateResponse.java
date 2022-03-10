@@ -26,11 +26,11 @@ public final class PublicKeyCertificateResponse {
      */
     private final X509CertificateDetailsResponse x509Details;
 
-    @OutputCustomType.Constructor({"certificate","format","x509Details"})
+    @OutputCustomType.Constructor
     private PublicKeyCertificateResponse(
-        String certificate,
-        String format,
-        X509CertificateDetailsResponse x509Details) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("x509Details") X509CertificateDetailsResponse x509Details) {
         this.certificate = certificate;
         this.format = format;
         this.x509Details = x509Details;

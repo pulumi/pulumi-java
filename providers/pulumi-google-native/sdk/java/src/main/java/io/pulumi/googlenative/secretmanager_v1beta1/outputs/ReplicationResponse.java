@@ -21,10 +21,10 @@ public final class ReplicationResponse {
      */
     private final UserManagedResponse userManaged;
 
-    @OutputCustomType.Constructor({"automatic","userManaged"})
+    @OutputCustomType.Constructor
     private ReplicationResponse(
-        AutomaticResponse automatic,
-        UserManagedResponse userManaged) {
+        @OutputCustomType.Parameter("automatic") AutomaticResponse automatic,
+        @OutputCustomType.Parameter("userManaged") UserManagedResponse userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }

@@ -41,14 +41,14 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","inspectConfig","name","updateTime"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectTemplateResponse(
-        String createTime,
-        String description,
-        String displayName,
-        GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("inspectConfig") GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

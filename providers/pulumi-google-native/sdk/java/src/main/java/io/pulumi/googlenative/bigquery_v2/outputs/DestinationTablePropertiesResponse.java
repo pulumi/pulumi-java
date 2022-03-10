@@ -31,12 +31,12 @@ public final class DestinationTablePropertiesResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"description","expirationTime","friendlyName","labels"})
+    @OutputCustomType.Constructor
     private DestinationTablePropertiesResponse(
-        String description,
-        String expirationTime,
-        String friendlyName,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.description = description;
         this.expirationTime = expirationTime;
         this.friendlyName = friendlyName;

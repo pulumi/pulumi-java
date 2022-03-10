@@ -16,8 +16,8 @@ public final class StatefulPolicyPreservedStateResponse {
      */
     private final Map<String,String> disks;
 
-    @OutputCustomType.Constructor({"disks"})
-    private StatefulPolicyPreservedStateResponse(Map<String,String> disks) {
+    @OutputCustomType.Constructor
+    private StatefulPolicyPreservedStateResponse(@OutputCustomType.Parameter("disks") Map<String,String> disks) {
         this.disks = disks;
     }
 

@@ -63,17 +63,17 @@ public final class GoogleCloudRetailV2betaRuleResponse {
      */
     private final GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction;
 
-    @OutputCustomType.Constructor({"boostAction","condition","doNotAssociateAction","filterAction","ignoreAction","onewaySynonymsAction","redirectAction","replacementAction","twowaySynonymsAction"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaRuleResponse(
-        GoogleCloudRetailV2betaRuleBoostActionResponse boostAction,
-        GoogleCloudRetailV2betaConditionResponse condition,
-        GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction,
-        GoogleCloudRetailV2betaRuleFilterActionResponse filterAction,
-        GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction,
-        GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction,
-        GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction,
-        GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction,
-        GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
+        @OutputCustomType.Parameter("boostAction") GoogleCloudRetailV2betaRuleBoostActionResponse boostAction,
+        @OutputCustomType.Parameter("condition") GoogleCloudRetailV2betaConditionResponse condition,
+        @OutputCustomType.Parameter("doNotAssociateAction") GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction,
+        @OutputCustomType.Parameter("filterAction") GoogleCloudRetailV2betaRuleFilterActionResponse filterAction,
+        @OutputCustomType.Parameter("ignoreAction") GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction,
+        @OutputCustomType.Parameter("onewaySynonymsAction") GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction,
+        @OutputCustomType.Parameter("redirectAction") GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction,
+        @OutputCustomType.Parameter("replacementAction") GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction,
+        @OutputCustomType.Parameter("twowaySynonymsAction") GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction) {
         this.boostAction = boostAction;
         this.condition = condition;
         this.doNotAssociateAction = doNotAssociateAction;

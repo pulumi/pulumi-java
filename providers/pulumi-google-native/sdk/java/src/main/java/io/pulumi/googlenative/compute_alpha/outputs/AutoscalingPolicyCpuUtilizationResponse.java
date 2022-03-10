@@ -21,10 +21,10 @@ public final class AutoscalingPolicyCpuUtilizationResponse {
      */
     private final Double utilizationTarget;
 
-    @OutputCustomType.Constructor({"predictiveMethod","utilizationTarget"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyCpuUtilizationResponse(
-        String predictiveMethod,
-        Double utilizationTarget) {
+        @OutputCustomType.Parameter("predictiveMethod") String predictiveMethod,
+        @OutputCustomType.Parameter("utilizationTarget") Double utilizationTarget) {
         this.predictiveMethod = predictiveMethod;
         this.utilizationTarget = utilizationTarget;
     }

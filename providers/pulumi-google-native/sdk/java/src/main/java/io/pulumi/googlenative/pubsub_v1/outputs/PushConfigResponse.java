@@ -27,11 +27,11 @@ public final class PushConfigResponse {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor({"attributes","oidcToken","pushEndpoint"})
+    @OutputCustomType.Constructor
     private PushConfigResponse(
-        Map<String,String> attributes,
-        OidcTokenResponse oidcToken,
-        String pushEndpoint) {
+        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
+        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
         this.pushEndpoint = pushEndpoint;

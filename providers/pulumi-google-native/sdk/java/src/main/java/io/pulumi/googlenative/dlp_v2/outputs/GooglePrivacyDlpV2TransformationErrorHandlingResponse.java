@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
      */
     private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
-    @OutputCustomType.Constructor({"leaveUntransformed","throwError"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TransformationErrorHandlingResponse(
-        GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
-        GooglePrivacyDlpV2ThrowErrorResponse throwError) {
+        @OutputCustomType.Parameter("leaveUntransformed") GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
+        @OutputCustomType.Parameter("throwError") GooglePrivacyDlpV2ThrowErrorResponse throwError) {
         this.leaveUntransformed = leaveUntransformed;
         this.throwError = throwError;
     }

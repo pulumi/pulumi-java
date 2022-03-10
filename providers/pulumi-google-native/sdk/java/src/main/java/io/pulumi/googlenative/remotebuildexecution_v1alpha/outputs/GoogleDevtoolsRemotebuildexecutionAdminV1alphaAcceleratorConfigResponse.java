@@ -20,10 +20,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(
-        String acceleratorCount,
-        String acceleratorType) {
+        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

@@ -32,12 +32,12 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
      */
     private final Boolean validateOnly;
 
-    @OutputCustomType.Constructor({"launchParameter","location","project","validateOnly"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
-        String location,
-        String project,
-        Boolean validateOnly) {
+        @OutputCustomType.Parameter("launchParameter") GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("validateOnly") Boolean validateOnly) {
         this.launchParameter = launchParameter;
         this.location = location;
         this.project = project;

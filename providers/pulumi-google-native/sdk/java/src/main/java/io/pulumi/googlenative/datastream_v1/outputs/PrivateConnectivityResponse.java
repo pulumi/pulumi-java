@@ -15,8 +15,8 @@ public final class PrivateConnectivityResponse {
      */
     private final String privateConnection;
 
-    @OutputCustomType.Constructor({"privateConnection"})
-    private PrivateConnectivityResponse(String privateConnection) {
+    @OutputCustomType.Constructor
+    private PrivateConnectivityResponse(@OutputCustomType.Parameter("privateConnection") String privateConnection) {
         this.privateConnection = privateConnection;
     }
 

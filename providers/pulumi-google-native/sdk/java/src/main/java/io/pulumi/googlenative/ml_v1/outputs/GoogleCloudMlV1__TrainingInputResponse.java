@@ -146,34 +146,34 @@ public final class GoogleCloudMlV1__TrainingInputResponse {
      */
     private final String workerType;
 
-    @OutputCustomType.Constructor({"args","enableWebAccess","encryptionConfig","evaluatorConfig","evaluatorCount","evaluatorType","hyperparameters","jobDir","masterConfig","masterType","network","packageUris","parameterServerConfig","parameterServerCount","parameterServerType","pythonModule","pythonVersion","region","runtimeVersion","scaleTier","scheduling","serviceAccount","useChiefInTfConfig","workerConfig","workerCount","workerType"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__TrainingInputResponse(
-        List<String> args,
-        Boolean enableWebAccess,
-        GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig,
-        GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig,
-        String evaluatorCount,
-        String evaluatorType,
-        GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters,
-        String jobDir,
-        GoogleCloudMlV1__ReplicaConfigResponse masterConfig,
-        String masterType,
-        String network,
-        List<String> packageUris,
-        GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig,
-        String parameterServerCount,
-        String parameterServerType,
-        String pythonModule,
-        String pythonVersion,
-        String region,
-        String runtimeVersion,
-        String scaleTier,
-        GoogleCloudMlV1__SchedulingResponse scheduling,
-        String serviceAccount,
-        Boolean useChiefInTfConfig,
-        GoogleCloudMlV1__ReplicaConfigResponse workerConfig,
-        String workerCount,
-        String workerType) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("enableWebAccess") Boolean enableWebAccess,
+        @OutputCustomType.Parameter("encryptionConfig") GoogleCloudMlV1__EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("evaluatorConfig") GoogleCloudMlV1__ReplicaConfigResponse evaluatorConfig,
+        @OutputCustomType.Parameter("evaluatorCount") String evaluatorCount,
+        @OutputCustomType.Parameter("evaluatorType") String evaluatorType,
+        @OutputCustomType.Parameter("hyperparameters") GoogleCloudMlV1__HyperparameterSpecResponse hyperparameters,
+        @OutputCustomType.Parameter("jobDir") String jobDir,
+        @OutputCustomType.Parameter("masterConfig") GoogleCloudMlV1__ReplicaConfigResponse masterConfig,
+        @OutputCustomType.Parameter("masterType") String masterType,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("packageUris") List<String> packageUris,
+        @OutputCustomType.Parameter("parameterServerConfig") GoogleCloudMlV1__ReplicaConfigResponse parameterServerConfig,
+        @OutputCustomType.Parameter("parameterServerCount") String parameterServerCount,
+        @OutputCustomType.Parameter("parameterServerType") String parameterServerType,
+        @OutputCustomType.Parameter("pythonModule") String pythonModule,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("scaleTier") String scaleTier,
+        @OutputCustomType.Parameter("scheduling") GoogleCloudMlV1__SchedulingResponse scheduling,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("useChiefInTfConfig") Boolean useChiefInTfConfig,
+        @OutputCustomType.Parameter("workerConfig") GoogleCloudMlV1__ReplicaConfigResponse workerConfig,
+        @OutputCustomType.Parameter("workerCount") String workerCount,
+        @OutputCustomType.Parameter("workerType") String workerType) {
         this.args = args;
         this.enableWebAccess = enableWebAccess;
         this.encryptionConfig = encryptionConfig;

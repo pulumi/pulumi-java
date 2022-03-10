@@ -48,15 +48,15 @@ public final class RuleResponse {
      */
     private final List<String> permissions;
 
-    @OutputCustomType.Constructor({"action","conditions","description","in","logConfig","notIn","permissions"})
+    @OutputCustomType.Constructor
     private RuleResponse(
-        String action,
-        List<ConditionResponse> conditions,
-        String description,
-        List<String> in,
-        List<LogConfigResponse> logConfig,
-        List<String> notIn,
-        List<String> permissions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("in") List<String> in,
+        @OutputCustomType.Parameter("logConfig") List<LogConfigResponse> logConfig,
+        @OutputCustomType.Parameter("notIn") List<String> notIn,
+        @OutputCustomType.Parameter("permissions") List<String> permissions) {
         this.action = action;
         this.conditions = conditions;
         this.description = description;

@@ -27,11 +27,11 @@ public final class SslCertificateManagedSslCertificateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"domainStatus","domains","status"})
+    @OutputCustomType.Constructor
     private SslCertificateManagedSslCertificateResponse(
-        Map<String,String> domainStatus,
-        List<String> domains,
-        String status) {
+        @OutputCustomType.Parameter("domainStatus") Map<String,String> domainStatus,
+        @OutputCustomType.Parameter("domains") List<String> domains,
+        @OutputCustomType.Parameter("status") String status) {
         this.domainStatus = domainStatus;
         this.domains = domains;
         this.status = status;

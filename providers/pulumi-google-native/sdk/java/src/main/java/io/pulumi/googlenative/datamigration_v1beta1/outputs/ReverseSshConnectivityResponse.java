@@ -31,12 +31,12 @@ public final class ReverseSshConnectivityResponse {
      */
     private final String vpc;
 
-    @OutputCustomType.Constructor({"vm","vmIp","vmPort","vpc"})
+    @OutputCustomType.Constructor
     private ReverseSshConnectivityResponse(
-        String vm,
-        String vmIp,
-        Integer vmPort,
-        String vpc) {
+        @OutputCustomType.Parameter("vm") String vm,
+        @OutputCustomType.Parameter("vmIp") String vmIp,
+        @OutputCustomType.Parameter("vmPort") Integer vmPort,
+        @OutputCustomType.Parameter("vpc") String vpc) {
         this.vm = vm;
         this.vmIp = vmIp;
         this.vmPort = vmPort;

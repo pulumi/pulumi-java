@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataAccessOptionsResponse {
     private final String logMode;
 
-    @OutputCustomType.Constructor({"logMode"})
-    private DataAccessOptionsResponse(String logMode) {
+    @OutputCustomType.Constructor
+    private DataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 

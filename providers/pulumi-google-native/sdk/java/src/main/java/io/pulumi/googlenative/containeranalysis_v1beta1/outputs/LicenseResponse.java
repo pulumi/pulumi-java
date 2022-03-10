@@ -20,10 +20,10 @@ public final class LicenseResponse {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"comments","expression"})
+    @OutputCustomType.Constructor
     private LicenseResponse(
-        String comments,
-        String expression) {
+        @OutputCustomType.Parameter("comments") String comments,
+        @OutputCustomType.Parameter("expression") String expression) {
         this.comments = comments;
         this.expression = expression;
     }

@@ -31,12 +31,12 @@ public final class EditAtomResponse {
      */
     private final String startTimeOffset;
 
-    @OutputCustomType.Constructor({"endTimeOffset","inputs","key","startTimeOffset"})
+    @OutputCustomType.Constructor
     private EditAtomResponse(
-        String endTimeOffset,
-        List<String> inputs,
-        String key,
-        String startTimeOffset) {
+        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @OutputCustomType.Parameter("inputs") List<String> inputs,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.inputs = inputs;
         this.key = key;

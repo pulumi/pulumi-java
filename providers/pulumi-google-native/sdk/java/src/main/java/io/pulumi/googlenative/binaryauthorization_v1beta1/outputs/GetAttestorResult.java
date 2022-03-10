@@ -31,12 +31,12 @@ public final class GetAttestorResult {
      */
     private final UserOwnedDrydockNoteResponse userOwnedDrydockNote;
 
-    @OutputCustomType.Constructor({"description","name","updateTime","userOwnedDrydockNote"})
+    @OutputCustomType.Constructor
     private GetAttestorResult(
-        String description,
-        String name,
-        String updateTime,
-        UserOwnedDrydockNoteResponse userOwnedDrydockNote) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("userOwnedDrydockNote") UserOwnedDrydockNoteResponse userOwnedDrydockNote) {
         this.description = description;
         this.name = name;
         this.updateTime = updateTime;

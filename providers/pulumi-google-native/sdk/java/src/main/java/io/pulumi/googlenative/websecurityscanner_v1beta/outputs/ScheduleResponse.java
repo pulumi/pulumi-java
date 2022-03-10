@@ -21,10 +21,10 @@ public final class ScheduleResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor({"intervalDurationDays","scheduleTime"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        Integer intervalDurationDays,
-        String scheduleTime) {
+        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }

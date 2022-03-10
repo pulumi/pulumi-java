@@ -36,13 +36,13 @@ public final class QueueStatsResponse {
      */
     private final String tasksCount;
 
-    @OutputCustomType.Constructor({"concurrentDispatchesCount","effectiveExecutionRate","executedLastMinuteCount","oldestEstimatedArrivalTime","tasksCount"})
+    @OutputCustomType.Constructor
     private QueueStatsResponse(
-        String concurrentDispatchesCount,
-        Double effectiveExecutionRate,
-        String executedLastMinuteCount,
-        String oldestEstimatedArrivalTime,
-        String tasksCount) {
+        @OutputCustomType.Parameter("concurrentDispatchesCount") String concurrentDispatchesCount,
+        @OutputCustomType.Parameter("effectiveExecutionRate") Double effectiveExecutionRate,
+        @OutputCustomType.Parameter("executedLastMinuteCount") String executedLastMinuteCount,
+        @OutputCustomType.Parameter("oldestEstimatedArrivalTime") String oldestEstimatedArrivalTime,
+        @OutputCustomType.Parameter("tasksCount") String tasksCount) {
         this.concurrentDispatchesCount = concurrentDispatchesCount;
         this.effectiveExecutionRate = effectiveExecutionRate;
         this.executedLastMinuteCount = executedLastMinuteCount;

@@ -16,8 +16,8 @@ public final class AndroidDeviceListResponse {
      */
     private final List<AndroidDeviceResponse> androidDevices;
 
-    @OutputCustomType.Constructor({"androidDevices"})
-    private AndroidDeviceListResponse(List<AndroidDeviceResponse> androidDevices) {
+    @OutputCustomType.Constructor
+    private AndroidDeviceListResponse(@OutputCustomType.Parameter("androidDevices") List<AndroidDeviceResponse> androidDevices) {
         this.androidDevices = androidDevices;
     }
 

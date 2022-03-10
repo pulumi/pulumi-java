@@ -36,13 +36,13 @@ public final class GetGroupResult {
      */
     private final String parentName;
 
-    @OutputCustomType.Constructor({"displayName","filter","isCluster","name","parentName"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String displayName,
-        String filter,
-        Boolean isCluster,
-        String name,
-        String parentName) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("isCluster") Boolean isCluster,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentName") String parentName) {
         this.displayName = displayName;
         this.filter = filter;
         this.isCluster = isCluster;

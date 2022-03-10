@@ -22,10 +22,10 @@ public final class ServiceSpecResponse {
      */
     private final List<TrafficTargetResponse> traffic;
 
-    @OutputCustomType.Constructor({"template","traffic"})
+    @OutputCustomType.Constructor
     private ServiceSpecResponse(
-        RevisionTemplateResponse template,
-        List<TrafficTargetResponse> traffic) {
+        @OutputCustomType.Parameter("template") RevisionTemplateResponse template,
+        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic) {
         this.template = template;
         this.traffic = traffic;
     }

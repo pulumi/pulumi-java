@@ -33,12 +33,12 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","destPorts","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleMatcherConfigResponse(
-        List<String> destIpRanges,
-        List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
-        List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
-        List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("destPorts") List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
+        @OutputCustomType.Parameter("layer4Configs") List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.destPorts = destPorts;
         this.layer4Configs = layer4Configs;

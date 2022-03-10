@@ -35,13 +35,13 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseUrl","name","project","state","type"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String databaseUrl,
-        String name,
-        String project,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseUrl = databaseUrl;
         this.name = name;
         this.project = project;

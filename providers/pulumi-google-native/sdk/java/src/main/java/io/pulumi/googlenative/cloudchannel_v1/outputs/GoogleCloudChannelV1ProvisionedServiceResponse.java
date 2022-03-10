@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
      */
     private final String skuId;
 
-    @OutputCustomType.Constructor({"productId","provisioningId","skuId"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ProvisionedServiceResponse(
-        String productId,
-        String provisioningId,
-        String skuId) {
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("provisioningId") String provisioningId,
+        @OutputCustomType.Parameter("skuId") String skuId) {
         this.productId = productId;
         this.provisioningId = provisioningId;
         this.skuId = skuId;

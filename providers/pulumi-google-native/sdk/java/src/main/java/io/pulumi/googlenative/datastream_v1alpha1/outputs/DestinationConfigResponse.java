@@ -21,10 +21,10 @@ public final class DestinationConfigResponse {
      */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
-    @OutputCustomType.Constructor({"destinationConnectionProfileName","gcsDestinationConfig"})
+    @OutputCustomType.Constructor
     private DestinationConfigResponse(
-        String destinationConnectionProfileName,
-        GcsDestinationConfigResponse gcsDestinationConfig) {
+        @OutputCustomType.Parameter("destinationConnectionProfileName") String destinationConnectionProfileName,
+        @OutputCustomType.Parameter("gcsDestinationConfig") GcsDestinationConfigResponse gcsDestinationConfig) {
         this.destinationConnectionProfileName = destinationConnectionProfileName;
         this.gcsDestinationConfig = gcsDestinationConfig;
     }

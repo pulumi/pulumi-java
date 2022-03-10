@@ -87,22 +87,22 @@ public final class GetWorkloadResult {
      */
     private final GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse;
 
-    @OutputCustomType.Constructor({"billingAccount","complianceRegime","createTime","displayName","enableSovereignControls","etag","kajEnrollmentState","kmsSettings","labels","name","provisionedResourcesParent","resourceSettings","resources","saaEnrollmentResponse"})
+    @OutputCustomType.Constructor
     private GetWorkloadResult(
-        String billingAccount,
-        String complianceRegime,
-        String createTime,
-        String displayName,
-        Boolean enableSovereignControls,
-        String etag,
-        String kajEnrollmentState,
-        GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings,
-        Map<String,String> labels,
-        String name,
-        String provisionedResourcesParent,
-        List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings,
-        List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources,
-        GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
+        @OutputCustomType.Parameter("billingAccount") String billingAccount,
+        @OutputCustomType.Parameter("complianceRegime") String complianceRegime,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableSovereignControls") Boolean enableSovereignControls,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kajEnrollmentState") String kajEnrollmentState,
+        @OutputCustomType.Parameter("kmsSettings") GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse kmsSettings,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisionedResourcesParent") String provisionedResourcesParent,
+        @OutputCustomType.Parameter("resourceSettings") List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse> resourceSettings,
+        @OutputCustomType.Parameter("resources") List<GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse> resources,
+        @OutputCustomType.Parameter("saaEnrollmentResponse") GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse saaEnrollmentResponse) {
         this.billingAccount = billingAccount;
         this.complianceRegime = complianceRegime;
         this.createTime = createTime;

@@ -25,11 +25,11 @@ public final class CloudRunResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"path","region","service"})
+    @OutputCustomType.Constructor
     private CloudRunResponse(
-        String path,
-        String region,
-        String service) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("service") String service) {
         this.path = path;
         this.region = region;
         this.service = service;

@@ -22,10 +22,10 @@ public final class ArtifactsResponse {
      */
     private final ArtifactObjectsResponse objects;
 
-    @OutputCustomType.Constructor({"images","objects"})
+    @OutputCustomType.Constructor
     private ArtifactsResponse(
-        List<String> images,
-        ArtifactObjectsResponse objects) {
+        @OutputCustomType.Parameter("images") List<String> images,
+        @OutputCustomType.Parameter("objects") ArtifactObjectsResponse objects) {
         this.images = images;
         this.objects = objects;
     }

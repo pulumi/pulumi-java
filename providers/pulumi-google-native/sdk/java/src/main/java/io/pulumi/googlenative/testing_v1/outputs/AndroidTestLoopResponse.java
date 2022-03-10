@@ -39,13 +39,13 @@ public final class AndroidTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor({"appApk","appBundle","appPackageId","scenarioLabels","scenarios"})
+    @OutputCustomType.Constructor
     private AndroidTestLoopResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        List<String> scenarioLabels,
-        List<Integer> scenarios) {
+        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @OutputCustomType.Parameter("appPackageId") String appPackageId,
+        @OutputCustomType.Parameter("scenarioLabels") List<String> scenarioLabels,
+        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;

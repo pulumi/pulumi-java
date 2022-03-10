@@ -38,13 +38,13 @@ public final class GetServiceResult {
      */
     private final ServiceStatusResponse status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String apiVersion,
-        String kind,
-        ObjectMetaResponse metadata,
-        ServiceSpecResponse spec,
-        ServiceStatusResponse status) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") ServiceSpecResponse spec,
+        @OutputCustomType.Parameter("status") ServiceStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

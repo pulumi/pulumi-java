@@ -26,11 +26,11 @@ public final class TpuConfigResponse {
      */
     private final Boolean useServiceNetworking;
 
-    @OutputCustomType.Constructor({"enabled","ipv4CidrBlock","useServiceNetworking"})
+    @OutputCustomType.Constructor
     private TpuConfigResponse(
-        Boolean enabled,
-        String ipv4CidrBlock,
-        Boolean useServiceNetworking) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("ipv4CidrBlock") String ipv4CidrBlock,
+        @OutputCustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
         this.enabled = enabled;
         this.ipv4CidrBlock = ipv4CidrBlock;
         this.useServiceNetworking = useServiceNetworking;

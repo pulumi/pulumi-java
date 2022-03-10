@@ -21,10 +21,10 @@ public final class Oauth2JwtBearerResponse {
      */
     private final JwtClaimsResponse jwtClaims;
 
-    @OutputCustomType.Constructor({"clientKey","jwtClaims"})
+    @OutputCustomType.Constructor
     private Oauth2JwtBearerResponse(
-        SecretResponse clientKey,
-        JwtClaimsResponse jwtClaims) {
+        @OutputCustomType.Parameter("clientKey") SecretResponse clientKey,
+        @OutputCustomType.Parameter("jwtClaims") JwtClaimsResponse jwtClaims) {
         this.clientKey = clientKey;
         this.jwtClaims = jwtClaims;
     }

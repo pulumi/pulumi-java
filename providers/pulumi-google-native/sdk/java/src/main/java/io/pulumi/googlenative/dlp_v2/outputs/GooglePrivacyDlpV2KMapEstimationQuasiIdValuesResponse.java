@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor({"estimatedAnonymity","quasiIdsValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(
-        String estimatedAnonymity,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @OutputCustomType.Parameter("estimatedAnonymity") String estimatedAnonymity,
+        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.estimatedAnonymity = estimatedAnonymity;
         this.quasiIdsValues = quasiIdsValues;
     }

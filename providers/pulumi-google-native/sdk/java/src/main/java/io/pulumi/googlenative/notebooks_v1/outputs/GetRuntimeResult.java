@@ -59,17 +59,17 @@ public final class GetRuntimeResult {
      */
     private final VirtualMachineResponse virtualMachine;
 
-    @OutputCustomType.Constructor({"accessConfig","createTime","healthState","metrics","name","softwareConfig","state","updateTime","virtualMachine"})
+    @OutputCustomType.Constructor
     private GetRuntimeResult(
-        RuntimeAccessConfigResponse accessConfig,
-        String createTime,
-        String healthState,
-        RuntimeMetricsResponse metrics,
-        String name,
-        RuntimeSoftwareConfigResponse softwareConfig,
-        String state,
-        String updateTime,
-        VirtualMachineResponse virtualMachine) {
+        @OutputCustomType.Parameter("accessConfig") RuntimeAccessConfigResponse accessConfig,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("healthState") String healthState,
+        @OutputCustomType.Parameter("metrics") RuntimeMetricsResponse metrics,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("softwareConfig") RuntimeSoftwareConfigResponse softwareConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("virtualMachine") VirtualMachineResponse virtualMachine) {
         this.accessConfig = accessConfig;
         this.createTime = createTime;
         this.healthState = healthState;

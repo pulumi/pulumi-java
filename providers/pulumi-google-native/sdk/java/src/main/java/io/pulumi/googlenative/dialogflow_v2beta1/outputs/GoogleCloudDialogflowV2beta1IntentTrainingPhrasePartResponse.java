@@ -31,12 +31,12 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
      */
     private final Boolean userDefined;
 
-    @OutputCustomType.Constructor({"alias","entityType","text","userDefined"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse(
-        String alias,
-        String entityType,
-        String text,
-        Boolean userDefined) {
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("userDefined") Boolean userDefined) {
         this.alias = alias;
         this.entityType = entityType;
         this.text = text;

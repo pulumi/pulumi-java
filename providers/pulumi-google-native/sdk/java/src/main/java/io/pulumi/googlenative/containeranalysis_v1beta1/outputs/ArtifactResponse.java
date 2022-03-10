@@ -21,10 +21,10 @@ public final class ArtifactResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"checksum","names"})
+    @OutputCustomType.Constructor
     private ArtifactResponse(
-        String checksum,
-        List<String> names) {
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.checksum = checksum;
         this.names = names;
     }

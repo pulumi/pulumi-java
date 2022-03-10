@@ -47,15 +47,15 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","displayName","labels","name","nodeCount","processingUnits","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String config,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        Integer nodeCount,
-        Integer processingUnits,
-        String state) {
+        @OutputCustomType.Parameter("config") String config,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("processingUnits") Integer processingUnits,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.displayName = displayName;
         this.labels = labels;

@@ -100,24 +100,24 @@ public final class GetNodePoolResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"autoscaling","conditions","config","initialNodeCount","instanceGroupUrls","locations","management","maxPodsConstraint","name","networkConfig","placementPolicy","podIpv4CidrSize","selfLink","status","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private GetNodePoolResult(
-        NodePoolAutoscalingResponse autoscaling,
-        List<StatusConditionResponse> conditions,
-        NodeConfigResponse config,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> locations,
-        NodeManagementResponse management,
-        MaxPodsConstraintResponse maxPodsConstraint,
-        String name,
-        NodeNetworkConfigResponse networkConfig,
-        PlacementPolicyResponse placementPolicy,
-        Integer podIpv4CidrSize,
-        String selfLink,
-        String status,
-        UpgradeSettingsResponse upgradeSettings,
-        String version) {
+        @OutputCustomType.Parameter("autoscaling") NodePoolAutoscalingResponse autoscaling,
+        @OutputCustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
+        @OutputCustomType.Parameter("config") NodeConfigResponse config,
+        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("management") NodeManagementResponse management,
+        @OutputCustomType.Parameter("maxPodsConstraint") MaxPodsConstraintResponse maxPodsConstraint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NodeNetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("placementPolicy") PlacementPolicyResponse placementPolicy,
+        @OutputCustomType.Parameter("podIpv4CidrSize") Integer podIpv4CidrSize,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings,
+        @OutputCustomType.Parameter("version") String version) {
         this.autoscaling = autoscaling;
         this.conditions = conditions;
         this.config = config;

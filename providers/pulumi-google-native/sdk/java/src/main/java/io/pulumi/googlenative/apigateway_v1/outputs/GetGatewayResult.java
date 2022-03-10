@@ -51,16 +51,16 @@ public final class GetGatewayResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"apiConfig","createTime","defaultHostname","displayName","labels","name","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        String apiConfig,
-        String createTime,
-        String defaultHostname,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("apiConfig") String apiConfig,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.apiConfig = apiConfig;
         this.createTime = createTime;
         this.defaultHostname = defaultHostname;

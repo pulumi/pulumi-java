@@ -26,11 +26,11 @@ public final class LocalDiskResponse {
      */
     private final String diskType;
 
-    @OutputCustomType.Constructor({"diskCount","diskSizeGb","diskType"})
+    @OutputCustomType.Constructor
     private LocalDiskResponse(
-        Integer diskCount,
-        Integer diskSizeGb,
-        String diskType) {
+        @OutputCustomType.Parameter("diskCount") Integer diskCount,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType) {
         this.diskCount = diskCount;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

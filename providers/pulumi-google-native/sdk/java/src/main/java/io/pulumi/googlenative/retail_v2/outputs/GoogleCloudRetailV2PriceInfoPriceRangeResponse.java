@@ -20,10 +20,10 @@ public final class GoogleCloudRetailV2PriceInfoPriceRangeResponse {
      */
     private final GoogleCloudRetailV2IntervalResponse price;
 
-    @OutputCustomType.Constructor({"originalPrice","price"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2PriceInfoPriceRangeResponse(
-        GoogleCloudRetailV2IntervalResponse originalPrice,
-        GoogleCloudRetailV2IntervalResponse price) {
+        @OutputCustomType.Parameter("originalPrice") GoogleCloudRetailV2IntervalResponse originalPrice,
+        @OutputCustomType.Parameter("price") GoogleCloudRetailV2IntervalResponse price) {
         this.originalPrice = originalPrice;
         this.price = price;
     }

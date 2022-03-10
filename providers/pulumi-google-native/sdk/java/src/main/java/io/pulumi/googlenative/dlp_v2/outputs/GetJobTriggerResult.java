@@ -64,18 +64,18 @@ public final class GetJobTriggerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","errors","inspectJob","lastRunTime","name","status","triggers","updateTime"})
+    @OutputCustomType.Constructor
     private GetJobTriggerResult(
-        String createTime,
-        String description,
-        String displayName,
-        List<GooglePrivacyDlpV2ErrorResponse> errors,
-        GooglePrivacyDlpV2InspectJobConfigResponse inspectJob,
-        String lastRunTime,
-        String name,
-        String status,
-        List<GooglePrivacyDlpV2TriggerResponse> triggers,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @OutputCustomType.Parameter("inspectJob") GooglePrivacyDlpV2InspectJobConfigResponse inspectJob,
+        @OutputCustomType.Parameter("lastRunTime") String lastRunTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("triggers") List<GooglePrivacyDlpV2TriggerResponse> triggers,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

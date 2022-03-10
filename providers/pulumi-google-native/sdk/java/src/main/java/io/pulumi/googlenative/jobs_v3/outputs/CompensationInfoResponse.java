@@ -27,11 +27,11 @@ public final class CompensationInfoResponse {
      */
     private final List<CompensationEntryResponse> entries;
 
-    @OutputCustomType.Constructor({"annualizedBaseCompensationRange","annualizedTotalCompensationRange","entries"})
+    @OutputCustomType.Constructor
     private CompensationInfoResponse(
-        CompensationRangeResponse annualizedBaseCompensationRange,
-        CompensationRangeResponse annualizedTotalCompensationRange,
-        List<CompensationEntryResponse> entries) {
+        @OutputCustomType.Parameter("annualizedBaseCompensationRange") CompensationRangeResponse annualizedBaseCompensationRange,
+        @OutputCustomType.Parameter("annualizedTotalCompensationRange") CompensationRangeResponse annualizedTotalCompensationRange,
+        @OutputCustomType.Parameter("entries") List<CompensationEntryResponse> entries) {
         this.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
         this.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
         this.entries = entries;

@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
      */
     private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
 
-    @OutputCustomType.Constructor({"operationConfigType","operationConfigs"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1GraphQLOperationGroupResponse(
-        String operationConfigType,
-        List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
+        @OutputCustomType.Parameter("operationConfigType") String operationConfigType,
+        @OutputCustomType.Parameter("operationConfigs") List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs) {
         this.operationConfigType = operationConfigType;
         this.operationConfigs = operationConfigs;
     }

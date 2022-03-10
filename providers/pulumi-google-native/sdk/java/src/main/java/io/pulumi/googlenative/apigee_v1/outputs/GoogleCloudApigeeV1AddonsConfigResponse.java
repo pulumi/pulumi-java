@@ -33,12 +33,12 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
      */
     private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
-    @OutputCustomType.Constructor({"advancedApiOpsConfig","connectorsPlatformConfig","integrationConfig","monetizationConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1AddonsConfigResponse(
-        GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
-        GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
-        GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
-        GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
+        @OutputCustomType.Parameter("advancedApiOpsConfig") GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
+        @OutputCustomType.Parameter("connectorsPlatformConfig") GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
+        @OutputCustomType.Parameter("integrationConfig") GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
+        @OutputCustomType.Parameter("monetizationConfig") GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
         this.advancedApiOpsConfig = advancedApiOpsConfig;
         this.connectorsPlatformConfig = connectorsPlatformConfig;
         this.integrationConfig = integrationConfig;

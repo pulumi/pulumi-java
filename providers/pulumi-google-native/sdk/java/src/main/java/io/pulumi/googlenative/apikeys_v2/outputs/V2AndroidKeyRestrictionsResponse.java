@@ -16,8 +16,8 @@ public final class V2AndroidKeyRestrictionsResponse {
      */
     private final List<V2AndroidApplicationResponse> allowedApplications;
 
-    @OutputCustomType.Constructor({"allowedApplications"})
-    private V2AndroidKeyRestrictionsResponse(List<V2AndroidApplicationResponse> allowedApplications) {
+    @OutputCustomType.Constructor
+    private V2AndroidKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedApplications") List<V2AndroidApplicationResponse> allowedApplications) {
         this.allowedApplications = allowedApplications;
     }
 

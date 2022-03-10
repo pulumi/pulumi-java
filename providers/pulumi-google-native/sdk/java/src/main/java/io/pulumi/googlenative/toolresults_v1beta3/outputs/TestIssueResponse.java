@@ -36,13 +36,13 @@ public final class TestIssueResponse {
      */
     private final AnyResponse warning;
 
-    @OutputCustomType.Constructor({"category","errorMessage","severity","type","warning"})
+    @OutputCustomType.Constructor
     private TestIssueResponse(
-        String category,
-        String errorMessage,
-        String severity,
-        String type,
-        AnyResponse warning) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("warning") AnyResponse warning) {
         this.category = category;
         this.errorMessage = errorMessage;
         this.severity = severity;

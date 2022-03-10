@@ -60,17 +60,17 @@ public final class TestExecutionResponse {
      */
     private final ToolResultsStepResponse toolResultsStep;
 
-    @OutputCustomType.Constructor({"environment","matrixId","project","shard","state","testDetails","testSpecification","timestamp","toolResultsStep"})
+    @OutputCustomType.Constructor
     private TestExecutionResponse(
-        EnvironmentResponse environment,
-        String matrixId,
-        String project,
-        ShardResponse shard,
-        String state,
-        TestDetailsResponse testDetails,
-        TestSpecificationResponse testSpecification,
-        String timestamp,
-        ToolResultsStepResponse toolResultsStep) {
+        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
+        @OutputCustomType.Parameter("matrixId") String matrixId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("shard") ShardResponse shard,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testDetails") TestDetailsResponse testDetails,
+        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("toolResultsStep") ToolResultsStepResponse toolResultsStep) {
         this.environment = environment;
         this.matrixId = matrixId;
         this.project = project;

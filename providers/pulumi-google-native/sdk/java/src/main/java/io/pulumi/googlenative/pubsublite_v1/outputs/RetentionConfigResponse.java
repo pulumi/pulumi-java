@@ -20,10 +20,10 @@ public final class RetentionConfigResponse {
      */
     private final String period;
 
-    @OutputCustomType.Constructor({"perPartitionBytes","period"})
+    @OutputCustomType.Constructor
     private RetentionConfigResponse(
-        String perPartitionBytes,
-        String period) {
+        @OutputCustomType.Parameter("perPartitionBytes") String perPartitionBytes,
+        @OutputCustomType.Parameter("period") String period) {
         this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }

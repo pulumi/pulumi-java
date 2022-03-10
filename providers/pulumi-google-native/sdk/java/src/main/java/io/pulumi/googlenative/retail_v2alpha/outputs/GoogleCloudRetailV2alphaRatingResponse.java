@@ -27,11 +27,11 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
      */
     private final List<Integer> ratingHistogram;
 
-    @OutputCustomType.Constructor({"averageRating","ratingCount","ratingHistogram"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaRatingResponse(
-        Double averageRating,
-        Integer ratingCount,
-        List<Integer> ratingHistogram) {
+        @OutputCustomType.Parameter("averageRating") Double averageRating,
+        @OutputCustomType.Parameter("ratingCount") Integer ratingCount,
+        @OutputCustomType.Parameter("ratingHistogram") List<Integer> ratingHistogram) {
         this.averageRating = averageRating;
         this.ratingCount = ratingCount;
         this.ratingHistogram = ratingHistogram;

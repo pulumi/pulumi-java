@@ -83,21 +83,21 @@ public final class GetTestMatrixResult {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor({"clientInfo","environmentMatrix","failFast","flakyTestAttempts","invalidMatrixDetails","outcomeSummary","project","resultStorage","state","testExecutions","testMatrixId","testSpecification","timestamp"})
+    @OutputCustomType.Constructor
     private GetTestMatrixResult(
-        ClientInfoResponse clientInfo,
-        EnvironmentMatrixResponse environmentMatrix,
-        Boolean failFast,
-        Integer flakyTestAttempts,
-        String invalidMatrixDetails,
-        String outcomeSummary,
-        String project,
-        ResultStorageResponse resultStorage,
-        String state,
-        List<TestExecutionResponse> testExecutions,
-        String testMatrixId,
-        TestSpecificationResponse testSpecification,
-        String timestamp) {
+        @OutputCustomType.Parameter("clientInfo") ClientInfoResponse clientInfo,
+        @OutputCustomType.Parameter("environmentMatrix") EnvironmentMatrixResponse environmentMatrix,
+        @OutputCustomType.Parameter("failFast") Boolean failFast,
+        @OutputCustomType.Parameter("flakyTestAttempts") Integer flakyTestAttempts,
+        @OutputCustomType.Parameter("invalidMatrixDetails") String invalidMatrixDetails,
+        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("resultStorage") ResultStorageResponse resultStorage,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testExecutions") List<TestExecutionResponse> testExecutions,
+        @OutputCustomType.Parameter("testMatrixId") String testMatrixId,
+        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @OutputCustomType.Parameter("timestamp") String timestamp) {
         this.clientInfo = clientInfo;
         this.environmentMatrix = environmentMatrix;
         this.failFast = failFast;

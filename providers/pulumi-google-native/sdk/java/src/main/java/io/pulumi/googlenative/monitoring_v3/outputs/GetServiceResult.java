@@ -68,18 +68,18 @@ public final class GetServiceResult {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor({"appEngine","cloudEndpoints","clusterIstio","custom","displayName","istioCanonicalService","meshIstio","name","telemetry","userLabels"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        AppEngineResponse appEngine,
-        CloudEndpointsResponse cloudEndpoints,
-        ClusterIstioResponse clusterIstio,
-        CustomResponse custom,
-        String displayName,
-        IstioCanonicalServiceResponse istioCanonicalService,
-        MeshIstioResponse meshIstio,
-        String name,
-        TelemetryResponse telemetry,
-        Map<String,String> userLabels) {
+        @OutputCustomType.Parameter("appEngine") AppEngineResponse appEngine,
+        @OutputCustomType.Parameter("cloudEndpoints") CloudEndpointsResponse cloudEndpoints,
+        @OutputCustomType.Parameter("clusterIstio") ClusterIstioResponse clusterIstio,
+        @OutputCustomType.Parameter("custom") CustomResponse custom,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("istioCanonicalService") IstioCanonicalServiceResponse istioCanonicalService,
+        @OutputCustomType.Parameter("meshIstio") MeshIstioResponse meshIstio,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("telemetry") TelemetryResponse telemetry,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.appEngine = appEngine;
         this.cloudEndpoints = cloudEndpoints;
         this.clusterIstio = clusterIstio;

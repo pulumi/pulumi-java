@@ -20,10 +20,10 @@ public final class SoftwareRecipeArtifactRemoteResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"checksum","uri"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeArtifactRemoteResponse(
-        String checksum,
-        String uri) {
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.checksum = checksum;
         this.uri = uri;
     }

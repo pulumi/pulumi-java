@@ -44,15 +44,15 @@ public final class ComplianceNoteResponse {
      */
     private final List<ComplianceVersionResponse> version;
 
-    @OutputCustomType.Constructor({"cisBenchmark","description","rationale","remediation","scanInstructions","title","version"})
+    @OutputCustomType.Constructor
     private ComplianceNoteResponse(
-        CisBenchmarkResponse cisBenchmark,
-        String description,
-        String rationale,
-        String remediation,
-        String scanInstructions,
-        String title,
-        List<ComplianceVersionResponse> version) {
+        @OutputCustomType.Parameter("cisBenchmark") CisBenchmarkResponse cisBenchmark,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("rationale") String rationale,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("scanInstructions") String scanInstructions,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("version") List<ComplianceVersionResponse> version) {
         this.cisBenchmark = cisBenchmark;
         this.description = description;
         this.rationale = rationale;

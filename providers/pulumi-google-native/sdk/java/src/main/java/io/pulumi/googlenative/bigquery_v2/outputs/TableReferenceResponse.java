@@ -25,11 +25,11 @@ public final class TableReferenceResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","project","tableId"})
+    @OutputCustomType.Constructor
     private TableReferenceResponse(
-        String datasetId,
-        String project,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.project = project;
         this.tableId = tableId;

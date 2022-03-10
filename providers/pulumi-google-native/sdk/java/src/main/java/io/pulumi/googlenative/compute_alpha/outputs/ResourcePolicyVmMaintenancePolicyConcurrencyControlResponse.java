@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
     private final Integer concurrencyLimit;
 
-    @OutputCustomType.Constructor({"concurrencyLimit"})
-    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(Integer concurrencyLimit) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(@OutputCustomType.Parameter("concurrencyLimit") Integer concurrencyLimit) {
         this.concurrencyLimit = concurrencyLimit;
     }
 

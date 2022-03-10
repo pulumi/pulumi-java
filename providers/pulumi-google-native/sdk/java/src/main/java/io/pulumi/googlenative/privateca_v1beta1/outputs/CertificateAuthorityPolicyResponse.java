@@ -51,15 +51,15 @@ public final class CertificateAuthorityPolicyResponse {
      */
     private final ReusableConfigWrapperResponse overwriteConfigValues;
 
-    @OutputCustomType.Constructor({"allowedCommonNames","allowedConfigList","allowedIssuanceModes","allowedLocationsAndOrganizations","allowedSans","maximumLifetime","overwriteConfigValues"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityPolicyResponse(
-        List<String> allowedCommonNames,
-        AllowedConfigListResponse allowedConfigList,
-        IssuanceModesResponse allowedIssuanceModes,
-        List<SubjectResponse> allowedLocationsAndOrganizations,
-        AllowedSubjectAltNamesResponse allowedSans,
-        String maximumLifetime,
-        ReusableConfigWrapperResponse overwriteConfigValues) {
+        @OutputCustomType.Parameter("allowedCommonNames") List<String> allowedCommonNames,
+        @OutputCustomType.Parameter("allowedConfigList") AllowedConfigListResponse allowedConfigList,
+        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedLocationsAndOrganizations") List<SubjectResponse> allowedLocationsAndOrganizations,
+        @OutputCustomType.Parameter("allowedSans") AllowedSubjectAltNamesResponse allowedSans,
+        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @OutputCustomType.Parameter("overwriteConfigValues") ReusableConfigWrapperResponse overwriteConfigValues) {
         this.allowedCommonNames = allowedCommonNames;
         this.allowedConfigList = allowedConfigList;
         this.allowedIssuanceModes = allowedIssuanceModes;

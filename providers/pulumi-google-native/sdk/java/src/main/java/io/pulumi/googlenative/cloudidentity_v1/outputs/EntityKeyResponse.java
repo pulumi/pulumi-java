@@ -15,8 +15,8 @@ public final class EntityKeyResponse {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"namespace"})
-    private EntityKeyResponse(String namespace) {
+    @OutputCustomType.Constructor
+    private EntityKeyResponse(@OutputCustomType.Parameter("namespace") String namespace) {
         this.namespace = namespace;
     }
 

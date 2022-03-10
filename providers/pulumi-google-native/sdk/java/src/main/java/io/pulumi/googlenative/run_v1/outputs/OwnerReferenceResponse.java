@@ -41,14 +41,14 @@ public final class OwnerReferenceResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"apiVersion","blockOwnerDeletion","controller","kind","name","uid"})
+    @OutputCustomType.Constructor
     private OwnerReferenceResponse(
-        String apiVersion,
-        Boolean blockOwnerDeletion,
-        Boolean controller,
-        String kind,
-        String name,
-        String uid) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("blockOwnerDeletion") Boolean blockOwnerDeletion,
+        @OutputCustomType.Parameter("controller") Boolean controller,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.apiVersion = apiVersion;
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;

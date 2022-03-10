@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesRespons
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor({"estimatedProbability","quasiIdsValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse(
-        Double estimatedProbability,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @OutputCustomType.Parameter("estimatedProbability") Double estimatedProbability,
+        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.estimatedProbability = estimatedProbability;
         this.quasiIdsValues = quasiIdsValues;
     }

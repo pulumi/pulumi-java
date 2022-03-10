@@ -27,11 +27,11 @@ public final class ServiceLevelIndicatorResponse {
      */
     private final WindowsBasedSliResponse windowsBased;
 
-    @OutputCustomType.Constructor({"basicSli","requestBased","windowsBased"})
+    @OutputCustomType.Constructor
     private ServiceLevelIndicatorResponse(
-        BasicSliResponse basicSli,
-        RequestBasedSliResponse requestBased,
-        WindowsBasedSliResponse windowsBased) {
+        @OutputCustomType.Parameter("basicSli") BasicSliResponse basicSli,
+        @OutputCustomType.Parameter("requestBased") RequestBasedSliResponse requestBased,
+        @OutputCustomType.Parameter("windowsBased") WindowsBasedSliResponse windowsBased) {
         this.basicSli = basicSli;
         this.requestBased = requestBased;
         this.windowsBased = windowsBased;

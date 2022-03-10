@@ -16,8 +16,8 @@ public final class FilterResponse {
      */
     private final List<String> eventType;
 
-    @OutputCustomType.Constructor({"eventType"})
-    private FilterResponse(List<String> eventType) {
+    @OutputCustomType.Constructor
+    private FilterResponse(@OutputCustomType.Parameter("eventType") List<String> eventType) {
         this.eventType = eventType;
     }
 

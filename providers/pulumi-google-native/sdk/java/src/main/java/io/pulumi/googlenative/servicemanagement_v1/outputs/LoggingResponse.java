@@ -21,10 +21,10 @@ public final class LoggingResponse {
      */
     private final List<LoggingDestinationResponse> producerDestinations;
 
-    @OutputCustomType.Constructor({"consumerDestinations","producerDestinations"})
+    @OutputCustomType.Constructor
     private LoggingResponse(
-        List<LoggingDestinationResponse> consumerDestinations,
-        List<LoggingDestinationResponse> producerDestinations) {
+        @OutputCustomType.Parameter("consumerDestinations") List<LoggingDestinationResponse> consumerDestinations,
+        @OutputCustomType.Parameter("producerDestinations") List<LoggingDestinationResponse> producerDestinations) {
         this.consumerDestinations = consumerDestinations;
         this.producerDestinations = producerDestinations;
     }

@@ -28,11 +28,11 @@ public final class PacketMirroringMirroredResourceInfoResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"instances","subnetworks","tags"})
+    @OutputCustomType.Constructor
     private PacketMirroringMirroredResourceInfoResponse(
-        List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
-        List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
-        List<String> tags) {
+        @OutputCustomType.Parameter("instances") List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
+        @OutputCustomType.Parameter("subnetworks") List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;

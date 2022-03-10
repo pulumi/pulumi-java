@@ -35,13 +35,13 @@ public final class GetDataCollectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdAt","description","lastModifiedAt","name","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectorResult(
-        String createdAt,
-        String description,
-        String lastModifiedAt,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdAt = createdAt;
         this.description = description;
         this.lastModifiedAt = lastModifiedAt;

@@ -81,20 +81,20 @@ public final class OrderedJobResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"hadoopJob","hiveJob","labels","pigJob","prerequisiteStepIds","prestoJob","pysparkJob","scheduling","sparkJob","sparkRJob","sparkSqlJob","stepId"})
+    @OutputCustomType.Constructor
     private OrderedJobResponse(
-        HadoopJobResponse hadoopJob,
-        HiveJobResponse hiveJob,
-        Map<String,String> labels,
-        PigJobResponse pigJob,
-        List<String> prerequisiteStepIds,
-        PrestoJobResponse prestoJob,
-        PySparkJobResponse pysparkJob,
-        JobSchedulingResponse scheduling,
-        SparkJobResponse sparkJob,
-        SparkRJobResponse sparkRJob,
-        SparkSqlJobResponse sparkSqlJob,
-        String stepId) {
+        @OutputCustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
+        @OutputCustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("pigJob") PigJobResponse pigJob,
+        @OutputCustomType.Parameter("prerequisiteStepIds") List<String> prerequisiteStepIds,
+        @OutputCustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
+        @OutputCustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
+        @OutputCustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
+        @OutputCustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
+        @OutputCustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
+        @OutputCustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.hadoopJob = hadoopJob;
         this.hiveJob = hiveJob;
         this.labels = labels;

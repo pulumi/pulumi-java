@@ -41,14 +41,14 @@ public final class ScriptStackFrameResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"endColumn","endLine","procedureId","startColumn","startLine","text"})
+    @OutputCustomType.Constructor
     private ScriptStackFrameResponse(
-        Integer endColumn,
-        Integer endLine,
-        String procedureId,
-        Integer startColumn,
-        Integer startLine,
-        String text) {
+        @OutputCustomType.Parameter("endColumn") Integer endColumn,
+        @OutputCustomType.Parameter("endLine") Integer endLine,
+        @OutputCustomType.Parameter("procedureId") String procedureId,
+        @OutputCustomType.Parameter("startColumn") Integer startColumn,
+        @OutputCustomType.Parameter("startLine") Integer startLine,
+        @OutputCustomType.Parameter("text") String text) {
         this.endColumn = endColumn;
         this.endLine = endLine;
         this.procedureId = procedureId;

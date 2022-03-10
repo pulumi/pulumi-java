@@ -25,11 +25,11 @@ public final class MirrorConfigResponse {
      */
     private final String webhookId;
 
-    @OutputCustomType.Constructor({"deployKeyId","url","webhookId"})
+    @OutputCustomType.Constructor
     private MirrorConfigResponse(
-        String deployKeyId,
-        String url,
-        String webhookId) {
+        @OutputCustomType.Parameter("deployKeyId") String deployKeyId,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("webhookId") String webhookId) {
         this.deployKeyId = deployKeyId;
         this.url = url;
         this.webhookId = webhookId;

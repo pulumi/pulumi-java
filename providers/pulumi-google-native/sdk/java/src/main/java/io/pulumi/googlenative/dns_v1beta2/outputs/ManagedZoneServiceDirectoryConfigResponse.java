@@ -17,10 +17,10 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
      */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
-    @OutputCustomType.Constructor({"kind","namespace"})
+    @OutputCustomType.Constructor
     private ManagedZoneServiceDirectoryConfigResponse(
-        String kind,
-        ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
         this.kind = kind;
         this.namespace = namespace;
     }

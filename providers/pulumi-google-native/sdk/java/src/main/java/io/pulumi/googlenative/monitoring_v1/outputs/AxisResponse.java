@@ -20,10 +20,10 @@ public final class AxisResponse {
      */
     private final String scale;
 
-    @OutputCustomType.Constructor({"label","scale"})
+    @OutputCustomType.Constructor
     private AxisResponse(
-        String label,
-        String scale) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("scale") String scale) {
         this.label = label;
         this.scale = scale;
     }

@@ -60,17 +60,17 @@ public final class GetSecretResult {
      */
     private final String ttl;
 
-    @OutputCustomType.Constructor({"createTime","etag","expireTime","labels","name","replication","rotation","topics","ttl"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        String etag,
-        String expireTime,
-        Map<String,String> labels,
-        String name,
-        ReplicationResponse replication,
-        RotationResponse rotation,
-        List<TopicResponse> topics,
-        String ttl) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("replication") ReplicationResponse replication,
+        @OutputCustomType.Parameter("rotation") RotationResponse rotation,
+        @OutputCustomType.Parameter("topics") List<TopicResponse> topics,
+        @OutputCustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.etag = etag;
         this.expireTime = expireTime;

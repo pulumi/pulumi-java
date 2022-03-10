@@ -91,23 +91,23 @@ public final class GetExperimentResult {
      */
     private final List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory;
 
-    @OutputCustomType.Constructor({"createTime","definition","description","displayName","endTime","experimentLength","lastUpdateTime","name","result","rolloutConfig","rolloutFailureReason","rolloutState","startTime","state","variantsHistory"})
+    @OutputCustomType.Constructor
     private GetExperimentResult(
-        String createTime,
-        GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
-        String description,
-        String displayName,
-        String endTime,
-        String experimentLength,
-        String lastUpdateTime,
-        String name,
-        GoogleCloudDialogflowCxV3ExperimentResultResponse result,
-        GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
-        String rolloutFailureReason,
-        GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
-        String startTime,
-        String state,
-        List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("definition") GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("experimentLength") String experimentLength,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("result") GoogleCloudDialogflowCxV3ExperimentResultResponse result,
+        @OutputCustomType.Parameter("rolloutConfig") GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
+        @OutputCustomType.Parameter("rolloutFailureReason") String rolloutFailureReason,
+        @OutputCustomType.Parameter("rolloutState") GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("variantsHistory") List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
         this.createTime = createTime;
         this.definition = definition;
         this.description = description;

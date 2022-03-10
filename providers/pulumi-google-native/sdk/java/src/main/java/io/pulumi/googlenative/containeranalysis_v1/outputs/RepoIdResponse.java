@@ -21,10 +21,10 @@ public final class RepoIdResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"projectRepoId","uid"})
+    @OutputCustomType.Constructor
     private RepoIdResponse(
-        ProjectRepoIdResponse projectRepoId,
-        String uid) {
+        @OutputCustomType.Parameter("projectRepoId") ProjectRepoIdResponse projectRepoId,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.projectRepoId = projectRepoId;
         this.uid = uid;
     }

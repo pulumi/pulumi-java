@@ -55,17 +55,17 @@ public final class GetHmacKeyResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor({"accessId","etag","kind","project","selfLink","serviceAccountEmail","state","timeCreated","updated"})
+    @OutputCustomType.Constructor
     private GetHmacKeyResult(
-        String accessId,
-        String etag,
-        String kind,
-        String project,
-        String selfLink,
-        String serviceAccountEmail,
-        String state,
-        String timeCreated,
-        String updated) {
+        @OutputCustomType.Parameter("accessId") String accessId,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("updated") String updated) {
         this.accessId = accessId;
         this.etag = etag;
         this.kind = kind;

@@ -33,12 +33,12 @@ public final class GetTemplateResult {
      */
     private final String templateType;
 
-    @OutputCustomType.Constructor({"metadata","runtimeMetadata","status","templateType"})
+    @OutputCustomType.Constructor
     private GetTemplateResult(
-        TemplateMetadataResponse metadata,
-        RuntimeMetadataResponse runtimeMetadata,
-        StatusResponse status,
-        String templateType) {
+        @OutputCustomType.Parameter("metadata") TemplateMetadataResponse metadata,
+        @OutputCustomType.Parameter("runtimeMetadata") RuntimeMetadataResponse runtimeMetadata,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("templateType") String templateType) {
         this.metadata = metadata;
         this.runtimeMetadata = runtimeMetadata;
         this.status = status;

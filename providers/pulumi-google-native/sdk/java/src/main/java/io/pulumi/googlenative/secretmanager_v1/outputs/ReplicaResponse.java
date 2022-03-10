@@ -21,10 +21,10 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption","location"})
+    @OutputCustomType.Constructor
     private ReplicaResponse(
-        CustomerManagedEncryptionResponse customerManagedEncryption,
-        String location) {
+        @OutputCustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption,
+        @OutputCustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }

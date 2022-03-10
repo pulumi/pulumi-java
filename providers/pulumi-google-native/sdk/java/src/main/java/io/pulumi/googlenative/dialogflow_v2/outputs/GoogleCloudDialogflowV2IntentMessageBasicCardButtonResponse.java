@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"openUriAction","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(
-        GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
-        String title) {
+        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
+        @OutputCustomType.Parameter("title") String title) {
         this.openUriAction = openUriAction;
         this.title = title;
     }

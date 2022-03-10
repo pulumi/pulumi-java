@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      */
     private final String trainingStep;
 
-    @OutputCustomType.Constructor({"objectiveValue","trainingStep"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(
-        Double objectiveValue,
-        String trainingStep) {
+        @OutputCustomType.Parameter("objectiveValue") Double objectiveValue,
+        @OutputCustomType.Parameter("trainingStep") String trainingStep) {
         this.objectiveValue = objectiveValue;
         this.trainingStep = trainingStep;
     }

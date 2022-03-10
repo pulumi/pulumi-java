@@ -43,14 +43,14 @@ public final class GetWebhookResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"disabled","displayName","genericWebService","name","serviceDirectory","timeout"})
+    @OutputCustomType.Constructor
     private GetWebhookResult(
-        Boolean disabled,
-        String displayName,
-        GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
-        String name,
-        GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory,
-        String timeout) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceDirectory") GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.disabled = disabled;
         this.displayName = displayName;
         this.genericWebService = genericWebService;

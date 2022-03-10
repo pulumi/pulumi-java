@@ -47,15 +47,15 @@ public final class MysqlColumnResponse {
      */
     private final Boolean primaryKey;
 
-    @OutputCustomType.Constructor({"collation","columnName","dataType","length","nullable","ordinalPosition","primaryKey"})
+    @OutputCustomType.Constructor
     private MysqlColumnResponse(
-        String collation,
-        String columnName,
-        String dataType,
-        Integer length,
-        Boolean nullable,
-        Integer ordinalPosition,
-        Boolean primaryKey) {
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("length") Integer length,
+        @OutputCustomType.Parameter("nullable") Boolean nullable,
+        @OutputCustomType.Parameter("ordinalPosition") Integer ordinalPosition,
+        @OutputCustomType.Parameter("primaryKey") Boolean primaryKey) {
         this.collation = collation;
         this.columnName = columnName;
         this.dataType = dataType;

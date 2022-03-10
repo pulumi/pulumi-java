@@ -138,31 +138,31 @@ public final class JobConfigurationQueryResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"allowLargeResults","clustering","connectionProperties","createDisposition","createSession","defaultDataset","destinationEncryptionConfiguration","destinationTable","flattenResults","maximumBillingTier","maximumBytesBilled","parameterMode","priority","query","queryParameters","rangePartitioning","schemaUpdateOptions","tableDefinitions","timePartitioning","useLegacySql","useQueryCache","userDefinedFunctionResources","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobConfigurationQueryResponse(
-        Boolean allowLargeResults,
-        ClusteringResponse clustering,
-        List<ConnectionPropertyResponse> connectionProperties,
-        String createDisposition,
-        Boolean createSession,
-        DatasetReferenceResponse defaultDataset,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        TableReferenceResponse destinationTable,
-        Boolean flattenResults,
-        Integer maximumBillingTier,
-        String maximumBytesBilled,
-        String parameterMode,
-        String priority,
-        String query,
-        List<QueryParameterResponse> queryParameters,
-        RangePartitioningResponse rangePartitioning,
-        List<String> schemaUpdateOptions,
-        Map<String,String> tableDefinitions,
-        TimePartitioningResponse timePartitioning,
-        Boolean useLegacySql,
-        Boolean useQueryCache,
-        List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("allowLargeResults") Boolean allowLargeResults,
+        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
+        @OutputCustomType.Parameter("connectionProperties") List<ConnectionPropertyResponse> connectionProperties,
+        @OutputCustomType.Parameter("createDisposition") String createDisposition,
+        @OutputCustomType.Parameter("createSession") Boolean createSession,
+        @OutputCustomType.Parameter("defaultDataset") DatasetReferenceResponse defaultDataset,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @OutputCustomType.Parameter("flattenResults") Boolean flattenResults,
+        @OutputCustomType.Parameter("maximumBillingTier") Integer maximumBillingTier,
+        @OutputCustomType.Parameter("maximumBytesBilled") String maximumBytesBilled,
+        @OutputCustomType.Parameter("parameterMode") String parameterMode,
+        @OutputCustomType.Parameter("priority") String priority,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("queryParameters") List<QueryParameterResponse> queryParameters,
+        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @OutputCustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
+        @OutputCustomType.Parameter("tableDefinitions") Map<String,String> tableDefinitions,
+        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @OutputCustomType.Parameter("useLegacySql") Boolean useLegacySql,
+        @OutputCustomType.Parameter("useQueryCache") Boolean useQueryCache,
+        @OutputCustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.clustering = clustering;
         this.connectionProperties = connectionProperties;

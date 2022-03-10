@@ -41,14 +41,14 @@ public final class GetDeidentifyTemplateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deidentifyConfig","description","displayName","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetDeidentifyTemplateResult(
-        String createTime,
-        GooglePrivacyDlpV2DeidentifyConfigResponse deidentifyConfig,
-        String description,
-        String displayName,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deidentifyConfig") GooglePrivacyDlpV2DeidentifyConfigResponse deidentifyConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deidentifyConfig = deidentifyConfig;
         this.description = description;

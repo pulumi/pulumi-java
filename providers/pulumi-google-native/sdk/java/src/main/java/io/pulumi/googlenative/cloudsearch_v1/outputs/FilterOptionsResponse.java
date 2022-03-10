@@ -21,10 +21,10 @@ public final class FilterOptionsResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"filter","objectType"})
+    @OutputCustomType.Constructor
     private FilterOptionsResponse(
-        FilterResponse filter,
-        String objectType) {
+        @OutputCustomType.Parameter("filter") FilterResponse filter,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.filter = filter;
         this.objectType = objectType;
     }

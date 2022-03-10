@@ -40,14 +40,14 @@ public final class X509CertificateDetailsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor({"expiryTime","issuer","publicKeyType","signatureAlgorithm","startTime","subject"})
+    @OutputCustomType.Constructor
     private X509CertificateDetailsResponse(
-        String expiryTime,
-        String issuer,
-        String publicKeyType,
-        String signatureAlgorithm,
-        String startTime,
-        String subject) {
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("publicKeyType") String publicKeyType,
+        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("subject") String subject) {
         this.expiryTime = expiryTime;
         this.issuer = issuer;
         this.publicKeyType = publicKeyType;

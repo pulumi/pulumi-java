@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"fullMatch","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaConditionQueryTermResponse(
-        Boolean fullMatch,
-        String value) {
+        @OutputCustomType.Parameter("fullMatch") Boolean fullMatch,
+        @OutputCustomType.Parameter("value") String value) {
         this.fullMatch = fullMatch;
         this.value = value;
     }

@@ -15,8 +15,8 @@ public final class PodSecurityPolicyConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private PodSecurityPolicyConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private PodSecurityPolicyConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

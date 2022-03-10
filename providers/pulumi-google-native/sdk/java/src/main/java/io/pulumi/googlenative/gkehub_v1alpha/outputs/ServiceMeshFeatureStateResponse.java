@@ -16,8 +16,8 @@ public final class ServiceMeshFeatureStateResponse {
      */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
-    @OutputCustomType.Constructor({"analysisMessages"})
-    private ServiceMeshFeatureStateResponse(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
+    @OutputCustomType.Constructor
+    private ServiceMeshFeatureStateResponse(@OutputCustomType.Parameter("analysisMessages") List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
         this.analysisMessages = analysisMessages;
     }
 

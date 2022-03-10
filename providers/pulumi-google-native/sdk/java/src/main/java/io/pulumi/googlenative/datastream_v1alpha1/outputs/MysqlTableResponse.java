@@ -22,10 +22,10 @@ public final class MysqlTableResponse {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"mysqlColumns","tableName"})
+    @OutputCustomType.Constructor
     private MysqlTableResponse(
-        List<MysqlColumnResponse> mysqlColumns,
-        String tableName) {
+        @OutputCustomType.Parameter("mysqlColumns") List<MysqlColumnResponse> mysqlColumns,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.mysqlColumns = mysqlColumns;
         this.tableName = tableName;
     }

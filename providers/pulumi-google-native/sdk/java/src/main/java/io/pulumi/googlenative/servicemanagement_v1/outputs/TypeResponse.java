@@ -44,14 +44,14 @@ public final class TypeResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor({"fields","name","oneofs","options","sourceContext","syntax"})
+    @OutputCustomType.Constructor
     private TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        List<String> oneofs,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax) {
+        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oneofs") List<String> oneofs,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @OutputCustomType.Parameter("syntax") String syntax) {
         this.fields = fields;
         this.name = name;
         this.oneofs = oneofs;

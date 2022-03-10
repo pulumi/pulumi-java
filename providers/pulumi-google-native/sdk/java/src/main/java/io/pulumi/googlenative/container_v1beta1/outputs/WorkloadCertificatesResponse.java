@@ -15,8 +15,8 @@ public final class WorkloadCertificatesResponse {
      */
     private final Boolean enableCertificates;
 
-    @OutputCustomType.Constructor({"enableCertificates"})
-    private WorkloadCertificatesResponse(Boolean enableCertificates) {
+    @OutputCustomType.Constructor
+    private WorkloadCertificatesResponse(@OutputCustomType.Parameter("enableCertificates") Boolean enableCertificates) {
         this.enableCertificates = enableCertificates;
     }
 

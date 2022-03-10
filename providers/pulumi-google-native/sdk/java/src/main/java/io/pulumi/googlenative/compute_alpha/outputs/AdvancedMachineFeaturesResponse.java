@@ -36,13 +36,13 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer visibleCoreCount;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","numaNodeCount","threadsPerCore","visibleCoreCount"})
+    @OutputCustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        Boolean enableNestedVirtualization,
-        Boolean enableUefiNetworking,
-        Integer numaNodeCount,
-        Integer threadsPerCore,
-        Integer visibleCoreCount) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @OutputCustomType.Parameter("numaNodeCount") Integer numaNodeCount,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore,
+        @OutputCustomType.Parameter("visibleCoreCount") Integer visibleCoreCount) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.numaNodeCount = numaNodeCount;

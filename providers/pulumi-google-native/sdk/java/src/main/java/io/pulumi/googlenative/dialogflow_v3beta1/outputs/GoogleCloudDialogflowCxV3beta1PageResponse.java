@@ -50,15 +50,15 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor({"displayName","entryFulfillment","eventHandlers","form","name","transitionRouteGroups","transitionRoutes"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1PageResponse(
-        String displayName,
-        GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment,
-        List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers,
-        GoogleCloudDialogflowCxV3beta1FormResponse form,
-        String name,
-        List<String> transitionRouteGroups,
-        List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("entryFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment,
+        @OutputCustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers,
+        @OutputCustomType.Parameter("form") GoogleCloudDialogflowCxV3beta1FormResponse form,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
+        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
         this.displayName = displayName;
         this.entryFulfillment = entryFulfillment;
         this.eventHandlers = eventHandlers;

@@ -15,8 +15,8 @@ public final class FeatureResourceStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private FeatureResourceStateResponse(String state) {
+    @OutputCustomType.Constructor
+    private FeatureResourceStateResponse(@OutputCustomType.Parameter("state") String state) {
         this.state = state;
     }
 

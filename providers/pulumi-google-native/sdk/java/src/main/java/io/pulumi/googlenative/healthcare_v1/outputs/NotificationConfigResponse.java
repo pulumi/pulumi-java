@@ -15,8 +15,8 @@ public final class NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"pubsubTopic"})
-    private NotificationConfigResponse(String pubsubTopic) {
+    @OutputCustomType.Constructor
+    private NotificationConfigResponse(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 

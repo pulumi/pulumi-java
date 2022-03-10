@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
      */
     private final Double samplingRate;
 
-    @OutputCustomType.Constructor({"sampler","samplingRate"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1TraceSamplingConfigResponse(
-        String sampler,
-        Double samplingRate) {
+        @OutputCustomType.Parameter("sampler") String sampler,
+        @OutputCustomType.Parameter("samplingRate") Double samplingRate) {
         this.sampler = sampler;
         this.samplingRate = samplingRate;
     }

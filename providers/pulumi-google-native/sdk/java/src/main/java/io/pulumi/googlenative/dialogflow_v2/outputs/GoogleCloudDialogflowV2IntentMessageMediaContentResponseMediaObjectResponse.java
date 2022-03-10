@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"contentUrl","description","icon","largeImage","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse(
-        String contentUrl,
-        String description,
-        GoogleCloudDialogflowV2IntentMessageImageResponse icon,
-        GoogleCloudDialogflowV2IntentMessageImageResponse largeImage,
-        String name) {
+        @OutputCustomType.Parameter("contentUrl") String contentUrl,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("icon") GoogleCloudDialogflowV2IntentMessageImageResponse icon,
+        @OutputCustomType.Parameter("largeImage") GoogleCloudDialogflowV2IntentMessageImageResponse largeImage,
+        @OutputCustomType.Parameter("name") String name) {
         this.contentUrl = contentUrl;
         this.description = description;
         this.icon = icon;

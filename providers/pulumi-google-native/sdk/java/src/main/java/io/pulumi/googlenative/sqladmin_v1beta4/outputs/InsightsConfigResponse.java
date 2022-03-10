@@ -36,13 +36,13 @@ public final class InsightsConfigResponse {
      */
     private final Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor({"queryInsightsEnabled","queryPlansPerMinute","queryStringLength","recordApplicationTags","recordClientAddress"})
+    @OutputCustomType.Constructor
     private InsightsConfigResponse(
-        Boolean queryInsightsEnabled,
-        Integer queryPlansPerMinute,
-        Integer queryStringLength,
-        Boolean recordApplicationTags,
-        Boolean recordClientAddress) {
+        @OutputCustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
+        @OutputCustomType.Parameter("queryPlansPerMinute") Integer queryPlansPerMinute,
+        @OutputCustomType.Parameter("queryStringLength") Integer queryStringLength,
+        @OutputCustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
+        @OutputCustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryPlansPerMinute = queryPlansPerMinute;
         this.queryStringLength = queryStringLength;

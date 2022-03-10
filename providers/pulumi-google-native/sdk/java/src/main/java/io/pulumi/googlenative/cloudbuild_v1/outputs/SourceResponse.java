@@ -27,11 +27,11 @@ public final class SourceResponse {
      */
     private final StorageSourceManifestResponse storageSourceManifest;
 
-    @OutputCustomType.Constructor({"repoSource","storageSource","storageSourceManifest"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource,
-        StorageSourceManifestResponse storageSourceManifest) {
+        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource,
+        @OutputCustomType.Parameter("storageSourceManifest") StorageSourceManifestResponse storageSourceManifest) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
         this.storageSourceManifest = storageSourceManifest;

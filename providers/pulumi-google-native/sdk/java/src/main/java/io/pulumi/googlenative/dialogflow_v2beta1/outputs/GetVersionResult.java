@@ -36,13 +36,13 @@ public final class GetVersionResult {
      */
     private final Integer versionNumber;
 
-    @OutputCustomType.Constructor({"createTime","description","name","status","versionNumber"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        String createTime,
-        String description,
-        String name,
-        String status,
-        Integer versionNumber) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("versionNumber") Integer versionNumber) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

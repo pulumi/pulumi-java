@@ -15,8 +15,8 @@ public final class ConfigConnectorConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ConfigConnectorConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ConfigConnectorConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

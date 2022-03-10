@@ -21,10 +21,10 @@ public final class PatchRolloutResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"disruptionBudget","mode"})
+    @OutputCustomType.Constructor
     private PatchRolloutResponse(
-        FixedOrPercentResponse disruptionBudget,
-        String mode) {
+        @OutputCustomType.Parameter("disruptionBudget") FixedOrPercentResponse disruptionBudget,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.disruptionBudget = disruptionBudget;
         this.mode = mode;
     }

@@ -62,18 +62,18 @@ public final class HttpRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"additionalBindings","body","custom","delete","get","patch","post","put","responseBody","selector"})
+    @OutputCustomType.Constructor
     private HttpRuleResponse(
-        List<HttpRuleResponse> additionalBindings,
-        String body,
-        CustomHttpPatternResponse custom,
-        String delete,
-        String get,
-        String patch,
-        String post,
-        String put,
-        String responseBody,
-        String selector) {
+        @OutputCustomType.Parameter("additionalBindings") List<HttpRuleResponse> additionalBindings,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("custom") CustomHttpPatternResponse custom,
+        @OutputCustomType.Parameter("delete") String delete,
+        @OutputCustomType.Parameter("get") String get,
+        @OutputCustomType.Parameter("patch") String patch,
+        @OutputCustomType.Parameter("post") String post,
+        @OutputCustomType.Parameter("put") String put,
+        @OutputCustomType.Parameter("responseBody") String responseBody,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.additionalBindings = additionalBindings;
         this.body = body;
         this.custom = custom;

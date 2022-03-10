@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceGooGetResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OSPolicyResourcePackageResourceGooGetResponse(String name) {
+    @OutputCustomType.Constructor
+    private OSPolicyResourcePackageResourceGooGetResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

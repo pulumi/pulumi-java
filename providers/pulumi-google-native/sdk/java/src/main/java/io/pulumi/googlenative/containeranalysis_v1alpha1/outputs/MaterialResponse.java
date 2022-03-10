@@ -21,10 +21,10 @@ public final class MaterialResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"digest","uri"})
+    @OutputCustomType.Constructor
     private MaterialResponse(
-        Map<String,String> digest,
-        String uri) {
+        @OutputCustomType.Parameter("digest") Map<String,String> digest,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.digest = digest;
         this.uri = uri;
     }

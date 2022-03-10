@@ -27,13 +27,13 @@ public final class InTotoStatementResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"predicateType","provenance","slsaProvenance","subject","type"})
+    @OutputCustomType.Constructor
     private InTotoStatementResponse(
-        String predicateType,
-        InTotoProvenanceResponse provenance,
-        SlsaProvenanceResponse slsaProvenance,
-        List<SubjectResponse> subject,
-        String type) {
+        @OutputCustomType.Parameter("predicateType") String predicateType,
+        @OutputCustomType.Parameter("provenance") InTotoProvenanceResponse provenance,
+        @OutputCustomType.Parameter("slsaProvenance") SlsaProvenanceResponse slsaProvenance,
+        @OutputCustomType.Parameter("subject") List<SubjectResponse> subject,
+        @OutputCustomType.Parameter("type") String type) {
         this.predicateType = predicateType;
         this.provenance = provenance;
         this.slsaProvenance = slsaProvenance;

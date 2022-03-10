@@ -21,10 +21,10 @@ public final class PhraseResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"boost","value"})
+    @OutputCustomType.Constructor
     private PhraseResponse(
-        Double boost,
-        String value) {
+        @OutputCustomType.Parameter("boost") Double boost,
+        @OutputCustomType.Parameter("value") String value) {
         this.boost = boost;
         this.value = value;
     }

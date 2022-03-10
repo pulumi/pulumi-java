@@ -25,11 +25,11 @@ public final class ComponentSourceResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"name","originalTransformOrCollection","userName"})
+    @OutputCustomType.Constructor
     private ComponentSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String userName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originalTransformOrCollection") String originalTransformOrCollection,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransformOrCollection = originalTransformOrCollection;
         this.userName = userName;

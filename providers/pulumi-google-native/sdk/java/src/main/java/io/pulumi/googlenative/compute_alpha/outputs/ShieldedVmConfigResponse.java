@@ -25,11 +25,11 @@ public final class ShieldedVmConfigResponse {
      */
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
+    @OutputCustomType.Constructor
     private ShieldedVmConfigResponse(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot,
-        Boolean enableVtpm) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

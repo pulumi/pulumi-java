@@ -36,13 +36,13 @@ public final class ForwardSshTunnelConnectivityResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"hostname","password","port","privateKey","username"})
+    @OutputCustomType.Constructor
     private ForwardSshTunnelConnectivityResponse(
-        String hostname,
-        String password,
-        Integer port,
-        String privateKey,
-        String username) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;

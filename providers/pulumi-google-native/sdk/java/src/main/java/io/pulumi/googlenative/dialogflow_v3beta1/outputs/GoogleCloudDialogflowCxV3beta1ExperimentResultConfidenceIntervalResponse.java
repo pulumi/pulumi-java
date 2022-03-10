@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor({"confidenceLevel","lowerBound","ratio","upperBound"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse(
-        Double confidenceLevel,
-        Double lowerBound,
-        Double ratio,
-        Double upperBound) {
+        @OutputCustomType.Parameter("confidenceLevel") Double confidenceLevel,
+        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
+        @OutputCustomType.Parameter("ratio") Double ratio,
+        @OutputCustomType.Parameter("upperBound") Double upperBound) {
         this.confidenceLevel = confidenceLevel;
         this.lowerBound = lowerBound;
         this.ratio = ratio;

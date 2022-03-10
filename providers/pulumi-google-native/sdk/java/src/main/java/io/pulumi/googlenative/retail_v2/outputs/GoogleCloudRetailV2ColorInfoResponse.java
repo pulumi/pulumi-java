@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2ColorInfoResponse {
      */
     private final List<String> colors;
 
-    @OutputCustomType.Constructor({"colorFamilies","colors"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2ColorInfoResponse(
-        List<String> colorFamilies,
-        List<String> colors) {
+        @OutputCustomType.Parameter("colorFamilies") List<String> colorFamilies,
+        @OutputCustomType.Parameter("colors") List<String> colors) {
         this.colorFamilies = colorFamilies;
         this.colors = colors;
     }

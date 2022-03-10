@@ -25,11 +25,11 @@ public final class BitbucketServerSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor({"adminAccessTokenVersionName","readAccessTokenVersionName","webhookSecretVersionName"})
+    @OutputCustomType.Constructor
     private BitbucketServerSecretsResponse(
-        String adminAccessTokenVersionName,
-        String readAccessTokenVersionName,
-        String webhookSecretVersionName) {
+        @OutputCustomType.Parameter("adminAccessTokenVersionName") String adminAccessTokenVersionName,
+        @OutputCustomType.Parameter("readAccessTokenVersionName") String readAccessTokenVersionName,
+        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.adminAccessTokenVersionName = adminAccessTokenVersionName;
         this.readAccessTokenVersionName = readAccessTokenVersionName;
         this.webhookSecretVersionName = webhookSecretVersionName;

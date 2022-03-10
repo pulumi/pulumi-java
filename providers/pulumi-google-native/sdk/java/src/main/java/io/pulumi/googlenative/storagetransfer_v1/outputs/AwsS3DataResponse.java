@@ -31,12 +31,12 @@ public final class AwsS3DataResponse {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"awsAccessKey","bucketName","path","roleArn"})
+    @OutputCustomType.Constructor
     private AwsS3DataResponse(
-        AwsAccessKeyResponse awsAccessKey,
-        String bucketName,
-        String path,
-        String roleArn) {
+        @OutputCustomType.Parameter("awsAccessKey") AwsAccessKeyResponse awsAccessKey,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.path = path;

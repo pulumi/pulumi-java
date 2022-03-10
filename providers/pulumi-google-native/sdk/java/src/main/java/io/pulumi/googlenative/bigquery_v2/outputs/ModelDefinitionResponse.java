@@ -22,10 +22,10 @@ public final class ModelDefinitionResponse {
      */
     private final List<BqmlTrainingRunResponse> trainingRuns;
 
-    @OutputCustomType.Constructor({"modelOptions","trainingRuns"})
+    @OutputCustomType.Constructor
     private ModelDefinitionResponse(
-        ModelDefinitionModelOptionsResponse modelOptions,
-        List<BqmlTrainingRunResponse> trainingRuns) {
+        @OutputCustomType.Parameter("modelOptions") ModelDefinitionModelOptionsResponse modelOptions,
+        @OutputCustomType.Parameter("trainingRuns") List<BqmlTrainingRunResponse> trainingRuns) {
         this.modelOptions = modelOptions;
         this.trainingRuns = trainingRuns;
     }

@@ -27,11 +27,11 @@ public final class SoftwareRecipeStepInstallMsiResponse {
      */
     private final List<String> flags;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","artifactId","flags"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepInstallMsiResponse(
-        List<Integer> allowedExitCodes,
-        String artifactId,
-        List<String> flags) {
+        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("flags") List<String> flags) {
         this.allowedExitCodes = allowedExitCodes;
         this.artifactId = artifactId;
         this.flags = flags;

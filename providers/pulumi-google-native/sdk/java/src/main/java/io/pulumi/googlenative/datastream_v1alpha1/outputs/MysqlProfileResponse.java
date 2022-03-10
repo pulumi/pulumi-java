@@ -37,13 +37,13 @@ public final class MysqlProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"hostname","password","port","sslConfig","username"})
+    @OutputCustomType.Constructor
     private MysqlProfileResponse(
-        String hostname,
-        String password,
-        Integer port,
-        MysqlSslConfigResponse sslConfig,
-        String username) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("sslConfig") MysqlSslConfigResponse sslConfig,
+        @OutputCustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;

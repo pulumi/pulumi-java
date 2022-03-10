@@ -20,10 +20,10 @@ public final class ManagementSettingsResponse {
      */
     private final String transferLockState;
 
-    @OutputCustomType.Constructor({"renewalMethod","transferLockState"})
+    @OutputCustomType.Constructor
     private ManagementSettingsResponse(
-        String renewalMethod,
-        String transferLockState) {
+        @OutputCustomType.Parameter("renewalMethod") String renewalMethod,
+        @OutputCustomType.Parameter("transferLockState") String transferLockState) {
         this.renewalMethod = renewalMethod;
         this.transferLockState = transferLockState;
     }

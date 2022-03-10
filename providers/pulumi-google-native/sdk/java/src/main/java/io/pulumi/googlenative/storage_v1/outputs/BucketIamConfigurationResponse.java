@@ -27,11 +27,11 @@ public final class BucketIamConfigurationResponse {
      */
     private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
-    @OutputCustomType.Constructor({"bucketPolicyOnly","publicAccessPrevention","uniformBucketLevelAccess"})
+    @OutputCustomType.Constructor
     private BucketIamConfigurationResponse(
-        BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
-        String publicAccessPrevention,
-        BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
+        @OutputCustomType.Parameter("bucketPolicyOnly") BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
+        @OutputCustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
+        @OutputCustomType.Parameter("uniformBucketLevelAccess") BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
         this.bucketPolicyOnly = bucketPolicyOnly;
         this.publicAccessPrevention = publicAccessPrevention;
         this.uniformBucketLevelAccess = uniformBucketLevelAccess;

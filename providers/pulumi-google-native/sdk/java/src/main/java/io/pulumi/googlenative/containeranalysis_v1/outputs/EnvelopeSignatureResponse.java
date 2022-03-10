@@ -12,10 +12,10 @@ public final class EnvelopeSignatureResponse {
     private final String keyid;
     private final String sig;
 
-    @OutputCustomType.Constructor({"keyid","sig"})
+    @OutputCustomType.Constructor
     private EnvelopeSignatureResponse(
-        String keyid,
-        String sig) {
+        @OutputCustomType.Parameter("keyid") String keyid,
+        @OutputCustomType.Parameter("sig") String sig) {
         this.keyid = keyid;
         this.sig = sig;
     }

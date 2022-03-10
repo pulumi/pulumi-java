@@ -51,16 +51,16 @@ public final class VmUtilizationMetricsResponse {
      */
     private final String networkThroughputMaxKbps;
 
-    @OutputCustomType.Constructor({"cpuAveragePercent","cpuMaxPercent","diskIoRateAverageKbps","diskIoRateMaxKbps","memoryAveragePercent","memoryMaxPercent","networkThroughputAverageKbps","networkThroughputMaxKbps"})
+    @OutputCustomType.Constructor
     private VmUtilizationMetricsResponse(
-        Integer cpuAveragePercent,
-        Integer cpuMaxPercent,
-        String diskIoRateAverageKbps,
-        String diskIoRateMaxKbps,
-        Integer memoryAveragePercent,
-        Integer memoryMaxPercent,
-        String networkThroughputAverageKbps,
-        String networkThroughputMaxKbps) {
+        @OutputCustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
+        @OutputCustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
+        @OutputCustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
+        @OutputCustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
+        @OutputCustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
+        @OutputCustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
+        @OutputCustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
+        @OutputCustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
         this.cpuAveragePercent = cpuAveragePercent;
         this.cpuMaxPercent = cpuMaxPercent;
         this.diskIoRateAverageKbps = diskIoRateAverageKbps;

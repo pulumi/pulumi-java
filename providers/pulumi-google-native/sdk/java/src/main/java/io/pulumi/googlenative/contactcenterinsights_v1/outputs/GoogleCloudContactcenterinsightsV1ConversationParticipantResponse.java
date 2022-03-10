@@ -30,12 +30,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"dialogflowParticipantName","obfuscatedExternalUserId","role","userId"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(
-        String dialogflowParticipantName,
-        String obfuscatedExternalUserId,
-        String role,
-        String userId) {
+        @OutputCustomType.Parameter("dialogflowParticipantName") String dialogflowParticipantName,
+        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.dialogflowParticipantName = dialogflowParticipantName;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         this.role = role;

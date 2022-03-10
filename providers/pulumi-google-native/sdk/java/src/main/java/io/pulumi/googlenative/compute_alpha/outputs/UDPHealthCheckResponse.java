@@ -31,12 +31,12 @@ public final class UDPHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor({"port","portName","request","response"})
+    @OutputCustomType.Constructor
     private UDPHealthCheckResponse(
-        Integer port,
-        String portName,
-        String request,
-        String response) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.request = request;

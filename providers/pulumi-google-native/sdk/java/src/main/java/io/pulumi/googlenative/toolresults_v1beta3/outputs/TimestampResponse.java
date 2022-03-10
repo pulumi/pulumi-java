@@ -21,10 +21,10 @@ public final class TimestampResponse {
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private TimestampResponse(
-        Integer nanos,
-        String seconds) {
+        @OutputCustomType.Parameter("nanos") Integer nanos,
+        @OutputCustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

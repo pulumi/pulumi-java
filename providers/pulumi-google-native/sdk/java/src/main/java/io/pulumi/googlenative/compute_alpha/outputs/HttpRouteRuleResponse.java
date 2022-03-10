@@ -62,17 +62,17 @@ public final class HttpRouteRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor({"description","headerAction","httpFilterConfigs","httpFilterMetadata","matchRules","priority","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private HttpRouteRuleResponse(
-        String description,
-        HttpHeaderActionResponse headerAction,
-        List<HttpFilterConfigResponse> httpFilterConfigs,
-        List<HttpFilterConfigResponse> httpFilterMetadata,
-        List<HttpRouteRuleMatchResponse> matchRules,
-        Integer priority,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("httpFilterConfigs") List<HttpFilterConfigResponse> httpFilterConfigs,
+        @OutputCustomType.Parameter("httpFilterMetadata") List<HttpFilterConfigResponse> httpFilterMetadata,
+        @OutputCustomType.Parameter("matchRules") List<HttpRouteRuleMatchResponse> matchRules,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.httpFilterConfigs = httpFilterConfigs;

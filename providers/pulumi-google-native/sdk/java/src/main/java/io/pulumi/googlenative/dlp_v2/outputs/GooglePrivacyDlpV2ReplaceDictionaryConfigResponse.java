@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse {
      */
     private final GooglePrivacyDlpV2WordListResponse wordList;
 
-    @OutputCustomType.Constructor({"wordList"})
-    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(GooglePrivacyDlpV2WordListResponse wordList) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(@OutputCustomType.Parameter("wordList") GooglePrivacyDlpV2WordListResponse wordList) {
         this.wordList = wordList;
     }
 

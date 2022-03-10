@@ -70,19 +70,19 @@ public final class GetCertificateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"certificateDescription","config","createTime","labels","lifetime","name","pemCertificate","pemCertificateChain","pemCsr","revocationDetails","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        CertificateDescriptionResponse certificateDescription,
-        CertificateConfigResponse config,
-        String createTime,
-        Map<String,String> labels,
-        String lifetime,
-        String name,
-        String pemCertificate,
-        List<String> pemCertificateChain,
-        String pemCsr,
-        RevocationDetailsResponse revocationDetails,
-        String updateTime) {
+        @OutputCustomType.Parameter("certificateDescription") CertificateDescriptionResponse certificateDescription,
+        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pemCertificate") String pemCertificate,
+        @OutputCustomType.Parameter("pemCertificateChain") List<String> pemCertificateChain,
+        @OutputCustomType.Parameter("pemCsr") String pemCsr,
+        @OutputCustomType.Parameter("revocationDetails") RevocationDetailsResponse revocationDetails,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.certificateDescription = certificateDescription;
         this.config = config;
         this.createTime = createTime;

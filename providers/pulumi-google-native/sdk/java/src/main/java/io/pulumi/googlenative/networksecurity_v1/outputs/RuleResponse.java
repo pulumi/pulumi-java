@@ -22,10 +22,10 @@ public final class RuleResponse {
      */
     private final List<SourceResponse> sources;
 
-    @OutputCustomType.Constructor({"destinations","sources"})
+    @OutputCustomType.Constructor
     private RuleResponse(
-        List<DestinationResponse> destinations,
-        List<SourceResponse> sources) {
+        @OutputCustomType.Parameter("destinations") List<DestinationResponse> destinations,
+        @OutputCustomType.Parameter("sources") List<SourceResponse> sources) {
         this.destinations = destinations;
         this.sources = sources;
     }

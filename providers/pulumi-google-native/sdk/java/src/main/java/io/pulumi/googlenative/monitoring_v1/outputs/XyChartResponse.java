@@ -50,15 +50,15 @@ public final class XyChartResponse {
      */
     private final AxisResponse yAxis;
 
-    @OutputCustomType.Constructor({"chartOptions","dataSets","thresholds","timeshiftDuration","xAxis","y2Axis","yAxis"})
+    @OutputCustomType.Constructor
     private XyChartResponse(
-        ChartOptionsResponse chartOptions,
-        List<DataSetResponse> dataSets,
-        List<ThresholdResponse> thresholds,
-        String timeshiftDuration,
-        AxisResponse xAxis,
-        AxisResponse y2Axis,
-        AxisResponse yAxis) {
+        @OutputCustomType.Parameter("chartOptions") ChartOptionsResponse chartOptions,
+        @OutputCustomType.Parameter("dataSets") List<DataSetResponse> dataSets,
+        @OutputCustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
+        @OutputCustomType.Parameter("timeshiftDuration") String timeshiftDuration,
+        @OutputCustomType.Parameter("xAxis") AxisResponse xAxis,
+        @OutputCustomType.Parameter("y2Axis") AxisResponse y2Axis,
+        @OutputCustomType.Parameter("yAxis") AxisResponse yAxis) {
         this.chartOptions = chartOptions;
         this.dataSets = dataSets;
         this.thresholds = thresholds;

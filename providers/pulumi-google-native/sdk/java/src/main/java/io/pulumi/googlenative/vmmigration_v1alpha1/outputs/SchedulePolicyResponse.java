@@ -21,10 +21,10 @@ public final class SchedulePolicyResponse {
      */
     private final Boolean skipOsAdaptation;
 
-    @OutputCustomType.Constructor({"idleDuration","skipOsAdaptation"})
+    @OutputCustomType.Constructor
     private SchedulePolicyResponse(
-        String idleDuration,
-        Boolean skipOsAdaptation) {
+        @OutputCustomType.Parameter("idleDuration") String idleDuration,
+        @OutputCustomType.Parameter("skipOsAdaptation") Boolean skipOsAdaptation) {
         this.idleDuration = idleDuration;
         this.skipOsAdaptation = skipOsAdaptation;
     }

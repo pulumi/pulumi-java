@@ -67,19 +67,19 @@ public final class GetEndpointResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","endpointForwardingRule","endpointIp","labels","name","network","severity","state","trafficLogs","updateTime"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        String createTime,
-        String description,
-        String endpointForwardingRule,
-        String endpointIp,
-        Map<String,String> labels,
-        String name,
-        String network,
-        String severity,
-        String state,
-        Boolean trafficLogs,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointForwardingRule") String endpointForwardingRule,
+        @OutputCustomType.Parameter("endpointIp") String endpointIp,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trafficLogs") Boolean trafficLogs,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.endpointForwardingRule = endpointForwardingRule;

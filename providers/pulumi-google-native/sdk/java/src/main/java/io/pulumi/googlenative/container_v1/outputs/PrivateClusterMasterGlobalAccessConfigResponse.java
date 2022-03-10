@@ -15,8 +15,8 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private PrivateClusterMasterGlobalAccessConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private PrivateClusterMasterGlobalAccessConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

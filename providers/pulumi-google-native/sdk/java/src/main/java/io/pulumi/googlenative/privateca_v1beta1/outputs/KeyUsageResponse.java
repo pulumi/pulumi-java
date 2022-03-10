@@ -28,11 +28,11 @@ public final class KeyUsageResponse {
      */
     private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
+    @OutputCustomType.Constructor
     private KeyUsageResponse(
-        KeyUsageOptionsResponse baseKeyUsage,
-        ExtendedKeyUsageOptionsResponse extendedKeyUsage,
-        List<ObjectIdResponse> unknownExtendedKeyUsages) {
+        @OutputCustomType.Parameter("baseKeyUsage") KeyUsageOptionsResponse baseKeyUsage,
+        @OutputCustomType.Parameter("extendedKeyUsage") ExtendedKeyUsageOptionsResponse extendedKeyUsage,
+        @OutputCustomType.Parameter("unknownExtendedKeyUsages") List<ObjectIdResponse> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

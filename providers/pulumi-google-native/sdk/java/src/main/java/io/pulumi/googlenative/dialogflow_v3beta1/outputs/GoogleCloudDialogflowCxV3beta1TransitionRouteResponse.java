@@ -41,14 +41,14 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
-    @OutputCustomType.Constructor({"condition","intent","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1TransitionRouteResponse(
-        String condition,
-        String intent,
-        String name,
-        String targetFlow,
-        String targetPage,
-        GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("intent") String intent,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetFlow") String targetFlow,
+        @OutputCustomType.Parameter("targetPage") String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.name = name;

@@ -150,34 +150,34 @@ public final class GetVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","autoScaling","container","createTime","deploymentUri","description","errorMessage","etag","explanationConfig","framework","isDefault","labels","lastMigrationModelId","lastMigrationTime","lastUseTime","machineType","manualScaling","name","packageUris","predictionClass","pythonVersion","requestLoggingConfig","routes","runtimeVersion","serviceAccount","state"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        GoogleCloudMlV1__AutoScalingResponse autoScaling,
-        GoogleCloudMlV1__ContainerSpecResponse container,
-        String createTime,
-        String deploymentUri,
-        String description,
-        String errorMessage,
-        String etag,
-        GoogleCloudMlV1__ExplanationConfigResponse explanationConfig,
-        String framework,
-        Boolean isDefault,
-        Map<String,String> labels,
-        String lastMigrationModelId,
-        String lastMigrationTime,
-        String lastUseTime,
-        String machineType,
-        GoogleCloudMlV1__ManualScalingResponse manualScaling,
-        String name,
-        List<String> packageUris,
-        String predictionClass,
-        String pythonVersion,
-        GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig,
-        GoogleCloudMlV1__RouteMapResponse routes,
-        String runtimeVersion,
-        String serviceAccount,
-        String state) {
+        @OutputCustomType.Parameter("acceleratorConfig") GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("autoScaling") GoogleCloudMlV1__AutoScalingResponse autoScaling,
+        @OutputCustomType.Parameter("container") GoogleCloudMlV1__ContainerSpecResponse container,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deploymentUri") String deploymentUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("explanationConfig") GoogleCloudMlV1__ExplanationConfigResponse explanationConfig,
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastMigrationModelId") String lastMigrationModelId,
+        @OutputCustomType.Parameter("lastMigrationTime") String lastMigrationTime,
+        @OutputCustomType.Parameter("lastUseTime") String lastUseTime,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("manualScaling") GoogleCloudMlV1__ManualScalingResponse manualScaling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageUris") List<String> packageUris,
+        @OutputCustomType.Parameter("predictionClass") String predictionClass,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("requestLoggingConfig") GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig,
+        @OutputCustomType.Parameter("routes") GoogleCloudMlV1__RouteMapResponse routes,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("state") String state) {
         this.acceleratorConfig = acceleratorConfig;
         this.autoScaling = autoScaling;
         this.container = container;

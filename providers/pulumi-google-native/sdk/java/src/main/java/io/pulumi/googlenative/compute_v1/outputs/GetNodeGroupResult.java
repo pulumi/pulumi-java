@@ -71,22 +71,22 @@ public final class GetNodeGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoscalingPolicy","creationTimestamp","description","fingerprint","kind","locationHint","maintenancePolicy","maintenanceWindow","name","nodeTemplate","selfLink","size","status","zone"})
+    @OutputCustomType.Constructor
     private GetNodeGroupResult(
-        NodeGroupAutoscalingPolicyResponse autoscalingPolicy,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String locationHint,
-        String maintenancePolicy,
-        NodeGroupMaintenanceWindowResponse maintenanceWindow,
-        String name,
-        String nodeTemplate,
-        String selfLink,
-        Integer size,
-        String status,
-        String zone) {
+        @OutputCustomType.Parameter("autoscalingPolicy") NodeGroupAutoscalingPolicyResponse autoscalingPolicy,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("maintenancePolicy") String maintenancePolicy,
+        @OutputCustomType.Parameter("maintenanceWindow") NodeGroupMaintenanceWindowResponse maintenanceWindow,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeTemplate") String nodeTemplate,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

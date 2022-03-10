@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowCxV3QueryInputResponse {
      */
     private final GoogleCloudDialogflowCxV3TextInputResponse text;
 
-    @OutputCustomType.Constructor({"audio","dtmf","event","intent","languageCode","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3QueryInputResponse(
-        GoogleCloudDialogflowCxV3AudioInputResponse audio,
-        GoogleCloudDialogflowCxV3DtmfInputResponse dtmf,
-        GoogleCloudDialogflowCxV3EventInputResponse event,
-        GoogleCloudDialogflowCxV3IntentInputResponse intent,
-        String languageCode,
-        GoogleCloudDialogflowCxV3TextInputResponse text) {
+        @OutputCustomType.Parameter("audio") GoogleCloudDialogflowCxV3AudioInputResponse audio,
+        @OutputCustomType.Parameter("dtmf") GoogleCloudDialogflowCxV3DtmfInputResponse dtmf,
+        @OutputCustomType.Parameter("event") GoogleCloudDialogflowCxV3EventInputResponse event,
+        @OutputCustomType.Parameter("intent") GoogleCloudDialogflowCxV3IntentInputResponse intent,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("text") GoogleCloudDialogflowCxV3TextInputResponse text) {
         this.audio = audio;
         this.dtmf = dtmf;
         this.event = event;

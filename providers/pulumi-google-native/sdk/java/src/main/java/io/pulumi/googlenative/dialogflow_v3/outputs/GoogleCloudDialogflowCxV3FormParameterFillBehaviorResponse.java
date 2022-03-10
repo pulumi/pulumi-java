@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse {
      */
     private final List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers;
 
-    @OutputCustomType.Constructor({"initialPromptFulfillment","repromptEventHandlers"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse(
-        GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment,
-        List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
+        @OutputCustomType.Parameter("initialPromptFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment,
+        @OutputCustomType.Parameter("repromptEventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
         this.initialPromptFulfillment = initialPromptFulfillment;
         this.repromptEventHandlers = repromptEventHandlers;
     }

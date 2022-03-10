@@ -92,23 +92,23 @@ public final class GetSubscriptionResult {
      */
     private final String topicMessageRetentionDuration;
 
-    @OutputCustomType.Constructor({"ackDeadlineSeconds","deadLetterPolicy","detached","enableMessageOrdering","expirationPolicy","filter","labels","messageRetentionDuration","name","pushConfig","retainAckedMessages","retryPolicy","state","topic","topicMessageRetentionDuration"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        Integer ackDeadlineSeconds,
-        DeadLetterPolicyResponse deadLetterPolicy,
-        Boolean detached,
-        Boolean enableMessageOrdering,
-        ExpirationPolicyResponse expirationPolicy,
-        String filter,
-        Map<String,String> labels,
-        String messageRetentionDuration,
-        String name,
-        PushConfigResponse pushConfig,
-        Boolean retainAckedMessages,
-        RetryPolicyResponse retryPolicy,
-        String state,
-        String topic,
-        String topicMessageRetentionDuration) {
+        @OutputCustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
+        @OutputCustomType.Parameter("deadLetterPolicy") DeadLetterPolicyResponse deadLetterPolicy,
+        @OutputCustomType.Parameter("detached") Boolean detached,
+        @OutputCustomType.Parameter("enableMessageOrdering") Boolean enableMessageOrdering,
+        @OutputCustomType.Parameter("expirationPolicy") ExpirationPolicyResponse expirationPolicy,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pushConfig") PushConfigResponse pushConfig,
+        @OutputCustomType.Parameter("retainAckedMessages") Boolean retainAckedMessages,
+        @OutputCustomType.Parameter("retryPolicy") RetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("topic") String topic,
+        @OutputCustomType.Parameter("topicMessageRetentionDuration") String topicMessageRetentionDuration) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.deadLetterPolicy = deadLetterPolicy;
         this.detached = detached;

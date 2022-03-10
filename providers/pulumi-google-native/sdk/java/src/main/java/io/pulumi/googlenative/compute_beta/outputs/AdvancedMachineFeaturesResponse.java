@@ -26,11 +26,11 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","threadsPerCore"})
+    @OutputCustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        Boolean enableNestedVirtualization,
-        Boolean enableUefiNetworking,
-        Integer threadsPerCore) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.threadsPerCore = threadsPerCore;

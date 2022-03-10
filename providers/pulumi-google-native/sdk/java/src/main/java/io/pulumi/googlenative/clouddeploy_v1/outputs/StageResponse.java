@@ -21,10 +21,10 @@ public final class StageResponse {
      */
     private final String targetId;
 
-    @OutputCustomType.Constructor({"profiles","targetId"})
+    @OutputCustomType.Constructor
     private StageResponse(
-        List<String> profiles,
-        String targetId) {
+        @OutputCustomType.Parameter("profiles") List<String> profiles,
+        @OutputCustomType.Parameter("targetId") String targetId) {
         this.profiles = profiles;
         this.targetId = targetId;
     }

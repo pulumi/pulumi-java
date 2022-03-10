@@ -38,13 +38,13 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"etag","inheritFromParent","reset","rules","updateTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecResponse(
-        String etag,
-        Boolean inheritFromParent,
-        Boolean reset,
-        List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
-        String updateTime) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
+        @OutputCustomType.Parameter("reset") Boolean reset,
+        @OutputCustomType.Parameter("rules") List<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.etag = etag;
         this.inheritFromParent = inheritFromParent;
         this.reset = reset;

@@ -21,10 +21,10 @@ public final class CollectionOverrideResponse {
      */
     private final OptionsResponse options;
 
-    @OutputCustomType.Constructor({"collection","options"})
+    @OutputCustomType.Constructor
     private CollectionOverrideResponse(
-        String collection,
-        OptionsResponse options) {
+        @OutputCustomType.Parameter("collection") String collection,
+        @OutputCustomType.Parameter("options") OptionsResponse options) {
         this.collection = collection;
         this.options = options;
     }

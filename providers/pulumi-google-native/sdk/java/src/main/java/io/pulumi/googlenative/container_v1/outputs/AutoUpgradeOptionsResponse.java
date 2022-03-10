@@ -20,10 +20,10 @@ public final class AutoUpgradeOptionsResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"autoUpgradeStartTime","description"})
+    @OutputCustomType.Constructor
     private AutoUpgradeOptionsResponse(
-        String autoUpgradeStartTime,
-        String description) {
+        @OutputCustomType.Parameter("autoUpgradeStartTime") String autoUpgradeStartTime,
+        @OutputCustomType.Parameter("description") String description) {
         this.autoUpgradeStartTime = autoUpgradeStartTime;
         this.description = description;
     }

@@ -20,10 +20,10 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      */
     private final String $interface;
 
-    @OutputCustomType.Constructor({"diskSizeGb","$interface"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(
-        String diskSizeGb,
-        String $interface) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("interface") String $interface) {
         this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }

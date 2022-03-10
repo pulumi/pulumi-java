@@ -25,11 +25,11 @@ public final class ResourceRecordResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","rrdata","type"})
+    @OutputCustomType.Constructor
     private ResourceRecordResponse(
-        String name,
-        String rrdata,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rrdata") String rrdata,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;

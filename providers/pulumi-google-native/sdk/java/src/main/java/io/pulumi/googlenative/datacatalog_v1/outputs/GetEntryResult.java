@@ -133,30 +133,30 @@ public final class GetEntryResult {
      */
     private final String userSpecifiedType;
 
-    @OutputCustomType.Constructor({"bigqueryDateShardedSpec","bigqueryTableSpec","businessContext","dataSource","dataSourceConnectionSpec","databaseTableSpec","description","displayName","fullyQualifiedName","gcsFilesetSpec","integratedSystem","labels","linkedResource","name","personalDetails","routineSpec","schema","sourceSystemTimestamps","type","usageSignal","userSpecifiedSystem","userSpecifiedType"})
+    @OutputCustomType.Constructor
     private GetEntryResult(
-        GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
-        GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec,
-        GoogleCloudDatacatalogV1BusinessContextResponse businessContext,
-        GoogleCloudDatacatalogV1DataSourceResponse dataSource,
-        GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec,
-        GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec,
-        String description,
-        String displayName,
-        String fullyQualifiedName,
-        GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec,
-        String integratedSystem,
-        Map<String,String> labels,
-        String linkedResource,
-        String name,
-        GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails,
-        GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec,
-        GoogleCloudDatacatalogV1SchemaResponse schema,
-        GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps,
-        String type,
-        GoogleCloudDatacatalogV1UsageSignalResponse usageSignal,
-        String userSpecifiedSystem,
-        String userSpecifiedType) {
+        @OutputCustomType.Parameter("bigqueryDateShardedSpec") GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse bigqueryDateShardedSpec,
+        @OutputCustomType.Parameter("bigqueryTableSpec") GoogleCloudDatacatalogV1BigQueryTableSpecResponse bigqueryTableSpec,
+        @OutputCustomType.Parameter("businessContext") GoogleCloudDatacatalogV1BusinessContextResponse businessContext,
+        @OutputCustomType.Parameter("dataSource") GoogleCloudDatacatalogV1DataSourceResponse dataSource,
+        @OutputCustomType.Parameter("dataSourceConnectionSpec") GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse dataSourceConnectionSpec,
+        @OutputCustomType.Parameter("databaseTableSpec") GoogleCloudDatacatalogV1DatabaseTableSpecResponse databaseTableSpec,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fullyQualifiedName") String fullyQualifiedName,
+        @OutputCustomType.Parameter("gcsFilesetSpec") GoogleCloudDatacatalogV1GcsFilesetSpecResponse gcsFilesetSpec,
+        @OutputCustomType.Parameter("integratedSystem") String integratedSystem,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linkedResource") String linkedResource,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("personalDetails") GoogleCloudDatacatalogV1PersonalDetailsResponse personalDetails,
+        @OutputCustomType.Parameter("routineSpec") GoogleCloudDatacatalogV1RoutineSpecResponse routineSpec,
+        @OutputCustomType.Parameter("schema") GoogleCloudDatacatalogV1SchemaResponse schema,
+        @OutputCustomType.Parameter("sourceSystemTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse sourceSystemTimestamps,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usageSignal") GoogleCloudDatacatalogV1UsageSignalResponse usageSignal,
+        @OutputCustomType.Parameter("userSpecifiedSystem") String userSpecifiedSystem,
+        @OutputCustomType.Parameter("userSpecifiedType") String userSpecifiedType) {
         this.bigqueryDateShardedSpec = bigqueryDateShardedSpec;
         this.bigqueryTableSpec = bigqueryTableSpec;
         this.businessContext = businessContext;

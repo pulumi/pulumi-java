@@ -25,11 +25,11 @@ public final class NetworkResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"network","project","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkResponse(
-        String network,
-        String project,
-        String subnetwork) {
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.network = network;
         this.project = project;
         this.subnetwork = subnetwork;

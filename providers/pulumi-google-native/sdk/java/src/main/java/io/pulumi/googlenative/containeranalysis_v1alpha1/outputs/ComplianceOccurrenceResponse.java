@@ -22,10 +22,10 @@ public final class ComplianceOccurrenceResponse {
      */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
-    @OutputCustomType.Constructor({"nonComplianceReason","nonCompliantFiles"})
+    @OutputCustomType.Constructor
     private ComplianceOccurrenceResponse(
-        String nonComplianceReason,
-        List<NonCompliantFileResponse> nonCompliantFiles) {
+        @OutputCustomType.Parameter("nonComplianceReason") String nonComplianceReason,
+        @OutputCustomType.Parameter("nonCompliantFiles") List<NonCompliantFileResponse> nonCompliantFiles) {
         this.nonComplianceReason = nonComplianceReason;
         this.nonCompliantFiles = nonCompliantFiles;
     }

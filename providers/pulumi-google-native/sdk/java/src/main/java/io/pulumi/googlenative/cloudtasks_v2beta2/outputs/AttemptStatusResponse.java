@@ -31,12 +31,12 @@ public final class AttemptStatusResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor({"dispatchTime","responseStatus","responseTime","scheduleTime"})
+    @OutputCustomType.Constructor
     private AttemptStatusResponse(
-        String dispatchTime,
-        StatusResponse responseStatus,
-        String responseTime,
-        String scheduleTime) {
+        @OutputCustomType.Parameter("dispatchTime") String dispatchTime,
+        @OutputCustomType.Parameter("responseStatus") StatusResponse responseStatus,
+        @OutputCustomType.Parameter("responseTime") String responseTime,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
         this.dispatchTime = dispatchTime;
         this.responseStatus = responseStatus;
         this.responseTime = responseTime;

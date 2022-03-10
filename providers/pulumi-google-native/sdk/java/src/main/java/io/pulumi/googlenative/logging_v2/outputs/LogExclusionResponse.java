@@ -41,14 +41,14 @@ public final class LogExclusionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","disabled","filter","name","updateTime"})
+    @OutputCustomType.Constructor
     private LogExclusionResponse(
-        String createTime,
-        String description,
-        Boolean disabled,
-        String filter,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.disabled = disabled;

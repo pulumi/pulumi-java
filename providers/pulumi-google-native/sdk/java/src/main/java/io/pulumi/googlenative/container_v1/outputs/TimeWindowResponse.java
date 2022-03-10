@@ -26,11 +26,11 @@ public final class TimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","maintenanceExclusionOptions","startTime"})
+    @OutputCustomType.Constructor
     private TimeWindowResponse(
-        String endTime,
-        MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("maintenanceExclusionOptions") MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.maintenanceExclusionOptions = maintenanceExclusionOptions;
         this.startTime = startTime;

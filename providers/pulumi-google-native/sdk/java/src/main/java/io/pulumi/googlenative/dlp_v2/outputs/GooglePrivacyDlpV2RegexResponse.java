@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2RegexResponse {
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor({"groupIndexes","pattern"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RegexResponse(
-        List<Integer> groupIndexes,
-        String pattern) {
+        @OutputCustomType.Parameter("groupIndexes") List<Integer> groupIndexes,
+        @OutputCustomType.Parameter("pattern") String pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }

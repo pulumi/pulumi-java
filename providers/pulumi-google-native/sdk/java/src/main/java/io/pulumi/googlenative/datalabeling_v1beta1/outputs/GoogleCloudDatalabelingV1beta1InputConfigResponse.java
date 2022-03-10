@@ -44,14 +44,14 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
-    @OutputCustomType.Constructor({"annotationType","bigquerySource","classificationMetadata","dataType","gcsSource","textMetadata"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1InputConfigResponse(
-        String annotationType,
-        GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
-        GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
-        String dataType,
-        GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
-        GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
+        @OutputCustomType.Parameter("annotationType") String annotationType,
+        @OutputCustomType.Parameter("bigquerySource") GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
+        @OutputCustomType.Parameter("classificationMetadata") GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("gcsSource") GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
+        @OutputCustomType.Parameter("textMetadata") GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
         this.annotationType = annotationType;
         this.bigquerySource = bigquerySource;
         this.classificationMetadata = classificationMetadata;

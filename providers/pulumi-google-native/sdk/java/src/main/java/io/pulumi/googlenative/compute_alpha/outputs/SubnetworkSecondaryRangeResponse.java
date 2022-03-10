@@ -25,11 +25,11 @@ public final class SubnetworkSecondaryRangeResponse {
      */
     private final String reservedInternalRange;
 
-    @OutputCustomType.Constructor({"ipCidrRange","rangeName","reservedInternalRange"})
+    @OutputCustomType.Constructor
     private SubnetworkSecondaryRangeResponse(
-        String ipCidrRange,
-        String rangeName,
-        String reservedInternalRange) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("rangeName") String rangeName,
+        @OutputCustomType.Parameter("reservedInternalRange") String reservedInternalRange) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
         this.reservedInternalRange = reservedInternalRange;

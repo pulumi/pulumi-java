@@ -26,11 +26,11 @@ public final class HivePartitioningOptionsResponse {
      */
     private final String sourceUriPrefix;
 
-    @OutputCustomType.Constructor({"mode","requirePartitionFilter","sourceUriPrefix"})
+    @OutputCustomType.Constructor
     private HivePartitioningOptionsResponse(
-        String mode,
-        Boolean requirePartitionFilter,
-        String sourceUriPrefix) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("sourceUriPrefix") String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;

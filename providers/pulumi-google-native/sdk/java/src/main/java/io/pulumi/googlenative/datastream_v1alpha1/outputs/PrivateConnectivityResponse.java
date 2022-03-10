@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PrivateConnectivityResponse {
     private final String privateConnectionName;
 
-    @OutputCustomType.Constructor({"privateConnectionName"})
-    private PrivateConnectivityResponse(String privateConnectionName) {
+    @OutputCustomType.Constructor
+    private PrivateConnectivityResponse(@OutputCustomType.Parameter("privateConnectionName") String privateConnectionName) {
         this.privateConnectionName = privateConnectionName;
     }
 

@@ -37,13 +37,13 @@ public final class TransformSummaryResponse {
      */
     private final List<String> outputCollectionName;
 
-    @OutputCustomType.Constructor({"displayData","inputCollectionName","kind","name","outputCollectionName"})
+    @OutputCustomType.Constructor
     private TransformSummaryResponse(
-        List<DisplayDataResponse> displayData,
-        List<String> inputCollectionName,
-        String kind,
-        String name,
-        List<String> outputCollectionName) {
+        @OutputCustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
+        @OutputCustomType.Parameter("inputCollectionName") List<String> inputCollectionName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputCollectionName") List<String> outputCollectionName) {
         this.displayData = displayData;
         this.inputCollectionName = inputCollectionName;
         this.kind = kind;

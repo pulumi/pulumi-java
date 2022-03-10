@@ -76,20 +76,20 @@ public final class GetRouterResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bgp","bgpPeers","creationTimestamp","description","encryptedInterconnectRouter","interfaces","kind","name","nats","network","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRouterResult(
-        RouterBgpResponse bgp,
-        List<RouterBgpPeerResponse> bgpPeers,
-        String creationTimestamp,
-        String description,
-        Boolean encryptedInterconnectRouter,
-        List<RouterInterfaceResponse> interfaces,
-        String kind,
-        String name,
-        List<RouterNatResponse> nats,
-        String network,
-        String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("bgp") RouterBgpResponse bgp,
+        @OutputCustomType.Parameter("bgpPeers") List<RouterBgpPeerResponse> bgpPeers,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @OutputCustomType.Parameter("interfaces") List<RouterInterfaceResponse> interfaces,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nats") List<RouterNatResponse> nats,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bgp = bgp;
         this.bgpPeers = bgpPeers;
         this.creationTimestamp = creationTimestamp;

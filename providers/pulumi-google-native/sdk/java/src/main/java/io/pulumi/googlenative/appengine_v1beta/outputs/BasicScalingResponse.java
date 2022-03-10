@@ -21,10 +21,10 @@ public final class BasicScalingResponse {
      */
     private final Integer maxInstances;
 
-    @OutputCustomType.Constructor({"idleTimeout","maxInstances"})
+    @OutputCustomType.Constructor
     private BasicScalingResponse(
-        String idleTimeout,
-        Integer maxInstances) {
+        @OutputCustomType.Parameter("idleTimeout") String idleTimeout,
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances) {
         this.idleTimeout = idleTimeout;
         this.maxInstances = maxInstances;
     }

@@ -35,13 +35,13 @@ public final class CircuitBreakersResponse {
      */
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor({"maxConnections","maxPendingRequests","maxRequests","maxRequestsPerConnection","maxRetries"})
+    @OutputCustomType.Constructor
     private CircuitBreakersResponse(
-        Integer maxConnections,
-        Integer maxPendingRequests,
-        Integer maxRequests,
-        Integer maxRequestsPerConnection,
-        Integer maxRetries) {
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
+        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
         this.maxRequests = maxRequests;

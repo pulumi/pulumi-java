@@ -15,8 +15,8 @@ public final class ClientCertificateConfigResponse {
      */
     private final Boolean issueClientCertificate;
 
-    @OutputCustomType.Constructor({"issueClientCertificate"})
-    private ClientCertificateConfigResponse(Boolean issueClientCertificate) {
+    @OutputCustomType.Constructor
+    private ClientCertificateConfigResponse(@OutputCustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 

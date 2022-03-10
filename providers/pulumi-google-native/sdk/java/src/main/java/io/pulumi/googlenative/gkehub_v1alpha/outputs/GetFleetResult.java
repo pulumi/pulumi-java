@@ -45,15 +45,15 @@ public final class GetFleetResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","displayName","fleetName","name","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetFleetResult(
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String fleetName,
-        String name,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fleetName") String fleetName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

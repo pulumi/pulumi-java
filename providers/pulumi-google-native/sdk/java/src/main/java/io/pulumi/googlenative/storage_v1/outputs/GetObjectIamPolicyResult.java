@@ -38,13 +38,13 @@ public final class GetObjectIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"bindings","etag","kind","resourceId","version"})
+    @OutputCustomType.Constructor
     private GetObjectIamPolicyResult(
-        List<ObjectIamPolicyBindingsItemResponse> bindings,
-        String etag,
-        String kind,
-        String resourceId,
-        Integer version) {
+        @OutputCustomType.Parameter("bindings") List<ObjectIamPolicyBindingsItemResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.kind = kind;

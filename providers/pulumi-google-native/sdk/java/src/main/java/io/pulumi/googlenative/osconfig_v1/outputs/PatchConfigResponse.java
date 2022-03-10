@@ -62,17 +62,17 @@ public final class PatchConfigResponse {
      */
     private final ZypperSettingsResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","migInstancesAllowed","postStep","preStep","rebootConfig","windowsUpdate","yum","zypper"})
+    @OutputCustomType.Constructor
     private PatchConfigResponse(
-        AptSettingsResponse apt,
-        GooSettingsResponse goo,
-        Boolean migInstancesAllowed,
-        ExecStepResponse postStep,
-        ExecStepResponse preStep,
-        String rebootConfig,
-        WindowsUpdateSettingsResponse windowsUpdate,
-        YumSettingsResponse yum,
-        ZypperSettingsResponse zypper) {
+        @OutputCustomType.Parameter("apt") AptSettingsResponse apt,
+        @OutputCustomType.Parameter("goo") GooSettingsResponse goo,
+        @OutputCustomType.Parameter("migInstancesAllowed") Boolean migInstancesAllowed,
+        @OutputCustomType.Parameter("postStep") ExecStepResponse postStep,
+        @OutputCustomType.Parameter("preStep") ExecStepResponse preStep,
+        @OutputCustomType.Parameter("rebootConfig") String rebootConfig,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateSettingsResponse windowsUpdate,
+        @OutputCustomType.Parameter("yum") YumSettingsResponse yum,
+        @OutputCustomType.Parameter("zypper") ZypperSettingsResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.migInstancesAllowed = migInstancesAllowed;

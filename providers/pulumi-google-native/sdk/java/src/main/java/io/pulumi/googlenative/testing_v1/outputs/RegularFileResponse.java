@@ -21,10 +21,10 @@ public final class RegularFileResponse {
      */
     private final String devicePath;
 
-    @OutputCustomType.Constructor({"content","devicePath"})
+    @OutputCustomType.Constructor
     private RegularFileResponse(
-        FileReferenceResponse content,
-        String devicePath) {
+        @OutputCustomType.Parameter("content") FileReferenceResponse content,
+        @OutputCustomType.Parameter("devicePath") String devicePath) {
         this.content = content;
         this.devicePath = devicePath;
     }

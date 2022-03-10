@@ -22,10 +22,10 @@ public final class MetadataLabelMatcherResponse {
      */
     private final List<MetadataLabelsResponse> metadataLabels;
 
-    @OutputCustomType.Constructor({"metadataLabelMatchCriteria","metadataLabels"})
+    @OutputCustomType.Constructor
     private MetadataLabelMatcherResponse(
-        String metadataLabelMatchCriteria,
-        List<MetadataLabelsResponse> metadataLabels) {
+        @OutputCustomType.Parameter("metadataLabelMatchCriteria") String metadataLabelMatchCriteria,
+        @OutputCustomType.Parameter("metadataLabels") List<MetadataLabelsResponse> metadataLabels) {
         this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
         this.metadataLabels = metadataLabels;
     }

@@ -35,13 +35,13 @@ public final class GetVariableResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","state","text","updateTime","value"})
+    @OutputCustomType.Constructor
     private GetVariableResult(
-        String name,
-        String state,
-        String text,
-        String updateTime,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.state = state;
         this.text = text;

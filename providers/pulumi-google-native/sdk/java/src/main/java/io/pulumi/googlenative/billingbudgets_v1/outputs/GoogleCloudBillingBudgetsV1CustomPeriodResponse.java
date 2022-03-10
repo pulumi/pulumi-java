@@ -20,10 +20,10 @@ public final class GoogleCloudBillingBudgetsV1CustomPeriodResponse {
      */
     private final GoogleTypeDateResponse startDate;
 
-    @OutputCustomType.Constructor({"endDate","startDate"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1CustomPeriodResponse(
-        GoogleTypeDateResponse endDate,
-        GoogleTypeDateResponse startDate) {
+        @OutputCustomType.Parameter("endDate") GoogleTypeDateResponse endDate,
+        @OutputCustomType.Parameter("startDate") GoogleTypeDateResponse startDate) {
         this.endDate = endDate;
         this.startDate = startDate;
     }

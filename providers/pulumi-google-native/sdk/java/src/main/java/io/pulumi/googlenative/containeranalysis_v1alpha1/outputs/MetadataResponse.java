@@ -37,13 +37,13 @@ public final class MetadataResponse {
      */
     private final Boolean reproducible;
 
-    @OutputCustomType.Constructor({"buildFinishedOn","buildInvocationId","buildStartedOn","completeness","reproducible"})
+    @OutputCustomType.Constructor
     private MetadataResponse(
-        String buildFinishedOn,
-        String buildInvocationId,
-        String buildStartedOn,
-        CompletenessResponse completeness,
-        Boolean reproducible) {
+        @OutputCustomType.Parameter("buildFinishedOn") String buildFinishedOn,
+        @OutputCustomType.Parameter("buildInvocationId") String buildInvocationId,
+        @OutputCustomType.Parameter("buildStartedOn") String buildStartedOn,
+        @OutputCustomType.Parameter("completeness") CompletenessResponse completeness,
+        @OutputCustomType.Parameter("reproducible") Boolean reproducible) {
         this.buildFinishedOn = buildFinishedOn;
         this.buildInvocationId = buildInvocationId;
         this.buildStartedOn = buildStartedOn;

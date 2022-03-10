@@ -51,16 +51,16 @@ public final class GetServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"description","disabled","displayName","email","name","oauth2ClientId","project","uniqueId"})
+    @OutputCustomType.Constructor
     private GetServiceAccountResult(
-        String description,
-        Boolean disabled,
-        String displayName,
-        String email,
-        String name,
-        String oauth2ClientId,
-        String project,
-        String uniqueId) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;

@@ -43,14 +43,14 @@ public final class AudioStreamResponse {
      */
     private final Integer sampleRateHertz;
 
-    @OutputCustomType.Constructor({"bitrateBps","channelCount","channelLayout","codec","mapping","sampleRateHertz"})
+    @OutputCustomType.Constructor
     private AudioStreamResponse(
-        Integer bitrateBps,
-        Integer channelCount,
-        List<String> channelLayout,
-        String codec,
-        List<AudioMappingResponse> mapping,
-        Integer sampleRateHertz) {
+        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @OutputCustomType.Parameter("channelCount") Integer channelCount,
+        @OutputCustomType.Parameter("channelLayout") List<String> channelLayout,
+        @OutputCustomType.Parameter("codec") String codec,
+        @OutputCustomType.Parameter("mapping") List<AudioMappingResponse> mapping,
+        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz) {
         this.bitrateBps = bitrateBps;
         this.channelCount = channelCount;
         this.channelLayout = channelLayout;

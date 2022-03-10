@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
      */
     private final GooglePrivacyDlpV2ProximityResponse proximity;
 
-    @OutputCustomType.Constructor({"hotwordRegex","likelihoodAdjustment","proximity"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HotwordRuleResponse(
-        GooglePrivacyDlpV2RegexResponse hotwordRegex,
-        GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
-        GooglePrivacyDlpV2ProximityResponse proximity) {
+        @OutputCustomType.Parameter("hotwordRegex") GooglePrivacyDlpV2RegexResponse hotwordRegex,
+        @OutputCustomType.Parameter("likelihoodAdjustment") GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
+        @OutputCustomType.Parameter("proximity") GooglePrivacyDlpV2ProximityResponse proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;

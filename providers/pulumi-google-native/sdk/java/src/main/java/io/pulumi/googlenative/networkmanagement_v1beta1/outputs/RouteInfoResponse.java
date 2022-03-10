@@ -57,17 +57,17 @@ public final class RouteInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"destIpRange","displayName","instanceTags","networkUri","nextHop","nextHopType","priority","routeType","uri"})
+    @OutputCustomType.Constructor
     private RouteInfoResponse(
-        String destIpRange,
-        String displayName,
-        List<String> instanceTags,
-        String networkUri,
-        String nextHop,
-        String nextHopType,
-        Integer priority,
-        String routeType,
-        String uri) {
+        @OutputCustomType.Parameter("destIpRange") String destIpRange,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("instanceTags") List<String> instanceTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeType") String routeType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.destIpRange = destIpRange;
         this.displayName = displayName;
         this.instanceTags = instanceTags;

@@ -25,11 +25,11 @@ public final class InterconnectCircuitInfoResponse {
      */
     private final String googleDemarcId;
 
-    @OutputCustomType.Constructor({"customerDemarcId","googleCircuitId","googleDemarcId"})
+    @OutputCustomType.Constructor
     private InterconnectCircuitInfoResponse(
-        String customerDemarcId,
-        String googleCircuitId,
-        String googleDemarcId) {
+        @OutputCustomType.Parameter("customerDemarcId") String customerDemarcId,
+        @OutputCustomType.Parameter("googleCircuitId") String googleCircuitId,
+        @OutputCustomType.Parameter("googleDemarcId") String googleDemarcId) {
         this.customerDemarcId = customerDemarcId;
         this.googleCircuitId = googleCircuitId;
         this.googleDemarcId = googleDemarcId;

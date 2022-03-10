@@ -15,8 +15,8 @@ public final class TelemetryResponse {
      */
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private TelemetryResponse(String resourceName) {
+    @OutputCustomType.Constructor
+    private TelemetryResponse(@OutputCustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

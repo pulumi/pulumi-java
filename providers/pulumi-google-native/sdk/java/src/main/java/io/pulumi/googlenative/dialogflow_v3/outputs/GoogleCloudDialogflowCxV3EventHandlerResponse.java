@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowCxV3EventHandlerResponse {
      */
     private final GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment;
 
-    @OutputCustomType.Constructor({"event","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3EventHandlerResponse(
-        String event,
-        String name,
-        String targetFlow,
-        String targetPage,
-        GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetFlow") String targetFlow,
+        @OutputCustomType.Parameter("targetPage") String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;

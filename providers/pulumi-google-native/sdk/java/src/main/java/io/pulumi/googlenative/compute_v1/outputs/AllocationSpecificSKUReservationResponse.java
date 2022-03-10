@@ -26,11 +26,11 @@ public final class AllocationSpecificSKUReservationResponse {
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    @OutputCustomType.Constructor({"count","inUseCount","instanceProperties"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
-        String count,
-        String inUseCount,
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("inUseCount") String inUseCount,
+        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;

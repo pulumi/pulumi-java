@@ -15,8 +15,8 @@ public final class InstanceGroupManagerStatusVersionTargetResponse {
      */
     private final Boolean isReached;
 
-    @OutputCustomType.Constructor({"isReached"})
-    private InstanceGroupManagerStatusVersionTargetResponse(Boolean isReached) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerStatusVersionTargetResponse(@OutputCustomType.Parameter("isReached") Boolean isReached) {
         this.isReached = isReached;
     }
 

@@ -26,11 +26,11 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor({"end","fee","start"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1RateRangeResponse(
-        String end,
-        GoogleTypeMoneyResponse fee,
-        String start) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("fee") GoogleTypeMoneyResponse fee,
+        @OutputCustomType.Parameter("start") String start) {
         this.end = end;
         this.fee = fee;
         this.start = start;

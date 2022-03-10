@@ -20,10 +20,10 @@ public final class DocumentNoteResponse {
      */
     private final String spdxVersion;
 
-    @OutputCustomType.Constructor({"dataLicence","spdxVersion"})
+    @OutputCustomType.Constructor
     private DocumentNoteResponse(
-        String dataLicence,
-        String spdxVersion) {
+        @OutputCustomType.Parameter("dataLicence") String dataLicence,
+        @OutputCustomType.Parameter("spdxVersion") String spdxVersion) {
         this.dataLicence = dataLicence;
         this.spdxVersion = spdxVersion;
     }

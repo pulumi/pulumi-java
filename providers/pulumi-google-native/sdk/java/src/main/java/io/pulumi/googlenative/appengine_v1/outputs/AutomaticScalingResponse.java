@@ -81,21 +81,21 @@ public final class AutomaticScalingResponse {
      */
     private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 
-    @OutputCustomType.Constructor({"coolDownPeriod","cpuUtilization","diskUtilization","maxConcurrentRequests","maxIdleInstances","maxPendingLatency","maxTotalInstances","minIdleInstances","minPendingLatency","minTotalInstances","networkUtilization","requestUtilization","standardSchedulerSettings"})
+    @OutputCustomType.Constructor
     private AutomaticScalingResponse(
-        String coolDownPeriod,
-        CpuUtilizationResponse cpuUtilization,
-        DiskUtilizationResponse diskUtilization,
-        Integer maxConcurrentRequests,
-        Integer maxIdleInstances,
-        String maxPendingLatency,
-        Integer maxTotalInstances,
-        Integer minIdleInstances,
-        String minPendingLatency,
-        Integer minTotalInstances,
-        NetworkUtilizationResponse networkUtilization,
-        RequestUtilizationResponse requestUtilization,
-        StandardSchedulerSettingsResponse standardSchedulerSettings) {
+        @OutputCustomType.Parameter("coolDownPeriod") String coolDownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") CpuUtilizationResponse cpuUtilization,
+        @OutputCustomType.Parameter("diskUtilization") DiskUtilizationResponse diskUtilization,
+        @OutputCustomType.Parameter("maxConcurrentRequests") Integer maxConcurrentRequests,
+        @OutputCustomType.Parameter("maxIdleInstances") Integer maxIdleInstances,
+        @OutputCustomType.Parameter("maxPendingLatency") String maxPendingLatency,
+        @OutputCustomType.Parameter("maxTotalInstances") Integer maxTotalInstances,
+        @OutputCustomType.Parameter("minIdleInstances") Integer minIdleInstances,
+        @OutputCustomType.Parameter("minPendingLatency") String minPendingLatency,
+        @OutputCustomType.Parameter("minTotalInstances") Integer minTotalInstances,
+        @OutputCustomType.Parameter("networkUtilization") NetworkUtilizationResponse networkUtilization,
+        @OutputCustomType.Parameter("requestUtilization") RequestUtilizationResponse requestUtilization,
+        @OutputCustomType.Parameter("standardSchedulerSettings") StandardSchedulerSettingsResponse standardSchedulerSettings) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.diskUtilization = diskUtilization;

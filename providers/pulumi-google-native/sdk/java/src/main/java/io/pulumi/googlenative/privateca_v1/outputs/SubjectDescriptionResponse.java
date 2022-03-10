@@ -42,14 +42,14 @@ public final class SubjectDescriptionResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor({"hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private SubjectDescriptionResponse(
-        String hexSerialNumber,
-        String lifetime,
-        String notAfterTime,
-        String notBeforeTime,
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
+        @OutputCustomType.Parameter("hexSerialNumber") String hexSerialNumber,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @OutputCustomType.Parameter("subject") SubjectResponse subject,
+        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
         this.notAfterTime = notAfterTime;

@@ -47,15 +47,15 @@ public final class GetEndpointResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"address","createTime","metadata","name","network","port","updateTime"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        String address,
-        String createTime,
-        Map<String,String> metadata,
-        String name,
-        String network,
-        Integer port,
-        String updateTime) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.address = address;
         this.createTime = createTime;
         this.metadata = metadata;

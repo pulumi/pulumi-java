@@ -55,16 +55,16 @@ public final class GetDashboardResult {
      */
     private final RowLayoutResponse rowLayout;
 
-    @OutputCustomType.Constructor({"columnLayout","displayName","etag","gridLayout","labels","mosaicLayout","name","rowLayout"})
+    @OutputCustomType.Constructor
     private GetDashboardResult(
-        ColumnLayoutResponse columnLayout,
-        String displayName,
-        String etag,
-        GridLayoutResponse gridLayout,
-        Map<String,String> labels,
-        MosaicLayoutResponse mosaicLayout,
-        String name,
-        RowLayoutResponse rowLayout) {
+        @OutputCustomType.Parameter("columnLayout") ColumnLayoutResponse columnLayout,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("gridLayout") GridLayoutResponse gridLayout,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mosaicLayout") MosaicLayoutResponse mosaicLayout,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rowLayout") RowLayoutResponse rowLayout) {
         this.columnLayout = columnLayout;
         this.displayName = displayName;
         this.etag = etag;

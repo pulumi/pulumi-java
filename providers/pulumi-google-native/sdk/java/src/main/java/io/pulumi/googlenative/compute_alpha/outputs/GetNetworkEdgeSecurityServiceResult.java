@@ -51,17 +51,17 @@ public final class GetNetworkEdgeSecurityServiceResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","kind","name","region","securityPolicy","selfLink","selfLinkWithId"})
+    @OutputCustomType.Constructor
     private GetNetworkEdgeSecurityServiceResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        String region,
-        String securityPolicy,
-        String selfLink,
-        String selfLinkWithId) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

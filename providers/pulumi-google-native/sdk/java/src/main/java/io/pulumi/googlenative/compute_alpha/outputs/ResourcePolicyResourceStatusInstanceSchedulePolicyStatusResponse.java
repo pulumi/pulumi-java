@@ -20,10 +20,10 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      */
     private final String nextRunStartTime;
 
-    @OutputCustomType.Constructor({"lastRunStartTime","nextRunStartTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse(
-        String lastRunStartTime,
-        String nextRunStartTime) {
+        @OutputCustomType.Parameter("lastRunStartTime") String lastRunStartTime,
+        @OutputCustomType.Parameter("nextRunStartTime") String nextRunStartTime) {
         this.lastRunStartTime = lastRunStartTime;
         this.nextRunStartTime = nextRunStartTime;
     }

@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse 
      */
     private final String horizontalAlignment;
 
-    @OutputCustomType.Constructor({"header","horizontalAlignment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageColumnPropertiesResponse(
-        String header,
-        String horizontalAlignment) {
+        @OutputCustomType.Parameter("header") String header,
+        @OutputCustomType.Parameter("horizontalAlignment") String horizontalAlignment) {
         this.header = header;
         this.horizontalAlignment = horizontalAlignment;
     }

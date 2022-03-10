@@ -36,13 +36,13 @@ public final class DiscoveryOccurrenceResponse {
      */
     private final String lastScanTime;
 
-    @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis","cpe","lastScanTime"})
+    @OutputCustomType.Constructor
     private DiscoveryOccurrenceResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe,
-        String lastScanTime) {
+        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
+        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @OutputCustomType.Parameter("cpe") String cpe,
+        @OutputCustomType.Parameter("lastScanTime") String lastScanTime) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;

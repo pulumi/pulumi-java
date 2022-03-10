@@ -41,14 +41,14 @@ public final class GetWebAppResult {
      */
     private final String webId;
 
-    @OutputCustomType.Constructor({"appId","appUrls","displayName","name","project","webId"})
+    @OutputCustomType.Constructor
     private GetWebAppResult(
-        String appId,
-        List<String> appUrls,
-        String displayName,
-        String name,
-        String project,
-        String webId) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appUrls") List<String> appUrls,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("webId") String webId) {
         this.appId = appId;
         this.appUrls = appUrls;
         this.displayName = displayName;

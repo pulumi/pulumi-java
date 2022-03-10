@@ -20,10 +20,10 @@ public final class OSPolicyAssignmentInstanceFilterInventoryResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor({"osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private OSPolicyAssignmentInstanceFilterInventoryResponse(
-        String osShortName,
-        String osVersion) {
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }

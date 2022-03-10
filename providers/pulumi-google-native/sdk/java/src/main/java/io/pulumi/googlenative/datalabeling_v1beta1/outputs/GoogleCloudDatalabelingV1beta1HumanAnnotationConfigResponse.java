@@ -57,17 +57,17 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
      */
     private final String userEmailAddress;
 
-    @OutputCustomType.Constructor({"annotatedDatasetDescription","annotatedDatasetDisplayName","contributorEmails","instruction","labelGroup","languageCode","questionDuration","replicaCount","userEmailAddress"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(
-        String annotatedDatasetDescription,
-        String annotatedDatasetDisplayName,
-        List<String> contributorEmails,
-        String instruction,
-        String labelGroup,
-        String languageCode,
-        String questionDuration,
-        Integer replicaCount,
-        String userEmailAddress) {
+        @OutputCustomType.Parameter("annotatedDatasetDescription") String annotatedDatasetDescription,
+        @OutputCustomType.Parameter("annotatedDatasetDisplayName") String annotatedDatasetDisplayName,
+        @OutputCustomType.Parameter("contributorEmails") List<String> contributorEmails,
+        @OutputCustomType.Parameter("instruction") String instruction,
+        @OutputCustomType.Parameter("labelGroup") String labelGroup,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("questionDuration") String questionDuration,
+        @OutputCustomType.Parameter("replicaCount") Integer replicaCount,
+        @OutputCustomType.Parameter("userEmailAddress") String userEmailAddress) {
         this.annotatedDatasetDescription = annotatedDatasetDescription;
         this.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
         this.contributorEmails = contributorEmails;

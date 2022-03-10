@@ -15,8 +15,8 @@ public final class DiscoveryResponse {
      */
     private final String analysisKind;
 
-    @OutputCustomType.Constructor({"analysisKind"})
-    private DiscoveryResponse(String analysisKind) {
+    @OutputCustomType.Constructor
+    private DiscoveryResponse(@OutputCustomType.Parameter("analysisKind") String analysisKind) {
         this.analysisKind = analysisKind;
     }
 

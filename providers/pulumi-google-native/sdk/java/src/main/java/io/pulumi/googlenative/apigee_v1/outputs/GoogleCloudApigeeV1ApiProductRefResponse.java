@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiproduct","status"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ApiProductRefResponse(
-        String apiproduct,
-        String status) {
+        @OutputCustomType.Parameter("apiproduct") String apiproduct,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiproduct = apiproduct;
         this.status = status;
     }

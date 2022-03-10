@@ -42,14 +42,14 @@ public final class JobSpecResponse {
      */
     private final Integer ttlSecondsAfterFinished;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","backoffLimit","completions","parallelism","template","ttlSecondsAfterFinished"})
+    @OutputCustomType.Constructor
     private JobSpecResponse(
-        String activeDeadlineSeconds,
-        Integer backoffLimit,
-        Integer completions,
-        Integer parallelism,
-        InstanceTemplateSpecResponse template,
-        Integer ttlSecondsAfterFinished) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
+        @OutputCustomType.Parameter("backoffLimit") Integer backoffLimit,
+        @OutputCustomType.Parameter("completions") Integer completions,
+        @OutputCustomType.Parameter("parallelism") Integer parallelism,
+        @OutputCustomType.Parameter("template") InstanceTemplateSpecResponse template,
+        @OutputCustomType.Parameter("ttlSecondsAfterFinished") Integer ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completions = completions;

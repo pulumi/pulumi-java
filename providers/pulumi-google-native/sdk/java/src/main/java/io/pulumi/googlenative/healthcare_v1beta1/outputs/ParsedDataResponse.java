@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ParsedDataResponse {
     private final List<SegmentResponse> segments;
 
-    @OutputCustomType.Constructor({"segments"})
-    private ParsedDataResponse(List<SegmentResponse> segments) {
+    @OutputCustomType.Constructor
+    private ParsedDataResponse(@OutputCustomType.Parameter("segments") List<SegmentResponse> segments) {
         this.segments = segments;
     }
 

@@ -20,10 +20,10 @@ public final class DefaultPoolResponse {
      */
     private final String serviceAccount;
 
-    @OutputCustomType.Constructor({"artifactStorage","serviceAccount"})
+    @OutputCustomType.Constructor
     private DefaultPoolResponse(
-        String artifactStorage,
-        String serviceAccount) {
+        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
     }

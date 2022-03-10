@@ -21,10 +21,10 @@ public final class SslSettingsResponse {
      */
     private final Boolean isManagedCertificate;
 
-    @OutputCustomType.Constructor({"certificateId","isManagedCertificate"})
+    @OutputCustomType.Constructor
     private SslSettingsResponse(
-        String certificateId,
-        Boolean isManagedCertificate) {
+        @OutputCustomType.Parameter("certificateId") String certificateId,
+        @OutputCustomType.Parameter("isManagedCertificate") Boolean isManagedCertificate) {
         this.certificateId = certificateId;
         this.isManagedCertificate = isManagedCertificate;
     }

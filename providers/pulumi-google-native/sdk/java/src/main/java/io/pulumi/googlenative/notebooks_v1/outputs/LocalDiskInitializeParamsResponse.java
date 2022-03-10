@@ -36,13 +36,13 @@ public final class LocalDiskInitializeParamsResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"description","diskName","diskSizeGb","diskType","labels"})
+    @OutputCustomType.Constructor
     private LocalDiskInitializeParamsResponse(
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

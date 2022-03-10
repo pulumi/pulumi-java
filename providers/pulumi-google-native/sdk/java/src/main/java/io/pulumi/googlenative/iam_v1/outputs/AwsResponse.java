@@ -15,8 +15,8 @@ public final class AwsResponse {
      */
     private final String accountId;
 
-    @OutputCustomType.Constructor({"accountId"})
-    private AwsResponse(String accountId) {
+    @OutputCustomType.Constructor
+    private AwsResponse(@OutputCustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

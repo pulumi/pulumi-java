@@ -15,8 +15,8 @@ public final class PubsubDestinationResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private PubsubDestinationResponse(String topic) {
+    @OutputCustomType.Constructor
+    private PubsubDestinationResponse(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 

@@ -161,35 +161,35 @@ public final class NodeConfigResponse {
      */
     private final WorkloadMetadataConfigResponse workloadMetadataConfig;
 
-    @OutputCustomType.Constructor({"accelerators","advancedMachineFeatures","bootDiskKmsKey","diskSizeGb","diskType","ephemeralStorageConfig","gcfsConfig","gvnic","imageType","kubeletConfig","labels","linuxNodeConfig","localSsdCount","machineType","metadata","minCpuPlatform","nodeGroup","oauthScopes","preemptible","reservationAffinity","sandboxConfig","serviceAccount","shieldedInstanceConfig","spot","tags","taints","workloadMetadataConfig"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        List<AcceleratorConfigResponse> accelerators,
-        AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        String bootDiskKmsKey,
-        Integer diskSizeGb,
-        String diskType,
-        EphemeralStorageConfigResponse ephemeralStorageConfig,
-        GcfsConfigResponse gcfsConfig,
-        VirtualNICResponse gvnic,
-        String imageType,
-        NodeKubeletConfigResponse kubeletConfig,
-        Map<String,String> labels,
-        LinuxNodeConfigResponse linuxNodeConfig,
-        Integer localSsdCount,
-        String machineType,
-        Map<String,String> metadata,
-        String minCpuPlatform,
-        String nodeGroup,
-        List<String> oauthScopes,
-        Boolean preemptible,
-        ReservationAffinityResponse reservationAffinity,
-        SandboxConfigResponse sandboxConfig,
-        String serviceAccount,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        Boolean spot,
-        List<String> tags,
-        List<NodeTaintResponse> taints,
-        WorkloadMetadataConfigResponse workloadMetadataConfig) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @OutputCustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("ephemeralStorageConfig") EphemeralStorageConfigResponse ephemeralStorageConfig,
+        @OutputCustomType.Parameter("gcfsConfig") GcfsConfigResponse gcfsConfig,
+        @OutputCustomType.Parameter("gvnic") VirtualNICResponse gvnic,
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("kubeletConfig") NodeKubeletConfigResponse kubeletConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linuxNodeConfig") LinuxNodeConfigResponse linuxNodeConfig,
+        @OutputCustomType.Parameter("localSsdCount") Integer localSsdCount,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("nodeGroup") String nodeGroup,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("sandboxConfig") SandboxConfigResponse sandboxConfig,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("spot") Boolean spot,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("taints") List<NodeTaintResponse> taints,
+        @OutputCustomType.Parameter("workloadMetadataConfig") WorkloadMetadataConfigResponse workloadMetadataConfig) {
         this.accelerators = accelerators;
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.bootDiskKmsKey = bootDiskKmsKey;

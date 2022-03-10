@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2betaPromotionResponse {
      */
     private final String promotionId;
 
-    @OutputCustomType.Constructor({"promotionId"})
-    private GoogleCloudRetailV2betaPromotionResponse(String promotionId) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2betaPromotionResponse(@OutputCustomType.Parameter("promotionId") String promotionId) {
         this.promotionId = promotionId;
     }
 

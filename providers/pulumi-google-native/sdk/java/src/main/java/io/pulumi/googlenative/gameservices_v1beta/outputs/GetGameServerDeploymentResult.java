@@ -41,14 +41,14 @@ public final class GetGameServerDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","etag","labels","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetGameServerDeploymentResult(
-        String createTime,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

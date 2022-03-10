@@ -15,8 +15,8 @@ public final class NotificationConfigResponse {
      */
     private final PubSubResponse pubsub;
 
-    @OutputCustomType.Constructor({"pubsub"})
-    private NotificationConfigResponse(PubSubResponse pubsub) {
+    @OutputCustomType.Constructor
+    private NotificationConfigResponse(@OutputCustomType.Parameter("pubsub") PubSubResponse pubsub) {
         this.pubsub = pubsub;
     }
 

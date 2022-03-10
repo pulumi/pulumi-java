@@ -15,8 +15,8 @@ public final class PoolOptionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PoolOptionResponse(String name) {
+    @OutputCustomType.Constructor
+    private PoolOptionResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

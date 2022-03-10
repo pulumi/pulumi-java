@@ -32,13 +32,13 @@ public final class PackageIssueResponse {
     private final String packageType;
     private final String severityName;
 
-    @OutputCustomType.Constructor({"affectedLocation","effectiveSeverity","fixedLocation","packageType","severityName"})
+    @OutputCustomType.Constructor
     private PackageIssueResponse(
-        VulnerabilityLocationResponse affectedLocation,
-        String effectiveSeverity,
-        VulnerabilityLocationResponse fixedLocation,
-        String packageType,
-        String severityName) {
+        @OutputCustomType.Parameter("affectedLocation") VulnerabilityLocationResponse affectedLocation,
+        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName) {
         this.affectedLocation = affectedLocation;
         this.effectiveSeverity = effectiveSeverity;
         this.fixedLocation = fixedLocation;

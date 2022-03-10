@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
      */
     private final List<String> includeRegex;
 
-    @OutputCustomType.Constructor({"bucketName","excludeRegex","includeRegex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(
-        String bucketName,
-        List<String> excludeRegex,
-        List<String> includeRegex) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("excludeRegex") List<String> excludeRegex,
+        @OutputCustomType.Parameter("includeRegex") List<String> includeRegex) {
         this.bucketName = bucketName;
         this.excludeRegex = excludeRegex;
         this.includeRegex = includeRegex;

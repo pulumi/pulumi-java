@@ -46,15 +46,15 @@ public final class GetApiResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","labels","managedService","name","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetApiResult(
-        String createTime,
-        String displayName,
-        Map<String,String> labels,
-        String managedService,
-        String name,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("managedService") String managedService,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.labels = labels;

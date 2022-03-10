@@ -43,14 +43,14 @@ public final class CompensationEntryResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor({"amount","description","expectedUnitsPerYear","range","type","unit"})
+    @OutputCustomType.Constructor
     private CompensationEntryResponse(
-        MoneyResponse amount,
-        String description,
-        Double expectedUnitsPerYear,
-        CompensationRangeResponse range,
-        String type,
-        String unit) {
+        @OutputCustomType.Parameter("amount") MoneyResponse amount,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expectedUnitsPerYear") Double expectedUnitsPerYear,
+        @OutputCustomType.Parameter("range") CompensationRangeResponse range,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unit") String unit) {
         this.amount = amount;
         this.description = description;
         this.expectedUnitsPerYear = expectedUnitsPerYear;

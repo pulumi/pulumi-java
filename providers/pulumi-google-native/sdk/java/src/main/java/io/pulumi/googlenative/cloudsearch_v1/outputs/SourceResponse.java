@@ -20,10 +20,10 @@ public final class SourceResponse {
      */
     private final String predefinedSource;
 
-    @OutputCustomType.Constructor({"name","predefinedSource"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        String name,
-        String predefinedSource) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("predefinedSource") String predefinedSource) {
         this.name = name;
         this.predefinedSource = predefinedSource;
     }

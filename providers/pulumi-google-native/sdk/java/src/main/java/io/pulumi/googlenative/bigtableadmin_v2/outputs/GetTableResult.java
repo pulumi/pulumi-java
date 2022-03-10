@@ -37,13 +37,13 @@ public final class GetTableResult {
      */
     private final RestoreInfoResponse restoreInfo;
 
-    @OutputCustomType.Constructor({"clusterStates","columnFamilies","granularity","name","restoreInfo"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        Map<String,String> clusterStates,
-        Map<String,String> columnFamilies,
-        String granularity,
-        String name,
-        RestoreInfoResponse restoreInfo) {
+        @OutputCustomType.Parameter("clusterStates") Map<String,String> clusterStates,
+        @OutputCustomType.Parameter("columnFamilies") Map<String,String> columnFamilies,
+        @OutputCustomType.Parameter("granularity") String granularity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo) {
         this.clusterStates = clusterStates;
         this.columnFamilies = columnFamilies;
         this.granularity = granularity;

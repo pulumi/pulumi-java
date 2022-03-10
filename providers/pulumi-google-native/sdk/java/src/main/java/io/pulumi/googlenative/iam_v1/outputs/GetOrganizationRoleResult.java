@@ -47,15 +47,15 @@ public final class GetOrganizationRoleResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"deleted","description","etag","includedPermissions","name","stage","title"})
+    @OutputCustomType.Constructor
     private GetOrganizationRoleResult(
-        Boolean deleted,
-        String description,
-        String etag,
-        List<String> includedPermissions,
-        String name,
-        String stage,
-        String title) {
+        @OutputCustomType.Parameter("deleted") Boolean deleted,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("includedPermissions") List<String> includedPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("title") String title) {
         this.deleted = deleted;
         this.description = description;
         this.etag = etag;

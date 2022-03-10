@@ -25,11 +25,11 @@ public final class InstanceReferenceResponse {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","publicKey"})
+    @OutputCustomType.Constructor
     private InstanceReferenceResponse(
-        String instanceId,
-        String instanceName,
-        String publicKey) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceName") String instanceName,
+        @OutputCustomType.Parameter("publicKey") String publicKey) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.publicKey = publicKey;

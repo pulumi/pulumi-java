@@ -15,8 +15,8 @@ public final class NetworkRoutingConfigResponse {
      */
     private final String routingMode;
 
-    @OutputCustomType.Constructor({"routingMode"})
-    private NetworkRoutingConfigResponse(String routingMode) {
+    @OutputCustomType.Constructor
+    private NetworkRoutingConfigResponse(@OutputCustomType.Parameter("routingMode") String routingMode) {
         this.routingMode = routingMode;
     }
 

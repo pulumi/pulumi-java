@@ -26,11 +26,11 @@ public final class InputResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"key","preprocessingConfig","uri"})
+    @OutputCustomType.Constructor
     private InputResponse(
-        String key,
-        PreprocessingConfigResponse preprocessingConfig,
-        String uri) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("preprocessingConfig") PreprocessingConfigResponse preprocessingConfig,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.key = key;
         this.preprocessingConfig = preprocessingConfig;
         this.uri = uri;

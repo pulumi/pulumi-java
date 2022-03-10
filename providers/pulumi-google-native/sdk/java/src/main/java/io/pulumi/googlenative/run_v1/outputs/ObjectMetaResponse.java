@@ -89,23 +89,23 @@ public final class ObjectMetaResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","clusterName","creationTimestamp","deletionGracePeriodSeconds","deletionTimestamp","finalizers","generateName","generation","labels","name","namespace","ownerReferences","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private ObjectMetaResponse(
-        Map<String,String> annotations,
-        String clusterName,
-        String creationTimestamp,
-        Integer deletionGracePeriodSeconds,
-        String deletionTimestamp,
-        List<String> finalizers,
-        String generateName,
-        Integer generation,
-        Map<String,String> labels,
-        String name,
-        String namespace,
-        List<OwnerReferenceResponse> ownerReferences,
-        String resourceVersion,
-        String selfLink,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("deletionGracePeriodSeconds") Integer deletionGracePeriodSeconds,
+        @OutputCustomType.Parameter("deletionTimestamp") String deletionTimestamp,
+        @OutputCustomType.Parameter("finalizers") List<String> finalizers,
+        @OutputCustomType.Parameter("generateName") String generateName,
+        @OutputCustomType.Parameter("generation") Integer generation,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("ownerReferences") List<OwnerReferenceResponse> ownerReferences,
+        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;

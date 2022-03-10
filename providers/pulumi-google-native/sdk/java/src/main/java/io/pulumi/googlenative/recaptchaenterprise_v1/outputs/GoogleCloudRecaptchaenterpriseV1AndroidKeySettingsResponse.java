@@ -22,10 +22,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
      */
     private final List<String> allowedPackageNames;
 
-    @OutputCustomType.Constructor({"allowAllPackageNames","allowedPackageNames"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(
-        Boolean allowAllPackageNames,
-        List<String> allowedPackageNames) {
+        @OutputCustomType.Parameter("allowAllPackageNames") Boolean allowAllPackageNames,
+        @OutputCustomType.Parameter("allowedPackageNames") List<String> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }

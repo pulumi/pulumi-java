@@ -20,10 +20,10 @@ public final class PublicKeyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"key","type"})
+    @OutputCustomType.Constructor
     private PublicKeyResponse(
-        String key,
-        String type) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("type") String type) {
         this.key = key;
         this.type = type;
     }

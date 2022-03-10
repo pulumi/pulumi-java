@@ -26,11 +26,11 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"mode","path","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2VersionToPathResponse(
-        Integer mode,
-        String path,
-        String version) {
+        @OutputCustomType.Parameter("mode") Integer mode,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("version") String version) {
         this.mode = mode;
         this.path = path;
         this.version = version;

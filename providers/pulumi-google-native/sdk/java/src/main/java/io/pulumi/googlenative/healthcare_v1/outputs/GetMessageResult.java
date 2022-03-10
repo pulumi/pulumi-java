@@ -65,18 +65,18 @@ public final class GetMessageResult {
      */
     private final String sendTime;
 
-    @OutputCustomType.Constructor({"createTime","data","labels","messageType","name","parsedData","patientIds","schematizedData","sendFacility","sendTime"})
+    @OutputCustomType.Constructor
     private GetMessageResult(
-        String createTime,
-        String data,
-        Map<String,String> labels,
-        String messageType,
-        String name,
-        ParsedDataResponse parsedData,
-        List<PatientIdResponse> patientIds,
-        SchematizedDataResponse schematizedData,
-        String sendFacility,
-        String sendTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("messageType") String messageType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parsedData") ParsedDataResponse parsedData,
+        @OutputCustomType.Parameter("patientIds") List<PatientIdResponse> patientIds,
+        @OutputCustomType.Parameter("schematizedData") SchematizedDataResponse schematizedData,
+        @OutputCustomType.Parameter("sendFacility") String sendFacility,
+        @OutputCustomType.Parameter("sendTime") String sendTime) {
         this.createTime = createTime;
         this.data = data;
         this.labels = labels;

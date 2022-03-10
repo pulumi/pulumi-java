@@ -26,11 +26,11 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","renewalSettings","startTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1CommitmentSettingsResponse(
-        String endTime,
-        GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("renewalSettings") GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.renewalSettings = renewalSettings;
         this.startTime = startTime;

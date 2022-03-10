@@ -64,18 +64,18 @@ public final class HttpCheckResponse {
      */
     private final Boolean validateSsl;
 
-    @OutputCustomType.Constructor({"authInfo","body","contentType","headers","maskHeaders","path","port","requestMethod","useSsl","validateSsl"})
+    @OutputCustomType.Constructor
     private HttpCheckResponse(
-        BasicAuthenticationResponse authInfo,
-        String body,
-        String contentType,
-        Map<String,String> headers,
-        Boolean maskHeaders,
-        String path,
-        Integer port,
-        String requestMethod,
-        Boolean useSsl,
-        Boolean validateSsl) {
+        @OutputCustomType.Parameter("authInfo") BasicAuthenticationResponse authInfo,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("maskHeaders") Boolean maskHeaders,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("requestMethod") String requestMethod,
+        @OutputCustomType.Parameter("useSsl") Boolean useSsl,
+        @OutputCustomType.Parameter("validateSsl") Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;

@@ -30,12 +30,12 @@ public final class PersistenceConfigResponse {
      */
     private final String rdbSnapshotStartTime;
 
-    @OutputCustomType.Constructor({"persistenceMode","rdbNextSnapshotTime","rdbSnapshotPeriod","rdbSnapshotStartTime"})
+    @OutputCustomType.Constructor
     private PersistenceConfigResponse(
-        String persistenceMode,
-        String rdbNextSnapshotTime,
-        String rdbSnapshotPeriod,
-        String rdbSnapshotStartTime) {
+        @OutputCustomType.Parameter("persistenceMode") String persistenceMode,
+        @OutputCustomType.Parameter("rdbNextSnapshotTime") String rdbNextSnapshotTime,
+        @OutputCustomType.Parameter("rdbSnapshotPeriod") String rdbSnapshotPeriod,
+        @OutputCustomType.Parameter("rdbSnapshotStartTime") String rdbSnapshotStartTime) {
         this.persistenceMode = persistenceMode;
         this.rdbNextSnapshotTime = rdbNextSnapshotTime;
         this.rdbSnapshotPeriod = rdbSnapshotPeriod;

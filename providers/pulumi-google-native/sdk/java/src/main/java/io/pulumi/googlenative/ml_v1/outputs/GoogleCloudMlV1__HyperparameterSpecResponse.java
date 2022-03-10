@@ -59,17 +59,17 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
      */
     private final String resumePreviousJobId;
 
-    @OutputCustomType.Constructor({"algorithm","enableTrialEarlyStopping","goal","hyperparameterMetricTag","maxFailedTrials","maxParallelTrials","maxTrials","params","resumePreviousJobId"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__HyperparameterSpecResponse(
-        String algorithm,
-        Boolean enableTrialEarlyStopping,
-        String goal,
-        String hyperparameterMetricTag,
-        Integer maxFailedTrials,
-        Integer maxParallelTrials,
-        Integer maxTrials,
-        List<GoogleCloudMlV1__ParameterSpecResponse> params,
-        String resumePreviousJobId) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("enableTrialEarlyStopping") Boolean enableTrialEarlyStopping,
+        @OutputCustomType.Parameter("goal") String goal,
+        @OutputCustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
+        @OutputCustomType.Parameter("maxFailedTrials") Integer maxFailedTrials,
+        @OutputCustomType.Parameter("maxParallelTrials") Integer maxParallelTrials,
+        @OutputCustomType.Parameter("maxTrials") Integer maxTrials,
+        @OutputCustomType.Parameter("params") List<GoogleCloudMlV1__ParameterSpecResponse> params,
+        @OutputCustomType.Parameter("resumePreviousJobId") String resumePreviousJobId) {
         this.algorithm = algorithm;
         this.enableTrialEarlyStopping = enableTrialEarlyStopping;
         this.goal = goal;

@@ -45,14 +45,14 @@ public final class PreprocessingConfigResponse {
      */
     private final PadResponse pad;
 
-    @OutputCustomType.Constructor({"audio","color","crop","deblock","denoise","pad"})
+    @OutputCustomType.Constructor
     private PreprocessingConfigResponse(
-        AudioResponse audio,
-        ColorResponse color,
-        CropResponse crop,
-        DeblockResponse deblock,
-        DenoiseResponse denoise,
-        PadResponse pad) {
+        @OutputCustomType.Parameter("audio") AudioResponse audio,
+        @OutputCustomType.Parameter("color") ColorResponse color,
+        @OutputCustomType.Parameter("crop") CropResponse crop,
+        @OutputCustomType.Parameter("deblock") DeblockResponse deblock,
+        @OutputCustomType.Parameter("denoise") DenoiseResponse denoise,
+        @OutputCustomType.Parameter("pad") PadResponse pad) {
         this.audio = audio;
         this.color = color;
         this.crop = crop;

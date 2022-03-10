@@ -26,11 +26,11 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor({"end","sharePercentage","start"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1RevenueShareRangeResponse(
-        String end,
-        Double sharePercentage,
-        String start) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("sharePercentage") Double sharePercentage,
+        @OutputCustomType.Parameter("start") String start) {
         this.end = end;
         this.sharePercentage = sharePercentage;
         this.start = start;

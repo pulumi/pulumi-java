@@ -26,11 +26,11 @@ public final class RateLimitsResponse {
      */
     private final Double maxTasksDispatchedPerSecond;
 
-    @OutputCustomType.Constructor({"maxBurstSize","maxConcurrentTasks","maxTasksDispatchedPerSecond"})
+    @OutputCustomType.Constructor
     private RateLimitsResponse(
-        Integer maxBurstSize,
-        Integer maxConcurrentTasks,
-        Double maxTasksDispatchedPerSecond) {
+        @OutputCustomType.Parameter("maxBurstSize") Integer maxBurstSize,
+        @OutputCustomType.Parameter("maxConcurrentTasks") Integer maxConcurrentTasks,
+        @OutputCustomType.Parameter("maxTasksDispatchedPerSecond") Double maxTasksDispatchedPerSecond) {
         this.maxBurstSize = maxBurstSize;
         this.maxConcurrentTasks = maxConcurrentTasks;
         this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;

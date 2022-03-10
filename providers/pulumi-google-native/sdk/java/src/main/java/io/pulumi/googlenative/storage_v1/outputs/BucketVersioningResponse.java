@@ -15,8 +15,8 @@ public final class BucketVersioningResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private BucketVersioningResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private BucketVersioningResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

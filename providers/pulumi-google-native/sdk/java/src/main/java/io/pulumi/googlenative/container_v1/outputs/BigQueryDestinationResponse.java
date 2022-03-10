@@ -15,8 +15,8 @@ public final class BigQueryDestinationResponse {
      */
     private final String datasetId;
 
-    @OutputCustomType.Constructor({"datasetId"})
-    private BigQueryDestinationResponse(String datasetId) {
+    @OutputCustomType.Constructor
+    private BigQueryDestinationResponse(@OutputCustomType.Parameter("datasetId") String datasetId) {
         this.datasetId = datasetId;
     }
 

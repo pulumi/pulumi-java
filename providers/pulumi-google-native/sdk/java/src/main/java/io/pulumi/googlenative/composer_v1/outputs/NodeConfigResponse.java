@@ -58,17 +58,17 @@ public final class NodeConfigResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"diskSizeGb","ipAllocationPolicy","location","machineType","network","oauthScopes","serviceAccount","subnetwork","tags"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        Integer diskSizeGb,
-        IPAllocationPolicyResponse ipAllocationPolicy,
-        String location,
-        String machineType,
-        String network,
-        List<String> oauthScopes,
-        String serviceAccount,
-        String subnetwork,
-        List<String> tags) {
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.diskSizeGb = diskSizeGb;
         this.ipAllocationPolicy = ipAllocationPolicy;
         this.location = location;

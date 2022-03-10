@@ -35,13 +35,13 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"ipRange","name","project","region","status"})
+    @OutputCustomType.Constructor
     private PublicAdvertisedPrefixPublicDelegatedPrefixResponse(
-        String ipRange,
-        String name,
-        String project,
-        String region,
-        String status) {
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("status") String status) {
         this.ipRange = ipRange;
         this.name = name;
         this.project = project;

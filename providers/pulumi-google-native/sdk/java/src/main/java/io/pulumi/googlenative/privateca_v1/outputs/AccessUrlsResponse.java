@@ -21,10 +21,10 @@ public final class AccessUrlsResponse {
      */
     private final List<String> crlAccessUrls;
 
-    @OutputCustomType.Constructor({"caCertificateAccessUrl","crlAccessUrls"})
+    @OutputCustomType.Constructor
     private AccessUrlsResponse(
-        String caCertificateAccessUrl,
-        List<String> crlAccessUrls) {
+        @OutputCustomType.Parameter("caCertificateAccessUrl") String caCertificateAccessUrl,
+        @OutputCustomType.Parameter("crlAccessUrls") List<String> crlAccessUrls) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrls = crlAccessUrls;
     }

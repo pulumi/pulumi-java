@@ -26,11 +26,11 @@ public final class KeyOperationAttestationResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"certChains","content","format"})
+    @OutputCustomType.Constructor
     private KeyOperationAttestationResponse(
-        CertificateChainsResponse certChains,
-        String content,
-        String format) {
+        @OutputCustomType.Parameter("certChains") CertificateChainsResponse certChains,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("format") String format) {
         this.certChains = certChains;
         this.content = content;
         this.format = format;

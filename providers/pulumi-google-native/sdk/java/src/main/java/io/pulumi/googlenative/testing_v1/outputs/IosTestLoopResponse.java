@@ -28,11 +28,11 @@ public final class IosTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor({"appBundleId","appIpa","scenarios"})
+    @OutputCustomType.Constructor
     private IosTestLoopResponse(
-        String appBundleId,
-        FileReferenceResponse appIpa,
-        List<Integer> scenarios) {
+        @OutputCustomType.Parameter("appBundleId") String appBundleId,
+        @OutputCustomType.Parameter("appIpa") FileReferenceResponse appIpa,
+        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appBundleId = appBundleId;
         this.appIpa = appIpa;
         this.scenarios = scenarios;

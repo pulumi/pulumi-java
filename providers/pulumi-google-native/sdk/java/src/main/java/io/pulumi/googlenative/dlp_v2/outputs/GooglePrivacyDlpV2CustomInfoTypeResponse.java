@@ -57,16 +57,16 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
      */
     private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
-    @OutputCustomType.Constructor({"detectionRules","dictionary","exclusionType","infoType","likelihood","regex","storedType","surrogateType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CustomInfoTypeResponse(
-        List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String exclusionType,
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        String likelihood,
-        GooglePrivacyDlpV2RegexResponse regex,
-        GooglePrivacyDlpV2StoredTypeResponse storedType,
-        GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
+        @OutputCustomType.Parameter("detectionRules") List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("exclusionType") String exclusionType,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
+        @OutputCustomType.Parameter("likelihood") String likelihood,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex,
+        @OutputCustomType.Parameter("storedType") GooglePrivacyDlpV2StoredTypeResponse storedType,
+        @OutputCustomType.Parameter("surrogateType") GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
         this.detectionRules = detectionRules;
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;

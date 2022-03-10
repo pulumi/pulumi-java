@@ -20,10 +20,10 @@ public final class GetReservationResult {
      */
     private final String throughputCapacity;
 
-    @OutputCustomType.Constructor({"name","throughputCapacity"})
+    @OutputCustomType.Constructor
     private GetReservationResult(
-        String name,
-        String throughputCapacity) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("throughputCapacity") String throughputCapacity) {
         this.name = name;
         this.throughputCapacity = throughputCapacity;
     }

@@ -31,12 +31,12 @@ public final class GetParticipantResult {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"documentsMetadataFilters","name","obfuscatedExternalUserId","role"})
+    @OutputCustomType.Constructor
     private GetParticipantResult(
-        Map<String,String> documentsMetadataFilters,
-        String name,
-        String obfuscatedExternalUserId,
-        String role) {
+        @OutputCustomType.Parameter("documentsMetadataFilters") Map<String,String> documentsMetadataFilters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @OutputCustomType.Parameter("role") String role) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         this.name = name;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;

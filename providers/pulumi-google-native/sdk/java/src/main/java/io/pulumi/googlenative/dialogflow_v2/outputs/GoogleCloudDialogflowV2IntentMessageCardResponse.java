@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","imageUri","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageCardResponse(
-        List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons,
-        String imageUri,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUri = imageUri;
         this.subtitle = subtitle;

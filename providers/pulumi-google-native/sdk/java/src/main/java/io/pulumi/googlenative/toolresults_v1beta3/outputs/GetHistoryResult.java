@@ -30,12 +30,12 @@ public final class GetHistoryResult {
      */
     private final String testPlatform;
 
-    @OutputCustomType.Constructor({"displayName","historyId","name","testPlatform"})
+    @OutputCustomType.Constructor
     private GetHistoryResult(
-        String displayName,
-        String historyId,
-        String name,
-        String testPlatform) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testPlatform") String testPlatform) {
         this.displayName = displayName;
         this.historyId = historyId;
         this.name = name;

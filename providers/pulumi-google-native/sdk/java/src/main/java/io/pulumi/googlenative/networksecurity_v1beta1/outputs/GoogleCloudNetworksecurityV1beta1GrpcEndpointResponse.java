@@ -15,8 +15,8 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
      */
     private final String targetUri;
 
-    @OutputCustomType.Constructor({"targetUri"})
-    private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(String targetUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(@OutputCustomType.Parameter("targetUri") String targetUri) {
         this.targetUri = targetUri;
     }
 

@@ -21,10 +21,10 @@ public final class ValidationCAResponse {
      */
     private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
-    @OutputCustomType.Constructor({"certificateProviderInstance","grpcEndpoint"})
+    @OutputCustomType.Constructor
     private ValidationCAResponse(
-        CertificateProviderInstanceResponse certificateProviderInstance,
-        GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
+        @OutputCustomType.Parameter("certificateProviderInstance") CertificateProviderInstanceResponse certificateProviderInstance,
+        @OutputCustomType.Parameter("grpcEndpoint") GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
         this.certificateProviderInstance = certificateProviderInstance;
         this.grpcEndpoint = grpcEndpoint;
     }

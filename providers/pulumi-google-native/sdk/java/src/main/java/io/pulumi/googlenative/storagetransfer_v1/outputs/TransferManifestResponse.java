@@ -15,8 +15,8 @@ public final class TransferManifestResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"location"})
-    private TransferManifestResponse(String location) {
+    @OutputCustomType.Constructor
+    private TransferManifestResponse(@OutputCustomType.Parameter("location") String location) {
         this.location = location;
     }
 

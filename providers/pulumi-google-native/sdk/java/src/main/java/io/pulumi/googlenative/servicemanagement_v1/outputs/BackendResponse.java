@@ -16,8 +16,8 @@ public final class BackendResponse {
      */
     private final List<BackendRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BackendResponse(List<BackendRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private BackendResponse(@OutputCustomType.Parameter("rules") List<BackendRuleResponse> rules) {
         this.rules = rules;
     }
 

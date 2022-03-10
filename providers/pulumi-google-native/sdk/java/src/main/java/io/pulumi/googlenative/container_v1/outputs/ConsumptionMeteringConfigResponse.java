@@ -15,8 +15,8 @@ public final class ConsumptionMeteringConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ConsumptionMeteringConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ConsumptionMeteringConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

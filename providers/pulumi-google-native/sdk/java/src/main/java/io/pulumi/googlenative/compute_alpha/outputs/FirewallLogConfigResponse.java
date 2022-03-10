@@ -21,10 +21,10 @@ public final class FirewallLogConfigResponse {
      */
     private final String metadata;
 
-    @OutputCustomType.Constructor({"enable","metadata"})
+    @OutputCustomType.Constructor
     private FirewallLogConfigResponse(
-        Boolean enable,
-        String metadata) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("metadata") String metadata) {
         this.enable = enable;
         this.metadata = metadata;
     }

@@ -46,15 +46,15 @@ public final class GetMetadataImportResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","databaseDump","description","endTime","name","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetMetadataImportResult(
-        String createTime,
-        DatabaseDumpResponse databaseDump,
-        String description,
-        String endTime,
-        String name,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("databaseDump") DatabaseDumpResponse databaseDump,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.databaseDump = databaseDump;
         this.description = description;

@@ -20,10 +20,10 @@ public final class CategoryResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"categoryId","name"})
+    @OutputCustomType.Constructor
     private CategoryResponse(
-        String categoryId,
-        String name) {
+        @OutputCustomType.Parameter("categoryId") String categoryId,
+        @OutputCustomType.Parameter("name") String name) {
         this.categoryId = categoryId;
         this.name = name;
     }

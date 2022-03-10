@@ -56,17 +56,17 @@ public final class GetTargetGrpcProxyResult {
      */
     private final Boolean validateForProxyless;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","kind","name","selfLink","selfLinkWithId","urlMap","validateForProxyless"})
+    @OutputCustomType.Constructor
     private GetTargetGrpcProxyResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        String selfLink,
-        String selfLinkWithId,
-        String urlMap,
-        Boolean validateForProxyless) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("urlMap") String urlMap,
+        @OutputCustomType.Parameter("validateForProxyless") Boolean validateForProxyless) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

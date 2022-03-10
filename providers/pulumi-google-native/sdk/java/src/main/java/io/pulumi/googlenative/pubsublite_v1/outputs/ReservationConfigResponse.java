@@ -15,8 +15,8 @@ public final class ReservationConfigResponse {
      */
     private final String throughputReservation;
 
-    @OutputCustomType.Constructor({"throughputReservation"})
-    private ReservationConfigResponse(String throughputReservation) {
+    @OutputCustomType.Constructor
+    private ReservationConfigResponse(@OutputCustomType.Parameter("throughputReservation") String throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 

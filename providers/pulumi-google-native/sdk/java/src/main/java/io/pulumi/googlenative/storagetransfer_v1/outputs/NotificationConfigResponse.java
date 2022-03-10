@@ -26,11 +26,11 @@ public final class NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"eventTypes","payloadFormat","pubsubTopic"})
+    @OutputCustomType.Constructor
     private NotificationConfigResponse(
-        List<String> eventTypes,
-        String payloadFormat,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("eventTypes") List<String> eventTypes,
+        @OutputCustomType.Parameter("payloadFormat") String payloadFormat,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.eventTypes = eventTypes;
         this.payloadFormat = payloadFormat;
         this.pubsubTopic = pubsubTopic;

@@ -20,10 +20,10 @@ public final class ImageRawDiskResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"containerType","source"})
+    @OutputCustomType.Constructor
     private ImageRawDiskResponse(
-        String containerType,
-        String source) {
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.source = source;
     }

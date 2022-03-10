@@ -99,23 +99,23 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
      */
     private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
-    @OutputCustomType.Constructor({"basicCard","browseCarouselCard","card","carouselSelect","image","linkOutSuggestion","listSelect","mediaContent","payload","platform","quickReplies","simpleResponses","suggestions","tableCard","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageResponse(
-        GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard,
-        GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard,
-        GoogleCloudDialogflowV2IntentMessageCardResponse card,
-        GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
-        GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect,
-        GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent,
-        Map<String,String> payload,
-        String platform,
-        GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies,
-        GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses,
-        GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
-        GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
-        GoogleCloudDialogflowV2IntentMessageTextResponse text) {
+        @OutputCustomType.Parameter("basicCard") GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard,
+        @OutputCustomType.Parameter("browseCarouselCard") GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard,
+        @OutputCustomType.Parameter("card") GoogleCloudDialogflowV2IntentMessageCardResponse card,
+        @OutputCustomType.Parameter("carouselSelect") GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("linkOutSuggestion") GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
+        @OutputCustomType.Parameter("listSelect") GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect,
+        @OutputCustomType.Parameter("mediaContent") GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent,
+        @OutputCustomType.Parameter("payload") Map<String,String> payload,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("quickReplies") GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies,
+        @OutputCustomType.Parameter("simpleResponses") GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses,
+        @OutputCustomType.Parameter("suggestions") GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
+        @OutputCustomType.Parameter("tableCard") GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
+        @OutputCustomType.Parameter("text") GoogleCloudDialogflowV2IntentMessageTextResponse text) {
         this.basicCard = basicCard;
         this.browseCarouselCard = browseCarouselCard;
         this.card = card;

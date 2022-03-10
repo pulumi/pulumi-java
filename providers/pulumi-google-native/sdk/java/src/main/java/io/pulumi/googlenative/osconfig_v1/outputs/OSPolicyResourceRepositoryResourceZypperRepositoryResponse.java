@@ -26,11 +26,11 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse {
      */
     private final List<String> gpgKeys;
 
-    @OutputCustomType.Constructor({"baseUrl","displayName","gpgKeys"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceRepositoryResourceZypperRepositoryResponse(
-        String baseUrl,
-        String displayName,
-        List<String> gpgKeys) {
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("gpgKeys") List<String> gpgKeys) {
         this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;

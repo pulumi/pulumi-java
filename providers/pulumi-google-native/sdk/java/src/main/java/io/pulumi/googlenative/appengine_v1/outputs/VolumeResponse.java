@@ -26,11 +26,11 @@ public final class VolumeResponse {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"name","sizeGb","volumeType"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        String name,
-        Double sizeGb,
-        String volumeType) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeGb") Double sizeGb,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.name = name;
         this.sizeGb = sizeGb;
         this.volumeType = volumeType;

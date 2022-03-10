@@ -20,10 +20,10 @@ public final class SchedulerAcceleratorConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"coreCount","type"})
+    @OutputCustomType.Constructor
     private SchedulerAcceleratorConfigResponse(
-        String coreCount,
-        String type) {
+        @OutputCustomType.Parameter("coreCount") String coreCount,
+        @OutputCustomType.Parameter("type") String type) {
         this.coreCount = coreCount;
         this.type = type;
     }

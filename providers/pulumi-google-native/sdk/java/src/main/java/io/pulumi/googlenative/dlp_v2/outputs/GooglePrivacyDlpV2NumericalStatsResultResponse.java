@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
-    @OutputCustomType.Constructor({"maxValue","minValue","quantileValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2NumericalStatsResultResponse(
-        GooglePrivacyDlpV2ValueResponse maxValue,
-        GooglePrivacyDlpV2ValueResponse minValue,
-        List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
+        @OutputCustomType.Parameter("maxValue") GooglePrivacyDlpV2ValueResponse maxValue,
+        @OutputCustomType.Parameter("minValue") GooglePrivacyDlpV2ValueResponse minValue,
+        @OutputCustomType.Parameter("quantileValues") List<GooglePrivacyDlpV2ValueResponse> quantileValues) {
         this.maxValue = maxValue;
         this.minValue = minValue;
         this.quantileValues = quantileValues;

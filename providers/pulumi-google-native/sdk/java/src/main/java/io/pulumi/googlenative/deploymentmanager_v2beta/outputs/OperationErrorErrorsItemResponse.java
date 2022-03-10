@@ -25,11 +25,11 @@ public final class OperationErrorErrorsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","location","message"})
+    @OutputCustomType.Constructor
     private OperationErrorErrorsItemResponse(
-        String code,
-        String location,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.location = location;
         this.message = message;

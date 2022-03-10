@@ -78,21 +78,21 @@ public final class BuildStepResponse {
      */
     private final List<String> waitFor;
 
-    @OutputCustomType.Constructor({"args","dir","entrypoint","env","name","pullTiming","script","secretEnv","status","timeout","timing","volumes","waitFor"})
+    @OutputCustomType.Constructor
     private BuildStepResponse(
-        List<String> args,
-        String dir,
-        String entrypoint,
-        List<String> env,
-        String name,
-        TimeSpanResponse pullTiming,
-        String script,
-        List<String> secretEnv,
-        String status,
-        String timeout,
-        TimeSpanResponse timing,
-        List<VolumeResponse> volumes,
-        List<String> waitFor) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("dir") String dir,
+        @OutputCustomType.Parameter("entrypoint") String entrypoint,
+        @OutputCustomType.Parameter("env") List<String> env,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pullTiming") TimeSpanResponse pullTiming,
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("secretEnv") List<String> secretEnv,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("timeout") String timeout,
+        @OutputCustomType.Parameter("timing") TimeSpanResponse timing,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes,
+        @OutputCustomType.Parameter("waitFor") List<String> waitFor) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;

@@ -15,8 +15,8 @@ public final class RelationshipNoteResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private RelationshipNoteResponse(String type) {
+    @OutputCustomType.Constructor
+    private RelationshipNoteResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

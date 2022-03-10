@@ -20,10 +20,10 @@ public final class VertexResponse {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor({"x","y"})
+    @OutputCustomType.Constructor
     private VertexResponse(
-        Integer x,
-        Integer y) {
+        @OutputCustomType.Parameter("x") Integer x,
+        @OutputCustomType.Parameter("y") Integer y) {
         this.x = x;
         this.y = y;
     }

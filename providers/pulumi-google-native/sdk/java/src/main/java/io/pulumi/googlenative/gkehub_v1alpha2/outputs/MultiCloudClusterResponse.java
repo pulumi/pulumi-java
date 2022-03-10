@@ -21,10 +21,10 @@ public final class MultiCloudClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"clusterMissing","resourceLink"})
+    @OutputCustomType.Constructor
     private MultiCloudClusterResponse(
-        Boolean clusterMissing,
-        String resourceLink) {
+        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;
     }

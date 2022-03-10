@@ -36,13 +36,13 @@ public final class GetStudyResult {
      */
     private final GoogleCloudMlV1__StudyConfigResponse studyConfig;
 
-    @OutputCustomType.Constructor({"createTime","inactiveReason","name","state","studyConfig"})
+    @OutputCustomType.Constructor
     private GetStudyResult(
-        String createTime,
-        String inactiveReason,
-        String name,
-        String state,
-        GoogleCloudMlV1__StudyConfigResponse studyConfig) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("inactiveReason") String inactiveReason,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("studyConfig") GoogleCloudMlV1__StudyConfigResponse studyConfig) {
         this.createTime = createTime;
         this.inactiveReason = inactiveReason;
         this.name = name;

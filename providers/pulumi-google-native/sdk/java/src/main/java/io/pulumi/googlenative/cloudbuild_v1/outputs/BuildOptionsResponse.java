@@ -79,21 +79,21 @@ public final class BuildOptionsResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor({"diskSizeGb","dynamicSubstitutions","env","logStreamingOption","logging","machineType","pool","requestedVerifyOption","secretEnv","sourceProvenanceHash","substitutionOption","volumes","workerPool"})
+    @OutputCustomType.Constructor
     private BuildOptionsResponse(
-        String diskSizeGb,
-        Boolean dynamicSubstitutions,
-        List<String> env,
-        String logStreamingOption,
-        String logging,
-        String machineType,
-        PoolOptionResponse pool,
-        String requestedVerifyOption,
-        List<String> secretEnv,
-        List<String> sourceProvenanceHash,
-        String substitutionOption,
-        List<VolumeResponse> volumes,
-        String workerPool) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("dynamicSubstitutions") Boolean dynamicSubstitutions,
+        @OutputCustomType.Parameter("env") List<String> env,
+        @OutputCustomType.Parameter("logStreamingOption") String logStreamingOption,
+        @OutputCustomType.Parameter("logging") String logging,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("pool") PoolOptionResponse pool,
+        @OutputCustomType.Parameter("requestedVerifyOption") String requestedVerifyOption,
+        @OutputCustomType.Parameter("secretEnv") List<String> secretEnv,
+        @OutputCustomType.Parameter("sourceProvenanceHash") List<String> sourceProvenanceHash,
+        @OutputCustomType.Parameter("substitutionOption") String substitutionOption,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes,
+        @OutputCustomType.Parameter("workerPool") String workerPool) {
         this.diskSizeGb = diskSizeGb;
         this.dynamicSubstitutions = dynamicSubstitutions;
         this.env = env;

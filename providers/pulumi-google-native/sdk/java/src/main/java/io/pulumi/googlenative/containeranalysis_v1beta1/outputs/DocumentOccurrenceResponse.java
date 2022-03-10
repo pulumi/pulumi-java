@@ -51,16 +51,16 @@ public final class DocumentOccurrenceResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"createTime","creatorComment","creators","documentComment","externalDocumentRefs","licenseListVersion","namespace","title"})
+    @OutputCustomType.Constructor
     private DocumentOccurrenceResponse(
-        String createTime,
-        String creatorComment,
-        List<String> creators,
-        String documentComment,
-        List<String> externalDocumentRefs,
-        String licenseListVersion,
-        String namespace,
-        String title) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creatorComment") String creatorComment,
+        @OutputCustomType.Parameter("creators") List<String> creators,
+        @OutputCustomType.Parameter("documentComment") String documentComment,
+        @OutputCustomType.Parameter("externalDocumentRefs") List<String> externalDocumentRefs,
+        @OutputCustomType.Parameter("licenseListVersion") String licenseListVersion,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("title") String title) {
         this.createTime = createTime;
         this.creatorComment = creatorComment;
         this.creators = creators;

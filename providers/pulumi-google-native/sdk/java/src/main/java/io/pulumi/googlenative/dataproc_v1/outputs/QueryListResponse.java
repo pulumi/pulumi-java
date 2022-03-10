@@ -16,8 +16,8 @@ public final class QueryListResponse {
      */
     private final List<String> queries;
 
-    @OutputCustomType.Constructor({"queries"})
-    private QueryListResponse(List<String> queries) {
+    @OutputCustomType.Constructor
+    private QueryListResponse(@OutputCustomType.Parameter("queries") List<String> queries) {
         this.queries = queries;
     }
 

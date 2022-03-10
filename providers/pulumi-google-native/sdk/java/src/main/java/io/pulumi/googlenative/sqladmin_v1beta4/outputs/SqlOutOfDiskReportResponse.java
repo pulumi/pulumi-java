@@ -21,10 +21,10 @@ public final class SqlOutOfDiskReportResponse {
      */
     private final String sqlOutOfDiskState;
 
-    @OutputCustomType.Constructor({"sqlMinRecommendedIncreaseSizeGb","sqlOutOfDiskState"})
+    @OutputCustomType.Constructor
     private SqlOutOfDiskReportResponse(
-        Integer sqlMinRecommendedIncreaseSizeGb,
-        String sqlOutOfDiskState) {
+        @OutputCustomType.Parameter("sqlMinRecommendedIncreaseSizeGb") Integer sqlMinRecommendedIncreaseSizeGb,
+        @OutputCustomType.Parameter("sqlOutOfDiskState") String sqlOutOfDiskState) {
         this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
         this.sqlOutOfDiskState = sqlOutOfDiskState;
     }

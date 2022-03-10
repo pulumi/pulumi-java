@@ -26,11 +26,11 @@ public final class PickTimeSeriesFilterResponse {
      */
     private final String rankingMethod;
 
-    @OutputCustomType.Constructor({"direction","numTimeSeries","rankingMethod"})
+    @OutputCustomType.Constructor
     private PickTimeSeriesFilterResponse(
-        String direction,
-        Integer numTimeSeries,
-        String rankingMethod) {
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("numTimeSeries") Integer numTimeSeries,
+        @OutputCustomType.Parameter("rankingMethod") String rankingMethod) {
         this.direction = direction;
         this.numTimeSeries = numTimeSeries;
         this.rankingMethod = rankingMethod;

@@ -36,13 +36,13 @@ public final class SlsaRecipeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arguments","definedInMaterial","entryPoint","environment","type"})
+    @OutputCustomType.Constructor
     private SlsaRecipeResponse(
-        Map<String,String> arguments,
-        String definedInMaterial,
-        String entryPoint,
-        Map<String,String> environment,
-        String type) {
+        @OutputCustomType.Parameter("arguments") Map<String,String> arguments,
+        @OutputCustomType.Parameter("definedInMaterial") String definedInMaterial,
+        @OutputCustomType.Parameter("entryPoint") String entryPoint,
+        @OutputCustomType.Parameter("environment") Map<String,String> environment,
+        @OutputCustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.definedInMaterial = definedInMaterial;
         this.entryPoint = entryPoint;

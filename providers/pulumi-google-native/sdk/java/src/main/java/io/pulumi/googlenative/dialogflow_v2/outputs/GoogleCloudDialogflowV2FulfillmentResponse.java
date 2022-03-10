@@ -39,13 +39,13 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","enabled","features","genericWebService","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2FulfillmentResponse(
-        String displayName,
-        Boolean enabled,
-        List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
-        GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("features") List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
+        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.enabled = enabled;
         this.features = features;

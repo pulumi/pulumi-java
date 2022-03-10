@@ -37,13 +37,13 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"featurePolicy","location","loggingEnabled","name","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
-        String location,
-        Boolean loggingEnabled,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("featurePolicy") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("loggingEnabled") Boolean loggingEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.featurePolicy = featurePolicy;
         this.location = location;
         this.loggingEnabled = loggingEnabled;

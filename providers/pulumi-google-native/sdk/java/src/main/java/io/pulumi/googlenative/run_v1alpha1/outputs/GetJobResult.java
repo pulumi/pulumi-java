@@ -38,13 +38,13 @@ public final class GetJobResult {
      */
     private final JobStatusResponse status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        String apiVersion,
-        String kind,
-        ObjectMetaResponse metadata,
-        JobSpecResponse spec,
-        JobStatusResponse status) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") JobSpecResponse spec,
+        @OutputCustomType.Parameter("status") JobStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

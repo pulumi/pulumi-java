@@ -21,10 +21,10 @@ public final class EgressPolicyResponse {
      */
     private final EgressToResponse egressTo;
 
-    @OutputCustomType.Constructor({"egressFrom","egressTo"})
+    @OutputCustomType.Constructor
     private EgressPolicyResponse(
-        EgressFromResponse egressFrom,
-        EgressToResponse egressTo) {
+        @OutputCustomType.Parameter("egressFrom") EgressFromResponse egressFrom,
+        @OutputCustomType.Parameter("egressTo") EgressToResponse egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }

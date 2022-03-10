@@ -30,12 +30,12 @@ public final class ErrorProtoResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"debugInfo","location","message","reason"})
+    @OutputCustomType.Constructor
     private ErrorProtoResponse(
-        String debugInfo,
-        String location,
-        String message,
-        String reason) {
+        @OutputCustomType.Parameter("debugInfo") String debugInfo,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.debugInfo = debugInfo;
         this.location = location;
         this.message = message;

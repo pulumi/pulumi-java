@@ -15,8 +15,8 @@ public final class MultiClusterIngressFeatureSpecResponse {
      */
     private final String configMembership;
 
-    @OutputCustomType.Constructor({"configMembership"})
-    private MultiClusterIngressFeatureSpecResponse(String configMembership) {
+    @OutputCustomType.Constructor
+    private MultiClusterIngressFeatureSpecResponse(@OutputCustomType.Parameter("configMembership") String configMembership) {
         this.configMembership = configMembership;
     }
 

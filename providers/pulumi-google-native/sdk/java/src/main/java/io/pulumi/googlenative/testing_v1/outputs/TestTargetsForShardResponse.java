@@ -16,8 +16,8 @@ public final class TestTargetsForShardResponse {
      */
     private final List<String> testTargets;
 
-    @OutputCustomType.Constructor({"testTargets"})
-    private TestTargetsForShardResponse(List<String> testTargets) {
+    @OutputCustomType.Constructor
+    private TestTargetsForShardResponse(@OutputCustomType.Parameter("testTargets") List<String> testTargets) {
         this.testTargets = testTargets;
     }
 

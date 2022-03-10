@@ -21,10 +21,10 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountResponse {
      */
     private final GoogleTypeMoneyResponse specifiedAmount;
 
-    @OutputCustomType.Constructor({"lastPeriodAmount","specifiedAmount"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1BudgetAmountResponse(
-        GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount,
-        GoogleTypeMoneyResponse specifiedAmount) {
+        @OutputCustomType.Parameter("lastPeriodAmount") GoogleCloudBillingBudgetsV1LastPeriodAmountResponse lastPeriodAmount,
+        @OutputCustomType.Parameter("specifiedAmount") GoogleTypeMoneyResponse specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }

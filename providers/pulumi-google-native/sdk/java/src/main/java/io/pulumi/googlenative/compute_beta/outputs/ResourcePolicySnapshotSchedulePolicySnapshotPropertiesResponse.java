@@ -33,12 +33,12 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      */
     private final List<String> storageLocations;
 
-    @OutputCustomType.Constructor({"chainName","guestFlush","labels","storageLocations"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(
-        String chainName,
-        Boolean guestFlush,
-        Map<String,String> labels,
-        List<String> storageLocations) {
+        @OutputCustomType.Parameter("chainName") String chainName,
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations) {
         this.chainName = chainName;
         this.guestFlush = guestFlush;
         this.labels = labels;

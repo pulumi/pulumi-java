@@ -25,11 +25,11 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"displayName","resourceId","resourceType"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(
-        String displayName,
-        String resourceId,
-        String resourceType) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.displayName = displayName;
         this.resourceId = resourceId;
         this.resourceType = resourceType;

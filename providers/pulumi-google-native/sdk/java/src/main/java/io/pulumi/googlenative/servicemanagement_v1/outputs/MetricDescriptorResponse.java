@@ -68,19 +68,19 @@ public final class MetricDescriptorResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"description","displayName","labels","launchStage","metadata","metricKind","monitoredResourceTypes","name","type","unit","valueType"})
+    @OutputCustomType.Constructor
     private MetricDescriptorResponse(
-        String description,
-        String displayName,
-        List<LabelDescriptorResponse> labels,
-        String launchStage,
-        MetricDescriptorMetadataResponse metadata,
-        String metricKind,
-        List<String> monitoredResourceTypes,
-        String name,
-        String type,
-        String unit,
-        String valueType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @OutputCustomType.Parameter("launchStage") String launchStage,
+        @OutputCustomType.Parameter("metadata") MetricDescriptorMetadataResponse metadata,
+        @OutputCustomType.Parameter("metricKind") String metricKind,
+        @OutputCustomType.Parameter("monitoredResourceTypes") List<String> monitoredResourceTypes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

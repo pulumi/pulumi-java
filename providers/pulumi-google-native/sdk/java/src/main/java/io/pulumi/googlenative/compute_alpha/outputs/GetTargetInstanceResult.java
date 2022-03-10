@@ -60,18 +60,18 @@ public final class GetTargetInstanceResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","instance","kind","name","natPolicy","network","selfLink","selfLinkWithId","zone"})
+    @OutputCustomType.Constructor
     private GetTargetInstanceResult(
-        String creationTimestamp,
-        String description,
-        String instance,
-        String kind,
-        String name,
-        String natPolicy,
-        String network,
-        String selfLink,
-        String selfLinkWithId,
-        String zone) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natPolicy") String natPolicy,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.instance = instance;

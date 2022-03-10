@@ -30,12 +30,12 @@ public final class DatabaseDumpResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseType","gcsUri","sourceDatabase","type"})
+    @OutputCustomType.Constructor
     private DatabaseDumpResponse(
-        String databaseType,
-        String gcsUri,
-        String sourceDatabase,
-        String type) {
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("gcsUri") String gcsUri,
+        @OutputCustomType.Parameter("sourceDatabase") String sourceDatabase,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseType = databaseType;
         this.gcsUri = gcsUri;
         this.sourceDatabase = sourceDatabase;

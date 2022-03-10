@@ -21,10 +21,10 @@ public final class SubjectResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"digest","name"})
+    @OutputCustomType.Constructor
     private SubjectResponse(
-        Map<String,String> digest,
-        String name) {
+        @OutputCustomType.Parameter("digest") Map<String,String> digest,
+        @OutputCustomType.Parameter("name") String name) {
         this.digest = digest;
         this.name = name;
     }

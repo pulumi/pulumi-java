@@ -21,10 +21,10 @@ public final class PartitionConfigResponse {
      */
     private final String count;
 
-    @OutputCustomType.Constructor({"capacity","count"})
+    @OutputCustomType.Constructor
     private PartitionConfigResponse(
-        CapacityResponse capacity,
-        String count) {
+        @OutputCustomType.Parameter("capacity") CapacityResponse capacity,
+        @OutputCustomType.Parameter("count") String count) {
         this.capacity = capacity;
         this.count = count;
     }

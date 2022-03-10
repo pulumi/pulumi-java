@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      */
     private final String thumbnailImageAlignment;
 
-    @OutputCustomType.Constructor({"cardContent","cardOrientation","thumbnailImageAlignment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
-        String cardOrientation,
-        String thumbnailImageAlignment) {
+        @OutputCustomType.Parameter("cardContent") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
+        @OutputCustomType.Parameter("cardOrientation") String cardOrientation,
+        @OutputCustomType.Parameter("thumbnailImageAlignment") String thumbnailImageAlignment) {
         this.cardContent = cardContent;
         this.cardOrientation = cardOrientation;
         this.thumbnailImageAlignment = thumbnailImageAlignment;

@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      */
     private final String mediaType;
 
-    @OutputCustomType.Constructor({"mediaObjects","mediaType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
-        String mediaType) {
+        @OutputCustomType.Parameter("mediaObjects") List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
+        @OutputCustomType.Parameter("mediaType") String mediaType) {
         this.mediaObjects = mediaObjects;
         this.mediaType = mediaType;
     }

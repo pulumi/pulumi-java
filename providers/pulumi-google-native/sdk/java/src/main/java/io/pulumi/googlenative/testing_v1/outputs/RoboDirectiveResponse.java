@@ -25,11 +25,11 @@ public final class RoboDirectiveResponse {
      */
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"actionType","inputText","resourceName"})
+    @OutputCustomType.Constructor
     private RoboDirectiveResponse(
-        String actionType,
-        String inputText,
-        String resourceName) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("inputText") String inputText,
+        @OutputCustomType.Parameter("resourceName") String resourceName) {
         this.actionType = actionType;
         this.inputText = inputText;
         this.resourceName = resourceName;

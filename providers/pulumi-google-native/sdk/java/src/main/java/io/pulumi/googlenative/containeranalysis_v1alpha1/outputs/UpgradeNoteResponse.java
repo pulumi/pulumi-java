@@ -28,11 +28,11 @@ public final class UpgradeNoteResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor({"distributions","$package","version"})
+    @OutputCustomType.Constructor
     private UpgradeNoteResponse(
-        List<UpgradeDistributionResponse> distributions,
-        String $package,
-        VersionResponse version) {
+        @OutputCustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("version") VersionResponse version) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;

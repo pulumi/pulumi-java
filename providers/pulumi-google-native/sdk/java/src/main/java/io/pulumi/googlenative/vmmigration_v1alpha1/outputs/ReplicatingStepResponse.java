@@ -30,12 +30,12 @@ public final class ReplicatingStepResponse {
      */
     private final String totalBytes;
 
-    @OutputCustomType.Constructor({"lastThirtyMinutesAverageBytesPerSecond","lastTwoMinutesAverageBytesPerSecond","replicatedBytes","totalBytes"})
+    @OutputCustomType.Constructor
     private ReplicatingStepResponse(
-        String lastThirtyMinutesAverageBytesPerSecond,
-        String lastTwoMinutesAverageBytesPerSecond,
-        String replicatedBytes,
-        String totalBytes) {
+        @OutputCustomType.Parameter("lastThirtyMinutesAverageBytesPerSecond") String lastThirtyMinutesAverageBytesPerSecond,
+        @OutputCustomType.Parameter("lastTwoMinutesAverageBytesPerSecond") String lastTwoMinutesAverageBytesPerSecond,
+        @OutputCustomType.Parameter("replicatedBytes") String replicatedBytes,
+        @OutputCustomType.Parameter("totalBytes") String totalBytes) {
         this.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
         this.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
         this.replicatedBytes = replicatedBytes;

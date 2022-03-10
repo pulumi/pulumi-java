@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2FileSetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"regexFileSet","url"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FileSetResponse(
-        GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
-        String url) {
+        @OutputCustomType.Parameter("regexFileSet") GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
+        @OutputCustomType.Parameter("url") String url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }

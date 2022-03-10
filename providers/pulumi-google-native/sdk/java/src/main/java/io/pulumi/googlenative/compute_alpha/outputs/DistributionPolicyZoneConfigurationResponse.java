@@ -15,8 +15,8 @@ public final class DistributionPolicyZoneConfigurationResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"zone"})
-    private DistributionPolicyZoneConfigurationResponse(String zone) {
+    @OutputCustomType.Constructor
+    private DistributionPolicyZoneConfigurationResponse(@OutputCustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 

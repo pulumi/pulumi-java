@@ -37,13 +37,13 @@ public final class NetworkResponse {
      */
     private final String subnetworkName;
 
-    @OutputCustomType.Constructor({"forwardedPorts","instanceTag","name","sessionAffinity","subnetworkName"})
+    @OutputCustomType.Constructor
     private NetworkResponse(
-        List<String> forwardedPorts,
-        String instanceTag,
-        String name,
-        Boolean sessionAffinity,
-        String subnetworkName) {
+        @OutputCustomType.Parameter("forwardedPorts") List<String> forwardedPorts,
+        @OutputCustomType.Parameter("instanceTag") String instanceTag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sessionAffinity") Boolean sessionAffinity,
+        @OutputCustomType.Parameter("subnetworkName") String subnetworkName) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;

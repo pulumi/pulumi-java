@@ -15,8 +15,8 @@ public final class AttestationAuthorityHintResponse {
      */
     private final String humanReadableName;
 
-    @OutputCustomType.Constructor({"humanReadableName"})
-    private AttestationAuthorityHintResponse(String humanReadableName) {
+    @OutputCustomType.Constructor
+    private AttestationAuthorityHintResponse(@OutputCustomType.Parameter("humanReadableName") String humanReadableName) {
         this.humanReadableName = humanReadableName;
     }
 

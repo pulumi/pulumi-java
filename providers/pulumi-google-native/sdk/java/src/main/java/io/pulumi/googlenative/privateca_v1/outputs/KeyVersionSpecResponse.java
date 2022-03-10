@@ -20,10 +20,10 @@ public final class KeyVersionSpecResponse {
      */
     private final String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor({"algorithm","cloudKmsKeyVersion"})
+    @OutputCustomType.Constructor
     private KeyVersionSpecResponse(
-        String algorithm,
-        String cloudKmsKeyVersion) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("cloudKmsKeyVersion") String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }

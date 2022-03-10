@@ -26,11 +26,11 @@ public final class NodeKubeletConfigResponse {
      */
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor({"cpuCfsQuota","cpuCfsQuotaPeriod","cpuManagerPolicy"})
+    @OutputCustomType.Constructor
     private NodeKubeletConfigResponse(
-        Boolean cpuCfsQuota,
-        String cpuCfsQuotaPeriod,
-        String cpuManagerPolicy) {
+        @OutputCustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
+        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
+        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

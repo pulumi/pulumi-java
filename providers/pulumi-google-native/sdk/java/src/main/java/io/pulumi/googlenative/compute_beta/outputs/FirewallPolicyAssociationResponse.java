@@ -35,13 +35,13 @@ public final class FirewallPolicyAssociationResponse {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor({"attachmentTarget","displayName","firewallPolicyId","name","shortName"})
+    @OutputCustomType.Constructor
     private FirewallPolicyAssociationResponse(
-        String attachmentTarget,
-        String displayName,
-        String firewallPolicyId,
-        String name,
-        String shortName) {
+        @OutputCustomType.Parameter("attachmentTarget") String attachmentTarget,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("firewallPolicyId") String firewallPolicyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("shortName") String shortName) {
         this.attachmentTarget = attachmentTarget;
         this.displayName = displayName;
         this.firewallPolicyId = firewallPolicyId;

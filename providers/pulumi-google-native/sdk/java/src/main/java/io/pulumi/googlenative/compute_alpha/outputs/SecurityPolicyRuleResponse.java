@@ -97,24 +97,24 @@ public final class SecurityPolicyRuleResponse {
      */
     private final List<String> targetServiceAccounts;
 
-    @OutputCustomType.Constructor({"action","description","direction","enableLogging","headerAction","kind","match","preview","priority","rateLimitOptions","redirectOptions","redirectTarget","ruleNumber","ruleTupleCount","targetResources","targetServiceAccounts"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleResponse(
-        String action,
-        String description,
-        String direction,
-        Boolean enableLogging,
-        SecurityPolicyRuleHttpHeaderActionResponse headerAction,
-        String kind,
-        SecurityPolicyRuleMatcherResponse match,
-        Boolean preview,
-        Integer priority,
-        SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
-        SecurityPolicyRuleRedirectOptionsResponse redirectOptions,
-        String redirectTarget,
-        String ruleNumber,
-        Integer ruleTupleCount,
-        List<String> targetResources,
-        List<String> targetServiceAccounts) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("headerAction") SecurityPolicyRuleHttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatcherResponse match,
+        @OutputCustomType.Parameter("preview") Boolean preview,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitOptions") SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
+        @OutputCustomType.Parameter("redirectOptions") SecurityPolicyRuleRedirectOptionsResponse redirectOptions,
+        @OutputCustomType.Parameter("redirectTarget") String redirectTarget,
+        @OutputCustomType.Parameter("ruleNumber") String ruleNumber,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("targetResources") List<String> targetResources,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
         this.direction = direction;

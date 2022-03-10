@@ -25,11 +25,11 @@ public final class BigTableIODetailsResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"instanceId","project","tableId"})
+    @OutputCustomType.Constructor
     private BigTableIODetailsResponse(
-        String instanceId,
-        String project,
-        String tableId) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.instanceId = instanceId;
         this.project = project;
         this.tableId = tableId;

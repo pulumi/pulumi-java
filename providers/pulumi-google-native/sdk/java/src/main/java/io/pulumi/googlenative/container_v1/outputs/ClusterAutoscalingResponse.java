@@ -39,13 +39,13 @@ public final class ClusterAutoscalingResponse {
      */
     private final List<ResourceLimitResponse> resourceLimits;
 
-    @OutputCustomType.Constructor({"autoprovisioningLocations","autoprovisioningNodePoolDefaults","autoscalingProfile","enableNodeAutoprovisioning","resourceLimits"})
+    @OutputCustomType.Constructor
     private ClusterAutoscalingResponse(
-        List<String> autoprovisioningLocations,
-        AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
-        String autoscalingProfile,
-        Boolean enableNodeAutoprovisioning,
-        List<ResourceLimitResponse> resourceLimits) {
+        @OutputCustomType.Parameter("autoprovisioningLocations") List<String> autoprovisioningLocations,
+        @OutputCustomType.Parameter("autoprovisioningNodePoolDefaults") AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
+        @OutputCustomType.Parameter("autoscalingProfile") String autoscalingProfile,
+        @OutputCustomType.Parameter("enableNodeAutoprovisioning") Boolean enableNodeAutoprovisioning,
+        @OutputCustomType.Parameter("resourceLimits") List<ResourceLimitResponse> resourceLimits) {
         this.autoprovisioningLocations = autoprovisioningLocations;
         this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
         this.autoscalingProfile = autoscalingProfile;

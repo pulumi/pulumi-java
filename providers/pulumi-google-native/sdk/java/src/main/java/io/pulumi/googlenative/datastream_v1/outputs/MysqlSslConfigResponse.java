@@ -41,14 +41,14 @@ public final class MysqlSslConfigResponse {
      */
     private final Boolean clientKeySet;
 
-    @OutputCustomType.Constructor({"caCertificate","caCertificateSet","clientCertificate","clientCertificateSet","clientKey","clientKeySet"})
+    @OutputCustomType.Constructor
     private MysqlSslConfigResponse(
-        String caCertificate,
-        Boolean caCertificateSet,
-        String clientCertificate,
-        Boolean clientCertificateSet,
-        String clientKey,
-        Boolean clientKeySet) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("caCertificateSet") Boolean caCertificateSet,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateSet") Boolean clientCertificateSet,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clientKeySet") Boolean clientKeySet) {
         this.caCertificate = caCertificate;
         this.caCertificateSet = caCertificateSet;
         this.clientCertificate = clientCertificate;

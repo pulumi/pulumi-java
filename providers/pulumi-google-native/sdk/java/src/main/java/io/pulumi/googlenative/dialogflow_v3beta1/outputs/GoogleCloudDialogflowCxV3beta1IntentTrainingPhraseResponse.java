@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse {
      */
     private final Integer repeatCount;
 
-    @OutputCustomType.Constructor({"parts","repeatCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse(
-        List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts,
-        Integer repeatCount) {
+        @OutputCustomType.Parameter("parts") List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse> parts,
+        @OutputCustomType.Parameter("repeatCount") Integer repeatCount) {
         this.parts = parts;
         this.repeatCount = repeatCount;
     }

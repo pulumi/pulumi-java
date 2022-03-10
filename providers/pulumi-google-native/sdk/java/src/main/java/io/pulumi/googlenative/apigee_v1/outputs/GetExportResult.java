@@ -55,17 +55,17 @@ public final class GetExportResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor({"created","datastoreName","description","error","executionTime","name","self","state","updated"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        String created,
-        String datastoreName,
-        String description,
-        String error,
-        String executionTime,
-        String name,
-        String self,
-        String state,
-        String updated) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("datastoreName") String datastoreName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("error") String error,
+        @OutputCustomType.Parameter("executionTime") String executionTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("self") String self,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updated") String updated) {
         this.created = created;
         this.datastoreName = datastoreName;
         this.description = description;

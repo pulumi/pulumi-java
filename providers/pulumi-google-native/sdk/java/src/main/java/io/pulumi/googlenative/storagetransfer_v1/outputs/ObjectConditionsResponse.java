@@ -41,14 +41,14 @@ public final class ObjectConditionsResponse {
      */
     private final String minTimeElapsedSinceLastModification;
 
-    @OutputCustomType.Constructor({"excludePrefixes","includePrefixes","lastModifiedBefore","lastModifiedSince","maxTimeElapsedSinceLastModification","minTimeElapsedSinceLastModification"})
+    @OutputCustomType.Constructor
     private ObjectConditionsResponse(
-        List<String> excludePrefixes,
-        List<String> includePrefixes,
-        String lastModifiedBefore,
-        String lastModifiedSince,
-        String maxTimeElapsedSinceLastModification,
-        String minTimeElapsedSinceLastModification) {
+        @OutputCustomType.Parameter("excludePrefixes") List<String> excludePrefixes,
+        @OutputCustomType.Parameter("includePrefixes") List<String> includePrefixes,
+        @OutputCustomType.Parameter("lastModifiedBefore") String lastModifiedBefore,
+        @OutputCustomType.Parameter("lastModifiedSince") String lastModifiedSince,
+        @OutputCustomType.Parameter("maxTimeElapsedSinceLastModification") String maxTimeElapsedSinceLastModification,
+        @OutputCustomType.Parameter("minTimeElapsedSinceLastModification") String minTimeElapsedSinceLastModification) {
         this.excludePrefixes = excludePrefixes;
         this.includePrefixes = includePrefixes;
         this.lastModifiedBefore = lastModifiedBefore;

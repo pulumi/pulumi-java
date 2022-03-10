@@ -21,10 +21,10 @@ public final class PeripheralsConfigResponse {
      */
     private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
-    @OutputCustomType.Constructor({"metastoreService","sparkHistoryServerConfig"})
+    @OutputCustomType.Constructor
     private PeripheralsConfigResponse(
-        String metastoreService,
-        SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
+        @OutputCustomType.Parameter("metastoreService") String metastoreService,
+        @OutputCustomType.Parameter("sparkHistoryServerConfig") SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
         this.metastoreService = metastoreService;
         this.sparkHistoryServerConfig = sparkHistoryServerConfig;
     }

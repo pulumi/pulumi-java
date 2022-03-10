@@ -105,25 +105,25 @@ public final class JobStatisticsResponse {
      */
     private final TransactionInfoResponse transactionInfo;
 
-    @OutputCustomType.Constructor({"completionRatio","creationTime","endTime","extract","load","numChildJobs","parentJobId","query","quotaDeferments","reservationId","reservationUsage","rowLevelSecurityStatistics","scriptStatistics","sessionInfo","startTime","totalSlotMs","transactionInfo"})
+    @OutputCustomType.Constructor
     private JobStatisticsResponse(
-        Double completionRatio,
-        String creationTime,
-        String endTime,
-        JobStatistics4Response extract,
-        JobStatistics3Response load,
-        String numChildJobs,
-        String parentJobId,
-        JobStatistics2Response query,
-        List<String> quotaDeferments,
-        String reservationId,
-        List<JobStatisticsReservationUsageItemResponse> reservationUsage,
-        RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics,
-        ScriptStatisticsResponse scriptStatistics,
-        SessionInfoResponse sessionInfo,
-        String startTime,
-        String totalSlotMs,
-        TransactionInfoResponse transactionInfo) {
+        @OutputCustomType.Parameter("completionRatio") Double completionRatio,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("extract") JobStatistics4Response extract,
+        @OutputCustomType.Parameter("load") JobStatistics3Response load,
+        @OutputCustomType.Parameter("numChildJobs") String numChildJobs,
+        @OutputCustomType.Parameter("parentJobId") String parentJobId,
+        @OutputCustomType.Parameter("query") JobStatistics2Response query,
+        @OutputCustomType.Parameter("quotaDeferments") List<String> quotaDeferments,
+        @OutputCustomType.Parameter("reservationId") String reservationId,
+        @OutputCustomType.Parameter("reservationUsage") List<JobStatisticsReservationUsageItemResponse> reservationUsage,
+        @OutputCustomType.Parameter("rowLevelSecurityStatistics") RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics,
+        @OutputCustomType.Parameter("scriptStatistics") ScriptStatisticsResponse scriptStatistics,
+        @OutputCustomType.Parameter("sessionInfo") SessionInfoResponse sessionInfo,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs,
+        @OutputCustomType.Parameter("transactionInfo") TransactionInfoResponse transactionInfo) {
         this.completionRatio = completionRatio;
         this.creationTime = creationTime;
         this.endTime = endTime;

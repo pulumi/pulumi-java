@@ -115,28 +115,28 @@ public final class GetRegionCommitmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoRenew","category","creationTimestamp","description","endTimestamp","kind","licenseResource","mergeSourceCommitments","name","plan","region","reservations","resources","selfLink","selfLinkWithId","splitSourceCommitment","startTimestamp","status","statusMessage","type"})
+    @OutputCustomType.Constructor
     private GetRegionCommitmentResult(
-        Boolean autoRenew,
-        String category,
-        String creationTimestamp,
-        String description,
-        String endTimestamp,
-        String kind,
-        LicenseResourceCommitmentResponse licenseResource,
-        List<String> mergeSourceCommitments,
-        String name,
-        String plan,
-        String region,
-        List<ReservationResponse> reservations,
-        List<ResourceCommitmentResponse> resources,
-        String selfLink,
-        String selfLinkWithId,
-        String splitSourceCommitment,
-        String startTimestamp,
-        String status,
-        String statusMessage,
-        String type) {
+        @OutputCustomType.Parameter("autoRenew") Boolean autoRenew,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTimestamp") String endTimestamp,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseResource") LicenseResourceCommitmentResponse licenseResource,
+        @OutputCustomType.Parameter("mergeSourceCommitments") List<String> mergeSourceCommitments,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") String plan,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("reservations") List<ReservationResponse> reservations,
+        @OutputCustomType.Parameter("resources") List<ResourceCommitmentResponse> resources,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("splitSourceCommitment") String splitSourceCommitment,
+        @OutputCustomType.Parameter("startTimestamp") String startTimestamp,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoRenew = autoRenew;
         this.category = category;
         this.creationTimestamp = creationTimestamp;

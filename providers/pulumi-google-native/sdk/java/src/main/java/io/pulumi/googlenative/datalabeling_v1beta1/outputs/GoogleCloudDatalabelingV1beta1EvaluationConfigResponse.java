@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions;
 
-    @OutputCustomType.Constructor({"boundingBoxEvaluationOptions"})
-    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigResponse(@OutputCustomType.Parameter("boundingBoxEvaluationOptions") GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse boundingBoxEvaluationOptions) {
         this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
     }
 

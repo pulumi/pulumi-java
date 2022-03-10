@@ -21,10 +21,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
      */
     private final Map<String,String> numericalFeatures;
 
-    @OutputCustomType.Constructor({"categoricalFeatures","numericalFeatures"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1FeatureMapResponse(
-        Map<String,String> categoricalFeatures,
-        Map<String,String> numericalFeatures) {
+        @OutputCustomType.Parameter("categoricalFeatures") Map<String,String> categoricalFeatures,
+        @OutputCustomType.Parameter("numericalFeatures") Map<String,String> numericalFeatures) {
         this.categoricalFeatures = categoricalFeatures;
         this.numericalFeatures = numericalFeatures;
     }

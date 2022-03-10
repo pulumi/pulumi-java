@@ -21,10 +21,10 @@ public final class MetricRangeResponse {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor({"range","timeSeries"})
+    @OutputCustomType.Constructor
     private MetricRangeResponse(
-        GoogleMonitoringV3RangeResponse range,
-        String timeSeries) {
+        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range,
+        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }

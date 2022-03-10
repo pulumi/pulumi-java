@@ -33,12 +33,12 @@ public final class KubernetesResourceResponse {
      */
     private final ResourceOptionsResponse resourceOptions;
 
-    @OutputCustomType.Constructor({"connectResources","membershipCrManifest","membershipResources","resourceOptions"})
+    @OutputCustomType.Constructor
     private KubernetesResourceResponse(
-        List<ResourceManifestResponse> connectResources,
-        String membershipCrManifest,
-        List<ResourceManifestResponse> membershipResources,
-        ResourceOptionsResponse resourceOptions) {
+        @OutputCustomType.Parameter("connectResources") List<ResourceManifestResponse> connectResources,
+        @OutputCustomType.Parameter("membershipCrManifest") String membershipCrManifest,
+        @OutputCustomType.Parameter("membershipResources") List<ResourceManifestResponse> membershipResources,
+        @OutputCustomType.Parameter("resourceOptions") ResourceOptionsResponse resourceOptions) {
         this.connectResources = connectResources;
         this.membershipCrManifest = membershipCrManifest;
         this.membershipResources = membershipResources;

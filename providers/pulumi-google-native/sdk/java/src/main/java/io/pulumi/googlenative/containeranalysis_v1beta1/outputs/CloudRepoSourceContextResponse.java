@@ -27,11 +27,11 @@ public final class CloudRepoSourceContextResponse {
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","repoId","revisionId"})
+    @OutputCustomType.Constructor
     private CloudRepoSourceContextResponse(
-        AliasContextResponse aliasContext,
-        RepoIdResponse repoId,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("repoId") RepoIdResponse repoId,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;

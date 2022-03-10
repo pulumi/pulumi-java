@@ -80,21 +80,21 @@ public final class GetAutoscalerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoscalingPolicy","creationTimestamp","description","kind","name","recommendedSize","region","scalingScheduleStatus","selfLink","status","statusDetails","target","zone"})
+    @OutputCustomType.Constructor
     private GetAutoscalerResult(
-        AutoscalingPolicyResponse autoscalingPolicy,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Integer recommendedSize,
-        String region,
-        Map<String,String> scalingScheduleStatus,
-        String selfLink,
-        String status,
-        List<AutoscalerStatusDetailsResponse> statusDetails,
-        String target,
-        String zone) {
+        @OutputCustomType.Parameter("autoscalingPolicy") AutoscalingPolicyResponse autoscalingPolicy,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendedSize") Integer recommendedSize,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("scalingScheduleStatus") Map<String,String> scalingScheduleStatus,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") List<AutoscalerStatusDetailsResponse> statusDetails,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

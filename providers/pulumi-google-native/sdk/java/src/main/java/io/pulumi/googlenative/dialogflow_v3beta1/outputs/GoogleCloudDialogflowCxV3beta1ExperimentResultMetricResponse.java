@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"confidenceInterval","count","countType","ratio","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse(
-        GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval,
-        Double count,
-        String countType,
-        Double ratio,
-        String type) {
+        @OutputCustomType.Parameter("confidenceInterval") GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval,
+        @OutputCustomType.Parameter("count") Double count,
+        @OutputCustomType.Parameter("countType") String countType,
+        @OutputCustomType.Parameter("ratio") Double ratio,
+        @OutputCustomType.Parameter("type") String type) {
         this.confidenceInterval = confidenceInterval;
         this.count = count;
         this.countType = countType;

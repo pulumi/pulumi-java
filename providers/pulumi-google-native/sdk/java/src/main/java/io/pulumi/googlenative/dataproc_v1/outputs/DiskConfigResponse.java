@@ -31,12 +31,12 @@ public final class DiskConfigResponse {
      */
     private final Integer numLocalSsds;
 
-    @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","localSsdInterface","numLocalSsds"})
+    @OutputCustomType.Constructor
     private DiskConfigResponse(
-        Integer bootDiskSizeGb,
-        String bootDiskType,
-        String localSsdInterface,
-        Integer numLocalSsds) {
+        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") String bootDiskType,
+        @OutputCustomType.Parameter("localSsdInterface") String localSsdInterface,
+        @OutputCustomType.Parameter("numLocalSsds") Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.localSsdInterface = localSsdInterface;

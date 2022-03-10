@@ -25,11 +25,11 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"name","parent","title"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        String name,
-        String parent,
-        String title) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("title") String title) {
         this.name = name;
         this.parent = parent;
         this.title = title;

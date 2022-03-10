@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class InstanceGroupManagerStandbyPolicyResponse {
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor({"initialDelaySec"})
-    private InstanceGroupManagerStandbyPolicyResponse(Integer initialDelaySec) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerStandbyPolicyResponse(@OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
     }
 

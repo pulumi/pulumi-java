@@ -53,16 +53,16 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
      */
     private final List<String> subaccounts;
 
-    @OutputCustomType.Constructor({"calendarPeriod","creditTypes","creditTypesTreatment","customPeriod","labels","projects","services","subaccounts"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1FilterResponse(
-        String calendarPeriod,
-        List<String> creditTypes,
-        String creditTypesTreatment,
-        GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod,
-        Map<String,String> labels,
-        List<String> projects,
-        List<String> services,
-        List<String> subaccounts) {
+        @OutputCustomType.Parameter("calendarPeriod") String calendarPeriod,
+        @OutputCustomType.Parameter("creditTypes") List<String> creditTypes,
+        @OutputCustomType.Parameter("creditTypesTreatment") String creditTypesTreatment,
+        @OutputCustomType.Parameter("customPeriod") GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("projects") List<String> projects,
+        @OutputCustomType.Parameter("services") List<String> services,
+        @OutputCustomType.Parameter("subaccounts") List<String> subaccounts) {
         this.calendarPeriod = calendarPeriod;
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class StandardSqlStructTypeResponse {
     private final List<StandardSqlFieldResponse> fields;
 
-    @OutputCustomType.Constructor({"fields"})
-    private StandardSqlStructTypeResponse(List<StandardSqlFieldResponse> fields) {
+    @OutputCustomType.Constructor
+    private StandardSqlStructTypeResponse(@OutputCustomType.Parameter("fields") List<StandardSqlFieldResponse> fields) {
         this.fields = fields;
     }
 

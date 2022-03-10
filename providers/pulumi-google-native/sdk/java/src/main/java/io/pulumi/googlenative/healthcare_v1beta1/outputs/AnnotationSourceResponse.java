@@ -15,8 +15,8 @@ public final class AnnotationSourceResponse {
      */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
-    @OutputCustomType.Constructor({"cloudHealthcareSource"})
-    private AnnotationSourceResponse(CloudHealthcareSourceResponse cloudHealthcareSource) {
+    @OutputCustomType.Constructor
+    private AnnotationSourceResponse(@OutputCustomType.Parameter("cloudHealthcareSource") CloudHealthcareSourceResponse cloudHealthcareSource) {
         this.cloudHealthcareSource = cloudHealthcareSource;
     }
 

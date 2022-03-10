@@ -52,16 +52,16 @@ public final class GetSavedQueryResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"content","createTime","creator","description","labels","lastUpdateTime","lastUpdater","name"})
+    @OutputCustomType.Constructor
     private GetSavedQueryResult(
-        QueryContentResponse content,
-        String createTime,
-        String creator,
-        String description,
-        Map<String,String> labels,
-        String lastUpdateTime,
-        String lastUpdater,
-        String name) {
+        @OutputCustomType.Parameter("content") QueryContentResponse content,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("lastUpdater") String lastUpdater,
+        @OutputCustomType.Parameter("name") String name) {
         this.content = content;
         this.createTime = createTime;
         this.creator = creator;

@@ -61,19 +61,19 @@ public final class GetResourcePolicyResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","groupPlacementPolicy","instanceSchedulePolicy","kind","name","region","resourceStatus","selfLink","snapshotSchedulePolicy","status"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyResult(
-        String creationTimestamp,
-        String description,
-        ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy,
-        ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy,
-        String kind,
-        String name,
-        String region,
-        ResourcePolicyResourceStatusResponse resourceStatus,
-        String selfLink,
-        ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy,
-        String status) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("groupPlacementPolicy") ResourcePolicyGroupPlacementPolicyResponse groupPlacementPolicy,
+        @OutputCustomType.Parameter("instanceSchedulePolicy") ResourcePolicyInstanceSchedulePolicyResponse instanceSchedulePolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("resourceStatus") ResourcePolicyResourceStatusResponse resourceStatus,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("snapshotSchedulePolicy") ResourcePolicySnapshotSchedulePolicyResponse snapshotSchedulePolicy,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.groupPlacementPolicy = groupPlacementPolicy;

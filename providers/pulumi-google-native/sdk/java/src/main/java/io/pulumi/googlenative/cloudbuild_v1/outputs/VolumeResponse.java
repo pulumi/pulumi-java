@@ -20,10 +20,10 @@ public final class VolumeResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"name","path"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        String name,
-        String path) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path) {
         this.name = name;
         this.path = path;
     }

@@ -21,10 +21,10 @@ public final class ResourceRequirementsResponse {
      */
     private final Map<String,String> requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private ResourceRequirementsResponse(
-        Map<String,String> limits,
-        Map<String,String> requests) {
+        @OutputCustomType.Parameter("limits") Map<String,String> limits,
+        @OutputCustomType.Parameter("requests") Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

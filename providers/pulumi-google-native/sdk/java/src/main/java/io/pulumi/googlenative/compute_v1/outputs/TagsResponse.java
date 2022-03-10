@@ -21,10 +21,10 @@ public final class TagsResponse {
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"fingerprint","items"})
+    @OutputCustomType.Constructor
     private TagsResponse(
-        String fingerprint,
-        List<String> items) {
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("items") List<String> items) {
         this.fingerprint = fingerprint;
         this.items = items;
     }

@@ -31,12 +31,12 @@ public final class MaintenanceScheduleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"canReschedule","endTime","scheduleDeadlineTime","startTime"})
+    @OutputCustomType.Constructor
     private MaintenanceScheduleResponse(
-        Boolean canReschedule,
-        String endTime,
-        String scheduleDeadlineTime,
-        String startTime) {
+        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.canReschedule = canReschedule;
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;

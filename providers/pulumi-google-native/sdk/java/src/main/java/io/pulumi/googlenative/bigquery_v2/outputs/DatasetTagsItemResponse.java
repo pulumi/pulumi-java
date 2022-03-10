@@ -20,10 +20,10 @@ public final class DatasetTagsItemResponse {
      */
     private final String tagValue;
 
-    @OutputCustomType.Constructor({"tagKey","tagValue"})
+    @OutputCustomType.Constructor
     private DatasetTagsItemResponse(
-        String tagKey,
-        String tagValue) {
+        @OutputCustomType.Parameter("tagKey") String tagKey,
+        @OutputCustomType.Parameter("tagValue") String tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }

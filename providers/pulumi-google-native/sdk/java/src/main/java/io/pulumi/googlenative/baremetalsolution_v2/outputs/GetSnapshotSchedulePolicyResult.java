@@ -33,12 +33,12 @@ public final class GetSnapshotSchedulePolicyResult {
      */
     private final List<ScheduleResponse> schedules;
 
-    @OutputCustomType.Constructor({"description","labels","name","schedules"})
+    @OutputCustomType.Constructor
     private GetSnapshotSchedulePolicyResult(
-        String description,
-        Map<String,String> labels,
-        String name,
-        List<ScheduleResponse> schedules) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") List<ScheduleResponse> schedules) {
         this.description = description;
         this.labels = labels;
         this.name = name;

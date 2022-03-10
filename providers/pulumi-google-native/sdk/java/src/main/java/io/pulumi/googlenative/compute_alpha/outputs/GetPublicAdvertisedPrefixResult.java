@@ -72,20 +72,20 @@ public final class GetPublicAdvertisedPrefixResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","dnsVerificationIp","fingerprint","ipCidrRange","kind","name","publicDelegatedPrefixs","selfLink","selfLinkWithId","sharedSecret","status"})
+    @OutputCustomType.Constructor
     private GetPublicAdvertisedPrefixResult(
-        String creationTimestamp,
-        String description,
-        String dnsVerificationIp,
-        String fingerprint,
-        String ipCidrRange,
-        String kind,
-        String name,
-        List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs,
-        String selfLink,
-        String selfLinkWithId,
-        String sharedSecret,
-        String status) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsVerificationIp") String dnsVerificationIp,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicDelegatedPrefixs") List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse> publicDelegatedPrefixs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sharedSecret") String sharedSecret,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.dnsVerificationIp = dnsVerificationIp;

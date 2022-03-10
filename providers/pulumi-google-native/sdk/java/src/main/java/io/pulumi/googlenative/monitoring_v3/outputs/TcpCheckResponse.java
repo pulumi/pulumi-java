@@ -15,8 +15,8 @@ public final class TcpCheckResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"port"})
-    private TcpCheckResponse(Integer port) {
+    @OutputCustomType.Constructor
+    private TcpCheckResponse(@OutputCustomType.Parameter("port") Integer port) {
         this.port = port;
     }
 

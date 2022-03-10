@@ -72,20 +72,20 @@ public final class DisplayDataResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"boolValue","durationValue","floatValue","int64Value","javaClassValue","key","label","namespace","shortStrValue","strValue","timestampValue","url"})
+    @OutputCustomType.Constructor
     private DisplayDataResponse(
-        Boolean boolValue,
-        String durationValue,
-        Double floatValue,
-        String int64Value,
-        String javaClassValue,
-        String key,
-        String label,
-        String namespace,
-        String shortStrValue,
-        String strValue,
-        String timestampValue,
-        String url) {
+        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
+        @OutputCustomType.Parameter("durationValue") String durationValue,
+        @OutputCustomType.Parameter("floatValue") Double floatValue,
+        @OutputCustomType.Parameter("int64Value") String int64Value,
+        @OutputCustomType.Parameter("javaClassValue") String javaClassValue,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("shortStrValue") String shortStrValue,
+        @OutputCustomType.Parameter("strValue") String strValue,
+        @OutputCustomType.Parameter("timestampValue") String timestampValue,
+        @OutputCustomType.Parameter("url") String url) {
         this.boolValue = boolValue;
         this.durationValue = durationValue;
         this.floatValue = floatValue;

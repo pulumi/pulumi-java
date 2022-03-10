@@ -41,14 +41,14 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
      */
     private final Integer unchangedCount;
 
-    @OutputCustomType.Constructor({"differenceCount","errorCount","logCount","newestDate","oldestDate","unchangedCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(
-        Integer differenceCount,
-        Integer errorCount,
-        Integer logCount,
-        GoogleTypeDateResponse newestDate,
-        GoogleTypeDateResponse oldestDate,
-        Integer unchangedCount) {
+        @OutputCustomType.Parameter("differenceCount") Integer differenceCount,
+        @OutputCustomType.Parameter("errorCount") Integer errorCount,
+        @OutputCustomType.Parameter("logCount") Integer logCount,
+        @OutputCustomType.Parameter("newestDate") GoogleTypeDateResponse newestDate,
+        @OutputCustomType.Parameter("oldestDate") GoogleTypeDateResponse oldestDate,
+        @OutputCustomType.Parameter("unchangedCount") Integer unchangedCount) {
         this.differenceCount = differenceCount;
         this.errorCount = errorCount;
         this.logCount = logCount;

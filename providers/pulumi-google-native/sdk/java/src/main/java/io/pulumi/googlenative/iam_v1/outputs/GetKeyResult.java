@@ -61,18 +61,18 @@ public final class GetKeyResult {
      */
     private final String validBeforeTime;
 
-    @OutputCustomType.Constructor({"disabled","keyAlgorithm","keyOrigin","keyType","name","privateKeyData","privateKeyType","publicKeyData","validAfterTime","validBeforeTime"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        Boolean disabled,
-        String keyAlgorithm,
-        String keyOrigin,
-        String keyType,
-        String name,
-        String privateKeyData,
-        String privateKeyType,
-        String publicKeyData,
-        String validAfterTime,
-        String validBeforeTime) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @OutputCustomType.Parameter("keyOrigin") String keyOrigin,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateKeyData") String privateKeyData,
+        @OutputCustomType.Parameter("privateKeyType") String privateKeyType,
+        @OutputCustomType.Parameter("publicKeyData") String publicKeyData,
+        @OutputCustomType.Parameter("validAfterTime") String validAfterTime,
+        @OutputCustomType.Parameter("validBeforeTime") String validBeforeTime) {
         this.disabled = disabled;
         this.keyAlgorithm = keyAlgorithm;
         this.keyOrigin = keyOrigin;

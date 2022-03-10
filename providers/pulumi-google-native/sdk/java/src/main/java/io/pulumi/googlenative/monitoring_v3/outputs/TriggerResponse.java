@@ -21,10 +21,10 @@ public final class TriggerResponse {
      */
     private final Double percent;
 
-    @OutputCustomType.Constructor({"count","percent"})
+    @OutputCustomType.Constructor
     private TriggerResponse(
-        Integer count,
-        Double percent) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("percent") Double percent) {
         this.count = count;
         this.percent = percent;
     }

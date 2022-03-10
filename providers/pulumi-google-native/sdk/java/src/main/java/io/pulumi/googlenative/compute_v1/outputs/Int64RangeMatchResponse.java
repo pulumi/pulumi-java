@@ -20,10 +20,10 @@ public final class Int64RangeMatchResponse {
      */
     private final String rangeStart;
 
-    @OutputCustomType.Constructor({"rangeEnd","rangeStart"})
+    @OutputCustomType.Constructor
     private Int64RangeMatchResponse(
-        String rangeEnd,
-        String rangeStart) {
+        @OutputCustomType.Parameter("rangeEnd") String rangeEnd,
+        @OutputCustomType.Parameter("rangeStart") String rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }

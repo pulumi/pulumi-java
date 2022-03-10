@@ -20,10 +20,10 @@ public final class StatusConditionResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"canonicalCode","message"})
+    @OutputCustomType.Constructor
     private StatusConditionResponse(
-        String canonicalCode,
-        String message) {
+        @OutputCustomType.Parameter("canonicalCode") String canonicalCode,
+        @OutputCustomType.Parameter("message") String message) {
         this.canonicalCode = canonicalCode;
         this.message = message;
     }

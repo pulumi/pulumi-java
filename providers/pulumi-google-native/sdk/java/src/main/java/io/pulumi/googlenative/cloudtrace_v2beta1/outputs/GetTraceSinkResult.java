@@ -26,11 +26,11 @@ public final class GetTraceSinkResult {
      */
     private final String writerIdentity;
 
-    @OutputCustomType.Constructor({"name","outputConfig","writerIdentity"})
+    @OutputCustomType.Constructor
     private GetTraceSinkResult(
-        String name,
-        OutputConfigResponse outputConfig,
-        String writerIdentity) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputConfig") OutputConfigResponse outputConfig,
+        @OutputCustomType.Parameter("writerIdentity") String writerIdentity) {
         this.name = name;
         this.outputConfig = outputConfig;
         this.writerIdentity = writerIdentity;

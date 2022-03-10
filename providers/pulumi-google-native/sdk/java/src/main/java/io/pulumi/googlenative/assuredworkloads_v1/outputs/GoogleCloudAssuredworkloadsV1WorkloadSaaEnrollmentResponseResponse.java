@@ -21,10 +21,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      */
     private final String setupStatus;
 
-    @OutputCustomType.Constructor({"setupErrors","setupStatus"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(
-        List<String> setupErrors,
-        String setupStatus) {
+        @OutputCustomType.Parameter("setupErrors") List<String> setupErrors,
+        @OutputCustomType.Parameter("setupStatus") String setupStatus) {
         this.setupErrors = setupErrors;
         this.setupStatus = setupStatus;
     }

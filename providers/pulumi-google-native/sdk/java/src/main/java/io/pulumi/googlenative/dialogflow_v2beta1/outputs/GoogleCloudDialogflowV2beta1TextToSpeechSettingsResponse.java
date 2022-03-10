@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse {
      */
     private final Map<String,String> synthesizeSpeechConfigs;
 
-    @OutputCustomType.Constructor({"enableTextToSpeech","outputAudioEncoding","sampleRateHertz","synthesizeSpeechConfigs"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(
-        Boolean enableTextToSpeech,
-        String outputAudioEncoding,
-        Integer sampleRateHertz,
-        Map<String,String> synthesizeSpeechConfigs) {
+        @OutputCustomType.Parameter("enableTextToSpeech") Boolean enableTextToSpeech,
+        @OutputCustomType.Parameter("outputAudioEncoding") String outputAudioEncoding,
+        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
+        @OutputCustomType.Parameter("synthesizeSpeechConfigs") Map<String,String> synthesizeSpeechConfigs) {
         this.enableTextToSpeech = enableTextToSpeech;
         this.outputAudioEncoding = outputAudioEncoding;
         this.sampleRateHertz = sampleRateHertz;

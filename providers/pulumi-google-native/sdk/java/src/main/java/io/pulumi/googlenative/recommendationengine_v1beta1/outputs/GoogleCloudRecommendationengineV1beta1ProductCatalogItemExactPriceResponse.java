@@ -20,10 +20,10 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      */
     private final Double originalPrice;
 
-    @OutputCustomType.Constructor({"displayPrice","originalPrice"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(
-        Double displayPrice,
-        Double originalPrice) {
+        @OutputCustomType.Parameter("displayPrice") Double displayPrice,
+        @OutputCustomType.Parameter("originalPrice") Double originalPrice) {
         this.displayPrice = displayPrice;
         this.originalPrice = originalPrice;
     }

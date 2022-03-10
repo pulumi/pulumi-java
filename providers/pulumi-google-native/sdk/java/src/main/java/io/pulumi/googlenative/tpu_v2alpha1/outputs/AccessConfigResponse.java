@@ -15,8 +15,8 @@ public final class AccessConfigResponse {
      */
     private final String externalIp;
 
-    @OutputCustomType.Constructor({"externalIp"})
-    private AccessConfigResponse(String externalIp) {
+    @OutputCustomType.Constructor
+    private AccessConfigResponse(@OutputCustomType.Parameter("externalIp") String externalIp) {
         this.externalIp = externalIp;
     }
 

@@ -27,11 +27,11 @@ public final class BuildApprovalResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","result","state"})
+    @OutputCustomType.Constructor
     private BuildApprovalResponse(
-        ApprovalConfigResponse config,
-        ApprovalResultResponse result,
-        String state) {
+        @OutputCustomType.Parameter("config") ApprovalConfigResponse config,
+        @OutputCustomType.Parameter("result") ApprovalResultResponse result,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.result = result;
         this.state = state;

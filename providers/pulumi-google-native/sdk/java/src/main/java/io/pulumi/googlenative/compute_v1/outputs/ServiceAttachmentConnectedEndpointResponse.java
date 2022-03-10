@@ -25,11 +25,11 @@ public final class ServiceAttachmentConnectedEndpointResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"endpoint","pscConnectionId","status"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConnectedEndpointResponse(
-        String endpoint,
-        String pscConnectionId,
-        String status) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("pscConnectionId") String pscConnectionId,
+        @OutputCustomType.Parameter("status") String status) {
         this.endpoint = endpoint;
         this.pscConnectionId = pscConnectionId;
         this.status = status;

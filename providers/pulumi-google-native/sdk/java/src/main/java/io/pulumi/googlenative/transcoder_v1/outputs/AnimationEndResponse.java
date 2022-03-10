@@ -15,8 +15,8 @@ public final class AnimationEndResponse {
      */
     private final String startTimeOffset;
 
-    @OutputCustomType.Constructor({"startTimeOffset"})
-    private AnimationEndResponse(String startTimeOffset) {
+    @OutputCustomType.Constructor
+    private AnimationEndResponse(@OutputCustomType.Parameter("startTimeOffset") String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
     }
 

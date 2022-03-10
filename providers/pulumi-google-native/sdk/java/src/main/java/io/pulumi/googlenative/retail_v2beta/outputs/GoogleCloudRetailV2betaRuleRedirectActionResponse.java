@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
      */
     private final String redirectUri;
 
-    @OutputCustomType.Constructor({"redirectUri"})
-    private GoogleCloudRetailV2betaRuleRedirectActionResponse(String redirectUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2betaRuleRedirectActionResponse(@OutputCustomType.Parameter("redirectUri") String redirectUri) {
         this.redirectUri = redirectUri;
     }
 

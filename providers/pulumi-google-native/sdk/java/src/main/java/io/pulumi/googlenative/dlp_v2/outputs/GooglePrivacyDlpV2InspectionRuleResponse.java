@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    @OutputCustomType.Constructor({"exclusionRule","hotwordRule"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleResponse(
-        GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
-        GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        @OutputCustomType.Parameter("exclusionRule") GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
+        @OutputCustomType.Parameter("hotwordRule") GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }

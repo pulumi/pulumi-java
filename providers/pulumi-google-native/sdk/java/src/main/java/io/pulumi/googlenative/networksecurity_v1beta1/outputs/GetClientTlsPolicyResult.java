@@ -54,16 +54,16 @@ public final class GetClientTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"clientCertificate","createTime","description","labels","name","serverValidationCa","sni","updateTime"})
+    @OutputCustomType.Constructor
     private GetClientTlsPolicyResult(
-        GoogleCloudNetworksecurityV1beta1CertificateProviderResponse clientCertificate,
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        List<ValidationCAResponse> serverValidationCa,
-        String sni,
-        String updateTime) {
+        @OutputCustomType.Parameter("clientCertificate") GoogleCloudNetworksecurityV1beta1CertificateProviderResponse clientCertificate,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverValidationCa") List<ValidationCAResponse> serverValidationCa,
+        @OutputCustomType.Parameter("sni") String sni,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.clientCertificate = clientCertificate;
         this.createTime = createTime;
         this.description = description;

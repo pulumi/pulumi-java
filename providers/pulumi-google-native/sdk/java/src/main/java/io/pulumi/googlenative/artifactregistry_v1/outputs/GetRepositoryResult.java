@@ -52,16 +52,16 @@ public final class GetRepositoryResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","format","kmsKeyName","labels","mavenConfig","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String createTime,
-        String description,
-        String format,
-        String kmsKeyName,
-        Map<String,String> labels,
-        MavenRepositoryConfigResponse mavenConfig,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mavenConfig") MavenRepositoryConfigResponse mavenConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.format = format;

@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse {
      */
     private final String wrappedKey;
 
-    @OutputCustomType.Constructor({"cryptoKeyName","wrappedKey"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(
-        String cryptoKeyName,
-        String wrappedKey) {
+        @OutputCustomType.Parameter("cryptoKeyName") String cryptoKeyName,
+        @OutputCustomType.Parameter("wrappedKey") String wrappedKey) {
         this.cryptoKeyName = cryptoKeyName;
         this.wrappedKey = wrappedKey;
     }

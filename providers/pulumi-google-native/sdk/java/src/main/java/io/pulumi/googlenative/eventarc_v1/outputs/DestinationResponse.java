@@ -27,11 +27,11 @@ public final class DestinationResponse {
      */
     private final GKEResponse gke;
 
-    @OutputCustomType.Constructor({"cloudFunction","cloudRun","gke"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        String cloudFunction,
-        CloudRunResponse cloudRun,
-        GKEResponse gke) {
+        @OutputCustomType.Parameter("cloudFunction") String cloudFunction,
+        @OutputCustomType.Parameter("cloudRun") CloudRunResponse cloudRun,
+        @OutputCustomType.Parameter("gke") GKEResponse gke) {
         this.cloudFunction = cloudFunction;
         this.cloudRun = cloudRun;
         this.gke = gke;

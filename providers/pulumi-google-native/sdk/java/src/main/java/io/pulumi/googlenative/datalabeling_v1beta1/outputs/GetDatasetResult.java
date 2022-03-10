@@ -52,16 +52,16 @@ public final class GetDatasetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"blockingResources","createTime","dataItemCount","description","displayName","inputConfigs","lastMigrateTime","name"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        List<String> blockingResources,
-        String createTime,
-        String dataItemCount,
-        String description,
-        String displayName,
-        List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs,
-        String lastMigrateTime,
-        String name) {
+        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataItemCount") String dataItemCount,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("inputConfigs") List<GoogleCloudDatalabelingV1beta1InputConfigResponse> inputConfigs,
+        @OutputCustomType.Parameter("lastMigrateTime") String lastMigrateTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
         this.dataItemCount = dataItemCount;

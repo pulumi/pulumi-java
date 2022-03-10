@@ -64,18 +64,18 @@ public final class GetEvaluationJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"annotationSpecSet","attempts","createTime","description","evaluationJobConfig","labelMissingGroundTruth","modelVersion","name","schedule","state"})
+    @OutputCustomType.Constructor
     private GetEvaluationJobResult(
-        String annotationSpecSet,
-        List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
-        String createTime,
-        String description,
-        GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
-        Boolean labelMissingGroundTruth,
-        String modelVersion,
-        String name,
-        String schedule,
-        String state) {
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("attempts") List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("evaluationJobConfig") GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
+        @OutputCustomType.Parameter("labelMissingGroundTruth") Boolean labelMissingGroundTruth,
+        @OutputCustomType.Parameter("modelVersion") String modelVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("state") String state) {
         this.annotationSpecSet = annotationSpecSet;
         this.attempts = attempts;
         this.createTime = createTime;

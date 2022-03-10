@@ -20,10 +20,10 @@ public final class ShieldedInstanceConfigResponse {
      */
     private final Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
+    @OutputCustomType.Constructor
     private ShieldedInstanceConfigResponse(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }

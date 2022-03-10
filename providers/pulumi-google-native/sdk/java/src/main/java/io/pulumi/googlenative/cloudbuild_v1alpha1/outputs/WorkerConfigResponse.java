@@ -31,12 +31,12 @@ public final class WorkerConfigResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","network","tag"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        NetworkResponse network,
-        String tag) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("network") NetworkResponse network,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.network = network;

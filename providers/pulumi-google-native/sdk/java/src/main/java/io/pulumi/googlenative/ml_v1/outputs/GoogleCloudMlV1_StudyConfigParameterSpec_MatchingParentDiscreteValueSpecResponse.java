@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(List<Double> values) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(@OutputCustomType.Parameter("values") List<Double> values) {
         this.values = values;
     }
 

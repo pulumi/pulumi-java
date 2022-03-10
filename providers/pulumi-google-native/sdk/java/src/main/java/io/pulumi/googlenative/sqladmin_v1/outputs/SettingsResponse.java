@@ -143,32 +143,32 @@ public final class SettingsResponse {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor({"activationPolicy","activeDirectoryConfig","availabilityType","backupConfiguration","collation","crashSafeReplicationEnabled","dataDiskSizeGb","dataDiskType","databaseFlags","databaseReplicationEnabled","denyMaintenancePeriods","insightsConfig","ipConfiguration","kind","locationPreference","maintenanceWindow","passwordValidationPolicy","pricingPlan","settingsVersion","sqlServerAuditConfig","storageAutoResize","storageAutoResizeLimit","tier","userLabels"})
+    @OutputCustomType.Constructor
     private SettingsResponse(
-        String activationPolicy,
-        SqlActiveDirectoryConfigResponse activeDirectoryConfig,
-        String availabilityType,
-        BackupConfigurationResponse backupConfiguration,
-        String collation,
-        Boolean crashSafeReplicationEnabled,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        List<DatabaseFlagsResponse> databaseFlags,
-        Boolean databaseReplicationEnabled,
-        List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
-        InsightsConfigResponse insightsConfig,
-        IpConfigurationResponse ipConfiguration,
-        String kind,
-        LocationPreferenceResponse locationPreference,
-        MaintenanceWindowResponse maintenanceWindow,
-        PasswordValidationPolicyResponse passwordValidationPolicy,
-        String pricingPlan,
-        String settingsVersion,
-        SqlServerAuditConfigResponse sqlServerAuditConfig,
-        Boolean storageAutoResize,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels) {
+        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
+        @OutputCustomType.Parameter("activeDirectoryConfig") SqlActiveDirectoryConfigResponse activeDirectoryConfig,
+        @OutputCustomType.Parameter("availabilityType") String availabilityType,
+        @OutputCustomType.Parameter("backupConfiguration") BackupConfigurationResponse backupConfiguration,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("crashSafeReplicationEnabled") Boolean crashSafeReplicationEnabled,
+        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
+        @OutputCustomType.Parameter("databaseFlags") List<DatabaseFlagsResponse> databaseFlags,
+        @OutputCustomType.Parameter("databaseReplicationEnabled") Boolean databaseReplicationEnabled,
+        @OutputCustomType.Parameter("denyMaintenancePeriods") List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
+        @OutputCustomType.Parameter("insightsConfig") InsightsConfigResponse insightsConfig,
+        @OutputCustomType.Parameter("ipConfiguration") IpConfigurationResponse ipConfiguration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("locationPreference") LocationPreferenceResponse locationPreference,
+        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @OutputCustomType.Parameter("passwordValidationPolicy") PasswordValidationPolicyResponse passwordValidationPolicy,
+        @OutputCustomType.Parameter("pricingPlan") String pricingPlan,
+        @OutputCustomType.Parameter("settingsVersion") String settingsVersion,
+        @OutputCustomType.Parameter("sqlServerAuditConfig") SqlServerAuditConfigResponse sqlServerAuditConfig,
+        @OutputCustomType.Parameter("storageAutoResize") Boolean storageAutoResize,
+        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.activationPolicy = activationPolicy;
         this.activeDirectoryConfig = activeDirectoryConfig;
         this.availabilityType = availabilityType;

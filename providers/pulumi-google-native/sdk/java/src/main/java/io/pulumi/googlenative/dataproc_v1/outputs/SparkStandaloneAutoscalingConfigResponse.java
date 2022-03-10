@@ -36,13 +36,13 @@ public final class SparkStandaloneAutoscalingConfigResponse {
      */
     private final Double scaleUpMinWorkerFraction;
 
-    @OutputCustomType.Constructor({"gracefulDecommissionTimeout","scaleDownFactor","scaleDownMinWorkerFraction","scaleUpFactor","scaleUpMinWorkerFraction"})
+    @OutputCustomType.Constructor
     private SparkStandaloneAutoscalingConfigResponse(
-        String gracefulDecommissionTimeout,
-        Double scaleDownFactor,
-        Double scaleDownMinWorkerFraction,
-        Double scaleUpFactor,
-        Double scaleUpMinWorkerFraction) {
+        @OutputCustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
+        @OutputCustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
+        @OutputCustomType.Parameter("scaleDownMinWorkerFraction") Double scaleDownMinWorkerFraction,
+        @OutputCustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
+        @OutputCustomType.Parameter("scaleUpMinWorkerFraction") Double scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;

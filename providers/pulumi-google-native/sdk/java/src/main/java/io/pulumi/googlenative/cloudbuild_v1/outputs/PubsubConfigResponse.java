@@ -30,12 +30,12 @@ public final class PubsubConfigResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"serviceAccountEmail","state","subscription","topic"})
+    @OutputCustomType.Constructor
     private PubsubConfigResponse(
-        String serviceAccountEmail,
-        String state,
-        String subscription,
-        String topic) {
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subscription") String subscription,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;

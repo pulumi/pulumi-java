@@ -31,12 +31,12 @@ public final class ContactResponse {
      */
     private final PostalAddressResponse postalAddress;
 
-    @OutputCustomType.Constructor({"email","faxNumber","phoneNumber","postalAddress"})
+    @OutputCustomType.Constructor
     private ContactResponse(
-        String email,
-        String faxNumber,
-        String phoneNumber,
-        PostalAddressResponse postalAddress) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("faxNumber") String faxNumber,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress) {
         this.email = email;
         this.faxNumber = faxNumber;
         this.phoneNumber = phoneNumber;

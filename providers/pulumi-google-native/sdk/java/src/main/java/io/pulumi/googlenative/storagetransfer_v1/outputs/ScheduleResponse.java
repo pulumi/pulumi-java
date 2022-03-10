@@ -37,13 +37,13 @@ public final class ScheduleResponse {
      */
     private final TimeOfDayResponse startTimeOfDay;
 
-    @OutputCustomType.Constructor({"endTimeOfDay","repeatInterval","scheduleEndDate","scheduleStartDate","startTimeOfDay"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        TimeOfDayResponse endTimeOfDay,
-        String repeatInterval,
-        DateResponse scheduleEndDate,
-        DateResponse scheduleStartDate,
-        TimeOfDayResponse startTimeOfDay) {
+        @OutputCustomType.Parameter("endTimeOfDay") TimeOfDayResponse endTimeOfDay,
+        @OutputCustomType.Parameter("repeatInterval") String repeatInterval,
+        @OutputCustomType.Parameter("scheduleEndDate") DateResponse scheduleEndDate,
+        @OutputCustomType.Parameter("scheduleStartDate") DateResponse scheduleStartDate,
+        @OutputCustomType.Parameter("startTimeOfDay") TimeOfDayResponse startTimeOfDay) {
         this.endTimeOfDay = endTimeOfDay;
         this.repeatInterval = repeatInterval;
         this.scheduleEndDate = scheduleEndDate;

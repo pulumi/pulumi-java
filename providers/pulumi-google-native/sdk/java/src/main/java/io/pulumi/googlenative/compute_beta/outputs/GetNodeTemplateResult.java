@@ -83,23 +83,23 @@ public final class GetNodeTemplateResult {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"accelerators","cpuOvercommitType","creationTimestamp","description","disks","kind","name","nodeAffinityLabels","nodeType","nodeTypeFlexibility","region","selfLink","serverBinding","status","statusMessage"})
+    @OutputCustomType.Constructor
     private GetNodeTemplateResult(
-        List<AcceleratorConfigResponse> accelerators,
-        String cpuOvercommitType,
-        String creationTimestamp,
-        String description,
-        List<LocalDiskResponse> disks,
-        String kind,
-        String name,
-        Map<String,String> nodeAffinityLabels,
-        String nodeType,
-        NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
-        String region,
-        String selfLink,
-        ServerBindingResponse serverBinding,
-        String status,
-        String statusMessage) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @OutputCustomType.Parameter("cpuOvercommitType") String cpuOvercommitType,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<LocalDiskResponse> disks,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeAffinityLabels") Map<String,String> nodeAffinityLabels,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("nodeTypeFlexibility") NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverBinding") ServerBindingResponse serverBinding,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.accelerators = accelerators;
         this.cpuOvercommitType = cpuOvercommitType;
         this.creationTimestamp = creationTimestamp;

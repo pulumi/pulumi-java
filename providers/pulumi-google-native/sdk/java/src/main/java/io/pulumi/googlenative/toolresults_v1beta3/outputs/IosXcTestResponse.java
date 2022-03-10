@@ -20,10 +20,10 @@ public final class IosXcTestResponse {
      */
     private final String xcodeVersion;
 
-    @OutputCustomType.Constructor({"bundleId","xcodeVersion"})
+    @OutputCustomType.Constructor
     private IosXcTestResponse(
-        String bundleId,
-        String xcodeVersion) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion) {
         this.bundleId = bundleId;
         this.xcodeVersion = xcodeVersion;
     }

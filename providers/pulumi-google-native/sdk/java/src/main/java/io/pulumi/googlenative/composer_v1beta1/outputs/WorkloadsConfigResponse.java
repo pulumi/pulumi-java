@@ -27,11 +27,11 @@ public final class WorkloadsConfigResponse {
      */
     private final WorkerResourceResponse worker;
 
-    @OutputCustomType.Constructor({"scheduler","webServer","worker"})
+    @OutputCustomType.Constructor
     private WorkloadsConfigResponse(
-        SchedulerResourceResponse scheduler,
-        WebServerResourceResponse webServer,
-        WorkerResourceResponse worker) {
+        @OutputCustomType.Parameter("scheduler") SchedulerResourceResponse scheduler,
+        @OutputCustomType.Parameter("webServer") WebServerResourceResponse webServer,
+        @OutputCustomType.Parameter("worker") WorkerResourceResponse worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;

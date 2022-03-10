@@ -56,17 +56,17 @@ public final class GetGithubEnterpriseConfigResult {
      */
     private final String webhookKey;
 
-    @OutputCustomType.Constructor({"appId","createTime","displayName","hostUrl","name","peeredNetwork","secrets","sslCa","webhookKey"})
+    @OutputCustomType.Constructor
     private GetGithubEnterpriseConfigResult(
-        String appId,
-        String createTime,
-        String displayName,
-        String hostUrl,
-        String name,
-        String peeredNetwork,
-        GitHubEnterpriseSecretsResponse secrets,
-        String sslCa,
-        String webhookKey) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("hostUrl") String hostUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork,
+        @OutputCustomType.Parameter("secrets") GitHubEnterpriseSecretsResponse secrets,
+        @OutputCustomType.Parameter("sslCa") String sslCa,
+        @OutputCustomType.Parameter("webhookKey") String webhookKey) {
         this.appId = appId;
         this.createTime = createTime;
         this.displayName = displayName;

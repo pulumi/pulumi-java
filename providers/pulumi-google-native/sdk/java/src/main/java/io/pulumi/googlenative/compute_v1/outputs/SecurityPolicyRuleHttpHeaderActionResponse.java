@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
      */
     private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdds"})
-    private SecurityPolicyRuleHttpHeaderActionResponse(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRuleHttpHeaderActionResponse(@OutputCustomType.Parameter("requestHeadersToAdds") List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
         this.requestHeadersToAdds = requestHeadersToAdds;
     }
 

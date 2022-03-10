@@ -44,14 +44,14 @@ public final class HiveJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private HiveJobResponse(
-        Boolean continueOnFailure,
-        List<String> jarFileUris,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
+        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;

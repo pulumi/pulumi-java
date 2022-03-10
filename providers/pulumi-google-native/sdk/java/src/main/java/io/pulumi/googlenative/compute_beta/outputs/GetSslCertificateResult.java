@@ -78,21 +78,21 @@ public final class GetSslCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","creationTimestamp","description","expireTime","kind","managed","name","privateKey","region","selfLink","selfManaged","subjectAlternativeNames","type"})
+    @OutputCustomType.Constructor
     private GetSslCertificateResult(
-        String certificate,
-        String creationTimestamp,
-        String description,
-        String expireTime,
-        String kind,
-        SslCertificateManagedSslCertificateResponse managed,
-        String name,
-        String privateKey,
-        String region,
-        String selfLink,
-        SslCertificateSelfManagedSslCertificateResponse selfManaged,
-        List<String> subjectAlternativeNames,
-        String type) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("managed") SslCertificateManagedSslCertificateResponse managed,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfManaged") SslCertificateSelfManagedSslCertificateResponse selfManaged,
+        @OutputCustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

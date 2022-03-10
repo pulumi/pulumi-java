@@ -37,13 +37,13 @@ public final class IosXcTestResponse {
      */
     private final FileReferenceResponse xctestrun;
 
-    @OutputCustomType.Constructor({"appBundleId","testSpecialEntitlements","testsZip","xcodeVersion","xctestrun"})
+    @OutputCustomType.Constructor
     private IosXcTestResponse(
-        String appBundleId,
-        Boolean testSpecialEntitlements,
-        FileReferenceResponse testsZip,
-        String xcodeVersion,
-        FileReferenceResponse xctestrun) {
+        @OutputCustomType.Parameter("appBundleId") String appBundleId,
+        @OutputCustomType.Parameter("testSpecialEntitlements") Boolean testSpecialEntitlements,
+        @OutputCustomType.Parameter("testsZip") FileReferenceResponse testsZip,
+        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion,
+        @OutputCustomType.Parameter("xctestrun") FileReferenceResponse xctestrun) {
         this.appBundleId = appBundleId;
         this.testSpecialEntitlements = testSpecialEntitlements;
         this.testsZip = testsZip;

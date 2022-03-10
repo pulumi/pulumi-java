@@ -27,11 +27,11 @@ public final class EnvFromSourceResponse {
      */
     private final SecretEnvSourceResponse secretRef;
 
-    @OutputCustomType.Constructor({"configMapRef","prefix","secretRef"})
+    @OutputCustomType.Constructor
     private EnvFromSourceResponse(
-        ConfigMapEnvSourceResponse configMapRef,
-        String prefix,
-        SecretEnvSourceResponse secretRef) {
+        @OutputCustomType.Parameter("configMapRef") ConfigMapEnvSourceResponse configMapRef,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("secretRef") SecretEnvSourceResponse secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;

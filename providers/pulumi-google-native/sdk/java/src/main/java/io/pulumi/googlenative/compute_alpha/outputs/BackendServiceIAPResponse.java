@@ -37,13 +37,13 @@ public final class BackendServiceIAPResponse {
      */
     private final String oauth2ClientSecretSha256;
 
-    @OutputCustomType.Constructor({"enabled","oauth2ClientId","oauth2ClientInfo","oauth2ClientSecret","oauth2ClientSecretSha256"})
+    @OutputCustomType.Constructor
     private BackendServiceIAPResponse(
-        Boolean enabled,
-        String oauth2ClientId,
-        BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo,
-        String oauth2ClientSecret,
-        String oauth2ClientSecretSha256) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @OutputCustomType.Parameter("oauth2ClientInfo") BackendServiceIAPOAuth2ClientInfoResponse oauth2ClientInfo,
+        @OutputCustomType.Parameter("oauth2ClientSecret") String oauth2ClientSecret,
+        @OutputCustomType.Parameter("oauth2ClientSecretSha256") String oauth2ClientSecretSha256) {
         this.enabled = enabled;
         this.oauth2ClientId = oauth2ClientId;
         this.oauth2ClientInfo = oauth2ClientInfo;

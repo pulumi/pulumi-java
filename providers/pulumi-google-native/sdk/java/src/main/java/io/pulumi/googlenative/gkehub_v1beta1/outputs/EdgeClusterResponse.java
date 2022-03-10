@@ -15,8 +15,8 @@ public final class EdgeClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"resourceLink"})
-    private EdgeClusterResponse(String resourceLink) {
+    @OutputCustomType.Constructor
+    private EdgeClusterResponse(@OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.resourceLink = resourceLink;
     }
 

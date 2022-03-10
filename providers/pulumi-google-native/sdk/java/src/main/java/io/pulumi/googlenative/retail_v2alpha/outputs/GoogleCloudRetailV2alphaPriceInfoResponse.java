@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2alphaPriceInfoResponse {
      */
     private final GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange;
 
-    @OutputCustomType.Constructor({"cost","currencyCode","originalPrice","price","priceEffectiveTime","priceExpireTime","priceRange"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaPriceInfoResponse(
-        Double cost,
-        String currencyCode,
-        Double originalPrice,
-        Double price,
-        String priceEffectiveTime,
-        String priceExpireTime,
-        GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
+        @OutputCustomType.Parameter("cost") Double cost,
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("originalPrice") Double originalPrice,
+        @OutputCustomType.Parameter("price") Double price,
+        @OutputCustomType.Parameter("priceEffectiveTime") String priceEffectiveTime,
+        @OutputCustomType.Parameter("priceExpireTime") String priceExpireTime,
+        @OutputCustomType.Parameter("priceRange") GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse priceRange) {
         this.cost = cost;
         this.currencyCode = currencyCode;
         this.originalPrice = originalPrice;

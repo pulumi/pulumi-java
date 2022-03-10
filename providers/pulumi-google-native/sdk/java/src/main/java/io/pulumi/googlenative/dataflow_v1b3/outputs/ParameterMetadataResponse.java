@@ -48,15 +48,15 @@ public final class ParameterMetadataResponse {
      */
     private final List<String> regexes;
 
-    @OutputCustomType.Constructor({"customMetadata","helpText","isOptional","label","name","paramType","regexes"})
+    @OutputCustomType.Constructor
     private ParameterMetadataResponse(
-        Map<String,String> customMetadata,
-        String helpText,
-        Boolean isOptional,
-        String label,
-        String name,
-        String paramType,
-        List<String> regexes) {
+        @OutputCustomType.Parameter("customMetadata") Map<String,String> customMetadata,
+        @OutputCustomType.Parameter("helpText") String helpText,
+        @OutputCustomType.Parameter("isOptional") Boolean isOptional,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("paramType") String paramType,
+        @OutputCustomType.Parameter("regexes") List<String> regexes) {
         this.customMetadata = customMetadata;
         this.helpText = helpText;
         this.isOptional = isOptional;

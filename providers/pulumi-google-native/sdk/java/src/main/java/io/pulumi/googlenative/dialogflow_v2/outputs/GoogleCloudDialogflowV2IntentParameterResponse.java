@@ -52,16 +52,16 @@ public final class GoogleCloudDialogflowV2IntentParameterResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"defaultValue","displayName","entityTypeDisplayName","isList","mandatory","name","prompts","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentParameterResponse(
-        String defaultValue,
-        String displayName,
-        String entityTypeDisplayName,
-        Boolean isList,
-        Boolean mandatory,
-        String name,
-        List<String> prompts,
-        String value) {
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("entityTypeDisplayName") String entityTypeDisplayName,
+        @OutputCustomType.Parameter("isList") Boolean isList,
+        @OutputCustomType.Parameter("mandatory") Boolean mandatory,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("prompts") List<String> prompts,
+        @OutputCustomType.Parameter("value") String value) {
         this.defaultValue = defaultValue;
         this.displayName = displayName;
         this.entityTypeDisplayName = entityTypeDisplayName;

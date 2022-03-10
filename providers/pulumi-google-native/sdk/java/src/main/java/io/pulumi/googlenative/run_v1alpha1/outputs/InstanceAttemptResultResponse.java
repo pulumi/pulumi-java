@@ -21,10 +21,10 @@ public final class InstanceAttemptResultResponse {
      */
     private final GoogleRpcStatusResponse status;
 
-    @OutputCustomType.Constructor({"exitCode","status"})
+    @OutputCustomType.Constructor
     private InstanceAttemptResultResponse(
-        Integer exitCode,
-        GoogleRpcStatusResponse status) {
+        @OutputCustomType.Parameter("exitCode") Integer exitCode,
+        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status) {
         this.exitCode = exitCode;
         this.status = status;
     }

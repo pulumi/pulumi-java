@@ -15,8 +15,8 @@ public final class MaintenanceExclusionOptionsResponse {
      */
     private final String scope;
 
-    @OutputCustomType.Constructor({"scope"})
-    private MaintenanceExclusionOptionsResponse(String scope) {
+    @OutputCustomType.Constructor
+    private MaintenanceExclusionOptionsResponse(@OutputCustomType.Parameter("scope") String scope) {
         this.scope = scope;
     }
 

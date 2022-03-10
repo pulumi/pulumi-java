@@ -34,12 +34,12 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecResponse {
      */
     private final Integer limit;
 
-    @OutputCustomType.Constructor({"enableDynamicPosition","excludedFilterKeys","facetKey","limit"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaSearchRequestFacetSpecResponse(
-        Boolean enableDynamicPosition,
-        List<String> excludedFilterKeys,
-        GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse facetKey,
-        Integer limit) {
+        @OutputCustomType.Parameter("enableDynamicPosition") Boolean enableDynamicPosition,
+        @OutputCustomType.Parameter("excludedFilterKeys") List<String> excludedFilterKeys,
+        @OutputCustomType.Parameter("facetKey") GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse facetKey,
+        @OutputCustomType.Parameter("limit") Integer limit) {
         this.enableDynamicPosition = enableDynamicPosition;
         this.excludedFilterKeys = excludedFilterKeys;
         this.facetKey = facetKey;

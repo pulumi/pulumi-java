@@ -61,17 +61,17 @@ public final class SecurityPolicyRuleResponse {
      */
     private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
-    @OutputCustomType.Constructor({"action","description","headerAction","kind","match","preview","priority","rateLimitOptions","redirectOptions"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleResponse(
-        String action,
-        String description,
-        SecurityPolicyRuleHttpHeaderActionResponse headerAction,
-        String kind,
-        SecurityPolicyRuleMatcherResponse match,
-        Boolean preview,
-        Integer priority,
-        SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
-        SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") SecurityPolicyRuleHttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatcherResponse match,
+        @OutputCustomType.Parameter("preview") Boolean preview,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitOptions") SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
+        @OutputCustomType.Parameter("redirectOptions") SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
         this.action = action;
         this.description = description;
         this.headerAction = headerAction;

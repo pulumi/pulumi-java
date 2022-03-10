@@ -22,10 +22,10 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
      */
     private final OSPolicyResourceFileResponse source;
 
-    @OutputCustomType.Constructor({"properties","source"})
+    @OutputCustomType.Constructor
     private OSPolicyResourcePackageResourceMSIResponse(
-        List<String> properties,
-        OSPolicyResourceFileResponse source) {
+        @OutputCustomType.Parameter("properties") List<String> properties,
+        @OutputCustomType.Parameter("source") OSPolicyResourceFileResponse source) {
         this.properties = properties;
         this.source = source;
     }

@@ -22,10 +22,10 @@ public final class Hl7TypesConfigResponse {
      */
     private final List<VersionSourceResponse> version;
 
-    @OutputCustomType.Constructor({"type","version"})
+    @OutputCustomType.Constructor
     private Hl7TypesConfigResponse(
-        List<TypeResponse> type,
-        List<VersionSourceResponse> version) {
+        @OutputCustomType.Parameter("type") List<TypeResponse> type,
+        @OutputCustomType.Parameter("version") List<VersionSourceResponse> version) {
         this.type = type;
         this.version = version;
     }

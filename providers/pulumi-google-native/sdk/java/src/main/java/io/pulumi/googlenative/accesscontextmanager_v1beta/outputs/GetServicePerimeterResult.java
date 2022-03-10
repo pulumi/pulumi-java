@@ -36,13 +36,13 @@ public final class GetServicePerimeterResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","name","perimeterType","status","title"})
+    @OutputCustomType.Constructor
     private GetServicePerimeterResult(
-        String description,
-        String name,
-        String perimeterType,
-        ServicePerimeterConfigResponse status,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") String perimeterType,
+        @OutputCustomType.Parameter("status") ServicePerimeterConfigResponse status,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.name = name;
         this.perimeterType = perimeterType;

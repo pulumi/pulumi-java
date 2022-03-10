@@ -21,10 +21,10 @@ public final class LatencyPercentileResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor({"latencyMicros","percent"})
+    @OutputCustomType.Constructor
     private LatencyPercentileResponse(
-        String latencyMicros,
-        Integer percent) {
+        @OutputCustomType.Parameter("latencyMicros") String latencyMicros,
+        @OutputCustomType.Parameter("percent") Integer percent) {
         this.latencyMicros = latencyMicros;
         this.percent = percent;
     }

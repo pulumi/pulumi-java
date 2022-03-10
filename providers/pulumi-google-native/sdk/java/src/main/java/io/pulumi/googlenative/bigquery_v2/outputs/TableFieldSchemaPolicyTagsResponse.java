@@ -16,8 +16,8 @@ public final class TableFieldSchemaPolicyTagsResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"names"})
-    private TableFieldSchemaPolicyTagsResponse(List<String> names) {
+    @OutputCustomType.Constructor
+    private TableFieldSchemaPolicyTagsResponse(@OutputCustomType.Parameter("names") List<String> names) {
         this.names = names;
     }
 

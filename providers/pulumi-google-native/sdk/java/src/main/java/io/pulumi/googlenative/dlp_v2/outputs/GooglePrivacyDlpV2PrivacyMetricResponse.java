@@ -45,14 +45,14 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
      */
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
-    @OutputCustomType.Constructor({"categoricalStatsConfig","deltaPresenceEstimationConfig","kAnonymityConfig","kMapEstimationConfig","lDiversityConfig","numericalStatsConfig"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2PrivacyMetricResponse(
-        GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
-        GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
-        GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
-        GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
-        GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
-        GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
+        @OutputCustomType.Parameter("categoricalStatsConfig") GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
+        @OutputCustomType.Parameter("deltaPresenceEstimationConfig") GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
+        @OutputCustomType.Parameter("kAnonymityConfig") GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
+        @OutputCustomType.Parameter("kMapEstimationConfig") GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
+        @OutputCustomType.Parameter("lDiversityConfig") GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
+        @OutputCustomType.Parameter("numericalStatsConfig") GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
         this.categoricalStatsConfig = categoricalStatsConfig;
         this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
         this.kAnonymityConfig = kAnonymityConfig;

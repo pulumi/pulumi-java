@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse {
      */
     private final String term;
 
-    @OutputCustomType.Constructor({"queryTerms","replacementTerm","term"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaRuleReplacementActionResponse(
-        List<String> queryTerms,
-        String replacementTerm,
-        String term) {
+        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
+        @OutputCustomType.Parameter("replacementTerm") String replacementTerm,
+        @OutputCustomType.Parameter("term") String term) {
         this.queryTerms = queryTerms;
         this.replacementTerm = replacementTerm;
         this.term = term;

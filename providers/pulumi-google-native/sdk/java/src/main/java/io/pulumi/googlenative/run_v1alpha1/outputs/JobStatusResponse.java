@@ -59,17 +59,17 @@ public final class JobStatusResponse {
      */
     private final Integer succeeded;
 
-    @OutputCustomType.Constructor({"active","completionTime","conditions","failed","imageDigest","instances","observedGeneration","startTime","succeeded"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        Integer active,
-        String completionTime,
-        List<JobConditionResponse> conditions,
-        Integer failed,
-        String imageDigest,
-        List<InstanceStatusResponse> instances,
-        Integer observedGeneration,
-        String startTime,
-        Integer succeeded) {
+        @OutputCustomType.Parameter("active") Integer active,
+        @OutputCustomType.Parameter("completionTime") String completionTime,
+        @OutputCustomType.Parameter("conditions") List<JobConditionResponse> conditions,
+        @OutputCustomType.Parameter("failed") Integer failed,
+        @OutputCustomType.Parameter("imageDigest") String imageDigest,
+        @OutputCustomType.Parameter("instances") List<InstanceStatusResponse> instances,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("succeeded") Integer succeeded) {
         this.active = active;
         this.completionTime = completionTime;
         this.conditions = conditions;

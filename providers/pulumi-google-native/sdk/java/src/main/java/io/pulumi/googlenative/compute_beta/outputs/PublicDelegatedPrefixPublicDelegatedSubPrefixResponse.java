@@ -46,15 +46,15 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"delegateeProject","description","ipCidrRange","isAddress","name","region","status"})
+    @OutputCustomType.Constructor
     private PublicDelegatedPrefixPublicDelegatedSubPrefixResponse(
-        String delegateeProject,
-        String description,
-        String ipCidrRange,
-        Boolean isAddress,
-        String name,
-        String region,
-        String status) {
+        @OutputCustomType.Parameter("delegateeProject") String delegateeProject,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("isAddress") Boolean isAddress,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("status") String status) {
         this.delegateeProject = delegateeProject;
         this.description = description;
         this.ipCidrRange = ipCidrRange;

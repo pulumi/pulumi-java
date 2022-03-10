@@ -63,17 +63,17 @@ public final class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable;
 
-    @OutputCustomType.Constructor({"categoricalStatsResult","deltaPresenceEstimationResult","kAnonymityResult","kMapEstimationResult","lDiversityResult","numericalStatsResult","requestedOptions","requestedPrivacyMetric","requestedSourceTable"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse(
-        GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult,
-        GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult,
-        GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult,
-        GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult,
-        GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult,
-        GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult,
-        GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions,
-        GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric,
-        GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
+        @OutputCustomType.Parameter("categoricalStatsResult") GooglePrivacyDlpV2CategoricalStatsResultResponse categoricalStatsResult,
+        @OutputCustomType.Parameter("deltaPresenceEstimationResult") GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse deltaPresenceEstimationResult,
+        @OutputCustomType.Parameter("kAnonymityResult") GooglePrivacyDlpV2KAnonymityResultResponse kAnonymityResult,
+        @OutputCustomType.Parameter("kMapEstimationResult") GooglePrivacyDlpV2KMapEstimationResultResponse kMapEstimationResult,
+        @OutputCustomType.Parameter("lDiversityResult") GooglePrivacyDlpV2LDiversityResultResponse lDiversityResult,
+        @OutputCustomType.Parameter("numericalStatsResult") GooglePrivacyDlpV2NumericalStatsResultResponse numericalStatsResult,
+        @OutputCustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse requestedOptions,
+        @OutputCustomType.Parameter("requestedPrivacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse requestedPrivacyMetric,
+        @OutputCustomType.Parameter("requestedSourceTable") GooglePrivacyDlpV2BigQueryTableResponse requestedSourceTable) {
         this.categoricalStatsResult = categoricalStatsResult;
         this.deltaPresenceEstimationResult = deltaPresenceEstimationResult;
         this.kAnonymityResult = kAnonymityResult;

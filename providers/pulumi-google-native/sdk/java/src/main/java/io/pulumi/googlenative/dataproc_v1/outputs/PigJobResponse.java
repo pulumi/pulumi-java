@@ -50,15 +50,15 @@ public final class PigJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private PigJobResponse(
-        Boolean continueOnFailure,
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
+        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;

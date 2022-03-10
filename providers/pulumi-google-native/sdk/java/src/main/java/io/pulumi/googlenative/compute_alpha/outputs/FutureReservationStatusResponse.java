@@ -31,12 +31,12 @@ public final class FutureReservationStatusResponse {
      */
     private final String procurementStatus;
 
-    @OutputCustomType.Constructor({"autoCreatedReservations","fulfilledCount","lockTime","procurementStatus"})
+    @OutputCustomType.Constructor
     private FutureReservationStatusResponse(
-        List<String> autoCreatedReservations,
-        String fulfilledCount,
-        String lockTime,
-        String procurementStatus) {
+        @OutputCustomType.Parameter("autoCreatedReservations") List<String> autoCreatedReservations,
+        @OutputCustomType.Parameter("fulfilledCount") String fulfilledCount,
+        @OutputCustomType.Parameter("lockTime") String lockTime,
+        @OutputCustomType.Parameter("procurementStatus") String procurementStatus) {
         this.autoCreatedReservations = autoCreatedReservations;
         this.fulfilledCount = fulfilledCount;
         this.lockTime = lockTime;

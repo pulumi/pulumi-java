@@ -72,19 +72,19 @@ public final class GetFhirStoreResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"defaultSearchHandlingStrict","disableReferentialIntegrity","disableResourceVersioning","enableUpdateCreate","labels","name","notificationConfig","searchConfig","streamConfigs","validationConfig","version"})
+    @OutputCustomType.Constructor
     private GetFhirStoreResult(
-        Boolean defaultSearchHandlingStrict,
-        Boolean disableReferentialIntegrity,
-        Boolean disableResourceVersioning,
-        Boolean enableUpdateCreate,
-        Map<String,String> labels,
-        String name,
-        NotificationConfigResponse notificationConfig,
-        SearchConfigResponse searchConfig,
-        List<StreamConfigResponse> streamConfigs,
-        ValidationConfigResponse validationConfig,
-        String version) {
+        @OutputCustomType.Parameter("defaultSearchHandlingStrict") Boolean defaultSearchHandlingStrict,
+        @OutputCustomType.Parameter("disableReferentialIntegrity") Boolean disableReferentialIntegrity,
+        @OutputCustomType.Parameter("disableResourceVersioning") Boolean disableResourceVersioning,
+        @OutputCustomType.Parameter("enableUpdateCreate") Boolean enableUpdateCreate,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("searchConfig") SearchConfigResponse searchConfig,
+        @OutputCustomType.Parameter("streamConfigs") List<StreamConfigResponse> streamConfigs,
+        @OutputCustomType.Parameter("validationConfig") ValidationConfigResponse validationConfig,
+        @OutputCustomType.Parameter("version") String version) {
         this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
         this.disableReferentialIntegrity = disableReferentialIntegrity;
         this.disableResourceVersioning = disableResourceVersioning;

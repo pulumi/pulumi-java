@@ -42,14 +42,14 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","source","title","uri"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse(
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String source,
-        String title,
-        String uri) {
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
         this.queryRecord = queryRecord;

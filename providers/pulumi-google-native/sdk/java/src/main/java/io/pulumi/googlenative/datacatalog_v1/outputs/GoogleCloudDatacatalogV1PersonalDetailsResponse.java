@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
      */
     private final Boolean starred;
 
-    @OutputCustomType.Constructor({"starTime","starred"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1PersonalDetailsResponse(
-        String starTime,
-        Boolean starred) {
+        @OutputCustomType.Parameter("starTime") String starTime,
+        @OutputCustomType.Parameter("starred") Boolean starred) {
         this.starTime = starTime;
         this.starred = starred;
     }

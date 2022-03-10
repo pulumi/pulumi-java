@@ -42,14 +42,14 @@ public final class AudioMappingResponse {
      */
     private final Integer outputChannel;
 
-    @OutputCustomType.Constructor({"atomKey","gainDb","inputChannel","inputKey","inputTrack","outputChannel"})
+    @OutputCustomType.Constructor
     private AudioMappingResponse(
-        String atomKey,
-        Double gainDb,
-        Integer inputChannel,
-        String inputKey,
-        Integer inputTrack,
-        Integer outputChannel) {
+        @OutputCustomType.Parameter("atomKey") String atomKey,
+        @OutputCustomType.Parameter("gainDb") Double gainDb,
+        @OutputCustomType.Parameter("inputChannel") Integer inputChannel,
+        @OutputCustomType.Parameter("inputKey") String inputKey,
+        @OutputCustomType.Parameter("inputTrack") Integer inputTrack,
+        @OutputCustomType.Parameter("outputChannel") Integer outputChannel) {
         this.atomKey = atomKey;
         this.gainDb = gainDb;
         this.inputChannel = inputChannel;

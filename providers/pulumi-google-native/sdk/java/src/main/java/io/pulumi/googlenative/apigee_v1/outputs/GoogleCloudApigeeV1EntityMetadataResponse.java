@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
      */
     private final String subType;
 
-    @OutputCustomType.Constructor({"createdAt","lastModifiedAt","subType"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1EntityMetadataResponse(
-        String createdAt,
-        String lastModifiedAt,
-        String subType) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("subType") String subType) {
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
         this.subType = subType;

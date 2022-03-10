@@ -21,10 +21,10 @@ public final class GrafeasV1beta1BuildDetailsResponse {
      */
     private final String provenanceBytes;
 
-    @OutputCustomType.Constructor({"provenance","provenanceBytes"})
+    @OutputCustomType.Constructor
     private GrafeasV1beta1BuildDetailsResponse(
-        BuildProvenanceResponse provenance,
-        String provenanceBytes) {
+        @OutputCustomType.Parameter("provenance") BuildProvenanceResponse provenance,
+        @OutputCustomType.Parameter("provenanceBytes") String provenanceBytes) {
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;
     }

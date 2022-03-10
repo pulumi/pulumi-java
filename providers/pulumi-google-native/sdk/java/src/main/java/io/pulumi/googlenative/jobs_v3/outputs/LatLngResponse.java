@@ -20,10 +20,10 @@ public final class LatLngResponse {
      */
     private final Double longitude;
 
-    @OutputCustomType.Constructor({"latitude","longitude"})
+    @OutputCustomType.Constructor
     private LatLngResponse(
-        Double latitude,
-        Double longitude) {
+        @OutputCustomType.Parameter("latitude") Double latitude,
+        @OutputCustomType.Parameter("longitude") Double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }

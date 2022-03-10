@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse {
      */
     private final String minAnonymity;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","maxAnonymity","minAnonymity"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
-        String maxAnonymity,
-        String minAnonymity) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
+        @OutputCustomType.Parameter("maxAnonymity") String maxAnonymity,
+        @OutputCustomType.Parameter("minAnonymity") String minAnonymity) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

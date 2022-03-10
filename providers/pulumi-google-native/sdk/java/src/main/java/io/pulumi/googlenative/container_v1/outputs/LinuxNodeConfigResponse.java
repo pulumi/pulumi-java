@@ -16,8 +16,8 @@ public final class LinuxNodeConfigResponse {
      */
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private LinuxNodeConfigResponse(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private LinuxNodeConfigResponse(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 

@@ -96,26 +96,26 @@ public final class GetOrganizationSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adaptiveProtectionConfig","advancedOptionsConfig","associations","creationTimestamp","description","displayName","fingerprint","kind","labelFingerprint","labels","name","parent","recaptchaOptionsConfig","ruleTupleCount","rules","selfLink","selfLinkWithId","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationSecurityPolicyResult(
-        SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        List<SecurityPolicyAssociationResponse> associations,
-        String creationTimestamp,
-        String description,
-        String displayName,
-        String fingerprint,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        Integer ruleTupleCount,
-        List<SecurityPolicyRuleResponse> rules,
-        String selfLink,
-        String selfLinkWithId,
-        String type) {
+        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @OutputCustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;

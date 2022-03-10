@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
      */
     private final Boolean reverseOrder;
 
-    @OutputCustomType.Constructor({"charactersToIgnore","maskingCharacter","numberToMask","reverseOrder"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CharacterMaskConfigResponse(
-        List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore,
-        String maskingCharacter,
-        Integer numberToMask,
-        Boolean reverseOrder) {
+        @OutputCustomType.Parameter("charactersToIgnore") List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore,
+        @OutputCustomType.Parameter("maskingCharacter") String maskingCharacter,
+        @OutputCustomType.Parameter("numberToMask") Integer numberToMask,
+        @OutputCustomType.Parameter("reverseOrder") Boolean reverseOrder) {
         this.charactersToIgnore = charactersToIgnore;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;

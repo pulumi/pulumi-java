@@ -111,26 +111,26 @@ public final class GetOccurrenceResult {
      */
     private final VulnerabilityOccurrenceResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestation","build","compliance","createTime","deployment","discovery","dsseAttestation","envelope","image","kind","name","noteName","$package","remediation","resourceUri","updateTime","upgrade","vulnerability"})
+    @OutputCustomType.Constructor
     private GetOccurrenceResult(
-        AttestationOccurrenceResponse attestation,
-        BuildOccurrenceResponse build,
-        ComplianceOccurrenceResponse compliance,
-        String createTime,
-        DeploymentOccurrenceResponse deployment,
-        DiscoveryOccurrenceResponse discovery,
-        DSSEAttestationOccurrenceResponse dsseAttestation,
-        EnvelopeResponse envelope,
-        ImageOccurrenceResponse image,
-        String kind,
-        String name,
-        String noteName,
-        PackageOccurrenceResponse $package,
-        String remediation,
-        String resourceUri,
-        String updateTime,
-        UpgradeOccurrenceResponse upgrade,
-        VulnerabilityOccurrenceResponse vulnerability) {
+        @OutputCustomType.Parameter("attestation") AttestationOccurrenceResponse attestation,
+        @OutputCustomType.Parameter("build") BuildOccurrenceResponse build,
+        @OutputCustomType.Parameter("compliance") ComplianceOccurrenceResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") DeploymentOccurrenceResponse deployment,
+        @OutputCustomType.Parameter("discovery") DiscoveryOccurrenceResponse discovery,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationOccurrenceResponse dsseAttestation,
+        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @OutputCustomType.Parameter("image") ImageOccurrenceResponse image,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noteName") String noteName,
+        @OutputCustomType.Parameter("package") PackageOccurrenceResponse $package,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeOccurrenceResponse upgrade,
+        @OutputCustomType.Parameter("vulnerability") VulnerabilityOccurrenceResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;

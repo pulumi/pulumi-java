@@ -43,14 +43,14 @@ public final class GetTaxonomyResult {
      */
     private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps;
 
-    @OutputCustomType.Constructor({"activatedPolicyTypes","description","displayName","name","policyTagCount","taxonomyTimestamps"})
+    @OutputCustomType.Constructor
     private GetTaxonomyResult(
-        List<String> activatedPolicyTypes,
-        String description,
-        String displayName,
-        String name,
-        Integer policyTagCount,
-        GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
+        @OutputCustomType.Parameter("activatedPolicyTypes") List<String> activatedPolicyTypes,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyTagCount") Integer policyTagCount,
+        @OutputCustomType.Parameter("taxonomyTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         this.description = description;
         this.displayName = displayName;

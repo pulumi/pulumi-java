@@ -94,24 +94,24 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"additionalExperiments","additionalUserLabels","enableStreamingEngine","flexrsGoal","ipConfiguration","kmsKeyName","machineType","maxWorkers","network","numWorkers","serviceAccountEmail","subnetwork","tempLocation","workerRegion","workerZone","zone"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse(
-        List<String> additionalExperiments,
-        Map<String,String> additionalUserLabels,
-        Boolean enableStreamingEngine,
-        String flexrsGoal,
-        String ipConfiguration,
-        String kmsKeyName,
-        String machineType,
-        Integer maxWorkers,
-        String network,
-        Integer numWorkers,
-        String serviceAccountEmail,
-        String subnetwork,
-        String tempLocation,
-        String workerRegion,
-        String workerZone,
-        String zone) {
+        @OutputCustomType.Parameter("additionalExperiments") List<String> additionalExperiments,
+        @OutputCustomType.Parameter("additionalUserLabels") Map<String,String> additionalUserLabels,
+        @OutputCustomType.Parameter("enableStreamingEngine") Boolean enableStreamingEngine,
+        @OutputCustomType.Parameter("flexrsGoal") String flexrsGoal,
+        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxWorkers") Integer maxWorkers,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tempLocation") String tempLocation,
+        @OutputCustomType.Parameter("workerRegion") String workerRegion,
+        @OutputCustomType.Parameter("workerZone") String workerZone,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.additionalExperiments = additionalExperiments;
         this.additionalUserLabels = additionalUserLabels;
         this.enableStreamingEngine = enableStreamingEngine;

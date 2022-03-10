@@ -17,10 +17,10 @@ public final class AttestationResponse {
      */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor({"genericSignedAttestation","pgpSignedAttestation"})
+    @OutputCustomType.Constructor
     private AttestationResponse(
-        GenericSignedAttestationResponse genericSignedAttestation,
-        PgpSignedAttestationResponse pgpSignedAttestation) {
+        @OutputCustomType.Parameter("genericSignedAttestation") GenericSignedAttestationResponse genericSignedAttestation,
+        @OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.genericSignedAttestation = genericSignedAttestation;
         this.pgpSignedAttestation = pgpSignedAttestation;
     }

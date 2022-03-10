@@ -26,11 +26,11 @@ public final class BucketRetentionPolicyResponse {
      */
     private final String retentionPeriod;
 
-    @OutputCustomType.Constructor({"effectiveTime","isLocked","retentionPeriod"})
+    @OutputCustomType.Constructor
     private BucketRetentionPolicyResponse(
-        String effectiveTime,
-        Boolean isLocked,
-        String retentionPeriod) {
+        @OutputCustomType.Parameter("effectiveTime") String effectiveTime,
+        @OutputCustomType.Parameter("isLocked") Boolean isLocked,
+        @OutputCustomType.Parameter("retentionPeriod") String retentionPeriod) {
         this.effectiveTime = effectiveTime;
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;

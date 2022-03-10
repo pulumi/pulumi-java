@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"postback","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse(
-        String postback,
-        String text) {
+        @OutputCustomType.Parameter("postback") String postback,
+        @OutputCustomType.Parameter("text") String text) {
         this.postback = postback;
         this.text = text;
     }

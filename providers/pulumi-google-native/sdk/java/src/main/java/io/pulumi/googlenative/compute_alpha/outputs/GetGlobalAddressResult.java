@@ -108,27 +108,27 @@ public final class GetGlobalAddressResult {
      */
     private final List<String> users;
 
-    @OutputCustomType.Constructor({"address","addressType","creationTimestamp","description","ipVersion","kind","labelFingerprint","labels","name","network","networkTier","prefixLength","purpose","region","selfLink","selfLinkWithId","status","subnetwork","users"})
+    @OutputCustomType.Constructor
     private GetGlobalAddressResult(
-        String address,
-        String addressType,
-        String creationTimestamp,
-        String description,
-        String ipVersion,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String network,
-        String networkTier,
-        Integer prefixLength,
-        String purpose,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        String status,
-        String subnetwork,
-        List<String> users) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("addressType") String addressType,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("ipVersion") String ipVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("prefixLength") Integer prefixLength,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("users") List<String> users) {
         this.address = address;
         this.addressType = addressType;
         this.creationTimestamp = creationTimestamp;

@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse value;
 
-    @OutputCustomType.Constructor({"count","value"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ValueFrequencyResponse(
-        String count,
-        GooglePrivacyDlpV2ValueResponse value) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
         this.count = count;
         this.value = value;
     }

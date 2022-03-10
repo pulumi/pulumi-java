@@ -15,8 +15,8 @@ public final class SessionInfoResponse {
      */
     private final String sessionId;
 
-    @OutputCustomType.Constructor({"sessionId"})
-    private SessionInfoResponse(String sessionId) {
+    @OutputCustomType.Constructor
+    private SessionInfoResponse(@OutputCustomType.Parameter("sessionId") String sessionId) {
         this.sessionId = sessionId;
     }
 

@@ -31,12 +31,12 @@ public final class DiskInstantiationConfigResponse {
      */
     private final String instantiateFrom;
 
-    @OutputCustomType.Constructor({"autoDelete","customImage","deviceName","instantiateFrom"})
+    @OutputCustomType.Constructor
     private DiskInstantiationConfigResponse(
-        Boolean autoDelete,
-        String customImage,
-        String deviceName,
-        String instantiateFrom) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("customImage") String customImage,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("instantiateFrom") String instantiateFrom) {
         this.autoDelete = autoDelete;
         this.customImage = customImage;
         this.deviceName = deviceName;

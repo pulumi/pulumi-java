@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
      */
     private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
-    @OutputCustomType.Constructor({"bigQueryField","cloudStorageFileSet","outputPath"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(
-        GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
-        GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
-        GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
+        @OutputCustomType.Parameter("bigQueryField") GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
+        @OutputCustomType.Parameter("cloudStorageFileSet") GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
+        @OutputCustomType.Parameter("outputPath") GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
         this.outputPath = outputPath;

@@ -46,15 +46,15 @@ public final class ReadinessCheckResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"appStartTimeout","checkInterval","failureThreshold","host","path","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private ReadinessCheckResponse(
-        String appStartTimeout,
-        String checkInterval,
-        Integer failureThreshold,
-        String host,
-        String path,
-        Integer successThreshold,
-        String timeout) {
+        @OutputCustomType.Parameter("appStartTimeout") String appStartTimeout,
+        @OutputCustomType.Parameter("checkInterval") String checkInterval,
+        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.appStartTimeout = appStartTimeout;
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;

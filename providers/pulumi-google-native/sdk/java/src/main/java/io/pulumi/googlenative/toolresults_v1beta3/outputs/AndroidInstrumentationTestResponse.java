@@ -32,12 +32,12 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final Boolean useOrchestrator;
 
-    @OutputCustomType.Constructor({"testPackageId","testRunnerClass","testTargets","useOrchestrator"})
+    @OutputCustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets,
-        Boolean useOrchestrator) {
+        @OutputCustomType.Parameter("testPackageId") String testPackageId,
+        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @OutputCustomType.Parameter("testTargets") List<String> testTargets,
+        @OutputCustomType.Parameter("useOrchestrator") Boolean useOrchestrator) {
         this.testPackageId = testPackageId;
         this.testRunnerClass = testRunnerClass;
         this.testTargets = testTargets;

@@ -30,12 +30,12 @@ public final class VmwareSourceDetailsResponse {
      */
     private final String vcenterIp;
 
-    @OutputCustomType.Constructor({"password","thumbprint","username","vcenterIp"})
+    @OutputCustomType.Constructor
     private VmwareSourceDetailsResponse(
-        String password,
-        String thumbprint,
-        String username,
-        String vcenterIp) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("vcenterIp") String vcenterIp) {
         this.password = password;
         this.thumbprint = thumbprint;
         this.username = username;

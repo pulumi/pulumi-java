@@ -22,10 +22,10 @@ public final class EgressToResponse {
      */
     private final List<String> resources;
 
-    @OutputCustomType.Constructor({"operations","resources"})
+    @OutputCustomType.Constructor
     private EgressToResponse(
-        List<ApiOperationResponse> operations,
-        List<String> resources) {
+        @OutputCustomType.Parameter("operations") List<ApiOperationResponse> operations,
+        @OutputCustomType.Parameter("resources") List<String> resources) {
         this.operations = operations;
         this.resources = resources;
     }

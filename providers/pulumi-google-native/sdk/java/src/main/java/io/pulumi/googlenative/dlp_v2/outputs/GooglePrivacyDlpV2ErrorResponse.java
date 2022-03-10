@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2ErrorResponse {
      */
     private final List<String> timestamps;
 
-    @OutputCustomType.Constructor({"details","timestamps"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ErrorResponse(
-        GoogleRpcStatusResponse details,
-        List<String> timestamps) {
+        @OutputCustomType.Parameter("details") GoogleRpcStatusResponse details,
+        @OutputCustomType.Parameter("timestamps") List<String> timestamps) {
         this.details = details;
         this.timestamps = timestamps;
     }

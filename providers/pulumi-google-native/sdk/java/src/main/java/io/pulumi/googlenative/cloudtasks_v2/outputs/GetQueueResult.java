@@ -49,15 +49,15 @@ public final class GetQueueResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"appEngineRoutingOverride","name","purgeTime","rateLimits","retryConfig","stackdriverLoggingConfig","state"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        AppEngineRoutingResponse appEngineRoutingOverride,
-        String name,
-        String purgeTime,
-        RateLimitsResponse rateLimits,
-        RetryConfigResponse retryConfig,
-        StackdriverLoggingConfigResponse stackdriverLoggingConfig,
-        String state) {
+        @OutputCustomType.Parameter("appEngineRoutingOverride") AppEngineRoutingResponse appEngineRoutingOverride,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("purgeTime") String purgeTime,
+        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @OutputCustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
+        @OutputCustomType.Parameter("state") String state) {
         this.appEngineRoutingOverride = appEngineRoutingOverride;
         this.name = name;
         this.purgeTime = purgeTime;

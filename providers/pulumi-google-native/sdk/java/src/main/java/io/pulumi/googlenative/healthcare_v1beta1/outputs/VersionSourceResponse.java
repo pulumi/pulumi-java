@@ -20,10 +20,10 @@ public final class VersionSourceResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"mshField","value"})
+    @OutputCustomType.Constructor
     private VersionSourceResponse(
-        String mshField,
-        String value) {
+        @OutputCustomType.Parameter("mshField") String mshField,
+        @OutputCustomType.Parameter("value") String value) {
         this.mshField = mshField;
         this.value = value;
     }

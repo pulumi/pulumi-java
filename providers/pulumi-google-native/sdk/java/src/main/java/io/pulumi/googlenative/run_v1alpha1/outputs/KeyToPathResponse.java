@@ -26,11 +26,11 @@ public final class KeyToPathResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"key","mode","path"})
+    @OutputCustomType.Constructor
     private KeyToPathResponse(
-        String key,
-        Integer mode,
-        String path) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("mode") Integer mode,
+        @OutputCustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;

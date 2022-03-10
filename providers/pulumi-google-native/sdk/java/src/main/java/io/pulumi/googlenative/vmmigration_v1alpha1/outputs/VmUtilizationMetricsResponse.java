@@ -91,24 +91,24 @@ public final class VmUtilizationMetricsResponse {
      */
     private final String networkThroughputMaxKbps;
 
-    @OutputCustomType.Constructor({"cpuAverage","cpuAveragePercent","cpuMax","cpuMaxPercent","diskIoRateAverage","diskIoRateAverageKbps","diskIoRateMax","diskIoRateMaxKbps","memoryAverage","memoryAveragePercent","memoryMax","memoryMaxPercent","networkThroughputAverage","networkThroughputAverageKbps","networkThroughputMax","networkThroughputMaxKbps"})
+    @OutputCustomType.Constructor
     private VmUtilizationMetricsResponse(
-        Integer cpuAverage,
-        Integer cpuAveragePercent,
-        Integer cpuMax,
-        Integer cpuMaxPercent,
-        String diskIoRateAverage,
-        String diskIoRateAverageKbps,
-        String diskIoRateMax,
-        String diskIoRateMaxKbps,
-        Integer memoryAverage,
-        Integer memoryAveragePercent,
-        Integer memoryMax,
-        Integer memoryMaxPercent,
-        String networkThroughputAverage,
-        String networkThroughputAverageKbps,
-        String networkThroughputMax,
-        String networkThroughputMaxKbps) {
+        @OutputCustomType.Parameter("cpuAverage") Integer cpuAverage,
+        @OutputCustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
+        @OutputCustomType.Parameter("cpuMax") Integer cpuMax,
+        @OutputCustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
+        @OutputCustomType.Parameter("diskIoRateAverage") String diskIoRateAverage,
+        @OutputCustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
+        @OutputCustomType.Parameter("diskIoRateMax") String diskIoRateMax,
+        @OutputCustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
+        @OutputCustomType.Parameter("memoryAverage") Integer memoryAverage,
+        @OutputCustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
+        @OutputCustomType.Parameter("memoryMax") Integer memoryMax,
+        @OutputCustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
+        @OutputCustomType.Parameter("networkThroughputAverage") String networkThroughputAverage,
+        @OutputCustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
+        @OutputCustomType.Parameter("networkThroughputMax") String networkThroughputMax,
+        @OutputCustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
         this.cpuAverage = cpuAverage;
         this.cpuAveragePercent = cpuAveragePercent;
         this.cpuMax = cpuMax;

@@ -27,11 +27,11 @@ public final class BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"condition","members","role"})
+    @OutputCustomType.Constructor
     private BindingResponse(
-        ExprResponse condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;

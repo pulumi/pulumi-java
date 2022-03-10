@@ -21,10 +21,10 @@ public final class EgressFromResponse {
      */
     private final String identityType;
 
-    @OutputCustomType.Constructor({"identities","identityType"})
+    @OutputCustomType.Constructor
     private EgressFromResponse(
-        List<String> identities,
-        String identityType) {
+        @OutputCustomType.Parameter("identities") List<String> identities,
+        @OutputCustomType.Parameter("identityType") String identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }

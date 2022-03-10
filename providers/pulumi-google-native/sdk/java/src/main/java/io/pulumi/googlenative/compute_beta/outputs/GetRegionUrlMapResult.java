@@ -87,22 +87,22 @@ public final class GetRegionUrlMapResult {
      */
     private final List<UrlMapTestResponse> tests;
 
-    @OutputCustomType.Constructor({"creationTimestamp","defaultRouteAction","defaultService","defaultUrlRedirect","description","fingerprint","headerAction","hostRules","kind","name","pathMatchers","region","selfLink","tests"})
+    @OutputCustomType.Constructor
     private GetRegionUrlMapResult(
-        String creationTimestamp,
-        HttpRouteActionResponse defaultRouteAction,
-        String defaultService,
-        HttpRedirectActionResponse defaultUrlRedirect,
-        String description,
-        String fingerprint,
-        HttpHeaderActionResponse headerAction,
-        List<HostRuleResponse> hostRules,
-        String kind,
-        String name,
-        List<PathMatcherResponse> pathMatchers,
-        String region,
-        String selfLink,
-        List<UrlMapTestResponse> tests) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
+        @OutputCustomType.Parameter("defaultService") String defaultService,
+        @OutputCustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("hostRules") List<HostRuleResponse> hostRules,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathMatchers") List<PathMatcherResponse> pathMatchers,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("tests") List<UrlMapTestResponse> tests) {
         this.creationTimestamp = creationTimestamp;
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;

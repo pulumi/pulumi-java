@@ -20,10 +20,10 @@ public final class DiagnosticResponse {
      */
     private final String level;
 
-    @OutputCustomType.Constructor({"field","level"})
+    @OutputCustomType.Constructor
     private DiagnosticResponse(
-        String field,
-        String level) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("level") String level) {
         this.field = field;
         this.level = level;
     }

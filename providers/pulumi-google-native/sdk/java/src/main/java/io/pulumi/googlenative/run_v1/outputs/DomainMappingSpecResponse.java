@@ -26,11 +26,11 @@ public final class DomainMappingSpecResponse {
      */
     private final String routeName;
 
-    @OutputCustomType.Constructor({"certificateMode","forceOverride","routeName"})
+    @OutputCustomType.Constructor
     private DomainMappingSpecResponse(
-        String certificateMode,
-        Boolean forceOverride,
-        String routeName) {
+        @OutputCustomType.Parameter("certificateMode") String certificateMode,
+        @OutputCustomType.Parameter("forceOverride") Boolean forceOverride,
+        @OutputCustomType.Parameter("routeName") String routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = routeName;

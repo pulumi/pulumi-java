@@ -15,8 +15,8 @@ public final class InstanceTemplateSpecResponse {
      */
     private final InstanceSpecResponse spec;
 
-    @OutputCustomType.Constructor({"spec"})
-    private InstanceTemplateSpecResponse(InstanceSpecResponse spec) {
+    @OutputCustomType.Constructor
+    private InstanceTemplateSpecResponse(@OutputCustomType.Parameter("spec") InstanceSpecResponse spec) {
         this.spec = spec;
     }
 

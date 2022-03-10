@@ -32,12 +32,12 @@ public final class VersionResponse {
      */
     private final String versionNumber;
 
-    @OutputCustomType.Constructor({"availableFeatures","defaultVersion","type","versionNumber"})
+    @OutputCustomType.Constructor
     private VersionResponse(
-        List<String> availableFeatures,
-        Boolean defaultVersion,
-        String type,
-        String versionNumber) {
+        @OutputCustomType.Parameter("availableFeatures") List<String> availableFeatures,
+        @OutputCustomType.Parameter("defaultVersion") Boolean defaultVersion,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versionNumber") String versionNumber) {
         this.availableFeatures = availableFeatures;
         this.defaultVersion = defaultVersion;
         this.type = type;

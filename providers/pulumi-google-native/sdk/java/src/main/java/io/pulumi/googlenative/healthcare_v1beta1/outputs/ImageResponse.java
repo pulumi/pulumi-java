@@ -20,10 +20,10 @@ public final class ImageResponse {
      */
     private final String rawBytes;
 
-    @OutputCustomType.Constructor({"gcsUri","rawBytes"})
+    @OutputCustomType.Constructor
     private ImageResponse(
-        String gcsUri,
-        String rawBytes) {
+        @OutputCustomType.Parameter("gcsUri") String gcsUri,
+        @OutputCustomType.Parameter("rawBytes") String rawBytes) {
         this.gcsUri = gcsUri;
         this.rawBytes = rawBytes;
     }

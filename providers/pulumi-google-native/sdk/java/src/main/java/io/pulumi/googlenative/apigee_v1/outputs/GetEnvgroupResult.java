@@ -36,13 +36,13 @@ public final class GetEnvgroupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createdAt","hostnames","lastModifiedAt","name","state"})
+    @OutputCustomType.Constructor
     private GetEnvgroupResult(
-        String createdAt,
-        List<String> hostnames,
-        String lastModifiedAt,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("hostnames") List<String> hostnames,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.hostnames = hostnames;
         this.lastModifiedAt = lastModifiedAt;

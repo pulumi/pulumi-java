@@ -16,8 +16,8 @@ public final class TableSchemaResponse {
      */
     private final List<TableFieldSchemaResponse> fields;
 
-    @OutputCustomType.Constructor({"fields"})
-    private TableSchemaResponse(List<TableFieldSchemaResponse> fields) {
+    @OutputCustomType.Constructor
+    private TableSchemaResponse(@OutputCustomType.Parameter("fields") List<TableFieldSchemaResponse> fields) {
         this.fields = fields;
     }
 

@@ -15,8 +15,8 @@ public final class SourceContextResponse {
      */
     private final String fileName;
 
-    @OutputCustomType.Constructor({"fileName"})
-    private SourceContextResponse(String fileName) {
+    @OutputCustomType.Constructor
+    private SourceContextResponse(@OutputCustomType.Parameter("fileName") String fileName) {
         this.fileName = fileName;
     }
 

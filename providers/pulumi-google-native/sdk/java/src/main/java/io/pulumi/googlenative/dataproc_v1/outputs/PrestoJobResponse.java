@@ -50,15 +50,15 @@ public final class PrestoJobResponse {
      */
     private final QueryListResponse queryList;
 
-    @OutputCustomType.Constructor({"clientTags","continueOnFailure","loggingConfig","outputFormat","properties","queryFileUri","queryList"})
+    @OutputCustomType.Constructor
     private PrestoJobResponse(
-        List<String> clientTags,
-        Boolean continueOnFailure,
-        LoggingConfigResponse loggingConfig,
-        String outputFormat,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList) {
+        @OutputCustomType.Parameter("clientTags") List<String> clientTags,
+        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("outputFormat") String outputFormat,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;

@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(List<Double> values) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(@OutputCustomType.Parameter("values") List<Double> values) {
         this.values = values;
     }
 

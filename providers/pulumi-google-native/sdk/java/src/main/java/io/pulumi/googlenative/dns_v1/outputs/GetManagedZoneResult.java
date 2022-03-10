@@ -91,24 +91,24 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor({"cloudLoggingConfig","creationTime","description","dnsName","dnssecConfig","forwardingConfig","kind","labels","name","nameServerSet","nameServers","peeringConfig","privateVisibilityConfig","reverseLookupConfig","serviceDirectoryConfig","visibility"})
+    @OutputCustomType.Constructor
     private GetManagedZoneResult(
-        ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
-        String creationTime,
-        String description,
-        String dnsName,
-        ManagedZoneDnsSecConfigResponse dnssecConfig,
-        ManagedZoneForwardingConfigResponse forwardingConfig,
-        String kind,
-        Map<String,String> labels,
-        String name,
-        String nameServerSet,
-        List<String> nameServers,
-        ManagedZonePeeringConfigResponse peeringConfig,
-        ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
-        ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
-        ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
-        String visibility) {
+        @OutputCustomType.Parameter("cloudLoggingConfig") ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("dnssecConfig") ManagedZoneDnsSecConfigResponse dnssecConfig,
+        @OutputCustomType.Parameter("forwardingConfig") ManagedZoneForwardingConfigResponse forwardingConfig,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServerSet") String nameServerSet,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("peeringConfig") ManagedZonePeeringConfigResponse peeringConfig,
+        @OutputCustomType.Parameter("privateVisibilityConfig") ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
+        @OutputCustomType.Parameter("reverseLookupConfig") ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
+        @OutputCustomType.Parameter("serviceDirectoryConfig") ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
+        @OutputCustomType.Parameter("visibility") String visibility) {
         this.cloudLoggingConfig = cloudLoggingConfig;
         this.creationTime = creationTime;
         this.description = description;

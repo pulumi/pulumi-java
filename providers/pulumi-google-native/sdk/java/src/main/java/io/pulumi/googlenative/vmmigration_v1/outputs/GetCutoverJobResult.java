@@ -53,16 +53,16 @@ public final class GetCutoverJobResult {
      */
     private final String stateTime;
 
-    @OutputCustomType.Constructor({"computeEngineTargetDetails","createTime","error","name","progressPercent","state","stateMessage","stateTime"})
+    @OutputCustomType.Constructor
     private GetCutoverJobResult(
-        ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        String createTime,
-        StatusResponse error,
-        String name,
-        Integer progressPercent,
-        String state,
-        String stateMessage,
-        String stateTime) {
+        @OutputCustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
         this.error = error;

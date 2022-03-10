@@ -78,21 +78,21 @@ public final class GetCompanyResult {
      */
     private final String websiteUri;
 
-    @OutputCustomType.Constructor({"careerSiteUri","derivedInfo","displayName","eeoText","externalId","headquartersAddress","hiringAgency","imageUri","keywordSearchableJobCustomAttributes","name","size","suspended","websiteUri"})
+    @OutputCustomType.Constructor
     private GetCompanyResult(
-        String careerSiteUri,
-        CompanyDerivedInfoResponse derivedInfo,
-        String displayName,
-        String eeoText,
-        String externalId,
-        String headquartersAddress,
-        Boolean hiringAgency,
-        String imageUri,
-        List<String> keywordSearchableJobCustomAttributes,
-        String name,
-        String size,
-        Boolean suspended,
-        String websiteUri) {
+        @OutputCustomType.Parameter("careerSiteUri") String careerSiteUri,
+        @OutputCustomType.Parameter("derivedInfo") CompanyDerivedInfoResponse derivedInfo,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("eeoText") String eeoText,
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("headquartersAddress") String headquartersAddress,
+        @OutputCustomType.Parameter("hiringAgency") Boolean hiringAgency,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("keywordSearchableJobCustomAttributes") List<String> keywordSearchableJobCustomAttributes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("websiteUri") String websiteUri) {
         this.careerSiteUri = careerSiteUri;
         this.derivedInfo = derivedInfo;
         this.displayName = displayName;

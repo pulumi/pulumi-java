@@ -97,24 +97,24 @@ public final class GetMachineImageResult {
      */
     private final String totalStorageBytes;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","guestFlush","instanceProperties","kind","machineImageEncryptionKey","name","satisfiesPzs","savedDisks","selfLink","sourceDiskEncryptionKeys","sourceInstance","sourceInstanceProperties","status","storageLocations","totalStorageBytes"})
+    @OutputCustomType.Constructor
     private GetMachineImageResult(
-        String creationTimestamp,
-        String description,
-        Boolean guestFlush,
-        InstancePropertiesResponse instanceProperties,
-        String kind,
-        CustomerEncryptionKeyResponse machineImageEncryptionKey,
-        String name,
-        Boolean satisfiesPzs,
-        List<SavedDiskResponse> savedDisks,
-        String selfLink,
-        List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
-        String sourceInstance,
-        SourceInstancePropertiesResponse sourceInstanceProperties,
-        String status,
-        List<String> storageLocations,
-        String totalStorageBytes) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("instanceProperties") InstancePropertiesResponse instanceProperties,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("machineImageEncryptionKey") CustomerEncryptionKeyResponse machineImageEncryptionKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("savedDisks") List<SavedDiskResponse> savedDisks,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKeys") List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
+        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
+        @OutputCustomType.Parameter("sourceInstanceProperties") SourceInstancePropertiesResponse sourceInstanceProperties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
+        @OutputCustomType.Parameter("totalStorageBytes") String totalStorageBytes) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.guestFlush = guestFlush;

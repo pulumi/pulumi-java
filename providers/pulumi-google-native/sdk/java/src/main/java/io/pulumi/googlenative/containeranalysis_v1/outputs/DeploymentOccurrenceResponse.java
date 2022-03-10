@@ -46,15 +46,15 @@ public final class DeploymentOccurrenceResponse {
      */
     private final String userEmail;
 
-    @OutputCustomType.Constructor({"address","config","deployTime","platform","resourceUri","undeployTime","userEmail"})
+    @OutputCustomType.Constructor
     private DeploymentOccurrenceResponse(
-        String address,
-        String config,
-        String deployTime,
-        String platform,
-        List<String> resourceUri,
-        String undeployTime,
-        String userEmail) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("config") String config,
+        @OutputCustomType.Parameter("deployTime") String deployTime,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("resourceUri") List<String> resourceUri,
+        @OutputCustomType.Parameter("undeployTime") String undeployTime,
+        @OutputCustomType.Parameter("userEmail") String userEmail) {
         this.address = address;
         this.config = config;
         this.deployTime = deployTime;

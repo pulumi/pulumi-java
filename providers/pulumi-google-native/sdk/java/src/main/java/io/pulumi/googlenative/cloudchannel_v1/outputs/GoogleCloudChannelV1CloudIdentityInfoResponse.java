@@ -52,16 +52,16 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
      */
     private final String primaryDomain;
 
-    @OutputCustomType.Constructor({"adminConsoleUri","alternateEmail","customerType","eduData","isDomainVerified","languageCode","phoneNumber","primaryDomain"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1CloudIdentityInfoResponse(
-        String adminConsoleUri,
-        String alternateEmail,
-        String customerType,
-        GoogleCloudChannelV1EduDataResponse eduData,
-        Boolean isDomainVerified,
-        String languageCode,
-        String phoneNumber,
-        String primaryDomain) {
+        @OutputCustomType.Parameter("adminConsoleUri") String adminConsoleUri,
+        @OutputCustomType.Parameter("alternateEmail") String alternateEmail,
+        @OutputCustomType.Parameter("customerType") String customerType,
+        @OutputCustomType.Parameter("eduData") GoogleCloudChannelV1EduDataResponse eduData,
+        @OutputCustomType.Parameter("isDomainVerified") Boolean isDomainVerified,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("primaryDomain") String primaryDomain) {
         this.adminConsoleUri = adminConsoleUri;
         this.alternateEmail = alternateEmail;
         this.customerType = customerType;

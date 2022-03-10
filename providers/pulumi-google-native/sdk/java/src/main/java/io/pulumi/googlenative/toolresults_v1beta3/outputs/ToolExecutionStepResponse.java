@@ -15,8 +15,8 @@ public final class ToolExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor({"toolExecution"})
-    private ToolExecutionStepResponse(ToolExecutionResponse toolExecution) {
+    @OutputCustomType.Constructor
+    private ToolExecutionStepResponse(@OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.toolExecution = toolExecution;
     }
 

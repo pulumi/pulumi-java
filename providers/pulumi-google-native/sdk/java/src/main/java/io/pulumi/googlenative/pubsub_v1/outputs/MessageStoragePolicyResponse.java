@@ -16,8 +16,8 @@ public final class MessageStoragePolicyResponse {
      */
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor({"allowedPersistenceRegions"})
-    private MessageStoragePolicyResponse(List<String> allowedPersistenceRegions) {
+    @OutputCustomType.Constructor
+    private MessageStoragePolicyResponse(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 

@@ -15,8 +15,8 @@ public final class HealthCheckLogConfigResponse {
      */
     private final Boolean enable;
 
-    @OutputCustomType.Constructor({"enable"})
-    private HealthCheckLogConfigResponse(Boolean enable) {
+    @OutputCustomType.Constructor
+    private HealthCheckLogConfigResponse(@OutputCustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 

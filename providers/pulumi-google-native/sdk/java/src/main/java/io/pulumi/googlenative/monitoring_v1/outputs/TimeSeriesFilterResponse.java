@@ -32,12 +32,12 @@ public final class TimeSeriesFilterResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor({"aggregation","filter","pickTimeSeriesFilter","secondaryAggregation"})
+    @OutputCustomType.Constructor
     private TimeSeriesFilterResponse(
-        AggregationResponse aggregation,
-        String filter,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
+        @OutputCustomType.Parameter("aggregation") AggregationResponse aggregation,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.aggregation = aggregation;
         this.filter = filter;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;

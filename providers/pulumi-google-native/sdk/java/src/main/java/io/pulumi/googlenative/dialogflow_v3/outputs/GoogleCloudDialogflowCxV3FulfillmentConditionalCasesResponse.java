@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse 
      */
     private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases;
 
-    @OutputCustomType.Constructor({"cases"})
-    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse(List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse(@OutputCustomType.Parameter("cases") List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseResponse> cases) {
         this.cases = cases;
     }
 

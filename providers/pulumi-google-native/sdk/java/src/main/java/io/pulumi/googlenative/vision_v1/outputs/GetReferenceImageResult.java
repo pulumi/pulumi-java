@@ -27,11 +27,11 @@ public final class GetReferenceImageResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"boundingPolys","name","uri"})
+    @OutputCustomType.Constructor
     private GetReferenceImageResult(
-        List<BoundingPolyResponse> boundingPolys,
-        String name,
-        String uri) {
+        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.boundingPolys = boundingPolys;
         this.name = name;
         this.uri = uri;

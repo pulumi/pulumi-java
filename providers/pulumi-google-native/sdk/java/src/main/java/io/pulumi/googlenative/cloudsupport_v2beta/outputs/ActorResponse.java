@@ -31,12 +31,12 @@ public final class ActorResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"displayName","email","googleSupport","principalId"})
+    @OutputCustomType.Constructor
     private ActorResponse(
-        String displayName,
-        String email,
-        Boolean googleSupport,
-        String principalId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("googleSupport") Boolean googleSupport,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.displayName = displayName;
         this.email = email;
         this.googleSupport = googleSupport;

@@ -27,11 +27,11 @@ public final class GrpcServiceConfigResponse {
      */
     private final String targetUri;
 
-    @OutputCustomType.Constructor({"callCredentials","channelCredentials","targetUri"})
+    @OutputCustomType.Constructor
     private GrpcServiceConfigResponse(
-        CallCredentialsResponse callCredentials,
-        ChannelCredentialsResponse channelCredentials,
-        String targetUri) {
+        @OutputCustomType.Parameter("callCredentials") CallCredentialsResponse callCredentials,
+        @OutputCustomType.Parameter("channelCredentials") ChannelCredentialsResponse channelCredentials,
+        @OutputCustomType.Parameter("targetUri") String targetUri) {
         this.callCredentials = callCredentials;
         this.channelCredentials = channelCredentials;
         this.targetUri = targetUri;

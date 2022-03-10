@@ -33,12 +33,12 @@ public final class ReachabilityDetailsResponse {
      */
     private final String verifyTime;
 
-    @OutputCustomType.Constructor({"error","result","traces","verifyTime"})
+    @OutputCustomType.Constructor
     private ReachabilityDetailsResponse(
-        StatusResponse error,
-        String result,
-        List<TraceResponse> traces,
-        String verifyTime) {
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("traces") List<TraceResponse> traces,
+        @OutputCustomType.Parameter("verifyTime") String verifyTime) {
         this.error = error;
         this.result = result;
         this.traces = traces;

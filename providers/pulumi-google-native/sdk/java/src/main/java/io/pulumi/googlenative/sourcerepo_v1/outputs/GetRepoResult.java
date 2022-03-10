@@ -37,13 +37,13 @@ public final class GetRepoResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"mirrorConfig","name","pubsubConfigs","size","url"})
+    @OutputCustomType.Constructor
     private GetRepoResult(
-        MirrorConfigResponse mirrorConfig,
-        String name,
-        Map<String,String> pubsubConfigs,
-        String size,
-        String url) {
+        @OutputCustomType.Parameter("mirrorConfig") MirrorConfigResponse mirrorConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pubsubConfigs") Map<String,String> pubsubConfigs,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("url") String url) {
         this.mirrorConfig = mirrorConfig;
         this.name = name;
         this.pubsubConfigs = pubsubConfigs;

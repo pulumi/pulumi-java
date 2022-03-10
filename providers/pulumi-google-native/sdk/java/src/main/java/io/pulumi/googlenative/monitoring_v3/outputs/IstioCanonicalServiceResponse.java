@@ -25,11 +25,11 @@ public final class IstioCanonicalServiceResponse {
      */
     private final String meshUid;
 
-    @OutputCustomType.Constructor({"canonicalService","canonicalServiceNamespace","meshUid"})
+    @OutputCustomType.Constructor
     private IstioCanonicalServiceResponse(
-        String canonicalService,
-        String canonicalServiceNamespace,
-        String meshUid) {
+        @OutputCustomType.Parameter("canonicalService") String canonicalService,
+        @OutputCustomType.Parameter("canonicalServiceNamespace") String canonicalServiceNamespace,
+        @OutputCustomType.Parameter("meshUid") String meshUid) {
         this.canonicalService = canonicalService;
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         this.meshUid = meshUid;

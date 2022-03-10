@@ -45,15 +45,15 @@ public final class ForwardingRuleInfoResponse {
      */
     private final String vip;
 
-    @OutputCustomType.Constructor({"displayName","matchedPortRange","matchedProtocol","networkUri","target","uri","vip"})
+    @OutputCustomType.Constructor
     private ForwardingRuleInfoResponse(
-        String displayName,
-        String matchedPortRange,
-        String matchedProtocol,
-        String networkUri,
-        String target,
-        String uri,
-        String vip) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("matchedPortRange") String matchedPortRange,
+        @OutputCustomType.Parameter("matchedProtocol") String matchedProtocol,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("vip") String vip) {
         this.displayName = displayName;
         this.matchedPortRange = matchedPortRange;
         this.matchedProtocol = matchedProtocol;

@@ -25,11 +25,11 @@ public final class SslSettingsResponse {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor({"certificateId","pendingManagedCertificateId","sslManagementType"})
+    @OutputCustomType.Constructor
     private SslSettingsResponse(
-        String certificateId,
-        String pendingManagedCertificateId,
-        String sslManagementType) {
+        @OutputCustomType.Parameter("certificateId") String certificateId,
+        @OutputCustomType.Parameter("pendingManagedCertificateId") String pendingManagedCertificateId,
+        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;

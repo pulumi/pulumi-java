@@ -90,22 +90,22 @@ public final class EnvironmentConfigResponse {
      */
     private final WorkloadsConfigResponse workloadsConfig;
 
-    @OutputCustomType.Constructor({"airflowUri","dagGcsPrefix","databaseConfig","encryptionConfig","environmentSize","gkeCluster","maintenanceWindow","nodeConfig","nodeCount","privateEnvironmentConfig","softwareConfig","webServerConfig","webServerNetworkAccessControl","workloadsConfig"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigResponse(
-        String airflowUri,
-        String dagGcsPrefix,
-        DatabaseConfigResponse databaseConfig,
-        EncryptionConfigResponse encryptionConfig,
-        String environmentSize,
-        String gkeCluster,
-        MaintenanceWindowResponse maintenanceWindow,
-        NodeConfigResponse nodeConfig,
-        Integer nodeCount,
-        PrivateEnvironmentConfigResponse privateEnvironmentConfig,
-        SoftwareConfigResponse softwareConfig,
-        WebServerConfigResponse webServerConfig,
-        WebServerNetworkAccessControlResponse webServerNetworkAccessControl,
-        WorkloadsConfigResponse workloadsConfig) {
+        @OutputCustomType.Parameter("airflowUri") String airflowUri,
+        @OutputCustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
+        @OutputCustomType.Parameter("databaseConfig") DatabaseConfigResponse databaseConfig,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("environmentSize") String environmentSize,
+        @OutputCustomType.Parameter("gkeCluster") String gkeCluster,
+        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @OutputCustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("privateEnvironmentConfig") PrivateEnvironmentConfigResponse privateEnvironmentConfig,
+        @OutputCustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
+        @OutputCustomType.Parameter("webServerConfig") WebServerConfigResponse webServerConfig,
+        @OutputCustomType.Parameter("webServerNetworkAccessControl") WebServerNetworkAccessControlResponse webServerNetworkAccessControl,
+        @OutputCustomType.Parameter("workloadsConfig") WorkloadsConfigResponse workloadsConfig) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfig = databaseConfig;

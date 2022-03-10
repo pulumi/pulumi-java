@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor({"count","infoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeStatsResponse(
-        String count,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.count = count;
         this.infoType = infoType;
     }

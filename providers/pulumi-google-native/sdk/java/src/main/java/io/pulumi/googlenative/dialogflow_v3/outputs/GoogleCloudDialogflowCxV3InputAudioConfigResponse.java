@@ -48,15 +48,15 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse {
      */
     private final Boolean singleUtterance;
 
-    @OutputCustomType.Constructor({"audioEncoding","enableWordInfo","model","modelVariant","phraseHints","sampleRateHertz","singleUtterance"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3InputAudioConfigResponse(
-        String audioEncoding,
-        Boolean enableWordInfo,
-        String model,
-        String modelVariant,
-        List<String> phraseHints,
-        Integer sampleRateHertz,
-        Boolean singleUtterance) {
+        @OutputCustomType.Parameter("audioEncoding") String audioEncoding,
+        @OutputCustomType.Parameter("enableWordInfo") Boolean enableWordInfo,
+        @OutputCustomType.Parameter("model") String model,
+        @OutputCustomType.Parameter("modelVariant") String modelVariant,
+        @OutputCustomType.Parameter("phraseHints") List<String> phraseHints,
+        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
+        @OutputCustomType.Parameter("singleUtterance") Boolean singleUtterance) {
         this.audioEncoding = audioEncoding;
         this.enableWordInfo = enableWordInfo;
         this.model = model;

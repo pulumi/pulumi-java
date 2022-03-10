@@ -99,25 +99,25 @@ public final class ContainerResponse {
      */
     private final String workingDir;
 
-    @OutputCustomType.Constructor({"args","command","env","envFrom","image","imagePullPolicy","livenessProbe","name","ports","readinessProbe","resources","securityContext","startupProbe","terminationMessagePath","terminationMessagePolicy","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<EnvVarResponse> env,
-        List<EnvFromSourceResponse> envFrom,
-        String image,
-        String imagePullPolicy,
-        ProbeResponse livenessProbe,
-        String name,
-        List<ContainerPortResponse> ports,
-        ProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        SecurityContextResponse securityContext,
-        ProbeResponse startupProbe,
-        String terminationMessagePath,
-        String terminationMessagePolicy,
-        List<VolumeMountResponse> volumeMounts,
-        String workingDir) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<EnvVarResponse> env,
+        @OutputCustomType.Parameter("envFrom") List<EnvFromSourceResponse> envFrom,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imagePullPolicy") String imagePullPolicy,
+        @OutputCustomType.Parameter("livenessProbe") ProbeResponse livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") List<ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("readinessProbe") ProbeResponse readinessProbe,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("securityContext") SecurityContextResponse securityContext,
+        @OutputCustomType.Parameter("startupProbe") ProbeResponse startupProbe,
+        @OutputCustomType.Parameter("terminationMessagePath") String terminationMessagePath,
+        @OutputCustomType.Parameter("terminationMessagePolicy") String terminationMessagePolicy,
+        @OutputCustomType.Parameter("volumeMounts") List<VolumeMountResponse> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;

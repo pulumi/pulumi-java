@@ -105,29 +105,29 @@ public final class GetSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adaptiveProtectionConfig","advancedOptionsConfig","associations","cloudArmorConfig","creationTimestamp","ddosProtectionConfig","description","displayName","fingerprint","kind","labelFingerprint","labels","name","parent","recaptchaOptionsConfig","region","ruleTupleCount","rules","selfLink","selfLinkWithId","type"})
+    @OutputCustomType.Constructor
     private GetSecurityPolicyResult(
-        SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        List<SecurityPolicyAssociationResponse> associations,
-        SecurityPolicyCloudArmorConfigResponse cloudArmorConfig,
-        String creationTimestamp,
-        SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
-        String description,
-        String displayName,
-        String fingerprint,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        String region,
-        Integer ruleTupleCount,
-        List<SecurityPolicyRuleResponse> rules,
-        String selfLink,
-        String selfLinkWithId,
-        String type) {
+        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @OutputCustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
+        @OutputCustomType.Parameter("cloudArmorConfig") SecurityPolicyCloudArmorConfigResponse cloudArmorConfig,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("ddosProtectionConfig") SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;

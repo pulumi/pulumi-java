@@ -15,8 +15,8 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
      */
     private final String schedule;
 
-    @OutputCustomType.Constructor({"schedule"})
-    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(String schedule) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(@OutputCustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 

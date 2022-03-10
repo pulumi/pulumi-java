@@ -15,8 +15,8 @@ public final class NodeGroupAffinityResponse {
      */
     private final String nodeGroupUri;
 
-    @OutputCustomType.Constructor({"nodeGroupUri"})
-    private NodeGroupAffinityResponse(String nodeGroupUri) {
+    @OutputCustomType.Constructor
+    private NodeGroupAffinityResponse(@OutputCustomType.Parameter("nodeGroupUri") String nodeGroupUri) {
         this.nodeGroupUri = nodeGroupUri;
     }
 

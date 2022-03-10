@@ -15,8 +15,8 @@ public final class WorkloadIdentityConfigResponse {
      */
     private final String workloadPool;
 
-    @OutputCustomType.Constructor({"workloadPool"})
-    private WorkloadIdentityConfigResponse(String workloadPool) {
+    @OutputCustomType.Constructor
+    private WorkloadIdentityConfigResponse(@OutputCustomType.Parameter("workloadPool") String workloadPool) {
         this.workloadPool = workloadPool;
     }
 

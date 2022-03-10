@@ -15,8 +15,8 @@ public final class CloudHealthcareSourceResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private CloudHealthcareSourceResponse(String name) {
+    @OutputCustomType.Constructor
+    private CloudHealthcareSourceResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

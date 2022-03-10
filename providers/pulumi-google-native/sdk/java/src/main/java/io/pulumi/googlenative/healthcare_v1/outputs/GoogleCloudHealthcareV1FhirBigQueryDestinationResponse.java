@@ -32,12 +32,12 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"datasetUri","force","schemaConfig","writeDisposition"})
+    @OutputCustomType.Constructor
     private GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(
-        String datasetUri,
-        Boolean force,
-        SchemaConfigResponse schemaConfig,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("datasetUri") String datasetUri,
+        @OutputCustomType.Parameter("force") Boolean force,
+        @OutputCustomType.Parameter("schemaConfig") SchemaConfigResponse schemaConfig,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.datasetUri = datasetUri;
         this.force = force;
         this.schemaConfig = schemaConfig;

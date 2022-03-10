@@ -64,18 +64,18 @@ public final class GetNotificationChannelResult {
      */
     private final String verificationStatus;
 
-    @OutputCustomType.Constructor({"creationRecord","description","displayName","enabled","labels","mutationRecords","name","type","userLabels","verificationStatus"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        MutationRecordResponse creationRecord,
-        String description,
-        String displayName,
-        Boolean enabled,
-        Map<String,String> labels,
-        List<MutationRecordResponse> mutationRecords,
-        String name,
-        String type,
-        Map<String,String> userLabels,
-        String verificationStatus) {
+        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mutationRecords") List<MutationRecordResponse> mutationRecords,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("verificationStatus") String verificationStatus) {
         this.creationRecord = creationRecord;
         this.description = description;
         this.displayName = displayName;

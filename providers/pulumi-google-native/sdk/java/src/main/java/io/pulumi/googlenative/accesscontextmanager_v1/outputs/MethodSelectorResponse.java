@@ -20,10 +20,10 @@ public final class MethodSelectorResponse {
      */
     private final String permission;
 
-    @OutputCustomType.Constructor({"method","permission"})
+    @OutputCustomType.Constructor
     private MethodSelectorResponse(
-        String method,
-        String permission) {
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("permission") String permission) {
         this.method = method;
         this.permission = permission;
     }

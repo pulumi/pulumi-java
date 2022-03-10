@@ -49,15 +49,15 @@ public final class GetCatalogItemResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"categoryHierarchies","description","itemAttributes","itemGroupId","productMetadata","tags","title"})
+    @OutputCustomType.Constructor
     private GetCatalogItemResult(
-        List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
-        String description,
-        GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
-        String itemGroupId,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
-        List<String> tags,
-        String title) {
+        @OutputCustomType.Parameter("categoryHierarchies") List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("itemAttributes") GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
+        @OutputCustomType.Parameter("itemGroupId") String itemGroupId,
+        @OutputCustomType.Parameter("productMetadata") GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("title") String title) {
         this.categoryHierarchies = categoryHierarchies;
         this.description = description;
         this.itemAttributes = itemAttributes;

@@ -65,18 +65,18 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
      */
     private final UpgradeSettingsResponse upgradeSettings;
 
-    @OutputCustomType.Constructor({"bootDiskKmsKey","diskSizeGb","diskType","imageType","management","minCpuPlatform","oauthScopes","serviceAccount","shieldedInstanceConfig","upgradeSettings"})
+    @OutputCustomType.Constructor
     private AutoprovisioningNodePoolDefaultsResponse(
-        String bootDiskKmsKey,
-        Integer diskSizeGb,
-        String diskType,
-        String imageType,
-        NodeManagementResponse management,
-        String minCpuPlatform,
-        List<String> oauthScopes,
-        String serviceAccount,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        UpgradeSettingsResponse upgradeSettings) {
+        @OutputCustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("management") NodeManagementResponse management,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

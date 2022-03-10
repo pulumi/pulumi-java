@@ -74,20 +74,20 @@ public final class GetTransferJobResult {
      */
     private final TransferSpecResponse transferSpec;
 
-    @OutputCustomType.Constructor({"creationTime","deletionTime","description","lastModificationTime","latestOperationName","loggingConfig","name","notificationConfig","project","schedule","status","transferSpec"})
+    @OutputCustomType.Constructor
     private GetTransferJobResult(
-        String creationTime,
-        String deletionTime,
-        String description,
-        String lastModificationTime,
-        String latestOperationName,
-        LoggingConfigResponse loggingConfig,
-        String name,
-        NotificationConfigResponse notificationConfig,
-        String project,
-        ScheduleResponse schedule,
-        String status,
-        TransferSpecResponse transferSpec) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("deletionTime") String deletionTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("lastModificationTime") String lastModificationTime,
+        @OutputCustomType.Parameter("latestOperationName") String latestOperationName,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("schedule") ScheduleResponse schedule,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("transferSpec") TransferSpecResponse transferSpec) {
         this.creationTime = creationTime;
         this.deletionTime = deletionTime;
         this.description = description;

@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
      */
     private final List<String> terms;
 
-    @OutputCustomType.Constructor({"doNotAssociateTerms","queryTerms","terms"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(
-        List<String> doNotAssociateTerms,
-        List<String> queryTerms,
-        List<String> terms) {
+        @OutputCustomType.Parameter("doNotAssociateTerms") List<String> doNotAssociateTerms,
+        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
+        @OutputCustomType.Parameter("terms") List<String> terms) {
         this.doNotAssociateTerms = doNotAssociateTerms;
         this.queryTerms = queryTerms;
         this.terms = terms;

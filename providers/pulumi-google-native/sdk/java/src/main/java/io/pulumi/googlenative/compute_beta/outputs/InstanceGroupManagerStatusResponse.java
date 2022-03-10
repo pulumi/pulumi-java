@@ -33,12 +33,12 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
-    @OutputCustomType.Constructor({"autoscaler","isStable","stateful","versionTarget"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatusResponse(
-        String autoscaler,
-        Boolean isStable,
-        InstanceGroupManagerStatusStatefulResponse stateful,
-        InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
+        @OutputCustomType.Parameter("autoscaler") String autoscaler,
+        @OutputCustomType.Parameter("isStable") Boolean isStable,
+        @OutputCustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
+        @OutputCustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
         this.autoscaler = autoscaler;
         this.isStable = isStable;
         this.stateful = stateful;

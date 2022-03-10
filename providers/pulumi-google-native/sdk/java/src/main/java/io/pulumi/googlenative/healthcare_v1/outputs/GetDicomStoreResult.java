@@ -27,11 +27,11 @@ public final class GetDicomStoreResult {
      */
     private final NotificationConfigResponse notificationConfig;
 
-    @OutputCustomType.Constructor({"labels","name","notificationConfig"})
+    @OutputCustomType.Constructor
     private GetDicomStoreResult(
-        Map<String,String> labels,
-        String name,
-        NotificationConfigResponse notificationConfig) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig) {
         this.labels = labels;
         this.name = name;
         this.notificationConfig = notificationConfig;

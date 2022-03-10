@@ -27,11 +27,11 @@ public final class SubjectConfigResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor({"commonName","subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private SubjectConfigResponse(
-        String commonName,
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("subject") SubjectResponse subject,
+        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.commonName = commonName;
         this.subject = subject;
         this.subjectAltName = subjectAltName;

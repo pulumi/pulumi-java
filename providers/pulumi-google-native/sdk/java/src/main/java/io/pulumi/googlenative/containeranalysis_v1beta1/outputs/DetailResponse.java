@@ -73,20 +73,20 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor({"cpeUri","description","fixedLocation","isObsolete","maxAffectedVersion","minAffectedVersion","$package","packageType","severityName","source","sourceUpdateTime","vendor"})
+    @OutputCustomType.Constructor
     private DetailResponse(
-        String cpeUri,
-        String description,
-        VulnerabilityLocationResponse fixedLocation,
-        Boolean isObsolete,
-        VersionResponse maxAffectedVersion,
-        VersionResponse minAffectedVersion,
-        String $package,
-        String packageType,
-        String severityName,
-        String source,
-        String sourceUpdateTime,
-        String vendor) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
+        @OutputCustomType.Parameter("maxAffectedVersion") VersionResponse maxAffectedVersion,
+        @OutputCustomType.Parameter("minAffectedVersion") VersionResponse minAffectedVersion,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
+        @OutputCustomType.Parameter("vendor") String vendor) {
         this.cpeUri = cpeUri;
         this.description = description;
         this.fixedLocation = fixedLocation;

@@ -46,15 +46,15 @@ public final class GetRegionNotificationEndpointResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","grpcSettings","kind","name","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRegionNotificationEndpointResult(
-        String creationTimestamp,
-        String description,
-        NotificationEndpointGrpcSettingsResponse grpcSettings,
-        String kind,
-        String name,
-        String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("grpcSettings") NotificationEndpointGrpcSettingsResponse grpcSettings,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.grpcSettings = grpcSettings;

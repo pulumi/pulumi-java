@@ -25,11 +25,11 @@ public final class DmlStatisticsResponse {
      */
     private final String updatedRowCount;
 
-    @OutputCustomType.Constructor({"deletedRowCount","insertedRowCount","updatedRowCount"})
+    @OutputCustomType.Constructor
     private DmlStatisticsResponse(
-        String deletedRowCount,
-        String insertedRowCount,
-        String updatedRowCount) {
+        @OutputCustomType.Parameter("deletedRowCount") String deletedRowCount,
+        @OutputCustomType.Parameter("insertedRowCount") String insertedRowCount,
+        @OutputCustomType.Parameter("updatedRowCount") String updatedRowCount) {
         this.deletedRowCount = deletedRowCount;
         this.insertedRowCount = insertedRowCount;
         this.updatedRowCount = updatedRowCount;

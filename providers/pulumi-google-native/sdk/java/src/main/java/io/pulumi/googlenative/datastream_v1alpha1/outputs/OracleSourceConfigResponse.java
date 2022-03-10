@@ -20,10 +20,10 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor({"allowlist","rejectlist"})
+    @OutputCustomType.Constructor
     private OracleSourceConfigResponse(
-        OracleRdbmsResponse allowlist,
-        OracleRdbmsResponse rejectlist) {
+        @OutputCustomType.Parameter("allowlist") OracleRdbmsResponse allowlist,
+        @OutputCustomType.Parameter("rejectlist") OracleRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }

@@ -21,10 +21,10 @@ public final class LogMatchResponse {
      */
     private final Map<String,String> labelExtractors;
 
-    @OutputCustomType.Constructor({"filter","labelExtractors"})
+    @OutputCustomType.Constructor
     private LogMatchResponse(
-        String filter,
-        Map<String,String> labelExtractors) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("labelExtractors") Map<String,String> labelExtractors) {
         this.filter = filter;
         this.labelExtractors = labelExtractors;
     }

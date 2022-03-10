@@ -51,15 +51,15 @@ public final class SoftwareRecipeStepResponse {
      */
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
-    @OutputCustomType.Constructor({"archiveExtraction","dpkgInstallation","fileCopy","fileExec","msiInstallation","rpmInstallation","scriptRun"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepResponse(
-        SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
-        SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
-        SoftwareRecipeStepCopyFileResponse fileCopy,
-        SoftwareRecipeStepExecFileResponse fileExec,
-        SoftwareRecipeStepInstallMsiResponse msiInstallation,
-        SoftwareRecipeStepInstallRpmResponse rpmInstallation,
-        SoftwareRecipeStepRunScriptResponse scriptRun) {
+        @OutputCustomType.Parameter("archiveExtraction") SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
+        @OutputCustomType.Parameter("dpkgInstallation") SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
+        @OutputCustomType.Parameter("fileCopy") SoftwareRecipeStepCopyFileResponse fileCopy,
+        @OutputCustomType.Parameter("fileExec") SoftwareRecipeStepExecFileResponse fileExec,
+        @OutputCustomType.Parameter("msiInstallation") SoftwareRecipeStepInstallMsiResponse msiInstallation,
+        @OutputCustomType.Parameter("rpmInstallation") SoftwareRecipeStepInstallRpmResponse rpmInstallation,
+        @OutputCustomType.Parameter("scriptRun") SoftwareRecipeStepRunScriptResponse scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;

@@ -15,8 +15,8 @@ public final class DisplayDeviceResponse {
      */
     private final Boolean enableDisplay;
 
-    @OutputCustomType.Constructor({"enableDisplay"})
-    private DisplayDeviceResponse(Boolean enableDisplay) {
+    @OutputCustomType.Constructor
+    private DisplayDeviceResponse(@OutputCustomType.Parameter("enableDisplay") Boolean enableDisplay) {
         this.enableDisplay = enableDisplay;
     }
 

@@ -21,10 +21,10 @@ public final class SecurityPolicyRuleMatcherConfigDestinationPortResponse {
      */
     private final List<String> ports;
 
-    @OutputCustomType.Constructor({"ipProtocol","ports"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleMatcherConfigDestinationPortResponse(
-        String ipProtocol,
-        List<String> ports) {
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("ports") List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }

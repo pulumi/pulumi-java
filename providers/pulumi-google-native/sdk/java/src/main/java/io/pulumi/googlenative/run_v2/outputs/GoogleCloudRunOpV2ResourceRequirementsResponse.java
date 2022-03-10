@@ -22,10 +22,10 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
      */
     private final Map<String,String> limits;
 
-    @OutputCustomType.Constructor({"cpuIdle","limits"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ResourceRequirementsResponse(
-        Boolean cpuIdle,
-        Map<String,String> limits) {
+        @OutputCustomType.Parameter("cpuIdle") Boolean cpuIdle,
+        @OutputCustomType.Parameter("limits") Map<String,String> limits) {
         this.cpuIdle = cpuIdle;
         this.limits = limits;
     }
