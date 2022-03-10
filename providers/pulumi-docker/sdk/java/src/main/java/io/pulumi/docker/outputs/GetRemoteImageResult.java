@@ -17,11 +17,11 @@ public final class GetRemoteImageResult {
     private final String name;
     private final String repoDigest;
 
-    @OutputCustomType.Constructor({"id","name","repoDigest"})
+    @OutputCustomType.Constructor
     private GetRemoteImageResult(
-        String id,
-        String name,
-        String repoDigest) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("repoDigest") String repoDigest) {
         this.id = id;
         this.name = name;
         this.repoDigest = repoDigest;

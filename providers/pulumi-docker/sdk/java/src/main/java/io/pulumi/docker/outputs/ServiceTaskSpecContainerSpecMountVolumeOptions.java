@@ -20,12 +20,12 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptions {
     private final @Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> labels;
     private final @Nullable Boolean noCopy;
 
-    @OutputCustomType.Constructor({"driverName","driverOptions","labels","noCopy"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecMountVolumeOptions(
-        @Nullable String driverName,
-        @Nullable Map<String,String> driverOptions,
-        @Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> labels,
-        @Nullable Boolean noCopy) {
+        @OutputCustomType.Parameter("driverName") @Nullable String driverName,
+        @OutputCustomType.Parameter("driverOptions") @Nullable Map<String,String> driverOptions,
+        @OutputCustomType.Parameter("labels") @Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabel> labels,
+        @OutputCustomType.Parameter("noCopy") @Nullable Boolean noCopy) {
         this.driverName = driverName;
         this.driverOptions = driverOptions;
         this.labels = labels;

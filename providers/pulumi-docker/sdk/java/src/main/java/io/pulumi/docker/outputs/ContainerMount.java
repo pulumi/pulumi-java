@@ -23,15 +23,15 @@ public final class ContainerMount {
     private final String type;
     private final @Nullable ContainerMountVolumeOptions volumeOptions;
 
-    @OutputCustomType.Constructor({"bindOptions","readOnly","source","target","tmpfsOptions","type","volumeOptions"})
+    @OutputCustomType.Constructor
     private ContainerMount(
-        @Nullable ContainerMountBindOptions bindOptions,
-        @Nullable Boolean readOnly,
-        @Nullable String source,
-        String target,
-        @Nullable ContainerMountTmpfsOptions tmpfsOptions,
-        String type,
-        @Nullable ContainerMountVolumeOptions volumeOptions) {
+        @OutputCustomType.Parameter("bindOptions") @Nullable ContainerMountBindOptions bindOptions,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("tmpfsOptions") @Nullable ContainerMountTmpfsOptions tmpfsOptions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeOptions") @Nullable ContainerMountVolumeOptions volumeOptions) {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;

@@ -16,10 +16,10 @@ public final class ServiceEndpointSpec {
     private final @Nullable String mode;
     private final @Nullable List<ServiceEndpointSpecPort> ports;
 
-    @OutputCustomType.Constructor({"mode","ports"})
+    @OutputCustomType.Constructor
     private ServiceEndpointSpec(
-        @Nullable String mode,
-        @Nullable List<ServiceEndpointSpecPort> ports) {
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("ports") @Nullable List<ServiceEndpointSpecPort> ports) {
         this.mode = mode;
         this.ports = ports;
     }

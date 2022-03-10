@@ -14,10 +14,10 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptions {
     private final @Nullable Integer mode;
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"mode","sizeBytes"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecMountTmpfsOptions(
-        @Nullable Integer mode,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.mode = mode;
         this.sizeBytes = sizeBytes;
     }

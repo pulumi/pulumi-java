@@ -17,12 +17,12 @@ public final class ServiceTaskSpecRestartPolicy {
     private final @Nullable Integer maxAttempts;
     private final @Nullable String window;
 
-    @OutputCustomType.Constructor({"condition","delay","maxAttempts","window"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecRestartPolicy(
-        @Nullable String condition,
-        @Nullable String delay,
-        @Nullable Integer maxAttempts,
-        @Nullable String window) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("delay") @Nullable String delay,
+        @OutputCustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
+        @OutputCustomType.Parameter("window") @Nullable String window) {
         this.condition = condition;
         this.delay = delay;
         this.maxAttempts = maxAttempts;

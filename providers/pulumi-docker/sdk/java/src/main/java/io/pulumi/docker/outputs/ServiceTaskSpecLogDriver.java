@@ -14,10 +14,10 @@ public final class ServiceTaskSpecLogDriver {
     private final String name;
     private final @Nullable Map<String,String> options;
 
-    @OutputCustomType.Constructor({"name","options"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecLogDriver(
-        String name,
-        @Nullable Map<String,String> options) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options) {
         this.name = name;
         this.options = options;
     }

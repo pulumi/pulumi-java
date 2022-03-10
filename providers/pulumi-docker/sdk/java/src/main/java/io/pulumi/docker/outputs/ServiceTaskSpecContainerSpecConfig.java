@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecConfig {
     private final String fileName;
     private final @Nullable String fileUid;
 
-    @OutputCustomType.Constructor({"configId","configName","fileGid","fileMode","fileName","fileUid"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecConfig(
-        String configId,
-        @Nullable String configName,
-        @Nullable String fileGid,
-        @Nullable Integer fileMode,
-        String fileName,
-        @Nullable String fileUid) {
+        @OutputCustomType.Parameter("configId") String configId,
+        @OutputCustomType.Parameter("configName") @Nullable String configName,
+        @OutputCustomType.Parameter("fileGid") @Nullable String fileGid,
+        @OutputCustomType.Parameter("fileMode") @Nullable Integer fileMode,
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("fileUid") @Nullable String fileUid) {
         this.configId = configId;
         this.configName = configName;
         this.fileGid = fileGid;

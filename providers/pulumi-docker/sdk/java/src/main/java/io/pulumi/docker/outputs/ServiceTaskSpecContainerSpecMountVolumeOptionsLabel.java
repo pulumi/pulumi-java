@@ -12,10 +12,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabel {
     private final String label;
     private final String value;
 
-    @OutputCustomType.Constructor({"label","value"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecMountVolumeOptionsLabel(
-        String label,
-        String value) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("value") String value) {
         this.label = label;
         this.value = value;
     }

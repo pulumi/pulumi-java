@@ -19,12 +19,12 @@ public final class ServiceTaskSpecPlacement {
     private final @Nullable List<ServiceTaskSpecPlacementPlatform> platforms;
     private final @Nullable List<String> prefs;
 
-    @OutputCustomType.Constructor({"constraints","maxReplicas","platforms","prefs"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecPlacement(
-        @Nullable List<String> constraints,
-        @Nullable Integer maxReplicas,
-        @Nullable List<ServiceTaskSpecPlacementPlatform> platforms,
-        @Nullable List<String> prefs) {
+        @OutputCustomType.Parameter("constraints") @Nullable List<String> constraints,
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("platforms") @Nullable List<ServiceTaskSpecPlacementPlatform> platforms,
+        @OutputCustomType.Parameter("prefs") @Nullable List<String> prefs) {
         this.constraints = constraints;
         this.maxReplicas = maxReplicas;
         this.platforms = platforms;

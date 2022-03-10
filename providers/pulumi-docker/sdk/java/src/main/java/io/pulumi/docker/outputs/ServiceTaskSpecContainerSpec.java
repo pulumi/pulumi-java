@@ -43,28 +43,28 @@ public final class ServiceTaskSpecContainerSpec {
     private final @Nullable String stopSignal;
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"args","commands","configs","dir","dnsConfig","env","groups","healthcheck","hostname","hosts","image","isolation","labels","mounts","privileges","readOnly","secrets","stopGracePeriod","stopSignal","user"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpec(
-        @Nullable List<String> args,
-        @Nullable List<String> commands,
-        @Nullable List<ServiceTaskSpecContainerSpecConfig> configs,
-        @Nullable String dir,
-        @Nullable ServiceTaskSpecContainerSpecDnsConfig dnsConfig,
-        @Nullable Map<String,String> env,
-        @Nullable List<String> groups,
-        @Nullable ServiceTaskSpecContainerSpecHealthcheck healthcheck,
-        @Nullable String hostname,
-        @Nullable List<ServiceTaskSpecContainerSpecHost> hosts,
-        String image,
-        @Nullable String isolation,
-        @Nullable List<ServiceTaskSpecContainerSpecLabel> labels,
-        @Nullable List<ServiceTaskSpecContainerSpecMount> mounts,
-        @Nullable ServiceTaskSpecContainerSpecPrivileges privileges,
-        @Nullable Boolean readOnly,
-        @Nullable List<ServiceTaskSpecContainerSpecSecret> secrets,
-        @Nullable String stopGracePeriod,
-        @Nullable String stopSignal,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
+        @OutputCustomType.Parameter("configs") @Nullable List<ServiceTaskSpecContainerSpecConfig> configs,
+        @OutputCustomType.Parameter("dir") @Nullable String dir,
+        @OutputCustomType.Parameter("dnsConfig") @Nullable ServiceTaskSpecContainerSpecDnsConfig dnsConfig,
+        @OutputCustomType.Parameter("env") @Nullable Map<String,String> env,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("healthcheck") @Nullable ServiceTaskSpecContainerSpecHealthcheck healthcheck,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("hosts") @Nullable List<ServiceTaskSpecContainerSpecHost> hosts,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("isolation") @Nullable String isolation,
+        @OutputCustomType.Parameter("labels") @Nullable List<ServiceTaskSpecContainerSpecLabel> labels,
+        @OutputCustomType.Parameter("mounts") @Nullable List<ServiceTaskSpecContainerSpecMount> mounts,
+        @OutputCustomType.Parameter("privileges") @Nullable ServiceTaskSpecContainerSpecPrivileges privileges,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secrets") @Nullable List<ServiceTaskSpecContainerSpecSecret> secrets,
+        @OutputCustomType.Parameter("stopGracePeriod") @Nullable String stopGracePeriod,
+        @OutputCustomType.Parameter("stopSignal") @Nullable String stopSignal,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.args = args;
         this.commands = commands;
         this.configs = configs;

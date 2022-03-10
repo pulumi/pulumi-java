@@ -17,13 +17,13 @@ public final class ProviderRegistryAuthArgs {
     private final @Nullable Input<String> password;
     private final @Nullable Input<String> username;
 
-    @OutputCustomType.Constructor({"address","configFile","configFileContent","password","username"})
+    @OutputCustomType.Constructor
     private ProviderRegistryAuthArgs(
-        Input<String> address,
-        @Nullable Input<String> configFile,
-        @Nullable Input<String> configFileContent,
-        @Nullable Input<String> password,
-        @Nullable Input<String> username) {
+        @OutputCustomType.Parameter("address") Input<String> address,
+        @OutputCustomType.Parameter("configFile") @Nullable Input<String> configFile,
+        @OutputCustomType.Parameter("configFileContent") @Nullable Input<String> configFileContent,
+        @OutputCustomType.Parameter("password") @Nullable Input<String> password,
+        @OutputCustomType.Parameter("username") @Nullable Input<String> username) {
         this.address = address;
         this.configFile = configFile;
         this.configFileContent = configFileContent;
