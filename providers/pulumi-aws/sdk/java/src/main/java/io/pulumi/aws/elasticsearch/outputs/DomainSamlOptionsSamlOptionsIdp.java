@@ -20,10 +20,10 @@ public final class DomainSamlOptionsSamlOptionsIdp {
      */
     private final String metadataContent;
 
-    @OutputCustomType.Constructor({"entityId","metadataContent"})
+    @OutputCustomType.Constructor
     private DomainSamlOptionsSamlOptionsIdp(
-        String entityId,
-        String metadataContent) {
+        @OutputCustomType.Parameter("entityId") String entityId,
+        @OutputCustomType.Parameter("metadataContent") String metadataContent) {
         this.entityId = entityId;
         this.metadataContent = metadataContent;
     }

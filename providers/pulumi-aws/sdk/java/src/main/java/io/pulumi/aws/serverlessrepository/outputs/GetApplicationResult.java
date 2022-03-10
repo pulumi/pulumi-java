@@ -42,15 +42,15 @@ public final class GetApplicationResult {
      */
     private final String templateUrl;
 
-    @OutputCustomType.Constructor({"applicationId","id","name","requiredCapabilities","semanticVersion","sourceCodeUrl","templateUrl"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        String applicationId,
-        String id,
-        String name,
-        List<String> requiredCapabilities,
-        String semanticVersion,
-        String sourceCodeUrl,
-        String templateUrl) {
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiredCapabilities") List<String> requiredCapabilities,
+        @OutputCustomType.Parameter("semanticVersion") String semanticVersion,
+        @OutputCustomType.Parameter("sourceCodeUrl") String sourceCodeUrl,
+        @OutputCustomType.Parameter("templateUrl") String templateUrl) {
         this.applicationId = applicationId;
         this.id = id;
         this.name = name;

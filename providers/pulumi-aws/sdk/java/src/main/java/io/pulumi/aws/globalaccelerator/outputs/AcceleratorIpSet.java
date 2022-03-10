@@ -23,10 +23,10 @@ public final class AcceleratorIpSet {
      */
     private final @Nullable String ipFamily;
 
-    @OutputCustomType.Constructor({"ipAddresses","ipFamily"})
+    @OutputCustomType.Constructor
     private AcceleratorIpSet(
-        @Nullable List<String> ipAddresses,
-        @Nullable String ipFamily) {
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }

@@ -21,12 +21,12 @@ public final class EnvironmentSetting {
     private final @Nullable String resource;
     private final String value;
 
-    @OutputCustomType.Constructor({"name","namespace","resource","value"})
+    @OutputCustomType.Constructor
     private EnvironmentSetting(
-        String name,
-        String namespace,
-        @Nullable String resource,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.namespace = namespace;
         this.resource = resource;

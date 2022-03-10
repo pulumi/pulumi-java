@@ -22,10 +22,10 @@ public final class ProjectSourceBuildStatusConfig {
      */
     private final @Nullable String targetUrl;
 
-    @OutputCustomType.Constructor({"context","targetUrl"})
+    @OutputCustomType.Constructor
     private ProjectSourceBuildStatusConfig(
-        @Nullable String context,
-        @Nullable String targetUrl) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl) {
         this.context = context;
         this.targetUrl = targetUrl;
     }

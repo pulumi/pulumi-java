@@ -20,10 +20,10 @@ public final class GetDomainAdvancedSecurityOption {
      */
     private final Boolean internalUserDatabaseEnabled;
 
-    @OutputCustomType.Constructor({"enabled","internalUserDatabaseEnabled"})
+    @OutputCustomType.Constructor
     private GetDomainAdvancedSecurityOption(
-        Boolean enabled,
-        Boolean internalUserDatabaseEnabled) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("internalUserDatabaseEnabled") Boolean internalUserDatabaseEnabled) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
     }

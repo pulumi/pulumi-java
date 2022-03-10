@@ -27,11 +27,11 @@ public final class ClusterClusterNode {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor({"nodeRole","privateIpAddress","publicIpAddress"})
+    @OutputCustomType.Constructor
     private ClusterClusterNode(
-        @Nullable String nodeRole,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress) {
+        @OutputCustomType.Parameter("nodeRole") @Nullable String nodeRole,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.nodeRole = nodeRole;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

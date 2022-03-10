@@ -52,15 +52,15 @@ public final class ResponseHeadersPolicyCorsConfig {
      */
     private final Boolean originOverride;
 
-    @OutputCustomType.Constructor({"accessControlAllowCredentials","accessControlAllowHeaders","accessControlAllowMethods","accessControlAllowOrigins","accessControlExposeHeaders","accessControlMaxAgeSec","originOverride"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyCorsConfig(
-        Boolean accessControlAllowCredentials,
-        ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders accessControlAllowHeaders,
-        ResponseHeadersPolicyCorsConfigAccessControlAllowMethods accessControlAllowMethods,
-        ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins accessControlAllowOrigins,
-        @Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders accessControlExposeHeaders,
-        @Nullable Integer accessControlMaxAgeSec,
-        Boolean originOverride) {
+        @OutputCustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
+        @OutputCustomType.Parameter("accessControlAllowHeaders") ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders accessControlAllowHeaders,
+        @OutputCustomType.Parameter("accessControlAllowMethods") ResponseHeadersPolicyCorsConfigAccessControlAllowMethods accessControlAllowMethods,
+        @OutputCustomType.Parameter("accessControlAllowOrigins") ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins accessControlAllowOrigins,
+        @OutputCustomType.Parameter("accessControlExposeHeaders") @Nullable ResponseHeadersPolicyCorsConfigAccessControlExposeHeaders accessControlExposeHeaders,
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") @Nullable Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("originOverride") Boolean originOverride) {
         this.accessControlAllowCredentials = accessControlAllowCredentials;
         this.accessControlAllowHeaders = accessControlAllowHeaders;
         this.accessControlAllowMethods = accessControlAllowMethods;

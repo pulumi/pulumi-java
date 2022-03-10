@@ -37,13 +37,13 @@ public final class ImageOutputResourceAmi {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"accountId","description","image","name","region"})
+    @OutputCustomType.Constructor
     private ImageOutputResourceAmi(
-        @Nullable String accountId,
-        @Nullable String description,
-        @Nullable String image,
-        @Nullable String name,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;

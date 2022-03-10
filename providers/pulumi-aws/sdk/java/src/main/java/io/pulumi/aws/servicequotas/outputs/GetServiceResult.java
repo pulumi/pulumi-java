@@ -21,11 +21,11 @@ public final class GetServiceResult {
     private final String serviceCode;
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"id","serviceCode","serviceName"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String id,
-        String serviceCode,
-        String serviceName) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serviceCode") String serviceCode,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.id = id;
         this.serviceCode = serviceCode;
         this.serviceName = serviceName;

@@ -28,11 +28,11 @@ public final class BucketObjectLockConfigurationRuleDefaultRetention {
      */
     private final @Nullable Integer years;
 
-    @OutputCustomType.Constructor({"days","mode","years"})
+    @OutputCustomType.Constructor
     private BucketObjectLockConfigurationRuleDefaultRetention(
-        @Nullable Integer days,
-        String mode,
-        @Nullable Integer years) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("years") @Nullable Integer years) {
         this.days = days;
         this.mode = mode;
         this.years = years;

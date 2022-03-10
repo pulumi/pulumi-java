@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionFirehose {
      */
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor({"deliveryStreamName","roleArn","separator"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionFirehose(
-        String deliveryStreamName,
-        String roleArn,
-        @Nullable String separator) {
+        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("separator") @Nullable String separator) {
         this.deliveryStreamName = deliveryStreamName;
         this.roleArn = roleArn;
         this.separator = separator;

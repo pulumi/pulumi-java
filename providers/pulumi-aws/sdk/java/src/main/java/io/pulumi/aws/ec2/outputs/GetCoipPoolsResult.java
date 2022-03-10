@@ -26,12 +26,12 @@ public final class GetCoipPoolsResult {
     private final List<String> poolIds;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","poolIds","tags"})
+    @OutputCustomType.Constructor
     private GetCoipPoolsResult(
-        @Nullable List<GetCoipPoolsFilter> filters,
-        String id,
-        List<String> poolIds,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetCoipPoolsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("poolIds") List<String> poolIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.poolIds = poolIds;

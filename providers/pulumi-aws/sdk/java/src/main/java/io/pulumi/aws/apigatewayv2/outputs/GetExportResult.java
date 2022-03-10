@@ -29,16 +29,16 @@ public final class GetExportResult {
     private final String specification;
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor({"apiId","body","exportVersion","id","includeExtensions","outputType","specification","stageName"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        String apiId,
-        String body,
-        @Nullable String exportVersion,
-        String id,
-        @Nullable Boolean includeExtensions,
-        String outputType,
-        String specification,
-        @Nullable String stageName) {
+        @OutputCustomType.Parameter("apiId") String apiId,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("exportVersion") @Nullable String exportVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeExtensions") @Nullable Boolean includeExtensions,
+        @OutputCustomType.Parameter("outputType") String outputType,
+        @OutputCustomType.Parameter("specification") String specification,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
         this.apiId = apiId;
         this.body = body;
         this.exportVersion = exportVersion;

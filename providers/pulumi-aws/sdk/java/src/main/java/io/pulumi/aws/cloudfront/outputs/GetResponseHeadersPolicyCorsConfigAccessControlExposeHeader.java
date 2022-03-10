@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

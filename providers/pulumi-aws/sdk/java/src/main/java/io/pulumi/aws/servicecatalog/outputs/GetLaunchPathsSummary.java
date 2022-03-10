@@ -33,12 +33,12 @@ public final class GetLaunchPathsSummary {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"constraintSummaries","name","pathId","tags"})
+    @OutputCustomType.Constructor
     private GetLaunchPathsSummary(
-        List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
-        String name,
-        String pathId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("constraintSummaries") List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathId") String pathId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.constraintSummaries = constraintSummaries;
         this.name = name;
         this.pathId = pathId;

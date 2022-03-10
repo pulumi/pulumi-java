@@ -17,8 +17,8 @@ public final class FindingsFilterFindingCriteria {
      */
     private final @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor({"criterions"})
-    private FindingsFilterFindingCriteria(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
+    @OutputCustomType.Constructor
+    private FindingsFilterFindingCriteria(@OutputCustomType.Parameter("criterions") @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 

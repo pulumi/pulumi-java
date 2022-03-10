@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
      */
     private final String certificateArn;
 
-    @OutputCustomType.Constructor({"certificateArn"})
-    private VirtualGatewaySpecListenerTlsCertificateAcm(String certificateArn) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecListenerTlsCertificateAcm(@OutputCustomType.Parameter("certificateArn") String certificateArn) {
         this.certificateArn = certificateArn;
     }
 

@@ -28,11 +28,11 @@ public final class ReceiptRuleStopAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"position","scope","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleStopAction(
-        Integer position,
-        String scope,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.position = position;
         this.scope = scope;
         this.topicArn = topicArn;

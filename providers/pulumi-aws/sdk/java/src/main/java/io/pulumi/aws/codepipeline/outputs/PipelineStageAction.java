@@ -75,20 +75,20 @@ public final class PipelineStageAction {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"category","configuration","inputArtifacts","name","namespace","outputArtifacts","owner","provider","region","roleArn","runOrder","version"})
+    @OutputCustomType.Constructor
     private PipelineStageAction(
-        String category,
-        @Nullable Map<String,String> configuration,
-        @Nullable List<String> inputArtifacts,
-        String name,
-        @Nullable String namespace,
-        @Nullable List<String> outputArtifacts,
-        String owner,
-        String provider,
-        @Nullable String region,
-        @Nullable String roleArn,
-        @Nullable Integer runOrder,
-        String version) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("configuration") @Nullable Map<String,String> configuration,
+        @OutputCustomType.Parameter("inputArtifacts") @Nullable List<String> inputArtifacts,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("outputArtifacts") @Nullable List<String> outputArtifacts,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("runOrder") @Nullable Integer runOrder,
+        @OutputCustomType.Parameter("version") String version) {
         this.category = category;
         this.configuration = configuration;
         this.inputArtifacts = inputArtifacts;

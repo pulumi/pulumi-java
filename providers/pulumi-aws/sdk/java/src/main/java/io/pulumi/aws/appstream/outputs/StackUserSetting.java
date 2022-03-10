@@ -20,10 +20,10 @@ public final class StackUserSetting {
      */
     private final String permission;
 
-    @OutputCustomType.Constructor({"action","permission"})
+    @OutputCustomType.Constructor
     private StackUserSetting(
-        String action,
-        String permission) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("permission") String permission) {
         this.action = action;
         this.permission = permission;
     }

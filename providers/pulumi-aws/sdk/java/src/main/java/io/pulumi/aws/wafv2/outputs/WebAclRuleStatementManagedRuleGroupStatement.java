@@ -35,12 +35,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
      */
     private final String vendorName;
 
-    @OutputCustomType.Constructor({"excludedRules","name","scopeDownStatement","vendorName"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatement(
-        @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
-        String name,
-        @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
-        String vendorName) {
+        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
+        @OutputCustomType.Parameter("vendorName") String vendorName) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;

@@ -15,8 +15,8 @@ public final class VirtualRouterSpecListener {
      */
     private final VirtualRouterSpecListenerPortMapping portMapping;
 
-    @OutputCustomType.Constructor({"portMapping"})
-    private VirtualRouterSpecListener(VirtualRouterSpecListenerPortMapping portMapping) {
+    @OutputCustomType.Constructor
+    private VirtualRouterSpecListener(@OutputCustomType.Parameter("portMapping") VirtualRouterSpecListenerPortMapping portMapping) {
         this.portMapping = portMapping;
     }
 

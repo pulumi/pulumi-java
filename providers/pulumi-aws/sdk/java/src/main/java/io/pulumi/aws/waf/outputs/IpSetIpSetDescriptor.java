@@ -20,10 +20,10 @@ public final class IpSetIpSetDescriptor {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private IpSetIpSetDescriptor(
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

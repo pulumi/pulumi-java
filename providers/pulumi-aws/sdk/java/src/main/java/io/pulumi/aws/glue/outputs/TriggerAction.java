@@ -45,14 +45,14 @@ public final class TriggerAction {
      */
     private final @Nullable Integer timeout;
 
-    @OutputCustomType.Constructor({"arguments","crawlerName","jobName","notificationProperty","securityConfiguration","timeout"})
+    @OutputCustomType.Constructor
     private TriggerAction(
-        @Nullable Map<String,String> arguments,
-        @Nullable String crawlerName,
-        @Nullable String jobName,
-        @Nullable TriggerActionNotificationProperty notificationProperty,
-        @Nullable String securityConfiguration,
-        @Nullable Integer timeout) {
+        @OutputCustomType.Parameter("arguments") @Nullable Map<String,String> arguments,
+        @OutputCustomType.Parameter("crawlerName") @Nullable String crawlerName,
+        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
+        @OutputCustomType.Parameter("notificationProperty") @Nullable TriggerActionNotificationProperty notificationProperty,
+        @OutputCustomType.Parameter("securityConfiguration") @Nullable String securityConfiguration,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout) {
         this.arguments = arguments;
         this.crawlerName = crawlerName;
         this.jobName = jobName;

@@ -22,10 +22,10 @@ public final class FeatureGroupFeatureDefinition {
      */
     private final @Nullable String featureType;
 
-    @OutputCustomType.Constructor({"featureName","featureType"})
+    @OutputCustomType.Constructor
     private FeatureGroupFeatureDefinition(
-        @Nullable String featureName,
-        @Nullable String featureType) {
+        @OutputCustomType.Parameter("featureName") @Nullable String featureName,
+        @OutputCustomType.Parameter("featureType") @Nullable String featureType) {
         this.featureName = featureName;
         this.featureType = featureType;
     }

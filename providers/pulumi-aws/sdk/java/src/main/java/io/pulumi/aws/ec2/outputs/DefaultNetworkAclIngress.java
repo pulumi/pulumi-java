@@ -58,17 +58,17 @@ public final class DefaultNetworkAclIngress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"action","cidrBlock","fromPort","icmpCode","icmpType","ipv6CidrBlock","protocol","ruleNo","toPort"})
+    @OutputCustomType.Constructor
     private DefaultNetworkAclIngress(
-        String action,
-        @Nullable String cidrBlock,
-        Integer fromPort,
-        @Nullable Integer icmpCode,
-        @Nullable Integer icmpType,
-        @Nullable String ipv6CidrBlock,
-        String protocol,
-        Integer ruleNo,
-        Integer toPort) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("icmpCode") @Nullable Integer icmpCode,
+        @OutputCustomType.Parameter("icmpType") @Nullable Integer icmpType,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("ruleNo") Integer ruleNo,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.action = action;
         this.cidrBlock = cidrBlock;
         this.fromPort = fromPort;

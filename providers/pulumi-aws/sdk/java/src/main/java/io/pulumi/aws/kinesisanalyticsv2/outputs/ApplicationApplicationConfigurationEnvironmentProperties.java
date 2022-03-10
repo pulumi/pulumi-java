@@ -16,8 +16,8 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
      */
     private final List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups;
 
-    @OutputCustomType.Constructor({"propertyGroups"})
-    private ApplicationApplicationConfigurationEnvironmentProperties(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationEnvironmentProperties(@OutputCustomType.Parameter("propertyGroups") List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
         this.propertyGroups = propertyGroups;
     }
 

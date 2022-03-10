@@ -17,8 +17,8 @@ public final class DetectorDatasources {
      */
     private final @Nullable DetectorDatasourcesS3Logs s3Logs;
 
-    @OutputCustomType.Constructor({"s3Logs"})
-    private DetectorDatasources(@Nullable DetectorDatasourcesS3Logs s3Logs) {
+    @OutputCustomType.Constructor
+    private DetectorDatasources(@OutputCustomType.Parameter("s3Logs") @Nullable DetectorDatasourcesS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

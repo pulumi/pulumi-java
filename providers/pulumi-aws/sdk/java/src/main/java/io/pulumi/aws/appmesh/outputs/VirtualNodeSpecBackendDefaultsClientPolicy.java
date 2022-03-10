@@ -17,8 +17,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicy {
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTls tls;
 
-    @OutputCustomType.Constructor({"tls"})
-    private VirtualNodeSpecBackendDefaultsClientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTls tls) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicy(@OutputCustomType.Parameter("tls") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTls tls) {
         this.tls = tls;
     }
 

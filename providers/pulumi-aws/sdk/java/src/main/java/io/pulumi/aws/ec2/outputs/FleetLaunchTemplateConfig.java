@@ -23,10 +23,10 @@ public final class FleetLaunchTemplateConfig {
      */
     private final @Nullable List<FleetLaunchTemplateConfigOverride> overrides;
 
-    @OutputCustomType.Constructor({"launchTemplateSpecification","overrides"})
+    @OutputCustomType.Constructor
     private FleetLaunchTemplateConfig(
-        FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
+        @OutputCustomType.Parameter("launchTemplateSpecification") FleetLaunchTemplateConfigLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("overrides") @Nullable List<FleetLaunchTemplateConfigOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

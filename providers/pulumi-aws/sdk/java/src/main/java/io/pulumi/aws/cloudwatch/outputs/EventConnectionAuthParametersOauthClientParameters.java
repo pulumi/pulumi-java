@@ -20,10 +20,10 @@ public final class EventConnectionAuthParametersOauthClientParameters {
      */
     private final String clientSecret;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersOauthClientParameters(
-        String clientId,
-        String clientSecret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }

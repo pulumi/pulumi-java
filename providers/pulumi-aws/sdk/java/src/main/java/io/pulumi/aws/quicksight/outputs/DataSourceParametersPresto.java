@@ -26,11 +26,11 @@ public final class DataSourceParametersPresto {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"catalog","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceParametersPresto(
-        String catalog,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.catalog = catalog;
         this.host = host;
         this.port = port;

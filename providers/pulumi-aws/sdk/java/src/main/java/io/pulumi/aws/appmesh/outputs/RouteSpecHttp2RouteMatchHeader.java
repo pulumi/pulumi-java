@@ -29,11 +29,11 @@ public final class RouteSpecHttp2RouteMatchHeader {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"invert","match","name"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatchHeader(
-        @Nullable Boolean invert,
-        @Nullable RouteSpecHttp2RouteMatchHeaderMatch match,
-        String name) {
+        @OutputCustomType.Parameter("invert") @Nullable Boolean invert,
+        @OutputCustomType.Parameter("match") @Nullable RouteSpecHttp2RouteMatchHeaderMatch match,
+        @OutputCustomType.Parameter("name") String name) {
         this.invert = invert;
         this.match = match;
         this.name = name;

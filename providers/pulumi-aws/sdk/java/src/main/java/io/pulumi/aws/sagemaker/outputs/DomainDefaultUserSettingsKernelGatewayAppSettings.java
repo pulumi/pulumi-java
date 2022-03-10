@@ -30,11 +30,11 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor({"customImages","defaultResourceSpec","lifecycleConfigArns"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettingsKernelGatewayAppSettings(
-        @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
-        @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @Nullable List<String> lifecycleConfigArns) {
+        @OutputCustomType.Parameter("customImages") @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
+        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;

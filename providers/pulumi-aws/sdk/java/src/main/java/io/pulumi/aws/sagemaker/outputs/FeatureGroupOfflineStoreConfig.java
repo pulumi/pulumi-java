@@ -29,11 +29,11 @@ public final class FeatureGroupOfflineStoreConfig {
      */
     private final FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig;
 
-    @OutputCustomType.Constructor({"dataCatalogConfig","disableGlueTableCreation","s3StorageConfig"})
+    @OutputCustomType.Constructor
     private FeatureGroupOfflineStoreConfig(
-        @Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig,
-        @Nullable Boolean disableGlueTableCreation,
-        FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
+        @OutputCustomType.Parameter("dataCatalogConfig") @Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig,
+        @OutputCustomType.Parameter("disableGlueTableCreation") @Nullable Boolean disableGlueTableCreation,
+        @OutputCustomType.Parameter("s3StorageConfig") FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.disableGlueTableCreation = disableGlueTableCreation;
         this.s3StorageConfig = s3StorageConfig;

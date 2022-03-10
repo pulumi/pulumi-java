@@ -16,8 +16,8 @@ public final class GetImageOutputResource {
      */
     private final List<GetImageOutputResourceAmi> amis;
 
-    @OutputCustomType.Constructor({"amis"})
-    private GetImageOutputResource(List<GetImageOutputResourceAmi> amis) {
+    @OutputCustomType.Constructor
+    private GetImageOutputResource(@OutputCustomType.Parameter("amis") List<GetImageOutputResourceAmi> amis) {
         this.amis = amis;
     }
 

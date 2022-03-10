@@ -32,12 +32,12 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
      */
     private final @Nullable String onStatusReason;
 
-    @OutputCustomType.Constructor({"action","onExitCode","onReason","onStatusReason"})
+    @OutputCustomType.Constructor
     private JobDefinitionRetryStrategyEvaluateOnExit(
-        String action,
-        @Nullable String onExitCode,
-        @Nullable String onReason,
-        @Nullable String onStatusReason) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("onExitCode") @Nullable String onExitCode,
+        @OutputCustomType.Parameter("onReason") @Nullable String onReason,
+        @OutputCustomType.Parameter("onStatusReason") @Nullable String onStatusReason) {
         this.action = action;
         this.onExitCode = onExitCode;
         this.onReason = onReason;

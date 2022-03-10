@@ -17,8 +17,8 @@ public final class LocationSmbMountOptions {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private LocationSmbMountOptions(@Nullable String version) {
+    @OutputCustomType.Constructor
+    private LocationSmbMountOptions(@OutputCustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 

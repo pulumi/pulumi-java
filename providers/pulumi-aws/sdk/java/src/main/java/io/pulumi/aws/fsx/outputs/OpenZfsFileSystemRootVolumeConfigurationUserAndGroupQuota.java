@@ -22,11 +22,11 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
     private final Integer storageCapacityQuotaGib;
     private final String type;
 
-    @OutputCustomType.Constructor({"id","storageCapacityQuotaGib","type"})
+    @OutputCustomType.Constructor
     private OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota(
-        Integer id,
-        Integer storageCapacityQuotaGib,
-        String type) {
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("storageCapacityQuotaGib") Integer storageCapacityQuotaGib,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.storageCapacityQuotaGib = storageCapacityQuotaGib;
         this.type = type;

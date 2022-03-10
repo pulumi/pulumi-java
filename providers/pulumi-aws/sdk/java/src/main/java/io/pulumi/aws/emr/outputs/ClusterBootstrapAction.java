@@ -27,11 +27,11 @@ public final class ClusterBootstrapAction {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"args","name","path"})
+    @OutputCustomType.Constructor
     private ClusterBootstrapAction(
-        @Nullable List<String> args,
-        String name,
-        String path) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path) {
         this.args = args;
         this.name = name;
         this.path = path;

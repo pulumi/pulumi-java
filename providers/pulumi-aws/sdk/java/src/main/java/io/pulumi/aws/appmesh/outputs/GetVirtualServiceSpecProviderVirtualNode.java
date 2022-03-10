@@ -15,8 +15,8 @@ public final class GetVirtualServiceSpecProviderVirtualNode {
      */
     private final String virtualNodeName;
 
-    @OutputCustomType.Constructor({"virtualNodeName"})
-    private GetVirtualServiceSpecProviderVirtualNode(String virtualNodeName) {
+    @OutputCustomType.Constructor
+    private GetVirtualServiceSpecProviderVirtualNode(@OutputCustomType.Parameter("virtualNodeName") String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
     }
 

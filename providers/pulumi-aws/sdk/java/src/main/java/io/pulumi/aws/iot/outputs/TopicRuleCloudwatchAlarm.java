@@ -30,12 +30,12 @@ public final class TopicRuleCloudwatchAlarm {
      */
     private final String stateValue;
 
-    @OutputCustomType.Constructor({"alarmName","roleArn","stateReason","stateValue"})
+    @OutputCustomType.Constructor
     private TopicRuleCloudwatchAlarm(
-        String alarmName,
-        String roleArn,
-        String stateReason,
-        String stateValue) {
+        @OutputCustomType.Parameter("alarmName") String alarmName,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("stateReason") String stateReason,
+        @OutputCustomType.Parameter("stateValue") String stateValue) {
         this.alarmName = alarmName;
         this.roleArn = roleArn;
         this.stateReason = stateReason;

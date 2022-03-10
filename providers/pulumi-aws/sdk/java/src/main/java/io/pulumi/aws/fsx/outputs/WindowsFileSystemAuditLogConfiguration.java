@@ -27,11 +27,11 @@ public final class WindowsFileSystemAuditLogConfiguration {
      */
     private final @Nullable String fileShareAccessAuditLogLevel;
 
-    @OutputCustomType.Constructor({"auditLogDestination","fileAccessAuditLogLevel","fileShareAccessAuditLogLevel"})
+    @OutputCustomType.Constructor
     private WindowsFileSystemAuditLogConfiguration(
-        @Nullable String auditLogDestination,
-        @Nullable String fileAccessAuditLogLevel,
-        @Nullable String fileShareAccessAuditLogLevel) {
+        @OutputCustomType.Parameter("auditLogDestination") @Nullable String auditLogDestination,
+        @OutputCustomType.Parameter("fileAccessAuditLogLevel") @Nullable String fileAccessAuditLogLevel,
+        @OutputCustomType.Parameter("fileShareAccessAuditLogLevel") @Nullable String fileShareAccessAuditLogLevel) {
         this.auditLogDestination = auditLogDestination;
         this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
         this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;

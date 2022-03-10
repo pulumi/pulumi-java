@@ -70,20 +70,20 @@ public final class GetRestApiResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"apiKeySource","arn","binaryMediaTypes","description","endpointConfigurations","executionArn","id","minimumCompressionSize","name","policy","rootResourceId","tags"})
+    @OutputCustomType.Constructor
     private GetRestApiResult(
-        String apiKeySource,
-        String arn,
-        List<String> binaryMediaTypes,
-        String description,
-        List<GetRestApiEndpointConfiguration> endpointConfigurations,
-        String executionArn,
-        String id,
-        Integer minimumCompressionSize,
-        String name,
-        String policy,
-        String rootResourceId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("apiKeySource") String apiKeySource,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("binaryMediaTypes") List<String> binaryMediaTypes,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointConfigurations") List<GetRestApiEndpointConfiguration> endpointConfigurations,
+        @OutputCustomType.Parameter("executionArn") String executionArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("minimumCompressionSize") Integer minimumCompressionSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("rootResourceId") String rootResourceId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.apiKeySource = apiKeySource;
         this.arn = arn;
         this.binaryMediaTypes = binaryMediaTypes;

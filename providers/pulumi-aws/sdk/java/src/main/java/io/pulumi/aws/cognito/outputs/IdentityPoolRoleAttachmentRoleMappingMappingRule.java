@@ -30,12 +30,12 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"claim","matchType","roleArn","value"})
+    @OutputCustomType.Constructor
     private IdentityPoolRoleAttachmentRoleMappingMappingRule(
-        String claim,
-        String matchType,
-        String roleArn,
-        String value) {
+        @OutputCustomType.Parameter("claim") String claim,
+        @OutputCustomType.Parameter("matchType") String matchType,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("value") String value) {
         this.claim = claim;
         this.matchType = matchType;
         this.roleArn = roleArn;

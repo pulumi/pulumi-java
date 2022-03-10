@@ -34,12 +34,12 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"comparator","key","tagValues","target"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm(
-        @Nullable String comparator,
-        @Nullable String key,
-        @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> tagValues,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("comparator") @Nullable String comparator,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("tagValues") @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> tagValues,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.comparator = comparator;
         this.key = key;
         this.tagValues = tagValues;

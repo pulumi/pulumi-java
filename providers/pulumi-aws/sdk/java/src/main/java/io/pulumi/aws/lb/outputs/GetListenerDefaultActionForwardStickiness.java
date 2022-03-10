@@ -13,10 +13,10 @@ public final class GetListenerDefaultActionForwardStickiness {
     private final Integer duration;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"duration","enabled"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionForwardStickiness(
-        Integer duration,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("duration") Integer duration,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }

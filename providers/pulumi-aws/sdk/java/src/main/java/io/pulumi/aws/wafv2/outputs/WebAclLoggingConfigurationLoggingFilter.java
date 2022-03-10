@@ -22,10 +22,10 @@ public final class WebAclLoggingConfigurationLoggingFilter {
      */
     private final List<WebAclLoggingConfigurationLoggingFilterFilter> filters;
 
-    @OutputCustomType.Constructor({"defaultBehavior","filters"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilter(
-        String defaultBehavior,
-        List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
+        @OutputCustomType.Parameter("defaultBehavior") String defaultBehavior,
+        @OutputCustomType.Parameter("filters") List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
         this.defaultBehavior = defaultBehavior;
         this.filters = filters;
     }

@@ -28,11 +28,11 @@ public final class GetEndpointResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"endpointAddress","endpointType","id"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        String endpointAddress,
-        @Nullable String endpointType,
-        String id) {
+        @OutputCustomType.Parameter("endpointAddress") String endpointAddress,
+        @OutputCustomType.Parameter("endpointType") @Nullable String endpointType,
+        @OutputCustomType.Parameter("id") String id) {
         this.endpointAddress = endpointAddress;
         this.endpointType = endpointType;
         this.id = id;

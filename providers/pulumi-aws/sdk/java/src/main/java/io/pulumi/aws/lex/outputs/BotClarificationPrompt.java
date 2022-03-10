@@ -34,11 +34,11 @@ public final class BotClarificationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private BotClarificationPrompt(
-        Integer maxAttempts,
-        List<BotClarificationPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<BotClarificationPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;

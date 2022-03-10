@@ -27,11 +27,11 @@ public final class AliasRoutingStrategy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fleetId","message","type"})
+    @OutputCustomType.Constructor
     private AliasRoutingStrategy(
-        @Nullable String fleetId,
-        @Nullable String message,
-        String type) {
+        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") String type) {
         this.fleetId = fleetId;
         this.message = message;
         this.type = type;

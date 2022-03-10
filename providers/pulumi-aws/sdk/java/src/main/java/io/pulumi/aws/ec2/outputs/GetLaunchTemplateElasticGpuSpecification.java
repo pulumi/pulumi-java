@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetLaunchTemplateElasticGpuSpecification {
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private GetLaunchTemplateElasticGpuSpecification(String type) {
+    @OutputCustomType.Constructor
+    private GetLaunchTemplateElasticGpuSpecification(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

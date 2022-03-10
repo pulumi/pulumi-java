@@ -22,10 +22,10 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      */
     private final String sseAlgorithm;
 
-    @OutputCustomType.Constructor({"kmsMasterKeyId","sseAlgorithm"})
+    @OutputCustomType.Constructor
     private BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault(
-        @Nullable String kmsMasterKeyId,
-        String sseAlgorithm) {
+        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @OutputCustomType.Parameter("sseAlgorithm") String sseAlgorithm) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         this.sseAlgorithm = sseAlgorithm;
     }

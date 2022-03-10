@@ -51,15 +51,15 @@ public final class BucketReplicationConfigRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"accessControlTranslation","account","bucket","encryptionConfiguration","metrics","replicationTime","storageClass"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleDestination(
-        @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
-        @Nullable String account,
-        String bucket,
-        @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
-        @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
-        @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
+        @OutputCustomType.Parameter("account") @Nullable String account,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
+        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
         this.bucket = bucket;

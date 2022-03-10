@@ -32,12 +32,12 @@ public final class AppLimits {
      */
     private final @Nullable Integer total;
 
-    @OutputCustomType.Constructor({"daily","maximumDuration","messagesPerSecond","total"})
+    @OutputCustomType.Constructor
     private AppLimits(
-        @Nullable Integer daily,
-        @Nullable Integer maximumDuration,
-        @Nullable Integer messagesPerSecond,
-        @Nullable Integer total) {
+        @OutputCustomType.Parameter("daily") @Nullable Integer daily,
+        @OutputCustomType.Parameter("maximumDuration") @Nullable Integer maximumDuration,
+        @OutputCustomType.Parameter("messagesPerSecond") @Nullable Integer messagesPerSecond,
+        @OutputCustomType.Parameter("total") @Nullable Integer total) {
         this.daily = daily;
         this.maximumDuration = maximumDuration;
         this.messagesPerSecond = messagesPerSecond;

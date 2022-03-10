@@ -24,11 +24,11 @@ public final class NetworkInterfaceAttachment {
      */
     private final String instance;
 
-    @OutputCustomType.Constructor({"attachmentId","deviceIndex","instance"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceAttachment(
-        @Nullable String attachmentId,
-        Integer deviceIndex,
-        String instance) {
+        @OutputCustomType.Parameter("attachmentId") @Nullable String attachmentId,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("instance") String instance) {
         this.attachmentId = attachmentId;
         this.deviceIndex = deviceIndex;
         this.instance = instance;

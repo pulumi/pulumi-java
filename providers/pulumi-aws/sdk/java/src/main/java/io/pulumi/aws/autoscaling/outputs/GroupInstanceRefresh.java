@@ -29,11 +29,11 @@ public final class GroupInstanceRefresh {
      */
     private final @Nullable List<String> triggers;
 
-    @OutputCustomType.Constructor({"preferences","strategy","triggers"})
+    @OutputCustomType.Constructor
     private GroupInstanceRefresh(
-        @Nullable GroupInstanceRefreshPreferences preferences,
-        String strategy,
-        @Nullable List<String> triggers) {
+        @OutputCustomType.Parameter("preferences") @Nullable GroupInstanceRefreshPreferences preferences,
+        @OutputCustomType.Parameter("strategy") String strategy,
+        @OutputCustomType.Parameter("triggers") @Nullable List<String> triggers) {
         this.preferences = preferences;
         this.strategy = strategy;
         this.triggers = triggers;

@@ -49,17 +49,17 @@ public final class GetConstraintResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"acceptLanguage","description","id","owner","parameters","portfolioId","productId","status","type"})
+    @OutputCustomType.Constructor
     private GetConstraintResult(
-        @Nullable String acceptLanguage,
-        String description,
-        String id,
-        String owner,
-        String parameters,
-        String portfolioId,
-        String productId,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("parameters") String parameters,
+        @OutputCustomType.Parameter("portfolioId") String portfolioId,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.acceptLanguage = acceptLanguage;
         this.description = description;
         this.id = id;

@@ -27,11 +27,11 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
      */
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"appIdClientRegex","awsRegion","userPoolId"})
+    @OutputCustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProviderUserPoolConfig(
-        @Nullable String appIdClientRegex,
-        @Nullable String awsRegion,
-        String userPoolId) {
+        @OutputCustomType.Parameter("appIdClientRegex") @Nullable String appIdClientRegex,
+        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
         this.userPoolId = userPoolId;

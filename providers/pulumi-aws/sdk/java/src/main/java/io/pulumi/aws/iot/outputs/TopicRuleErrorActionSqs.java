@@ -26,11 +26,11 @@ public final class TopicRuleErrorActionSqs {
      */
     private final Boolean useBase64;
 
-    @OutputCustomType.Constructor({"queueUrl","roleArn","useBase64"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionSqs(
-        String queueUrl,
-        String roleArn,
-        Boolean useBase64) {
+        @OutputCustomType.Parameter("queueUrl") String queueUrl,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("useBase64") Boolean useBase64) {
         this.queueUrl = queueUrl;
         this.roleArn = roleArn;
         this.useBase64 = useBase64;

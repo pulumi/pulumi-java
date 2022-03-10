@@ -52,17 +52,17 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","awsDevice","bandwidth","id","location","name","ownerAccountId","providerName","tags"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        String arn,
-        String awsDevice,
-        String bandwidth,
-        String id,
-        String location,
-        String name,
-        String ownerAccountId,
-        String providerName,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("awsDevice") String awsDevice,
+        @OutputCustomType.Parameter("bandwidth") String bandwidth,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerAccountId") String ownerAccountId,
+        @OutputCustomType.Parameter("providerName") String providerName,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.awsDevice = awsDevice;
         this.bandwidth = bandwidth;

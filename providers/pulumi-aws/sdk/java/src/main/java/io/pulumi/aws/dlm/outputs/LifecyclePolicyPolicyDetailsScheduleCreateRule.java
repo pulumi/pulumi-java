@@ -28,11 +28,11 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
      */
     private final @Nullable String times;
 
-    @OutputCustomType.Constructor({"interval","intervalUnit","times"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCreateRule(
-        Integer interval,
-        @Nullable String intervalUnit,
-        @Nullable String times) {
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("intervalUnit") @Nullable String intervalUnit,
+        @OutputCustomType.Parameter("times") @Nullable String times) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
         this.times = times;

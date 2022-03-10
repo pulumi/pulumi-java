@@ -23,10 +23,10 @@ public final class AccessPointRootDirectory {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"creationInfo","path"})
+    @OutputCustomType.Constructor
     private AccessPointRootDirectory(
-        @Nullable AccessPointRootDirectoryCreationInfo creationInfo,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("creationInfo") @Nullable AccessPointRootDirectoryCreationInfo creationInfo,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.creationInfo = creationInfo;
         this.path = path;
     }

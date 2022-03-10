@@ -81,23 +81,23 @@ public final class GetProductResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"acceptLanguage","arn","createdTime","description","distributor","hasDefaultPath","id","name","owner","status","supportDescription","supportEmail","supportUrl","tags","type"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        @Nullable String acceptLanguage,
-        String arn,
-        String createdTime,
-        String description,
-        String distributor,
-        Boolean hasDefaultPath,
-        String id,
-        String name,
-        String owner,
-        String status,
-        String supportDescription,
-        String supportEmail,
-        String supportUrl,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributor") String distributor,
+        @OutputCustomType.Parameter("hasDefaultPath") Boolean hasDefaultPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("supportDescription") String supportDescription,
+        @OutputCustomType.Parameter("supportEmail") String supportEmail,
+        @OutputCustomType.Parameter("supportUrl") String supportUrl,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.acceptLanguage = acceptLanguage;
         this.arn = arn;
         this.createdTime = createdTime;

@@ -20,10 +20,10 @@ public final class StageAccessLogSettings {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"destinationArn","format"})
+    @OutputCustomType.Constructor
     private StageAccessLogSettings(
-        String destinationArn,
-        String format) {
+        @OutputCustomType.Parameter("destinationArn") String destinationArn,
+        @OutputCustomType.Parameter("format") String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }

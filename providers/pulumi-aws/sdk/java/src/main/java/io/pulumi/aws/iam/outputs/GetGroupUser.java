@@ -30,12 +30,12 @@ public final class GetGroupUser {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"arn","path","userId","userName"})
+    @OutputCustomType.Constructor
     private GetGroupUser(
-        String arn,
-        String path,
-        String userId,
-        String userName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.path = path;
         this.userId = userId;

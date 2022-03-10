@@ -15,8 +15,8 @@ public final class MultiRegionAccessPointDetailsRegion {
      */
     private final String bucket;
 
-    @OutputCustomType.Constructor({"bucket"})
-    private MultiRegionAccessPointDetailsRegion(String bucket) {
+    @OutputCustomType.Constructor
+    private MultiRegionAccessPointDetailsRegion(@OutputCustomType.Parameter("bucket") String bucket) {
         this.bucket = bucket;
     }
 

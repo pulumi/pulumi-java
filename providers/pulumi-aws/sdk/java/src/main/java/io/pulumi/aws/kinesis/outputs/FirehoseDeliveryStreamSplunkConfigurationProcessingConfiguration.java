@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
      */
     private final @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor> processors;
 
-    @OutputCustomType.Constructor({"enabled","processors"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamSplunkConfigurationProcessingConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor> processors) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

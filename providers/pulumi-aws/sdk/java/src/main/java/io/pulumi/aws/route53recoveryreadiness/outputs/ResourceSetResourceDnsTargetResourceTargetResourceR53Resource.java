@@ -22,10 +22,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      */
     private final @Nullable String recordSetId;
 
-    @OutputCustomType.Constructor({"domainName","recordSetId"})
+    @OutputCustomType.Constructor
     private ResourceSetResourceDnsTargetResourceTargetResourceR53Resource(
-        @Nullable String domainName,
-        @Nullable String recordSetId) {
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("recordSetId") @Nullable String recordSetId) {
         this.domainName = domainName;
         this.recordSetId = recordSetId;
     }

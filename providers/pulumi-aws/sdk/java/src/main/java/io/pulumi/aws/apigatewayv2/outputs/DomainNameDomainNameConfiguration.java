@@ -38,13 +38,13 @@ public final class DomainNameDomainNameConfiguration {
      */
     private final @Nullable String targetDomainName;
 
-    @OutputCustomType.Constructor({"certificateArn","endpointType","hostedZoneId","securityPolicy","targetDomainName"})
+    @OutputCustomType.Constructor
     private DomainNameDomainNameConfiguration(
-        String certificateArn,
-        String endpointType,
-        @Nullable String hostedZoneId,
-        String securityPolicy,
-        @Nullable String targetDomainName) {
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("targetDomainName") @Nullable String targetDomainName) {
         this.certificateArn = certificateArn;
         this.endpointType = endpointType;
         this.hostedZoneId = hostedZoneId;

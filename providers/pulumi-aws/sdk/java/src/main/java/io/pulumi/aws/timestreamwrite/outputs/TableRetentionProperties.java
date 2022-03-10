@@ -20,10 +20,10 @@ public final class TableRetentionProperties {
      */
     private final Integer memoryStoreRetentionPeriodInHours;
 
-    @OutputCustomType.Constructor({"magneticStoreRetentionPeriodInDays","memoryStoreRetentionPeriodInHours"})
+    @OutputCustomType.Constructor
     private TableRetentionProperties(
-        Integer magneticStoreRetentionPeriodInDays,
-        Integer memoryStoreRetentionPeriodInHours) {
+        @OutputCustomType.Parameter("magneticStoreRetentionPeriodInDays") Integer magneticStoreRetentionPeriodInDays,
+        @OutputCustomType.Parameter("memoryStoreRetentionPeriodInHours") Integer memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }

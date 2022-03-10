@@ -20,10 +20,10 @@ public final class GetPipelineDefinitionParameterObjectAttribute {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"key","stringValue"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionParameterObjectAttribute(
-        String key,
-        String stringValue) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.key = key;
         this.stringValue = stringValue;
     }

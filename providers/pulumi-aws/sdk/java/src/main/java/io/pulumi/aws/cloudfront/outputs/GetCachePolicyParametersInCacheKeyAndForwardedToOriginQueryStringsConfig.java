@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
-    @OutputCustomType.Constructor({"queryStringBehavior","queryStrings"})
+    @OutputCustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
-        String queryStringBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
+        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @OutputCustomType.Parameter("queryStrings") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }

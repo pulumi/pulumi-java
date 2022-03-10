@@ -17,8 +17,8 @@ public final class RuleGroupRuleActionAllow {
      */
     private final @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private RuleGroupRuleActionAllow(@Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionAllow(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionAllowCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

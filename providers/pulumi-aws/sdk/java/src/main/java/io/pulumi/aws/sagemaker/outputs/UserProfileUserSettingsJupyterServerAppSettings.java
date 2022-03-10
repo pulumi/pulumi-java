@@ -23,10 +23,10 @@ public final class UserProfileUserSettingsJupyterServerAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor({"defaultResourceSpec","lifecycleConfigArns"})
+    @OutputCustomType.Constructor
     private UserProfileUserSettingsJupyterServerAppSettings(
-        UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @Nullable List<String> lifecycleConfigArns) {
+        @OutputCustomType.Parameter("defaultResourceSpec") UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
     }

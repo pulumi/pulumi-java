@@ -43,21 +43,21 @@ public final class GetWorkspaceResult {
     private final String workspaceId;
     private final List<GetWorkspaceWorkspaceProperty> workspaceProperties;
 
-    @OutputCustomType.Constructor({"bundleId","computerName","directoryId","id","ipAddress","rootVolumeEncryptionEnabled","state","tags","userName","userVolumeEncryptionEnabled","volumeEncryptionKey","workspaceId","workspaceProperties"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String bundleId,
-        String computerName,
-        String directoryId,
-        String id,
-        String ipAddress,
-        Boolean rootVolumeEncryptionEnabled,
-        String state,
-        Map<String,String> tags,
-        String userName,
-        Boolean userVolumeEncryptionEnabled,
-        String volumeEncryptionKey,
-        String workspaceId,
-        List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("computerName") String computerName,
+        @OutputCustomType.Parameter("directoryId") String directoryId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("rootVolumeEncryptionEnabled") Boolean rootVolumeEncryptionEnabled,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("userVolumeEncryptionEnabled") Boolean userVolumeEncryptionEnabled,
+        @OutputCustomType.Parameter("volumeEncryptionKey") String volumeEncryptionKey,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceProperties") List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
         this.bundleId = bundleId;
         this.computerName = computerName;
         this.directoryId = directoryId;

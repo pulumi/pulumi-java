@@ -40,12 +40,12 @@ public final class SizeConstraintSetSizeConstraint {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformation"})
+    @OutputCustomType.Constructor
     private SizeConstraintSetSizeConstraint(
-        String comparisonOperator,
-        SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch,
-        Integer size,
-        String textTransformation) {
+        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

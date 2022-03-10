@@ -25,11 +25,11 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor({"clientId","userGroup","userPool"})
+    @OutputCustomType.Constructor
     private WorkteamMemberDefinitionCognitoMemberDefinition(
-        String clientId,
-        String userGroup,
-        String userPool) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("userGroup") String userGroup,
+        @OutputCustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userGroup = userGroup;
         this.userPool = userPool;

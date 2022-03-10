@@ -22,10 +22,10 @@ public final class TrafficMirrorFilterRuleSourcePortRange {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","toPort"})
+    @OutputCustomType.Constructor
     private TrafficMirrorFilterRuleSourcePortRange(
-        @Nullable Integer fromPort,
-        @Nullable Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

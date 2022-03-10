@@ -25,11 +25,11 @@ public final class DataSourceParametersSnowflake {
      */
     private final String warehouse;
 
-    @OutputCustomType.Constructor({"database","host","warehouse"})
+    @OutputCustomType.Constructor
     private DataSourceParametersSnowflake(
-        String database,
-        String host,
-        String warehouse) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("warehouse") String warehouse) {
         this.database = database;
         this.host = host;
         this.warehouse = warehouse;

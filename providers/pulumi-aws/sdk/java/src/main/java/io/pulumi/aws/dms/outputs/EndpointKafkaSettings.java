@@ -104,26 +104,26 @@ public final class EndpointKafkaSettings {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor({"broker","includeControlDetails","includeNullAndEmpty","includePartitionValue","includeTableAlterOperations","includeTransactionDetails","messageFormat","messageMaxBytes","noHexPrefix","partitionIncludeSchemaTable","saslPassword","saslUsername","securityProtocol","sslCaCertificateArn","sslClientCertificateArn","sslClientKeyArn","sslClientKeyPassword","topic"})
+    @OutputCustomType.Constructor
     private EndpointKafkaSettings(
-        String broker,
-        @Nullable Boolean includeControlDetails,
-        @Nullable Boolean includeNullAndEmpty,
-        @Nullable Boolean includePartitionValue,
-        @Nullable Boolean includeTableAlterOperations,
-        @Nullable Boolean includeTransactionDetails,
-        @Nullable String messageFormat,
-        @Nullable Integer messageMaxBytes,
-        @Nullable Boolean noHexPrefix,
-        @Nullable Boolean partitionIncludeSchemaTable,
-        @Nullable String saslPassword,
-        @Nullable String saslUsername,
-        @Nullable String securityProtocol,
-        @Nullable String sslCaCertificateArn,
-        @Nullable String sslClientCertificateArn,
-        @Nullable String sslClientKeyArn,
-        @Nullable String sslClientKeyPassword,
-        @Nullable String topic) {
+        @OutputCustomType.Parameter("broker") String broker,
+        @OutputCustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
+        @OutputCustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
+        @OutputCustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
+        @OutputCustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
+        @OutputCustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
+        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @OutputCustomType.Parameter("messageMaxBytes") @Nullable Integer messageMaxBytes,
+        @OutputCustomType.Parameter("noHexPrefix") @Nullable Boolean noHexPrefix,
+        @OutputCustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
+        @OutputCustomType.Parameter("saslPassword") @Nullable String saslPassword,
+        @OutputCustomType.Parameter("saslUsername") @Nullable String saslUsername,
+        @OutputCustomType.Parameter("securityProtocol") @Nullable String securityProtocol,
+        @OutputCustomType.Parameter("sslCaCertificateArn") @Nullable String sslCaCertificateArn,
+        @OutputCustomType.Parameter("sslClientCertificateArn") @Nullable String sslClientCertificateArn,
+        @OutputCustomType.Parameter("sslClientKeyArn") @Nullable String sslClientKeyArn,
+        @OutputCustomType.Parameter("sslClientKeyPassword") @Nullable String sslClientKeyPassword,
+        @OutputCustomType.Parameter("topic") @Nullable String topic) {
         this.broker = broker;
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;

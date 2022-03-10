@@ -20,10 +20,10 @@ public final class FleetIdentityProvider {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"samlMetadata","type"})
+    @OutputCustomType.Constructor
     private FleetIdentityProvider(
-        String samlMetadata,
-        String type) {
+        @OutputCustomType.Parameter("samlMetadata") String samlMetadata,
+        @OutputCustomType.Parameter("type") String type) {
         this.samlMetadata = samlMetadata;
         this.type = type;
     }

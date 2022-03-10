@@ -46,14 +46,14 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig {
      */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicies","contentTypeOptions","frameOptions","referrerPolicies","strictTransportSecurities","xssProtections"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfig(
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
-        List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
+        @OutputCustomType.Parameter("contentSecurityPolicies") List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies,
+        @OutputCustomType.Parameter("contentTypeOptions") List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions,
+        @OutputCustomType.Parameter("frameOptions") List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions,
+        @OutputCustomType.Parameter("referrerPolicies") List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
+        @OutputCustomType.Parameter("strictTransportSecurities") List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
+        @OutputCustomType.Parameter("xssProtections") List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
         this.contentSecurityPolicies = contentSecurityPolicies;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;

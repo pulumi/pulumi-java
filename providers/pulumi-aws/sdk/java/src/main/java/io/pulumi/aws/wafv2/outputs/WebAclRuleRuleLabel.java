@@ -15,8 +15,8 @@ public final class WebAclRuleRuleLabel {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleRuleLabel(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleRuleLabel(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

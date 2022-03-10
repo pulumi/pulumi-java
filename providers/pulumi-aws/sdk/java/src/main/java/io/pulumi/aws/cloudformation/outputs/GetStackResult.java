@@ -70,20 +70,20 @@ public final class GetStackResult {
      */
     private final Integer timeoutInMinutes;
 
-    @OutputCustomType.Constructor({"capabilities","description","disableRollback","iamRoleArn","id","name","notificationArns","outputs","parameters","tags","templateBody","timeoutInMinutes"})
+    @OutputCustomType.Constructor
     private GetStackResult(
-        List<String> capabilities,
-        String description,
-        Boolean disableRollback,
-        String iamRoleArn,
-        String id,
-        String name,
-        List<String> notificationArns,
-        Map<String,String> outputs,
-        Map<String,String> parameters,
-        Map<String,String> tags,
-        String templateBody,
-        Integer timeoutInMinutes) {
+        @OutputCustomType.Parameter("capabilities") List<String> capabilities,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disableRollback") Boolean disableRollback,
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationArns") List<String> notificationArns,
+        @OutputCustomType.Parameter("outputs") Map<String,String> outputs,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("templateBody") String templateBody,
+        @OutputCustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
         this.capabilities = capabilities;
         this.description = description;
         this.disableRollback = disableRollback;

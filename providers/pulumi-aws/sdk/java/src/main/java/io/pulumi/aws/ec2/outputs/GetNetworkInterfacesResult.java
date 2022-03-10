@@ -26,12 +26,12 @@ public final class GetNetworkInterfacesResult {
     private final List<String> ids;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfacesResult(
-        @Nullable List<GetNetworkInterfacesFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNetworkInterfacesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

@@ -34,13 +34,13 @@ public final class DomainDomainEndpointOptions {
     private final @Nullable Boolean enforceHttps;
     private final @Nullable String tlsSecurityPolicy;
 
-    @OutputCustomType.Constructor({"customEndpoint","customEndpointCertificateArn","customEndpointEnabled","enforceHttps","tlsSecurityPolicy"})
+    @OutputCustomType.Constructor
     private DomainDomainEndpointOptions(
-        @Nullable String customEndpoint,
-        @Nullable String customEndpointCertificateArn,
-        @Nullable Boolean customEndpointEnabled,
-        @Nullable Boolean enforceHttps,
-        @Nullable String tlsSecurityPolicy) {
+        @OutputCustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
+        @OutputCustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
+        @OutputCustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
+        @OutputCustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
+        @OutputCustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
         this.customEndpoint = customEndpoint;
         this.customEndpointCertificateArn = customEndpointCertificateArn;
         this.customEndpointEnabled = customEndpointEnabled;

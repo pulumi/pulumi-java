@@ -23,10 +23,10 @@ public final class ListenerDefaultActionForwardTargetGroup {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"arn","weight"})
+    @OutputCustomType.Constructor
     private ListenerDefaultActionForwardTargetGroup(
-        String arn,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.arn = arn;
         this.weight = weight;
     }

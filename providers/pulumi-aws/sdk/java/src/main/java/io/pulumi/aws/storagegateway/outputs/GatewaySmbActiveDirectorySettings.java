@@ -47,15 +47,15 @@ public final class GatewaySmbActiveDirectorySettings {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"activeDirectoryStatus","domainControllers","domainName","organizationalUnit","password","timeoutInSeconds","username"})
+    @OutputCustomType.Constructor
     private GatewaySmbActiveDirectorySettings(
-        @Nullable String activeDirectoryStatus,
-        @Nullable List<String> domainControllers,
-        String domainName,
-        @Nullable String organizationalUnit,
-        String password,
-        @Nullable Integer timeoutInSeconds,
-        String username) {
+        @OutputCustomType.Parameter("activeDirectoryStatus") @Nullable String activeDirectoryStatus,
+        @OutputCustomType.Parameter("domainControllers") @Nullable List<String> domainControllers,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @OutputCustomType.Parameter("username") String username) {
         this.activeDirectoryStatus = activeDirectoryStatus;
         this.domainControllers = domainControllers;
         this.domainName = domainName;

@@ -22,10 +22,10 @@ public final class FargateProfileSelector {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"labels","namespace"})
+    @OutputCustomType.Constructor
     private FargateProfileSelector(
-        @Nullable Map<String,String> labels,
-        String namespace) {
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.labels = labels;
         this.namespace = namespace;
     }

@@ -15,8 +15,8 @@ public final class EventSourceMappingDestinationConfigOnFailure {
      */
     private final String destinationArn;
 
-    @OutputCustomType.Constructor({"destinationArn"})
-    private EventSourceMappingDestinationConfigOnFailure(String destinationArn) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingDestinationConfigOnFailure(@OutputCustomType.Parameter("destinationArn") String destinationArn) {
         this.destinationArn = destinationArn;
     }
 

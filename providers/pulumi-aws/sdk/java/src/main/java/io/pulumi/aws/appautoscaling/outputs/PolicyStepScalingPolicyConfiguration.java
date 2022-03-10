@@ -40,13 +40,13 @@ public final class PolicyStepScalingPolicyConfiguration {
      */
     private final @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments;
 
-    @OutputCustomType.Constructor({"adjustmentType","cooldown","metricAggregationType","minAdjustmentMagnitude","stepAdjustments"})
+    @OutputCustomType.Constructor
     private PolicyStepScalingPolicyConfiguration(
-        @Nullable String adjustmentType,
-        @Nullable Integer cooldown,
-        @Nullable String metricAggregationType,
-        @Nullable Integer minAdjustmentMagnitude,
-        @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
+        @OutputCustomType.Parameter("adjustmentType") @Nullable String adjustmentType,
+        @OutputCustomType.Parameter("cooldown") @Nullable Integer cooldown,
+        @OutputCustomType.Parameter("metricAggregationType") @Nullable String metricAggregationType,
+        @OutputCustomType.Parameter("minAdjustmentMagnitude") @Nullable Integer minAdjustmentMagnitude,
+        @OutputCustomType.Parameter("stepAdjustments") @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
         this.adjustmentType = adjustmentType;
         this.cooldown = cooldown;
         this.metricAggregationType = metricAggregationType;

@@ -16,10 +16,10 @@ public final class GangliaLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private GangliaLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

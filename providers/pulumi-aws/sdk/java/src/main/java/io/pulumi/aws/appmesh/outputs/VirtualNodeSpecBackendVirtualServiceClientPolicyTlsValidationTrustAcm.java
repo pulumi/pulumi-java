@@ -16,8 +16,8 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      */
     private final List<String> certificateAuthorityArns;
 
-    @OutputCustomType.Constructor({"certificateAuthorityArns"})
-    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm(List<String> certificateAuthorityArns) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm(@OutputCustomType.Parameter("certificateAuthorityArns") List<String> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 

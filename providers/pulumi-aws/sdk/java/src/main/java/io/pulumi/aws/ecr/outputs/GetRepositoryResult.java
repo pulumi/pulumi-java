@@ -51,17 +51,17 @@ public final class GetRepositoryResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","encryptionConfigurations","id","imageScanningConfigurations","imageTagMutability","name","registryId","repositoryUrl","tags"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String arn,
-        List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
-        String id,
-        List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
-        String imageTagMutability,
-        String name,
-        String registryId,
-        String repositoryUrl,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("encryptionConfigurations") List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageScanningConfigurations") List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
+        @OutputCustomType.Parameter("imageTagMutability") String imageTagMutability,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registryId") String registryId,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.encryptionConfigurations = encryptionConfigurations;
         this.id = id;

@@ -78,21 +78,21 @@ public final class TaskOptions {
      */
     private final @Nullable String verifyMode;
 
-    @OutputCustomType.Constructor({"atime","bytesPerSecond","gid","logLevel","mtime","overwriteMode","posixPermissions","preserveDeletedFiles","preserveDevices","taskQueueing","transferMode","uid","verifyMode"})
+    @OutputCustomType.Constructor
     private TaskOptions(
-        @Nullable String atime,
-        @Nullable Integer bytesPerSecond,
-        @Nullable String gid,
-        @Nullable String logLevel,
-        @Nullable String mtime,
-        @Nullable String overwriteMode,
-        @Nullable String posixPermissions,
-        @Nullable String preserveDeletedFiles,
-        @Nullable String preserveDevices,
-        @Nullable String taskQueueing,
-        @Nullable String transferMode,
-        @Nullable String uid,
-        @Nullable String verifyMode) {
+        @OutputCustomType.Parameter("atime") @Nullable String atime,
+        @OutputCustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
+        @OutputCustomType.Parameter("gid") @Nullable String gid,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
+        @OutputCustomType.Parameter("mtime") @Nullable String mtime,
+        @OutputCustomType.Parameter("overwriteMode") @Nullable String overwriteMode,
+        @OutputCustomType.Parameter("posixPermissions") @Nullable String posixPermissions,
+        @OutputCustomType.Parameter("preserveDeletedFiles") @Nullable String preserveDeletedFiles,
+        @OutputCustomType.Parameter("preserveDevices") @Nullable String preserveDevices,
+        @OutputCustomType.Parameter("taskQueueing") @Nullable String taskQueueing,
+        @OutputCustomType.Parameter("transferMode") @Nullable String transferMode,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("verifyMode") @Nullable String verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;

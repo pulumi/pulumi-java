@@ -25,11 +25,11 @@ public final class GetActiveReceiptRuleSetResult {
      */
     private final String ruleSetName;
 
-    @OutputCustomType.Constructor({"arn","id","ruleSetName"})
+    @OutputCustomType.Constructor
     private GetActiveReceiptRuleSetResult(
-        String arn,
-        String id,
-        String ruleSetName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ruleSetName") String ruleSetName) {
         this.arn = arn;
         this.id = id;
         this.ruleSetName = ruleSetName;

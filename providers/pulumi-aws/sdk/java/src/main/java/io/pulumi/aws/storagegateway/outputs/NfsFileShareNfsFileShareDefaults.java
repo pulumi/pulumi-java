@@ -32,12 +32,12 @@ public final class NfsFileShareNfsFileShareDefaults {
      */
     private final @Nullable String ownerId;
 
-    @OutputCustomType.Constructor({"directoryMode","fileMode","groupId","ownerId"})
+    @OutputCustomType.Constructor
     private NfsFileShareNfsFileShareDefaults(
-        @Nullable String directoryMode,
-        @Nullable String fileMode,
-        @Nullable String groupId,
-        @Nullable String ownerId) {
+        @OutputCustomType.Parameter("directoryMode") @Nullable String directoryMode,
+        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId) {
         this.directoryMode = directoryMode;
         this.fileMode = fileMode;
         this.groupId = groupId;

@@ -23,10 +23,10 @@ public final class InstanceFleetLaunchSpecifications {
      */
     private final @Nullable List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications;
 
-    @OutputCustomType.Constructor({"onDemandSpecifications","spotSpecifications"})
+    @OutputCustomType.Constructor
     private InstanceFleetLaunchSpecifications(
-        @Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
-        @Nullable List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
+        @OutputCustomType.Parameter("onDemandSpecifications") @Nullable List<InstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
+        @OutputCustomType.Parameter("spotSpecifications") @Nullable List<InstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
         this.onDemandSpecifications = onDemandSpecifications;
         this.spotSpecifications = spotSpecifications;
     }

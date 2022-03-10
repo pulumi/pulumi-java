@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificat
      */
     private final @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate(
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile file,
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificateSds sds) {
         this.file = file;
         this.sds = sds;
     }

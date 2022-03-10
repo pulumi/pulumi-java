@@ -50,18 +50,18 @@ public final class GetServiceQuotaResult {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"adjustable","arn","defaultValue","globalQuota","id","quotaCode","quotaName","serviceCode","serviceName","value"})
+    @OutputCustomType.Constructor
     private GetServiceQuotaResult(
-        Boolean adjustable,
-        String arn,
-        Double defaultValue,
-        Boolean globalQuota,
-        String id,
-        String quotaCode,
-        String quotaName,
-        String serviceCode,
-        String serviceName,
-        Double value) {
+        @OutputCustomType.Parameter("adjustable") Boolean adjustable,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("defaultValue") Double defaultValue,
+        @OutputCustomType.Parameter("globalQuota") Boolean globalQuota,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("quotaCode") String quotaCode,
+        @OutputCustomType.Parameter("quotaName") String quotaName,
+        @OutputCustomType.Parameter("serviceCode") String serviceCode,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("value") Double value) {
         this.adjustable = adjustable;
         this.arn = arn;
         this.defaultValue = defaultValue;

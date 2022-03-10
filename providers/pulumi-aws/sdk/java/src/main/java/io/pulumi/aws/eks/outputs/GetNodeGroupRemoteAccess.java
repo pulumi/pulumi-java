@@ -21,10 +21,10 @@ public final class GetNodeGroupRemoteAccess {
      */
     private final List<String> sourceSecurityGroupIds;
 
-    @OutputCustomType.Constructor({"ec2SshKey","sourceSecurityGroupIds"})
+    @OutputCustomType.Constructor
     private GetNodeGroupRemoteAccess(
-        String ec2SshKey,
-        List<String> sourceSecurityGroupIds) {
+        @OutputCustomType.Parameter("ec2SshKey") String ec2SshKey,
+        @OutputCustomType.Parameter("sourceSecurityGroupIds") List<String> sourceSecurityGroupIds) {
         this.ec2SshKey = ec2SshKey;
         this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }

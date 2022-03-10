@@ -20,10 +20,10 @@ public final class GetDefaultKmsKeyResult {
      */
     private final String keyArn;
 
-    @OutputCustomType.Constructor({"id","keyArn"})
+    @OutputCustomType.Constructor
     private GetDefaultKmsKeyResult(
-        String id,
-        String keyArn) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyArn") String keyArn) {
         this.id = id;
         this.keyArn = keyArn;
     }

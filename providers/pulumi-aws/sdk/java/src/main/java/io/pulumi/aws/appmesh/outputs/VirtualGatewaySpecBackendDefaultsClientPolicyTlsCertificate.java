@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate(
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file,
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
         this.file = file;
         this.sds = sds;
     }

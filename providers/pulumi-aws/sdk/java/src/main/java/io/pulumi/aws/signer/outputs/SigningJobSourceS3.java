@@ -25,11 +25,11 @@ public final class SigningJobSourceS3 {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"bucket","key","version"})
+    @OutputCustomType.Constructor
     private SigningJobSourceS3(
-        String bucket,
-        String key,
-        String version) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("version") String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;

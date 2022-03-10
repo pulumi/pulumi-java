@@ -13,10 +13,10 @@ public final class GetBrokerEncryptionOption {
     private final String kmsKeyId;
     private final Boolean useAwsOwnedKey;
 
-    @OutputCustomType.Constructor({"kmsKeyId","useAwsOwnedKey"})
+    @OutputCustomType.Constructor
     private GetBrokerEncryptionOption(
-        String kmsKeyId,
-        Boolean useAwsOwnedKey) {
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("useAwsOwnedKey") Boolean useAwsOwnedKey) {
         this.kmsKeyId = kmsKeyId;
         this.useAwsOwnedKey = useAwsOwnedKey;
     }

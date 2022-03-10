@@ -21,10 +21,10 @@ public final class GetDomainEncryptionAtRest {
      */
     private final String kmsKeyId;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyId"})
+    @OutputCustomType.Constructor
     private GetDomainEncryptionAtRest(
-        Boolean enabled,
-        String kmsKeyId) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }

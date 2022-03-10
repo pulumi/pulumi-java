@@ -19,8 +19,8 @@ public final class SmbFileShareCacheAttributes {
      */
     private final @Nullable Integer cacheStaleTimeoutInSeconds;
 
-    @OutputCustomType.Constructor({"cacheStaleTimeoutInSeconds"})
-    private SmbFileShareCacheAttributes(@Nullable Integer cacheStaleTimeoutInSeconds) {
+    @OutputCustomType.Constructor
+    private SmbFileShareCacheAttributes(@OutputCustomType.Parameter("cacheStaleTimeoutInSeconds") @Nullable Integer cacheStaleTimeoutInSeconds) {
         this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
     }
 

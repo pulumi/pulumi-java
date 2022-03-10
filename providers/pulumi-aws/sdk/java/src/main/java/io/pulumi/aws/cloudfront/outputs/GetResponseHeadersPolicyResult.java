@@ -41,15 +41,15 @@ public final class GetResponseHeadersPolicyResult {
      */
     private final List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs;
 
-    @OutputCustomType.Constructor({"comment","corsConfigs","customHeadersConfigs","etag","id","name","securityHeadersConfigs"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicyResult(
-        String comment,
-        List<GetResponseHeadersPolicyCorsConfig> corsConfigs,
-        List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs,
-        String etag,
-        String id,
-        String name,
-        List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("corsConfigs") List<GetResponseHeadersPolicyCorsConfig> corsConfigs,
+        @OutputCustomType.Parameter("customHeadersConfigs") List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityHeadersConfigs") List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
         this.comment = comment;
         this.corsConfigs = corsConfigs;
         this.customHeadersConfigs = customHeadersConfigs;

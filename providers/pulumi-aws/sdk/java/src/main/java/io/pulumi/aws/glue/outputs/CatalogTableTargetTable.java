@@ -25,11 +25,11 @@ public final class CatalogTableTargetTable {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","name"})
+    @OutputCustomType.Constructor
     private CatalogTableTargetTable(
-        String catalogId,
-        String databaseName,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;

@@ -93,25 +93,25 @@ public final class GetNodeGroupResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"amiType","arn","clusterName","diskSize","id","instanceTypes","labels","nodeGroupName","nodeRoleArn","releaseVersion","remoteAccesses","resources","scalingConfigs","status","subnetIds","tags","version"})
+    @OutputCustomType.Constructor
     private GetNodeGroupResult(
-        String amiType,
-        String arn,
-        String clusterName,
-        Integer diskSize,
-        String id,
-        List<String> instanceTypes,
-        Map<String,String> labels,
-        String nodeGroupName,
-        String nodeRoleArn,
-        String releaseVersion,
-        List<GetNodeGroupRemoteAccess> remoteAccesses,
-        List<GetNodeGroupResource> resources,
-        List<GetNodeGroupScalingConfig> scalingConfigs,
-        String status,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("amiType") String amiType,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("diskSize") Integer diskSize,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("nodeGroupName") String nodeGroupName,
+        @OutputCustomType.Parameter("nodeRoleArn") String nodeRoleArn,
+        @OutputCustomType.Parameter("releaseVersion") String releaseVersion,
+        @OutputCustomType.Parameter("remoteAccesses") List<GetNodeGroupRemoteAccess> remoteAccesses,
+        @OutputCustomType.Parameter("resources") List<GetNodeGroupResource> resources,
+        @OutputCustomType.Parameter("scalingConfigs") List<GetNodeGroupScalingConfig> scalingConfigs,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.amiType = amiType;
         this.arn = arn;
         this.clusterName = clusterName;

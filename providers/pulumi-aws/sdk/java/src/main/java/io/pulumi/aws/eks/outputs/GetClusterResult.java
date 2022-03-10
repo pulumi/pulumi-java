@@ -87,23 +87,23 @@ public final class GetClusterResult {
      */
     private final GetClusterVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor({"arn","certificateAuthority","createdAt","enabledClusterLogTypes","endpoint","id","identities","kubernetesNetworkConfigs","name","platformVersion","roleArn","status","tags","version","vpcConfig"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        GetClusterCertificateAuthority certificateAuthority,
-        String createdAt,
-        List<String> enabledClusterLogTypes,
-        String endpoint,
-        String id,
-        List<GetClusterIdentity> identities,
-        List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs,
-        String name,
-        String platformVersion,
-        String roleArn,
-        String status,
-        Map<String,String> tags,
-        String version,
-        GetClusterVpcConfig vpcConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateAuthority") GetClusterCertificateAuthority certificateAuthority,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("enabledClusterLogTypes") List<String> enabledClusterLogTypes,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identities") List<GetClusterIdentity> identities,
+        @OutputCustomType.Parameter("kubernetesNetworkConfigs") List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformVersion") String platformVersion,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vpcConfig") GetClusterVpcConfig vpcConfig) {
         this.arn = arn;
         this.certificateAuthority = certificateAuthority;
         this.createdAt = createdAt;

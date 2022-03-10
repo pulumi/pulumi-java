@@ -30,12 +30,12 @@ public final class ResourceSetResource {
      */
     private final @Nullable String resourceArn;
 
-    @OutputCustomType.Constructor({"componentId","dnsTargetResource","readinessScopes","resourceArn"})
+    @OutputCustomType.Constructor
     private ResourceSetResource(
-        @Nullable String componentId,
-        @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
-        @Nullable List<String> readinessScopes,
-        @Nullable String resourceArn) {
+        @OutputCustomType.Parameter("componentId") @Nullable String componentId,
+        @OutputCustomType.Parameter("dnsTargetResource") @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
+        @OutputCustomType.Parameter("readinessScopes") @Nullable List<String> readinessScopes,
+        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn) {
         this.componentId = componentId;
         this.dnsTargetResource = dnsTargetResource;
         this.readinessScopes = readinessScopes;

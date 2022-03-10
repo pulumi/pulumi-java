@@ -31,12 +31,12 @@ public final class FleetEc2InboundPermission {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","ipRange","protocol","toPort"})
+    @OutputCustomType.Constructor
     private FleetEc2InboundPermission(
-        Integer fromPort,
-        String ipRange,
-        String protocol,
-        Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.ipRange = ipRange;
         this.protocol = protocol;

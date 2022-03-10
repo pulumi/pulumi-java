@@ -17,10 +17,10 @@ public final class GetLaunchTemplateTagSpecification {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateTagSpecification(
-        String resourceType,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

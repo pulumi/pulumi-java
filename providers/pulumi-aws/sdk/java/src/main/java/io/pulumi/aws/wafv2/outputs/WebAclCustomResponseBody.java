@@ -25,11 +25,11 @@ public final class WebAclCustomResponseBody {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"content","contentType","key"})
+    @OutputCustomType.Constructor
     private WebAclCustomResponseBody(
-        String content,
-        String contentType,
-        String key) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("key") String key) {
         this.content = content;
         this.contentType = contentType;
         this.key = key;

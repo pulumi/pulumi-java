@@ -28,11 +28,11 @@ public final class BucketLifecycleRuleTransition {
      */
     private final String storageClass;
 
-    @OutputCustomType.Constructor({"date","days","storageClass"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleTransition(
-        @Nullable String date,
-        @Nullable Integer days,
-        String storageClass) {
+        @OutputCustomType.Parameter("date") @Nullable String date,
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("storageClass") String storageClass) {
         this.date = date;
         this.days = days;
         this.storageClass = storageClass;

@@ -52,16 +52,16 @@ public final class GetKeyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"createdDate","description","enabled","id","lastUpdatedDate","name","tags","value"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        String createdDate,
-        String description,
-        Boolean enabled,
-        String id,
-        String lastUpdatedDate,
-        String name,
-        Map<String,String> tags,
-        String value) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("value") String value) {
         this.createdDate = createdDate;
         this.description = description;
         this.enabled = enabled;

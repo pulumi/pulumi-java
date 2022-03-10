@@ -17,8 +17,8 @@ public final class ClusterCertificateAuthority {
      */
     private final @Nullable String data;
 
-    @OutputCustomType.Constructor({"data"})
-    private ClusterCertificateAuthority(@Nullable String data) {
+    @OutputCustomType.Constructor
+    private ClusterCertificateAuthority(@OutputCustomType.Parameter("data") @Nullable String data) {
         this.data = data;
     }
 

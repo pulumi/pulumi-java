@@ -12,10 +12,10 @@ public final class GetKeyMultiRegionConfigurationReplicaKey {
     private final String arn;
     private final String region;
 
-    @OutputCustomType.Constructor({"arn","region"})
+    @OutputCustomType.Constructor
     private GetKeyMultiRegionConfigurationReplicaKey(
-        String arn,
-        String region) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("region") String region) {
         this.arn = arn;
         this.region = region;
     }

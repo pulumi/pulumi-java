@@ -23,10 +23,10 @@ public final class ClusterEncryptionInfo {
      */
     private final @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit;
 
-    @OutputCustomType.Constructor({"encryptionAtRestKmsKeyArn","encryptionInTransit"})
+    @OutputCustomType.Constructor
     private ClusterEncryptionInfo(
-        @Nullable String encryptionAtRestKmsKeyArn,
-        @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
+        @OutputCustomType.Parameter("encryptionAtRestKmsKeyArn") @Nullable String encryptionAtRestKmsKeyArn,
+        @OutputCustomType.Parameter("encryptionInTransit") @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
         this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
         this.encryptionInTransit = encryptionInTransit;
     }

@@ -22,10 +22,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor({"userGroups","userIds"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        @Nullable List<String> userGroups,
-        @Nullable List<String> userIds) {
+        @OutputCustomType.Parameter("userGroups") @Nullable List<String> userGroups,
+        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }

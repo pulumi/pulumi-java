@@ -27,11 +27,11 @@ public final class RemediationConfigurationParameter {
      */
     private final @Nullable String staticValue;
 
-    @OutputCustomType.Constructor({"name","resourceValue","staticValue"})
+    @OutputCustomType.Constructor
     private RemediationConfigurationParameter(
-        String name,
-        @Nullable String resourceValue,
-        @Nullable String staticValue) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceValue") @Nullable String resourceValue,
+        @OutputCustomType.Parameter("staticValue") @Nullable String staticValue) {
         this.name = name;
         this.resourceValue = resourceValue;
         this.staticValue = staticValue;

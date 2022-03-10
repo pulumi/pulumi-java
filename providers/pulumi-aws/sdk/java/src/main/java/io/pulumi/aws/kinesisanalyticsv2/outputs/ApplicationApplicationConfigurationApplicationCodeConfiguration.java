@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final String codeContentType;
 
-    @OutputCustomType.Constructor({"codeContent","codeContentType"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfiguration(
-        @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
-        String codeContentType) {
+        @OutputCustomType.Parameter("codeContent") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
+        @OutputCustomType.Parameter("codeContentType") String codeContentType) {
         this.codeContent = codeContent;
         this.codeContentType = codeContentType;
     }

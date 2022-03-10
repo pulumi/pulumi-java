@@ -28,13 +28,13 @@ public final class GetApplicationResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"appversionLifecycle","arn","description","id","name"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        GetApplicationAppversionLifecycle appversionLifecycle,
-        String arn,
-        String description,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("appversionLifecycle") GetApplicationAppversionLifecycle appversionLifecycle,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.appversionLifecycle = appversionLifecycle;
         this.arn = arn;
         this.description = description;

@@ -16,11 +16,11 @@ public final class GetKeyMultiRegionConfiguration {
     private final List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys;
     private final List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys;
 
-    @OutputCustomType.Constructor({"multiRegionKeyType","primaryKeys","replicaKeys"})
+    @OutputCustomType.Constructor
     private GetKeyMultiRegionConfiguration(
-        String multiRegionKeyType,
-        List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
-        List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
+        @OutputCustomType.Parameter("multiRegionKeyType") String multiRegionKeyType,
+        @OutputCustomType.Parameter("primaryKeys") List<GetKeyMultiRegionConfigurationPrimaryKey> primaryKeys,
+        @OutputCustomType.Parameter("replicaKeys") List<GetKeyMultiRegionConfigurationReplicaKey> replicaKeys) {
         this.multiRegionKeyType = multiRegionKeyType;
         this.primaryKeys = primaryKeys;
         this.replicaKeys = replicaKeys;

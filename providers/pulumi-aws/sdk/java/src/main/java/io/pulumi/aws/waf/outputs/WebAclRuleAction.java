@@ -15,8 +15,8 @@ public final class WebAclRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private WebAclRuleAction(String type) {
+    @OutputCustomType.Constructor
+    private WebAclRuleAction(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

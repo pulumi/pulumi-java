@@ -29,11 +29,11 @@ public final class BucketReplicationConfigRuleFilter {
      */
     private final @Nullable BucketReplicationConfigRuleFilterTag tag;
 
-    @OutputCustomType.Constructor({"and","prefix","tag"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleFilter(
-        @Nullable BucketReplicationConfigRuleFilterAnd and,
-        @Nullable String prefix,
-        @Nullable BucketReplicationConfigRuleFilterTag tag) {
+        @OutputCustomType.Parameter("and") @Nullable BucketReplicationConfigRuleFilterAnd and,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tag") @Nullable BucketReplicationConfigRuleFilterTag tag) {
         this.and = and;
         this.prefix = prefix;
         this.tag = tag;

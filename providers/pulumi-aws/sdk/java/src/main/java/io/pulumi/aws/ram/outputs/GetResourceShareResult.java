@@ -42,16 +42,16 @@ public final class GetResourceShareResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","filters","id","name","owningAccountId","resourceOwner","status","tags"})
+    @OutputCustomType.Constructor
     private GetResourceShareResult(
-        String arn,
-        @Nullable List<GetResourceShareFilter> filters,
-        String id,
-        String name,
-        String owningAccountId,
-        String resourceOwner,
-        String status,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetResourceShareFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owningAccountId") String owningAccountId,
+        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.id = id;

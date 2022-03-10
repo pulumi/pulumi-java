@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
-        String headerBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
+        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
+        @OutputCustomType.Parameter("headers") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

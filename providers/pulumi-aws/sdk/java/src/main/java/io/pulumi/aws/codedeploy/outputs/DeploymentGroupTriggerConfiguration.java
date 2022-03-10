@@ -26,11 +26,11 @@ public final class DeploymentGroupTriggerConfiguration {
      */
     private final String triggerTargetArn;
 
-    @OutputCustomType.Constructor({"triggerEvents","triggerName","triggerTargetArn"})
+    @OutputCustomType.Constructor
     private DeploymentGroupTriggerConfiguration(
-        List<String> triggerEvents,
-        String triggerName,
-        String triggerTargetArn) {
+        @OutputCustomType.Parameter("triggerEvents") List<String> triggerEvents,
+        @OutputCustomType.Parameter("triggerName") String triggerName,
+        @OutputCustomType.Parameter("triggerTargetArn") String triggerTargetArn) {
         this.triggerEvents = triggerEvents;
         this.triggerName = triggerName;
         this.triggerTargetArn = triggerTargetArn;

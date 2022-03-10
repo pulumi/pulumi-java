@@ -15,8 +15,8 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"override"})
-    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Boolean override) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(@OutputCustomType.Parameter("override") Boolean override) {
         this.override = override;
     }
 

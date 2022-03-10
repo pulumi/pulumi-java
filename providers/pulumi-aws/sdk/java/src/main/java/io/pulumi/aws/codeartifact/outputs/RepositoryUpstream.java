@@ -15,8 +15,8 @@ public final class RepositoryUpstream {
      */
     private final String repositoryName;
 
-    @OutputCustomType.Constructor({"repositoryName"})
-    private RepositoryUpstream(String repositoryName) {
+    @OutputCustomType.Constructor
+    private RepositoryUpstream(@OutputCustomType.Parameter("repositoryName") String repositoryName) {
         this.repositoryName = repositoryName;
     }
 

@@ -78,21 +78,21 @@ public final class SnapshotClusterConfiguration {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"description","engineVersion","maintenanceWindow","name","nodeType","numShards","parameterGroupName","port","snapshotRetentionLimit","snapshotWindow","subnetGroupName","topicArn","vpcId"})
+    @OutputCustomType.Constructor
     private SnapshotClusterConfiguration(
-        @Nullable String description,
-        @Nullable String engineVersion,
-        @Nullable String maintenanceWindow,
-        @Nullable String name,
-        @Nullable String nodeType,
-        @Nullable Integer numShards,
-        @Nullable String parameterGroupName,
-        @Nullable Integer port,
-        @Nullable Integer snapshotRetentionLimit,
-        @Nullable String snapshotWindow,
-        @Nullable String subnetGroupName,
-        @Nullable String topicArn,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
+        @OutputCustomType.Parameter("numShards") @Nullable Integer numShards,
+        @OutputCustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
+        @OutputCustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.description = description;
         this.engineVersion = engineVersion;
         this.maintenanceWindow = maintenanceWindow;

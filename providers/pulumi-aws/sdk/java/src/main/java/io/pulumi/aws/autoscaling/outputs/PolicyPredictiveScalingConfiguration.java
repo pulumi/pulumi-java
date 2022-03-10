@@ -38,13 +38,13 @@ public final class PolicyPredictiveScalingConfiguration {
      */
     private final @Nullable String schedulingBufferTime;
 
-    @OutputCustomType.Constructor({"maxCapacityBreachBehavior","maxCapacityBuffer","metricSpecification","mode","schedulingBufferTime"})
+    @OutputCustomType.Constructor
     private PolicyPredictiveScalingConfiguration(
-        @Nullable String maxCapacityBreachBehavior,
-        @Nullable String maxCapacityBuffer,
-        PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
-        @Nullable String mode,
-        @Nullable String schedulingBufferTime) {
+        @OutputCustomType.Parameter("maxCapacityBreachBehavior") @Nullable String maxCapacityBreachBehavior,
+        @OutputCustomType.Parameter("maxCapacityBuffer") @Nullable String maxCapacityBuffer,
+        @OutputCustomType.Parameter("metricSpecification") PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("schedulingBufferTime") @Nullable String schedulingBufferTime) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         this.maxCapacityBuffer = maxCapacityBuffer;
         this.metricSpecification = metricSpecification;

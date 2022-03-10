@@ -33,12 +33,12 @@ public final class TaskSetLoadBalancer {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","loadBalancerName","targetGroupArn"})
+    @OutputCustomType.Constructor
     private TaskSetLoadBalancer(
-        String containerName,
-        @Nullable Integer containerPort,
-        @Nullable String loadBalancerName,
-        @Nullable String targetGroupArn) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;

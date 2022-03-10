@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
      */
     private final List<String> buckets;
 
-    @OutputCustomType.Constructor({"accountId","buckets"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionBucketDefinition(
-        String accountId,
-        List<String> buckets) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("buckets") List<String> buckets) {
         this.accountId = accountId;
         this.buckets = buckets;
     }

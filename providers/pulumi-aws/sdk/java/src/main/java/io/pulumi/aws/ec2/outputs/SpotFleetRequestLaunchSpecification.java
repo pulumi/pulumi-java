@@ -62,28 +62,28 @@ public final class SpotFleetRequestLaunchSpecification {
      */
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor({"ami","associatePublicIpAddress","availabilityZone","ebsBlockDevices","ebsOptimized","ephemeralBlockDevices","iamInstanceProfile","iamInstanceProfileArn","instanceType","keyName","monitoring","placementGroup","placementTenancy","rootBlockDevices","spotPrice","subnetId","tags","userData","vpcSecurityGroupIds","weightedCapacity"})
+    @OutputCustomType.Constructor
     private SpotFleetRequestLaunchSpecification(
-        String ami,
-        @Nullable Boolean associatePublicIpAddress,
-        @Nullable String availabilityZone,
-        @Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices,
-        @Nullable Boolean ebsOptimized,
-        @Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices,
-        @Nullable String iamInstanceProfile,
-        @Nullable String iamInstanceProfileArn,
-        String instanceType,
-        @Nullable String keyName,
-        @Nullable Boolean monitoring,
-        @Nullable String placementGroup,
-        @Nullable String placementTenancy,
-        @Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable Map<String,String> tags,
-        @Nullable String userData,
-        @Nullable List<String> vpcSecurityGroupIds,
-        @Nullable String weightedCapacity) {
+        @OutputCustomType.Parameter("ami") String ami,
+        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("ebsBlockDevices") @Nullable List<SpotFleetRequestLaunchSpecificationEbsBlockDevice> ebsBlockDevices,
+        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @OutputCustomType.Parameter("ephemeralBlockDevices") @Nullable List<SpotFleetRequestLaunchSpecificationEphemeralBlockDevice> ephemeralBlockDevices,
+        @OutputCustomType.Parameter("iamInstanceProfile") @Nullable String iamInstanceProfile,
+        @OutputCustomType.Parameter("iamInstanceProfileArn") @Nullable String iamInstanceProfileArn,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("monitoring") @Nullable Boolean monitoring,
+        @OutputCustomType.Parameter("placementGroup") @Nullable String placementGroup,
+        @OutputCustomType.Parameter("placementTenancy") @Nullable String placementTenancy,
+        @OutputCustomType.Parameter("rootBlockDevices") @Nullable List<SpotFleetRequestLaunchSpecificationRootBlockDevice> rootBlockDevices,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.ami = ami;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.availabilityZone = availabilityZone;

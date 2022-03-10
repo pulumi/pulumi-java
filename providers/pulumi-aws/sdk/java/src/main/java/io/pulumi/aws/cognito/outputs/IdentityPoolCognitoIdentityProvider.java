@@ -28,11 +28,11 @@ public final class IdentityPoolCognitoIdentityProvider {
      */
     private final @Nullable Boolean serverSideTokenCheck;
 
-    @OutputCustomType.Constructor({"clientId","providerName","serverSideTokenCheck"})
+    @OutputCustomType.Constructor
     private IdentityPoolCognitoIdentityProvider(
-        @Nullable String clientId,
-        @Nullable String providerName,
-        @Nullable Boolean serverSideTokenCheck) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("providerName") @Nullable String providerName,
+        @OutputCustomType.Parameter("serverSideTokenCheck") @Nullable Boolean serverSideTokenCheck) {
         this.clientId = clientId;
         this.providerName = providerName;
         this.serverSideTokenCheck = serverSideTokenCheck;

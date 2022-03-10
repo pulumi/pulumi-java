@@ -42,19 +42,19 @@ public final class GetBucketObjectsResult {
     private final @Nullable String prefix;
     private final @Nullable String startAfter;
 
-    @OutputCustomType.Constructor({"bucket","commonPrefixes","delimiter","encodingType","fetchOwner","id","keys","maxKeys","owners","prefix","startAfter"})
+    @OutputCustomType.Constructor
     private GetBucketObjectsResult(
-        String bucket,
-        List<String> commonPrefixes,
-        @Nullable String delimiter,
-        @Nullable String encodingType,
-        @Nullable Boolean fetchOwner,
-        String id,
-        List<String> keys,
-        @Nullable Integer maxKeys,
-        List<String> owners,
-        @Nullable String prefix,
-        @Nullable String startAfter) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("commonPrefixes") List<String> commonPrefixes,
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("encodingType") @Nullable String encodingType,
+        @OutputCustomType.Parameter("fetchOwner") @Nullable Boolean fetchOwner,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keys") List<String> keys,
+        @OutputCustomType.Parameter("maxKeys") @Nullable Integer maxKeys,
+        @OutputCustomType.Parameter("owners") List<String> owners,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("startAfter") @Nullable String startAfter) {
         this.bucket = bucket;
         this.commonPrefixes = commonPrefixes;
         this.delimiter = delimiter;

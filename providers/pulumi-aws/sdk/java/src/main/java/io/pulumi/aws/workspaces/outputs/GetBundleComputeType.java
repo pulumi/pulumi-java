@@ -15,8 +15,8 @@ public final class GetBundleComputeType {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetBundleComputeType(String name) {
+    @OutputCustomType.Constructor
+    private GetBundleComputeType(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

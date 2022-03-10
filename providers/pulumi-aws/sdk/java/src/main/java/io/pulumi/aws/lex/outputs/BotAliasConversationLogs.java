@@ -23,10 +23,10 @@ public final class BotAliasConversationLogs {
      */
     private final @Nullable List<BotAliasConversationLogsLogSetting> logSettings;
 
-    @OutputCustomType.Constructor({"iamRoleArn","logSettings"})
+    @OutputCustomType.Constructor
     private BotAliasConversationLogs(
-        String iamRoleArn,
-        @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("logSettings") @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
         this.iamRoleArn = iamRoleArn;
         this.logSettings = logSettings;
     }

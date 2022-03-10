@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      */
     private final Boolean snapshotsEnabled;
 
-    @OutputCustomType.Constructor({"snapshotsEnabled"})
-    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(Boolean snapshotsEnabled) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(@OutputCustomType.Parameter("snapshotsEnabled") Boolean snapshotsEnabled) {
         this.snapshotsEnabled = snapshotsEnabled;
     }
 

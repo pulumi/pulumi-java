@@ -22,10 +22,10 @@ public final class ServicePlacementConstraint {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expression","type"})
+    @OutputCustomType.Constructor
     private ServicePlacementConstraint(
-        @Nullable String expression,
-        String type) {
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("type") String type) {
         this.expression = expression;
         this.type = type;
     }

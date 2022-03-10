@@ -27,11 +27,11 @@ public final class CrawlerJdbcTarget {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"connectionName","exclusions","path"})
+    @OutputCustomType.Constructor
     private CrawlerJdbcTarget(
-        String connectionName,
-        @Nullable List<String> exclusions,
-        String path) {
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @OutputCustomType.Parameter("path") String path) {
         this.connectionName = connectionName;
         this.exclusions = exclusions;
         this.path = path;

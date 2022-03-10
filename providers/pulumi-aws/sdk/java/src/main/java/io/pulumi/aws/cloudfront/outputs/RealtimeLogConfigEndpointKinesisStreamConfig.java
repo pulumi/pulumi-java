@@ -21,10 +21,10 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfig {
      */
     private final String streamArn;
 
-    @OutputCustomType.Constructor({"roleArn","streamArn"})
+    @OutputCustomType.Constructor
     private RealtimeLogConfigEndpointKinesisStreamConfig(
-        String roleArn,
-        String streamArn) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("streamArn") String streamArn) {
         this.roleArn = roleArn;
         this.streamArn = streamArn;
     }

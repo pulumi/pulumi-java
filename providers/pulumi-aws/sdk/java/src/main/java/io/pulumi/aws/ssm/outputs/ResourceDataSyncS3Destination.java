@@ -37,13 +37,13 @@ public final class ResourceDataSyncS3Destination {
      */
     private final @Nullable String syncFormat;
 
-    @OutputCustomType.Constructor({"bucketName","kmsKeyArn","prefix","region","syncFormat"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncS3Destination(
-        String bucketName,
-        @Nullable String kmsKeyArn,
-        @Nullable String prefix,
-        String region,
-        @Nullable String syncFormat) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("syncFormat") @Nullable String syncFormat) {
         this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;

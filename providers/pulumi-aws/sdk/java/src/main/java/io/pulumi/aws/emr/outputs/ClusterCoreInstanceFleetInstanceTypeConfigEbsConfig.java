@@ -33,12 +33,12 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig {
      */
     private final @Nullable Integer volumesPerInstance;
 
-    @OutputCustomType.Constructor({"iops","size","type","volumesPerInstance"})
+    @OutputCustomType.Constructor
     private ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig(
-        @Nullable Integer iops,
-        Integer size,
-        String type,
-        @Nullable Integer volumesPerInstance) {
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumesPerInstance") @Nullable Integer volumesPerInstance) {
         this.iops = iops;
         this.size = size;
         this.type = type;

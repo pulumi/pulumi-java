@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute;
 
-    @OutputCustomType.Constructor({"prodTrafficRoute","targetGroups","testTrafficRoute"})
+    @OutputCustomType.Constructor
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfo(
-        DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
-        List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
-        @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
+        @OutputCustomType.Parameter("prodTrafficRoute") DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
+        @OutputCustomType.Parameter("targetGroups") List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
+        @OutputCustomType.Parameter("testTrafficRoute") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
         this.prodTrafficRoute = prodTrafficRoute;
         this.targetGroups = targetGroups;
         this.testTrafficRoute = testTrafficRoute;

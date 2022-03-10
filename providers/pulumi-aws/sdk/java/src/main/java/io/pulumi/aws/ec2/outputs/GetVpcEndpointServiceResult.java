@@ -75,23 +75,23 @@ public final class GetVpcEndpointServiceResult {
      */
     private final Boolean vpcEndpointPolicySupported;
 
-    @OutputCustomType.Constructor({"acceptanceRequired","arn","availabilityZones","baseEndpointDnsNames","filters","id","managesVpcEndpoints","owner","privateDnsName","service","serviceId","serviceName","serviceType","tags","vpcEndpointPolicySupported"})
+    @OutputCustomType.Constructor
     private GetVpcEndpointServiceResult(
-        Boolean acceptanceRequired,
-        String arn,
-        List<String> availabilityZones,
-        List<String> baseEndpointDnsNames,
-        @Nullable List<GetVpcEndpointServiceFilter> filters,
-        String id,
-        Boolean managesVpcEndpoints,
-        String owner,
-        String privateDnsName,
-        @Nullable String service,
-        String serviceId,
-        String serviceName,
-        String serviceType,
-        Map<String,String> tags,
-        Boolean vpcEndpointPolicySupported) {
+        @OutputCustomType.Parameter("acceptanceRequired") Boolean acceptanceRequired,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("baseEndpointDnsNames") List<String> baseEndpointDnsNames,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcEndpointServiceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("managesVpcEndpoints") Boolean managesVpcEndpoints,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("privateDnsName") String privateDnsName,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceType") String serviceType,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcEndpointPolicySupported") Boolean vpcEndpointPolicySupported) {
         this.acceptanceRequired = acceptanceRequired;
         this.arn = arn;
         this.availabilityZones = availabilityZones;

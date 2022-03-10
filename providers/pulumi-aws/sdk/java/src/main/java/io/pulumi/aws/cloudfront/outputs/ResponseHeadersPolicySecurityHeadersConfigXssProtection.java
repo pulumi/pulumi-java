@@ -33,12 +33,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtection {
      */
     private final @Nullable String reportUri;
 
-    @OutputCustomType.Constructor({"modeBlock","override","protection","reportUri"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigXssProtection(
-        @Nullable Boolean modeBlock,
-        Boolean override,
-        Boolean protection,
-        @Nullable String reportUri) {
+        @OutputCustomType.Parameter("modeBlock") @Nullable Boolean modeBlock,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("protection") Boolean protection,
+        @OutputCustomType.Parameter("reportUri") @Nullable String reportUri) {
         this.modeBlock = modeBlock;
         this.override = override;
         this.protection = protection;

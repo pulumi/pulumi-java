@@ -32,12 +32,12 @@ public final class PresetAudioCodecOptions {
      */
     private final @Nullable String signed;
 
-    @OutputCustomType.Constructor({"bitDepth","bitOrder","profile","signed"})
+    @OutputCustomType.Constructor
     private PresetAudioCodecOptions(
-        @Nullable String bitDepth,
-        @Nullable String bitOrder,
-        @Nullable String profile,
-        @Nullable String signed) {
+        @OutputCustomType.Parameter("bitDepth") @Nullable String bitDepth,
+        @OutputCustomType.Parameter("bitOrder") @Nullable String bitOrder,
+        @OutputCustomType.Parameter("profile") @Nullable String profile,
+        @OutputCustomType.Parameter("signed") @Nullable String signed) {
         this.bitDepth = bitDepth;
         this.bitOrder = bitOrder;
         this.profile = profile;

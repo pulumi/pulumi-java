@@ -58,17 +58,17 @@ public final class EndpointKinesisSettings {
      */
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor({"includeControlDetails","includeNullAndEmpty","includePartitionValue","includeTableAlterOperations","includeTransactionDetails","messageFormat","partitionIncludeSchemaTable","serviceAccessRoleArn","streamArn"})
+    @OutputCustomType.Constructor
     private EndpointKinesisSettings(
-        @Nullable Boolean includeControlDetails,
-        @Nullable Boolean includeNullAndEmpty,
-        @Nullable Boolean includePartitionValue,
-        @Nullable Boolean includeTableAlterOperations,
-        @Nullable Boolean includeTransactionDetails,
-        @Nullable String messageFormat,
-        @Nullable Boolean partitionIncludeSchemaTable,
-        @Nullable String serviceAccessRoleArn,
-        @Nullable String streamArn) {
+        @OutputCustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
+        @OutputCustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
+        @OutputCustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
+        @OutputCustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
+        @OutputCustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
+        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @OutputCustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
+        @OutputCustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn,
+        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
         this.includePartitionValue = includePartitionValue;

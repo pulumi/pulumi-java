@@ -21,10 +21,10 @@ public final class GatewayRouteSpecHttpRoute {
      */
     private final GatewayRouteSpecHttpRouteMatch match;
 
-    @OutputCustomType.Constructor({"action","match"})
+    @OutputCustomType.Constructor
     private GatewayRouteSpecHttpRoute(
-        GatewayRouteSpecHttpRouteAction action,
-        GatewayRouteSpecHttpRouteMatch match) {
+        @OutputCustomType.Parameter("action") GatewayRouteSpecHttpRouteAction action,
+        @OutputCustomType.Parameter("match") GatewayRouteSpecHttpRouteMatch match) {
         this.action = action;
         this.match = match;
     }

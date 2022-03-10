@@ -54,15 +54,15 @@ public final class WebAclRule {
      */
     private final WebAclRuleVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","name","overrideAction","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private WebAclRule(
-        @Nullable WebAclRuleAction action,
-        String name,
-        @Nullable WebAclRuleOverrideAction overrideAction,
-        Integer priority,
-        @Nullable List<WebAclRuleRuleLabel> ruleLabels,
-        WebAclRuleStatement statement,
-        WebAclRuleVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") @Nullable WebAclRuleAction action,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<WebAclRuleRuleLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") WebAclRuleStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") WebAclRuleVisibilityConfig visibilityConfig) {
         this.action = action;
         this.name = name;
         this.overrideAction = overrideAction;

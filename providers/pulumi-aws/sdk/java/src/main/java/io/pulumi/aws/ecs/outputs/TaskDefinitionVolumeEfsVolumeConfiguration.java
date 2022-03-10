@@ -39,13 +39,13 @@ public final class TaskDefinitionVolumeEfsVolumeConfiguration {
      */
     private final @Nullable Integer transitEncryptionPort;
 
-    @OutputCustomType.Constructor({"authorizationConfig","fileSystemId","rootDirectory","transitEncryption","transitEncryptionPort"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeEfsVolumeConfiguration(
-        @Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig,
-        String fileSystemId,
-        @Nullable String rootDirectory,
-        @Nullable String transitEncryption,
-        @Nullable Integer transitEncryptionPort) {
+        @OutputCustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
+        @OutputCustomType.Parameter("transitEncryption") @Nullable String transitEncryption,
+        @OutputCustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
         this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;

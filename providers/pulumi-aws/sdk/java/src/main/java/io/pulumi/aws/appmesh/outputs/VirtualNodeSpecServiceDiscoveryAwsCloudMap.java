@@ -28,11 +28,11 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMap {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"attributes","namespaceName","serviceName"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecServiceDiscoveryAwsCloudMap(
-        @Nullable Map<String,String> attributes,
-        String namespaceName,
-        String serviceName) {
+        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @OutputCustomType.Parameter("namespaceName") String namespaceName,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.attributes = attributes;
         this.namespaceName = namespaceName;
         this.serviceName = serviceName;

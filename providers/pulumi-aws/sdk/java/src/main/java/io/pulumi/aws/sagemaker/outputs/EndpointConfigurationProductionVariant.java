@@ -44,14 +44,14 @@ public final class EndpointConfigurationProductionVariant {
      */
     private final @Nullable String variantName;
 
-    @OutputCustomType.Constructor({"acceleratorType","initialInstanceCount","initialVariantWeight","instanceType","modelName","variantName"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationProductionVariant(
-        @Nullable String acceleratorType,
-        Integer initialInstanceCount,
-        @Nullable Double initialVariantWeight,
-        String instanceType,
-        String modelName,
-        @Nullable String variantName) {
+        @OutputCustomType.Parameter("acceleratorType") @Nullable String acceleratorType,
+        @OutputCustomType.Parameter("initialInstanceCount") Integer initialInstanceCount,
+        @OutputCustomType.Parameter("initialVariantWeight") @Nullable Double initialVariantWeight,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("modelName") String modelName,
+        @OutputCustomType.Parameter("variantName") @Nullable String variantName) {
         this.acceleratorType = acceleratorType;
         this.initialInstanceCount = initialInstanceCount;
         this.initialVariantWeight = initialVariantWeight;

@@ -55,18 +55,18 @@ public final class GetInstanceRootBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceName","encrypted","iops","kmsKeyId","tags","throughput","volumeId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetInstanceRootBlockDevice(
-        Boolean deleteOnTermination,
-        String deviceName,
-        Boolean encrypted,
-        Integer iops,
-        String kmsKeyId,
-        Map<String,String> tags,
-        Integer throughput,
-        String volumeId,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("throughput") Integer throughput,
+        @OutputCustomType.Parameter("volumeId") String volumeId,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = deviceName;
         this.encrypted = encrypted;

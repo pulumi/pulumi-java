@@ -65,17 +65,17 @@ public final class AnalyticsApplicationInputs {
     private final @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations;
     private final @Nullable List<String> streamNames;
 
-    @OutputCustomType.Constructor({"id","kinesisFirehose","kinesisStream","namePrefix","parallelism","processingConfiguration","schema","startingPositionConfigurations","streamNames"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputs(
-        @Nullable String id,
-        @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
-        @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
-        String namePrefix,
-        @Nullable AnalyticsApplicationInputsParallelism parallelism,
-        @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
-        AnalyticsApplicationInputsSchema schema,
-        @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
-        @Nullable List<String> streamNames) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
+        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("parallelism") @Nullable AnalyticsApplicationInputsParallelism parallelism,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationInputsSchema schema,
+        @OutputCustomType.Parameter("startingPositionConfigurations") @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
+        @OutputCustomType.Parameter("streamNames") @Nullable List<String> streamNames) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;

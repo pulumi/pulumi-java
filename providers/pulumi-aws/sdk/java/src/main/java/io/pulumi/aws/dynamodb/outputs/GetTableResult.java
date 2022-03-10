@@ -46,29 +46,29 @@ public final class GetTableResult {
     private final GetTableTtl ttl;
     private final Integer writeCapacity;
 
-    @OutputCustomType.Constructor({"arn","attributes","billingMode","globalSecondaryIndexes","hashKey","id","localSecondaryIndexes","name","pointInTimeRecovery","rangeKey","readCapacity","replicas","serverSideEncryption","streamArn","streamEnabled","streamLabel","streamViewType","tableClass","tags","ttl","writeCapacity"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        String arn,
-        List<GetTableAttribute> attributes,
-        String billingMode,
-        List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes,
-        String hashKey,
-        String id,
-        List<GetTableLocalSecondaryIndex> localSecondaryIndexes,
-        String name,
-        GetTablePointInTimeRecovery pointInTimeRecovery,
-        String rangeKey,
-        Integer readCapacity,
-        List<GetTableReplica> replicas,
-        GetTableServerSideEncryption serverSideEncryption,
-        String streamArn,
-        Boolean streamEnabled,
-        String streamLabel,
-        String streamViewType,
-        String tableClass,
-        Map<String,String> tags,
-        GetTableTtl ttl,
-        Integer writeCapacity) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attributes") List<GetTableAttribute> attributes,
+        @OutputCustomType.Parameter("billingMode") String billingMode,
+        @OutputCustomType.Parameter("globalSecondaryIndexes") List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes,
+        @OutputCustomType.Parameter("hashKey") String hashKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localSecondaryIndexes") List<GetTableLocalSecondaryIndex> localSecondaryIndexes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pointInTimeRecovery") GetTablePointInTimeRecovery pointInTimeRecovery,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey,
+        @OutputCustomType.Parameter("readCapacity") Integer readCapacity,
+        @OutputCustomType.Parameter("replicas") List<GetTableReplica> replicas,
+        @OutputCustomType.Parameter("serverSideEncryption") GetTableServerSideEncryption serverSideEncryption,
+        @OutputCustomType.Parameter("streamArn") String streamArn,
+        @OutputCustomType.Parameter("streamEnabled") Boolean streamEnabled,
+        @OutputCustomType.Parameter("streamLabel") String streamLabel,
+        @OutputCustomType.Parameter("streamViewType") String streamViewType,
+        @OutputCustomType.Parameter("tableClass") String tableClass,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("ttl") GetTableTtl ttl,
+        @OutputCustomType.Parameter("writeCapacity") Integer writeCapacity) {
         this.arn = arn;
         this.attributes = attributes;
         this.billingMode = billingMode;

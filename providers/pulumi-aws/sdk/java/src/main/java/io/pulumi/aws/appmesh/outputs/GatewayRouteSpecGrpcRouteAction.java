@@ -15,8 +15,8 @@ public final class GatewayRouteSpecGrpcRouteAction {
      */
     private final GatewayRouteSpecGrpcRouteActionTarget target;
 
-    @OutputCustomType.Constructor({"target"})
-    private GatewayRouteSpecGrpcRouteAction(GatewayRouteSpecGrpcRouteActionTarget target) {
+    @OutputCustomType.Constructor
+    private GatewayRouteSpecGrpcRouteAction(@OutputCustomType.Parameter("target") GatewayRouteSpecGrpcRouteActionTarget target) {
         this.target = target;
     }
 

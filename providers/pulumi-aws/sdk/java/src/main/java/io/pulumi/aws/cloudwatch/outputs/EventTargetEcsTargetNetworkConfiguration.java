@@ -29,11 +29,11 @@ public final class EventTargetEcsTargetNetworkConfiguration {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"assignPublicIp","securityGroups","subnets"})
+    @OutputCustomType.Constructor
     private EventTargetEcsTargetNetworkConfiguration(
-        @Nullable Boolean assignPublicIp,
-        @Nullable List<String> securityGroups,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("assignPublicIp") @Nullable Boolean assignPublicIp,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;

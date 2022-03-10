@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationS3Encryption {
      */
     private final @Nullable String s3EncryptionMode;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","s3EncryptionMode"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationS3Encryption(
-        @Nullable String kmsKeyArn,
-        @Nullable String s3EncryptionMode) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("s3EncryptionMode") @Nullable String s3EncryptionMode) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3EncryptionMode = s3EncryptionMode;
     }

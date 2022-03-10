@@ -34,12 +34,12 @@ public final class ClusterStepHadoopJarStep {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"args","jar","mainClass","properties"})
+    @OutputCustomType.Constructor
     private ClusterStepHadoopJarStep(
-        @Nullable List<String> args,
-        String jar,
-        @Nullable String mainClass,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("jar") String jar,
+        @OutputCustomType.Parameter("mainClass") @Nullable String mainClass,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.args = args;
         this.jar = jar;
         this.mainClass = mainClass;

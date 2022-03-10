@@ -38,12 +38,12 @@ public final class TableLocalSecondaryIndex {
      */
     private final String rangeKey;
 
-    @OutputCustomType.Constructor({"name","nonKeyAttributes","projectionType","rangeKey"})
+    @OutputCustomType.Constructor
     private TableLocalSecondaryIndex(
-        String name,
-        @Nullable List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey) {
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;

@@ -35,13 +35,13 @@ public final class GetImageOutputResourceAmi {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"accountId","description","image","name","region"})
+    @OutputCustomType.Constructor
     private GetImageOutputResourceAmi(
-        String accountId,
-        String description,
-        String image,
-        String name,
-        String region) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;

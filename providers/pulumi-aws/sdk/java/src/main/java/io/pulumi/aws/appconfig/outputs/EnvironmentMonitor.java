@@ -22,10 +22,10 @@ public final class EnvironmentMonitor {
      */
     private final @Nullable String alarmRoleArn;
 
-    @OutputCustomType.Constructor({"alarmArn","alarmRoleArn"})
+    @OutputCustomType.Constructor
     private EnvironmentMonitor(
-        String alarmArn,
-        @Nullable String alarmRoleArn) {
+        @OutputCustomType.Parameter("alarmArn") String alarmArn,
+        @OutputCustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn) {
         this.alarmArn = alarmArn;
         this.alarmRoleArn = alarmRoleArn;
     }

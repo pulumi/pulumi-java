@@ -42,14 +42,14 @@ public final class StackCustomCookbooksSource {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","revision","sshKey","type","url","username"})
+    @OutputCustomType.Constructor
     private StackCustomCookbooksSource(
-        @Nullable String password,
-        @Nullable String revision,
-        @Nullable String sshKey,
-        String type,
-        String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("revision") @Nullable String revision,
+        @OutputCustomType.Parameter("sshKey") @Nullable String sshKey,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;

@@ -12,10 +12,10 @@ public final class GetTableReplica {
     private final String kmsKeyArn;
     private final String regionName;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","regionName"})
+    @OutputCustomType.Constructor
     private GetTableReplica(
-        String kmsKeyArn,
-        String regionName) {
+        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn,
+        @OutputCustomType.Parameter("regionName") String regionName) {
         this.kmsKeyArn = kmsKeyArn;
         this.regionName = regionName;
     }

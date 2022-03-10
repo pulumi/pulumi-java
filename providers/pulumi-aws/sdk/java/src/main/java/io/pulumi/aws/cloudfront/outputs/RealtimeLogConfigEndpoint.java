@@ -21,10 +21,10 @@ public final class RealtimeLogConfigEndpoint {
      */
     private final String streamType;
 
-    @OutputCustomType.Constructor({"kinesisStreamConfig","streamType"})
+    @OutputCustomType.Constructor
     private RealtimeLogConfigEndpoint(
-        RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig,
-        String streamType) {
+        @OutputCustomType.Parameter("kinesisStreamConfig") RealtimeLogConfigEndpointKinesisStreamConfig kinesisStreamConfig,
+        @OutputCustomType.Parameter("streamType") String streamType) {
         this.kinesisStreamConfig = kinesisStreamConfig;
         this.streamType = streamType;
     }

@@ -25,15 +25,15 @@ public final class GetLocalGatewayRouteTableResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","localGatewayId","localGatewayRouteTableId","outpostArn","state","tags"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayRouteTableResult(
-        @Nullable List<GetLocalGatewayRouteTableFilter> filters,
-        String id,
-        String localGatewayId,
-        String localGatewayRouteTableId,
-        String outpostArn,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayRouteTableFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("localGatewayRouteTableId") String localGatewayRouteTableId,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.localGatewayId = localGatewayId;

@@ -13,11 +13,11 @@ public final class GetSigningJobRevocationRecord {
     private final String revokedAt;
     private final String revokedBy;
 
-    @OutputCustomType.Constructor({"reason","revokedAt","revokedBy"})
+    @OutputCustomType.Constructor
     private GetSigningJobRevocationRecord(
-        String reason,
-        String revokedAt,
-        String revokedBy) {
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("revokedAt") String revokedAt,
+        @OutputCustomType.Parameter("revokedBy") String revokedBy) {
         this.reason = reason;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;

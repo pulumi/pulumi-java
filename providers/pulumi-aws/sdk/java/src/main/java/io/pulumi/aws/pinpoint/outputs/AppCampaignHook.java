@@ -27,11 +27,11 @@ public final class AppCampaignHook {
      */
     private final @Nullable String webUrl;
 
-    @OutputCustomType.Constructor({"lambdaFunctionName","mode","webUrl"})
+    @OutputCustomType.Constructor
     private AppCampaignHook(
-        @Nullable String lambdaFunctionName,
-        @Nullable String mode,
-        @Nullable String webUrl) {
+        @OutputCustomType.Parameter("lambdaFunctionName") @Nullable String lambdaFunctionName,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("webUrl") @Nullable String webUrl) {
         this.lambdaFunctionName = lambdaFunctionName;
         this.mode = mode;
         this.webUrl = webUrl;

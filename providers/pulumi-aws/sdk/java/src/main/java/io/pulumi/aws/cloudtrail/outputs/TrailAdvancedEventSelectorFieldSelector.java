@@ -47,15 +47,15 @@ public final class TrailAdvancedEventSelectorFieldSelector {
      */
     private final @Nullable List<String> startsWiths;
 
-    @OutputCustomType.Constructor({"endsWiths","equals","field","notEndsWiths","notEquals","notStartsWiths","startsWiths"})
+    @OutputCustomType.Constructor
     private TrailAdvancedEventSelectorFieldSelector(
-        @Nullable List<String> endsWiths,
-        @Nullable List<String> equals,
-        String field,
-        @Nullable List<String> notEndsWiths,
-        @Nullable List<String> notEquals,
-        @Nullable List<String> notStartsWiths,
-        @Nullable List<String> startsWiths) {
+        @OutputCustomType.Parameter("endsWiths") @Nullable List<String> endsWiths,
+        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("notEndsWiths") @Nullable List<String> notEndsWiths,
+        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals,
+        @OutputCustomType.Parameter("notStartsWiths") @Nullable List<String> notStartsWiths,
+        @OutputCustomType.Parameter("startsWiths") @Nullable List<String> startsWiths) {
         this.endsWiths = endsWiths;
         this.equals = equals;
         this.field = field;

@@ -50,15 +50,15 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"dnsIps","domainName","fileSystemAdministratorsGroup","organizationalUnitDistinguidshedName","organizationalUnitDistinguishedName","password","username"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration(
-        List<String> dnsIps,
-        String domainName,
-        @Nullable String fileSystemAdministratorsGroup,
-        @Nullable String organizationalUnitDistinguidshedName,
-        @Nullable String organizationalUnitDistinguishedName,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("dnsIps") List<String> dnsIps,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
+        @OutputCustomType.Parameter("organizationalUnitDistinguidshedName") @Nullable String organizationalUnitDistinguidshedName,
+        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.dnsIps = dnsIps;
         this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;

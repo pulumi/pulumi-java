@@ -23,10 +23,10 @@ public final class WebAclDefaultAction {
      */
     private final @Nullable WebAclDefaultActionBlock block;
 
-    @OutputCustomType.Constructor({"allow","block"})
+    @OutputCustomType.Constructor
     private WebAclDefaultAction(
-        @Nullable WebAclDefaultActionAllow allow,
-        @Nullable WebAclDefaultActionBlock block) {
+        @OutputCustomType.Parameter("allow") @Nullable WebAclDefaultActionAllow allow,
+        @OutputCustomType.Parameter("block") @Nullable WebAclDefaultActionBlock block) {
         this.allow = allow;
         this.block = block;
     }

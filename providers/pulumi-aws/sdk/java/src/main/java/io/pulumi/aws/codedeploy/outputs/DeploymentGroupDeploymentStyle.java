@@ -22,10 +22,10 @@ public final class DeploymentGroupDeploymentStyle {
      */
     private final @Nullable String deploymentType;
 
-    @OutputCustomType.Constructor({"deploymentOption","deploymentType"})
+    @OutputCustomType.Constructor
     private DeploymentGroupDeploymentStyle(
-        @Nullable String deploymentOption,
-        @Nullable String deploymentType) {
+        @OutputCustomType.Parameter("deploymentOption") @Nullable String deploymentOption,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType) {
         this.deploymentOption = deploymentOption;
         this.deploymentType = deploymentType;
     }

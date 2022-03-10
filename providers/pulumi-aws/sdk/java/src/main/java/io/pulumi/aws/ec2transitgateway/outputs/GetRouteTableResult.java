@@ -46,15 +46,15 @@ public final class GetRouteTableResult {
      */
     private final String transitGatewayId;
 
-    @OutputCustomType.Constructor({"arn","defaultAssociationRouteTable","defaultPropagationRouteTable","filters","id","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        String arn,
-        Boolean defaultAssociationRouteTable,
-        Boolean defaultPropagationRouteTable,
-        @Nullable List<GetRouteTableFilter> filters,
-        String id,
-        Map<String,String> tags,
-        String transitGatewayId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("defaultAssociationRouteTable") Boolean defaultAssociationRouteTable,
+        @OutputCustomType.Parameter("defaultPropagationRouteTable") Boolean defaultPropagationRouteTable,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId) {
         this.arn = arn;
         this.defaultAssociationRouteTable = defaultAssociationRouteTable;
         this.defaultPropagationRouteTable = defaultPropagationRouteTable;

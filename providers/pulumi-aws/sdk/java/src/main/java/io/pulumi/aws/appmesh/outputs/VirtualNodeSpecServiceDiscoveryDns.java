@@ -15,8 +15,8 @@ public final class VirtualNodeSpecServiceDiscoveryDns {
      */
     private final String hostname;
 
-    @OutputCustomType.Constructor({"hostname"})
-    private VirtualNodeSpecServiceDiscoveryDns(String hostname) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecServiceDiscoveryDns(@OutputCustomType.Parameter("hostname") String hostname) {
         this.hostname = hostname;
     }
 

@@ -28,11 +28,11 @@ public final class FunctionSyncConfig {
      */
     private final @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig;
 
-    @OutputCustomType.Constructor({"conflictDetection","conflictHandler","lambdaConflictHandlerConfig"})
+    @OutputCustomType.Constructor
     private FunctionSyncConfig(
-        @Nullable String conflictDetection,
-        @Nullable String conflictHandler,
-        @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
+        @OutputCustomType.Parameter("conflictDetection") @Nullable String conflictDetection,
+        @OutputCustomType.Parameter("conflictHandler") @Nullable String conflictHandler,
+        @OutputCustomType.Parameter("lambdaConflictHandlerConfig") @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
         this.conflictDetection = conflictDetection;
         this.conflictHandler = conflictHandler;
         this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;

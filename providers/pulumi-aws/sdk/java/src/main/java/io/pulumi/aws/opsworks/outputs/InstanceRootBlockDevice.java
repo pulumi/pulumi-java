@@ -18,12 +18,12 @@ public final class InstanceRootBlockDevice {
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","iops","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private InstanceRootBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        @Nullable Integer iops,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.iops = iops;
         this.volumeSize = volumeSize;

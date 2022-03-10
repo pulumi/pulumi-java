@@ -29,11 +29,11 @@ public final class UsagePlanApiStageThrottle {
      */
     private final @Nullable Double rateLimit;
 
-    @OutputCustomType.Constructor({"burstLimit","path","rateLimit"})
+    @OutputCustomType.Constructor
     private UsagePlanApiStageThrottle(
-        @Nullable Integer burstLimit,
-        String path,
-        @Nullable Double rateLimit) {
+        @OutputCustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
         this.path = path;
         this.rateLimit = rateLimit;

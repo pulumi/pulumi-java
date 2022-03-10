@@ -24,10 +24,10 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor({"defaultResourceSpec","lifecycleConfigArns"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettingsJupyterServerAppSettings(
-        @Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @Nullable List<String> lifecycleConfigArns) {
+        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
     }

@@ -17,8 +17,8 @@ public final class ClusterAutoTerminationPolicy {
      */
     private final @Nullable Integer idleTimeout;
 
-    @OutputCustomType.Constructor({"idleTimeout"})
-    private ClusterAutoTerminationPolicy(@Nullable Integer idleTimeout) {
+    @OutputCustomType.Constructor
+    private ClusterAutoTerminationPolicy(@OutputCustomType.Parameter("idleTimeout") @Nullable Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
     }
 

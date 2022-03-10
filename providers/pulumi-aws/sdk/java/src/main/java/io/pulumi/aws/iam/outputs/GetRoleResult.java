@@ -63,19 +63,19 @@ public final class GetRoleResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"arn","assumeRolePolicy","createDate","description","id","maxSessionDuration","name","path","permissionsBoundary","tags","uniqueId"})
+    @OutputCustomType.Constructor
     private GetRoleResult(
-        String arn,
-        String assumeRolePolicy,
-        String createDate,
-        String description,
-        String id,
-        Integer maxSessionDuration,
-        String name,
-        String path,
-        String permissionsBoundary,
-        Map<String,String> tags,
-        String uniqueId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("assumeRolePolicy") String assumeRolePolicy,
+        @OutputCustomType.Parameter("createDate") String createDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maxSessionDuration") Integer maxSessionDuration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissionsBoundary") String permissionsBoundary,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.arn = arn;
         this.assumeRolePolicy = assumeRolePolicy;
         this.createDate = createDate;

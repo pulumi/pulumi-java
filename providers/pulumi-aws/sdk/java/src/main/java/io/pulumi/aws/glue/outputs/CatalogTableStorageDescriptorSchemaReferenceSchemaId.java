@@ -27,11 +27,11 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
      */
     private final @Nullable String schemaName;
 
-    @OutputCustomType.Constructor({"registryName","schemaArn","schemaName"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSchemaReferenceSchemaId(
-        @Nullable String registryName,
-        @Nullable String schemaArn,
-        @Nullable String schemaName) {
+        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
+        @OutputCustomType.Parameter("schemaArn") @Nullable String schemaArn,
+        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName) {
         this.registryName = registryName;
         this.schemaArn = schemaArn;
         this.schemaName = schemaName;

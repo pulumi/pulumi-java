@@ -47,14 +47,14 @@ public final class InstanceFleetInstanceTypeConfig {
      */
     private final @Nullable Integer weightedCapacity;
 
-    @OutputCustomType.Constructor({"bidPrice","bidPriceAsPercentageOfOnDemandPrice","configurations","ebsConfigs","instanceType","weightedCapacity"})
+    @OutputCustomType.Constructor
     private InstanceFleetInstanceTypeConfig(
-        @Nullable String bidPrice,
-        @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
-        @Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations,
-        @Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
-        String instanceType,
-        @Nullable Integer weightedCapacity) {
+        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @OutputCustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
+        @OutputCustomType.Parameter("configurations") @Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations,
+        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
         this.bidPrice = bidPrice;
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         this.configurations = configurations;

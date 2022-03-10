@@ -27,11 +27,11 @@ public final class HumanTaskUIUiTemplate {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"content","contentSha256","url"})
+    @OutputCustomType.Constructor
     private HumanTaskUIUiTemplate(
-        @Nullable String content,
-        @Nullable String contentSha256,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentSha256") @Nullable String contentSha256,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.content = content;
         this.contentSha256 = contentSha256;
         this.url = url;

@@ -23,10 +23,10 @@ public final class IntentFollowUpPrompt {
      */
     private final IntentFollowUpPromptRejectionStatement rejectionStatement;
 
-    @OutputCustomType.Constructor({"prompt","rejectionStatement"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPrompt(
-        IntentFollowUpPromptPrompt prompt,
-        IntentFollowUpPromptRejectionStatement rejectionStatement) {
+        @OutputCustomType.Parameter("prompt") IntentFollowUpPromptPrompt prompt,
+        @OutputCustomType.Parameter("rejectionStatement") IntentFollowUpPromptRejectionStatement rejectionStatement) {
         this.prompt = prompt;
         this.rejectionStatement = rejectionStatement;
     }

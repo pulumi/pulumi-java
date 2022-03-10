@@ -16,10 +16,10 @@ public final class GetOrganizationRootPolicyType {
     private final String status;
     private final String type;
 
-    @OutputCustomType.Constructor({"status","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationRootPolicyType(
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.status = status;
         this.type = type;
     }

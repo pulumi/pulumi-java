@@ -89,24 +89,24 @@ public final class GetReplicationGroupResult {
      */
     private final String snapshotWindow;
 
-    @OutputCustomType.Constructor({"arn","authTokenEnabled","automaticFailoverEnabled","configurationEndpointAddress","id","memberClusters","multiAzEnabled","nodeType","numberCacheClusters","port","primaryEndpointAddress","readerEndpointAddress","replicationGroupDescription","replicationGroupId","snapshotRetentionLimit","snapshotWindow"})
+    @OutputCustomType.Constructor
     private GetReplicationGroupResult(
-        String arn,
-        Boolean authTokenEnabled,
-        Boolean automaticFailoverEnabled,
-        String configurationEndpointAddress,
-        String id,
-        List<String> memberClusters,
-        Boolean multiAzEnabled,
-        String nodeType,
-        Integer numberCacheClusters,
-        Integer port,
-        String primaryEndpointAddress,
-        String readerEndpointAddress,
-        String replicationGroupDescription,
-        String replicationGroupId,
-        Integer snapshotRetentionLimit,
-        String snapshotWindow) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("authTokenEnabled") Boolean authTokenEnabled,
+        @OutputCustomType.Parameter("automaticFailoverEnabled") Boolean automaticFailoverEnabled,
+        @OutputCustomType.Parameter("configurationEndpointAddress") String configurationEndpointAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("memberClusters") List<String> memberClusters,
+        @OutputCustomType.Parameter("multiAzEnabled") Boolean multiAzEnabled,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("numberCacheClusters") Integer numberCacheClusters,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("primaryEndpointAddress") String primaryEndpointAddress,
+        @OutputCustomType.Parameter("readerEndpointAddress") String readerEndpointAddress,
+        @OutputCustomType.Parameter("replicationGroupDescription") String replicationGroupDescription,
+        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow) {
         this.arn = arn;
         this.authTokenEnabled = authTokenEnabled;
         this.automaticFailoverEnabled = automaticFailoverEnabled;

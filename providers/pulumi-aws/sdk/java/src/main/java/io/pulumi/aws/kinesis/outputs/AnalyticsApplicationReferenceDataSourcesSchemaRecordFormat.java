@@ -24,10 +24,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat {
      */
     private final @Nullable String recordFormatType;
 
-    @OutputCustomType.Constructor({"mappingParameters","recordFormatType"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat(
-        @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters mappingParameters,
-        @Nullable String recordFormatType) {
+        @OutputCustomType.Parameter("mappingParameters") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters mappingParameters,
+        @OutputCustomType.Parameter("recordFormatType") @Nullable String recordFormatType) {
         this.mappingParameters = mappingParameters;
         this.recordFormatType = recordFormatType;
     }

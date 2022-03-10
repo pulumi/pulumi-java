@@ -29,11 +29,11 @@ public final class RuleGroupRuleGroup {
      */
     private final @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions;
 
-    @OutputCustomType.Constructor({"ruleVariables","rulesSource","statefulRuleOptions"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroup(
-        @Nullable RuleGroupRuleGroupRuleVariables ruleVariables,
-        RuleGroupRuleGroupRulesSource rulesSource,
-        @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
+        @OutputCustomType.Parameter("ruleVariables") @Nullable RuleGroupRuleGroupRuleVariables ruleVariables,
+        @OutputCustomType.Parameter("rulesSource") RuleGroupRuleGroupRulesSource rulesSource,
+        @OutputCustomType.Parameter("statefulRuleOptions") @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
         this.ruleVariables = ruleVariables;
         this.rulesSource = rulesSource;
         this.statefulRuleOptions = statefulRuleOptions;

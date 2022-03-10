@@ -28,11 +28,11 @@ public final class StateMachineLoggingConfiguration {
      */
     private final @Nullable String logDestination;
 
-    @OutputCustomType.Constructor({"includeExecutionData","level","logDestination"})
+    @OutputCustomType.Constructor
     private StateMachineLoggingConfiguration(
-        @Nullable Boolean includeExecutionData,
-        @Nullable String level,
-        @Nullable String logDestination) {
+        @OutputCustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("logDestination") @Nullable String logDestination) {
         this.includeExecutionData = includeExecutionData;
         this.level = level;
         this.logDestination = logDestination;

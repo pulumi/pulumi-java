@@ -69,22 +69,22 @@ public final class GetInstanceResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","autoResolveBestVoicesEnabled","contactFlowLogsEnabled","contactLensEnabled","createdTime","earlyMediaEnabled","id","identityManagementType","inboundCallsEnabled","instanceAlias","instanceId","outboundCallsEnabled","serviceRole","status"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String arn,
-        Boolean autoResolveBestVoicesEnabled,
-        Boolean contactFlowLogsEnabled,
-        Boolean contactLensEnabled,
-        String createdTime,
-        Boolean earlyMediaEnabled,
-        String id,
-        String identityManagementType,
-        Boolean inboundCallsEnabled,
-        String instanceAlias,
-        String instanceId,
-        Boolean outboundCallsEnabled,
-        String serviceRole,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("autoResolveBestVoicesEnabled") Boolean autoResolveBestVoicesEnabled,
+        @OutputCustomType.Parameter("contactFlowLogsEnabled") Boolean contactFlowLogsEnabled,
+        @OutputCustomType.Parameter("contactLensEnabled") Boolean contactLensEnabled,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("earlyMediaEnabled") Boolean earlyMediaEnabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityManagementType") String identityManagementType,
+        @OutputCustomType.Parameter("inboundCallsEnabled") Boolean inboundCallsEnabled,
+        @OutputCustomType.Parameter("instanceAlias") String instanceAlias,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("outboundCallsEnabled") Boolean outboundCallsEnabled,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
         this.contactFlowLogsEnabled = contactFlowLogsEnabled;

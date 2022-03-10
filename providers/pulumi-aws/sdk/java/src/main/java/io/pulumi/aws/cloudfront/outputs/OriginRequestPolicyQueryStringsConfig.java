@@ -15,10 +15,10 @@ public final class OriginRequestPolicyQueryStringsConfig {
     private final String queryStringBehavior;
     private final @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings;
 
-    @OutputCustomType.Constructor({"queryStringBehavior","queryStrings"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyQueryStringsConfig(
-        String queryStringBehavior,
-        @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
+        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @OutputCustomType.Parameter("queryStrings") @Nullable OriginRequestPolicyQueryStringsConfigQueryStrings queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }

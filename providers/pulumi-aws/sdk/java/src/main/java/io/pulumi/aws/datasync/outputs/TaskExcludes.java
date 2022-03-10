@@ -22,10 +22,10 @@ public final class TaskExcludes {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"filterType","value"})
+    @OutputCustomType.Constructor
     private TaskExcludes(
-        @Nullable String filterType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("filterType") @Nullable String filterType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }

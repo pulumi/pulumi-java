@@ -16,10 +16,10 @@ public final class GetFunctionFileSystemConfig {
     private final String arn;
     private final String localMountPath;
 
-    @OutputCustomType.Constructor({"arn","localMountPath"})
+    @OutputCustomType.Constructor
     private GetFunctionFileSystemConfig(
-        String arn,
-        String localMountPath) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("localMountPath") String localMountPath) {
         this.arn = arn;
         this.localMountPath = localMountPath;
     }

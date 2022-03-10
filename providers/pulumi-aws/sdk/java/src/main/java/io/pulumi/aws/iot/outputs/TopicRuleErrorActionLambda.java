@@ -15,8 +15,8 @@ public final class TopicRuleErrorActionLambda {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private TopicRuleErrorActionLambda(String functionArn) {
+    @OutputCustomType.Constructor
+    private TopicRuleErrorActionLambda(@OutputCustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 

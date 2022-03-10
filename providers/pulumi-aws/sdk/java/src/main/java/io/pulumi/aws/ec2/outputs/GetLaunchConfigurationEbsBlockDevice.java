@@ -57,17 +57,17 @@ public final class GetLaunchConfigurationEbsBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceName","encrypted","iops","noDevice","snapshotId","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetLaunchConfigurationEbsBlockDevice(
-        Boolean deleteOnTermination,
-        String deviceName,
-        Boolean encrypted,
-        Integer iops,
-        Boolean noDevice,
-        String snapshotId,
-        Boolean throughput,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("noDevice") Boolean noDevice,
+        @OutputCustomType.Parameter("snapshotId") String snapshotId,
+        @OutputCustomType.Parameter("throughput") Boolean throughput,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = deviceName;
         this.encrypted = encrypted;

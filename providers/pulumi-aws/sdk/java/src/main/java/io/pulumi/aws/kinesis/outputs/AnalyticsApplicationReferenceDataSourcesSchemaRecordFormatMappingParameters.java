@@ -25,10 +25,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      */
     private final @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json;
 
-    @OutputCustomType.Constructor({"csv","json"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters(
-        @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv csv,
-        @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json) {
+        @OutputCustomType.Parameter("csv") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv csv,
+        @OutputCustomType.Parameter("json") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json) {
         this.csv = csv;
         this.json = json;
     }

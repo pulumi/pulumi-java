@@ -15,8 +15,8 @@ public final class DistributionOriginGroupMember {
      */
     private final String originId;
 
-    @OutputCustomType.Constructor({"originId"})
-    private DistributionOriginGroupMember(String originId) {
+    @OutputCustomType.Constructor
+    private DistributionOriginGroupMember(@OutputCustomType.Parameter("originId") String originId) {
         this.originId = originId;
     }
 

@@ -21,10 +21,10 @@ public final class GetImageImageTestsConfiguration {
      */
     private final Integer timeoutMinutes;
 
-    @OutputCustomType.Constructor({"imageTestsEnabled","timeoutMinutes"})
+    @OutputCustomType.Constructor
     private GetImageImageTestsConfiguration(
-        Boolean imageTestsEnabled,
-        Integer timeoutMinutes) {
+        @OutputCustomType.Parameter("imageTestsEnabled") Boolean imageTestsEnabled,
+        @OutputCustomType.Parameter("timeoutMinutes") Integer timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }

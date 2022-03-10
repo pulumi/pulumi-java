@@ -38,17 +38,17 @@ public final class GetExportResult {
     private final String restApiId;
     private final String stageName;
 
-    @OutputCustomType.Constructor({"accepts","body","contentDisposition","contentType","exportType","id","parameters","restApiId","stageName"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        @Nullable String accepts,
-        String body,
-        String contentDisposition,
-        String contentType,
-        String exportType,
-        String id,
-        @Nullable Map<String,String> parameters,
-        String restApiId,
-        String stageName) {
+        @OutputCustomType.Parameter("accepts") @Nullable String accepts,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("exportType") String exportType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("restApiId") String restApiId,
+        @OutputCustomType.Parameter("stageName") String stageName) {
         this.accepts = accepts;
         this.body = body;
         this.contentDisposition = contentDisposition;

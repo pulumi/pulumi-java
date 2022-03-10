@@ -24,12 +24,12 @@ public final class GetProductResult {
     private final String result;
     private final String serviceCode;
 
-    @OutputCustomType.Constructor({"filters","id","result","serviceCode"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        List<GetProductFilter> filters,
-        String id,
-        String result,
-        String serviceCode) {
+        @OutputCustomType.Parameter("filters") List<GetProductFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("serviceCode") String serviceCode) {
         this.filters = filters;
         this.id = id;
         this.result = result;

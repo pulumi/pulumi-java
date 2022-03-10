@@ -42,29 +42,29 @@ public final class GetLoadBalancerResult {
     private final Map<String,String> tags;
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"accessLogs","arn","availabilityZones","connectionDraining","connectionDrainingTimeout","crossZoneLoadBalancing","desyncMitigationMode","dnsName","healthCheck","id","idleTimeout","instances","internal","listeners","name","securityGroups","sourceSecurityGroup","sourceSecurityGroupId","subnets","tags","zoneId"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerResult(
-        GetLoadBalancerAccessLogs accessLogs,
-        String arn,
-        List<String> availabilityZones,
-        Boolean connectionDraining,
-        Integer connectionDrainingTimeout,
-        Boolean crossZoneLoadBalancing,
-        String desyncMitigationMode,
-        String dnsName,
-        GetLoadBalancerHealthCheck healthCheck,
-        String id,
-        Integer idleTimeout,
-        List<String> instances,
-        Boolean internal,
-        List<GetLoadBalancerListener> listeners,
-        String name,
-        List<String> securityGroups,
-        String sourceSecurityGroup,
-        String sourceSecurityGroupId,
-        List<String> subnets,
-        Map<String,String> tags,
-        String zoneId) {
+        @OutputCustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("connectionDraining") Boolean connectionDraining,
+        @OutputCustomType.Parameter("connectionDrainingTimeout") Integer connectionDrainingTimeout,
+        @OutputCustomType.Parameter("crossZoneLoadBalancing") Boolean crossZoneLoadBalancing,
+        @OutputCustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("healthCheck") GetLoadBalancerHealthCheck healthCheck,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idleTimeout") Integer idleTimeout,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("internal") Boolean internal,
+        @OutputCustomType.Parameter("listeners") List<GetLoadBalancerListener> listeners,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("sourceSecurityGroup") String sourceSecurityGroup,
+        @OutputCustomType.Parameter("sourceSecurityGroupId") String sourceSecurityGroupId,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.availabilityZones = availabilityZones;

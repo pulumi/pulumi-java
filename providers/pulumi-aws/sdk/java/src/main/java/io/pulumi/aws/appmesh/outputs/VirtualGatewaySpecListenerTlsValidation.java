@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecListenerTlsValidation {
      */
     private final VirtualGatewaySpecListenerTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor({"subjectAlternativeNames","trust"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListenerTlsValidation(
-        @Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        VirtualGatewaySpecListenerTlsValidationTrust trust) {
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @OutputCustomType.Parameter("trust") VirtualGatewaySpecListenerTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

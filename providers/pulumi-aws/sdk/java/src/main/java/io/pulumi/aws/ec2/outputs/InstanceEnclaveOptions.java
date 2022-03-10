@@ -17,8 +17,8 @@ public final class InstanceEnclaveOptions {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private InstanceEnclaveOptions(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private InstanceEnclaveOptions(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

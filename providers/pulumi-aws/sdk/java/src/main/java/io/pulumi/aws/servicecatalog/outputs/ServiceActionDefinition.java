@@ -37,13 +37,13 @@ public final class ServiceActionDefinition {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"assumeRole","name","parameters","type","version"})
+    @OutputCustomType.Constructor
     private ServiceActionDefinition(
-        @Nullable String assumeRole,
-        String name,
-        @Nullable String parameters,
-        @Nullable String type,
-        String version) {
+        @OutputCustomType.Parameter("assumeRole") @Nullable String assumeRole,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.assumeRole = assumeRole;
         this.name = name;
         this.parameters = parameters;

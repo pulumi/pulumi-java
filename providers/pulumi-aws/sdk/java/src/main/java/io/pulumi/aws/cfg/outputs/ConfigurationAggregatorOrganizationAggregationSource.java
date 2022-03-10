@@ -29,11 +29,11 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"allRegions","regions","roleArn"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorOrganizationAggregationSource(
-        @Nullable Boolean allRegions,
-        @Nullable List<String> regions,
-        String roleArn) {
+        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.allRegions = allRegions;
         this.regions = regions;
         this.roleArn = roleArn;

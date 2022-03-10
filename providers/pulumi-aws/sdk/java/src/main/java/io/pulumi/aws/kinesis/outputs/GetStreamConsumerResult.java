@@ -28,14 +28,14 @@ public final class GetStreamConsumerResult {
     private final String status;
     private final String streamArn;
 
-    @OutputCustomType.Constructor({"arn","creationTimestamp","id","name","status","streamArn"})
+    @OutputCustomType.Constructor
     private GetStreamConsumerResult(
-        String arn,
-        String creationTimestamp,
-        String id,
-        String name,
-        String status,
-        String streamArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("streamArn") String streamArn) {
         this.arn = arn;
         this.creationTimestamp = creationTimestamp;
         this.id = id;

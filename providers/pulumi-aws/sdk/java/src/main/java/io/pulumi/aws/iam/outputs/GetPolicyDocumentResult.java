@@ -31,17 +31,17 @@ public final class GetPolicyDocumentResult {
     private final @Nullable List<GetPolicyDocumentStatement> statements;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","json","overrideJson","overridePolicyDocuments","policyId","sourceJson","sourcePolicyDocuments","statements","version"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentResult(
-        String id,
-        String json,
-        @Nullable String overrideJson,
-        @Nullable List<String> overridePolicyDocuments,
-        @Nullable String policyId,
-        @Nullable String sourceJson,
-        @Nullable List<String> sourcePolicyDocuments,
-        @Nullable List<GetPolicyDocumentStatement> statements,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("json") String json,
+        @OutputCustomType.Parameter("overrideJson") @Nullable String overrideJson,
+        @OutputCustomType.Parameter("overridePolicyDocuments") @Nullable List<String> overridePolicyDocuments,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("sourceJson") @Nullable String sourceJson,
+        @OutputCustomType.Parameter("sourcePolicyDocuments") @Nullable List<String> sourcePolicyDocuments,
+        @OutputCustomType.Parameter("statements") @Nullable List<GetPolicyDocumentStatement> statements,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.json = json;
         this.overrideJson = overrideJson;

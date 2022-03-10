@@ -56,16 +56,16 @@ public final class GetBundleResult {
      */
     private final List<GetBundleUserStorage> userStorages;
 
-    @OutputCustomType.Constructor({"bundleId","computeTypes","description","id","name","owner","rootStorages","userStorages"})
+    @OutputCustomType.Constructor
     private GetBundleResult(
-        @Nullable String bundleId,
-        List<GetBundleComputeType> computeTypes,
-        String description,
-        String id,
-        @Nullable String name,
-        @Nullable String owner,
-        List<GetBundleRootStorage> rootStorages,
-        List<GetBundleUserStorage> userStorages) {
+        @OutputCustomType.Parameter("bundleId") @Nullable String bundleId,
+        @OutputCustomType.Parameter("computeTypes") List<GetBundleComputeType> computeTypes,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("rootStorages") List<GetBundleRootStorage> rootStorages,
+        @OutputCustomType.Parameter("userStorages") List<GetBundleUserStorage> userStorages) {
         this.bundleId = bundleId;
         this.computeTypes = computeTypes;
         this.description = description;

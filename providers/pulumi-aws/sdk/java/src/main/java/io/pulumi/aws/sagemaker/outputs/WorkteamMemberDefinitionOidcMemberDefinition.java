@@ -16,8 +16,8 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
      */
     private final List<String> groups;
 
-    @OutputCustomType.Constructor({"groups"})
-    private WorkteamMemberDefinitionOidcMemberDefinition(List<String> groups) {
+    @OutputCustomType.Constructor
+    private WorkteamMemberDefinitionOidcMemberDefinition(@OutputCustomType.Parameter("groups") List<String> groups) {
         this.groups = groups;
     }
 

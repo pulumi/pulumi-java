@@ -29,11 +29,11 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
      */
     private final @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings;
 
-    @OutputCustomType.Constructor({"bodies","headers","queryStrings"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersInvocationHttpParameters(
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
+        @OutputCustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
+        @OutputCustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
+        @OutputCustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;

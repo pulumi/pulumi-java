@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
      */
     private final Boolean forwardWhenContentTypeIsUnknown;
 
-    @OutputCustomType.Constructor({"contentTypeProfiles","forwardWhenContentTypeIsUnknown"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfig(
-        FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
-        Boolean forwardWhenContentTypeIsUnknown) {
+        @OutputCustomType.Parameter("contentTypeProfiles") FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
+        @OutputCustomType.Parameter("forwardWhenContentTypeIsUnknown") Boolean forwardWhenContentTypeIsUnknown) {
         this.contentTypeProfiles = contentTypeProfiles;
         this.forwardWhenContentTypeIsUnknown = forwardWhenContentTypeIsUnknown;
     }

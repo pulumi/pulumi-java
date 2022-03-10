@@ -40,18 +40,18 @@ public final class GetPermissionsResult {
     private final GetPermissionsTable table;
     private final GetPermissionsTableWithColumns tableWithColumns;
 
-    @OutputCustomType.Constructor({"catalogId","catalogResource","dataLocation","database","id","permissions","permissionsWithGrantOptions","principal","table","tableWithColumns"})
+    @OutputCustomType.Constructor
     private GetPermissionsResult(
-        @Nullable String catalogId,
-        @Nullable Boolean catalogResource,
-        GetPermissionsDataLocation dataLocation,
-        GetPermissionsDatabase database,
-        String id,
-        List<String> permissions,
-        List<String> permissionsWithGrantOptions,
-        String principal,
-        GetPermissionsTable table,
-        GetPermissionsTableWithColumns tableWithColumns) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("catalogResource") @Nullable Boolean catalogResource,
+        @OutputCustomType.Parameter("dataLocation") GetPermissionsDataLocation dataLocation,
+        @OutputCustomType.Parameter("database") GetPermissionsDatabase database,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("permissionsWithGrantOptions") List<String> permissionsWithGrantOptions,
+        @OutputCustomType.Parameter("principal") String principal,
+        @OutputCustomType.Parameter("table") GetPermissionsTable table,
+        @OutputCustomType.Parameter("tableWithColumns") GetPermissionsTableWithColumns tableWithColumns) {
         this.catalogId = catalogId;
         this.catalogResource = catalogResource;
         this.dataLocation = dataLocation;

@@ -32,11 +32,11 @@ public final class PeeringConnectionOptionsAccepter {
      */
     private final @Nullable Boolean allowVpcToRemoteClassicLink;
 
-    @OutputCustomType.Constructor({"allowClassicLinkToRemoteVpc","allowRemoteVpcDnsResolution","allowVpcToRemoteClassicLink"})
+    @OutputCustomType.Constructor
     private PeeringConnectionOptionsAccepter(
-        @Nullable Boolean allowClassicLinkToRemoteVpc,
-        @Nullable Boolean allowRemoteVpcDnsResolution,
-        @Nullable Boolean allowVpcToRemoteClassicLink) {
+        @OutputCustomType.Parameter("allowClassicLinkToRemoteVpc") @Nullable Boolean allowClassicLinkToRemoteVpc,
+        @OutputCustomType.Parameter("allowRemoteVpcDnsResolution") @Nullable Boolean allowRemoteVpcDnsResolution,
+        @OutputCustomType.Parameter("allowVpcToRemoteClassicLink") @Nullable Boolean allowVpcToRemoteClassicLink) {
         this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
         this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
         this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;

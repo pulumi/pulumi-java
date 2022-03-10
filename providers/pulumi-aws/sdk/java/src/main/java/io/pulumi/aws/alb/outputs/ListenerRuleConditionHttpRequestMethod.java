@@ -16,8 +16,8 @@ public final class ListenerRuleConditionHttpRequestMethod {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleConditionHttpRequestMethod(List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleConditionHttpRequestMethod(@OutputCustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

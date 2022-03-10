@@ -50,15 +50,15 @@ public final class DomainSamlOptionsSamlOptions {
      */
     private final @Nullable String subjectKey;
 
-    @OutputCustomType.Constructor({"enabled","idp","masterBackendRole","masterUserName","rolesKey","sessionTimeoutMinutes","subjectKey"})
+    @OutputCustomType.Constructor
     private DomainSamlOptionsSamlOptions(
-        @Nullable Boolean enabled,
-        @Nullable DomainSamlOptionsSamlOptionsIdp idp,
-        @Nullable String masterBackendRole,
-        @Nullable String masterUserName,
-        @Nullable String rolesKey,
-        @Nullable Integer sessionTimeoutMinutes,
-        @Nullable String subjectKey) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("idp") @Nullable DomainSamlOptionsSamlOptionsIdp idp,
+        @OutputCustomType.Parameter("masterBackendRole") @Nullable String masterBackendRole,
+        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @OutputCustomType.Parameter("rolesKey") @Nullable String rolesKey,
+        @OutputCustomType.Parameter("sessionTimeoutMinutes") @Nullable Integer sessionTimeoutMinutes,
+        @OutputCustomType.Parameter("subjectKey") @Nullable String subjectKey) {
         this.enabled = enabled;
         this.idp = idp;
         this.masterBackendRole = masterBackendRole;

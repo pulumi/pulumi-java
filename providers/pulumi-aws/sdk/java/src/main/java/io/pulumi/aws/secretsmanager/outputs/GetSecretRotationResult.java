@@ -34,13 +34,13 @@ public final class GetSecretRotationResult {
     private final List<GetSecretRotationRotationRule> rotationRules;
     private final String secretId;
 
-    @OutputCustomType.Constructor({"id","rotationEnabled","rotationLambdaArn","rotationRules","secretId"})
+    @OutputCustomType.Constructor
     private GetSecretRotationResult(
-        String id,
-        Boolean rotationEnabled,
-        String rotationLambdaArn,
-        List<GetSecretRotationRotationRule> rotationRules,
-        String secretId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
+        @OutputCustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
+        @OutputCustomType.Parameter("rotationRules") List<GetSecretRotationRotationRule> rotationRules,
+        @OutputCustomType.Parameter("secretId") String secretId) {
         this.id = id;
         this.rotationEnabled = rotationEnabled;
         this.rotationLambdaArn = rotationLambdaArn;

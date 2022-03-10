@@ -65,18 +65,18 @@ public final class MethodSettingsSettings {
      */
     private final @Nullable String unauthorizedCacheControlHeaderStrategy;
 
-    @OutputCustomType.Constructor({"cacheDataEncrypted","cacheTtlInSeconds","cachingEnabled","dataTraceEnabled","loggingLevel","metricsEnabled","requireAuthorizationForCacheControl","throttlingBurstLimit","throttlingRateLimit","unauthorizedCacheControlHeaderStrategy"})
+    @OutputCustomType.Constructor
     private MethodSettingsSettings(
-        @Nullable Boolean cacheDataEncrypted,
-        @Nullable Integer cacheTtlInSeconds,
-        @Nullable Boolean cachingEnabled,
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable String loggingLevel,
-        @Nullable Boolean metricsEnabled,
-        @Nullable Boolean requireAuthorizationForCacheControl,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit,
-        @Nullable String unauthorizedCacheControlHeaderStrategy) {
+        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @OutputCustomType.Parameter("requireAuthorizationForCacheControl") @Nullable Boolean requireAuthorizationForCacheControl,
+        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
+        @OutputCustomType.Parameter("unauthorizedCacheControlHeaderStrategy") @Nullable String unauthorizedCacheControlHeaderStrategy) {
         this.cacheDataEncrypted = cacheDataEncrypted;
         this.cacheTtlInSeconds = cacheTtlInSeconds;
         this.cachingEnabled = cachingEnabled;

@@ -16,8 +16,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
      */
     private final List<String> exacts;
 
-    @OutputCustomType.Constructor({"exacts"})
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch(List<String> exacts) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch(@OutputCustomType.Parameter("exacts") List<String> exacts) {
         this.exacts = exacts;
     }
 

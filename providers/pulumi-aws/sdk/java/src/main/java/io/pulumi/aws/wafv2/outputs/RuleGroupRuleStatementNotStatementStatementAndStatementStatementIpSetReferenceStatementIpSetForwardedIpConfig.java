@@ -25,11 +25,11 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatementStatem
      */
     private final String position;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName","position"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig(
-        String fallbackBehavior,
-        String headerName,
-        String position) {
+        @OutputCustomType.Parameter("fallbackBehavior") String fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("position") String position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;

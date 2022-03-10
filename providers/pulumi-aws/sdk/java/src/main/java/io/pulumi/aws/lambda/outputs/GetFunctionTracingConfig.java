@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetFunctionTracingConfig {
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private GetFunctionTracingConfig(String mode) {
+    @OutputCustomType.Constructor
+    private GetFunctionTracingConfig(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

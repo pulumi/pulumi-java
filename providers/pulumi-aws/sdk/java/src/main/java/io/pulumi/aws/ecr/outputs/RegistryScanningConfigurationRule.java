@@ -22,10 +22,10 @@ public final class RegistryScanningConfigurationRule {
      */
     private final String scanFrequency;
 
-    @OutputCustomType.Constructor({"repositoryFilters","scanFrequency"})
+    @OutputCustomType.Constructor
     private RegistryScanningConfigurationRule(
-        List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
-        String scanFrequency) {
+        @OutputCustomType.Parameter("repositoryFilters") List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
+        @OutputCustomType.Parameter("scanFrequency") String scanFrequency) {
         this.repositoryFilters = repositoryFilters;
         this.scanFrequency = scanFrequency;
     }

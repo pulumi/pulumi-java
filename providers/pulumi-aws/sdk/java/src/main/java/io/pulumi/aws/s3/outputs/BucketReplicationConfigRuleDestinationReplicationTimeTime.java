@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor({"minutes"})
-    private BucketReplicationConfigRuleDestinationReplicationTimeTime(Integer minutes) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigRuleDestinationReplicationTimeTime(@OutputCustomType.Parameter("minutes") Integer minutes) {
         this.minutes = minutes;
     }
 

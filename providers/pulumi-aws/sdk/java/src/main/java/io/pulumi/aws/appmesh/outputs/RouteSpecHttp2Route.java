@@ -35,12 +35,12 @@ public final class RouteSpecHttp2Route {
      */
     private final @Nullable RouteSpecHttp2RouteTimeout timeout;
 
-    @OutputCustomType.Constructor({"action","match","retryPolicy","timeout"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2Route(
-        RouteSpecHttp2RouteAction action,
-        RouteSpecHttp2RouteMatch match,
-        @Nullable RouteSpecHttp2RouteRetryPolicy retryPolicy,
-        @Nullable RouteSpecHttp2RouteTimeout timeout) {
+        @OutputCustomType.Parameter("action") RouteSpecHttp2RouteAction action,
+        @OutputCustomType.Parameter("match") RouteSpecHttp2RouteMatch match,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RouteSpecHttp2RouteRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecHttp2RouteTimeout timeout) {
         this.action = action;
         this.match = match;
         this.retryPolicy = retryPolicy;

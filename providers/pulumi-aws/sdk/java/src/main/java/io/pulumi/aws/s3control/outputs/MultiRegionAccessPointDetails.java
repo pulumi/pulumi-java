@@ -30,11 +30,11 @@ public final class MultiRegionAccessPointDetails {
      */
     private final List<MultiRegionAccessPointDetailsRegion> regions;
 
-    @OutputCustomType.Constructor({"name","publicAccessBlock","regions"})
+    @OutputCustomType.Constructor
     private MultiRegionAccessPointDetails(
-        String name,
-        @Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock,
-        List<MultiRegionAccessPointDetailsRegion> regions) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicAccessBlock") @Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock,
+        @OutputCustomType.Parameter("regions") List<MultiRegionAccessPointDetailsRegion> regions) {
         this.name = name;
         this.publicAccessBlock = publicAccessBlock;
         this.regions = regions;

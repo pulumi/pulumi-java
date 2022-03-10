@@ -31,14 +31,14 @@ public final class GetAuthorizationTokenResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"authorizationToken","domain","domainOwner","durationSeconds","expiration","id"})
+    @OutputCustomType.Constructor
     private GetAuthorizationTokenResult(
-        String authorizationToken,
-        String domain,
-        String domainOwner,
-        @Nullable Integer durationSeconds,
-        String expiration,
-        String id) {
+        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("domainOwner") String domainOwner,
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @OutputCustomType.Parameter("expiration") String expiration,
+        @OutputCustomType.Parameter("id") String id) {
         this.authorizationToken = authorizationToken;
         this.domain = domain;
         this.domainOwner = domainOwner;

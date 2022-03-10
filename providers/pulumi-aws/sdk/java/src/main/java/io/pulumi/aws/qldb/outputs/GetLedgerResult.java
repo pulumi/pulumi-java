@@ -20,13 +20,13 @@ public final class GetLedgerResult {
     private final String name;
     private final String permissionsMode;
 
-    @OutputCustomType.Constructor({"arn","deletionProtection","id","name","permissionsMode"})
+    @OutputCustomType.Constructor
     private GetLedgerResult(
-        String arn,
-        Boolean deletionProtection,
-        String id,
-        String name,
-        String permissionsMode) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissionsMode") String permissionsMode) {
         this.arn = arn;
         this.deletionProtection = deletionProtection;
         this.id = id;

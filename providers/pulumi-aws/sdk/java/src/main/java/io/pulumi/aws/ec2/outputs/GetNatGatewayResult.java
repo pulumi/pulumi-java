@@ -45,19 +45,19 @@ public final class GetNatGatewayResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"allocationId","connectivityType","filters","id","networkInterfaceId","privateIp","publicIp","state","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetNatGatewayResult(
-        String allocationId,
-        String connectivityType,
-        @Nullable List<GetNatGatewayFilter> filters,
-        String id,
-        String networkInterfaceId,
-        String privateIp,
-        String publicIp,
-        String state,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("allocationId") String allocationId,
+        @OutputCustomType.Parameter("connectivityType") String connectivityType,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNatGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("publicIp") String publicIp,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.allocationId = allocationId;
         this.connectivityType = connectivityType;
         this.filters = filters;

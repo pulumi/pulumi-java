@@ -30,12 +30,12 @@ public final class GetCallerIdentityResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"accountId","arn","id","userId"})
+    @OutputCustomType.Constructor
     private GetCallerIdentityResult(
-        String accountId,
-        String arn,
-        String id,
-        String userId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.accountId = accountId;
         this.arn = arn;
         this.id = id;

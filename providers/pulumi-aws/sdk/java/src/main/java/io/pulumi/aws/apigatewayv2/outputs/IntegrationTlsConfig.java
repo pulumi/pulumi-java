@@ -17,8 +17,8 @@ public final class IntegrationTlsConfig {
      */
     private final @Nullable String serverNameToVerify;
 
-    @OutputCustomType.Constructor({"serverNameToVerify"})
-    private IntegrationTlsConfig(@Nullable String serverNameToVerify) {
+    @OutputCustomType.Constructor
+    private IntegrationTlsConfig(@OutputCustomType.Parameter("serverNameToVerify") @Nullable String serverNameToVerify) {
         this.serverNameToVerify = serverNameToVerify;
     }
 

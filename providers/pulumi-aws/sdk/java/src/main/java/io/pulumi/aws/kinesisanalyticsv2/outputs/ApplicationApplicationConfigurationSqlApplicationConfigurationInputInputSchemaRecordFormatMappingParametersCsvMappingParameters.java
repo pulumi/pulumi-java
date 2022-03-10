@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String recordRowDelimiter;
 
-    @OutputCustomType.Constructor({"recordColumnDelimiter","recordRowDelimiter"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters(
-        String recordColumnDelimiter,
-        String recordRowDelimiter) {
+        @OutputCustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
+        @OutputCustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
         this.recordColumnDelimiter = recordColumnDelimiter;
         this.recordRowDelimiter = recordRowDelimiter;
     }

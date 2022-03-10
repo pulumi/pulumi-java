@@ -32,12 +32,12 @@ public final class CertificateDomainValidationOption {
      */
     private final @Nullable String resourceRecordValue;
 
-    @OutputCustomType.Constructor({"domainName","resourceRecordName","resourceRecordType","resourceRecordValue"})
+    @OutputCustomType.Constructor
     private CertificateDomainValidationOption(
-        @Nullable String domainName,
-        @Nullable String resourceRecordName,
-        @Nullable String resourceRecordType,
-        @Nullable String resourceRecordValue) {
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("resourceRecordName") @Nullable String resourceRecordName,
+        @OutputCustomType.Parameter("resourceRecordType") @Nullable String resourceRecordType,
+        @OutputCustomType.Parameter("resourceRecordValue") @Nullable String resourceRecordValue) {
         this.domainName = domainName;
         this.resourceRecordName = resourceRecordName;
         this.resourceRecordType = resourceRecordType;

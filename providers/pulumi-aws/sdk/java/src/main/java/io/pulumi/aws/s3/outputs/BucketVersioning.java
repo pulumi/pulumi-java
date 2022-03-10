@@ -22,10 +22,10 @@ public final class BucketVersioning {
      */
     private final @Nullable Boolean mfaDelete;
 
-    @OutputCustomType.Constructor({"enabled","mfaDelete"})
+    @OutputCustomType.Constructor
     private BucketVersioning(
-        @Nullable Boolean enabled,
-        @Nullable Boolean mfaDelete) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("mfaDelete") @Nullable Boolean mfaDelete) {
         this.enabled = enabled;
         this.mfaDelete = mfaDelete;
     }

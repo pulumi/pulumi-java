@@ -69,19 +69,19 @@ public final class BrokerLdapServerMetadata {
      */
     private final @Nullable Boolean userSearchSubtree;
 
-    @OutputCustomType.Constructor({"hosts","roleBase","roleName","roleSearchMatching","roleSearchSubtree","serviceAccountPassword","serviceAccountUsername","userBase","userRoleName","userSearchMatching","userSearchSubtree"})
+    @OutputCustomType.Constructor
     private BrokerLdapServerMetadata(
-        @Nullable List<String> hosts,
-        @Nullable String roleBase,
-        @Nullable String roleName,
-        @Nullable String roleSearchMatching,
-        @Nullable Boolean roleSearchSubtree,
-        @Nullable String serviceAccountPassword,
-        @Nullable String serviceAccountUsername,
-        @Nullable String userBase,
-        @Nullable String userRoleName,
-        @Nullable String userSearchMatching,
-        @Nullable Boolean userSearchSubtree) {
+        @OutputCustomType.Parameter("hosts") @Nullable List<String> hosts,
+        @OutputCustomType.Parameter("roleBase") @Nullable String roleBase,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roleSearchMatching") @Nullable String roleSearchMatching,
+        @OutputCustomType.Parameter("roleSearchSubtree") @Nullable Boolean roleSearchSubtree,
+        @OutputCustomType.Parameter("serviceAccountPassword") @Nullable String serviceAccountPassword,
+        @OutputCustomType.Parameter("serviceAccountUsername") @Nullable String serviceAccountUsername,
+        @OutputCustomType.Parameter("userBase") @Nullable String userBase,
+        @OutputCustomType.Parameter("userRoleName") @Nullable String userRoleName,
+        @OutputCustomType.Parameter("userSearchMatching") @Nullable String userSearchMatching,
+        @OutputCustomType.Parameter("userSearchSubtree") @Nullable Boolean userSearchSubtree) {
         this.hosts = hosts;
         this.roleBase = roleBase;
         this.roleName = roleName;

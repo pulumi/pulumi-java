@@ -63,18 +63,18 @@ public final class ProjectArtifacts {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactIdentifier","bucketOwnerAccess","encryptionDisabled","location","name","namespaceType","overrideArtifactName","packaging","path","type"})
+    @OutputCustomType.Constructor
     private ProjectArtifacts(
-        @Nullable String artifactIdentifier,
-        @Nullable String bucketOwnerAccess,
-        @Nullable Boolean encryptionDisabled,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String namespaceType,
-        @Nullable Boolean overrideArtifactName,
-        @Nullable String packaging,
-        @Nullable String path,
-        String type) {
+        @OutputCustomType.Parameter("artifactIdentifier") @Nullable String artifactIdentifier,
+        @OutputCustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
+        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespaceType") @Nullable String namespaceType,
+        @OutputCustomType.Parameter("overrideArtifactName") @Nullable Boolean overrideArtifactName,
+        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactIdentifier = artifactIdentifier;
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;

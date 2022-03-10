@@ -21,10 +21,10 @@ public final class GetEncryptionByDefaultResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"enabled","id"})
+    @OutputCustomType.Constructor
     private GetEncryptionByDefaultResult(
-        Boolean enabled,
-        String id) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id) {
         this.enabled = enabled;
         this.id = id;
     }

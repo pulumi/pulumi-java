@@ -19,11 +19,11 @@ public final class GetBrokerNodesResult {
     private final String id;
     private final List<GetBrokerNodesNodeInfoList> nodeInfoLists;
 
-    @OutputCustomType.Constructor({"clusterArn","id","nodeInfoLists"})
+    @OutputCustomType.Constructor
     private GetBrokerNodesResult(
-        String clusterArn,
-        String id,
-        List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
+        @OutputCustomType.Parameter("clusterArn") String clusterArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("nodeInfoLists") List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
         this.clusterArn = clusterArn;
         this.id = id;
         this.nodeInfoLists = nodeInfoLists;

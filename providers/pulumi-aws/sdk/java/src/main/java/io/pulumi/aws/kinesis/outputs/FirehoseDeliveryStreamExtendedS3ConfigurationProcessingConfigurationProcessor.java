@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor(
-        @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters,
-        String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameter> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.type = type;
     }

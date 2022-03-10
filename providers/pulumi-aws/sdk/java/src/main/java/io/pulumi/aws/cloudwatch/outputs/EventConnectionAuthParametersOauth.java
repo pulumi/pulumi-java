@@ -34,12 +34,12 @@ public final class EventConnectionAuthParametersOauth {
      */
     private final EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientParameters","httpMethod","oauthHttpParameters"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersOauth(
-        String authorizationEndpoint,
-        @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
-        String httpMethod,
-        EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientParameters") @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("oauthHttpParameters") EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;

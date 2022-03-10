@@ -28,11 +28,11 @@ public final class InstanceEphemeralBlockDevice {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private InstanceEphemeralBlockDevice(
-        String deviceName,
-        @Nullable Boolean noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.noDevice = noDevice;
         this.virtualName = virtualName;

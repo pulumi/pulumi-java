@@ -22,10 +22,10 @@ public final class RestApiEndpointConfiguration {
      */
     private final @Nullable List<String> vpcEndpointIds;
 
-    @OutputCustomType.Constructor({"types","vpcEndpointIds"})
+    @OutputCustomType.Constructor
     private RestApiEndpointConfiguration(
-        String types,
-        @Nullable List<String> vpcEndpointIds) {
+        @OutputCustomType.Parameter("types") String types,
+        @OutputCustomType.Parameter("vpcEndpointIds") @Nullable List<String> vpcEndpointIds) {
         this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }

@@ -28,11 +28,11 @@ public final class ServiceHealthCheckConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"failureThreshold","resourcePath","type"})
+    @OutputCustomType.Constructor
     private ServiceHealthCheckConfig(
-        @Nullable Integer failureThreshold,
-        @Nullable String resourcePath,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.failureThreshold = failureThreshold;
         this.resourcePath = resourcePath;
         this.type = type;

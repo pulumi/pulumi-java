@@ -27,11 +27,11 @@ public final class CrawlerDeltaTarget {
      */
     private final Boolean writeManifest;
 
-    @OutputCustomType.Constructor({"connectionName","deltaTables","writeManifest"})
+    @OutputCustomType.Constructor
     private CrawlerDeltaTarget(
-        String connectionName,
-        List<String> deltaTables,
-        Boolean writeManifest) {
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("deltaTables") List<String> deltaTables,
+        @OutputCustomType.Parameter("writeManifest") Boolean writeManifest) {
         this.connectionName = connectionName;
         this.deltaTables = deltaTables;
         this.writeManifest = writeManifest;

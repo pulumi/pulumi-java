@@ -22,10 +22,10 @@ public final class StackSetAutoDeployment {
      */
     private final @Nullable Boolean retainStacksOnAccountRemoval;
 
-    @OutputCustomType.Constructor({"enabled","retainStacksOnAccountRemoval"})
+    @OutputCustomType.Constructor
     private StackSetAutoDeployment(
-        @Nullable Boolean enabled,
-        @Nullable Boolean retainStacksOnAccountRemoval) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("retainStacksOnAccountRemoval") @Nullable Boolean retainStacksOnAccountRemoval) {
         this.enabled = enabled;
         this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
     }

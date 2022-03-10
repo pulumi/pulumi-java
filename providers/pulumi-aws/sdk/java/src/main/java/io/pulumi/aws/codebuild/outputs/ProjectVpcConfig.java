@@ -26,11 +26,11 @@ public final class ProjectVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnets","vpcId"})
+    @OutputCustomType.Constructor
     private ProjectVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnets,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
         this.vpcId = vpcId;

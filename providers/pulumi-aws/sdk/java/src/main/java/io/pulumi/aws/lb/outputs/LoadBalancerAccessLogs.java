@@ -28,11 +28,11 @@ public final class LoadBalancerAccessLogs {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private LoadBalancerAccessLogs(
-        String bucket,
-        @Nullable Boolean enabled,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;

@@ -17,8 +17,8 @@ public final class TriggerActionNotificationProperty {
      */
     private final @Nullable Integer notifyDelayAfter;
 
-    @OutputCustomType.Constructor({"notifyDelayAfter"})
-    private TriggerActionNotificationProperty(@Nullable Integer notifyDelayAfter) {
+    @OutputCustomType.Constructor
+    private TriggerActionNotificationProperty(@OutputCustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 

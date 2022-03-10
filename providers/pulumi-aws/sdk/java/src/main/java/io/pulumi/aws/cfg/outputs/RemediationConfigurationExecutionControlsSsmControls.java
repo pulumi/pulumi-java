@@ -22,10 +22,10 @@ public final class RemediationConfigurationExecutionControlsSsmControls {
      */
     private final @Nullable Integer errorPercentage;
 
-    @OutputCustomType.Constructor({"concurrentExecutionRatePercentage","errorPercentage"})
+    @OutputCustomType.Constructor
     private RemediationConfigurationExecutionControlsSsmControls(
-        @Nullable Integer concurrentExecutionRatePercentage,
-        @Nullable Integer errorPercentage) {
+        @OutputCustomType.Parameter("concurrentExecutionRatePercentage") @Nullable Integer concurrentExecutionRatePercentage,
+        @OutputCustomType.Parameter("errorPercentage") @Nullable Integer errorPercentage) {
         this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
         this.errorPercentage = errorPercentage;
     }

@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLogging {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLog accessLog;
 
-    @OutputCustomType.Constructor({"accessLog"})
-    private VirtualGatewaySpecLogging(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecLogging(@OutputCustomType.Parameter("accessLog") @Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
         this.accessLog = accessLog;
     }
 

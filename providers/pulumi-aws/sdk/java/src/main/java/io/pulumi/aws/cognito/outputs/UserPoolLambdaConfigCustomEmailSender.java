@@ -20,10 +20,10 @@ public final class UserPoolLambdaConfigCustomEmailSender {
      */
     private final String lambdaVersion;
 
-    @OutputCustomType.Constructor({"lambdaArn","lambdaVersion"})
+    @OutputCustomType.Constructor
     private UserPoolLambdaConfigCustomEmailSender(
-        String lambdaArn,
-        String lambdaVersion) {
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn,
+        @OutputCustomType.Parameter("lambdaVersion") String lambdaVersion) {
         this.lambdaArn = lambdaArn;
         this.lambdaVersion = lambdaVersion;
     }

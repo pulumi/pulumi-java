@@ -35,12 +35,12 @@ public final class RouteSpecHttp2RouteMatch {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"headers","method","prefix","scheme"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatch(
-        @Nullable List<RouteSpecHttp2RouteMatchHeader> headers,
-        @Nullable String method,
-        String prefix,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("headers") @Nullable List<RouteSpecHttp2RouteMatchHeader> headers,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.headers = headers;
         this.method = method;
         this.prefix = prefix;

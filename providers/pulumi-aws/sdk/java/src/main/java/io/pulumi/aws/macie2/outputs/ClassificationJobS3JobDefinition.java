@@ -24,10 +24,10 @@ public final class ClassificationJobS3JobDefinition {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScoping scoping;
 
-    @OutputCustomType.Constructor({"bucketDefinitions","scoping"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinition(
-        @Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions,
-        @Nullable ClassificationJobS3JobDefinitionScoping scoping) {
+        @OutputCustomType.Parameter("bucketDefinitions") @Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions,
+        @OutputCustomType.Parameter("scoping") @Nullable ClassificationJobS3JobDefinitionScoping scoping) {
         this.bucketDefinitions = bucketDefinitions;
         this.scoping = scoping;
     }

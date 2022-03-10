@@ -55,18 +55,18 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","catalogId","connectionProperties","connectionType","description","id","matchCriterias","name","physicalConnectionRequirements","tags"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        String arn,
-        String catalogId,
-        Map<String,String> connectionProperties,
-        String connectionType,
-        String description,
-        String id,
-        List<String> matchCriterias,
-        String name,
-        List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("connectionProperties") Map<String,String> connectionProperties,
+        @OutputCustomType.Parameter("connectionType") String connectionType,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("matchCriterias") List<String> matchCriterias,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("physicalConnectionRequirements") List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.catalogId = catalogId;
         this.connectionProperties = connectionProperties;

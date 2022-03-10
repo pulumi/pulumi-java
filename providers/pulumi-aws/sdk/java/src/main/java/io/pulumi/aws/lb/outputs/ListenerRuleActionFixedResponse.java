@@ -27,11 +27,11 @@ public final class ListenerRuleActionFixedResponse {
      */
     private final @Nullable String statusCode;
 
-    @OutputCustomType.Constructor({"contentType","messageBody","statusCode"})
+    @OutputCustomType.Constructor
     private ListenerRuleActionFixedResponse(
-        String contentType,
-        @Nullable String messageBody,
-        @Nullable String statusCode) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("messageBody") @Nullable String messageBody,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

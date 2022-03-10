@@ -15,8 +15,8 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      */
     private final String recordRowPath;
 
-    @OutputCustomType.Constructor({"recordRowPath"})
-    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson(String recordRowPath) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson(@OutputCustomType.Parameter("recordRowPath") String recordRowPath) {
         this.recordRowPath = recordRowPath;
     }
 

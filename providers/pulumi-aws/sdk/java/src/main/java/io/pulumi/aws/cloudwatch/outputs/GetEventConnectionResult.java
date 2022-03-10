@@ -35,13 +35,13 @@ public final class GetEventConnectionResult {
      */
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"arn","authorizationType","id","name","secretArn"})
+    @OutputCustomType.Constructor
     private GetEventConnectionResult(
-        String arn,
-        String authorizationType,
-        String id,
-        String name,
-        String secretArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.arn = arn;
         this.authorizationType = authorizationType;
         this.id = id;

@@ -47,14 +47,14 @@ public final class UserProfileUserSettings {
      */
     private final @Nullable UserProfileUserSettingsTensorBoardAppSettings tensorBoardAppSettings;
 
-    @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings","tensorBoardAppSettings"})
+    @OutputCustomType.Constructor
     private UserProfileUserSettings(
-        String executionRole,
-        @Nullable UserProfileUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable UserProfileUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable UserProfileUserSettingsSharingSettings sharingSettings,
-        @Nullable UserProfileUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
+        @OutputCustomType.Parameter("executionRole") String executionRole,
+        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable UserProfileUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
+        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable UserProfileUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("sharingSettings") @Nullable UserProfileUserSettingsSharingSettings sharingSettings,
+        @OutputCustomType.Parameter("tensorBoardAppSettings") @Nullable UserProfileUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;

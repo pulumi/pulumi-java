@@ -20,10 +20,10 @@ public final class DirectoryConfigServiceAccountCredentials {
      */
     private final String accountPassword;
 
-    @OutputCustomType.Constructor({"accountName","accountPassword"})
+    @OutputCustomType.Constructor
     private DirectoryConfigServiceAccountCredentials(
-        String accountName,
-        String accountPassword) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("accountPassword") String accountPassword) {
         this.accountName = accountName;
         this.accountPassword = accountPassword;
     }

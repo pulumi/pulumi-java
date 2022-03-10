@@ -16,10 +16,10 @@ public final class HaproxyLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<HaproxyLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private HaproxyLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<HaproxyLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<HaproxyLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

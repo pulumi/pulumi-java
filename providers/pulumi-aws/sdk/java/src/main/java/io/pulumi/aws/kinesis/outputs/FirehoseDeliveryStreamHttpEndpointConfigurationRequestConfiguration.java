@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      */
     private final @Nullable String contentEncoding;
 
-    @OutputCustomType.Constructor({"commonAttributes","contentEncoding"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration(
-        @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes,
-        @Nullable String contentEncoding) {
+        @OutputCustomType.Parameter("commonAttributes") @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes,
+        @OutputCustomType.Parameter("contentEncoding") @Nullable String contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }

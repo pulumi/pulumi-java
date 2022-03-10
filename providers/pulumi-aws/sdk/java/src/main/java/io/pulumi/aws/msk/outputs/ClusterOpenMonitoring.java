@@ -15,8 +15,8 @@ public final class ClusterOpenMonitoring {
      */
     private final ClusterOpenMonitoringPrometheus prometheus;
 
-    @OutputCustomType.Constructor({"prometheus"})
-    private ClusterOpenMonitoring(ClusterOpenMonitoringPrometheus prometheus) {
+    @OutputCustomType.Constructor
+    private ClusterOpenMonitoring(@OutputCustomType.Parameter("prometheus") ClusterOpenMonitoringPrometheus prometheus) {
         this.prometheus = prometheus;
     }
 

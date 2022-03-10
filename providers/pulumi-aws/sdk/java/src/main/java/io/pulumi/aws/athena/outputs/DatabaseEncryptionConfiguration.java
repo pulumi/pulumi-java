@@ -22,10 +22,10 @@ public final class DatabaseEncryptionConfiguration {
      */
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor({"encryptionOption","kmsKey"})
+    @OutputCustomType.Constructor
     private DatabaseEncryptionConfiguration(
-        String encryptionOption,
-        @Nullable String kmsKey) {
+        @OutputCustomType.Parameter("encryptionOption") String encryptionOption,
+        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }

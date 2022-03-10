@@ -29,12 +29,12 @@ public final class PermissionsTable {
     private final @Nullable String name;
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","name","wildcard"})
+    @OutputCustomType.Constructor
     private PermissionsTable(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable String name,
-        @Nullable Boolean wildcard) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;

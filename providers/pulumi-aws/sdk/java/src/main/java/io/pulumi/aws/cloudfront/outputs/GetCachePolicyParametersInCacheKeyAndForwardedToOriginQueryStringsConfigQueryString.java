@@ -16,8 +16,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

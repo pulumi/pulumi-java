@@ -42,14 +42,14 @@ public final class GetLaunchConfigurationRootBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetLaunchConfigurationRootBlockDevice(
-        Boolean deleteOnTermination,
-        Boolean encrypted,
-        Integer iops,
-        Boolean throughput,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("throughput") Boolean throughput,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

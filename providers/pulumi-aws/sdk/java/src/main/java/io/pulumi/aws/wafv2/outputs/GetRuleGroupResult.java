@@ -27,13 +27,13 @@ public final class GetRuleGroupResult {
     private final String name;
     private final String scope;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","scope"})
+    @OutputCustomType.Constructor
     private GetRuleGroupResult(
-        String arn,
-        String description,
-        String id,
-        String name,
-        String scope) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.arn = arn;
         this.description = description;
         this.id = id;

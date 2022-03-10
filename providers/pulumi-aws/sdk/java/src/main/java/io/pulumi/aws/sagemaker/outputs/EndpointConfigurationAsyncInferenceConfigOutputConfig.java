@@ -28,11 +28,11 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
      */
     private final String s3OutputPath;
 
-    @OutputCustomType.Constructor({"kmsKeyId","notificationConfig","s3OutputPath"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfig(
-        @Nullable String kmsKeyId,
-        @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
-        String s3OutputPath) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("notificationConfig") @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
+        @OutputCustomType.Parameter("s3OutputPath") String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.notificationConfig = notificationConfig;
         this.s3OutputPath = s3OutputPath;

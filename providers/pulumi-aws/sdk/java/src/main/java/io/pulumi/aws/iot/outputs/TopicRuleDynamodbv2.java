@@ -23,10 +23,10 @@ public final class TopicRuleDynamodbv2 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"putItem","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleDynamodbv2(
-        @Nullable TopicRuleDynamodbv2PutItem putItem,
-        String roleArn) {
+        @OutputCustomType.Parameter("putItem") @Nullable TopicRuleDynamodbv2PutItem putItem,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }

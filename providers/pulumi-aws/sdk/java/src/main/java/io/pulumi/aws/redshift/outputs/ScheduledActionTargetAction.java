@@ -29,11 +29,11 @@ public final class ScheduledActionTargetAction {
      */
     private final @Nullable ScheduledActionTargetActionResumeCluster resumeCluster;
 
-    @OutputCustomType.Constructor({"pauseCluster","resizeCluster","resumeCluster"})
+    @OutputCustomType.Constructor
     private ScheduledActionTargetAction(
-        @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
-        @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
-        @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
+        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
+        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
+        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;

@@ -21,10 +21,10 @@ public final class DataSourceParametersTwitter {
      */
     private final String query;
 
-    @OutputCustomType.Constructor({"maxRows","query"})
+    @OutputCustomType.Constructor
     private DataSourceParametersTwitter(
-        Integer maxRows,
-        String query) {
+        @OutputCustomType.Parameter("maxRows") Integer maxRows,
+        @OutputCustomType.Parameter("query") String query) {
         this.maxRows = maxRows;
         this.query = query;
     }

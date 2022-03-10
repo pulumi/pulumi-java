@@ -35,12 +35,12 @@ public final class BucketWebsite {
      */
     private final @Nullable Either<String,List<String>> routingRules;
 
-    @OutputCustomType.Constructor({"errorDocument","indexDocument","redirectAllRequestsTo","routingRules"})
+    @OutputCustomType.Constructor
     private BucketWebsite(
-        @Nullable String errorDocument,
-        @Nullable String indexDocument,
-        @Nullable String redirectAllRequestsTo,
-        @Nullable Either<String,List<String>> routingRules) {
+        @OutputCustomType.Parameter("errorDocument") @Nullable String errorDocument,
+        @OutputCustomType.Parameter("indexDocument") @Nullable String indexDocument,
+        @OutputCustomType.Parameter("redirectAllRequestsTo") @Nullable String redirectAllRequestsTo,
+        @OutputCustomType.Parameter("routingRules") @Nullable Either<String,List<String>> routingRules) {
         this.errorDocument = errorDocument;
         this.indexDocument = indexDocument;
         this.redirectAllRequestsTo = redirectAllRequestsTo;

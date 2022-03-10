@@ -16,10 +16,10 @@ public final class RailsAppLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<RailsAppLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private RailsAppLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<RailsAppLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<RailsAppLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

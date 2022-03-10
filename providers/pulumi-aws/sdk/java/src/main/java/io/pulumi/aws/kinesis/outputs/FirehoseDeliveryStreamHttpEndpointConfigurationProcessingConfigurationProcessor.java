@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConf
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessor(
-        @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter> parameters,
-        String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfigurationProcessorParameter> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.type = type;
     }

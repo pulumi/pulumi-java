@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModi
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications(String status) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModifications(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 

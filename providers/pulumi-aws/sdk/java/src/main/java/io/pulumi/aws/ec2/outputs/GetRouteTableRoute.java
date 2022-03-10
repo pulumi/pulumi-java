@@ -75,21 +75,21 @@ public final class GetRouteTableRoute {
      */
     private final String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"carrierGatewayId","cidrBlock","destinationPrefixListId","egressOnlyGatewayId","gatewayId","instanceId","ipv6CidrBlock","localGatewayId","natGatewayId","networkInterfaceId","transitGatewayId","vpcEndpointId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private GetRouteTableRoute(
-        String carrierGatewayId,
-        String cidrBlock,
-        String destinationPrefixListId,
-        String egressOnlyGatewayId,
-        String gatewayId,
-        String instanceId,
-        String ipv6CidrBlock,
-        String localGatewayId,
-        String natGatewayId,
-        String networkInterfaceId,
-        String transitGatewayId,
-        String vpcEndpointId,
-        String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("carrierGatewayId") String carrierGatewayId,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("destinationPrefixListId") String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyGatewayId") String egressOnlyGatewayId,
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("natGatewayId") String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @OutputCustomType.Parameter("vpcEndpointId") String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.cidrBlock = cidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;

@@ -28,11 +28,11 @@ public final class ClusterLoggingInfoBrokerLogsS3 {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private ClusterLoggingInfoBrokerLogsS3(
-        @Nullable String bucket,
-        Boolean enabled,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;

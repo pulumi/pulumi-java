@@ -27,11 +27,11 @@ public final class ProjectEnvironmentEnvironmentVariable {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","type","value"})
+    @OutputCustomType.Constructor
     private ProjectEnvironmentEnvironmentVariable(
-        String name,
-        @Nullable String type,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.type = type;
         this.value = value;

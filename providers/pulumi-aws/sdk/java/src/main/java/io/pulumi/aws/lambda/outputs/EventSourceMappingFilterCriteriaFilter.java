@@ -17,8 +17,8 @@ public final class EventSourceMappingFilterCriteriaFilter {
      */
     private final @Nullable String pattern;
 
-    @OutputCustomType.Constructor({"pattern"})
-    private EventSourceMappingFilterCriteriaFilter(@Nullable String pattern) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingFilterCriteriaFilter(@OutputCustomType.Parameter("pattern") @Nullable String pattern) {
         this.pattern = pattern;
     }
 

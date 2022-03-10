@@ -20,10 +20,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"type","uri"})
+    @OutputCustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        String type,
-        String uri) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.type = type;
         this.uri = uri;
     }

@@ -41,12 +41,12 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
      */
     private final @Nullable List<String> queryStringCacheKeys;
 
-    @OutputCustomType.Constructor({"cookies","headers","queryString","queryStringCacheKeys"})
+    @OutputCustomType.Constructor
     private DistributionDefaultCacheBehaviorForwardedValues(
-        DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
-        @Nullable List<String> headers,
-        Boolean queryString,
-        @Nullable List<String> queryStringCacheKeys) {
+        @OutputCustomType.Parameter("cookies") DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("queryString") Boolean queryString,
+        @OutputCustomType.Parameter("queryStringCacheKeys") @Nullable List<String> queryStringCacheKeys) {
         this.cookies = cookies;
         this.headers = headers;
         this.queryString = queryString;

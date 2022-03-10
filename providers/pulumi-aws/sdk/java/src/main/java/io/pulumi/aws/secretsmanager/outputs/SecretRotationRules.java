@@ -15,8 +15,8 @@ public final class SecretRotationRules {
      */
     private final Integer automaticallyAfterDays;
 
-    @OutputCustomType.Constructor({"automaticallyAfterDays"})
-    private SecretRotationRules(Integer automaticallyAfterDays) {
+    @OutputCustomType.Constructor
+    private SecretRotationRules(@OutputCustomType.Parameter("automaticallyAfterDays") Integer automaticallyAfterDays) {
         this.automaticallyAfterDays = automaticallyAfterDays;
     }
 

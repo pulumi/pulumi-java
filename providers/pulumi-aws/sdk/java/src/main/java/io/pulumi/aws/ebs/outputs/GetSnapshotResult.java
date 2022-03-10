@@ -97,28 +97,28 @@ public final class GetSnapshotResult {
      */
     private final Integer volumeSize;
 
-    @OutputCustomType.Constructor({"arn","dataEncryptionKeyId","description","encrypted","filters","id","kmsKeyId","mostRecent","outpostArn","ownerAlias","ownerId","owners","restorableByUserIds","snapshotId","snapshotIds","state","storageTier","tags","volumeId","volumeSize"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String arn,
-        String dataEncryptionKeyId,
-        String description,
-        Boolean encrypted,
-        @Nullable List<GetSnapshotFilter> filters,
-        String id,
-        String kmsKeyId,
-        @Nullable Boolean mostRecent,
-        String outpostArn,
-        String ownerAlias,
-        String ownerId,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds,
-        String snapshotId,
-        @Nullable List<String> snapshotIds,
-        String state,
-        String storageTier,
-        Map<String,String> tags,
-        String volumeId,
-        Integer volumeSize) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataEncryptionKeyId") String dataEncryptionKeyId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerAlias") String ownerAlias,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
+        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds,
+        @OutputCustomType.Parameter("snapshotId") String snapshotId,
+        @OutputCustomType.Parameter("snapshotIds") @Nullable List<String> snapshotIds,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageTier") String storageTier,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("volumeId") String volumeId,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize) {
         this.arn = arn;
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         this.description = description;

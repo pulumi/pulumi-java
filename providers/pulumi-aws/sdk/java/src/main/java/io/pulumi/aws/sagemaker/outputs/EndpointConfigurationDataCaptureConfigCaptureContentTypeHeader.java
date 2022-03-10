@@ -22,10 +22,10 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      */
     private final @Nullable List<String> jsonContentTypes;
 
-    @OutputCustomType.Constructor({"csvContentTypes","jsonContentTypes"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader(
-        @Nullable List<String> csvContentTypes,
-        @Nullable List<String> jsonContentTypes) {
+        @OutputCustomType.Parameter("csvContentTypes") @Nullable List<String> csvContentTypes,
+        @OutputCustomType.Parameter("jsonContentTypes") @Nullable List<String> jsonContentTypes) {
         this.csvContentTypes = csvContentTypes;
         this.jsonContentTypes = jsonContentTypes;
     }

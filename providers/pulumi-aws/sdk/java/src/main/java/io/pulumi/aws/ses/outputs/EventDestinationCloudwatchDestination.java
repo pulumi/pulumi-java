@@ -25,11 +25,11 @@ public final class EventDestinationCloudwatchDestination {
      */
     private final String valueSource;
 
-    @OutputCustomType.Constructor({"defaultValue","dimensionName","valueSource"})
+    @OutputCustomType.Constructor
     private EventDestinationCloudwatchDestination(
-        String defaultValue,
-        String dimensionName,
-        String valueSource) {
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("dimensionName") String dimensionName,
+        @OutputCustomType.Parameter("valueSource") String valueSource) {
         this.defaultValue = defaultValue;
         this.dimensionName = dimensionName;
         this.valueSource = valueSource;

@@ -32,12 +32,12 @@ public final class GetOrganizationRoot {
      */
     private final List<GetOrganizationRootPolicyType> policyTypes;
 
-    @OutputCustomType.Constructor({"arn","id","name","policyTypes"})
+    @OutputCustomType.Constructor
     private GetOrganizationRoot(
-        String arn,
-        String id,
-        String name,
-        List<GetOrganizationRootPolicyType> policyTypes) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyTypes") List<GetOrganizationRootPolicyType> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;

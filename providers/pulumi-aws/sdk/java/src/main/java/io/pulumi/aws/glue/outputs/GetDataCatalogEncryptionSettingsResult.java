@@ -23,11 +23,11 @@ public final class GetDataCatalogEncryptionSettingsResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"catalogId","dataCatalogEncryptionSettings","id"})
+    @OutputCustomType.Constructor
     private GetDataCatalogEncryptionSettingsResult(
-        String catalogId,
-        List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
-        String id) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("dataCatalogEncryptionSettings") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
+        @OutputCustomType.Parameter("id") String id) {
         this.catalogId = catalogId;
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
         this.id = id;

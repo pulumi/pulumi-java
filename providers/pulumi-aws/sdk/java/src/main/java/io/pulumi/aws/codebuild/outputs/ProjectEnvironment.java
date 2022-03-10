@@ -56,16 +56,16 @@ public final class ProjectEnvironment {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","computeType","environmentVariables","image","imagePullCredentialsType","privilegedMode","registryCredential","type"})
+    @OutputCustomType.Constructor
     private ProjectEnvironment(
-        @Nullable String certificate,
-        String computeType,
-        @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
-        String image,
-        @Nullable String imagePullCredentialsType,
-        @Nullable Boolean privilegedMode,
-        @Nullable ProjectEnvironmentRegistryCredential registryCredential,
-        String type) {
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imagePullCredentialsType") @Nullable String imagePullCredentialsType,
+        @OutputCustomType.Parameter("privilegedMode") @Nullable Boolean privilegedMode,
+        @OutputCustomType.Parameter("registryCredential") @Nullable ProjectEnvironmentRegistryCredential registryCredential,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.computeType = computeType;
         this.environmentVariables = environmentVariables;

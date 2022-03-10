@@ -47,14 +47,14 @@ public final class MetricAlarmMetricQueryMetric {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"dimensions","metricName","namespace","period","stat","unit"})
+    @OutputCustomType.Constructor
     private MetricAlarmMetricQueryMetric(
-        @Nullable Map<String,String> dimensions,
-        String metricName,
-        @Nullable String namespace,
-        Integer period,
-        String stat,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("period") Integer period,
+        @OutputCustomType.Parameter("stat") String stat,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;

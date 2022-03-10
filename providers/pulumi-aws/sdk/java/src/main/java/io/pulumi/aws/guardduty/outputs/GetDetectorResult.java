@@ -26,12 +26,12 @@ public final class GetDetectorResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"findingPublishingFrequency","id","serviceRoleArn","status"})
+    @OutputCustomType.Constructor
     private GetDetectorResult(
-        String findingPublishingFrequency,
-        String id,
-        String serviceRoleArn,
-        String status) {
+        @OutputCustomType.Parameter("findingPublishingFrequency") String findingPublishingFrequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serviceRoleArn") String serviceRoleArn,
+        @OutputCustomType.Parameter("status") String status) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.id = id;
         this.serviceRoleArn = serviceRoleArn;

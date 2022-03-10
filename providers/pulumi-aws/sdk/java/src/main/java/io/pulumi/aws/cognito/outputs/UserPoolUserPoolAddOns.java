@@ -15,8 +15,8 @@ public final class UserPoolUserPoolAddOns {
      */
     private final String advancedSecurityMode;
 
-    @OutputCustomType.Constructor({"advancedSecurityMode"})
-    private UserPoolUserPoolAddOns(String advancedSecurityMode) {
+    @OutputCustomType.Constructor
+    private UserPoolUserPoolAddOns(@OutputCustomType.Parameter("advancedSecurityMode") String advancedSecurityMode) {
         this.advancedSecurityMode = advancedSecurityMode;
     }
 

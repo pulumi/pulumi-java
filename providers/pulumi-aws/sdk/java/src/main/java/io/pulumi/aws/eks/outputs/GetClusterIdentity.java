@@ -16,8 +16,8 @@ public final class GetClusterIdentity {
      */
     private final List<GetClusterIdentityOidc> oidcs;
 
-    @OutputCustomType.Constructor({"oidcs"})
-    private GetClusterIdentity(List<GetClusterIdentityOidc> oidcs) {
+    @OutputCustomType.Constructor
+    private GetClusterIdentity(@OutputCustomType.Parameter("oidcs") List<GetClusterIdentityOidc> oidcs) {
         this.oidcs = oidcs;
     }
 

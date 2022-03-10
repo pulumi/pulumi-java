@@ -23,10 +23,10 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersCon
      */
     private final @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
-        @Nullable String headerBehavior,
-        @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders headers) {
+        @OutputCustomType.Parameter("headerBehavior") @Nullable String headerBehavior,
+        @OutputCustomType.Parameter("headers") @Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

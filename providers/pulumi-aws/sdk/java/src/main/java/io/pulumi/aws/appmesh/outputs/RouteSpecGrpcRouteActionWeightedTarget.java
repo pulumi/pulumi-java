@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteActionWeightedTarget {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"virtualNode","weight"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteActionWeightedTarget(
-        String virtualNode,
-        Integer weight) {
+        @OutputCustomType.Parameter("virtualNode") String virtualNode,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.virtualNode = virtualNode;
         this.weight = weight;
     }

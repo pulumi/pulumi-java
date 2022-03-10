@@ -66,18 +66,18 @@ public final class GetDomainClusterConfig {
      */
     private final Boolean zoneAwarenessEnabled;
 
-    @OutputCustomType.Constructor({"dedicatedMasterCount","dedicatedMasterEnabled","dedicatedMasterType","instanceCount","instanceType","warmCount","warmEnabled","warmType","zoneAwarenessConfigs","zoneAwarenessEnabled"})
+    @OutputCustomType.Constructor
     private GetDomainClusterConfig(
-        Integer dedicatedMasterCount,
-        Boolean dedicatedMasterEnabled,
-        String dedicatedMasterType,
-        Integer instanceCount,
-        String instanceType,
-        Integer warmCount,
-        @Nullable Boolean warmEnabled,
-        String warmType,
-        List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
-        Boolean zoneAwarenessEnabled) {
+        @OutputCustomType.Parameter("dedicatedMasterCount") Integer dedicatedMasterCount,
+        @OutputCustomType.Parameter("dedicatedMasterEnabled") Boolean dedicatedMasterEnabled,
+        @OutputCustomType.Parameter("dedicatedMasterType") String dedicatedMasterType,
+        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("warmCount") Integer warmCount,
+        @OutputCustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
+        @OutputCustomType.Parameter("warmType") String warmType,
+        @OutputCustomType.Parameter("zoneAwarenessConfigs") List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
+        @OutputCustomType.Parameter("zoneAwarenessEnabled") Boolean zoneAwarenessEnabled) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;

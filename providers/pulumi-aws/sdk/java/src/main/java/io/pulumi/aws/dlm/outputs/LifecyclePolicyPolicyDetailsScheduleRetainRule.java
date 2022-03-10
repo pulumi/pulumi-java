@@ -15,8 +15,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
      */
     private final Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private LifecyclePolicyPolicyDetailsScheduleRetainRule(Integer count) {
+    @OutputCustomType.Constructor
+    private LifecyclePolicyPolicyDetailsScheduleRetainRule(@OutputCustomType.Parameter("count") Integer count) {
         this.count = count;
     }
 

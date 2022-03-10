@@ -32,14 +32,14 @@ public final class GetLocalGatewayResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","outpostArn","ownerId","state","tags"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayResult(
-        @Nullable List<GetLocalGatewayFilter> filters,
-        String id,
-        String outpostArn,
-        String ownerId,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.outpostArn = outpostArn;

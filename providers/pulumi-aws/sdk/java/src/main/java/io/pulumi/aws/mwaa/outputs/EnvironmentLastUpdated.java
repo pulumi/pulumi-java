@@ -26,11 +26,11 @@ public final class EnvironmentLastUpdated {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"createdAt","errors","status"})
+    @OutputCustomType.Constructor
     private EnvironmentLastUpdated(
-        @Nullable String createdAt,
-        @Nullable List<EnvironmentLastUpdatedError> errors,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("errors") @Nullable List<EnvironmentLastUpdatedError> errors,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.createdAt = createdAt;
         this.errors = errors;
         this.status = status;

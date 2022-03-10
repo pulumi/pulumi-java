@@ -56,15 +56,15 @@ public final class TableGlobalSecondaryIndex {
      */
     private final @Nullable Integer writeCapacity;
 
-    @OutputCustomType.Constructor({"hashKey","name","nonKeyAttributes","projectionType","rangeKey","readCapacity","writeCapacity"})
+    @OutputCustomType.Constructor
     private TableGlobalSecondaryIndex(
-        String hashKey,
-        String name,
-        @Nullable List<String> nonKeyAttributes,
-        String projectionType,
-        @Nullable String rangeKey,
-        @Nullable Integer readCapacity,
-        @Nullable Integer writeCapacity) {
+        @OutputCustomType.Parameter("hashKey") String hashKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") @Nullable String rangeKey,
+        @OutputCustomType.Parameter("readCapacity") @Nullable Integer readCapacity,
+        @OutputCustomType.Parameter("writeCapacity") @Nullable Integer writeCapacity) {
         this.hashKey = hashKey;
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;

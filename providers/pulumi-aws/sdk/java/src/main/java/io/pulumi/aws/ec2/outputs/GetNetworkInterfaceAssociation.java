@@ -45,15 +45,15 @@ public final class GetNetworkInterfaceAssociation {
      */
     private final String publicIp;
 
-    @OutputCustomType.Constructor({"allocationId","associationId","carrierIp","customerOwnedIp","ipOwnerId","publicDnsName","publicIp"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceAssociation(
-        String allocationId,
-        String associationId,
-        String carrierIp,
-        String customerOwnedIp,
-        String ipOwnerId,
-        String publicDnsName,
-        String publicIp) {
+        @OutputCustomType.Parameter("allocationId") String allocationId,
+        @OutputCustomType.Parameter("associationId") String associationId,
+        @OutputCustomType.Parameter("carrierIp") String carrierIp,
+        @OutputCustomType.Parameter("customerOwnedIp") String customerOwnedIp,
+        @OutputCustomType.Parameter("ipOwnerId") String ipOwnerId,
+        @OutputCustomType.Parameter("publicDnsName") String publicDnsName,
+        @OutputCustomType.Parameter("publicIp") String publicIp) {
         this.allocationId = allocationId;
         this.associationId = associationId;
         this.carrierIp = carrierIp;

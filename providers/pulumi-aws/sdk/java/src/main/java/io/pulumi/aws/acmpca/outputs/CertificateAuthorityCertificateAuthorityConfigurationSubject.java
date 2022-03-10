@@ -77,21 +77,21 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubject 
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"commonName","country","distinguishedNameQualifier","generationQualifier","givenName","initials","locality","organization","organizationalUnit","pseudonym","state","surname","title"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityCertificateAuthorityConfigurationSubject(
-        @Nullable String commonName,
-        @Nullable String country,
-        @Nullable String distinguishedNameQualifier,
-        @Nullable String generationQualifier,
-        @Nullable String givenName,
-        @Nullable String initials,
-        @Nullable String locality,
-        @Nullable String organization,
-        @Nullable String organizationalUnit,
-        @Nullable String pseudonym,
-        @Nullable String state,
-        @Nullable String surname,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
+        @OutputCustomType.Parameter("country") @Nullable String country,
+        @OutputCustomType.Parameter("distinguishedNameQualifier") @Nullable String distinguishedNameQualifier,
+        @OutputCustomType.Parameter("generationQualifier") @Nullable String generationQualifier,
+        @OutputCustomType.Parameter("givenName") @Nullable String givenName,
+        @OutputCustomType.Parameter("initials") @Nullable String initials,
+        @OutputCustomType.Parameter("locality") @Nullable String locality,
+        @OutputCustomType.Parameter("organization") @Nullable String organization,
+        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @OutputCustomType.Parameter("pseudonym") @Nullable String pseudonym,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("surname") @Nullable String surname,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.commonName = commonName;
         this.country = country;
         this.distinguishedNameQualifier = distinguishedNameQualifier;

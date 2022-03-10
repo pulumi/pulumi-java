@@ -50,15 +50,15 @@ public final class ClusterCoreInstanceGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"autoscalingPolicy","bidPrice","ebsConfigs","id","instanceCount","instanceType","name"})
+    @OutputCustomType.Constructor
     private ClusterCoreInstanceGroup(
-        @Nullable String autoscalingPolicy,
-        @Nullable String bidPrice,
-        @Nullable List<ClusterCoreInstanceGroupEbsConfig> ebsConfigs,
-        @Nullable String id,
-        @Nullable Integer instanceCount,
-        String instanceType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("autoscalingPolicy") @Nullable String autoscalingPolicy,
+        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterCoreInstanceGroupEbsConfig> ebsConfigs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;

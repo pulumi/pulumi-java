@@ -22,10 +22,10 @@ public final class WorkgroupConfigurationEngineVersion {
      */
     private final @Nullable String selectedEngineVersion;
 
-    @OutputCustomType.Constructor({"effectiveEngineVersion","selectedEngineVersion"})
+    @OutputCustomType.Constructor
     private WorkgroupConfigurationEngineVersion(
-        @Nullable String effectiveEngineVersion,
-        @Nullable String selectedEngineVersion) {
+        @OutputCustomType.Parameter("effectiveEngineVersion") @Nullable String effectiveEngineVersion,
+        @OutputCustomType.Parameter("selectedEngineVersion") @Nullable String selectedEngineVersion) {
         this.effectiveEngineVersion = effectiveEngineVersion;
         this.selectedEngineVersion = selectedEngineVersion;
     }

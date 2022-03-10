@@ -26,13 +26,13 @@ public final class GetSnapshotIdsResult {
     private final @Nullable List<String> owners;
     private final @Nullable List<String> restorableByUserIds;
 
-    @OutputCustomType.Constructor({"filters","id","ids","owners","restorableByUserIds"})
+    @OutputCustomType.Constructor
     private GetSnapshotIdsResult(
-        @Nullable List<GetSnapshotIdsFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
+        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

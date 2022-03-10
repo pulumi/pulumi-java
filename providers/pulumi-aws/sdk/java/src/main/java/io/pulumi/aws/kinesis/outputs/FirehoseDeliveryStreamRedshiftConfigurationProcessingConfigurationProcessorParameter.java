@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      */
     private final String parameterValue;
 
-    @OutputCustomType.Constructor({"parameterName","parameterValue"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameter(
-        String parameterName,
-        String parameterValue) {
+        @OutputCustomType.Parameter("parameterName") String parameterName,
+        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterName = parameterName;
         this.parameterValue = parameterValue;
     }

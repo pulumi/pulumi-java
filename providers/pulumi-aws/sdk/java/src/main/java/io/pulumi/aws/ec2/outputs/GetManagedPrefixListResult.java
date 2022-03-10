@@ -58,18 +58,18 @@ public final class GetManagedPrefixListResult {
     private final Map<String,String> tags;
     private final Integer version;
 
-    @OutputCustomType.Constructor({"addressFamily","arn","entries","filters","id","maxEntries","name","ownerId","tags","version"})
+    @OutputCustomType.Constructor
     private GetManagedPrefixListResult(
-        String addressFamily,
-        String arn,
-        List<GetManagedPrefixListEntry> entries,
-        @Nullable List<GetManagedPrefixListFilter> filters,
-        String id,
-        Integer maxEntries,
-        String name,
-        String ownerId,
-        Map<String,String> tags,
-        Integer version) {
+        @OutputCustomType.Parameter("addressFamily") String addressFamily,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("entries") List<GetManagedPrefixListEntry> entries,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetManagedPrefixListFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maxEntries") Integer maxEntries,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;

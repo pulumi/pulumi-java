@@ -17,8 +17,8 @@ public final class EndpointDeploymentConfigAutoRollbackConfiguration {
      */
     private final @Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms;
 
-    @OutputCustomType.Constructor({"alarms"})
-    private EndpointDeploymentConfigAutoRollbackConfiguration(@Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms) {
+    @OutputCustomType.Constructor
+    private EndpointDeploymentConfigAutoRollbackConfiguration(@OutputCustomType.Parameter("alarms") @Nullable List<EndpointDeploymentConfigAutoRollbackConfigurationAlarm> alarms) {
         this.alarms = alarms;
     }
 

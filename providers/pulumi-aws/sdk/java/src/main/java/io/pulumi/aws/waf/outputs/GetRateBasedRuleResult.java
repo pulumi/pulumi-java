@@ -16,10 +16,10 @@ public final class GetRateBasedRuleResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"id","name"})
+    @OutputCustomType.Constructor
     private GetRateBasedRuleResult(
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.id = id;
         this.name = name;
     }

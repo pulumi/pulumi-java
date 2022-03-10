@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetOriginRequestPolicyQueryStringsConfigQueryString {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetOriginRequestPolicyQueryStringsConfigQueryString(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetOriginRequestPolicyQueryStringsConfigQueryString(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 

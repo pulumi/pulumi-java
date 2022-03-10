@@ -24,10 +24,10 @@ public final class DataSourceCredentials {
      */
     private final @Nullable DataSourceCredentialsCredentialPair credentialPair;
 
-    @OutputCustomType.Constructor({"copySourceArn","credentialPair"})
+    @OutputCustomType.Constructor
     private DataSourceCredentials(
-        @Nullable String copySourceArn,
-        @Nullable DataSourceCredentialsCredentialPair credentialPair) {
+        @OutputCustomType.Parameter("copySourceArn") @Nullable String copySourceArn,
+        @OutputCustomType.Parameter("credentialPair") @Nullable DataSourceCredentialsCredentialPair credentialPair) {
         this.copySourceArn = copySourceArn;
         this.credentialPair = credentialPair;
     }

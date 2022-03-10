@@ -43,14 +43,14 @@ public final class BudgetNotification {
      */
     private final String thresholdType;
 
-    @OutputCustomType.Constructor({"comparisonOperator","notificationType","subscriberEmailAddresses","subscriberSnsTopicArns","threshold","thresholdType"})
+    @OutputCustomType.Constructor
     private BudgetNotification(
-        String comparisonOperator,
-        String notificationType,
-        @Nullable List<String> subscriberEmailAddresses,
-        @Nullable List<String> subscriberSnsTopicArns,
-        Double threshold,
-        String thresholdType) {
+        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @OutputCustomType.Parameter("notificationType") String notificationType,
+        @OutputCustomType.Parameter("subscriberEmailAddresses") @Nullable List<String> subscriberEmailAddresses,
+        @OutputCustomType.Parameter("subscriberSnsTopicArns") @Nullable List<String> subscriberSnsTopicArns,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("thresholdType") String thresholdType) {
         this.comparisonOperator = comparisonOperator;
         this.notificationType = notificationType;
         this.subscriberEmailAddresses = subscriberEmailAddresses;

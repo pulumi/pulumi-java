@@ -25,13 +25,13 @@ public final class GetInvocationResult {
      */
     private final String result;
 
-    @OutputCustomType.Constructor({"functionName","id","input","qualifier","result"})
+    @OutputCustomType.Constructor
     private GetInvocationResult(
-        String functionName,
-        String id,
-        String input,
-        @Nullable String qualifier,
-        String result) {
+        @OutputCustomType.Parameter("functionName") String functionName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") String input,
+        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier,
+        @OutputCustomType.Parameter("result") String result) {
         this.functionName = functionName;
         this.id = id;
         this.input = input;

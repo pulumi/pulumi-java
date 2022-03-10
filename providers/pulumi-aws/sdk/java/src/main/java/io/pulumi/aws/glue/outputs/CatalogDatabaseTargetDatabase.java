@@ -20,10 +20,10 @@ public final class CatalogDatabaseTargetDatabase {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName"})
+    @OutputCustomType.Constructor
     private CatalogDatabaseTargetDatabase(
-        String catalogId,
-        String databaseName) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
     }

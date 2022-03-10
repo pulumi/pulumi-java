@@ -32,12 +32,12 @@ public final class FleetComputeCapacity {
      */
     private final @Nullable Integer running;
 
-    @OutputCustomType.Constructor({"available","desiredInstances","inUse","running"})
+    @OutputCustomType.Constructor
     private FleetComputeCapacity(
-        @Nullable Integer available,
-        Integer desiredInstances,
-        @Nullable Integer inUse,
-        @Nullable Integer running) {
+        @OutputCustomType.Parameter("available") @Nullable Integer available,
+        @OutputCustomType.Parameter("desiredInstances") Integer desiredInstances,
+        @OutputCustomType.Parameter("inUse") @Nullable Integer inUse,
+        @OutputCustomType.Parameter("running") @Nullable Integer running) {
         this.available = available;
         this.desiredInstances = desiredInstances;
         this.inUse = inUse;

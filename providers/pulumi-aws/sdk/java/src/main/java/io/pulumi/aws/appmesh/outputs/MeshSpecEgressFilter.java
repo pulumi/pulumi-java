@@ -18,8 +18,8 @@ public final class MeshSpecEgressFilter {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private MeshSpecEgressFilter(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private MeshSpecEgressFilter(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

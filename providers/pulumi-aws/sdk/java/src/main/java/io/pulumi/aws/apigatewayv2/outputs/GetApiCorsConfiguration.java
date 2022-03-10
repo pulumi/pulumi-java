@@ -43,14 +43,14 @@ public final class GetApiCorsConfiguration {
      */
     private final Integer maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOrigins","exposeHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private GetApiCorsConfiguration(
-        Boolean allowCredentials,
-        List<String> allowHeaders,
-        List<String> allowMethods,
-        List<String> allowOrigins,
-        List<String> exposeHeaders,
-        Integer maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowHeaders") List<String> allowHeaders,
+        @OutputCustomType.Parameter("allowMethods") List<String> allowMethods,
+        @OutputCustomType.Parameter("allowOrigins") List<String> allowOrigins,
+        @OutputCustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAge") Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

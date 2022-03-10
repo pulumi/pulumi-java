@@ -24,11 +24,11 @@ public final class GetSecretsResult {
     private final Map<String,String> plaintext;
     private final List<GetSecretsSecret> secrets;
 
-    @OutputCustomType.Constructor({"id","plaintext","secrets"})
+    @OutputCustomType.Constructor
     private GetSecretsResult(
-        String id,
-        Map<String,String> plaintext,
-        List<GetSecretsSecret> secrets) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") Map<String,String> plaintext,
+        @OutputCustomType.Parameter("secrets") List<GetSecretsSecret> secrets) {
         this.id = id;
         this.plaintext = plaintext;
         this.secrets = secrets;

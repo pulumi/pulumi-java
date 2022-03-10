@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo;
 
-    @OutputCustomType.Constructor({"elbInfos","targetGroupInfos","targetGroupPairInfo"})
+    @OutputCustomType.Constructor
     private DeploymentGroupLoadBalancerInfo(
-        @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
-        @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
-        @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
+        @OutputCustomType.Parameter("elbInfos") @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
+        @OutputCustomType.Parameter("targetGroupInfos") @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
+        @OutputCustomType.Parameter("targetGroupPairInfo") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
         this.elbInfos = elbInfos;
         this.targetGroupInfos = targetGroupInfos;
         this.targetGroupPairInfo = targetGroupPairInfo;

@@ -32,12 +32,12 @@ public final class MLTransformInputRecordTable {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalogId","connectionName","databaseName","tableName"})
+    @OutputCustomType.Constructor
     private MLTransformInputRecordTable(
-        @Nullable String catalogId,
-        @Nullable String connectionName,
-        String databaseName,
-        String tableName) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.connectionName = connectionName;
         this.databaseName = databaseName;

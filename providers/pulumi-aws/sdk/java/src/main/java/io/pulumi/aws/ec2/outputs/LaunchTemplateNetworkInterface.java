@@ -89,23 +89,23 @@ public final class LaunchTemplateNetworkInterface {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"associateCarrierIpAddress","associatePublicIpAddress","deleteOnTermination","description","deviceIndex","interfaceType","ipv4AddressCount","ipv4Addresses","ipv6AddressCount","ipv6Addresses","networkCardIndex","networkInterfaceId","privateIpAddress","securityGroups","subnetId"})
+    @OutputCustomType.Constructor
     private LaunchTemplateNetworkInterface(
-        @Nullable String associateCarrierIpAddress,
-        @Nullable String associatePublicIpAddress,
-        @Nullable String deleteOnTermination,
-        @Nullable String description,
-        @Nullable Integer deviceIndex,
-        @Nullable String interfaceType,
-        @Nullable Integer ipv4AddressCount,
-        @Nullable List<String> ipv4Addresses,
-        @Nullable Integer ipv6AddressCount,
-        @Nullable List<String> ipv6Addresses,
-        @Nullable Integer networkCardIndex,
-        @Nullable String networkInterfaceId,
-        @Nullable String privateIpAddress,
-        @Nullable List<String> securityGroups,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("associateCarrierIpAddress") @Nullable String associateCarrierIpAddress,
+        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable String associatePublicIpAddress,
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
+        @OutputCustomType.Parameter("interfaceType") @Nullable String interfaceType,
+        @OutputCustomType.Parameter("ipv4AddressCount") @Nullable Integer ipv4AddressCount,
+        @OutputCustomType.Parameter("ipv4Addresses") @Nullable List<String> ipv4Addresses,
+        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<String> ipv6Addresses,
+        @OutputCustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;

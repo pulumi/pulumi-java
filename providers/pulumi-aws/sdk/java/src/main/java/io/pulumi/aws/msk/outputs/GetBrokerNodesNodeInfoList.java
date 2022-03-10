@@ -42,14 +42,14 @@ public final class GetBrokerNodesNodeInfoList {
      */
     private final String nodeArn;
 
-    @OutputCustomType.Constructor({"attachedEniId","brokerId","clientSubnet","clientVpcIpAddress","endpoints","nodeArn"})
+    @OutputCustomType.Constructor
     private GetBrokerNodesNodeInfoList(
-        String attachedEniId,
-        Double brokerId,
-        String clientSubnet,
-        String clientVpcIpAddress,
-        List<String> endpoints,
-        String nodeArn) {
+        @OutputCustomType.Parameter("attachedEniId") String attachedEniId,
+        @OutputCustomType.Parameter("brokerId") Double brokerId,
+        @OutputCustomType.Parameter("clientSubnet") String clientSubnet,
+        @OutputCustomType.Parameter("clientVpcIpAddress") String clientVpcIpAddress,
+        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
+        @OutputCustomType.Parameter("nodeArn") String nodeArn) {
         this.attachedEniId = attachedEniId;
         this.brokerId = brokerId;
         this.clientSubnet = clientSubnet;

@@ -70,19 +70,19 @@ public final class InstanceEbsBlockDevice {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceName","encrypted","iops","kmsKeyId","snapshotId","tags","throughput","volumeId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private InstanceEbsBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        String deviceName,
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        @Nullable String kmsKeyId,
-        @Nullable String snapshotId,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer throughput,
-        @Nullable String volumeId,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
+        @OutputCustomType.Parameter("volumeId") @Nullable String volumeId,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = deviceName;
         this.encrypted = encrypted;

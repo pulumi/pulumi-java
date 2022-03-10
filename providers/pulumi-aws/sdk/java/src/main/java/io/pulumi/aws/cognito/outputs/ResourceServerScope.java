@@ -20,10 +20,10 @@ public final class ResourceServerScope {
      */
     private final String scopeName;
 
-    @OutputCustomType.Constructor({"scopeDescription","scopeName"})
+    @OutputCustomType.Constructor
     private ResourceServerScope(
-        String scopeDescription,
-        String scopeName) {
+        @OutputCustomType.Parameter("scopeDescription") String scopeDescription,
+        @OutputCustomType.Parameter("scopeName") String scopeName) {
         this.scopeDescription = scopeDescription;
         this.scopeName = scopeName;
     }

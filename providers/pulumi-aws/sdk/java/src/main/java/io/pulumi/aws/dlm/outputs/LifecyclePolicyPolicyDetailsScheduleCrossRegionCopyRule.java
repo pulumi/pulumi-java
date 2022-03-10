@@ -45,14 +45,14 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"cmkArn","copyTags","deprecateRule","encrypted","retainRule","target"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule(
-        @Nullable String cmkArn,
-        @Nullable Boolean copyTags,
-        @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
-        Boolean encrypted,
-        @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
-        String target) {
+        @OutputCustomType.Parameter("cmkArn") @Nullable String cmkArn,
+        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @OutputCustomType.Parameter("deprecateRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("retainRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
+        @OutputCustomType.Parameter("target") String target) {
         this.cmkArn = cmkArn;
         this.copyTags = copyTags;
         this.deprecateRule = deprecateRule;

@@ -21,10 +21,10 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"permissions","principal"})
+    @OutputCustomType.Constructor
     private GetDataLakeSettingsCreateDatabaseDefaultPermission(
-        List<String> permissions,
-        String principal) {
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.permissions = permissions;
         this.principal = principal;
     }

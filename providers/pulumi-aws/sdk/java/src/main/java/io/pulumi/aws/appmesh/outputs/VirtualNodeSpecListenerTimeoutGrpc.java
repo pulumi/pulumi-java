@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTimeoutGrpc {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest;
 
-    @OutputCustomType.Constructor({"idle","perRequest"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTimeoutGrpc(
-        @Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle,
-        @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
+        @OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle,
+        @OutputCustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }

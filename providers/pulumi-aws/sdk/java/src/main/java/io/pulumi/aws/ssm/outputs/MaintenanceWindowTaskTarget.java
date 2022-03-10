@@ -17,10 +17,10 @@ public final class MaintenanceWindowTaskTarget {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","values"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTarget(
-        String key,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }

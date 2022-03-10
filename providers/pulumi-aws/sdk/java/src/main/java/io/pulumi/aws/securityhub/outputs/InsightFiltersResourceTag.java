@@ -25,11 +25,11 @@ public final class InsightFiltersResourceTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","key","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersResourceTag(
-        String comparison,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.key = key;
         this.value = value;

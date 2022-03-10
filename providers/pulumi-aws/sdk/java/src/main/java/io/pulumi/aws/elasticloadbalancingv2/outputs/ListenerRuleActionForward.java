@@ -24,10 +24,10 @@ public final class ListenerRuleActionForward {
      */
     private final List<ListenerRuleActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"stickiness","targetGroups"})
+    @OutputCustomType.Constructor
     private ListenerRuleActionForward(
-        @Nullable ListenerRuleActionForwardStickiness stickiness,
-        List<ListenerRuleActionForwardTargetGroup> targetGroups) {
+        @OutputCustomType.Parameter("stickiness") @Nullable ListenerRuleActionForwardStickiness stickiness,
+        @OutputCustomType.Parameter("targetGroups") List<ListenerRuleActionForwardTargetGroup> targetGroups) {
         this.stickiness = stickiness;
         this.targetGroups = targetGroups;
     }

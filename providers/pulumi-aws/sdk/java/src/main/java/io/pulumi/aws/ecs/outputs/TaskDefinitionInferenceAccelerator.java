@@ -20,10 +20,10 @@ public final class TaskDefinitionInferenceAccelerator {
      */
     private final String deviceType;
 
-    @OutputCustomType.Constructor({"deviceName","deviceType"})
+    @OutputCustomType.Constructor
     private TaskDefinitionInferenceAccelerator(
-        String deviceName,
-        String deviceType) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("deviceType") String deviceType) {
         this.deviceName = deviceName;
         this.deviceType = deviceType;
     }

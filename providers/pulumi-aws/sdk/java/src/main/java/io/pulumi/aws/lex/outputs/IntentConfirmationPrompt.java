@@ -34,11 +34,11 @@ public final class IntentConfirmationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentConfirmationPrompt(
-        Integer maxAttempts,
-        List<IntentConfirmationPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<IntentConfirmationPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;

@@ -35,13 +35,13 @@ public final class GetPortfolioConstraintsResult {
      */
     private final @Nullable String productId;
 
-    @OutputCustomType.Constructor({"acceptLanguage","details","id","portfolioId","productId"})
+    @OutputCustomType.Constructor
     private GetPortfolioConstraintsResult(
-        @Nullable String acceptLanguage,
-        List<GetPortfolioConstraintsDetail> details,
-        String id,
-        String portfolioId,
-        @Nullable String productId) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("details") List<GetPortfolioConstraintsDetail> details,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("portfolioId") String portfolioId,
+        @OutputCustomType.Parameter("productId") @Nullable String productId) {
         this.acceptLanguage = acceptLanguage;
         this.details = details;
         this.id = id;

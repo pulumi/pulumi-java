@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjec
      */
     private final VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match;
 
-    @OutputCustomType.Constructor({"match"})
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(@OutputCustomType.Parameter("match") VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
         this.match = match;
     }
 

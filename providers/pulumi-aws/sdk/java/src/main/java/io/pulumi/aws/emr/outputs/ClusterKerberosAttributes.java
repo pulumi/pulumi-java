@@ -37,13 +37,13 @@ public final class ClusterKerberosAttributes {
      */
     private final String realm;
 
-    @OutputCustomType.Constructor({"adDomainJoinPassword","adDomainJoinUser","crossRealmTrustPrincipalPassword","kdcAdminPassword","realm"})
+    @OutputCustomType.Constructor
     private ClusterKerberosAttributes(
-        @Nullable String adDomainJoinPassword,
-        @Nullable String adDomainJoinUser,
-        @Nullable String crossRealmTrustPrincipalPassword,
-        String kdcAdminPassword,
-        String realm) {
+        @OutputCustomType.Parameter("adDomainJoinPassword") @Nullable String adDomainJoinPassword,
+        @OutputCustomType.Parameter("adDomainJoinUser") @Nullable String adDomainJoinUser,
+        @OutputCustomType.Parameter("crossRealmTrustPrincipalPassword") @Nullable String crossRealmTrustPrincipalPassword,
+        @OutputCustomType.Parameter("kdcAdminPassword") String kdcAdminPassword,
+        @OutputCustomType.Parameter("realm") String realm) {
         this.adDomainJoinPassword = adDomainJoinPassword;
         this.adDomainJoinUser = adDomainJoinUser;
         this.crossRealmTrustPrincipalPassword = crossRealmTrustPrincipalPassword;

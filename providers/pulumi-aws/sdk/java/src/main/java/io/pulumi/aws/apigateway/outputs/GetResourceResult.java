@@ -27,13 +27,13 @@ public final class GetResourceResult {
     private final String pathPart;
     private final String restApiId;
 
-    @OutputCustomType.Constructor({"id","parentId","path","pathPart","restApiId"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String id,
-        String parentId,
-        String path,
-        String pathPart,
-        String restApiId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("pathPart") String pathPart,
+        @OutputCustomType.Parameter("restApiId") String restApiId) {
         this.id = id;
         this.parentId = parentId;
         this.path = path;

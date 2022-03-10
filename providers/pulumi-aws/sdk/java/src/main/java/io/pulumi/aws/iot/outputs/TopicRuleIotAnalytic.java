@@ -20,10 +20,10 @@ public final class TopicRuleIotAnalytic {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"channelName","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotAnalytic(
-        String channelName,
-        String roleArn) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.channelName = channelName;
         this.roleArn = roleArn;
     }

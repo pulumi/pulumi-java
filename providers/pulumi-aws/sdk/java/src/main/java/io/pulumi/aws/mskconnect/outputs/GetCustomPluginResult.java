@@ -37,14 +37,14 @@ public final class GetCustomPluginResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arn","description","id","latestRevision","name","state"})
+    @OutputCustomType.Constructor
     private GetCustomPluginResult(
-        String arn,
-        String description,
-        String id,
-        Integer latestRevision,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.arn = arn;
         this.description = description;
         this.id = id;

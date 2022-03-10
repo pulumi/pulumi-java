@@ -22,10 +22,10 @@ public final class FleetResourceCreationLimitPolicy {
      */
     private final @Nullable Integer policyPeriodInMinutes;
 
-    @OutputCustomType.Constructor({"newGameSessionsPerCreator","policyPeriodInMinutes"})
+    @OutputCustomType.Constructor
     private FleetResourceCreationLimitPolicy(
-        @Nullable Integer newGameSessionsPerCreator,
-        @Nullable Integer policyPeriodInMinutes) {
+        @OutputCustomType.Parameter("newGameSessionsPerCreator") @Nullable Integer newGameSessionsPerCreator,
+        @OutputCustomType.Parameter("policyPeriodInMinutes") @Nullable Integer policyPeriodInMinutes) {
         this.newGameSessionsPerCreator = newGameSessionsPerCreator;
         this.policyPeriodInMinutes = policyPeriodInMinutes;
     }

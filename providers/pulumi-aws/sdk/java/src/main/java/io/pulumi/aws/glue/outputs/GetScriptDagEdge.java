@@ -27,11 +27,11 @@ public final class GetScriptDagEdge {
      */
     private final @Nullable String targetParameter;
 
-    @OutputCustomType.Constructor({"source","target","targetParameter"})
+    @OutputCustomType.Constructor
     private GetScriptDagEdge(
-        String source,
-        String target,
-        @Nullable String targetParameter) {
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("targetParameter") @Nullable String targetParameter) {
         this.source = source;
         this.target = target;
         this.targetParameter = targetParameter;

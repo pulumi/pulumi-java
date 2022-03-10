@@ -22,10 +22,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"input","name"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParameters(
-        @Nullable String input,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("input") @Nullable String input,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.input = input;
         this.name = name;
     }

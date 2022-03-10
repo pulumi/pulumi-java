@@ -17,8 +17,8 @@ public final class SpotInstanceRequestEnclaveOptions {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private SpotInstanceRequestEnclaveOptions(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private SpotInstanceRequestEnclaveOptions(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

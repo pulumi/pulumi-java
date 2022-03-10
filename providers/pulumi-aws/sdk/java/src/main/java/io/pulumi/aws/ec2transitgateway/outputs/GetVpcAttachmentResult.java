@@ -60,18 +60,18 @@ public final class GetVpcAttachmentResult {
      */
     private final String vpcOwnerId;
 
-    @OutputCustomType.Constructor({"applianceModeSupport","dnsSupport","filters","id","ipv6Support","subnetIds","tags","transitGatewayId","vpcId","vpcOwnerId"})
+    @OutputCustomType.Constructor
     private GetVpcAttachmentResult(
-        String applianceModeSupport,
-        String dnsSupport,
-        @Nullable List<GetVpcAttachmentFilter> filters,
-        String id,
-        String ipv6Support,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        String transitGatewayId,
-        String vpcId,
-        String vpcOwnerId) {
+        @OutputCustomType.Parameter("applianceModeSupport") String applianceModeSupport,
+        @OutputCustomType.Parameter("dnsSupport") String dnsSupport,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipv6Support") String ipv6Support,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("vpcOwnerId") String vpcOwnerId) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.filters = filters;

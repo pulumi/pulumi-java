@@ -24,10 +24,10 @@ public final class DistributionTrustedSigner {
      */
     private final @Nullable List<DistributionTrustedSignerItem> items;
 
-    @OutputCustomType.Constructor({"enabled","items"})
+    @OutputCustomType.Constructor
     private DistributionTrustedSigner(
-        @Nullable Boolean enabled,
-        @Nullable List<DistributionTrustedSignerItem> items) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("items") @Nullable List<DistributionTrustedSignerItem> items) {
         this.enabled = enabled;
         this.items = items;
     }

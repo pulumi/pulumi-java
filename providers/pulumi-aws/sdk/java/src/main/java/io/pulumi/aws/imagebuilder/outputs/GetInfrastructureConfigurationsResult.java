@@ -29,12 +29,12 @@ public final class GetInfrastructureConfigurationsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetInfrastructureConfigurationsResult(
-        List<String> arns,
-        @Nullable List<GetInfrastructureConfigurationsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInfrastructureConfigurationsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

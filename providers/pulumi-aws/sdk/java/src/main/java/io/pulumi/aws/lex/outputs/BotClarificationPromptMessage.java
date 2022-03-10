@@ -29,11 +29,11 @@ public final class BotClarificationPromptMessage {
      */
     private final @Nullable Integer groupNumber;
 
-    @OutputCustomType.Constructor({"content","contentType","groupNumber"})
+    @OutputCustomType.Constructor
     private BotClarificationPromptMessage(
-        String content,
-        String contentType,
-        @Nullable Integer groupNumber) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("groupNumber") @Nullable Integer groupNumber) {
         this.content = content;
         this.contentType = contentType;
         this.groupNumber = groupNumber;

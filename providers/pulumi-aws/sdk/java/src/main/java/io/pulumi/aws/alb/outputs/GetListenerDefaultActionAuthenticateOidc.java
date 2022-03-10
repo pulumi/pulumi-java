@@ -23,19 +23,19 @@ public final class GetListenerDefaultActionAuthenticateOidc {
     private final String tokenEndpoint;
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor({"authenticationRequestExtraParams","authorizationEndpoint","clientId","clientSecret","issuer","onUnauthenticatedRequest","scope","sessionCookieName","sessionTimeout","tokenEndpoint","userInfoEndpoint"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionAuthenticateOidc(
-        Map<String,String> authenticationRequestExtraParams,
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        String onUnauthenticatedRequest,
-        String scope,
-        String sessionCookieName,
-        Integer sessionTimeout,
-        String tokenEndpoint,
-        String userInfoEndpoint) {
+        @OutputCustomType.Parameter("authenticationRequestExtraParams") Map<String,String> authenticationRequestExtraParams,
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("onUnauthenticatedRequest") String onUnauthenticatedRequest,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("sessionCookieName") String sessionCookieName,
+        @OutputCustomType.Parameter("sessionTimeout") Integer sessionTimeout,
+        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;

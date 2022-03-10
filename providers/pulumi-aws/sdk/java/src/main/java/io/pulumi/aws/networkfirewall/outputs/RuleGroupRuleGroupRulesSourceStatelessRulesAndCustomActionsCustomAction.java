@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      */
     private final String actionName;
 
-    @OutputCustomType.Constructor({"actionDefinition","actionName"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction(
-        RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition actionDefinition,
-        String actionName) {
+        @OutputCustomType.Parameter("actionDefinition") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition actionDefinition,
+        @OutputCustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }

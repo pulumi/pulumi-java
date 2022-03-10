@@ -25,10 +25,10 @@ public final class IntentFulfillmentActivity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"codeHook","type"})
+    @OutputCustomType.Constructor
     private IntentFulfillmentActivity(
-        @Nullable IntentFulfillmentActivityCodeHook codeHook,
-        String type) {
+        @OutputCustomType.Parameter("codeHook") @Nullable IntentFulfillmentActivityCodeHook codeHook,
+        @OutputCustomType.Parameter("type") String type) {
         this.codeHook = codeHook;
         this.type = type;
     }

@@ -38,13 +38,13 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"cloudWatchEncryptionEnabled","cloudWatchLogGroupName","s3BucketEncryptionEnabled","s3BucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterConfigurationExecuteCommandConfigurationLogConfiguration(
-        @Nullable Boolean cloudWatchEncryptionEnabled,
-        @Nullable String cloudWatchLogGroupName,
-        @Nullable Boolean s3BucketEncryptionEnabled,
-        @Nullable String s3BucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("cloudWatchEncryptionEnabled") @Nullable Boolean cloudWatchEncryptionEnabled,
+        @OutputCustomType.Parameter("cloudWatchLogGroupName") @Nullable String cloudWatchLogGroupName,
+        @OutputCustomType.Parameter("s3BucketEncryptionEnabled") @Nullable Boolean s3BucketEncryptionEnabled,
+        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         this.s3BucketEncryptionEnabled = s3BucketEncryptionEnabled;

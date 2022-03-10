@@ -32,11 +32,11 @@ public final class AnalyticsApplicationInputsSchema {
      */
     private final AnalyticsApplicationInputsSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor({"recordColumns","recordEncoding","recordFormat"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchema(
-        List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
-        @Nullable String recordEncoding,
-        AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
+        @OutputCustomType.Parameter("recordColumns") List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
+        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @OutputCustomType.Parameter("recordFormat") AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;

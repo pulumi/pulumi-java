@@ -29,11 +29,11 @@ public final class ServiceSourceConfigurationCodeRepository {
      */
     private final ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor({"codeConfiguration","repositoryUrl","sourceCodeVersion"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepository(
-        @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
-        String repositoryUrl,
-        ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;

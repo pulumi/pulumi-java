@@ -29,11 +29,11 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociation {
      */
     private final String lambdaArn;
 
-    @OutputCustomType.Constructor({"eventType","includeBody","lambdaArn"})
+    @OutputCustomType.Constructor
     private DistributionDefaultCacheBehaviorLambdaFunctionAssociation(
-        String eventType,
-        @Nullable Boolean includeBody,
-        String lambdaArn) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("includeBody") @Nullable Boolean includeBody,
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaArn = lambdaArn;

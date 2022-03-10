@@ -27,11 +27,11 @@ public final class SafetyRuleRuleConfig {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inverted","threshold","type"})
+    @OutputCustomType.Constructor
     private SafetyRuleRuleConfig(
-        Boolean inverted,
-        Integer threshold,
-        String type) {
+        @OutputCustomType.Parameter("inverted") Boolean inverted,
+        @OutputCustomType.Parameter("threshold") Integer threshold,
+        @OutputCustomType.Parameter("type") String type) {
         this.inverted = inverted;
         this.threshold = threshold;
         this.type = type;

@@ -25,11 +25,11 @@ public final class GetDelegatedAdministratorsResult {
     private final String id;
     private final @Nullable String servicePrincipal;
 
-    @OutputCustomType.Constructor({"delegatedAdministrators","id","servicePrincipal"})
+    @OutputCustomType.Constructor
     private GetDelegatedAdministratorsResult(
-        List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
-        String id,
-        @Nullable String servicePrincipal) {
+        @OutputCustomType.Parameter("delegatedAdministrators") List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("servicePrincipal") @Nullable String servicePrincipal) {
         this.delegatedAdministrators = delegatedAdministrators;
         this.id = id;
         this.servicePrincipal = servicePrincipal;

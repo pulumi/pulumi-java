@@ -42,14 +42,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","region","roleArn","tableName","versionId"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable String region,
-        String roleArn,
-        String tableName,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.region = region;

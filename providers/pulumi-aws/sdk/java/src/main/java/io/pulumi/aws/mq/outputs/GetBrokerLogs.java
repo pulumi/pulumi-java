@@ -12,10 +12,10 @@ public final class GetBrokerLogs {
     private final Boolean audit;
     private final Boolean general;
 
-    @OutputCustomType.Constructor({"audit","general"})
+    @OutputCustomType.Constructor
     private GetBrokerLogs(
-        Boolean audit,
-        Boolean general) {
+        @OutputCustomType.Parameter("audit") Boolean audit,
+        @OutputCustomType.Parameter("general") Boolean general) {
         this.audit = audit;
         this.general = general;
     }

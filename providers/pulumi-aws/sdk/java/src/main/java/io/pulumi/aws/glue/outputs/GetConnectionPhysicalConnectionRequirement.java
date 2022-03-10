@@ -14,11 +14,11 @@ public final class GetConnectionPhysicalConnectionRequirement {
     private final List<String> securityGroupIdLists;
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"availabilityZone","securityGroupIdLists","subnetId"})
+    @OutputCustomType.Constructor
     private GetConnectionPhysicalConnectionRequirement(
-        String availabilityZone,
-        List<String> securityGroupIdLists,
-        String subnetId) {
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("securityGroupIdLists") List<String> securityGroupIdLists,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.availabilityZone = availabilityZone;
         this.securityGroupIdLists = securityGroupIdLists;
         this.subnetId = subnetId;

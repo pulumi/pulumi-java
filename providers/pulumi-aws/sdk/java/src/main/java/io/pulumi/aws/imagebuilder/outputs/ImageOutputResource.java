@@ -17,8 +17,8 @@ public final class ImageOutputResource {
      */
     private final @Nullable List<ImageOutputResourceAmi> amis;
 
-    @OutputCustomType.Constructor({"amis"})
-    private ImageOutputResource(@Nullable List<ImageOutputResourceAmi> amis) {
+    @OutputCustomType.Constructor
+    private ImageOutputResource(@OutputCustomType.Parameter("amis") @Nullable List<ImageOutputResourceAmi> amis) {
         this.amis = amis;
     }
 

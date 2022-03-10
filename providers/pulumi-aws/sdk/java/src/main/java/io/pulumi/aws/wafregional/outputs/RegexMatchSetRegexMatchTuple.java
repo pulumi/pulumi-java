@@ -29,11 +29,11 @@ public final class RegexMatchSetRegexMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","regexPatternSetId","textTransformation"})
+    @OutputCustomType.Constructor
     private RegexMatchSetRegexMatchTuple(
-        RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
-        String regexPatternSetId,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("regexPatternSetId") String regexPatternSetId,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.regexPatternSetId = regexPatternSetId;
         this.textTransformation = textTransformation;

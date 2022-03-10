@@ -29,11 +29,11 @@ public final class InstanceNetworkInterface {
      */
     private final String networkInterfaceId;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceIndex","networkInterfaceId"})
+    @OutputCustomType.Constructor
     private InstanceNetworkInterface(
-        @Nullable Boolean deleteOnTermination,
-        Integer deviceIndex,
-        String networkInterfaceId) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceIndex = deviceIndex;
         this.networkInterfaceId = networkInterfaceId;

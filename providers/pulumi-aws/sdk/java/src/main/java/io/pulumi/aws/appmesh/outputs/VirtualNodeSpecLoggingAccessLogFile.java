@@ -15,8 +15,8 @@ public final class VirtualNodeSpecLoggingAccessLogFile {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private VirtualNodeSpecLoggingAccessLogFile(String path) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecLoggingAccessLogFile(@OutputCustomType.Parameter("path") String path) {
         this.path = path;
     }
 

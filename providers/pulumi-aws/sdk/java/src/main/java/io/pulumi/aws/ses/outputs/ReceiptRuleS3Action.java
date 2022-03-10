@@ -38,13 +38,13 @@ public final class ReceiptRuleS3Action {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"bucketName","kmsKeyArn","objectKeyPrefix","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleS3Action(
-        String bucketName,
-        @Nullable String kmsKeyArn,
-        @Nullable String objectKeyPrefix,
-        Integer position,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.objectKeyPrefix = objectKeyPrefix;

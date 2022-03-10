@@ -33,12 +33,12 @@ public final class CatalogTableStorageDescriptorColumn {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"comment","name","parameters","type"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorColumn(
-        @Nullable String comment,
-        String name,
-        @Nullable Map<String,String> parameters,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.comment = comment;
         this.name = name;
         this.parameters = parameters;

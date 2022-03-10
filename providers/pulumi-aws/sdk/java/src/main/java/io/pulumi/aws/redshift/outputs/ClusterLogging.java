@@ -29,11 +29,11 @@ public final class ClusterLogging {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","enable","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterLogging(
-        @Nullable String bucketName,
-        Boolean enable,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.enable = enable;
         this.s3KeyPrefix = s3KeyPrefix;

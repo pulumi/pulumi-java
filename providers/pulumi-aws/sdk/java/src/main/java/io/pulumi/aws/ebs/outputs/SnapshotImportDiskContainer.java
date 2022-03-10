@@ -33,12 +33,12 @@ public final class SnapshotImportDiskContainer {
      */
     private final @Nullable SnapshotImportDiskContainerUserBucket userBucket;
 
-    @OutputCustomType.Constructor({"description","format","url","userBucket"})
+    @OutputCustomType.Constructor
     private SnapshotImportDiskContainer(
-        @Nullable String description,
-        String format,
-        @Nullable String url,
-        @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("userBucket") @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
         this.description = description;
         this.format = format;
         this.url = url;

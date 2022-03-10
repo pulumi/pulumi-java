@@ -27,11 +27,11 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      */
     private final @Nullable String qualifier;
 
-    @OutputCustomType.Constructor({"clientContext","payload","qualifier"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersLambdaParameters(
-        @Nullable String clientContext,
-        @Nullable String payload,
-        @Nullable String qualifier) {
+        @OutputCustomType.Parameter("clientContext") @Nullable String clientContext,
+        @OutputCustomType.Parameter("payload") @Nullable String payload,
+        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier) {
         this.clientContext = clientContext;
         this.payload = payload;
         this.qualifier = qualifier;

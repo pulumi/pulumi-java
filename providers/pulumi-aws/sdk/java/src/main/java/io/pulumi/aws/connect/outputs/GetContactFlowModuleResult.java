@@ -49,18 +49,18 @@ public final class GetContactFlowModuleResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","contactFlowModuleId","content","description","id","instanceId","name","state","status","tags"})
+    @OutputCustomType.Constructor
     private GetContactFlowModuleResult(
-        String arn,
-        String contactFlowModuleId,
-        String content,
-        String description,
-        String id,
-        String instanceId,
-        String name,
-        String state,
-        String status,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("contactFlowModuleId") String contactFlowModuleId,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.contactFlowModuleId = contactFlowModuleId;
         this.content = content;

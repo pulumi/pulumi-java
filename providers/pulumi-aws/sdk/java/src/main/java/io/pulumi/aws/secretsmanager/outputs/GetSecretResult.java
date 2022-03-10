@@ -72,18 +72,18 @@ public final class GetSecretResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","kmsKeyId","name","policy","rotationEnabled","rotationLambdaArn","rotationRules","tags"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String arn,
-        String description,
-        String id,
-        String kmsKeyId,
-        String name,
-        String policy,
-        Boolean rotationEnabled,
-        String rotationLambdaArn,
-        List<GetSecretRotationRule> rotationRules,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
+        @OutputCustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
+        @OutputCustomType.Parameter("rotationRules") List<GetSecretRotationRule> rotationRules,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

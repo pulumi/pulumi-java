@@ -26,11 +26,11 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
      */
     private final List<String> targets;
 
-    @OutputCustomType.Constructor({"generatedRulesType","targetTypes","targets"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceRulesSourceList(
-        String generatedRulesType,
-        List<String> targetTypes,
-        List<String> targets) {
+        @OutputCustomType.Parameter("generatedRulesType") String generatedRulesType,
+        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes,
+        @OutputCustomType.Parameter("targets") List<String> targets) {
         this.generatedRulesType = generatedRulesType;
         this.targetTypes = targetTypes;
         this.targets = targets;

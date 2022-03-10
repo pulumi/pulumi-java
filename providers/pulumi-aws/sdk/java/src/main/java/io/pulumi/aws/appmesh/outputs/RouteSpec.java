@@ -42,13 +42,13 @@ public final class RouteSpec {
      */
     private final @Nullable RouteSpecTcpRoute tcpRoute;
 
-    @OutputCustomType.Constructor({"grpcRoute","http2Route","httpRoute","priority","tcpRoute"})
+    @OutputCustomType.Constructor
     private RouteSpec(
-        @Nullable RouteSpecGrpcRoute grpcRoute,
-        @Nullable RouteSpecHttp2Route http2Route,
-        @Nullable RouteSpecHttpRoute httpRoute,
-        @Nullable Integer priority,
-        @Nullable RouteSpecTcpRoute tcpRoute) {
+        @OutputCustomType.Parameter("grpcRoute") @Nullable RouteSpecGrpcRoute grpcRoute,
+        @OutputCustomType.Parameter("http2Route") @Nullable RouteSpecHttp2Route http2Route,
+        @OutputCustomType.Parameter("httpRoute") @Nullable RouteSpecHttpRoute httpRoute,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("tcpRoute") @Nullable RouteSpecTcpRoute tcpRoute) {
         this.grpcRoute = grpcRoute;
         this.http2Route = http2Route;
         this.httpRoute = httpRoute;

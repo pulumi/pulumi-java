@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      */
     private final Map<String,String> propertyMap;
 
-    @OutputCustomType.Constructor({"propertyGroupId","propertyMap"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup(
-        String propertyGroupId,
-        Map<String,String> propertyMap) {
+        @OutputCustomType.Parameter("propertyGroupId") String propertyGroupId,
+        @OutputCustomType.Parameter("propertyMap") Map<String,String> propertyMap) {
         this.propertyGroupId = propertyGroupId;
         this.propertyMap = propertyMap;
     }

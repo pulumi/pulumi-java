@@ -34,12 +34,12 @@ public final class RuleGroupActivatedRule {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","priority","ruleId","type"})
+    @OutputCustomType.Constructor
     private RuleGroupActivatedRule(
-        RuleGroupActivatedRuleAction action,
-        Integer priority,
-        String ruleId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") RuleGroupActivatedRuleAction action,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleId") String ruleId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.priority = priority;
         this.ruleId = ruleId;

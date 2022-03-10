@@ -38,15 +38,15 @@ public final class GetIpSetResult {
     private final String name;
     private final String scope;
 
-    @OutputCustomType.Constructor({"addresses","arn","description","id","ipAddressVersion","name","scope"})
+    @OutputCustomType.Constructor
     private GetIpSetResult(
-        List<String> addresses,
-        String arn,
-        String description,
-        String id,
-        String ipAddressVersion,
-        String name,
-        String scope) {
+        @OutputCustomType.Parameter("addresses") List<String> addresses,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddressVersion") String ipAddressVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.addresses = addresses;
         this.arn = arn;
         this.description = description;

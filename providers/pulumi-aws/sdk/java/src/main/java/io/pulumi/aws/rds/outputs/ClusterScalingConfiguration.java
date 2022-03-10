@@ -39,13 +39,13 @@ public final class ClusterScalingConfiguration {
      */
     private final @Nullable String timeoutAction;
 
-    @OutputCustomType.Constructor({"autoPause","maxCapacity","minCapacity","secondsUntilAutoPause","timeoutAction"})
+    @OutputCustomType.Constructor
     private ClusterScalingConfiguration(
-        @Nullable Boolean autoPause,
-        @Nullable Integer maxCapacity,
-        @Nullable Integer minCapacity,
-        @Nullable Integer secondsUntilAutoPause,
-        @Nullable String timeoutAction) {
+        @OutputCustomType.Parameter("autoPause") @Nullable Boolean autoPause,
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") @Nullable Integer minCapacity,
+        @OutputCustomType.Parameter("secondsUntilAutoPause") @Nullable Integer secondsUntilAutoPause,
+        @OutputCustomType.Parameter("timeoutAction") @Nullable String timeoutAction) {
         this.autoPause = autoPause;
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;

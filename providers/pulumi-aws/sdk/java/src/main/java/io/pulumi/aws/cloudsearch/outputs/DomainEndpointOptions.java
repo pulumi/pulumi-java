@@ -23,10 +23,10 @@ public final class DomainEndpointOptions {
      */
     private final @Nullable String tlsSecurityPolicy;
 
-    @OutputCustomType.Constructor({"enforceHttps","tlsSecurityPolicy"})
+    @OutputCustomType.Constructor
     private DomainEndpointOptions(
-        @Nullable Boolean enforceHttps,
-        @Nullable String tlsSecurityPolicy) {
+        @OutputCustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
+        @OutputCustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
         this.enforceHttps = enforceHttps;
         this.tlsSecurityPolicy = tlsSecurityPolicy;
     }

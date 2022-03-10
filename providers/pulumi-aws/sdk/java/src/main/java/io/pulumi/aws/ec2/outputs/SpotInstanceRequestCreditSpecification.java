@@ -17,8 +17,8 @@ public final class SpotInstanceRequestCreditSpecification {
      */
     private final @Nullable String cpuCredits;
 
-    @OutputCustomType.Constructor({"cpuCredits"})
-    private SpotInstanceRequestCreditSpecification(@Nullable String cpuCredits) {
+    @OutputCustomType.Constructor
+    private SpotInstanceRequestCreditSpecification(@OutputCustomType.Parameter("cpuCredits") @Nullable String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 

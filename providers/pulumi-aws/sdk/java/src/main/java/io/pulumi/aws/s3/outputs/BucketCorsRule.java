@@ -39,13 +39,13 @@ public final class BucketCorsRule {
      */
     private final @Nullable Integer maxAgeSeconds;
 
-    @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposeHeaders","maxAgeSeconds"})
+    @OutputCustomType.Constructor
     private BucketCorsRule(
-        @Nullable List<String> allowedHeaders,
-        List<String> allowedMethods,
-        List<String> allowedOrigins,
-        @Nullable List<String> exposeHeaders,
-        @Nullable Integer maxAgeSeconds) {
+        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

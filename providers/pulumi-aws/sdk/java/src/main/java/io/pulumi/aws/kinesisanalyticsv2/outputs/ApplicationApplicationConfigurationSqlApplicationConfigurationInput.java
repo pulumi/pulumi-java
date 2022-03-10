@@ -57,17 +57,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String namePrefix;
 
-    @OutputCustomType.Constructor({"inAppStreamNames","inputId","inputParallelism","inputProcessingConfiguration","inputSchema","inputStartingPositionConfigurations","kinesisFirehoseInput","kinesisStreamsInput","namePrefix"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInput(
-        @Nullable List<String> inAppStreamNames,
-        @Nullable String inputId,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema inputSchema,
-        @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput,
-        String namePrefix) {
+        @OutputCustomType.Parameter("inAppStreamNames") @Nullable List<String> inAppStreamNames,
+        @OutputCustomType.Parameter("inputId") @Nullable String inputId,
+        @OutputCustomType.Parameter("inputParallelism") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism inputParallelism,
+        @OutputCustomType.Parameter("inputProcessingConfiguration") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration inputProcessingConfiguration,
+        @OutputCustomType.Parameter("inputSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema inputSchema,
+        @OutputCustomType.Parameter("inputStartingPositionConfigurations") @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration> inputStartingPositionConfigurations,
+        @OutputCustomType.Parameter("kinesisFirehoseInput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput kinesisFirehoseInput,
+        @OutputCustomType.Parameter("kinesisStreamsInput") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput kinesisStreamsInput,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix) {
         this.inAppStreamNames = inAppStreamNames;
         this.inputId = inputId;
         this.inputParallelism = inputParallelism;

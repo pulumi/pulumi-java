@@ -92,27 +92,27 @@ public final class GetEngineVersionResult {
      */
     private final String versionDescription;
 
-    @OutputCustomType.Constructor({"defaultCharacterSet","engine","engineDescription","exportableLogTypes","id","parameterGroupFamily","preferredVersions","status","supportedCharacterSets","supportedFeatureNames","supportedModes","supportedTimezones","supportsGlobalDatabases","supportsLogExportsToCloudwatch","supportsParallelQuery","supportsReadReplica","validUpgradeTargets","version","versionDescription"})
+    @OutputCustomType.Constructor
     private GetEngineVersionResult(
-        String defaultCharacterSet,
-        String engine,
-        String engineDescription,
-        List<String> exportableLogTypes,
-        String id,
-        String parameterGroupFamily,
-        @Nullable List<String> preferredVersions,
-        String status,
-        List<String> supportedCharacterSets,
-        List<String> supportedFeatureNames,
-        List<String> supportedModes,
-        List<String> supportedTimezones,
-        Boolean supportsGlobalDatabases,
-        Boolean supportsLogExportsToCloudwatch,
-        Boolean supportsParallelQuery,
-        Boolean supportsReadReplica,
-        List<String> validUpgradeTargets,
-        String version,
-        String versionDescription) {
+        @OutputCustomType.Parameter("defaultCharacterSet") String defaultCharacterSet,
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("engineDescription") String engineDescription,
+        @OutputCustomType.Parameter("exportableLogTypes") List<String> exportableLogTypes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameterGroupFamily") String parameterGroupFamily,
+        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("supportedCharacterSets") List<String> supportedCharacterSets,
+        @OutputCustomType.Parameter("supportedFeatureNames") List<String> supportedFeatureNames,
+        @OutputCustomType.Parameter("supportedModes") List<String> supportedModes,
+        @OutputCustomType.Parameter("supportedTimezones") List<String> supportedTimezones,
+        @OutputCustomType.Parameter("supportsGlobalDatabases") Boolean supportsGlobalDatabases,
+        @OutputCustomType.Parameter("supportsLogExportsToCloudwatch") Boolean supportsLogExportsToCloudwatch,
+        @OutputCustomType.Parameter("supportsParallelQuery") Boolean supportsParallelQuery,
+        @OutputCustomType.Parameter("supportsReadReplica") Boolean supportsReadReplica,
+        @OutputCustomType.Parameter("validUpgradeTargets") List<String> validUpgradeTargets,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionDescription") String versionDescription) {
         this.defaultCharacterSet = defaultCharacterSet;
         this.engine = engine;
         this.engineDescription = engineDescription;

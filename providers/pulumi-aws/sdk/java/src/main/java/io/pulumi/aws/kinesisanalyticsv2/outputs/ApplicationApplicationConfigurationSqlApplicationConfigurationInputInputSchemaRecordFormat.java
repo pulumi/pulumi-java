@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor({"mappingParameters","recordFormatType"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat(
-        ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters mappingParameters,
-        String recordFormatType) {
+        @OutputCustomType.Parameter("mappingParameters") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters mappingParameters,
+        @OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
         this.mappingParameters = mappingParameters;
         this.recordFormatType = recordFormatType;
     }

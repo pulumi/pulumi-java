@@ -37,15 +37,15 @@ public final class GetPeeringAttachmentResult {
      */
     private final String transitGatewayId;
 
-    @OutputCustomType.Constructor({"filters","id","peerAccountId","peerRegion","peerTransitGatewayId","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetPeeringAttachmentResult(
-        @Nullable List<GetPeeringAttachmentFilter> filters,
-        String id,
-        String peerAccountId,
-        String peerRegion,
-        String peerTransitGatewayId,
-        Map<String,String> tags,
-        String transitGatewayId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetPeeringAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("peerAccountId") String peerAccountId,
+        @OutputCustomType.Parameter("peerRegion") String peerRegion,
+        @OutputCustomType.Parameter("peerTransitGatewayId") String peerTransitGatewayId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId) {
         this.filters = filters;
         this.id = id;
         this.peerAccountId = peerAccountId;

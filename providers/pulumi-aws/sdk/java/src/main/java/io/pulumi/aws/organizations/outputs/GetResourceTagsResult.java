@@ -22,11 +22,11 @@ public final class GetResourceTagsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"id","resourceId","tags"})
+    @OutputCustomType.Constructor
     private GetResourceTagsResult(
-        String id,
-        String resourceId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.id = id;
         this.resourceId = resourceId;
         this.tags = tags;

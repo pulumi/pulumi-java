@@ -27,11 +27,11 @@ public final class HoursOfOperationConfig {
      */
     private final HoursOfOperationConfigStartTime startTime;
 
-    @OutputCustomType.Constructor({"day","endTime","startTime"})
+    @OutputCustomType.Constructor
     private HoursOfOperationConfig(
-        String day,
-        HoursOfOperationConfigEndTime endTime,
-        HoursOfOperationConfigStartTime startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("endTime") HoursOfOperationConfigEndTime endTime,
+        @OutputCustomType.Parameter("startTime") HoursOfOperationConfigStartTime startTime) {
         this.day = day;
         this.endTime = endTime;
         this.startTime = startTime;

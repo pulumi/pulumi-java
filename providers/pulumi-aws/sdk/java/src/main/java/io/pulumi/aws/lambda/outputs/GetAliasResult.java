@@ -37,15 +37,15 @@ public final class GetAliasResult {
     private final String invokeArn;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","description","functionName","functionVersion","id","invokeArn","name"})
+    @OutputCustomType.Constructor
     private GetAliasResult(
-        String arn,
-        String description,
-        String functionName,
-        String functionVersion,
-        String id,
-        String invokeArn,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("functionName") String functionName,
+        @OutputCustomType.Parameter("functionVersion") String functionVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invokeArn") String invokeArn,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.description = description;
         this.functionName = functionName;

@@ -84,23 +84,23 @@ public final class GetComponentResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"arn","changeDescription","data","dateCreated","description","encrypted","id","kmsKeyId","name","owner","platform","supportedOsVersions","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetComponentResult(
-        String arn,
-        String changeDescription,
-        String data,
-        String dateCreated,
-        String description,
-        Boolean encrypted,
-        String id,
-        String kmsKeyId,
-        String name,
-        String owner,
-        String platform,
-        List<String> supportedOsVersions,
-        Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("changeDescription") String changeDescription,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("supportedOsVersions") List<String> supportedOsVersions,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.arn = arn;
         this.changeDescription = changeDescription;
         this.data = data;

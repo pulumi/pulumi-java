@@ -28,11 +28,11 @@ public final class CatalogTableStorageDescriptorSerDeInfo {
      */
     private final @Nullable String serializationLibrary;
 
-    @OutputCustomType.Constructor({"name","parameters","serializationLibrary"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSerDeInfo(
-        @Nullable String name,
-        @Nullable Map<String,String> parameters,
-        @Nullable String serializationLibrary) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("serializationLibrary") @Nullable String serializationLibrary) {
         this.name = name;
         this.parameters = parameters;
         this.serializationLibrary = serializationLibrary;

@@ -25,15 +25,15 @@ public final class GetParameterResult {
     private final Integer version;
     private final @Nullable Boolean withDecryption;
 
-    @OutputCustomType.Constructor({"arn","id","name","type","value","version","withDecryption"})
+    @OutputCustomType.Constructor
     private GetParameterResult(
-        String arn,
-        String id,
-        String name,
-        String type,
-        String value,
-        Integer version,
-        @Nullable Boolean withDecryption) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("version") Integer version,
+        @OutputCustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
         this.arn = arn;
         this.id = id;
         this.name = name;

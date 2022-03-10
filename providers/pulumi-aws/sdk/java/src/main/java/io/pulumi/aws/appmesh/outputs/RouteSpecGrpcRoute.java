@@ -35,12 +35,12 @@ public final class RouteSpecGrpcRoute {
      */
     private final @Nullable RouteSpecGrpcRouteTimeout timeout;
 
-    @OutputCustomType.Constructor({"action","match","retryPolicy","timeout"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRoute(
-        RouteSpecGrpcRouteAction action,
-        @Nullable RouteSpecGrpcRouteMatch match,
-        @Nullable RouteSpecGrpcRouteRetryPolicy retryPolicy,
-        @Nullable RouteSpecGrpcRouteTimeout timeout) {
+        @OutputCustomType.Parameter("action") RouteSpecGrpcRouteAction action,
+        @OutputCustomType.Parameter("match") @Nullable RouteSpecGrpcRouteMatch match,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RouteSpecGrpcRouteRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecGrpcRouteTimeout timeout) {
         this.action = action;
         this.match = match;
         this.retryPolicy = retryPolicy;

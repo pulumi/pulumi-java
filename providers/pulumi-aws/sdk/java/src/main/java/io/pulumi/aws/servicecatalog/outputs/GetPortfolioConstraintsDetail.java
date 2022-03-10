@@ -36,14 +36,14 @@ public final class GetPortfolioConstraintsDetail {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"constraintId","description","owner","portfolioId","productId","type"})
+    @OutputCustomType.Constructor
     private GetPortfolioConstraintsDetail(
-        String constraintId,
-        String description,
-        String owner,
-        String portfolioId,
-        String productId,
-        String type) {
+        @OutputCustomType.Parameter("constraintId") String constraintId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("portfolioId") String portfolioId,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("type") String type) {
         this.constraintId = constraintId;
         this.description = description;
         this.owner = owner;

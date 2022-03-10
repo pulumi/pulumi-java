@@ -21,10 +21,10 @@ public final class GetPolicyDocumentStatementNotPrincipal {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"identifiers","type"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentStatementNotPrincipal(
-        List<String> identifiers,
-        String type) {
+        @OutputCustomType.Parameter("identifiers") List<String> identifiers,
+        @OutputCustomType.Parameter("type") String type) {
         this.identifiers = identifiers;
         this.type = type;
     }

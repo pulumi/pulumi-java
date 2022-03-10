@@ -27,11 +27,11 @@ public final class AssociationOutputLocation {
      */
     private final @Nullable String s3Region;
 
-    @OutputCustomType.Constructor({"s3BucketName","s3KeyPrefix","s3Region"})
+    @OutputCustomType.Constructor
     private AssociationOutputLocation(
-        String s3BucketName,
-        @Nullable String s3KeyPrefix,
-        @Nullable String s3Region) {
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix,
+        @OutputCustomType.Parameter("s3Region") @Nullable String s3Region) {
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
         this.s3Region = s3Region;

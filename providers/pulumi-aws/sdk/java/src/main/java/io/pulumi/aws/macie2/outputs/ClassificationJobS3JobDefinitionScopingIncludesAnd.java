@@ -23,10 +23,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAnd {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm;
 
-    @OutputCustomType.Constructor({"simpleScopeTerm","tagScopeTerm"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingIncludesAnd(
-        @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm simpleScopeTerm,
-        @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm) {
+        @OutputCustomType.Parameter("simpleScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm simpleScopeTerm,
+        @OutputCustomType.Parameter("tagScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm) {
         this.simpleScopeTerm = simpleScopeTerm;
         this.tagScopeTerm = tagScopeTerm;
     }

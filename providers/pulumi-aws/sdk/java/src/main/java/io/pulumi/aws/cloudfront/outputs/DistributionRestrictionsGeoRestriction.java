@@ -26,10 +26,10 @@ public final class DistributionRestrictionsGeoRestriction {
      */
     private final String restrictionType;
 
-    @OutputCustomType.Constructor({"locations","restrictionType"})
+    @OutputCustomType.Constructor
     private DistributionRestrictionsGeoRestriction(
-        @Nullable List<String> locations,
-        String restrictionType) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("restrictionType") String restrictionType) {
         this.locations = locations;
         this.restrictionType = restrictionType;
     }

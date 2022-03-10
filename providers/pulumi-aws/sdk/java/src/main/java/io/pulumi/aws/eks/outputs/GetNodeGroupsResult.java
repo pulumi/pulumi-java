@@ -22,11 +22,11 @@ public final class GetNodeGroupsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"clusterName","id","names"})
+    @OutputCustomType.Constructor
     private GetNodeGroupsResult(
-        String clusterName,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.clusterName = clusterName;
         this.id = id;
         this.names = names;

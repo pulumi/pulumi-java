@@ -24,10 +24,10 @@ public final class ListenerDefaultActionForward {
      */
     private final List<ListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"stickiness","targetGroups"})
+    @OutputCustomType.Constructor
     private ListenerDefaultActionForward(
-        @Nullable ListenerDefaultActionForwardStickiness stickiness,
-        List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
+        @OutputCustomType.Parameter("stickiness") @Nullable ListenerDefaultActionForwardStickiness stickiness,
+        @OutputCustomType.Parameter("targetGroups") List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickiness = stickiness;
         this.targetGroups = targetGroups;
     }

@@ -26,12 +26,12 @@ public final class GetSubnetsResult {
     private final List<String> ids;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags"})
+    @OutputCustomType.Constructor
     private GetSubnetsResult(
-        @Nullable List<GetSubnetsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSubnetsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

@@ -12,10 +12,10 @@ public final class GetManagedPrefixListEntry {
     private final String cidr;
     private final String description;
 
-    @OutputCustomType.Constructor({"cidr","description"})
+    @OutputCustomType.Constructor
     private GetManagedPrefixListEntry(
-        String cidr,
-        String description) {
+        @OutputCustomType.Parameter("cidr") String cidr,
+        @OutputCustomType.Parameter("description") String description) {
         this.cidr = cidr;
         this.description = description;
     }

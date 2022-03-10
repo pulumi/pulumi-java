@@ -23,10 +23,10 @@ public final class AccountThrottleSettings {
      */
     private final @Nullable Double rateLimit;
 
-    @OutputCustomType.Constructor({"burstLimit","rateLimit"})
+    @OutputCustomType.Constructor
     private AccountThrottleSettings(
-        @Nullable Integer burstLimit,
-        @Nullable Double rateLimit) {
+        @OutputCustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
+        @OutputCustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
         this.rateLimit = rateLimit;
     }

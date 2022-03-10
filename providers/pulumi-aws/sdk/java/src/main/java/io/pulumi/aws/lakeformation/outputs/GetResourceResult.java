@@ -26,12 +26,12 @@ public final class GetResourceResult {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"arn","id","lastModified","roleArn"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String arn,
-        String id,
-        String lastModified,
-        String roleArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.arn = arn;
         this.id = id;
         this.lastModified = lastModified;

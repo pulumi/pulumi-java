@@ -20,14 +20,14 @@ public final class GetListenerDefaultActionRedirect {
     private final String query;
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"host","path","port","protocol","query","statusCode"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionRedirect(
-        String host,
-        String path,
-        String port,
-        String protocol,
-        String query,
-        String statusCode) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") String port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.host = host;
         this.path = path;
         this.port = port;

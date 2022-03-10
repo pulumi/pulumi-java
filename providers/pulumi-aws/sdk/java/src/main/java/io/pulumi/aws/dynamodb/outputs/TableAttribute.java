@@ -20,10 +20,10 @@ public final class TableAttribute {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private TableAttribute(
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

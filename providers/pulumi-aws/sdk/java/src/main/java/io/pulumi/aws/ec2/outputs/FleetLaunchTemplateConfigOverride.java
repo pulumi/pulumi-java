@@ -43,14 +43,14 @@ public final class FleetLaunchTemplateConfigOverride {
      */
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"availabilityZone","instanceType","maxPrice","priority","subnetId","weightedCapacity"})
+    @OutputCustomType.Constructor
     private FleetLaunchTemplateConfigOverride(
-        @Nullable String availabilityZone,
-        @Nullable String instanceType,
-        @Nullable String maxPrice,
-        @Nullable Double priority,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @OutputCustomType.Parameter("priority") @Nullable Double priority,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceType = instanceType;
         this.maxPrice = maxPrice;

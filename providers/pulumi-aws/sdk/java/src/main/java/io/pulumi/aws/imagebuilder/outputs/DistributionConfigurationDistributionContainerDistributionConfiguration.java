@@ -29,11 +29,11 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository;
 
-    @OutputCustomType.Constructor({"containerTags","description","targetRepository"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfiguration(
-        @Nullable List<String> containerTags,
-        @Nullable String description,
-        DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
+        @OutputCustomType.Parameter("containerTags") @Nullable List<String> containerTags,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("targetRepository") DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
         this.targetRepository = targetRepository;

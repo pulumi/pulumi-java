@@ -26,11 +26,11 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
      */
     private final String rootDirectory;
 
-    @OutputCustomType.Constructor({"authorizationConfig","fileSystemId","rootDirectory"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration(
-        TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
-        String fileSystemId,
-        String rootDirectory) {
+        @OutputCustomType.Parameter("authorizationConfig") TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("rootDirectory") String rootDirectory) {
         this.authorizationConfig = authorizationConfig;
         this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;

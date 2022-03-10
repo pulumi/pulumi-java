@@ -62,18 +62,18 @@ public final class PresetVideoWatermark {
      */
     private final @Nullable String verticalOffset;
 
-    @OutputCustomType.Constructor({"horizontalAlign","horizontalOffset","id","maxHeight","maxWidth","opacity","sizingPolicy","target","verticalAlign","verticalOffset"})
+    @OutputCustomType.Constructor
     private PresetVideoWatermark(
-        @Nullable String horizontalAlign,
-        @Nullable String horizontalOffset,
-        @Nullable String id,
-        @Nullable String maxHeight,
-        @Nullable String maxWidth,
-        @Nullable String opacity,
-        @Nullable String sizingPolicy,
-        @Nullable String target,
-        @Nullable String verticalAlign,
-        @Nullable String verticalOffset) {
+        @OutputCustomType.Parameter("horizontalAlign") @Nullable String horizontalAlign,
+        @OutputCustomType.Parameter("horizontalOffset") @Nullable String horizontalOffset,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @OutputCustomType.Parameter("opacity") @Nullable String opacity,
+        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("verticalAlign") @Nullable String verticalAlign,
+        @OutputCustomType.Parameter("verticalOffset") @Nullable String verticalOffset) {
         this.horizontalAlign = horizontalAlign;
         this.horizontalOffset = horizontalOffset;
         this.id = id;

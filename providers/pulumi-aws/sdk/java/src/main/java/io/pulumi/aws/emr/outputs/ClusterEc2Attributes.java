@@ -58,17 +58,17 @@ public final class ClusterEc2Attributes {
      */
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"additionalMasterSecurityGroups","additionalSlaveSecurityGroups","emrManagedMasterSecurityGroup","emrManagedSlaveSecurityGroup","instanceProfile","keyName","serviceAccessSecurityGroup","subnetId","subnetIds"})
+    @OutputCustomType.Constructor
     private ClusterEc2Attributes(
-        @Nullable String additionalMasterSecurityGroups,
-        @Nullable String additionalSlaveSecurityGroups,
-        @Nullable String emrManagedMasterSecurityGroup,
-        @Nullable String emrManagedSlaveSecurityGroup,
-        String instanceProfile,
-        @Nullable String keyName,
-        @Nullable String serviceAccessSecurityGroup,
-        @Nullable String subnetId,
-        @Nullable List<String> subnetIds) {
+        @OutputCustomType.Parameter("additionalMasterSecurityGroups") @Nullable String additionalMasterSecurityGroups,
+        @OutputCustomType.Parameter("additionalSlaveSecurityGroups") @Nullable String additionalSlaveSecurityGroups,
+        @OutputCustomType.Parameter("emrManagedMasterSecurityGroup") @Nullable String emrManagedMasterSecurityGroup,
+        @OutputCustomType.Parameter("emrManagedSlaveSecurityGroup") @Nullable String emrManagedSlaveSecurityGroup,
+        @OutputCustomType.Parameter("instanceProfile") String instanceProfile,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("serviceAccessSecurityGroup") @Nullable String serviceAccessSecurityGroup,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
         this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
         this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;

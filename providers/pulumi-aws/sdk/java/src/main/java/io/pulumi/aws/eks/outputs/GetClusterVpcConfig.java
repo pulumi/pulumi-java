@@ -47,15 +47,15 @@ public final class GetClusterVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"clusterSecurityGroupId","endpointPrivateAccess","endpointPublicAccess","publicAccessCidrs","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetClusterVpcConfig(
-        String clusterSecurityGroupId,
-        Boolean endpointPrivateAccess,
-        Boolean endpointPublicAccess,
-        List<String> publicAccessCidrs,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("clusterSecurityGroupId") String clusterSecurityGroupId,
+        @OutputCustomType.Parameter("endpointPrivateAccess") Boolean endpointPrivateAccess,
+        @OutputCustomType.Parameter("endpointPublicAccess") Boolean endpointPublicAccess,
+        @OutputCustomType.Parameter("publicAccessCidrs") List<String> publicAccessCidrs,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.clusterSecurityGroupId = clusterSecurityGroupId;
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;

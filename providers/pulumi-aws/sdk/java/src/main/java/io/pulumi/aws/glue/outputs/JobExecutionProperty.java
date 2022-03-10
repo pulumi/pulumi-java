@@ -17,8 +17,8 @@ public final class JobExecutionProperty {
      */
     private final @Nullable Integer maxConcurrentRuns;
 
-    @OutputCustomType.Constructor({"maxConcurrentRuns"})
-    private JobExecutionProperty(@Nullable Integer maxConcurrentRuns) {
+    @OutputCustomType.Constructor
+    private JobExecutionProperty(@OutputCustomType.Parameter("maxConcurrentRuns") @Nullable Integer maxConcurrentRuns) {
         this.maxConcurrentRuns = maxConcurrentRuns;
     }
 

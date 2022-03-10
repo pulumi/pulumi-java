@@ -47,15 +47,15 @@ public final class GetResponseHeadersPolicyCorsConfig {
     private final Integer accessControlMaxAgeSec;
     private final Boolean originOverride;
 
-    @OutputCustomType.Constructor({"accessControlAllowCredentials","accessControlAllowHeaders","accessControlAllowMethods","accessControlAllowOrigins","accessControlExposeHeaders","accessControlMaxAgeSec","originOverride"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicyCorsConfig(
-        Boolean accessControlAllowCredentials,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
-        Integer accessControlMaxAgeSec,
-        Boolean originOverride) {
+        @OutputCustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
+        @OutputCustomType.Parameter("accessControlAllowHeaders") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders,
+        @OutputCustomType.Parameter("accessControlAllowMethods") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods,
+        @OutputCustomType.Parameter("accessControlAllowOrigins") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins,
+        @OutputCustomType.Parameter("accessControlExposeHeaders") List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("originOverride") Boolean originOverride) {
         this.accessControlAllowCredentials = accessControlAllowCredentials;
         this.accessControlAllowHeaders = accessControlAllowHeaders;
         this.accessControlAllowMethods = accessControlAllowMethods;

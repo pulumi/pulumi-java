@@ -38,13 +38,13 @@ public final class ManagedScalingPolicyComputeLimit {
      */
     private final String unitType;
 
-    @OutputCustomType.Constructor({"maximumCapacityUnits","maximumCoreCapacityUnits","maximumOndemandCapacityUnits","minimumCapacityUnits","unitType"})
+    @OutputCustomType.Constructor
     private ManagedScalingPolicyComputeLimit(
-        Integer maximumCapacityUnits,
-        @Nullable Integer maximumCoreCapacityUnits,
-        @Nullable Integer maximumOndemandCapacityUnits,
-        Integer minimumCapacityUnits,
-        String unitType) {
+        @OutputCustomType.Parameter("maximumCapacityUnits") Integer maximumCapacityUnits,
+        @OutputCustomType.Parameter("maximumCoreCapacityUnits") @Nullable Integer maximumCoreCapacityUnits,
+        @OutputCustomType.Parameter("maximumOndemandCapacityUnits") @Nullable Integer maximumOndemandCapacityUnits,
+        @OutputCustomType.Parameter("minimumCapacityUnits") Integer minimumCapacityUnits,
+        @OutputCustomType.Parameter("unitType") String unitType) {
         this.maximumCapacityUnits = maximumCapacityUnits;
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;

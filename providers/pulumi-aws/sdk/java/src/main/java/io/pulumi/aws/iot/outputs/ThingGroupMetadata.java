@@ -21,11 +21,11 @@ public final class ThingGroupMetadata {
     private final @Nullable String parentGroupName;
     private final @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups;
 
-    @OutputCustomType.Constructor({"creationDate","parentGroupName","rootToParentGroups"})
+    @OutputCustomType.Constructor
     private ThingGroupMetadata(
-        @Nullable String creationDate,
-        @Nullable String parentGroupName,
-        @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("parentGroupName") @Nullable String parentGroupName,
+        @OutputCustomType.Parameter("rootToParentGroups") @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
         this.creationDate = creationDate;
         this.parentGroupName = parentGroupName;
         this.rootToParentGroups = rootToParentGroups;

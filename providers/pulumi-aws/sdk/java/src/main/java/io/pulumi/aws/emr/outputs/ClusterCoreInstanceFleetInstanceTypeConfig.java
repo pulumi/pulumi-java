@@ -47,14 +47,14 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfig {
      */
     private final @Nullable Integer weightedCapacity;
 
-    @OutputCustomType.Constructor({"bidPrice","bidPriceAsPercentageOfOnDemandPrice","configurations","ebsConfigs","instanceType","weightedCapacity"})
+    @OutputCustomType.Constructor
     private ClusterCoreInstanceFleetInstanceTypeConfig(
-        @Nullable String bidPrice,
-        @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
-        @Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> configurations,
-        @Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
-        String instanceType,
-        @Nullable Integer weightedCapacity) {
+        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @OutputCustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
+        @OutputCustomType.Parameter("configurations") @Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigConfiguration> configurations,
+        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterCoreInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
         this.bidPrice = bidPrice;
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         this.configurations = configurations;

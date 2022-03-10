@@ -96,25 +96,25 @@ public final class GetImagePipelineResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","dateCreated","dateLastRun","dateNextRun","dateUpdated","description","distributionConfigurationArn","enhancedImageMetadataEnabled","id","imageRecipeArn","imageTestsConfigurations","infrastructureConfigurationArn","name","platform","schedules","status","tags"})
+    @OutputCustomType.Constructor
     private GetImagePipelineResult(
-        String arn,
-        String dateCreated,
-        String dateLastRun,
-        String dateNextRun,
-        String dateUpdated,
-        String description,
-        String distributionConfigurationArn,
-        Boolean enhancedImageMetadataEnabled,
-        String id,
-        String imageRecipeArn,
-        List<GetImagePipelineImageTestsConfiguration> imageTestsConfigurations,
-        String infrastructureConfigurationArn,
-        String name,
-        String platform,
-        List<GetImagePipelineSchedule> schedules,
-        String status,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("dateLastRun") String dateLastRun,
+        @OutputCustomType.Parameter("dateNextRun") String dateNextRun,
+        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
+        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageRecipeArn") String imageRecipeArn,
+        @OutputCustomType.Parameter("imageTestsConfigurations") List<GetImagePipelineImageTestsConfiguration> imageTestsConfigurations,
+        @OutputCustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("schedules") List<GetImagePipelineSchedule> schedules,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateLastRun = dateLastRun;

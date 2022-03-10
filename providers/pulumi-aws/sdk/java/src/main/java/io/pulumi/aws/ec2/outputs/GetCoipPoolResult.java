@@ -33,15 +33,15 @@ public final class GetCoipPoolResult {
     private final String poolId;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","filters","id","localGatewayRouteTableId","poolCidrs","poolId","tags"})
+    @OutputCustomType.Constructor
     private GetCoipPoolResult(
-        String arn,
-        @Nullable List<GetCoipPoolFilter> filters,
-        String id,
-        String localGatewayRouteTableId,
-        List<String> poolCidrs,
-        String poolId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetCoipPoolFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localGatewayRouteTableId") String localGatewayRouteTableId,
+        @OutputCustomType.Parameter("poolCidrs") List<String> poolCidrs,
+        @OutputCustomType.Parameter("poolId") String poolId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.id = id;

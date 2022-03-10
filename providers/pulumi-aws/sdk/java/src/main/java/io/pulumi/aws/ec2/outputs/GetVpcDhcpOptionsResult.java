@@ -65,19 +65,19 @@ public final class GetVpcDhcpOptionsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","dhcpOptionsId","domainName","domainNameServers","filters","id","netbiosNameServers","netbiosNodeType","ntpServers","ownerId","tags"})
+    @OutputCustomType.Constructor
     private GetVpcDhcpOptionsResult(
-        String arn,
-        String dhcpOptionsId,
-        String domainName,
-        List<String> domainNameServers,
-        @Nullable List<GetVpcDhcpOptionsFilter> filters,
-        String id,
-        List<String> netbiosNameServers,
-        String netbiosNodeType,
-        List<String> ntpServers,
-        String ownerId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainNameServers") List<String> domainNameServers,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcDhcpOptionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("netbiosNameServers") List<String> netbiosNameServers,
+        @OutputCustomType.Parameter("netbiosNodeType") String netbiosNodeType,
+        @OutputCustomType.Parameter("ntpServers") List<String> ntpServers,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dhcpOptionsId = dhcpOptionsId;
         this.domainName = domainName;

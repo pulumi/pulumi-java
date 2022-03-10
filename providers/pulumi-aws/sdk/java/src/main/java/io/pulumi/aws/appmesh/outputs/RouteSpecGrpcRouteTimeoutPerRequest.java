@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteTimeoutPerRequest {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteTimeoutPerRequest(
-        String unit,
-        Integer value) {
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }

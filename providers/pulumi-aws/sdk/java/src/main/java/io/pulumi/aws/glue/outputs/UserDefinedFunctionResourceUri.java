@@ -20,10 +20,10 @@ public final class UserDefinedFunctionResourceUri {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"resourceType","uri"})
+    @OutputCustomType.Constructor
     private UserDefinedFunctionResourceUri(
-        String resourceType,
-        String uri) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.resourceType = resourceType;
         this.uri = uri;
     }

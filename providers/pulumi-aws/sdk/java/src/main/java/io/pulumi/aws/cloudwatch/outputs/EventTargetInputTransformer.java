@@ -25,10 +25,10 @@ public final class EventTargetInputTransformer {
      */
     private final String inputTemplate;
 
-    @OutputCustomType.Constructor({"inputPaths","inputTemplate"})
+    @OutputCustomType.Constructor
     private EventTargetInputTransformer(
-        @Nullable Map<String,String> inputPaths,
-        String inputTemplate) {
+        @OutputCustomType.Parameter("inputPaths") @Nullable Map<String,String> inputPaths,
+        @OutputCustomType.Parameter("inputTemplate") String inputTemplate) {
         this.inputPaths = inputPaths;
         this.inputTemplate = inputTemplate;
     }

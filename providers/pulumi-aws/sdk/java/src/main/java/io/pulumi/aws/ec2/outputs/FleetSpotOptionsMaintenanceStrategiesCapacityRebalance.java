@@ -17,8 +17,8 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalance {
      */
     private final @Nullable String replacementStrategy;
 
-    @OutputCustomType.Constructor({"replacementStrategy"})
-    private FleetSpotOptionsMaintenanceStrategiesCapacityRebalance(@Nullable String replacementStrategy) {
+    @OutputCustomType.Constructor
+    private FleetSpotOptionsMaintenanceStrategiesCapacityRebalance(@OutputCustomType.Parameter("replacementStrategy") @Nullable String replacementStrategy) {
         this.replacementStrategy = replacementStrategy;
     }
 

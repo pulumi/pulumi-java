@@ -22,10 +22,10 @@ public final class SigningJobDestinationS3 {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","prefix"})
+    @OutputCustomType.Constructor
     private SigningJobDestinationS3(
-        String bucket,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.prefix = prefix;
     }

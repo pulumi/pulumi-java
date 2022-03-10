@@ -23,10 +23,10 @@ public final class BrokerConfiguration {
      */
     private final @Nullable Integer revision;
 
-    @OutputCustomType.Constructor({"id","revision"})
+    @OutputCustomType.Constructor
     private BrokerConfiguration(
-        @Nullable String id,
-        @Nullable Integer revision) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("revision") @Nullable Integer revision) {
         this.id = id;
         this.revision = revision;
     }

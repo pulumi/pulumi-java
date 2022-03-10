@@ -27,11 +27,11 @@ public final class CustomPluginLocationS3 {
      */
     private final @Nullable String objectVersion;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey","objectVersion"})
+    @OutputCustomType.Constructor
     private CustomPluginLocationS3(
-        String bucketArn,
-        String fileKey,
-        @Nullable String objectVersion) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey,
+        @OutputCustomType.Parameter("objectVersion") @Nullable String objectVersion) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.objectVersion = objectVersion;
