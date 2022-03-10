@@ -26,11 +26,11 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
      */
     private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
-    @OutputCustomType.Constructor({"name","value","valueSource"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2EnvVarResponse(
-        String name,
-        String value,
-        GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueSource") GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
         this.name = name;
         this.value = value;
         this.valueSource = valueSource;

@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor({"magnitude","score"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse(
-        Double magnitude,
-        Double score) {
+        @OutputCustomType.Parameter("magnitude") Double magnitude,
+        @OutputCustomType.Parameter("score") Double score) {
         this.magnitude = magnitude;
         this.score = score;
     }

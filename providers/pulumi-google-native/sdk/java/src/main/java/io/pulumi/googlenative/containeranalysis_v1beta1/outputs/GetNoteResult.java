@@ -129,29 +129,29 @@ public final class GetNoteResult {
      */
     private final VulnerabilityResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestationAuthority","baseImage","build","createTime","deployable","discovery","expirationTime","intoto","kind","longDescription","name","$package","relatedNoteNames","relatedUrl","sbom","shortDescription","spdxFile","spdxPackage","spdxRelationship","updateTime","vulnerability"})
+    @OutputCustomType.Constructor
     private GetNoteResult(
-        AuthorityResponse attestationAuthority,
-        BasisResponse baseImage,
-        BuildResponse build,
-        String createTime,
-        DeployableResponse deployable,
-        DiscoveryResponse discovery,
-        String expirationTime,
-        InTotoResponse intoto,
-        String kind,
-        String longDescription,
-        String name,
-        PackageResponse $package,
-        List<String> relatedNoteNames,
-        List<RelatedUrlResponse> relatedUrl,
-        DocumentNoteResponse sbom,
-        String shortDescription,
-        FileNoteResponse spdxFile,
-        PackageInfoNoteResponse spdxPackage,
-        RelationshipNoteResponse spdxRelationship,
-        String updateTime,
-        VulnerabilityResponse vulnerability) {
+        @OutputCustomType.Parameter("attestationAuthority") AuthorityResponse attestationAuthority,
+        @OutputCustomType.Parameter("baseImage") BasisResponse baseImage,
+        @OutputCustomType.Parameter("build") BuildResponse build,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployable") DeployableResponse deployable,
+        @OutputCustomType.Parameter("discovery") DiscoveryResponse discovery,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("intoto") InTotoResponse intoto,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("package") PackageResponse $package,
+        @OutputCustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
+        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @OutputCustomType.Parameter("sbom") DocumentNoteResponse sbom,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription,
+        @OutputCustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vulnerability") VulnerabilityResponse vulnerability) {
         this.attestationAuthority = attestationAuthority;
         this.baseImage = baseImage;
         this.build = build;

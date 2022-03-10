@@ -33,12 +33,12 @@ public final class DestinationResponse {
      */
     private final List<Integer> ports;
 
-    @OutputCustomType.Constructor({"hosts","httpHeaderMatch","methods","ports"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        List<String> hosts,
-        HttpHeaderMatchResponse httpHeaderMatch,
-        List<String> methods,
-        List<Integer> ports) {
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("httpHeaderMatch") HttpHeaderMatchResponse httpHeaderMatch,
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("ports") List<Integer> ports) {
         this.hosts = hosts;
         this.httpHeaderMatch = httpHeaderMatch;
         this.methods = methods;

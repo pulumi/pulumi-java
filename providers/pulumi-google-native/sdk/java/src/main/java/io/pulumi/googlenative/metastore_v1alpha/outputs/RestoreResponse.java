@@ -40,14 +40,14 @@ public final class RestoreResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backup","details","endTime","startTime","state","type"})
+    @OutputCustomType.Constructor
     private RestoreResponse(
-        String backup,
-        String details,
-        String endTime,
-        String startTime,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("backup") String backup,
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.backup = backup;
         this.details = details;
         this.endTime = endTime;

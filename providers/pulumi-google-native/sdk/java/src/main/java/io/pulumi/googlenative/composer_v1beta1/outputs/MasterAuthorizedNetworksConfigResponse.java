@@ -22,10 +22,10 @@ public final class MasterAuthorizedNetworksConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"cidrBlocks","enabled"})
+    @OutputCustomType.Constructor
     private MasterAuthorizedNetworksConfigResponse(
-        List<CidrBlockResponse> cidrBlocks,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("cidrBlocks") List<CidrBlockResponse> cidrBlocks,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }

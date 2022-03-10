@@ -25,11 +25,11 @@ public final class PosixGroupResponse {
      */
     private final String systemId;
 
-    @OutputCustomType.Constructor({"gid","name","systemId"})
+    @OutputCustomType.Constructor
     private PosixGroupResponse(
-        String gid,
-        String name,
-        String systemId) {
+        @OutputCustomType.Parameter("gid") String gid,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemId") String systemId) {
         this.gid = gid;
         this.name = name;
         this.systemId = systemId;

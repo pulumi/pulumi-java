@@ -26,11 +26,11 @@ public final class EncryptionInfoResponse {
      */
     private final String kmsKeyVersion;
 
-    @OutputCustomType.Constructor({"encryptionStatus","encryptionType","kmsKeyVersion"})
+    @OutputCustomType.Constructor
     private EncryptionInfoResponse(
-        StatusResponse encryptionStatus,
-        String encryptionType,
-        String kmsKeyVersion) {
+        @OutputCustomType.Parameter("encryptionStatus") StatusResponse encryptionStatus,
+        @OutputCustomType.Parameter("encryptionType") String encryptionType,
+        @OutputCustomType.Parameter("kmsKeyVersion") String kmsKeyVersion) {
         this.encryptionStatus = encryptionStatus;
         this.encryptionType = encryptionType;
         this.kmsKeyVersion = kmsKeyVersion;

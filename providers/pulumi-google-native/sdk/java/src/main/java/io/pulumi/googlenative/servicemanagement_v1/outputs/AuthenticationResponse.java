@@ -22,10 +22,10 @@ public final class AuthenticationResponse {
      */
     private final List<AuthenticationRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"providers","rules"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        List<AuthProviderResponse> providers,
-        List<AuthenticationRuleResponse> rules) {
+        @OutputCustomType.Parameter("providers") List<AuthProviderResponse> providers,
+        @OutputCustomType.Parameter("rules") List<AuthenticationRuleResponse> rules) {
         this.providers = providers;
         this.rules = rules;
     }

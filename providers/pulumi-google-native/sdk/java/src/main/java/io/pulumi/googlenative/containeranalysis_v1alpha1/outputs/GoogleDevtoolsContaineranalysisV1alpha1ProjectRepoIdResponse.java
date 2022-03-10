@@ -20,10 +20,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse 
      */
     private final String repoName;
 
-    @OutputCustomType.Constructor({"project","repoName"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse(
-        String project,
-        String repoName) {
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName) {
         this.project = project;
         this.repoName = repoName;
     }

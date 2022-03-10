@@ -22,10 +22,10 @@ public final class GridLayoutResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor({"columns","widgets"})
+    @OutputCustomType.Constructor
     private GridLayoutResponse(
-        String columns,
-        List<WidgetResponse> widgets) {
+        @OutputCustomType.Parameter("columns") String columns,
+        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.columns = columns;
         this.widgets = widgets;
     }

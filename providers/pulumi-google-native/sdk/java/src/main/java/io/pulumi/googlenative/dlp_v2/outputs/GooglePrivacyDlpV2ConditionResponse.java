@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2ConditionResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse value;
 
-    @OutputCustomType.Constructor({"field","operator","value"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ConditionResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        String operator,
-        GooglePrivacyDlpV2ValueResponse value) {
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
         this.field = field;
         this.operator = operator;
         this.value = value;

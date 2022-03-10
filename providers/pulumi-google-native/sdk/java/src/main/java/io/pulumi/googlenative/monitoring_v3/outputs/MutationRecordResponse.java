@@ -20,10 +20,10 @@ public final class MutationRecordResponse {
      */
     private final String mutatedBy;
 
-    @OutputCustomType.Constructor({"mutateTime","mutatedBy"})
+    @OutputCustomType.Constructor
     private MutationRecordResponse(
-        String mutateTime,
-        String mutatedBy) {
+        @OutputCustomType.Parameter("mutateTime") String mutateTime,
+        @OutputCustomType.Parameter("mutatedBy") String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }

@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","updateTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1SystemTimestampsResponse(
-        String createTime,
-        String expireTime,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.updateTime = updateTime;

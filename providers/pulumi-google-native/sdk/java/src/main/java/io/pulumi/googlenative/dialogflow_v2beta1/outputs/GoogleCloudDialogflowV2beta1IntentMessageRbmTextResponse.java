@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"rbmSuggestion","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
-        String text) {
+        @OutputCustomType.Parameter("rbmSuggestion") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> rbmSuggestion,
+        @OutputCustomType.Parameter("text") String text) {
         this.rbmSuggestion = rbmSuggestion;
         this.text = text;
     }

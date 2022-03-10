@@ -30,12 +30,12 @@ public final class DeviceConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"binaryData","cloudUpdateTime","deviceAckTime","version"})
+    @OutputCustomType.Constructor
     private DeviceConfigResponse(
-        String binaryData,
-        String cloudUpdateTime,
-        String deviceAckTime,
-        String version) {
+        @OutputCustomType.Parameter("binaryData") String binaryData,
+        @OutputCustomType.Parameter("cloudUpdateTime") String cloudUpdateTime,
+        @OutputCustomType.Parameter("deviceAckTime") String deviceAckTime,
+        @OutputCustomType.Parameter("version") String version) {
         this.binaryData = binaryData;
         this.cloudUpdateTime = cloudUpdateTime;
         this.deviceAckTime = deviceAckTime;

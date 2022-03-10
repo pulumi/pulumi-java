@@ -12,10 +12,10 @@ public final class NetworkPerformanceConfigResponse {
     private final String externalIpEgressBandwidthTier;
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor({"externalIpEgressBandwidthTier","totalEgressBandwidthTier"})
+    @OutputCustomType.Constructor
     private NetworkPerformanceConfigResponse(
-        String externalIpEgressBandwidthTier,
-        String totalEgressBandwidthTier) {
+        @OutputCustomType.Parameter("externalIpEgressBandwidthTier") String externalIpEgressBandwidthTier,
+        @OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }

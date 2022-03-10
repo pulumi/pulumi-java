@@ -25,11 +25,11 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
      */
     private final String portalUrl;
 
-    @OutputCustomType.Constructor({"interconnectName","partnerName","portalUrl"})
+    @OutputCustomType.Constructor
     private InterconnectAttachmentPartnerMetadataResponse(
-        String interconnectName,
-        String partnerName,
-        String portalUrl) {
+        @OutputCustomType.Parameter("interconnectName") String interconnectName,
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("portalUrl") String portalUrl) {
         this.interconnectName = interconnectName;
         this.partnerName = partnerName;
         this.portalUrl = portalUrl;

@@ -34,12 +34,12 @@ public final class OptionsResponse {
      */
     private final String virtualProperties;
 
-    @OutputCustomType.Constructor({"asyncOptions","inputMappings","validationOptions","virtualProperties"})
+    @OutputCustomType.Constructor
     private OptionsResponse(
-        List<AsyncOptionsResponse> asyncOptions,
-        List<InputMappingResponse> inputMappings,
-        ValidationOptionsResponse validationOptions,
-        String virtualProperties) {
+        @OutputCustomType.Parameter("asyncOptions") List<AsyncOptionsResponse> asyncOptions,
+        @OutputCustomType.Parameter("inputMappings") List<InputMappingResponse> inputMappings,
+        @OutputCustomType.Parameter("validationOptions") ValidationOptionsResponse validationOptions,
+        @OutputCustomType.Parameter("virtualProperties") String virtualProperties) {
         this.asyncOptions = asyncOptions;
         this.inputMappings = inputMappings;
         this.validationOptions = validationOptions;

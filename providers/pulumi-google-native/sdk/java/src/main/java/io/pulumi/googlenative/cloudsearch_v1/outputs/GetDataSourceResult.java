@@ -58,17 +58,17 @@ public final class GetDataSourceResult {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor({"disableModifications","disableServing","displayName","indexingServiceAccounts","itemsVisibility","name","operationIds","returnThumbnailUrls","shortName"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        Boolean disableModifications,
-        Boolean disableServing,
-        String displayName,
-        List<String> indexingServiceAccounts,
-        List<GSuitePrincipalResponse> itemsVisibility,
-        String name,
-        List<String> operationIds,
-        Boolean returnThumbnailUrls,
-        String shortName) {
+        @OutputCustomType.Parameter("disableModifications") Boolean disableModifications,
+        @OutputCustomType.Parameter("disableServing") Boolean disableServing,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("indexingServiceAccounts") List<String> indexingServiceAccounts,
+        @OutputCustomType.Parameter("itemsVisibility") List<GSuitePrincipalResponse> itemsVisibility,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
+        @OutputCustomType.Parameter("returnThumbnailUrls") Boolean returnThumbnailUrls,
+        @OutputCustomType.Parameter("shortName") String shortName) {
         this.disableModifications = disableModifications;
         this.disableServing = disableServing;
         this.displayName = displayName;

@@ -30,12 +30,12 @@ public final class GetReleaseResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","name","rulesetName","updateTime"})
+    @OutputCustomType.Constructor
     private GetReleaseResult(
-        String createTime,
-        String name,
-        String rulesetName,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rulesetName") String rulesetName,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.name = name;
         this.rulesetName = rulesetName;

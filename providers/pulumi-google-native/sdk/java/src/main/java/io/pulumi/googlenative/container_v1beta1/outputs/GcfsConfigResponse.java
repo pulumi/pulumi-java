@@ -15,8 +15,8 @@ public final class GcfsConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GcfsConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GcfsConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

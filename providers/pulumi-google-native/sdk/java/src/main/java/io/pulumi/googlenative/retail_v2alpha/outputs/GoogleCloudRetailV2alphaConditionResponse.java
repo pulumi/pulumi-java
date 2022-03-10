@@ -22,10 +22,10 @@ public final class GoogleCloudRetailV2alphaConditionResponse {
      */
     private final List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms;
 
-    @OutputCustomType.Constructor({"activeTimeRange","queryTerms"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaConditionResponse(
-        List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange,
-        List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms) {
+        @OutputCustomType.Parameter("activeTimeRange") List<GoogleCloudRetailV2alphaConditionTimeRangeResponse> activeTimeRange,
+        @OutputCustomType.Parameter("queryTerms") List<GoogleCloudRetailV2alphaConditionQueryTermResponse> queryTerms) {
         this.activeTimeRange = activeTimeRange;
         this.queryTerms = queryTerms;
     }

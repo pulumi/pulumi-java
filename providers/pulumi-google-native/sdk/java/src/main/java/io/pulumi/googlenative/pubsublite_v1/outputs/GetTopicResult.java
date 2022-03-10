@@ -33,12 +33,12 @@ public final class GetTopicResult {
      */
     private final RetentionConfigResponse retentionConfig;
 
-    @OutputCustomType.Constructor({"name","partitionConfig","reservationConfig","retentionConfig"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String name,
-        PartitionConfigResponse partitionConfig,
-        ReservationConfigResponse reservationConfig,
-        RetentionConfigResponse retentionConfig) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionConfig") PartitionConfigResponse partitionConfig,
+        @OutputCustomType.Parameter("reservationConfig") ReservationConfigResponse reservationConfig,
+        @OutputCustomType.Parameter("retentionConfig") RetentionConfigResponse retentionConfig) {
         this.name = name;
         this.partitionConfig = partitionConfig;
         this.reservationConfig = reservationConfig;

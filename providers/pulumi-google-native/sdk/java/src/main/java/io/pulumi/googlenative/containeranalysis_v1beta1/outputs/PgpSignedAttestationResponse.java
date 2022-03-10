@@ -25,11 +25,11 @@ public final class PgpSignedAttestationResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor({"contentType","pgpKeyId","signature"})
+    @OutputCustomType.Constructor
     private PgpSignedAttestationResponse(
-        String contentType,
-        String pgpKeyId,
-        String signature) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("pgpKeyId") String pgpKeyId,
+        @OutputCustomType.Parameter("signature") String signature) {
         this.contentType = contentType;
         this.pgpKeyId = pgpKeyId;
         this.signature = signature;

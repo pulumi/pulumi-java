@@ -22,10 +22,10 @@ public final class GoogleIamV1__AuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","service"})
+    @OutputCustomType.Constructor
     private GoogleIamV1__AuditConfigResponse(
-        List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<GoogleIamV1__AuditLogConfigResponse> auditLogConfigs,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

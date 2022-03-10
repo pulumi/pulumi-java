@@ -18,10 +18,10 @@ public final class DatasetAccessEntryResponse {
     private final DatasetReferenceResponse dataset;
     private final List<String> targetTypes;
 
-    @OutputCustomType.Constructor({"dataset","targetTypes"})
+    @OutputCustomType.Constructor
     private DatasetAccessEntryResponse(
-        DatasetReferenceResponse dataset,
-        List<String> targetTypes) {
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes) {
         this.dataset = dataset;
         this.targetTypes = targetTypes;
     }

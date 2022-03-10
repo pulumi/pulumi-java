@@ -50,15 +50,15 @@ public final class ServiceStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"address","conditions","latestCreatedRevisionName","latestReadyRevisionName","observedGeneration","traffic","url"})
+    @OutputCustomType.Constructor
     private ServiceStatusResponse(
-        AddressableResponse address,
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String latestCreatedRevisionName,
-        String latestReadyRevisionName,
-        Integer observedGeneration,
-        List<TrafficTargetResponse> traffic,
-        String url) {
+        @OutputCustomType.Parameter("address") AddressableResponse address,
+        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @OutputCustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
+        @OutputCustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic,
+        @OutputCustomType.Parameter("url") String url) {
         this.address = address;
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;

@@ -22,10 +22,10 @@ public final class PackageOccurrenceResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"location","name"})
+    @OutputCustomType.Constructor
     private PackageOccurrenceResponse(
-        List<LocationResponse> location,
-        String name) {
+        @OutputCustomType.Parameter("location") List<LocationResponse> location,
+        @OutputCustomType.Parameter("name") String name) {
         this.location = location;
         this.name = name;
     }

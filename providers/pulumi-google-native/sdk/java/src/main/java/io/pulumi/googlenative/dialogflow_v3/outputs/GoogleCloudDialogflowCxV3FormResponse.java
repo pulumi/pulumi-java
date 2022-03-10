@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3FormResponse {
      */
     private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"parameters"})
-    private GoogleCloudDialogflowCxV3FormResponse(List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3FormResponse(@OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters) {
         this.parameters = parameters;
     }
 

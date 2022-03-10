@@ -21,10 +21,10 @@ public final class MavenRepositoryConfigResponse {
      */
     private final String versionPolicy;
 
-    @OutputCustomType.Constructor({"allowSnapshotOverwrites","versionPolicy"})
+    @OutputCustomType.Constructor
     private MavenRepositoryConfigResponse(
-        Boolean allowSnapshotOverwrites,
-        String versionPolicy) {
+        @OutputCustomType.Parameter("allowSnapshotOverwrites") Boolean allowSnapshotOverwrites,
+        @OutputCustomType.Parameter("versionPolicy") String versionPolicy) {
         this.allowSnapshotOverwrites = allowSnapshotOverwrites;
         this.versionPolicy = versionPolicy;
     }

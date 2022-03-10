@@ -38,13 +38,13 @@ public final class GoogleCloudChannelV1ValueResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"boolValue","doubleValue","int64Value","protoValue","stringValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ValueResponse(
-        Boolean boolValue,
-        Double doubleValue,
-        String int64Value,
-        Map<String,String> protoValue,
-        String stringValue) {
+        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
+        @OutputCustomType.Parameter("doubleValue") Double doubleValue,
+        @OutputCustomType.Parameter("int64Value") String int64Value,
+        @OutputCustomType.Parameter("protoValue") Map<String,String> protoValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.boolValue = boolValue;
         this.doubleValue = doubleValue;
         this.int64Value = int64Value;

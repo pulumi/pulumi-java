@@ -24,11 +24,11 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"gkeClusters","kind","networks"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigResponse(
-        List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        @OutputCustomType.Parameter("gkeClusters") List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
         this.gkeClusters = gkeClusters;
         this.kind = kind;
         this.networks = networks;

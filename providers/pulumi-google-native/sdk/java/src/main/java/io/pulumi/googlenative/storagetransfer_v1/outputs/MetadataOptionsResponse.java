@@ -50,16 +50,16 @@ public final class MetadataOptionsResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"acl","gid","kmsKey","mode","storageClass","symlink","temporaryHold","uid"})
+    @OutputCustomType.Constructor
     private MetadataOptionsResponse(
-        String acl,
-        String gid,
-        String kmsKey,
-        String mode,
-        String storageClass,
-        String symlink,
-        String temporaryHold,
-        String uid) {
+        @OutputCustomType.Parameter("acl") String acl,
+        @OutputCustomType.Parameter("gid") String gid,
+        @OutputCustomType.Parameter("kmsKey") String kmsKey,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("symlink") String symlink,
+        @OutputCustomType.Parameter("temporaryHold") String temporaryHold,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.acl = acl;
         this.gid = gid;
         this.kmsKey = kmsKey;

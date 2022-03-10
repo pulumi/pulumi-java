@@ -20,10 +20,10 @@ public final class SourceRepositoryResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"deployedUrl","url"})
+    @OutputCustomType.Constructor
     private SourceRepositoryResponse(
-        String deployedUrl,
-        String url) {
+        @OutputCustomType.Parameter("deployedUrl") String deployedUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.deployedUrl = deployedUrl;
         this.url = url;
     }

@@ -20,10 +20,10 @@ public final class LocalCopyResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"disk","path"})
+    @OutputCustomType.Constructor
     private LocalCopyResponse(
-        String disk,
-        String path) {
+        @OutputCustomType.Parameter("disk") String disk,
+        @OutputCustomType.Parameter("path") String path) {
         this.disk = disk;
         this.path = path;
     }

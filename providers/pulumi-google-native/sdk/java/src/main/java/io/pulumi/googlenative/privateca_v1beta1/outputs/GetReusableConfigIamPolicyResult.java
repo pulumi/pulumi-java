@@ -34,12 +34,12 @@ public final class GetReusableConfigIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetReusableConfigIamPolicyResult(
-        List<AuditConfigResponse> auditConfigs,
-        List<BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

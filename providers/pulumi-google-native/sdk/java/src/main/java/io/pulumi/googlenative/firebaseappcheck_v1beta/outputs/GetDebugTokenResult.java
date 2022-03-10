@@ -25,11 +25,11 @@ public final class GetDebugTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"displayName","name","token"})
+    @OutputCustomType.Constructor
     private GetDebugTokenResult(
-        String displayName,
-        String name,
-        String token) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("token") String token) {
         this.displayName = displayName;
         this.name = name;
         this.token = token;

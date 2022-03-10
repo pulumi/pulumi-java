@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
      */
     private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
-    @OutputCustomType.Constructor({"buckets"})
-    private GooglePrivacyDlpV2BucketingConfigResponse(List<GooglePrivacyDlpV2BucketResponse> buckets) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2BucketingConfigResponse(@OutputCustomType.Parameter("buckets") List<GooglePrivacyDlpV2BucketResponse> buckets) {
         this.buckets = buckets;
     }
 

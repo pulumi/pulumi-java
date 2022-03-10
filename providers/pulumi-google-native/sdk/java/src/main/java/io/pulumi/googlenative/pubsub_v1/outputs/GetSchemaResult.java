@@ -25,11 +25,11 @@ public final class GetSchemaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","name","type"})
+    @OutputCustomType.Constructor
     private GetSchemaResult(
-        String definition,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.name = name;
         this.type = type;

@@ -28,12 +28,12 @@ public final class GetResponsePolicyResult {
      */
     private final String responsePolicyName;
 
-    @OutputCustomType.Constructor({"description","kind","networks","responsePolicyName"})
+    @OutputCustomType.Constructor
     private GetResponsePolicyResult(
-        String description,
-        String kind,
-        List<ResponsePolicyNetworkResponse> networks,
-        String responsePolicyName) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ResponsePolicyNetworkResponse> networks,
+        @OutputCustomType.Parameter("responsePolicyName") String responsePolicyName) {
         this.description = description;
         this.kind = kind;
         this.networks = networks;

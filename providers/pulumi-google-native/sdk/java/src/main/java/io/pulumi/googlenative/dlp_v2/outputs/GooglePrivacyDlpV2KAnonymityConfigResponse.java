@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
-    @OutputCustomType.Constructor({"entityId","quasiIds"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityConfigResponse(
-        GooglePrivacyDlpV2EntityIdResponse entityId,
-        List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        @OutputCustomType.Parameter("entityId") GooglePrivacyDlpV2EntityIdResponse entityId,
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
         this.entityId = entityId;
         this.quasiIds = quasiIds;
     }

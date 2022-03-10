@@ -15,8 +15,8 @@ public final class CaseClassificationResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor({"displayName"})
-    private CaseClassificationResponse(String displayName) {
+    @OutputCustomType.Constructor
+    private CaseClassificationResponse(@OutputCustomType.Parameter("displayName") String displayName) {
         this.displayName = displayName;
     }
 

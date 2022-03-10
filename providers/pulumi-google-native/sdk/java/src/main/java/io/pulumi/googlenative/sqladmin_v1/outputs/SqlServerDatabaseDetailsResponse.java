@@ -21,10 +21,10 @@ public final class SqlServerDatabaseDetailsResponse {
      */
     private final String recoveryModel;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","recoveryModel"})
+    @OutputCustomType.Constructor
     private SqlServerDatabaseDetailsResponse(
-        Integer compatibilityLevel,
-        String recoveryModel) {
+        @OutputCustomType.Parameter("compatibilityLevel") Integer compatibilityLevel,
+        @OutputCustomType.Parameter("recoveryModel") String recoveryModel) {
         this.compatibilityLevel = compatibilityLevel;
         this.recoveryModel = recoveryModel;
     }

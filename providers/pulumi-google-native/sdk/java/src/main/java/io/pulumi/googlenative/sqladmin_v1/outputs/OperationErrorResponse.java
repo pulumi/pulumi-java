@@ -25,11 +25,11 @@ public final class OperationErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","kind","message"})
+    @OutputCustomType.Constructor
     private OperationErrorResponse(
-        String code,
-        String kind,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.kind = kind;
         this.message = message;

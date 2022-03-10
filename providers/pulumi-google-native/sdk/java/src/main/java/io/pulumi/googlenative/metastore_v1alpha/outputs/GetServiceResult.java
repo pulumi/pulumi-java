@@ -118,28 +118,28 @@ public final class GetServiceResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"artifactGcsUri","createTime","databaseType","encryptionConfig","endpointUri","hiveMetastoreConfig","labels","maintenanceWindow","metadataIntegration","metadataManagementActivity","name","network","networkConfig","port","releaseChannel","state","stateMessage","tier","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String artifactGcsUri,
-        String createTime,
-        String databaseType,
-        EncryptionConfigResponse encryptionConfig,
-        String endpointUri,
-        HiveMetastoreConfigResponse hiveMetastoreConfig,
-        Map<String,String> labels,
-        MaintenanceWindowResponse maintenanceWindow,
-        MetadataIntegrationResponse metadataIntegration,
-        MetadataManagementActivityResponse metadataManagementActivity,
-        String name,
-        String network,
-        NetworkConfigResponse networkConfig,
-        Integer port,
-        String releaseChannel,
-        String state,
-        String stateMessage,
-        String tier,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("artifactGcsUri") String artifactGcsUri,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("hiveMetastoreConfig") HiveMetastoreConfigResponse hiveMetastoreConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @OutputCustomType.Parameter("metadataIntegration") MetadataIntegrationResponse metadataIntegration,
+        @OutputCustomType.Parameter("metadataManagementActivity") MetadataManagementActivityResponse metadataManagementActivity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("releaseChannel") String releaseChannel,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.artifactGcsUri = artifactGcsUri;
         this.createTime = createTime;
         this.databaseType = databaseType;

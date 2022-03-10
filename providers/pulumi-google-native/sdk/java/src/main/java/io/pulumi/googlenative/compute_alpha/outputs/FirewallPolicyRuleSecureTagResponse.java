@@ -20,10 +20,10 @@ public final class FirewallPolicyRuleSecureTagResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"name","state"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleSecureTagResponse(
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.name = name;
         this.state = state;
     }

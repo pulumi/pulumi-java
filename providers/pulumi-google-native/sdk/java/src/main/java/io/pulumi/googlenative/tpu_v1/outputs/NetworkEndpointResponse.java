@@ -21,10 +21,10 @@ public final class NetworkEndpointResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"ipAddress","port"})
+    @OutputCustomType.Constructor
     private NetworkEndpointResponse(
-        String ipAddress,
-        Integer port) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

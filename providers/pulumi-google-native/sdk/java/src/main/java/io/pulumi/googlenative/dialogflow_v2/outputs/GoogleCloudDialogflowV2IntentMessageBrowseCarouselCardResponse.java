@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
      */
     private final List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
-    @OutputCustomType.Constructor({"imageDisplayOptions","items"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse(
-        String imageDisplayOptions,
-        List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
+        @OutputCustomType.Parameter("imageDisplayOptions") String imageDisplayOptions,
+        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
         this.imageDisplayOptions = imageDisplayOptions;
         this.items = items;
     }

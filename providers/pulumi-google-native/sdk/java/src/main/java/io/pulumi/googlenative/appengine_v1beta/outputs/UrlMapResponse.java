@@ -53,16 +53,16 @@ public final class UrlMapResponse {
      */
     private final String urlRegex;
 
-    @OutputCustomType.Constructor({"apiEndpoint","authFailAction","login","redirectHttpResponseCode","script","securityLevel","staticFiles","urlRegex"})
+    @OutputCustomType.Constructor
     private UrlMapResponse(
-        ApiEndpointHandlerResponse apiEndpoint,
-        String authFailAction,
-        String login,
-        String redirectHttpResponseCode,
-        ScriptHandlerResponse script,
-        String securityLevel,
-        StaticFilesHandlerResponse staticFiles,
-        String urlRegex) {
+        @OutputCustomType.Parameter("apiEndpoint") ApiEndpointHandlerResponse apiEndpoint,
+        @OutputCustomType.Parameter("authFailAction") String authFailAction,
+        @OutputCustomType.Parameter("login") String login,
+        @OutputCustomType.Parameter("redirectHttpResponseCode") String redirectHttpResponseCode,
+        @OutputCustomType.Parameter("script") ScriptHandlerResponse script,
+        @OutputCustomType.Parameter("securityLevel") String securityLevel,
+        @OutputCustomType.Parameter("staticFiles") StaticFilesHandlerResponse staticFiles,
+        @OutputCustomType.Parameter("urlRegex") String urlRegex) {
         this.apiEndpoint = apiEndpoint;
         this.authFailAction = authFailAction;
         this.login = login;

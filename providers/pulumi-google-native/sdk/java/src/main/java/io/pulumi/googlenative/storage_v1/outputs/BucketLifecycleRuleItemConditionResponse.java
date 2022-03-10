@@ -63,18 +63,18 @@ public final class BucketLifecycleRuleItemConditionResponse {
      */
     private final Integer numNewerVersions;
 
-    @OutputCustomType.Constructor({"age","createdBefore","customTimeBefore","daysSinceCustomTime","daysSinceNoncurrentTime","isLive","matchesPattern","matchesStorageClass","noncurrentTimeBefore","numNewerVersions"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleItemConditionResponse(
-        Integer age,
-        String createdBefore,
-        String customTimeBefore,
-        Integer daysSinceCustomTime,
-        Integer daysSinceNoncurrentTime,
-        Boolean isLive,
-        String matchesPattern,
-        List<String> matchesStorageClass,
-        String noncurrentTimeBefore,
-        Integer numNewerVersions) {
+        @OutputCustomType.Parameter("age") Integer age,
+        @OutputCustomType.Parameter("createdBefore") String createdBefore,
+        @OutputCustomType.Parameter("customTimeBefore") String customTimeBefore,
+        @OutputCustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
+        @OutputCustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
+        @OutputCustomType.Parameter("isLive") Boolean isLive,
+        @OutputCustomType.Parameter("matchesPattern") String matchesPattern,
+        @OutputCustomType.Parameter("matchesStorageClass") List<String> matchesStorageClass,
+        @OutputCustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
+        @OutputCustomType.Parameter("numNewerVersions") Integer numNewerVersions) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

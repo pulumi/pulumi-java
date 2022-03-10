@@ -26,11 +26,11 @@ public final class EndpointResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"allowCors","name","target"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        Boolean allowCors,
-        String name,
-        String target) {
+        @OutputCustomType.Parameter("allowCors") Boolean allowCors,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") String target) {
         this.allowCors = allowCors;
         this.name = name;
         this.target = target;

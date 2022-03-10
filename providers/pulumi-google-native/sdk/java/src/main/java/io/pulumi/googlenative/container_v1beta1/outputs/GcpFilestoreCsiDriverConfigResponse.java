@@ -15,8 +15,8 @@ public final class GcpFilestoreCsiDriverConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GcpFilestoreCsiDriverConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GcpFilestoreCsiDriverConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -25,11 +25,11 @@ public final class SkippedDetailResponse {
      */
     private final Boolean incompatibleDevice;
 
-    @OutputCustomType.Constructor({"incompatibleAppVersion","incompatibleArchitecture","incompatibleDevice"})
+    @OutputCustomType.Constructor
     private SkippedDetailResponse(
-        Boolean incompatibleAppVersion,
-        Boolean incompatibleArchitecture,
-        Boolean incompatibleDevice) {
+        @OutputCustomType.Parameter("incompatibleAppVersion") Boolean incompatibleAppVersion,
+        @OutputCustomType.Parameter("incompatibleArchitecture") Boolean incompatibleArchitecture,
+        @OutputCustomType.Parameter("incompatibleDevice") Boolean incompatibleDevice) {
         this.incompatibleAppVersion = incompatibleAppVersion;
         this.incompatibleArchitecture = incompatibleArchitecture;
         this.incompatibleDevice = incompatibleDevice;

@@ -20,10 +20,10 @@ public final class LayerResponse {
      */
     private final String directive;
 
-    @OutputCustomType.Constructor({"arguments","directive"})
+    @OutputCustomType.Constructor
     private LayerResponse(
-        String arguments,
-        String directive) {
+        @OutputCustomType.Parameter("arguments") String arguments,
+        @OutputCustomType.Parameter("directive") String directive) {
         this.arguments = arguments;
         this.directive = directive;
     }

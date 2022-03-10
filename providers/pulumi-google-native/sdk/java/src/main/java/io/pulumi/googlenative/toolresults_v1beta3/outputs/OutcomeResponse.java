@@ -39,13 +39,13 @@ public final class OutcomeResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor({"failureDetail","inconclusiveDetail","skippedDetail","successDetail","summary"})
+    @OutputCustomType.Constructor
     private OutcomeResponse(
-        FailureDetailResponse failureDetail,
-        InconclusiveDetailResponse inconclusiveDetail,
-        SkippedDetailResponse skippedDetail,
-        SuccessDetailResponse successDetail,
-        String summary) {
+        @OutputCustomType.Parameter("failureDetail") FailureDetailResponse failureDetail,
+        @OutputCustomType.Parameter("inconclusiveDetail") InconclusiveDetailResponse inconclusiveDetail,
+        @OutputCustomType.Parameter("skippedDetail") SkippedDetailResponse skippedDetail,
+        @OutputCustomType.Parameter("successDetail") SuccessDetailResponse successDetail,
+        @OutputCustomType.Parameter("summary") String summary) {
         this.failureDetail = failureDetail;
         this.inconclusiveDetail = inconclusiveDetail;
         this.skippedDetail = skippedDetail;

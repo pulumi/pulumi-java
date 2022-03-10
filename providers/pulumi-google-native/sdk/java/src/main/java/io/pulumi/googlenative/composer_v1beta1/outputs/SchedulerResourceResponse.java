@@ -31,12 +31,12 @@ public final class SchedulerResourceResponse {
      */
     private final Double storageGb;
 
-    @OutputCustomType.Constructor({"count","cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private SchedulerResourceResponse(
-        Integer count,
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;

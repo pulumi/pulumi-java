@@ -15,8 +15,8 @@ public final class DeliveryConfigResponse {
      */
     private final String deliveryRequirement;
 
-    @OutputCustomType.Constructor({"deliveryRequirement"})
-    private DeliveryConfigResponse(String deliveryRequirement) {
+    @OutputCustomType.Constructor
+    private DeliveryConfigResponse(@OutputCustomType.Parameter("deliveryRequirement") String deliveryRequirement) {
         this.deliveryRequirement = deliveryRequirement;
     }
 

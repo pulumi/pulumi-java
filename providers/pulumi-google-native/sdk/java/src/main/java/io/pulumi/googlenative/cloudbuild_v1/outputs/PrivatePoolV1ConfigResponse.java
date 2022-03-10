@@ -21,10 +21,10 @@ public final class PrivatePoolV1ConfigResponse {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"networkConfig","workerConfig"})
+    @OutputCustomType.Constructor
     private PrivatePoolV1ConfigResponse(
-        NetworkConfigResponse networkConfig,
-        WorkerConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.networkConfig = networkConfig;
         this.workerConfig = workerConfig;
     }

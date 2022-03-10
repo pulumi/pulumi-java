@@ -25,11 +25,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      */
     private final String trainingConversationsCount;
 
-    @OutputCustomType.Constructor({"filter","medium","trainingConversationsCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(
-        String filter,
-        String medium,
-        String trainingConversationsCount) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("medium") String medium,
+        @OutputCustomType.Parameter("trainingConversationsCount") String trainingConversationsCount) {
         this.filter = filter;
         this.medium = medium;
         this.trainingConversationsCount = trainingConversationsCount;

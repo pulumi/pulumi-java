@@ -35,13 +35,13 @@ public final class CustomerEncryptionKeyResponse {
      */
     private final String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeyName","kmsKeyServiceAccount","rawKey","rsaEncryptedKey","sha256"})
+    @OutputCustomType.Constructor
     private CustomerEncryptionKeyResponse(
-        String kmsKeyName,
-        String kmsKeyServiceAccount,
-        String rawKey,
-        String rsaEncryptedKey,
-        String sha256) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") String rawKey,
+        @OutputCustomType.Parameter("rsaEncryptedKey") String rsaEncryptedKey,
+        @OutputCustomType.Parameter("sha256") String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

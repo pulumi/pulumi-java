@@ -71,19 +71,19 @@ public final class GetTypeProviderResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"collectionOverrides","credential","customCertificateAuthorityRoots","description","descriptorUrl","insertTime","labels","name","operation","options","selfLink"})
+    @OutputCustomType.Constructor
     private GetTypeProviderResult(
-        List<CollectionOverrideResponse> collectionOverrides,
-        CredentialResponse credential,
-        List<String> customCertificateAuthorityRoots,
-        String description,
-        String descriptorUrl,
-        String insertTime,
-        List<TypeProviderLabelEntryResponse> labels,
-        String name,
-        OperationResponse operation,
-        OptionsResponse options,
-        String selfLink) {
+        @OutputCustomType.Parameter("collectionOverrides") List<CollectionOverrideResponse> collectionOverrides,
+        @OutputCustomType.Parameter("credential") CredentialResponse credential,
+        @OutputCustomType.Parameter("customCertificateAuthorityRoots") List<String> customCertificateAuthorityRoots,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("descriptorUrl") String descriptorUrl,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("labels") List<TypeProviderLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") OperationResponse operation,
+        @OutputCustomType.Parameter("options") OptionsResponse options,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.collectionOverrides = collectionOverrides;
         this.credential = credential;
         this.customCertificateAuthorityRoots = customCertificateAuthorityRoots;

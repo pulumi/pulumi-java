@@ -90,23 +90,23 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    @OutputCustomType.Constructor({"description","diskName","diskSizeGb","diskType","guestOsFeatures","labels","licenses","multiWriter","onUpdateAction","provisionedIops","resourcePolicies","sourceImage","sourceImageEncryptionKey","sourceSnapshot","sourceSnapshotEncryptionKey"})
+    @OutputCustomType.Constructor
     private AttachedDiskInitializeParamsResponse(
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Map<String,String> labels,
-        List<String> licenses,
-        Boolean multiWriter,
-        String onUpdateAction,
-        String provisionedIops,
-        List<String> resourcePolicies,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
+        @OutputCustomType.Parameter("onUpdateAction") String onUpdateAction,
+        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
         this.description = description;
         this.diskName = diskName;
         this.diskSizeGb = diskSizeGb;

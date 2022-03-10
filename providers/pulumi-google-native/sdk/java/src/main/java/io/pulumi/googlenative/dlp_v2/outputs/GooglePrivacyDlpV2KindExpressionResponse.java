@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2KindExpressionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GooglePrivacyDlpV2KindExpressionResponse(String name) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2KindExpressionResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

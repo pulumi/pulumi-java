@@ -15,8 +15,8 @@ public final class CompanyDerivedInfoResponse {
      */
     private final LocationResponse headquartersLocation;
 
-    @OutputCustomType.Constructor({"headquartersLocation"})
-    private CompanyDerivedInfoResponse(LocationResponse headquartersLocation) {
+    @OutputCustomType.Constructor
+    private CompanyDerivedInfoResponse(@OutputCustomType.Parameter("headquartersLocation") LocationResponse headquartersLocation) {
         this.headquartersLocation = headquartersLocation;
     }
 

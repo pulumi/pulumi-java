@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse {
      */
     private final String groupedEntry;
 
-    @OutputCustomType.Constructor({"groupedEntry"})
-    private GoogleCloudDatacatalogV1TableSpecResponse(String groupedEntry) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1TableSpecResponse(@OutputCustomType.Parameter("groupedEntry") String groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 

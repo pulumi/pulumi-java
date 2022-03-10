@@ -30,12 +30,12 @@ public final class NetworkUtilizationResponse {
      */
     private final Integer targetSentPacketsPerSecond;
 
-    @OutputCustomType.Constructor({"targetReceivedBytesPerSecond","targetReceivedPacketsPerSecond","targetSentBytesPerSecond","targetSentPacketsPerSecond"})
+    @OutputCustomType.Constructor
     private NetworkUtilizationResponse(
-        Integer targetReceivedBytesPerSecond,
-        Integer targetReceivedPacketsPerSecond,
-        Integer targetSentBytesPerSecond,
-        Integer targetSentPacketsPerSecond) {
+        @OutputCustomType.Parameter("targetReceivedBytesPerSecond") Integer targetReceivedBytesPerSecond,
+        @OutputCustomType.Parameter("targetReceivedPacketsPerSecond") Integer targetReceivedPacketsPerSecond,
+        @OutputCustomType.Parameter("targetSentBytesPerSecond") Integer targetSentBytesPerSecond,
+        @OutputCustomType.Parameter("targetSentPacketsPerSecond") Integer targetSentPacketsPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;

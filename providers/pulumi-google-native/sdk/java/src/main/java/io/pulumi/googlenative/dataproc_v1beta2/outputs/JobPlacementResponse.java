@@ -26,11 +26,11 @@ public final class JobPlacementResponse {
      */
     private final String clusterUuid;
 
-    @OutputCustomType.Constructor({"clusterLabels","clusterName","clusterUuid"})
+    @OutputCustomType.Constructor
     private JobPlacementResponse(
-        Map<String,String> clusterLabels,
-        String clusterName,
-        String clusterUuid) {
+        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterUuid") String clusterUuid) {
         this.clusterLabels = clusterLabels;
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;

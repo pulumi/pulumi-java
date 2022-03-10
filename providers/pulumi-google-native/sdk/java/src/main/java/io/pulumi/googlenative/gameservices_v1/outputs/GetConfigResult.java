@@ -49,15 +49,15 @@ public final class GetConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","fleetConfigs","labels","name","scalingConfigs","updateTime"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        String createTime,
-        String description,
-        List<FleetConfigResponse> fleetConfigs,
-        Map<String,String> labels,
-        String name,
-        List<ScalingConfigResponse> scalingConfigs,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fleetConfigs") List<FleetConfigResponse> fleetConfigs,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scalingConfigs") List<ScalingConfigResponse> scalingConfigs,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.fleetConfigs = fleetConfigs;

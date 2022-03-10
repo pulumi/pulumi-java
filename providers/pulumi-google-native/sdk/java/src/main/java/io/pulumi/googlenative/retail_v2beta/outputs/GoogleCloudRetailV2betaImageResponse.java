@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaImageResponse {
      */
     private final Integer width;
 
-    @OutputCustomType.Constructor({"height","uri","width"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaImageResponse(
-        Integer height,
-        String uri,
-        Integer width) {
+        @OutputCustomType.Parameter("height") Integer height,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("width") Integer width) {
         this.height = height;
         this.uri = uri;
         this.width = width;

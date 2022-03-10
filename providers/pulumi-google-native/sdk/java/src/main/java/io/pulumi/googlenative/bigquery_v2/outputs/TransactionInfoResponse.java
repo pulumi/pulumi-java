@@ -15,8 +15,8 @@ public final class TransactionInfoResponse {
      */
     private final String transactionId;
 
-    @OutputCustomType.Constructor({"transactionId"})
-    private TransactionInfoResponse(String transactionId) {
+    @OutputCustomType.Constructor
+    private TransactionInfoResponse(@OutputCustomType.Parameter("transactionId") String transactionId) {
         this.transactionId = transactionId;
     }
 

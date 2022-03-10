@@ -21,10 +21,10 @@ public final class BackfillAllStrategyResponse {
      */
     private final OracleRdbmsResponse oracleExcludedObjects;
 
-    @OutputCustomType.Constructor({"mysqlExcludedObjects","oracleExcludedObjects"})
+    @OutputCustomType.Constructor
     private BackfillAllStrategyResponse(
-        MysqlRdbmsResponse mysqlExcludedObjects,
-        OracleRdbmsResponse oracleExcludedObjects) {
+        @OutputCustomType.Parameter("mysqlExcludedObjects") MysqlRdbmsResponse mysqlExcludedObjects,
+        @OutputCustomType.Parameter("oracleExcludedObjects") OracleRdbmsResponse oracleExcludedObjects) {
         this.mysqlExcludedObjects = mysqlExcludedObjects;
         this.oracleExcludedObjects = oracleExcludedObjects;
     }

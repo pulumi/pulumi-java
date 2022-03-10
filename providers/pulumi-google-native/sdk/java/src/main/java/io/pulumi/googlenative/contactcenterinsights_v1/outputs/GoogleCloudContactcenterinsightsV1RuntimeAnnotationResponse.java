@@ -67,18 +67,18 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
      */
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
-    @OutputCustomType.Constructor({"annotationId","answerFeedback","articleSuggestion","createTime","dialogflowInteraction","endBoundary","faqAnswer","smartComposeSuggestion","smartReply","startBoundary"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(
-        String annotationId,
-        GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
-        GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
-        String createTime,
-        GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
-        GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
-        GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
-        GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
+        @OutputCustomType.Parameter("annotationId") String annotationId,
+        @OutputCustomType.Parameter("answerFeedback") GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
+        @OutputCustomType.Parameter("articleSuggestion") GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dialogflowInteraction") GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
+        @OutputCustomType.Parameter("endBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
+        @OutputCustomType.Parameter("faqAnswer") GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
+        @OutputCustomType.Parameter("smartComposeSuggestion") GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
+        @OutputCustomType.Parameter("smartReply") GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
+        @OutputCustomType.Parameter("startBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
         this.annotationId = annotationId;
         this.answerFeedback = answerFeedback;
         this.articleSuggestion = articleSuggestion;

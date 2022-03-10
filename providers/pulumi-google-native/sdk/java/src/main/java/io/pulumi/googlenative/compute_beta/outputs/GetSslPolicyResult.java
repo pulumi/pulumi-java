@@ -67,19 +67,19 @@ public final class GetSslPolicyResult {
      */
     private final List<SslPolicyWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","kind","minTlsVersion","name","profile","selfLink","warnings"})
+    @OutputCustomType.Constructor
     private GetSslPolicyResult(
-        String creationTimestamp,
-        List<String> customFeatures,
-        String description,
-        List<String> enabledFeatures,
-        String fingerprint,
-        String kind,
-        String minTlsVersion,
-        String name,
-        String profile,
-        String selfLink,
-        List<SslPolicyWarningsItemResponse> warnings) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("warnings") List<SslPolicyWarningsItemResponse> warnings) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

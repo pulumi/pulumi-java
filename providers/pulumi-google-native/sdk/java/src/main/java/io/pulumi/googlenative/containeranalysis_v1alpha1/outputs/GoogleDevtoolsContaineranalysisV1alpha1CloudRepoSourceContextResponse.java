@@ -27,11 +27,11 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","repoId","revisionId"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("repoId") GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;

@@ -68,19 +68,19 @@ public final class GetConnectorResult {
      */
     private final SubnetResponse subnet;
 
-    @OutputCustomType.Constructor({"connectedProjects","ipCidrRange","machineType","maxInstances","maxThroughput","minInstances","minThroughput","name","network","state","subnet"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        List<String> connectedProjects,
-        String ipCidrRange,
-        String machineType,
-        Integer maxInstances,
-        Integer maxThroughput,
-        Integer minInstances,
-        Integer minThroughput,
-        String name,
-        String network,
-        String state,
-        SubnetResponse subnet) {
+        @OutputCustomType.Parameter("connectedProjects") List<String> connectedProjects,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("maxThroughput") Integer maxThroughput,
+        @OutputCustomType.Parameter("minInstances") Integer minInstances,
+        @OutputCustomType.Parameter("minThroughput") Integer minThroughput,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnet") SubnetResponse subnet) {
         this.connectedProjects = connectedProjects;
         this.ipCidrRange = ipCidrRange;
         this.machineType = machineType;

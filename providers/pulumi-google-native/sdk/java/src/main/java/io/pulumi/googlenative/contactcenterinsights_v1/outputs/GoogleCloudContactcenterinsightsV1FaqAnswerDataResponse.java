@@ -42,14 +42,14 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"answer","confidenceScore","metadata","queryRecord","question","source"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(
-        String answer,
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String question,
-        String source) {
+        @OutputCustomType.Parameter("answer") String answer,
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("question") String question,
+        @OutputCustomType.Parameter("source") String source) {
         this.answer = answer;
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;

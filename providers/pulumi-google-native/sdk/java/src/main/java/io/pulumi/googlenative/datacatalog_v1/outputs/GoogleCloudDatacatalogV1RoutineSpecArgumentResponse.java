@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1RoutineSpecArgumentResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"mode","name","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1RoutineSpecArgumentResponse(
-        String mode,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.mode = mode;
         this.name = name;
         this.type = type;

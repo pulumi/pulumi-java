@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
      */
     private final String commonCharactersToIgnore;
 
-    @OutputCustomType.Constructor({"charactersToSkip","commonCharactersToIgnore"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CharsToIgnoreResponse(
-        String charactersToSkip,
-        String commonCharactersToIgnore) {
+        @OutputCustomType.Parameter("charactersToSkip") String charactersToSkip,
+        @OutputCustomType.Parameter("commonCharactersToIgnore") String commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }

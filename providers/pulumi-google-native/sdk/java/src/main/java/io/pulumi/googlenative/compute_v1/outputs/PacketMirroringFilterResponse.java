@@ -26,11 +26,11 @@ public final class PacketMirroringFilterResponse {
      */
     private final List<String> ipProtocols;
 
-    @OutputCustomType.Constructor({"cidrRanges","direction","ipProtocols"})
+    @OutputCustomType.Constructor
     private PacketMirroringFilterResponse(
-        List<String> cidrRanges,
-        String direction,
-        List<String> ipProtocols) {
+        @OutputCustomType.Parameter("cidrRanges") List<String> cidrRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("ipProtocols") List<String> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;

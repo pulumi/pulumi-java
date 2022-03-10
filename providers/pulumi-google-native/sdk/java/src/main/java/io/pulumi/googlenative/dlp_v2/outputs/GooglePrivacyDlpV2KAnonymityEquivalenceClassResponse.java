@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor({"equivalenceClassSize","quasiIdsValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(
-        String equivalenceClassSize,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @OutputCustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
+        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.equivalenceClassSize = equivalenceClassSize;
         this.quasiIdsValues = quasiIdsValues;
     }

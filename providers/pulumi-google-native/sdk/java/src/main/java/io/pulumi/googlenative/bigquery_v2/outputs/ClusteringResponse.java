@@ -16,8 +16,8 @@ public final class ClusteringResponse {
      */
     private final List<String> fields;
 
-    @OutputCustomType.Constructor({"fields"})
-    private ClusteringResponse(List<String> fields) {
+    @OutputCustomType.Constructor
+    private ClusteringResponse(@OutputCustomType.Parameter("fields") List<String> fields) {
         this.fields = fields;
     }
 

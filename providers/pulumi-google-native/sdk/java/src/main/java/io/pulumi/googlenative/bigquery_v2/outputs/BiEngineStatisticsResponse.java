@@ -22,10 +22,10 @@ public final class BiEngineStatisticsResponse {
      */
     private final List<BiEngineReasonResponse> biEngineReasons;
 
-    @OutputCustomType.Constructor({"biEngineMode","biEngineReasons"})
+    @OutputCustomType.Constructor
     private BiEngineStatisticsResponse(
-        String biEngineMode,
-        List<BiEngineReasonResponse> biEngineReasons) {
+        @OutputCustomType.Parameter("biEngineMode") String biEngineMode,
+        @OutputCustomType.Parameter("biEngineReasons") List<BiEngineReasonResponse> biEngineReasons) {
         this.biEngineMode = biEngineMode;
         this.biEngineReasons = biEngineReasons;
     }

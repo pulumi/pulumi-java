@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
      */
     private final GooglePrivacyDlpV2ResultResponse result;
 
-    @OutputCustomType.Constructor({"requestedOptions","result"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectDataSourceDetailsResponse(
-        GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
-        GooglePrivacyDlpV2ResultResponse result) {
+        @OutputCustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
+        @OutputCustomType.Parameter("result") GooglePrivacyDlpV2ResultResponse result) {
         this.requestedOptions = requestedOptions;
         this.result = result;
     }

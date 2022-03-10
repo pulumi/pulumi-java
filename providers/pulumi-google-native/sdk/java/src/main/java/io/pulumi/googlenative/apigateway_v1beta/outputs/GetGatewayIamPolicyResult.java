@@ -34,12 +34,12 @@ public final class GetGatewayIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetGatewayIamPolicyResult(
-        List<ApigatewayAuditConfigResponse> auditConfigs,
-        List<ApigatewayBindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<ApigatewayAuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<ApigatewayBindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

@@ -30,12 +30,12 @@ public final class JobStatusResponse {
      */
     private final String substate;
 
-    @OutputCustomType.Constructor({"details","state","stateStartTime","substate"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        String details,
-        String state,
-        String stateStartTime,
-        String substate) {
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateStartTime") String stateStartTime,
+        @OutputCustomType.Parameter("substate") String substate) {
         this.details = details;
         this.state = state;
         this.stateStartTime = stateStartTime;

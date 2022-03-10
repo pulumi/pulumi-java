@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
      */
     private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
 
-    @OutputCustomType.Constructor({"integratedGradientsAttribution","sampledShapleyAttribution","xraiAttribution"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ExplanationConfigResponse(
-        GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
-        GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
-        GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
+        @OutputCustomType.Parameter("integratedGradientsAttribution") GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
+        @OutputCustomType.Parameter("sampledShapleyAttribution") GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
+        @OutputCustomType.Parameter("xraiAttribution") GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
         this.integratedGradientsAttribution = integratedGradientsAttribution;
         this.sampledShapleyAttribution = sampledShapleyAttribution;
         this.xraiAttribution = xraiAttribution;

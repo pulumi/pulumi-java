@@ -20,10 +20,10 @@ public final class IngressSourceResponse {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor({"accessLevel","resource"})
+    @OutputCustomType.Constructor
     private IngressSourceResponse(
-        String accessLevel,
-        String resource) {
+        @OutputCustomType.Parameter("accessLevel") String accessLevel,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }

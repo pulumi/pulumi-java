@@ -31,12 +31,12 @@ public final class AzureBlobStorageDataResponse {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
+    @OutputCustomType.Constructor
     private AzureBlobStorageDataResponse(
-        AzureCredentialsResponse azureCredentials,
-        String container,
-        String path,
-        String storageAccount) {
+        @OutputCustomType.Parameter("azureCredentials") AzureCredentialsResponse azureCredentials,
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;

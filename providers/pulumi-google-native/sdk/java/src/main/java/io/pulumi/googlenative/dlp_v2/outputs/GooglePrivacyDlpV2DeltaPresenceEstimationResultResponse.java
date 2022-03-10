@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse {
      */
     private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
-    @OutputCustomType.Constructor({"deltaPresenceEstimationHistogram"})
-    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(@OutputCustomType.Parameter("deltaPresenceEstimationHistogram") List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
         this.deltaPresenceEstimationHistogram = deltaPresenceEstimationHistogram;
     }
 

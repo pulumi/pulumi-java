@@ -28,11 +28,11 @@ public final class GetQueueIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetQueueIamPolicyResult(
-        List<BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.version = version;

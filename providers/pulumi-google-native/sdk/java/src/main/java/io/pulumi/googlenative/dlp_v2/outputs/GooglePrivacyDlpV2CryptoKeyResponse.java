@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
      */
     private final GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped;
 
-    @OutputCustomType.Constructor({"kmsWrapped","$transient","unwrapped"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CryptoKeyResponse(
-        GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
-        GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
-        GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
+        @OutputCustomType.Parameter("kmsWrapped") GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse kmsWrapped,
+        @OutputCustomType.Parameter("transient") GooglePrivacyDlpV2TransientCryptoKeyResponse $transient,
+        @OutputCustomType.Parameter("unwrapped") GooglePrivacyDlpV2UnwrappedCryptoKeyResponse unwrapped) {
         this.kmsWrapped = kmsWrapped;
         this.$transient = $transient;
         this.unwrapped = unwrapped;

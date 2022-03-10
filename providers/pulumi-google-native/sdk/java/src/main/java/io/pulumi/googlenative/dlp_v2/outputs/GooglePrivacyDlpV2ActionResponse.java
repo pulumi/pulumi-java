@@ -45,14 +45,14 @@ public final class GooglePrivacyDlpV2ActionResponse {
      */
     private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
-    @OutputCustomType.Constructor({"jobNotificationEmails","pubSub","publishFindingsToCloudDataCatalog","publishSummaryToCscc","publishToStackdriver","saveFindings"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ActionResponse(
-        GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails,
-        GooglePrivacyDlpV2PublishToPubSubResponse pubSub,
-        GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog,
-        GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
-        GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
-        GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
+        @OutputCustomType.Parameter("jobNotificationEmails") GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails,
+        @OutputCustomType.Parameter("pubSub") GooglePrivacyDlpV2PublishToPubSubResponse pubSub,
+        @OutputCustomType.Parameter("publishFindingsToCloudDataCatalog") GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog,
+        @OutputCustomType.Parameter("publishSummaryToCscc") GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
+        @OutputCustomType.Parameter("publishToStackdriver") GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
+        @OutputCustomType.Parameter("saveFindings") GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
         this.jobNotificationEmails = jobNotificationEmails;
         this.pubSub = pubSub;
         this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;

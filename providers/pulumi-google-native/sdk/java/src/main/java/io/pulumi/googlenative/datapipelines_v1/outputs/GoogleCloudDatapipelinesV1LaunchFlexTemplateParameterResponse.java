@@ -48,15 +48,15 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor({"containerSpecGcsPath","environment","jobName","launchOptions","parameters","transformNameMappings","update"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(
-        String containerSpecGcsPath,
-        GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> launchOptions,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMappings,
-        Boolean update) {
+        @OutputCustomType.Parameter("containerSpecGcsPath") String containerSpecGcsPath,
+        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("launchOptions") Map<String,String> launchOptions,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
+        @OutputCustomType.Parameter("transformNameMappings") Map<String,String> transformNameMappings,
+        @OutputCustomType.Parameter("update") Boolean update) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         this.environment = environment;
         this.jobName = jobName;

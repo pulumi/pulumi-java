@@ -38,13 +38,13 @@ public final class GetApiResult {
      */
     private final List<String> revision;
 
-    @OutputCustomType.Constructor({"labels","latestRevisionId","metaData","name","revision"})
+    @OutputCustomType.Constructor
     private GetApiResult(
-        Map<String,String> labels,
-        String latestRevisionId,
-        GoogleCloudApigeeV1EntityMetadataResponse metaData,
-        String name,
-        List<String> revision) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("latestRevisionId") String latestRevisionId,
+        @OutputCustomType.Parameter("metaData") GoogleCloudApigeeV1EntityMetadataResponse metaData,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revision") List<String> revision) {
         this.labels = labels;
         this.latestRevisionId = latestRevisionId;
         this.metaData = metaData;

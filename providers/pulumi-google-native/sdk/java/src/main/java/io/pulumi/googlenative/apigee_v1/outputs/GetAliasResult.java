@@ -26,11 +26,11 @@ public final class GetAliasResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alias","certsInfo","type"})
+    @OutputCustomType.Constructor
     private GetAliasResult(
-        String alias,
-        GoogleCloudApigeeV1CertificateResponse certsInfo,
-        String type) {
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("certsInfo") GoogleCloudApigeeV1CertificateResponse certsInfo,
+        @OutputCustomType.Parameter("type") String type) {
         this.alias = alias;
         this.certsInfo = certsInfo;
         this.type = type;

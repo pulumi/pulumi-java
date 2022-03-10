@@ -32,12 +32,12 @@ public final class GetSecretResult {
      */
     private final ReplicationResponse replication;
 
-    @OutputCustomType.Constructor({"createTime","labels","name","replication"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        ReplicationResponse replication) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("replication") ReplicationResponse replication) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;

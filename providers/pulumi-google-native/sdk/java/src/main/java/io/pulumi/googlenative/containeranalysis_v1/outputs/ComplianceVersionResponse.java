@@ -20,10 +20,10 @@ public final class ComplianceVersionResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"cpeUri","version"})
+    @OutputCustomType.Constructor
     private ComplianceVersionResponse(
-        String cpeUri,
-        String version) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("version") String version) {
         this.cpeUri = cpeUri;
         this.version = version;
     }

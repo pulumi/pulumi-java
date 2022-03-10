@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor({"outputSchema","table"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2OutputStorageConfigResponse(
-        String outputSchema,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @OutputCustomType.Parameter("outputSchema") String outputSchema,
+        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.outputSchema = outputSchema;
         this.table = table;
     }

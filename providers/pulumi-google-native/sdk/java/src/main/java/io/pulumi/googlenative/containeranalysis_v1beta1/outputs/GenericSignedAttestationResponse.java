@@ -27,11 +27,11 @@ public final class GenericSignedAttestationResponse {
      */
     private final List<SignatureResponse> signatures;
 
-    @OutputCustomType.Constructor({"contentType","serializedPayload","signatures"})
+    @OutputCustomType.Constructor
     private GenericSignedAttestationResponse(
-        String contentType,
-        String serializedPayload,
-        List<SignatureResponse> signatures) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
+        @OutputCustomType.Parameter("signatures") List<SignatureResponse> signatures) {
         this.contentType = contentType;
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;

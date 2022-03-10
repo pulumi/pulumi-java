@@ -21,10 +21,10 @@ public final class InlineSecretResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"envMap","kmsKeyName"})
+    @OutputCustomType.Constructor
     private InlineSecretResponse(
-        Map<String,String> envMap,
-        String kmsKeyName) {
+        @OutputCustomType.Parameter("envMap") Map<String,String> envMap,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.envMap = envMap;
         this.kmsKeyName = kmsKeyName;
     }

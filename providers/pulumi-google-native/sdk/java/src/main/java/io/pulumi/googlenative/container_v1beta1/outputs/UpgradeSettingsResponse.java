@@ -20,10 +20,10 @@ public final class UpgradeSettingsResponse {
      */
     private final Integer maxUnavailable;
 
-    @OutputCustomType.Constructor({"maxSurge","maxUnavailable"})
+    @OutputCustomType.Constructor
     private UpgradeSettingsResponse(
-        Integer maxSurge,
-        Integer maxUnavailable) {
+        @OutputCustomType.Parameter("maxSurge") Integer maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

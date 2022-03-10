@@ -26,11 +26,11 @@ public final class StepResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"kind","name","properties"})
+    @OutputCustomType.Constructor
     private StepResponse(
-        String kind,
-        String name,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.kind = kind;
         this.name = name;
         this.properties = properties;

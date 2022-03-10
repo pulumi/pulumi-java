@@ -34,12 +34,12 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
      */
     private final GoogleCloudApigeeV1QuotaResponse quota;
 
-    @OutputCustomType.Constructor({"apiSource","attributes","operations","quota"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1OperationConfigResponse(
-        String apiSource,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        List<GoogleCloudApigeeV1OperationResponse> operations,
-        GoogleCloudApigeeV1QuotaResponse quota) {
+        @OutputCustomType.Parameter("apiSource") String apiSource,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("operations") List<GoogleCloudApigeeV1OperationResponse> operations,
+        @OutputCustomType.Parameter("quota") GoogleCloudApigeeV1QuotaResponse quota) {
         this.apiSource = apiSource;
         this.attributes = attributes;
         this.operations = operations;

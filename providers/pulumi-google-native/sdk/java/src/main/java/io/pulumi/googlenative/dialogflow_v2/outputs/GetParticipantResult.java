@@ -31,12 +31,12 @@ public final class GetParticipantResult {
      */
     private final String sipRecordingMediaLabel;
 
-    @OutputCustomType.Constructor({"documentsMetadataFilters","name","role","sipRecordingMediaLabel"})
+    @OutputCustomType.Constructor
     private GetParticipantResult(
-        Map<String,String> documentsMetadataFilters,
-        String name,
-        String role,
-        String sipRecordingMediaLabel) {
+        @OutputCustomType.Parameter("documentsMetadataFilters") Map<String,String> documentsMetadataFilters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("sipRecordingMediaLabel") String sipRecordingMediaLabel) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         this.name = name;
         this.role = role;

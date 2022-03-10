@@ -15,8 +15,8 @@ public final class AttestationNoteResponse {
      */
     private final HintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private AttestationNoteResponse(HintResponse hint) {
+    @OutputCustomType.Constructor
+    private AttestationNoteResponse(@OutputCustomType.Parameter("hint") HintResponse hint) {
         this.hint = hint;
     }
 

@@ -16,8 +16,8 @@ public final class CloudAuditLoggingFeatureSpecResponse {
      */
     private final List<String> allowlistedServiceAccounts;
 
-    @OutputCustomType.Constructor({"allowlistedServiceAccounts"})
-    private CloudAuditLoggingFeatureSpecResponse(List<String> allowlistedServiceAccounts) {
+    @OutputCustomType.Constructor
+    private CloudAuditLoggingFeatureSpecResponse(@OutputCustomType.Parameter("allowlistedServiceAccounts") List<String> allowlistedServiceAccounts) {
         this.allowlistedServiceAccounts = allowlistedServiceAccounts;
     }
 

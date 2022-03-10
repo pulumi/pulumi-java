@@ -27,11 +27,11 @@ public final class ServerTlsSettingsResponse {
      */
     private final String tlsMode;
 
-    @OutputCustomType.Constructor({"proxyTlsContext","subjectAltNames","tlsMode"})
+    @OutputCustomType.Constructor
     private ServerTlsSettingsResponse(
-        TlsContextResponse proxyTlsContext,
-        List<String> subjectAltNames,
-        String tlsMode) {
+        @OutputCustomType.Parameter("proxyTlsContext") TlsContextResponse proxyTlsContext,
+        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames,
+        @OutputCustomType.Parameter("tlsMode") String tlsMode) {
         this.proxyTlsContext = proxyTlsContext;
         this.subjectAltNames = subjectAltNames;
         this.tlsMode = tlsMode;

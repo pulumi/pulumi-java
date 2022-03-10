@@ -31,12 +31,12 @@ public final class DiscoveredResponse {
      */
     private final String cpe;
 
-    @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis","cpe"})
+    @OutputCustomType.Constructor
     private DiscoveredResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe) {
+        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
+        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @OutputCustomType.Parameter("cpe") String cpe) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;

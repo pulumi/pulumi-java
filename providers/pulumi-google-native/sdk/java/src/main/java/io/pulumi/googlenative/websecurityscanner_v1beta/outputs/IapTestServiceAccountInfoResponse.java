@@ -15,8 +15,8 @@ public final class IapTestServiceAccountInfoResponse {
      */
     private final String targetAudienceClientId;
 
-    @OutputCustomType.Constructor({"targetAudienceClientId"})
-    private IapTestServiceAccountInfoResponse(String targetAudienceClientId) {
+    @OutputCustomType.Constructor
+    private IapTestServiceAccountInfoResponse(@OutputCustomType.Parameter("targetAudienceClientId") String targetAudienceClientId) {
         this.targetAudienceClientId = targetAudienceClientId;
     }
 

@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(String mode) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

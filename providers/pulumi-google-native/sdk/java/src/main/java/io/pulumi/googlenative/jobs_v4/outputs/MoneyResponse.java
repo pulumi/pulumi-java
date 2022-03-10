@@ -26,11 +26,11 @@ public final class MoneyResponse {
      */
     private final String units;
 
-    @OutputCustomType.Constructor({"currencyCode","nanos","units"})
+    @OutputCustomType.Constructor
     private MoneyResponse(
-        String currencyCode,
-        Integer nanos,
-        String units) {
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("nanos") Integer nanos,
+        @OutputCustomType.Parameter("units") String units) {
         this.currencyCode = currencyCode;
         this.nanos = nanos;
         this.units = units;

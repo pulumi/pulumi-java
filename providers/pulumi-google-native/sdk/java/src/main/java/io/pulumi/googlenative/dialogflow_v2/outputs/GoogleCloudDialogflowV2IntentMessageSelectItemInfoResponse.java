@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor({"key","synonyms"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(
-        String key,
-        List<String> synonyms) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("synonyms") List<String> synonyms) {
         this.key = key;
         this.synonyms = synonyms;
     }

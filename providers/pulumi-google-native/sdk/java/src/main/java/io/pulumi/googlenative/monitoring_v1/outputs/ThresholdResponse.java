@@ -36,13 +36,13 @@ public final class ThresholdResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"color","direction","label","targetAxis","value"})
+    @OutputCustomType.Constructor
     private ThresholdResponse(
-        String color,
-        String direction,
-        String label,
-        String targetAxis,
-        Double value) {
+        @OutputCustomType.Parameter("color") String color,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("targetAxis") String targetAxis,
+        @OutputCustomType.Parameter("value") Double value) {
         this.color = color;
         this.direction = direction;
         this.label = label;

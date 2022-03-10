@@ -38,13 +38,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor({"description","dictionary","displayName","largeCustomDictionary","regex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2StoredInfoTypeConfigResponse(
-        String description,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String displayName,
-        GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
-        GooglePrivacyDlpV2RegexResponse regex) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.description = description;
         this.dictionary = dictionary;
         this.displayName = displayName;

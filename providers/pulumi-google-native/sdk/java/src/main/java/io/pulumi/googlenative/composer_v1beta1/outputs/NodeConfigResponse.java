@@ -69,19 +69,19 @@ public final class NodeConfigResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"diskSizeGb","enableIpMasqAgent","ipAllocationPolicy","location","machineType","maxPodsPerNode","network","oauthScopes","serviceAccount","subnetwork","tags"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        Integer diskSizeGb,
-        Boolean enableIpMasqAgent,
-        IPAllocationPolicyResponse ipAllocationPolicy,
-        String location,
-        String machineType,
-        Integer maxPodsPerNode,
-        String network,
-        List<String> oauthScopes,
-        String serviceAccount,
-        String subnetwork,
-        List<String> tags) {
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
+        @OutputCustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;

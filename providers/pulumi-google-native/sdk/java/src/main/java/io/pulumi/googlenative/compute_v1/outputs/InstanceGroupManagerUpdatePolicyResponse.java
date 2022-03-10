@@ -46,15 +46,15 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"instanceRedistributionType","maxSurge","maxUnavailable","minimalAction","mostDisruptiveAllowedAction","replacementMethod","type"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerUpdatePolicyResponse(
-        String instanceRedistributionType,
-        FixedOrPercentResponse maxSurge,
-        FixedOrPercentResponse maxUnavailable,
-        String minimalAction,
-        String mostDisruptiveAllowedAction,
-        String replacementMethod,
-        String type) {
+        @OutputCustomType.Parameter("instanceRedistributionType") String instanceRedistributionType,
+        @OutputCustomType.Parameter("maxSurge") FixedOrPercentResponse maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @OutputCustomType.Parameter("minimalAction") String minimalAction,
+        @OutputCustomType.Parameter("mostDisruptiveAllowedAction") String mostDisruptiveAllowedAction,
+        @OutputCustomType.Parameter("replacementMethod") String replacementMethod,
+        @OutputCustomType.Parameter("type") String type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;

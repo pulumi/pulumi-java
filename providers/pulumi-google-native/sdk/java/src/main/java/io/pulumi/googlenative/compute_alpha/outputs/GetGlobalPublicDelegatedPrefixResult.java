@@ -78,21 +78,21 @@ public final class GetGlobalPublicDelegatedPrefixResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","ipCidrRange","isLiveMigration","kind","name","parentPrefix","publicDelegatedSubPrefixs","region","selfLink","selfLinkWithId","status"})
+    @OutputCustomType.Constructor
     private GetGlobalPublicDelegatedPrefixResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String ipCidrRange,
-        Boolean isLiveMigration,
-        String kind,
-        String name,
-        String parentPrefix,
-        List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        String status) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("isLiveMigration") Boolean isLiveMigration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentPrefix") String parentPrefix,
+        @OutputCustomType.Parameter("publicDelegatedSubPrefixs") List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

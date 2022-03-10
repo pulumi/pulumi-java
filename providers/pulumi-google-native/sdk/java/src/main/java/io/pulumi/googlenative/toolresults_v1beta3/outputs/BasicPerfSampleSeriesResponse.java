@@ -13,11 +13,11 @@ public final class BasicPerfSampleSeriesResponse {
     private final String perfUnit;
     private final String sampleSeriesLabel;
 
-    @OutputCustomType.Constructor({"perfMetricType","perfUnit","sampleSeriesLabel"})
+    @OutputCustomType.Constructor
     private BasicPerfSampleSeriesResponse(
-        String perfMetricType,
-        String perfUnit,
-        String sampleSeriesLabel) {
+        @OutputCustomType.Parameter("perfMetricType") String perfMetricType,
+        @OutputCustomType.Parameter("perfUnit") String perfUnit,
+        @OutputCustomType.Parameter("sampleSeriesLabel") String sampleSeriesLabel) {
         this.perfMetricType = perfMetricType;
         this.perfUnit = perfUnit;
         this.sampleSeriesLabel = sampleSeriesLabel;

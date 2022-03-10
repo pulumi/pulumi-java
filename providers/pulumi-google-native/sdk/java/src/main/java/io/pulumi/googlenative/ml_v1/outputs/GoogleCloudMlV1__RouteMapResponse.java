@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1__RouteMapResponse {
      */
     private final String predict;
 
-    @OutputCustomType.Constructor({"health","predict"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__RouteMapResponse(
-        String health,
-        String predict) {
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("predict") String predict) {
         this.health = health;
         this.predict = predict;
     }

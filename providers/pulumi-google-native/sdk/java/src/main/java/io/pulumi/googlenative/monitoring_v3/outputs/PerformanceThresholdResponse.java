@@ -27,11 +27,11 @@ public final class PerformanceThresholdResponse {
      */
     private final Double threshold;
 
-    @OutputCustomType.Constructor({"basicSliPerformance","performance","threshold"})
+    @OutputCustomType.Constructor
     private PerformanceThresholdResponse(
-        BasicSliResponse basicSliPerformance,
-        RequestBasedSliResponse performance,
-        Double threshold) {
+        @OutputCustomType.Parameter("basicSliPerformance") BasicSliResponse basicSliPerformance,
+        @OutputCustomType.Parameter("performance") RequestBasedSliResponse performance,
+        @OutputCustomType.Parameter("threshold") Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;

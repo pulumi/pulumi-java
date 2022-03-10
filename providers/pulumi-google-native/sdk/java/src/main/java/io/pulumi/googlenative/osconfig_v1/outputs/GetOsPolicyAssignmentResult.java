@@ -80,21 +80,21 @@ public final class GetOsPolicyAssignmentResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"baseline","deleted","description","etag","instanceFilter","name","osPolicies","reconciling","revisionCreateTime","revisionId","rollout","rolloutState","uid"})
+    @OutputCustomType.Constructor
     private GetOsPolicyAssignmentResult(
-        Boolean baseline,
-        Boolean deleted,
-        String description,
-        String etag,
-        OSPolicyAssignmentInstanceFilterResponse instanceFilter,
-        String name,
-        List<OSPolicyResponse> osPolicies,
-        Boolean reconciling,
-        String revisionCreateTime,
-        String revisionId,
-        OSPolicyAssignmentRolloutResponse rollout,
-        String rolloutState,
-        String uid) {
+        @OutputCustomType.Parameter("baseline") Boolean baseline,
+        @OutputCustomType.Parameter("deleted") Boolean deleted,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("instanceFilter") OSPolicyAssignmentInstanceFilterResponse instanceFilter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osPolicies") List<OSPolicyResponse> osPolicies,
+        @OutputCustomType.Parameter("reconciling") Boolean reconciling,
+        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("rollout") OSPolicyAssignmentRolloutResponse rollout,
+        @OutputCustomType.Parameter("rolloutState") String rolloutState,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.baseline = baseline;
         this.deleted = deleted;
         this.description = description;

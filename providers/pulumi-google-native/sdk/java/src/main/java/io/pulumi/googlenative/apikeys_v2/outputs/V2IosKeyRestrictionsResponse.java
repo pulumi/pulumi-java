@@ -16,8 +16,8 @@ public final class V2IosKeyRestrictionsResponse {
      */
     private final List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor({"allowedBundleIds"})
-    private V2IosKeyRestrictionsResponse(List<String> allowedBundleIds) {
+    @OutputCustomType.Constructor
+    private V2IosKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
         this.allowedBundleIds = allowedBundleIds;
     }
 

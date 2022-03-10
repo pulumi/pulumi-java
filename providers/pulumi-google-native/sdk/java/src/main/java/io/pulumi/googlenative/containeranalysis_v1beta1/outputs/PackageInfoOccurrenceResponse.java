@@ -56,17 +56,17 @@ public final class PackageInfoOccurrenceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"comment","filename","homePage","licenseConcluded","packageType","sourceInfo","summaryDescription","title","version"})
+    @OutputCustomType.Constructor
     private PackageInfoOccurrenceResponse(
-        String comment,
-        String filename,
-        String homePage,
-        LicenseResponse licenseConcluded,
-        String packageType,
-        String sourceInfo,
-        String summaryDescription,
-        String title,
-        String version) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("filename") String filename,
+        @OutputCustomType.Parameter("homePage") String homePage,
+        @OutputCustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("sourceInfo") String sourceInfo,
+        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("version") String version) {
         this.comment = comment;
         this.filename = filename;
         this.homePage = homePage;

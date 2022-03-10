@@ -25,11 +25,11 @@ public final class PrivatePoolResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor({"artifactStorage","serviceAccount","workerPool"})
+    @OutputCustomType.Constructor
     private PrivatePoolResponse(
-        String artifactStorage,
-        String serviceAccount,
-        String workerPool) {
+        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("workerPool") String workerPool) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
         this.workerPool = workerPool;

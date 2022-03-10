@@ -37,13 +37,13 @@ public final class OSPolicyResourceExecResourceExecResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"args","file","interpreter","outputFilePath","script"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceExecResourceExecResponse(
-        List<String> args,
-        OSPolicyResourceFileResponse file,
-        String interpreter,
-        String outputFilePath,
-        String script) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("outputFilePath") String outputFilePath,
+        @OutputCustomType.Parameter("script") String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;

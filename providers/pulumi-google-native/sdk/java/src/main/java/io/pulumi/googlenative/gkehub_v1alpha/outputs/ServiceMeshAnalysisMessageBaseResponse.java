@@ -26,11 +26,11 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
      */
     private final ServiceMeshTypeResponse type;
 
-    @OutputCustomType.Constructor({"documentationUrl","level","type"})
+    @OutputCustomType.Constructor
     private ServiceMeshAnalysisMessageBaseResponse(
-        String documentationUrl,
-        String level,
-        ServiceMeshTypeResponse type) {
+        @OutputCustomType.Parameter("documentationUrl") String documentationUrl,
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("type") ServiceMeshTypeResponse type) {
         this.documentationUrl = documentationUrl;
         this.level = level;
         this.type = type;

@@ -26,11 +26,11 @@ public final class GSuitePrincipalResponse {
      */
     private final String gsuiteUserEmail;
 
-    @OutputCustomType.Constructor({"gsuiteDomain","gsuiteGroupEmail","gsuiteUserEmail"})
+    @OutputCustomType.Constructor
     private GSuitePrincipalResponse(
-        Boolean gsuiteDomain,
-        String gsuiteGroupEmail,
-        String gsuiteUserEmail) {
+        @OutputCustomType.Parameter("gsuiteDomain") Boolean gsuiteDomain,
+        @OutputCustomType.Parameter("gsuiteGroupEmail") String gsuiteGroupEmail,
+        @OutputCustomType.Parameter("gsuiteUserEmail") String gsuiteUserEmail) {
         this.gsuiteDomain = gsuiteDomain;
         this.gsuiteGroupEmail = gsuiteGroupEmail;
         this.gsuiteUserEmail = gsuiteUserEmail;

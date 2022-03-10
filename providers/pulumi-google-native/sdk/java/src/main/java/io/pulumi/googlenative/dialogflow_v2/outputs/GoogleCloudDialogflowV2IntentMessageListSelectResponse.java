@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"items","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageListSelectResponse(
-        List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.items = items;
         this.subtitle = subtitle;
         this.title = title;

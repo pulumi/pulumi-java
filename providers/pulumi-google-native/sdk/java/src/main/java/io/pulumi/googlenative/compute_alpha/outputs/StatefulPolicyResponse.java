@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class StatefulPolicyResponse {
     private final StatefulPolicyPreservedStateResponse preservedState;
 
-    @OutputCustomType.Constructor({"preservedState"})
-    private StatefulPolicyResponse(StatefulPolicyPreservedStateResponse preservedState) {
+    @OutputCustomType.Constructor
+    private StatefulPolicyResponse(@OutputCustomType.Parameter("preservedState") StatefulPolicyPreservedStateResponse preservedState) {
         this.preservedState = preservedState;
     }
 

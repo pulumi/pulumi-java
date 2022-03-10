@@ -64,18 +64,18 @@ public final class GetUtilizationReportResult {
      */
     private final List<VmUtilizationInfoResponse> vms;
 
-    @OutputCustomType.Constructor({"createTime","displayName","error","frameEndTime","name","state","stateTime","timeFrame","vmCount","vms"})
+    @OutputCustomType.Constructor
     private GetUtilizationReportResult(
-        String createTime,
-        String displayName,
-        StatusResponse error,
-        String frameEndTime,
-        String name,
-        String state,
-        String stateTime,
-        String timeFrame,
-        Integer vmCount,
-        List<VmUtilizationInfoResponse> vms) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("frameEndTime") String frameEndTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateTime") String stateTime,
+        @OutputCustomType.Parameter("timeFrame") String timeFrame,
+        @OutputCustomType.Parameter("vmCount") Integer vmCount,
+        @OutputCustomType.Parameter("vms") List<VmUtilizationInfoResponse> vms) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.error = error;

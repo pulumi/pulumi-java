@@ -20,10 +20,10 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
      */
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"interconnectAttachment","ipAddress"})
+    @OutputCustomType.Constructor
     private VpnGatewayVpnGatewayInterfaceResponse(
-        String interconnectAttachment,
-        String ipAddress) {
+        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;
     }

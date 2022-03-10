@@ -15,8 +15,8 @@ public final class I18nConfigResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor({"root"})
-    private I18nConfigResponse(String root) {
+    @OutputCustomType.Constructor
+    private I18nConfigResponse(@OutputCustomType.Parameter("root") String root) {
         this.root = root;
     }
 

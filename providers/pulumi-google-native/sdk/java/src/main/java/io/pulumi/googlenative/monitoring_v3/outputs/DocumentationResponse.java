@@ -20,10 +20,10 @@ public final class DocumentationResponse {
      */
     private final String mimeType;
 
-    @OutputCustomType.Constructor({"content","mimeType"})
+    @OutputCustomType.Constructor
     private DocumentationResponse(
-        String content,
-        String mimeType) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("mimeType") String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }

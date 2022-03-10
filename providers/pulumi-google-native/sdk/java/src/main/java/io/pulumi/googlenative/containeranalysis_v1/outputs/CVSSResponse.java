@@ -31,20 +31,20 @@ public final class CVSSResponse {
     private final String scope;
     private final String userInteraction;
 
-    @OutputCustomType.Constructor({"attackComplexity","attackVector","authentication","availabilityImpact","baseScore","confidentialityImpact","exploitabilityScore","impactScore","integrityImpact","privilegesRequired","scope","userInteraction"})
+    @OutputCustomType.Constructor
     private CVSSResponse(
-        String attackComplexity,
-        String attackVector,
-        String authentication,
-        String availabilityImpact,
-        Double baseScore,
-        String confidentialityImpact,
-        Double exploitabilityScore,
-        Double impactScore,
-        String integrityImpact,
-        String privilegesRequired,
-        String scope,
-        String userInteraction) {
+        @OutputCustomType.Parameter("attackComplexity") String attackComplexity,
+        @OutputCustomType.Parameter("attackVector") String attackVector,
+        @OutputCustomType.Parameter("authentication") String authentication,
+        @OutputCustomType.Parameter("availabilityImpact") String availabilityImpact,
+        @OutputCustomType.Parameter("baseScore") Double baseScore,
+        @OutputCustomType.Parameter("confidentialityImpact") String confidentialityImpact,
+        @OutputCustomType.Parameter("exploitabilityScore") Double exploitabilityScore,
+        @OutputCustomType.Parameter("impactScore") Double impactScore,
+        @OutputCustomType.Parameter("integrityImpact") String integrityImpact,
+        @OutputCustomType.Parameter("privilegesRequired") String privilegesRequired,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("userInteraction") String userInteraction) {
         this.attackComplexity = attackComplexity;
         this.attackVector = attackVector;
         this.authentication = authentication;

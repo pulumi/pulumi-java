@@ -57,17 +57,17 @@ public final class EndpointResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"cloudFunction","cloudSqlInstance","gkeMasterCluster","instance","ipAddress","network","networkType","port","project"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        CloudFunctionEndpointResponse cloudFunction,
-        String cloudSqlInstance,
-        String gkeMasterCluster,
-        String instance,
-        String ipAddress,
-        String network,
-        String networkType,
-        Integer port,
-        String project) {
+        @OutputCustomType.Parameter("cloudFunction") CloudFunctionEndpointResponse cloudFunction,
+        @OutputCustomType.Parameter("cloudSqlInstance") String cloudSqlInstance,
+        @OutputCustomType.Parameter("gkeMasterCluster") String gkeMasterCluster,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkType") String networkType,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("project") String project) {
         this.cloudFunction = cloudFunction;
         this.cloudSqlInstance = cloudSqlInstance;
         this.gkeMasterCluster = gkeMasterCluster;

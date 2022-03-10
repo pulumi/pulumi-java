@@ -25,11 +25,11 @@ public final class StreamingbufferResponse {
      */
     private final String oldestEntryTime;
 
-    @OutputCustomType.Constructor({"estimatedBytes","estimatedRows","oldestEntryTime"})
+    @OutputCustomType.Constructor
     private StreamingbufferResponse(
-        String estimatedBytes,
-        String estimatedRows,
-        String oldestEntryTime) {
+        @OutputCustomType.Parameter("estimatedBytes") String estimatedBytes,
+        @OutputCustomType.Parameter("estimatedRows") String estimatedRows,
+        @OutputCustomType.Parameter("oldestEntryTime") String oldestEntryTime) {
         this.estimatedBytes = estimatedBytes;
         this.estimatedRows = estimatedRows;
         this.oldestEntryTime = oldestEntryTime;

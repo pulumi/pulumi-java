@@ -66,19 +66,19 @@ public final class SpriteSheetResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"columnCount","endTimeOffset","filePrefix","format","interval","quality","rowCount","spriteHeightPixels","spriteWidthPixels","startTimeOffset","totalCount"})
+    @OutputCustomType.Constructor
     private SpriteSheetResponse(
-        Integer columnCount,
-        String endTimeOffset,
-        String filePrefix,
-        String format,
-        String interval,
-        Integer quality,
-        Integer rowCount,
-        Integer spriteHeightPixels,
-        Integer spriteWidthPixels,
-        String startTimeOffset,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("columnCount") Integer columnCount,
+        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @OutputCustomType.Parameter("filePrefix") String filePrefix,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("quality") Integer quality,
+        @OutputCustomType.Parameter("rowCount") Integer rowCount,
+        @OutputCustomType.Parameter("spriteHeightPixels") Integer spriteHeightPixels,
+        @OutputCustomType.Parameter("spriteWidthPixels") Integer spriteWidthPixels,
+        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.columnCount = columnCount;
         this.endTimeOffset = endTimeOffset;
         this.filePrefix = filePrefix;

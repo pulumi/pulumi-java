@@ -27,11 +27,11 @@ public final class IngressFromResponse {
      */
     private final List<IngressSourceResponse> sources;
 
-    @OutputCustomType.Constructor({"identities","identityType","sources"})
+    @OutputCustomType.Constructor
     private IngressFromResponse(
-        List<String> identities,
-        String identityType,
-        List<IngressSourceResponse> sources) {
+        @OutputCustomType.Parameter("identities") List<String> identities,
+        @OutputCustomType.Parameter("identityType") String identityType,
+        @OutputCustomType.Parameter("sources") List<IngressSourceResponse> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;

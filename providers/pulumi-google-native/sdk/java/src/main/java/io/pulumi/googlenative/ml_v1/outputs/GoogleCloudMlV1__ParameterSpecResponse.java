@@ -47,15 +47,15 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categoricalValues","discreteValues","maxValue","minValue","parameterName","scaleType","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ParameterSpecResponse(
-        List<String> categoricalValues,
-        List<Double> discreteValues,
-        Double maxValue,
-        Double minValue,
-        String parameterName,
-        String scaleType,
-        String type) {
+        @OutputCustomType.Parameter("categoricalValues") List<String> categoricalValues,
+        @OutputCustomType.Parameter("discreteValues") List<Double> discreteValues,
+        @OutputCustomType.Parameter("maxValue") Double maxValue,
+        @OutputCustomType.Parameter("minValue") Double minValue,
+        @OutputCustomType.Parameter("parameterName") String parameterName,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("type") String type) {
         this.categoricalValues = categoricalValues;
         this.discreteValues = discreteValues;
         this.maxValue = maxValue;

@@ -21,10 +21,10 @@ public final class SpecificationResponse {
      */
     private final IosTestResponse iosTest;
 
-    @OutputCustomType.Constructor({"androidTest","iosTest"})
+    @OutputCustomType.Constructor
     private SpecificationResponse(
-        AndroidTestResponse androidTest,
-        IosTestResponse iosTest) {
+        @OutputCustomType.Parameter("androidTest") AndroidTestResponse androidTest,
+        @OutputCustomType.Parameter("iosTest") IosTestResponse iosTest) {
         this.androidTest = androidTest;
         this.iosTest = iosTest;
     }

@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor({"quasiIds","relativeFrequency","table"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2AuxiliaryTableResponse(
-        List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds,
-        GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds,
+        @OutputCustomType.Parameter("relativeFrequency") GooglePrivacyDlpV2FieldIdResponse relativeFrequency,
+        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.quasiIds = quasiIds;
         this.relativeFrequency = relativeFrequency;
         this.table = table;

@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
      */
     private final String partToExtract;
 
-    @OutputCustomType.Constructor({"partToExtract"})
-    private GooglePrivacyDlpV2TimePartConfigResponse(String partToExtract) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2TimePartConfigResponse(@OutputCustomType.Parameter("partToExtract") String partToExtract) {
         this.partToExtract = partToExtract;
     }
 

@@ -83,22 +83,22 @@ public final class CloudSqlSettingsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"activationPolicy","autoStorageIncrease","dataDiskSizeGb","dataDiskType","databaseFlags","databaseVersion","ipConfig","rootPassword","rootPasswordSet","sourceId","storageAutoResizeLimit","tier","userLabels","zone"})
+    @OutputCustomType.Constructor
     private CloudSqlSettingsResponse(
-        String activationPolicy,
-        Boolean autoStorageIncrease,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        Map<String,String> databaseFlags,
-        String databaseVersion,
-        SqlIpConfigResponse ipConfig,
-        String rootPassword,
-        Boolean rootPasswordSet,
-        String sourceId,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels,
-        String zone) {
+        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
+        @OutputCustomType.Parameter("autoStorageIncrease") Boolean autoStorageIncrease,
+        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
+        @OutputCustomType.Parameter("databaseFlags") Map<String,String> databaseFlags,
+        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
+        @OutputCustomType.Parameter("ipConfig") SqlIpConfigResponse ipConfig,
+        @OutputCustomType.Parameter("rootPassword") String rootPassword,
+        @OutputCustomType.Parameter("rootPasswordSet") Boolean rootPasswordSet,
+        @OutputCustomType.Parameter("sourceId") String sourceId,
+        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.activationPolicy = activationPolicy;
         this.autoStorageIncrease = autoStorageIncrease;
         this.dataDiskSizeGb = dataDiskSizeGb;

@@ -21,10 +21,10 @@ public final class VertexAIParametersResponse {
      */
     private final String network;
 
-    @OutputCustomType.Constructor({"env","network"})
+    @OutputCustomType.Constructor
     private VertexAIParametersResponse(
-        Map<String,String> env,
-        String network) {
+        @OutputCustomType.Parameter("env") Map<String,String> env,
+        @OutputCustomType.Parameter("network") String network) {
         this.env = env;
         this.network = network;
     }

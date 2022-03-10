@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CloudStoragePathResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private GooglePrivacyDlpV2CloudStoragePathResponse(String path) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CloudStoragePathResponse(@OutputCustomType.Parameter("path") String path) {
         this.path = path;
     }
 

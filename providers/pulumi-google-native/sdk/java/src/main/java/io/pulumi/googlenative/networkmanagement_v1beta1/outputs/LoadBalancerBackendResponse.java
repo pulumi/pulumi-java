@@ -36,13 +36,13 @@ public final class LoadBalancerBackendResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","healthCheckAllowingFirewallRules","healthCheckBlockingFirewallRules","healthCheckFirewallState","uri"})
+    @OutputCustomType.Constructor
     private LoadBalancerBackendResponse(
-        String displayName,
-        List<String> healthCheckAllowingFirewallRules,
-        List<String> healthCheckBlockingFirewallRules,
-        String healthCheckFirewallState,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("healthCheckAllowingFirewallRules") List<String> healthCheckAllowingFirewallRules,
+        @OutputCustomType.Parameter("healthCheckBlockingFirewallRules") List<String> healthCheckBlockingFirewallRules,
+        @OutputCustomType.Parameter("healthCheckFirewallState") String healthCheckFirewallState,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
         this.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;

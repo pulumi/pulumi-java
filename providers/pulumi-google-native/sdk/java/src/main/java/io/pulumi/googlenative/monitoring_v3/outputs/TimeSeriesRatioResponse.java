@@ -25,11 +25,11 @@ public final class TimeSeriesRatioResponse {
      */
     private final String totalServiceFilter;
 
-    @OutputCustomType.Constructor({"badServiceFilter","goodServiceFilter","totalServiceFilter"})
+    @OutputCustomType.Constructor
     private TimeSeriesRatioResponse(
-        String badServiceFilter,
-        String goodServiceFilter,
-        String totalServiceFilter) {
+        @OutputCustomType.Parameter("badServiceFilter") String badServiceFilter,
+        @OutputCustomType.Parameter("goodServiceFilter") String goodServiceFilter,
+        @OutputCustomType.Parameter("totalServiceFilter") String totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;

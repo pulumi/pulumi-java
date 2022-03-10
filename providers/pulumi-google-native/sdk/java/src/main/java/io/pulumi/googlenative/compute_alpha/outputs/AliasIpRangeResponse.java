@@ -20,10 +20,10 @@ public final class AliasIpRangeResponse {
      */
     private final String subnetworkRangeName;
 
-    @OutputCustomType.Constructor({"ipCidrRange","subnetworkRangeName"})
+    @OutputCustomType.Constructor
     private AliasIpRangeResponse(
-        String ipCidrRange,
-        String subnetworkRangeName) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("subnetworkRangeName") String subnetworkRangeName) {
         this.ipCidrRange = ipCidrRange;
         this.subnetworkRangeName = subnetworkRangeName;
     }

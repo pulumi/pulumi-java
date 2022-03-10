@@ -69,19 +69,19 @@ public final class FirewallPolicyRuleResponse {
      */
     private final List<String> targetServiceAccounts;
 
-    @OutputCustomType.Constructor({"action","description","direction","disabled","enableLogging","kind","match","priority","ruleTupleCount","targetResources","targetServiceAccounts"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleResponse(
-        String action,
-        String description,
-        String direction,
-        Boolean disabled,
-        Boolean enableLogging,
-        String kind,
-        FirewallPolicyRuleMatcherResponse match,
-        Integer priority,
-        Integer ruleTupleCount,
-        List<String> targetResources,
-        List<String> targetServiceAccounts) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("targetResources") List<String> targetResources,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
         this.direction = direction;

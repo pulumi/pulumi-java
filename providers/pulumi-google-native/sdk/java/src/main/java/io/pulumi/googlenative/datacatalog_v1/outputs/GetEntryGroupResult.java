@@ -31,12 +31,12 @@ public final class GetEntryGroupResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dataCatalogTimestamps","description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetEntryGroupResult(
-        GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps,
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("dataCatalogTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.dataCatalogTimestamps = dataCatalogTimestamps;
         this.description = description;
         this.displayName = displayName;

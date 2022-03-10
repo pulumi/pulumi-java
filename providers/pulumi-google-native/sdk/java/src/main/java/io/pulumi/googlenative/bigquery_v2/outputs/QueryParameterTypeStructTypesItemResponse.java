@@ -26,11 +26,11 @@ public final class QueryParameterTypeStructTypesItemResponse {
      */
     private final QueryParameterTypeResponse type;
 
-    @OutputCustomType.Constructor({"description","name","type"})
+    @OutputCustomType.Constructor
     private QueryParameterTypeStructTypesItemResponse(
-        String description,
-        String name,
-        QueryParameterTypeResponse type) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") QueryParameterTypeResponse type) {
         this.description = description;
         this.name = name;
         this.type = type;

@@ -21,10 +21,10 @@ public final class ShardingOptionResponse {
      */
     private final UniformShardingResponse uniformSharding;
 
-    @OutputCustomType.Constructor({"manualSharding","uniformSharding"})
+    @OutputCustomType.Constructor
     private ShardingOptionResponse(
-        ManualShardingResponse manualSharding,
-        UniformShardingResponse uniformSharding) {
+        @OutputCustomType.Parameter("manualSharding") ManualShardingResponse manualSharding,
+        @OutputCustomType.Parameter("uniformSharding") UniformShardingResponse uniformSharding) {
         this.manualSharding = manualSharding;
         this.uniformSharding = uniformSharding;
     }

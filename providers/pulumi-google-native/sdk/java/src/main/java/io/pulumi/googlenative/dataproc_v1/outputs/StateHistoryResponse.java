@@ -25,11 +25,11 @@ public final class StateHistoryResponse {
      */
     private final String stateStartTime;
 
-    @OutputCustomType.Constructor({"state","stateMessage","stateStartTime"})
+    @OutputCustomType.Constructor
     private StateHistoryResponse(
-        String state,
-        String stateMessage,
-        String stateStartTime) {
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateStartTime") String stateStartTime) {
         this.state = state;
         this.stateMessage = stateMessage;
         this.stateStartTime = stateStartTime;

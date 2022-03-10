@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String updateId;
 
-    @OutputCustomType.Constructor({"revision","updateId"})
+    @OutputCustomType.Constructor
     private IdentityResponse(
-        Integer revision,
-        String updateId) {
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("updateId") String updateId) {
         this.revision = revision;
         this.updateId = updateId;
     }

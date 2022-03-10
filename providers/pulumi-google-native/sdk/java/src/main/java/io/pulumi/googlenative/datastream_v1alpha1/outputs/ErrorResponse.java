@@ -36,13 +36,13 @@ public final class ErrorResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"details","errorTime","errorUuid","message","reason"})
+    @OutputCustomType.Constructor
     private ErrorResponse(
-        Map<String,String> details,
-        String errorTime,
-        String errorUuid,
-        String message,
-        String reason) {
+        @OutputCustomType.Parameter("details") Map<String,String> details,
+        @OutputCustomType.Parameter("errorTime") String errorTime,
+        @OutputCustomType.Parameter("errorUuid") String errorUuid,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.details = details;
         this.errorTime = errorTime;
         this.errorUuid = errorUuid;

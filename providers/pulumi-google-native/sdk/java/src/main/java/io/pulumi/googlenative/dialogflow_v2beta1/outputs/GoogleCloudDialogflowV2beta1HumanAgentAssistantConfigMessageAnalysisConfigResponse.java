@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      */
     private final Boolean enableSentimentAnalysis;
 
-    @OutputCustomType.Constructor({"enableEntityExtraction","enableSentimentAnalysis"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse(
-        Boolean enableEntityExtraction,
-        Boolean enableSentimentAnalysis) {
+        @OutputCustomType.Parameter("enableEntityExtraction") Boolean enableEntityExtraction,
+        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis) {
         this.enableEntityExtraction = enableEntityExtraction;
         this.enableSentimentAnalysis = enableSentimentAnalysis;
     }

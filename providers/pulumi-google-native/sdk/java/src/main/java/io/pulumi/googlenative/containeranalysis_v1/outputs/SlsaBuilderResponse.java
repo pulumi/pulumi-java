@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class SlsaBuilderResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private SlsaBuilderResponse() {
     }
 

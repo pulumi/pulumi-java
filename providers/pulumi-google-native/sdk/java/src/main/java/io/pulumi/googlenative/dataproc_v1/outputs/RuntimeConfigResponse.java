@@ -26,11 +26,11 @@ public final class RuntimeConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"containerImage","properties","version"})
+    @OutputCustomType.Constructor
     private RuntimeConfigResponse(
-        String containerImage,
-        Map<String,String> properties,
-        String version) {
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("version") String version) {
         this.containerImage = containerImage;
         this.properties = properties;
         this.version = version;

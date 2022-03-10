@@ -20,10 +20,10 @@ public final class CertHttpChallengeResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"path","token"})
+    @OutputCustomType.Constructor
     private CertHttpChallengeResponse(
-        String path,
-        String token) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("token") String token) {
         this.path = path;
         this.token = token;
     }

@@ -96,25 +96,25 @@ public final class GetRolloutResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","approvalState","approveTime","createTime","deployEndTime","deployFailureCause","deployStartTime","deployingBuild","description","enqueueTime","etag","failureReason","labels","name","state","targetId","uid"})
+    @OutputCustomType.Constructor
     private GetRolloutResult(
-        Map<String,String> annotations,
-        String approvalState,
-        String approveTime,
-        String createTime,
-        String deployEndTime,
-        String deployFailureCause,
-        String deployStartTime,
-        String deployingBuild,
-        String description,
-        String enqueueTime,
-        String etag,
-        String failureReason,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String targetId,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("approvalState") String approvalState,
+        @OutputCustomType.Parameter("approveTime") String approveTime,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployEndTime") String deployEndTime,
+        @OutputCustomType.Parameter("deployFailureCause") String deployFailureCause,
+        @OutputCustomType.Parameter("deployStartTime") String deployStartTime,
+        @OutputCustomType.Parameter("deployingBuild") String deployingBuild,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enqueueTime") String enqueueTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("failureReason") String failureReason,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("targetId") String targetId,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.approvalState = approvalState;
         this.approveTime = approveTime;

@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"agentVersion","description","fulfillment","name","state","textToSpeechSettings","updateTime"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String agentVersion,
-        String description,
-        GoogleCloudDialogflowV2beta1FulfillmentResponse fulfillment,
-        String name,
-        String state,
-        GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse textToSpeechSettings,
-        String updateTime) {
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fulfillment") GoogleCloudDialogflowV2beta1FulfillmentResponse fulfillment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("textToSpeechSettings") GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse textToSpeechSettings,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.agentVersion = agentVersion;
         this.description = description;
         this.fulfillment = fulfillment;

@@ -45,15 +45,15 @@ public final class GetMuteConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","filter","mostRecentEditor","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetMuteConfigResult(
-        String createTime,
-        String description,
-        String displayName,
-        String filter,
-        String mostRecentEditor,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("mostRecentEditor") String mostRecentEditor,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

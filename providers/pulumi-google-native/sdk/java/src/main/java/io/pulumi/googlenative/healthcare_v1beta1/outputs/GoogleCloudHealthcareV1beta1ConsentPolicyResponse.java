@@ -22,10 +22,10 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse {
      */
     private final List<AttributeResponse> resourceAttributes;
 
-    @OutputCustomType.Constructor({"authorizationRule","resourceAttributes"})
+    @OutputCustomType.Constructor
     private GoogleCloudHealthcareV1beta1ConsentPolicyResponse(
-        ExprResponse authorizationRule,
-        List<AttributeResponse> resourceAttributes) {
+        @OutputCustomType.Parameter("authorizationRule") ExprResponse authorizationRule,
+        @OutputCustomType.Parameter("resourceAttributes") List<AttributeResponse> resourceAttributes) {
         this.authorizationRule = authorizationRule;
         this.resourceAttributes = resourceAttributes;
     }

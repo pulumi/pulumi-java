@@ -20,10 +20,10 @@ public final class IssuingOptionsResponse {
      */
     private final Boolean includeCrlAccessUrl;
 
-    @OutputCustomType.Constructor({"includeCaCertUrl","includeCrlAccessUrl"})
+    @OutputCustomType.Constructor
     private IssuingOptionsResponse(
-        Boolean includeCaCertUrl,
-        Boolean includeCrlAccessUrl) {
+        @OutputCustomType.Parameter("includeCaCertUrl") Boolean includeCaCertUrl,
+        @OutputCustomType.Parameter("includeCrlAccessUrl") Boolean includeCrlAccessUrl) {
         this.includeCaCertUrl = includeCaCertUrl;
         this.includeCrlAccessUrl = includeCrlAccessUrl;
     }

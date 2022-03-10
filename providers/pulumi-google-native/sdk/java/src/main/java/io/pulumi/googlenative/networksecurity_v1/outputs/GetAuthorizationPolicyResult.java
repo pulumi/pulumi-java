@@ -48,15 +48,15 @@ public final class GetAuthorizationPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"action","createTime","description","labels","name","rules","updateTime"})
+    @OutputCustomType.Constructor
     private GetAuthorizationPolicyResult(
-        String action,
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        List<RuleResponse> rules,
-        String updateTime) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rules") List<RuleResponse> rules,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.action = action;
         this.createTime = createTime;
         this.description = description;

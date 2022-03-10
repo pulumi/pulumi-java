@@ -31,12 +31,12 @@ public final class MaterializedViewDefinitionResponse {
      */
     private final String refreshIntervalMs;
 
-    @OutputCustomType.Constructor({"enableRefresh","lastRefreshTime","query","refreshIntervalMs"})
+    @OutputCustomType.Constructor
     private MaterializedViewDefinitionResponse(
-        Boolean enableRefresh,
-        String lastRefreshTime,
-        String query,
-        String refreshIntervalMs) {
+        @OutputCustomType.Parameter("enableRefresh") Boolean enableRefresh,
+        @OutputCustomType.Parameter("lastRefreshTime") String lastRefreshTime,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("refreshIntervalMs") String refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.lastRefreshTime = lastRefreshTime;
         this.query = query;

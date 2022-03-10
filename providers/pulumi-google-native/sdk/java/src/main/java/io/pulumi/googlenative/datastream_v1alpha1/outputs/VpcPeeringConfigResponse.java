@@ -20,10 +20,10 @@ public final class VpcPeeringConfigResponse {
      */
     private final String vpcName;
 
-    @OutputCustomType.Constructor({"subnet","vpcName"})
+    @OutputCustomType.Constructor
     private VpcPeeringConfigResponse(
-        String subnet,
-        String vpcName) {
+        @OutputCustomType.Parameter("subnet") String subnet,
+        @OutputCustomType.Parameter("vpcName") String vpcName) {
         this.subnet = subnet;
         this.vpcName = vpcName;
     }

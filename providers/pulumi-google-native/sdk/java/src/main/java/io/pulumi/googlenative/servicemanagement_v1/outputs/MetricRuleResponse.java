@@ -21,10 +21,10 @@ public final class MetricRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"metricCosts","selector"})
+    @OutputCustomType.Constructor
     private MetricRuleResponse(
-        Map<String,String> metricCosts,
-        String selector) {
+        @OutputCustomType.Parameter("metricCosts") Map<String,String> metricCosts,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.metricCosts = metricCosts;
         this.selector = selector;
     }

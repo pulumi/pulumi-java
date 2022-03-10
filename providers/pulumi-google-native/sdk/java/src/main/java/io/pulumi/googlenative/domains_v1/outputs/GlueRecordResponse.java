@@ -26,11 +26,11 @@ public final class GlueRecordResponse {
      */
     private final List<String> ipv6Addresses;
 
-    @OutputCustomType.Constructor({"hostName","ipv4Addresses","ipv6Addresses"})
+    @OutputCustomType.Constructor
     private GlueRecordResponse(
-        String hostName,
-        List<String> ipv4Addresses,
-        List<String> ipv6Addresses) {
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("ipv4Addresses") List<String> ipv4Addresses,
+        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses) {
         this.hostName = hostName;
         this.ipv4Addresses = ipv4Addresses;
         this.ipv6Addresses = ipv6Addresses;

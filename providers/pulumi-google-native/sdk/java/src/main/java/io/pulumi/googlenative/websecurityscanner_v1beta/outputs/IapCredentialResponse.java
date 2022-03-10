@@ -15,8 +15,8 @@ public final class IapCredentialResponse {
      */
     private final IapTestServiceAccountInfoResponse iapTestServiceAccountInfo;
 
-    @OutputCustomType.Constructor({"iapTestServiceAccountInfo"})
-    private IapCredentialResponse(IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
+    @OutputCustomType.Constructor
+    private IapCredentialResponse(@OutputCustomType.Parameter("iapTestServiceAccountInfo") IapTestServiceAccountInfoResponse iapTestServiceAccountInfo) {
         this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
     }
 

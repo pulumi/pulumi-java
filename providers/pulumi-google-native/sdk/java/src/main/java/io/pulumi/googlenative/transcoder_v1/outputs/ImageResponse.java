@@ -27,11 +27,11 @@ public final class ImageResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"alpha","resolution","uri"})
+    @OutputCustomType.Constructor
     private ImageResponse(
-        Double alpha,
-        NormalizedCoordinateResponse resolution,
-        String uri) {
+        @OutputCustomType.Parameter("alpha") Double alpha,
+        @OutputCustomType.Parameter("resolution") NormalizedCoordinateResponse resolution,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.alpha = alpha;
         this.resolution = resolution;
         this.uri = uri;

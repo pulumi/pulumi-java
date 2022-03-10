@@ -45,14 +45,14 @@ public final class GetAnnotationResult {
      */
     private final SensitiveTextAnnotationResponse textAnnotation;
 
-    @OutputCustomType.Constructor({"annotationSource","customData","imageAnnotation","name","resourceAnnotation","textAnnotation"})
+    @OutputCustomType.Constructor
     private GetAnnotationResult(
-        AnnotationSourceResponse annotationSource,
-        Map<String,String> customData,
-        ImageAnnotationResponse imageAnnotation,
-        String name,
-        ResourceAnnotationResponse resourceAnnotation,
-        SensitiveTextAnnotationResponse textAnnotation) {
+        @OutputCustomType.Parameter("annotationSource") AnnotationSourceResponse annotationSource,
+        @OutputCustomType.Parameter("customData") Map<String,String> customData,
+        @OutputCustomType.Parameter("imageAnnotation") ImageAnnotationResponse imageAnnotation,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceAnnotation") ResourceAnnotationResponse resourceAnnotation,
+        @OutputCustomType.Parameter("textAnnotation") SensitiveTextAnnotationResponse textAnnotation) {
         this.annotationSource = annotationSource;
         this.customData = customData;
         this.imageAnnotation = imageAnnotation;

@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"genericWebService","service"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(
-        GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService,
-        String service) {
+        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService,
+        @OutputCustomType.Parameter("service") String service) {
         this.genericWebService = genericWebService;
         this.service = service;
     }

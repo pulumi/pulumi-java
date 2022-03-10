@@ -46,15 +46,15 @@ public final class GetConversationResult {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"conversationProfile","conversationStage","endTime","lifecycleState","name","phoneNumber","startTime"})
+    @OutputCustomType.Constructor
     private GetConversationResult(
-        String conversationProfile,
-        String conversationStage,
-        String endTime,
-        String lifecycleState,
-        String name,
-        GoogleCloudDialogflowV2ConversationPhoneNumberResponse phoneNumber,
-        String startTime) {
+        @OutputCustomType.Parameter("conversationProfile") String conversationProfile,
+        @OutputCustomType.Parameter("conversationStage") String conversationStage,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phoneNumber") GoogleCloudDialogflowV2ConversationPhoneNumberResponse phoneNumber,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.conversationProfile = conversationProfile;
         this.conversationStage = conversationStage;
         this.endTime = endTime;

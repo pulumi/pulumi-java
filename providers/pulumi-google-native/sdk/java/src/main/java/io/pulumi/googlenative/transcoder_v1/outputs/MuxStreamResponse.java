@@ -37,13 +37,13 @@ public final class MuxStreamResponse {
      */
     private final SegmentSettingsResponse segmentSettings;
 
-    @OutputCustomType.Constructor({"container","elementaryStreams","fileName","key","segmentSettings"})
+    @OutputCustomType.Constructor
     private MuxStreamResponse(
-        String container,
-        List<String> elementaryStreams,
-        String fileName,
-        String key,
-        SegmentSettingsResponse segmentSettings) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("elementaryStreams") List<String> elementaryStreams,
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("segmentSettings") SegmentSettingsResponse segmentSettings) {
         this.container = container;
         this.elementaryStreams = elementaryStreams;
         this.fileName = fileName;

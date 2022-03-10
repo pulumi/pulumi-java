@@ -37,13 +37,13 @@ public final class LoadBalancerInfoResponse {
      */
     private final String loadBalancerType;
 
-    @OutputCustomType.Constructor({"backendType","backendUri","backends","healthCheckUri","loadBalancerType"})
+    @OutputCustomType.Constructor
     private LoadBalancerInfoResponse(
-        String backendType,
-        String backendUri,
-        List<LoadBalancerBackendResponse> backends,
-        String healthCheckUri,
-        String loadBalancerType) {
+        @OutputCustomType.Parameter("backendType") String backendType,
+        @OutputCustomType.Parameter("backendUri") String backendUri,
+        @OutputCustomType.Parameter("backends") List<LoadBalancerBackendResponse> backends,
+        @OutputCustomType.Parameter("healthCheckUri") String healthCheckUri,
+        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType) {
         this.backendType = backendType;
         this.backendUri = backendUri;
         this.backends = backends;

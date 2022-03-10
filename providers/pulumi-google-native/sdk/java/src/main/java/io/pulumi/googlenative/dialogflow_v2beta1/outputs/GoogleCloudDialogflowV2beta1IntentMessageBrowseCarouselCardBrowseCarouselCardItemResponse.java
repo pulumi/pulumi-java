@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","footer","image","openUriAction","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(
-        String description,
-        String footer,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("footer") String footer,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.footer = footer;
         this.image = image;

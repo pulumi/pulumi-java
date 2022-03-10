@@ -41,14 +41,14 @@ public final class SSLHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor({"port","portName","portSpecification","proxyHeader","request","response"})
+    @OutputCustomType.Constructor
     private SSLHealthCheckResponse(
-        Integer port,
-        String portName,
-        String portSpecification,
-        String proxyHeader,
-        String request,
-        String response) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("portSpecification") String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;

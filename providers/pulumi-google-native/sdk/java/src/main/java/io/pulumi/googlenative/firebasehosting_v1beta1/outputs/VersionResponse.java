@@ -73,20 +73,20 @@ public final class VersionResponse {
      */
     private final String versionBytes;
 
-    @OutputCustomType.Constructor({"config","createTime","createUser","deleteTime","deleteUser","fileCount","finalizeTime","finalizeUser","labels","name","status","versionBytes"})
+    @OutputCustomType.Constructor
     private VersionResponse(
-        ServingConfigResponse config,
-        String createTime,
-        ActingUserResponse createUser,
-        String deleteTime,
-        ActingUserResponse deleteUser,
-        String fileCount,
-        String finalizeTime,
-        ActingUserResponse finalizeUser,
-        Map<String,String> labels,
-        String name,
-        String status,
-        String versionBytes) {
+        @OutputCustomType.Parameter("config") ServingConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("createUser") ActingUserResponse createUser,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("deleteUser") ActingUserResponse deleteUser,
+        @OutputCustomType.Parameter("fileCount") String fileCount,
+        @OutputCustomType.Parameter("finalizeTime") String finalizeTime,
+        @OutputCustomType.Parameter("finalizeUser") ActingUserResponse finalizeUser,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("versionBytes") String versionBytes) {
         this.config = config;
         this.createTime = createTime;
         this.createUser = createUser;

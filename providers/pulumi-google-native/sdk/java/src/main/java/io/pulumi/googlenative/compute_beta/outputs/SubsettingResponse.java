@@ -17,10 +17,10 @@ public final class SubsettingResponse {
      */
     private final Integer subsetSize;
 
-    @OutputCustomType.Constructor({"policy","subsetSize"})
+    @OutputCustomType.Constructor
     private SubsettingResponse(
-        String policy,
-        Integer subsetSize) {
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("subsetSize") Integer subsetSize) {
         this.policy = policy;
         this.subsetSize = subsetSize;
     }

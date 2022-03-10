@@ -19,11 +19,11 @@ public final class VolumeResponse {
     private final String name;
     private final SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor({"configMap","name","secret"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        ConfigMapVolumeSourceResponse configMap,
-        String name,
-        SecretVolumeSourceResponse secret) {
+        @OutputCustomType.Parameter("configMap") ConfigMapVolumeSourceResponse configMap,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") SecretVolumeSourceResponse secret) {
         this.configMap = configMap;
         this.name = name;
         this.secret = secret;

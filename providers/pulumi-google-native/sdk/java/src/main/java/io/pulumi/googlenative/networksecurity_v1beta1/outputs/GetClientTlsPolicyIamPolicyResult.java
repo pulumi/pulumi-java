@@ -34,12 +34,12 @@ public final class GetClientTlsPolicyIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetClientTlsPolicyIamPolicyResult(
-        List<GoogleIamV1AuditConfigResponse> auditConfigs,
-        List<GoogleIamV1BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<GoogleIamV1AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<GoogleIamV1BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

@@ -37,13 +37,13 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse {
      */
     private final Boolean validateOnly;
 
-    @OutputCustomType.Constructor({"gcsPath","launchParameters","location","project","validateOnly"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(
-        String gcsPath,
-        GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters,
-        String location,
-        String project,
-        Boolean validateOnly) {
+        @OutputCustomType.Parameter("gcsPath") String gcsPath,
+        @OutputCustomType.Parameter("launchParameters") GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("validateOnly") Boolean validateOnly) {
         this.gcsPath = gcsPath;
         this.launchParameters = launchParameters;
         this.location = location;

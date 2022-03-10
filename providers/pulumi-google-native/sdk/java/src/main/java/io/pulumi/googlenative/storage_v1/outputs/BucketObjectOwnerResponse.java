@@ -20,10 +20,10 @@ public final class BucketObjectOwnerResponse {
      */
     private final String entityId;
 
-    @OutputCustomType.Constructor({"entity","entityId"})
+    @OutputCustomType.Constructor
     private BucketObjectOwnerResponse(
-        String entity,
-        String entityId) {
+        @OutputCustomType.Parameter("entity") String entity,
+        @OutputCustomType.Parameter("entityId") String entityId) {
         this.entity = entity;
         this.entityId = entityId;
     }

@@ -32,12 +32,12 @@ public final class GetSubscriptionResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"ackDeadlineSeconds","name","pushConfig","topic"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        Integer ackDeadlineSeconds,
-        String name,
-        PushConfigResponse pushConfig,
-        String topic) {
+        @OutputCustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pushConfig") PushConfigResponse pushConfig,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.name = name;
         this.pushConfig = pushConfig;

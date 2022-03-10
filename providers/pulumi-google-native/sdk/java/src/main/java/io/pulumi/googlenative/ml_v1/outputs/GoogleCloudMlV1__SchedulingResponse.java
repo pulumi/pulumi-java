@@ -26,11 +26,11 @@ public final class GoogleCloudMlV1__SchedulingResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"maxRunningTime","maxWaitTime","priority"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__SchedulingResponse(
-        String maxRunningTime,
-        String maxWaitTime,
-        Integer priority) {
+        @OutputCustomType.Parameter("maxRunningTime") String maxRunningTime,
+        @OutputCustomType.Parameter("maxWaitTime") String maxWaitTime,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.maxRunningTime = maxRunningTime;
         this.maxWaitTime = maxWaitTime;
         this.priority = priority;

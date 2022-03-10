@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1QuotaResponse {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor({"interval","limit","timeUnit"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1QuotaResponse(
-        String interval,
-        String limit,
-        String timeUnit) {
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("limit") String limit,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
         this.interval = interval;
         this.limit = limit;
         this.timeUnit = timeUnit;

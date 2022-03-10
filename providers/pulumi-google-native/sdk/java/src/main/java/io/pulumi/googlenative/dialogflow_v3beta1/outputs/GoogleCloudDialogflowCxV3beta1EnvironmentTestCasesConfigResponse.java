@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
      */
     private final List<String> testCases;
 
-    @OutputCustomType.Constructor({"enableContinuousRun","enablePredeploymentRun","testCases"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(
-        Boolean enableContinuousRun,
-        Boolean enablePredeploymentRun,
-        List<String> testCases) {
+        @OutputCustomType.Parameter("enableContinuousRun") Boolean enableContinuousRun,
+        @OutputCustomType.Parameter("enablePredeploymentRun") Boolean enablePredeploymentRun,
+        @OutputCustomType.Parameter("testCases") List<String> testCases) {
         this.enableContinuousRun = enableContinuousRun;
         this.enablePredeploymentRun = enablePredeploymentRun;
         this.testCases = testCases;

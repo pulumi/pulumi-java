@@ -27,11 +27,11 @@ public final class CredentialResponse {
      */
     private final Boolean useProjectDefault;
 
-    @OutputCustomType.Constructor({"basicAuth","serviceAccount","useProjectDefault"})
+    @OutputCustomType.Constructor
     private CredentialResponse(
-        BasicAuthResponse basicAuth,
-        ServiceAccountResponse serviceAccount,
-        Boolean useProjectDefault) {
+        @OutputCustomType.Parameter("basicAuth") BasicAuthResponse basicAuth,
+        @OutputCustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
+        @OutputCustomType.Parameter("useProjectDefault") Boolean useProjectDefault) {
         this.basicAuth = basicAuth;
         this.serviceAccount = serviceAccount;
         this.useProjectDefault = useProjectDefault;

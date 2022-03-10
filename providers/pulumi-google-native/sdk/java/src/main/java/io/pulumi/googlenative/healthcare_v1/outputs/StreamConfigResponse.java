@@ -22,10 +22,10 @@ public final class StreamConfigResponse {
      */
     private final List<String> resourceTypes;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","resourceTypes"})
+    @OutputCustomType.Constructor
     private StreamConfigResponse(
-        GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination,
-        List<String> resourceTypes) {
+        @OutputCustomType.Parameter("bigqueryDestination") GoogleCloudHealthcareV1FhirBigQueryDestinationResponse bigqueryDestination,
+        @OutputCustomType.Parameter("resourceTypes") List<String> resourceTypes) {
         this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }

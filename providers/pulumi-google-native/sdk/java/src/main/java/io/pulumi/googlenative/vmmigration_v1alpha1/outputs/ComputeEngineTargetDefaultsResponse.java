@@ -101,25 +101,25 @@ public final class ComputeEngineTargetDefaultsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"additionalLicenses","appliedLicense","bootOption","computeScheduling","diskType","labels","licenseType","machineType","machineTypeSeries","metadata","networkInterfaces","networkTags","secureBoot","serviceAccount","targetProject","vmName","zone"})
+    @OutputCustomType.Constructor
     private ComputeEngineTargetDefaultsResponse(
-        List<String> additionalLicenses,
-        AppliedLicenseResponse appliedLicense,
-        String bootOption,
-        ComputeSchedulingResponse computeScheduling,
-        String diskType,
-        Map<String,String> labels,
-        String licenseType,
-        String machineType,
-        String machineTypeSeries,
-        Map<String,String> metadata,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        List<String> networkTags,
-        Boolean secureBoot,
-        String serviceAccount,
-        String targetProject,
-        String vmName,
-        String zone) {
+        @OutputCustomType.Parameter("additionalLicenses") List<String> additionalLicenses,
+        @OutputCustomType.Parameter("appliedLicense") AppliedLicenseResponse appliedLicense,
+        @OutputCustomType.Parameter("bootOption") String bootOption,
+        @OutputCustomType.Parameter("computeScheduling") ComputeSchedulingResponse computeScheduling,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseType") String licenseType,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("machineTypeSeries") String machineTypeSeries,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("secureBoot") Boolean secureBoot,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("targetProject") String targetProject,
+        @OutputCustomType.Parameter("vmName") String vmName,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.additionalLicenses = additionalLicenses;
         this.appliedLicense = appliedLicense;
         this.bootOption = bootOption;

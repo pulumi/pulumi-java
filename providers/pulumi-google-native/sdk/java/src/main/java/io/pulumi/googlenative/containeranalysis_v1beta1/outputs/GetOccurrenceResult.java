@@ -118,27 +118,27 @@ public final class GetOccurrenceResult {
      */
     private final GrafeasV1beta1VulnerabilityDetailsResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestation","build","createTime","deployment","derivedImage","discovered","installation","intoto","kind","name","noteName","remediation","resource","sbom","spdxFile","spdxPackage","spdxRelationship","updateTime","vulnerability"})
+    @OutputCustomType.Constructor
     private GetOccurrenceResult(
-        DetailsResponse attestation,
-        GrafeasV1beta1BuildDetailsResponse build,
-        String createTime,
-        GrafeasV1beta1DeploymentDetailsResponse deployment,
-        GrafeasV1beta1ImageDetailsResponse derivedImage,
-        GrafeasV1beta1DiscoveryDetailsResponse discovered,
-        GrafeasV1beta1PackageDetailsResponse installation,
-        GrafeasV1beta1IntotoDetailsResponse intoto,
-        String kind,
-        String name,
-        String noteName,
-        String remediation,
-        ResourceResponse resource,
-        DocumentOccurrenceResponse sbom,
-        FileOccurrenceResponse spdxFile,
-        PackageInfoOccurrenceResponse spdxPackage,
-        RelationshipOccurrenceResponse spdxRelationship,
-        String updateTime,
-        GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
+        @OutputCustomType.Parameter("attestation") DetailsResponse attestation,
+        @OutputCustomType.Parameter("build") GrafeasV1beta1BuildDetailsResponse build,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") GrafeasV1beta1DeploymentDetailsResponse deployment,
+        @OutputCustomType.Parameter("derivedImage") GrafeasV1beta1ImageDetailsResponse derivedImage,
+        @OutputCustomType.Parameter("discovered") GrafeasV1beta1DiscoveryDetailsResponse discovered,
+        @OutputCustomType.Parameter("installation") GrafeasV1beta1PackageDetailsResponse installation,
+        @OutputCustomType.Parameter("intoto") GrafeasV1beta1IntotoDetailsResponse intoto,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noteName") String noteName,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("resource") ResourceResponse resource,
+        @OutputCustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
+        @OutputCustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vulnerability") GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.createTime = createTime;

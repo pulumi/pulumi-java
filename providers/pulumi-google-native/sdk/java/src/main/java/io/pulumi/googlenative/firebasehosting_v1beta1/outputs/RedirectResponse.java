@@ -31,12 +31,12 @@ public final class RedirectResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor({"glob","location","regex","statusCode"})
+    @OutputCustomType.Constructor
     private RedirectResponse(
-        String glob,
-        String location,
-        String regex,
-        Integer statusCode) {
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("regex") String regex,
+        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
         this.glob = glob;
         this.location = location;
         this.regex = regex;

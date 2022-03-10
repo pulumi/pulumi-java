@@ -26,11 +26,11 @@ public final class KerberosConfigResponse {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"keytab","krb5ConfigGcsUri","principal"})
+    @OutputCustomType.Constructor
     private KerberosConfigResponse(
-        SecretResponse keytab,
-        String krb5ConfigGcsUri,
-        String principal) {
+        @OutputCustomType.Parameter("keytab") SecretResponse keytab,
+        @OutputCustomType.Parameter("krb5ConfigGcsUri") String krb5ConfigGcsUri,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.keytab = keytab;
         this.krb5ConfigGcsUri = krb5ConfigGcsUri;
         this.principal = principal;

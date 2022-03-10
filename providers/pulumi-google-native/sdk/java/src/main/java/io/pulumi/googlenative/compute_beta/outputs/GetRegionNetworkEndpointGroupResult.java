@@ -106,26 +106,26 @@ public final class GetRegionNetworkEndpointGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"annotations","appEngine","cloudFunction","cloudRun","creationTimestamp","defaultPort","description","kind","name","network","networkEndpointType","pscTargetService","region","selfLink","serverlessDeployment","size","subnetwork","zone"})
+    @OutputCustomType.Constructor
     private GetRegionNetworkEndpointGroupResult(
-        Map<String,String> annotations,
-        NetworkEndpointGroupAppEngineResponse appEngine,
-        NetworkEndpointGroupCloudFunctionResponse cloudFunction,
-        NetworkEndpointGroupCloudRunResponse cloudRun,
-        String creationTimestamp,
-        Integer defaultPort,
-        String description,
-        String kind,
-        String name,
-        String network,
-        String networkEndpointType,
-        String pscTargetService,
-        String region,
-        String selfLink,
-        NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment,
-        Integer size,
-        String subnetwork,
-        String zone) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("appEngine") NetworkEndpointGroupAppEngineResponse appEngine,
+        @OutputCustomType.Parameter("cloudFunction") NetworkEndpointGroupCloudFunctionResponse cloudFunction,
+        @OutputCustomType.Parameter("cloudRun") NetworkEndpointGroupCloudRunResponse cloudRun,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @OutputCustomType.Parameter("pscTargetService") String pscTargetService,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverlessDeployment") NetworkEndpointGroupServerlessDeploymentResponse serverlessDeployment,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.annotations = annotations;
         this.appEngine = appEngine;
         this.cloudFunction = cloudFunction;

@@ -31,12 +31,12 @@ public final class EventTriggerResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"eventType","failurePolicy","resource","service"})
+    @OutputCustomType.Constructor
     private EventTriggerResponse(
-        String eventType,
-        FailurePolicyResponse failurePolicy,
-        String resource,
-        String service) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("failurePolicy") FailurePolicyResponse failurePolicy,
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("service") String service) {
         this.eventType = eventType;
         this.failurePolicy = failurePolicy;
         this.resource = resource;

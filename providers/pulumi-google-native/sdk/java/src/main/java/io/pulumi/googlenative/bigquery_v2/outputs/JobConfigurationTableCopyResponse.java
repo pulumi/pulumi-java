@@ -54,16 +54,16 @@ public final class JobConfigurationTableCopyResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"createDisposition","destinationEncryptionConfiguration","destinationExpirationTime","destinationTable","operationType","sourceTable","sourceTables","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobConfigurationTableCopyResponse(
-        String createDisposition,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        Object destinationExpirationTime,
-        TableReferenceResponse destinationTable,
-        String operationType,
-        TableReferenceResponse sourceTable,
-        List<TableReferenceResponse> sourceTables,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("createDisposition") String createDisposition,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationExpirationTime") Object destinationExpirationTime,
+        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @OutputCustomType.Parameter("operationType") String operationType,
+        @OutputCustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
+        @OutputCustomType.Parameter("sourceTables") List<TableReferenceResponse> sourceTables,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         this.destinationExpirationTime = destinationExpirationTime;

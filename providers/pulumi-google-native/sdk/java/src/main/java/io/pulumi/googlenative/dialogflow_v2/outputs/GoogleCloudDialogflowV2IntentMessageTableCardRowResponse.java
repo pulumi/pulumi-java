@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowResponse {
      */
     private final Boolean dividerAfter;
 
-    @OutputCustomType.Constructor({"cells","dividerAfter"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageTableCardRowResponse(
-        List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells,
-        Boolean dividerAfter) {
+        @OutputCustomType.Parameter("cells") List<GoogleCloudDialogflowV2IntentMessageTableCardCellResponse> cells,
+        @OutputCustomType.Parameter("dividerAfter") Boolean dividerAfter) {
         this.cells = cells;
         this.dividerAfter = dividerAfter;
     }

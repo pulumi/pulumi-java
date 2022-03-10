@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GooglePrivacyDlpV2PublishToStackdriverResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2PublishToStackdriverResponse() {
     }
 

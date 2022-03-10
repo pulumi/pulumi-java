@@ -60,17 +60,17 @@ public final class PipelineResourcesResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType","bootDiskSizeGb","disks","minimumCpuCores","minimumRamGb","noAddress","preemptible","zones"})
+    @OutputCustomType.Constructor
     private PipelineResourcesResponse(
-        String acceleratorCount,
-        String acceleratorType,
-        Integer bootDiskSizeGb,
-        List<DiskResponse> disks,
-        Integer minimumCpuCores,
-        Double minimumRamGb,
-        Boolean noAddress,
-        Boolean preemptible,
-        List<String> zones) {
+        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("disks") List<DiskResponse> disks,
+        @OutputCustomType.Parameter("minimumCpuCores") Integer minimumCpuCores,
+        @OutputCustomType.Parameter("minimumRamGb") Double minimumRamGb,
+        @OutputCustomType.Parameter("noAddress") Boolean noAddress,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
         this.bootDiskSizeGb = bootDiskSizeGb;

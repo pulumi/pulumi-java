@@ -26,11 +26,11 @@ public final class GetGcpUserAccessBindingResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"accessLevels","groupKey","name"})
+    @OutputCustomType.Constructor
     private GetGcpUserAccessBindingResult(
-        List<String> accessLevels,
-        String groupKey,
-        String name) {
+        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
+        @OutputCustomType.Parameter("groupKey") String groupKey,
+        @OutputCustomType.Parameter("name") String name) {
         this.accessLevels = accessLevels;
         this.groupKey = groupKey;
         this.name = name;

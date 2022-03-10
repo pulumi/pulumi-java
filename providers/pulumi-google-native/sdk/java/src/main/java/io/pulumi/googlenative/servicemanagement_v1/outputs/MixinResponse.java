@@ -20,10 +20,10 @@ public final class MixinResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor({"name","root"})
+    @OutputCustomType.Constructor
     private MixinResponse(
-        String name,
-        String root) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("root") String root) {
         this.name = name;
         this.root = root;
     }

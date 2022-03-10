@@ -32,12 +32,12 @@ public final class FileShareConfigResponse {
      */
     private final String sourceBackup;
 
-    @OutputCustomType.Constructor({"capacityGb","name","nfsExportOptions","sourceBackup"})
+    @OutputCustomType.Constructor
     private FileShareConfigResponse(
-        String capacityGb,
-        String name,
-        List<NfsExportOptionsResponse> nfsExportOptions,
-        String sourceBackup) {
+        @OutputCustomType.Parameter("capacityGb") String capacityGb,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nfsExportOptions") List<NfsExportOptionsResponse> nfsExportOptions,
+        @OutputCustomType.Parameter("sourceBackup") String sourceBackup) {
         this.capacityGb = capacityGb;
         this.name = name;
         this.nfsExportOptions = nfsExportOptions;

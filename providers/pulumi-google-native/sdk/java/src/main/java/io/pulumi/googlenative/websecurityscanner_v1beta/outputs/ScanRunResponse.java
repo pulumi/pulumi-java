@@ -70,19 +70,19 @@ public final class ScanRunResponse {
      */
     private final List<ScanRunWarningTraceResponse> warningTraces;
 
-    @OutputCustomType.Constructor({"endTime","errorTrace","executionState","hasVulnerabilities","name","progressPercent","resultState","startTime","urlsCrawledCount","urlsTestedCount","warningTraces"})
+    @OutputCustomType.Constructor
     private ScanRunResponse(
-        String endTime,
-        ScanRunErrorTraceResponse errorTrace,
-        String executionState,
-        Boolean hasVulnerabilities,
-        String name,
-        Integer progressPercent,
-        String resultState,
-        String startTime,
-        String urlsCrawledCount,
-        String urlsTestedCount,
-        List<ScanRunWarningTraceResponse> warningTraces) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("errorTrace") ScanRunErrorTraceResponse errorTrace,
+        @OutputCustomType.Parameter("executionState") String executionState,
+        @OutputCustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("resultState") String resultState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
+        @OutputCustomType.Parameter("urlsTestedCount") String urlsTestedCount,
+        @OutputCustomType.Parameter("warningTraces") List<ScanRunWarningTraceResponse> warningTraces) {
         this.endTime = endTime;
         this.errorTrace = errorTrace;
         this.executionState = executionState;

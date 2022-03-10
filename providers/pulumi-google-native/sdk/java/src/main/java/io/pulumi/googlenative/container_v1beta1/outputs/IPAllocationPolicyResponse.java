@@ -61,18 +61,18 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useRoutes;
 
-    @OutputCustomType.Constructor({"allowRouteOverlap","clusterIpv4CidrBlock","clusterSecondaryRangeName","createSubnetwork","nodeIpv4CidrBlock","servicesIpv4CidrBlock","servicesSecondaryRangeName","subnetworkName","useIpAliases","useRoutes"})
+    @OutputCustomType.Constructor
     private IPAllocationPolicyResponse(
-        Boolean allowRouteOverlap,
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        Boolean createSubnetwork,
-        String nodeIpv4CidrBlock,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        String subnetworkName,
-        Boolean useIpAliases,
-        Boolean useRoutes) {
+        @OutputCustomType.Parameter("allowRouteOverlap") Boolean allowRouteOverlap,
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
+        @OutputCustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("subnetworkName") String subnetworkName,
+        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases,
+        @OutputCustomType.Parameter("useRoutes") Boolean useRoutes) {
         this.allowRouteOverlap = allowRouteOverlap;
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;

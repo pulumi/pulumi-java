@@ -96,25 +96,25 @@ public final class GetRegionNetworkResult {
      */
     private final List<String> subnetworks;
 
-    @OutputCustomType.Constructor({"autoCreateSubnetworks","creationTimestamp","description","enableUlaInternalIpv6","firewallPolicy","gatewayIPv4","internalIpv6Range","kind","mtu","name","networkFirewallPolicyEnforcementOrder","peerings","region","routingConfig","selfLink","selfLinkWithId","subnetworks"})
+    @OutputCustomType.Constructor
     private GetRegionNetworkResult(
-        Boolean autoCreateSubnetworks,
-        String creationTimestamp,
-        String description,
-        Boolean enableUlaInternalIpv6,
-        String firewallPolicy,
-        String gatewayIPv4,
-        String internalIpv6Range,
-        String kind,
-        Integer mtu,
-        String name,
-        String networkFirewallPolicyEnforcementOrder,
-        List<NetworkPeeringResponse> peerings,
-        String region,
-        NetworkRoutingConfigResponse routingConfig,
-        String selfLink,
-        String selfLinkWithId,
-        List<String> subnetworks) {
+        @OutputCustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableUlaInternalIpv6") Boolean enableUlaInternalIpv6,
+        @OutputCustomType.Parameter("firewallPolicy") String firewallPolicy,
+        @OutputCustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @OutputCustomType.Parameter("internalIpv6Range") String internalIpv6Range,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mtu") Integer mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFirewallPolicyEnforcementOrder") String networkFirewallPolicyEnforcementOrder,
+        @OutputCustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

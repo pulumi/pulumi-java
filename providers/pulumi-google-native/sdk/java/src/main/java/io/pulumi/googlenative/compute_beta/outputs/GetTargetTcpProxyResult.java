@@ -51,16 +51,16 @@ public final class GetTargetTcpProxyResult {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","name","proxyBind","proxyHeader","selfLink","service"})
+    @OutputCustomType.Constructor
     private GetTargetTcpProxyResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String proxyHeader,
-        String selfLink,
-        String service) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("service") String service) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

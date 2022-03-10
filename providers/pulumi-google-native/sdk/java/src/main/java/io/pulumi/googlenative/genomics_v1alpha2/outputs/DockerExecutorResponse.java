@@ -20,10 +20,10 @@ public final class DockerExecutorResponse {
      */
     private final String imageName;
 
-    @OutputCustomType.Constructor({"cmd","imageName"})
+    @OutputCustomType.Constructor
     private DockerExecutorResponse(
-        String cmd,
-        String imageName) {
+        @OutputCustomType.Parameter("cmd") String cmd,
+        @OutputCustomType.Parameter("imageName") String imageName) {
         this.cmd = cmd;
         this.imageName = imageName;
     }

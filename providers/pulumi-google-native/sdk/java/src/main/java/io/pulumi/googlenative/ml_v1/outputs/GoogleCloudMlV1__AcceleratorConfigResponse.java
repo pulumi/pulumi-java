@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__AcceleratorConfigResponse(
-        String count,
-        String type) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }

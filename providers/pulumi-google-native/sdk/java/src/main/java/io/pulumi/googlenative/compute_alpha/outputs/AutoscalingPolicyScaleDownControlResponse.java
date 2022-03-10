@@ -21,10 +21,10 @@ public final class AutoscalingPolicyScaleDownControlResponse {
      */
     private final Integer timeWindowSec;
 
-    @OutputCustomType.Constructor({"maxScaledDownReplicas","timeWindowSec"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyScaleDownControlResponse(
-        FixedOrPercentResponse maxScaledDownReplicas,
-        Integer timeWindowSec) {
+        @OutputCustomType.Parameter("maxScaledDownReplicas") FixedOrPercentResponse maxScaledDownReplicas,
+        @OutputCustomType.Parameter("timeWindowSec") Integer timeWindowSec) {
         this.maxScaledDownReplicas = maxScaledDownReplicas;
         this.timeWindowSec = timeWindowSec;
     }

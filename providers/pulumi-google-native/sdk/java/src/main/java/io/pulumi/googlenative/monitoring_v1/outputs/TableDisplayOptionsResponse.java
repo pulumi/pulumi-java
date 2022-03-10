@@ -16,8 +16,8 @@ public final class TableDisplayOptionsResponse {
      */
     private final List<String> shownColumns;
 
-    @OutputCustomType.Constructor({"shownColumns"})
-    private TableDisplayOptionsResponse(List<String> shownColumns) {
+    @OutputCustomType.Constructor
+    private TableDisplayOptionsResponse(@OutputCustomType.Parameter("shownColumns") List<String> shownColumns) {
         this.shownColumns = shownColumns;
     }
 

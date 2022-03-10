@@ -113,27 +113,27 @@ public final class GetConversationResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"agentId","callMetadata","createTime","dataSource","dialogflowIntents","duration","expireTime","labels","languageCode","latestAnalysis","medium","name","obfuscatedUserId","runtimeAnnotations","startTime","transcript","ttl","turnCount","updateTime"})
+    @OutputCustomType.Constructor
     private GetConversationResult(
-        String agentId,
-        GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata,
-        String createTime,
-        GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource,
-        Map<String,String> dialogflowIntents,
-        String duration,
-        String expireTime,
-        Map<String,String> labels,
-        String languageCode,
-        GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis,
-        String medium,
-        String name,
-        String obfuscatedUserId,
-        List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations,
-        String startTime,
-        GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript,
-        String ttl,
-        Integer turnCount,
-        String updateTime) {
+        @OutputCustomType.Parameter("agentId") String agentId,
+        @OutputCustomType.Parameter("callMetadata") GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse callMetadata,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataSource") GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse dataSource,
+        @OutputCustomType.Parameter("dialogflowIntents") Map<String,String> dialogflowIntents,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("latestAnalysis") GoogleCloudContactcenterinsightsV1AnalysisResponse latestAnalysis,
+        @OutputCustomType.Parameter("medium") String medium,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("obfuscatedUserId") String obfuscatedUserId,
+        @OutputCustomType.Parameter("runtimeAnnotations") List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse> runtimeAnnotations,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("transcript") GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse transcript,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("turnCount") Integer turnCount,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.agentId = agentId;
         this.callMetadata = callMetadata;
         this.createTime = createTime;

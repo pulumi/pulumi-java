@@ -77,21 +77,21 @@ public final class GetQueryResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor({"created","envgroupHostname","error","executionTime","name","queryParams","reportDefinitionId","result","resultFileSize","resultRows","self","state","updated"})
+    @OutputCustomType.Constructor
     private GetQueryResult(
-        String created,
-        String envgroupHostname,
-        String error,
-        String executionTime,
-        String name,
-        GoogleCloudApigeeV1QueryMetadataResponse queryParams,
-        String reportDefinitionId,
-        GoogleCloudApigeeV1AsyncQueryResultResponse result,
-        String resultFileSize,
-        String resultRows,
-        String self,
-        String state,
-        String updated) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("envgroupHostname") String envgroupHostname,
+        @OutputCustomType.Parameter("error") String error,
+        @OutputCustomType.Parameter("executionTime") String executionTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryParams") GoogleCloudApigeeV1QueryMetadataResponse queryParams,
+        @OutputCustomType.Parameter("reportDefinitionId") String reportDefinitionId,
+        @OutputCustomType.Parameter("result") GoogleCloudApigeeV1AsyncQueryResultResponse result,
+        @OutputCustomType.Parameter("resultFileSize") String resultFileSize,
+        @OutputCustomType.Parameter("resultRows") String resultRows,
+        @OutputCustomType.Parameter("self") String self,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updated") String updated) {
         this.created = created;
         this.envgroupHostname = envgroupHostname;
         this.error = error;

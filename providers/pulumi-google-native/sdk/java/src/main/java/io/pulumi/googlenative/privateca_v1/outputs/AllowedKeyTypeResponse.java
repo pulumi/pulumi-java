@@ -21,10 +21,10 @@ public final class AllowedKeyTypeResponse {
      */
     private final RsaKeyTypeResponse rsa;
 
-    @OutputCustomType.Constructor({"ellipticCurve","rsa"})
+    @OutputCustomType.Constructor
     private AllowedKeyTypeResponse(
-        EcKeyTypeResponse ellipticCurve,
-        RsaKeyTypeResponse rsa) {
+        @OutputCustomType.Parameter("ellipticCurve") EcKeyTypeResponse ellipticCurve,
+        @OutputCustomType.Parameter("rsa") RsaKeyTypeResponse rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }

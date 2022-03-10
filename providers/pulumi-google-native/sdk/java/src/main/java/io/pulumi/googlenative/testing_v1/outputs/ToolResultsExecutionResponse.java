@@ -25,11 +25,11 @@ public final class ToolResultsExecutionResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"executionId","historyId","project"})
+    @OutputCustomType.Constructor
     private ToolResultsExecutionResponse(
-        String executionId,
-        String historyId,
-        String project) {
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("project") String project) {
         this.executionId = executionId;
         this.historyId = historyId;
         this.project = project;

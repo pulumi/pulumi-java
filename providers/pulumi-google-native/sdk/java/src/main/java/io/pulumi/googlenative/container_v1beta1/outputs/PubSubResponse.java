@@ -27,11 +27,11 @@ public final class PubSubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"enabled","filter","topic"})
+    @OutputCustomType.Constructor
     private PubSubResponse(
-        Boolean enabled,
-        FilterResponse filter,
-        String topic) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("filter") FilterResponse filter,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.enabled = enabled;
         this.filter = filter;
         this.topic = topic;

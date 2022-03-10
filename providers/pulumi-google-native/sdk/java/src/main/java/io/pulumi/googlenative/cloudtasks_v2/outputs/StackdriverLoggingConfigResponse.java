@@ -15,8 +15,8 @@ public final class StackdriverLoggingConfigResponse {
      */
     private final Double samplingRatio;
 
-    @OutputCustomType.Constructor({"samplingRatio"})
-    private StackdriverLoggingConfigResponse(Double samplingRatio) {
+    @OutputCustomType.Constructor
+    private StackdriverLoggingConfigResponse(@OutputCustomType.Parameter("samplingRatio") Double samplingRatio) {
         this.samplingRatio = samplingRatio;
     }
 

@@ -38,13 +38,13 @@ public final class GetCaPoolResult {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"issuancePolicy","labels","name","publishingOptions","tier"})
+    @OutputCustomType.Constructor
     private GetCaPoolResult(
-        IssuancePolicyResponse issuancePolicy,
-        Map<String,String> labels,
-        String name,
-        PublishingOptionsResponse publishingOptions,
-        String tier) {
+        @OutputCustomType.Parameter("issuancePolicy") IssuancePolicyResponse issuancePolicy,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publishingOptions") PublishingOptionsResponse publishingOptions,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.issuancePolicy = issuancePolicy;
         this.labels = labels;
         this.name = name;

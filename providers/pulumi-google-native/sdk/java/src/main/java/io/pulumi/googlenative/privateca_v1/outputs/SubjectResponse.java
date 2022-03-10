@@ -50,16 +50,16 @@ public final class SubjectResponse {
      */
     private final String streetAddress;
 
-    @OutputCustomType.Constructor({"commonName","countryCode","locality","organization","organizationalUnit","postalCode","province","streetAddress"})
+    @OutputCustomType.Constructor
     private SubjectResponse(
-        String commonName,
-        String countryCode,
-        String locality,
-        String organization,
-        String organizationalUnit,
-        String postalCode,
-        String province,
-        String streetAddress) {
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("countryCode") String countryCode,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("organizationalUnit") String organizationalUnit,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("province") String province,
+        @OutputCustomType.Parameter("streetAddress") String streetAddress) {
         this.commonName = commonName;
         this.countryCode = countryCode;
         this.locality = locality;

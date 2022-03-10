@@ -32,12 +32,12 @@ public final class GetEkmConnectionResult {
      */
     private final List<ServiceResolverResponse> serviceResolvers;
 
-    @OutputCustomType.Constructor({"createTime","etag","name","serviceResolvers"})
+    @OutputCustomType.Constructor
     private GetEkmConnectionResult(
-        String createTime,
-        String etag,
-        String name,
-        List<ServiceResolverResponse> serviceResolvers) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceResolvers") List<ServiceResolverResponse> serviceResolvers) {
         this.createTime = createTime;
         this.etag = etag;
         this.name = name;

@@ -111,27 +111,27 @@ public final class GetMigrationJobResult {
      */
     private final VpcPeeringConnectivityResponse vpcPeeringConnectivity;
 
-    @OutputCustomType.Constructor({"createTime","destination","destinationDatabase","displayName","dumpPath","duration","endTime","error","labels","name","phase","reverseSshConnectivity","source","sourceDatabase","state","staticIpConnectivity","type","updateTime","vpcPeeringConnectivity"})
+    @OutputCustomType.Constructor
     private GetMigrationJobResult(
-        String createTime,
-        String destination,
-        DatabaseTypeResponse destinationDatabase,
-        String displayName,
-        String dumpPath,
-        String duration,
-        String endTime,
-        StatusResponse error,
-        Map<String,String> labels,
-        String name,
-        String phase,
-        ReverseSshConnectivityResponse reverseSshConnectivity,
-        String source,
-        DatabaseTypeResponse sourceDatabase,
-        String state,
-        StaticIpConnectivityResponse staticIpConnectivity,
-        String type,
-        String updateTime,
-        VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("destinationDatabase") DatabaseTypeResponse destinationDatabase,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("dumpPath") String dumpPath,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phase") String phase,
+        @OutputCustomType.Parameter("reverseSshConnectivity") ReverseSshConnectivityResponse reverseSshConnectivity,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceDatabase") DatabaseTypeResponse sourceDatabase,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("staticIpConnectivity") StaticIpConnectivityResponse staticIpConnectivity,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vpcPeeringConnectivity") VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
         this.createTime = createTime;
         this.destination = destination;
         this.destinationDatabase = destinationDatabase;

@@ -26,11 +26,11 @@ public final class SegmentResponse {
      */
     private final String setId;
 
-    @OutputCustomType.Constructor({"fields","segmentId","setId"})
+    @OutputCustomType.Constructor
     private SegmentResponse(
-        Map<String,String> fields,
-        String segmentId,
-        String setId) {
+        @OutputCustomType.Parameter("fields") Map<String,String> fields,
+        @OutputCustomType.Parameter("segmentId") String segmentId,
+        @OutputCustomType.Parameter("setId") String setId) {
         this.fields = fields;
         this.segmentId = segmentId;
         this.setId = setId;

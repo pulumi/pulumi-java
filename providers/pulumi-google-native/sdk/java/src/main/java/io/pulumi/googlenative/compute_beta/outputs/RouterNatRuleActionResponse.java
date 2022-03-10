@@ -21,10 +21,10 @@ public final class RouterNatRuleActionResponse {
      */
     private final List<String> sourceNatDrainIps;
 
-    @OutputCustomType.Constructor({"sourceNatActiveIps","sourceNatDrainIps"})
+    @OutputCustomType.Constructor
     private RouterNatRuleActionResponse(
-        List<String> sourceNatActiveIps,
-        List<String> sourceNatDrainIps) {
+        @OutputCustomType.Parameter("sourceNatActiveIps") List<String> sourceNatActiveIps,
+        @OutputCustomType.Parameter("sourceNatDrainIps") List<String> sourceNatDrainIps) {
         this.sourceNatActiveIps = sourceNatActiveIps;
         this.sourceNatDrainIps = sourceNatDrainIps;
     }

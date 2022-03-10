@@ -123,29 +123,29 @@ public final class WorkerPoolResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoscalingSettings","dataDisks","defaultPackageSet","diskSizeGb","diskSourceImage","diskType","ipConfiguration","kind","machineType","metadata","network","numThreadsPerWorker","numWorkers","onHostMaintenance","packages","poolArgs","sdkHarnessContainerImages","subnetwork","taskrunnerSettings","teardownPolicy","zone"})
+    @OutputCustomType.Constructor
     private WorkerPoolResponse(
-        AutoscalingSettingsResponse autoscalingSettings,
-        List<DiskResponse> dataDisks,
-        String defaultPackageSet,
-        Integer diskSizeGb,
-        String diskSourceImage,
-        String diskType,
-        String ipConfiguration,
-        String kind,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        Integer numThreadsPerWorker,
-        Integer numWorkers,
-        String onHostMaintenance,
-        List<PackageResponse> packages,
-        Map<String,String> poolArgs,
-        List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
-        String subnetwork,
-        TaskRunnerSettingsResponse taskrunnerSettings,
-        String teardownPolicy,
-        String zone) {
+        @OutputCustomType.Parameter("autoscalingSettings") AutoscalingSettingsResponse autoscalingSettings,
+        @OutputCustomType.Parameter("dataDisks") List<DiskResponse> dataDisks,
+        @OutputCustomType.Parameter("defaultPackageSet") String defaultPackageSet,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskSourceImage") String diskSourceImage,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("numThreadsPerWorker") Integer numThreadsPerWorker,
+        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
+        @OutputCustomType.Parameter("poolArgs") Map<String,String> poolArgs,
+        @OutputCustomType.Parameter("sdkHarnessContainerImages") List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("taskrunnerSettings") TaskRunnerSettingsResponse taskrunnerSettings,
+        @OutputCustomType.Parameter("teardownPolicy") String teardownPolicy,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoscalingSettings = autoscalingSettings;
         this.dataDisks = dataDisks;
         this.defaultPackageSet = defaultPackageSet;

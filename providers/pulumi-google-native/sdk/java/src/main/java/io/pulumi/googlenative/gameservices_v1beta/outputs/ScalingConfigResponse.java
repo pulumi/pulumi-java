@@ -33,12 +33,12 @@ public final class ScalingConfigResponse {
      */
     private final List<LabelSelectorResponse> selectors;
 
-    @OutputCustomType.Constructor({"fleetAutoscalerSpec","name","schedules","selectors"})
+    @OutputCustomType.Constructor
     private ScalingConfigResponse(
-        String fleetAutoscalerSpec,
-        String name,
-        List<ScheduleResponse> schedules,
-        List<LabelSelectorResponse> selectors) {
+        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") List<ScheduleResponse> schedules,
+        @OutputCustomType.Parameter("selectors") List<LabelSelectorResponse> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;

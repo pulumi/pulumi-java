@@ -16,8 +16,8 @@ public final class LoggingConfigResponse {
      */
     private final Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private LoggingConfigResponse(Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private LoggingConfigResponse(@OutputCustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

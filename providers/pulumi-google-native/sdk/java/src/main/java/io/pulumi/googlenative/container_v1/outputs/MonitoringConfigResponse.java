@@ -15,8 +15,8 @@ public final class MonitoringConfigResponse {
      */
     private final MonitoringComponentConfigResponse componentConfig;
 
-    @OutputCustomType.Constructor({"componentConfig"})
-    private MonitoringConfigResponse(MonitoringComponentConfigResponse componentConfig) {
+    @OutputCustomType.Constructor
+    private MonitoringConfigResponse(@OutputCustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig) {
         this.componentConfig = componentConfig;
     }
 

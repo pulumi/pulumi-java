@@ -41,14 +41,14 @@ public final class HttpRedirectActionResponse {
      */
     private final Boolean stripQuery;
 
-    @OutputCustomType.Constructor({"hostRedirect","httpsRedirect","pathRedirect","prefixRedirect","redirectResponseCode","stripQuery"})
+    @OutputCustomType.Constructor
     private HttpRedirectActionResponse(
-        String hostRedirect,
-        Boolean httpsRedirect,
-        String pathRedirect,
-        String prefixRedirect,
-        String redirectResponseCode,
-        Boolean stripQuery) {
+        @OutputCustomType.Parameter("hostRedirect") String hostRedirect,
+        @OutputCustomType.Parameter("httpsRedirect") Boolean httpsRedirect,
+        @OutputCustomType.Parameter("pathRedirect") String pathRedirect,
+        @OutputCustomType.Parameter("prefixRedirect") String prefixRedirect,
+        @OutputCustomType.Parameter("redirectResponseCode") String redirectResponseCode,
+        @OutputCustomType.Parameter("stripQuery") Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;

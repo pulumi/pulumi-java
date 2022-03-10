@@ -20,10 +20,10 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"name","url"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceRepositoryResourceGooRepositoryResponse(
-        String name,
-        String url) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

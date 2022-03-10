@@ -21,10 +21,10 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse {
      */
     private final Map<String,String> policyOverlay;
 
-    @OutputCustomType.Constructor({"logSource","policyOverlay"})
+    @OutputCustomType.Constructor
     private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(
-        String logSource,
-        Map<String,String> policyOverlay) {
+        @OutputCustomType.Parameter("logSource") String logSource,
+        @OutputCustomType.Parameter("policyOverlay") Map<String,String> policyOverlay) {
         this.logSource = logSource;
         this.policyOverlay = policyOverlay;
     }

@@ -27,11 +27,11 @@ public final class GoogleCloudRunOpV2VolumeResponse {
      */
     private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor({"cloudSqlInstance","name","secret"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2VolumeResponse(
-        GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
-        String name,
-        GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
+        @OutputCustomType.Parameter("cloudSqlInstance") GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
         this.cloudSqlInstance = cloudSqlInstance;
         this.name = name;
         this.secret = secret;

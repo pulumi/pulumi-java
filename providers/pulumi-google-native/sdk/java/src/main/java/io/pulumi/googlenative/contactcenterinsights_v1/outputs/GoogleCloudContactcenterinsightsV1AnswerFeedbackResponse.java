@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
      */
     private final Boolean displayed;
 
-    @OutputCustomType.Constructor({"clicked","correctnessLevel","displayed"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(
-        Boolean clicked,
-        String correctnessLevel,
-        Boolean displayed) {
+        @OutputCustomType.Parameter("clicked") Boolean clicked,
+        @OutputCustomType.Parameter("correctnessLevel") String correctnessLevel,
+        @OutputCustomType.Parameter("displayed") Boolean displayed) {
         this.clicked = clicked;
         this.correctnessLevel = correctnessLevel;
         this.displayed = displayed;

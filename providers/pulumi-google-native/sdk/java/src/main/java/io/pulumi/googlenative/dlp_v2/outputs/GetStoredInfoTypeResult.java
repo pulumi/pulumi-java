@@ -27,11 +27,11 @@ public final class GetStoredInfoTypeResult {
      */
     private final List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions;
 
-    @OutputCustomType.Constructor({"currentVersion","name","pendingVersions"})
+    @OutputCustomType.Constructor
     private GetStoredInfoTypeResult(
-        GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
-        String name,
-        List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
+        @OutputCustomType.Parameter("currentVersion") GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pendingVersions") List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
         this.currentVersion = currentVersion;
         this.name = name;
         this.pendingVersions = pendingVersions;

@@ -28,11 +28,11 @@ public final class GetPhraseSetResult {
      */
     private final List<PhraseResponse> phrases;
 
-    @OutputCustomType.Constructor({"boost","name","phrases"})
+    @OutputCustomType.Constructor
     private GetPhraseSetResult(
-        Double boost,
-        String name,
-        List<PhraseResponse> phrases) {
+        @OutputCustomType.Parameter("boost") Double boost,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phrases") List<PhraseResponse> phrases) {
         this.boost = boost;
         this.name = name;
         this.phrases = phrases;

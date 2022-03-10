@@ -38,13 +38,13 @@ public final class BasicSliResponse {
      */
     private final List<String> version;
 
-    @OutputCustomType.Constructor({"availability","latency","location","method","version"})
+    @OutputCustomType.Constructor
     private BasicSliResponse(
-        AvailabilityCriteriaResponse availability,
-        LatencyCriteriaResponse latency,
-        List<String> location,
-        List<String> method,
-        List<String> version) {
+        @OutputCustomType.Parameter("availability") AvailabilityCriteriaResponse availability,
+        @OutputCustomType.Parameter("latency") LatencyCriteriaResponse latency,
+        @OutputCustomType.Parameter("location") List<String> location,
+        @OutputCustomType.Parameter("method") List<String> method,
+        @OutputCustomType.Parameter("version") List<String> version) {
         this.availability = availability;
         this.latency = latency;
         this.location = location;

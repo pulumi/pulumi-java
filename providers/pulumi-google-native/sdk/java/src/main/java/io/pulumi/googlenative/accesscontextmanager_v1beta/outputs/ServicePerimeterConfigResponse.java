@@ -32,12 +32,12 @@ public final class ServicePerimeterConfigResponse {
      */
     private final VpcAccessibleServicesResponse vpcAccessibleServices;
 
-    @OutputCustomType.Constructor({"accessLevels","resources","restrictedServices","vpcAccessibleServices"})
+    @OutputCustomType.Constructor
     private ServicePerimeterConfigResponse(
-        List<String> accessLevels,
-        List<String> resources,
-        List<String> restrictedServices,
-        VpcAccessibleServicesResponse vpcAccessibleServices) {
+        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
+        @OutputCustomType.Parameter("resources") List<String> resources,
+        @OutputCustomType.Parameter("restrictedServices") List<String> restrictedServices,
+        @OutputCustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.resources = resources;
         this.restrictedServices = restrictedServices;

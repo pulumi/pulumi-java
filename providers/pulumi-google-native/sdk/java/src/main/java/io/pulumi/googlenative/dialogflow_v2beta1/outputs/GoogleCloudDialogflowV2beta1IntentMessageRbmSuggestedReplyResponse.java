@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyRes
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"postbackData","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse(
-        String postbackData,
-        String text) {
+        @OutputCustomType.Parameter("postbackData") String postbackData,
+        @OutputCustomType.Parameter("text") String text) {
         this.postbackData = postbackData;
         this.text = text;
     }

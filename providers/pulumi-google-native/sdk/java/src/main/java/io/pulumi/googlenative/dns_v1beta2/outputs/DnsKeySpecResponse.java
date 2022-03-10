@@ -27,12 +27,12 @@ public final class DnsKeySpecResponse {
     private final String keyType;
     private final String kind;
 
-    @OutputCustomType.Constructor({"algorithm","keyLength","keyType","kind"})
+    @OutputCustomType.Constructor
     private DnsKeySpecResponse(
-        String algorithm,
-        Integer keyLength,
-        String keyType,
-        String kind) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("keyLength") Integer keyLength,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;

@@ -65,18 +65,18 @@ public final class GetScanConfigResult {
      */
     private final String userAgent;
 
-    @OutputCustomType.Constructor({"authentication","blacklistPatterns","displayName","latestRun","maxQps","name","schedule","startingUrls","targetPlatforms","userAgent"})
+    @OutputCustomType.Constructor
     private GetScanConfigResult(
-        AuthenticationResponse authentication,
-        List<String> blacklistPatterns,
-        String displayName,
-        ScanRunResponse latestRun,
-        Integer maxQps,
-        String name,
-        ScheduleResponse schedule,
-        List<String> startingUrls,
-        List<String> targetPlatforms,
-        String userAgent) {
+        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("blacklistPatterns") List<String> blacklistPatterns,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("latestRun") ScanRunResponse latestRun,
+        @OutputCustomType.Parameter("maxQps") Integer maxQps,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") ScheduleResponse schedule,
+        @OutputCustomType.Parameter("startingUrls") List<String> startingUrls,
+        @OutputCustomType.Parameter("targetPlatforms") List<String> targetPlatforms,
+        @OutputCustomType.Parameter("userAgent") String userAgent) {
         this.authentication = authentication;
         this.blacklistPatterns = blacklistPatterns;
         this.displayName = displayName;

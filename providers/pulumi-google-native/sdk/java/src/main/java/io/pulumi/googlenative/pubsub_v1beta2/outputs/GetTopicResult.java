@@ -15,8 +15,8 @@ public final class GetTopicResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetTopicResult(String name) {
+    @OutputCustomType.Constructor
+    private GetTopicResult(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

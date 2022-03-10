@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse {
      */
     private final GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec;
 
-    @OutputCustomType.Constructor({"bigqueryConnectionSpec"})
-    private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1DataSourceConnectionSpecResponse(@OutputCustomType.Parameter("bigqueryConnectionSpec") GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse bigqueryConnectionSpec) {
         this.bigqueryConnectionSpec = bigqueryConnectionSpec;
     }
 

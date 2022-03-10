@@ -20,10 +20,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
      */
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(
-        String nextRotationTime,
-        String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

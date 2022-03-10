@@ -56,16 +56,16 @@ public final class CertificateDescriptionResponse {
      */
     private final KeyIdResponse subjectKeyId;
 
-    @OutputCustomType.Constructor({"aiaIssuingCertificateUrls","authorityKeyId","certFingerprint","configValues","crlDistributionPoints","publicKey","subjectDescription","subjectKeyId"})
+    @OutputCustomType.Constructor
     private CertificateDescriptionResponse(
-        List<String> aiaIssuingCertificateUrls,
-        KeyIdResponse authorityKeyId,
-        CertificateFingerprintResponse certFingerprint,
-        ReusableConfigValuesResponse configValues,
-        List<String> crlDistributionPoints,
-        PublicKeyResponse publicKey,
-        SubjectDescriptionResponse subjectDescription,
-        KeyIdResponse subjectKeyId) {
+        @OutputCustomType.Parameter("aiaIssuingCertificateUrls") List<String> aiaIssuingCertificateUrls,
+        @OutputCustomType.Parameter("authorityKeyId") KeyIdResponse authorityKeyId,
+        @OutputCustomType.Parameter("certFingerprint") CertificateFingerprintResponse certFingerprint,
+        @OutputCustomType.Parameter("configValues") ReusableConfigValuesResponse configValues,
+        @OutputCustomType.Parameter("crlDistributionPoints") List<String> crlDistributionPoints,
+        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("subjectDescription") SubjectDescriptionResponse subjectDescription,
+        @OutputCustomType.Parameter("subjectKeyId") KeyIdResponse subjectKeyId) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyId = authorityKeyId;
         this.certFingerprint = certFingerprint;

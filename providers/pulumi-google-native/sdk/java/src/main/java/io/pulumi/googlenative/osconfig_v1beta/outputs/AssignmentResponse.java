@@ -38,13 +38,13 @@ public final class AssignmentResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"groupLabels","instanceNamePrefixes","instances","osTypes","zones"})
+    @OutputCustomType.Constructor
     private AssignmentResponse(
-        List<AssignmentGroupLabelResponse> groupLabels,
-        List<String> instanceNamePrefixes,
-        List<String> instances,
-        List<AssignmentOsTypeResponse> osTypes,
-        List<String> zones) {
+        @OutputCustomType.Parameter("groupLabels") List<AssignmentGroupLabelResponse> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("osTypes") List<AssignmentOsTypeResponse> osTypes,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
         this.instances = instances;

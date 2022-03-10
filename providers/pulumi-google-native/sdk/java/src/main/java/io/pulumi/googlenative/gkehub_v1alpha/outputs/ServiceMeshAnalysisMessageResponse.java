@@ -33,12 +33,12 @@ public final class ServiceMeshAnalysisMessageResponse {
      */
     private final List<String> resourcePaths;
 
-    @OutputCustomType.Constructor({"args","description","messageBase","resourcePaths"})
+    @OutputCustomType.Constructor
     private ServiceMeshAnalysisMessageResponse(
-        Map<String,String> args,
-        String description,
-        ServiceMeshAnalysisMessageBaseResponse messageBase,
-        List<String> resourcePaths) {
+        @OutputCustomType.Parameter("args") Map<String,String> args,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("messageBase") ServiceMeshAnalysisMessageBaseResponse messageBase,
+        @OutputCustomType.Parameter("resourcePaths") List<String> resourcePaths) {
         this.args = args;
         this.description = description;
         this.messageBase = messageBase;

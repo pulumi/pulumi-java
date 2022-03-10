@@ -20,10 +20,10 @@ public final class ImportFileResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"content","name"})
+    @OutputCustomType.Constructor
     private ImportFileResponse(
-        String content,
-        String name) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("name") String name) {
         this.content = content;
         this.name = name;
     }

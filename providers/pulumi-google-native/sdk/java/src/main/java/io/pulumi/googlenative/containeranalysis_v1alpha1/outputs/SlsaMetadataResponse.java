@@ -37,13 +37,13 @@ public final class SlsaMetadataResponse {
      */
     private final Boolean reproducible;
 
-    @OutputCustomType.Constructor({"buildFinishedOn","buildInvocationId","buildStartedOn","completeness","reproducible"})
+    @OutputCustomType.Constructor
     private SlsaMetadataResponse(
-        String buildFinishedOn,
-        String buildInvocationId,
-        String buildStartedOn,
-        SlsaCompletenessResponse completeness,
-        Boolean reproducible) {
+        @OutputCustomType.Parameter("buildFinishedOn") String buildFinishedOn,
+        @OutputCustomType.Parameter("buildInvocationId") String buildInvocationId,
+        @OutputCustomType.Parameter("buildStartedOn") String buildStartedOn,
+        @OutputCustomType.Parameter("completeness") SlsaCompletenessResponse completeness,
+        @OutputCustomType.Parameter("reproducible") Boolean reproducible) {
         this.buildFinishedOn = buildFinishedOn;
         this.buildInvocationId = buildInvocationId;
         this.buildStartedOn = buildStartedOn;

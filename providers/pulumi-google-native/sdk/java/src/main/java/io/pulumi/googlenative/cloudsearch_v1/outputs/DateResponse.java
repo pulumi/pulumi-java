@@ -25,11 +25,11 @@ public final class DateResponse {
      */
     private final Integer year;
 
-    @OutputCustomType.Constructor({"day","month","year"})
+    @OutputCustomType.Constructor
     private DateResponse(
-        Integer day,
-        Integer month,
-        Integer year) {
+        @OutputCustomType.Parameter("day") Integer day,
+        @OutputCustomType.Parameter("month") Integer month,
+        @OutputCustomType.Parameter("year") Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;

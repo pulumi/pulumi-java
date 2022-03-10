@@ -15,8 +15,8 @@ public final class SdsConfigResponse {
      */
     private final GrpcServiceConfigResponse grpcServiceConfig;
 
-    @OutputCustomType.Constructor({"grpcServiceConfig"})
-    private SdsConfigResponse(GrpcServiceConfigResponse grpcServiceConfig) {
+    @OutputCustomType.Constructor
+    private SdsConfigResponse(@OutputCustomType.Parameter("grpcServiceConfig") GrpcServiceConfigResponse grpcServiceConfig) {
         this.grpcServiceConfig = grpcServiceConfig;
     }
 

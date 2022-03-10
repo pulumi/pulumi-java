@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
      */
     private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
-    @OutputCustomType.Constructor({"userInput","virtualAgentOutput"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ConversationTurnResponse(
-        GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput,
-        GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
+        @OutputCustomType.Parameter("userInput") GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput,
+        @OutputCustomType.Parameter("virtualAgentOutput") GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
         this.userInput = userInput;
         this.virtualAgentOutput = virtualAgentOutput;
     }

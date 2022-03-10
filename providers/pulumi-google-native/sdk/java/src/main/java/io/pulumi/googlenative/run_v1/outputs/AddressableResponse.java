@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AddressableResponse {
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private AddressableResponse(String url) {
+    @OutputCustomType.Constructor
+    private AddressableResponse(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 

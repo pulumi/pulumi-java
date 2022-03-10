@@ -41,14 +41,14 @@ public final class WorkerSettingsResponse {
      */
     private final String workerId;
 
-    @OutputCustomType.Constructor({"baseUrl","reportingEnabled","servicePath","shuffleServicePath","tempStoragePrefix","workerId"})
+    @OutputCustomType.Constructor
     private WorkerSettingsResponse(
-        String baseUrl,
-        Boolean reportingEnabled,
-        String servicePath,
-        String shuffleServicePath,
-        String tempStoragePrefix,
-        String workerId) {
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("reportingEnabled") Boolean reportingEnabled,
+        @OutputCustomType.Parameter("servicePath") String servicePath,
+        @OutputCustomType.Parameter("shuffleServicePath") String shuffleServicePath,
+        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @OutputCustomType.Parameter("workerId") String workerId) {
         this.baseUrl = baseUrl;
         this.reportingEnabled = reportingEnabled;
         this.servicePath = servicePath;

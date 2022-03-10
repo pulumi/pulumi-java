@@ -28,11 +28,11 @@ public final class GetDomainMappingResult {
      */
     private final SslSettingsResponse sslSettings;
 
-    @OutputCustomType.Constructor({"name","resourceRecords","sslSettings"})
+    @OutputCustomType.Constructor
     private GetDomainMappingResult(
-        String name,
-        List<ResourceRecordResponse> resourceRecords,
-        SslSettingsResponse sslSettings) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @OutputCustomType.Parameter("sslSettings") SslSettingsResponse sslSettings) {
         this.name = name;
         this.resourceRecords = resourceRecords;
         this.sslSettings = sslSettings;

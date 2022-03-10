@@ -16,8 +16,8 @@ public final class SubordinateConfigChainResponse {
      */
     private final List<String> pemCertificates;
 
-    @OutputCustomType.Constructor({"pemCertificates"})
-    private SubordinateConfigChainResponse(List<String> pemCertificates) {
+    @OutputCustomType.Constructor
+    private SubordinateConfigChainResponse(@OutputCustomType.Parameter("pemCertificates") List<String> pemCertificates) {
         this.pemCertificates = pemCertificates;
     }
 

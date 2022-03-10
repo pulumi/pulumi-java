@@ -56,17 +56,17 @@ public final class GetExecutionResult {
      */
     private final String workflowRevisionId;
 
-    @OutputCustomType.Constructor({"argument","callLogLevel","endTime","error","name","result","startTime","state","workflowRevisionId"})
+    @OutputCustomType.Constructor
     private GetExecutionResult(
-        String argument,
-        String callLogLevel,
-        String endTime,
-        ErrorResponse error,
-        String name,
-        String result,
-        String startTime,
-        String state,
-        String workflowRevisionId) {
+        @OutputCustomType.Parameter("argument") String argument,
+        @OutputCustomType.Parameter("callLogLevel") String callLogLevel,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") ErrorResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workflowRevisionId") String workflowRevisionId) {
         this.argument = argument;
         this.callLogLevel = callLogLevel;
         this.endTime = endTime;

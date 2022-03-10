@@ -22,10 +22,10 @@ public final class BasicLevelResponse {
      */
     private final List<ConditionResponse> conditions;
 
-    @OutputCustomType.Constructor({"combiningFunction","conditions"})
+    @OutputCustomType.Constructor
     private BasicLevelResponse(
-        String combiningFunction,
-        List<ConditionResponse> conditions) {
+        @OutputCustomType.Parameter("combiningFunction") String combiningFunction,
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = conditions;
     }

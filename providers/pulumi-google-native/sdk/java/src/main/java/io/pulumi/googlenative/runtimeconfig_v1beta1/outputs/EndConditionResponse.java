@@ -15,8 +15,8 @@ public final class EndConditionResponse {
      */
     private final CardinalityResponse cardinality;
 
-    @OutputCustomType.Constructor({"cardinality"})
-    private EndConditionResponse(CardinalityResponse cardinality) {
+    @OutputCustomType.Constructor
+    private EndConditionResponse(@OutputCustomType.Parameter("cardinality") CardinalityResponse cardinality) {
         this.cardinality = cardinality;
     }
 

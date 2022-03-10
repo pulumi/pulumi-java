@@ -97,25 +97,25 @@ public final class GetServingConfigResult {
      */
     private final List<String> twowaySynonymsControlIds;
 
-    @OutputCustomType.Constructor({"boostControlIds","displayName","diversityLevel","doNotAssociateControlIds","dynamicFacetSpec","enableCategoryFilterLevel","facetControlIds","filterControlIds","ignoreControlIds","modelId","name","onewaySynonymsControlIds","priceRerankingLevel","redirectControlIds","replacementControlIds","solutionTypes","twowaySynonymsControlIds"})
+    @OutputCustomType.Constructor
     private GetServingConfigResult(
-        List<String> boostControlIds,
-        String displayName,
-        String diversityLevel,
-        List<String> doNotAssociateControlIds,
-        GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec,
-        String enableCategoryFilterLevel,
-        List<String> facetControlIds,
-        List<String> filterControlIds,
-        List<String> ignoreControlIds,
-        String modelId,
-        String name,
-        List<String> onewaySynonymsControlIds,
-        String priceRerankingLevel,
-        List<String> redirectControlIds,
-        List<String> replacementControlIds,
-        List<String> solutionTypes,
-        List<String> twowaySynonymsControlIds) {
+        @OutputCustomType.Parameter("boostControlIds") List<String> boostControlIds,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("diversityLevel") String diversityLevel,
+        @OutputCustomType.Parameter("doNotAssociateControlIds") List<String> doNotAssociateControlIds,
+        @OutputCustomType.Parameter("dynamicFacetSpec") GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse dynamicFacetSpec,
+        @OutputCustomType.Parameter("enableCategoryFilterLevel") String enableCategoryFilterLevel,
+        @OutputCustomType.Parameter("facetControlIds") List<String> facetControlIds,
+        @OutputCustomType.Parameter("filterControlIds") List<String> filterControlIds,
+        @OutputCustomType.Parameter("ignoreControlIds") List<String> ignoreControlIds,
+        @OutputCustomType.Parameter("modelId") String modelId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("onewaySynonymsControlIds") List<String> onewaySynonymsControlIds,
+        @OutputCustomType.Parameter("priceRerankingLevel") String priceRerankingLevel,
+        @OutputCustomType.Parameter("redirectControlIds") List<String> redirectControlIds,
+        @OutputCustomType.Parameter("replacementControlIds") List<String> replacementControlIds,
+        @OutputCustomType.Parameter("solutionTypes") List<String> solutionTypes,
+        @OutputCustomType.Parameter("twowaySynonymsControlIds") List<String> twowaySynonymsControlIds) {
         this.boostControlIds = boostControlIds;
         this.displayName = displayName;
         this.diversityLevel = diversityLevel;

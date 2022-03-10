@@ -25,11 +25,11 @@ public final class ResourceCommitmentResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"acceleratorType","amount","type"})
+    @OutputCustomType.Constructor
     private ResourceCommitmentResponse(
-        String acceleratorType,
-        String amount,
-        String type) {
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("amount") String amount,
+        @OutputCustomType.Parameter("type") String type) {
         this.acceleratorType = acceleratorType;
         this.amount = amount;
         this.type = type;

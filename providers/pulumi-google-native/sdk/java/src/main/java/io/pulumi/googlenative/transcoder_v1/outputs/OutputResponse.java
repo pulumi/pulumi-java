@@ -15,8 +15,8 @@ public final class OutputResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"uri"})
-    private OutputResponse(String uri) {
+    @OutputCustomType.Constructor
+    private OutputResponse(@OutputCustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

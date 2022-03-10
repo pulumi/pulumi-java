@@ -13,10 +13,10 @@ public final class ResourceStatusResponse {
     private final ResourceStatusSchedulingResponse scheduling;
     private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
-    @OutputCustomType.Constructor({"scheduling","upcomingMaintenance"})
+    @OutputCustomType.Constructor
     private ResourceStatusResponse(
-        ResourceStatusSchedulingResponse scheduling,
-        ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
+        @OutputCustomType.Parameter("scheduling") ResourceStatusSchedulingResponse scheduling,
+        @OutputCustomType.Parameter("upcomingMaintenance") ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
         this.scheduling = scheduling;
         this.upcomingMaintenance = upcomingMaintenance;
     }

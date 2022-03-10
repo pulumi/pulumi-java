@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2LDiversityResultResponse {
      */
     private final List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets;
 
-    @OutputCustomType.Constructor({"sensitiveValueFrequencyHistogramBuckets"})
-    private GooglePrivacyDlpV2LDiversityResultResponse(List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2LDiversityResultResponse(@OutputCustomType.Parameter("sensitiveValueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2LDiversityHistogramBucketResponse> sensitiveValueFrequencyHistogramBuckets) {
         this.sensitiveValueFrequencyHistogramBuckets = sensitiveValueFrequencyHistogramBuckets;
     }
 

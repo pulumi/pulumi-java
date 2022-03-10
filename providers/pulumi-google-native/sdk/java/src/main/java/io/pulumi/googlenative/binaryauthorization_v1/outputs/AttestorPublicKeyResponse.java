@@ -26,11 +26,11 @@ public final class AttestorPublicKeyResponse {
      */
     private final PkixPublicKeyResponse pkixPublicKey;
 
-    @OutputCustomType.Constructor({"asciiArmoredPgpPublicKey","comment","pkixPublicKey"})
+    @OutputCustomType.Constructor
     private AttestorPublicKeyResponse(
-        String asciiArmoredPgpPublicKey,
-        String comment,
-        PkixPublicKeyResponse pkixPublicKey) {
+        @OutputCustomType.Parameter("asciiArmoredPgpPublicKey") String asciiArmoredPgpPublicKey,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("pkixPublicKey") PkixPublicKeyResponse pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.pkixPublicKey = pkixPublicKey;

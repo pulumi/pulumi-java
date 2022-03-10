@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
      */
     private final DiscoveredResponse discovered;
 
-    @OutputCustomType.Constructor({"discovered"})
-    private GrafeasV1beta1DiscoveryDetailsResponse(DiscoveredResponse discovered) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1DiscoveryDetailsResponse(@OutputCustomType.Parameter("discovered") DiscoveredResponse discovered) {
         this.discovered = discovered;
     }
 

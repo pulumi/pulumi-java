@@ -21,10 +21,10 @@ public final class BuildTypeResponse {
      */
     private final BuildSignatureResponse signature;
 
-    @OutputCustomType.Constructor({"builderVersion","signature"})
+    @OutputCustomType.Constructor
     private BuildTypeResponse(
-        String builderVersion,
-        BuildSignatureResponse signature) {
+        @OutputCustomType.Parameter("builderVersion") String builderVersion,
+        @OutputCustomType.Parameter("signature") BuildSignatureResponse signature) {
         this.builderVersion = builderVersion;
         this.signature = signature;
     }

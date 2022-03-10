@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 
-    @OutputCustomType.Constructor({"variants"})
-    private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse(List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1VersionVariantsResponse(@OutputCustomType.Parameter("variants") List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants) {
         this.variants = variants;
     }
 

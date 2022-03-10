@@ -30,12 +30,12 @@ public final class SlsaProvenanceResponse {
      */
     private final SlsaRecipeResponse recipe;
 
-    @OutputCustomType.Constructor({"builder","materials","metadata","recipe"})
+    @OutputCustomType.Constructor
     private SlsaProvenanceResponse(
-        SlsaBuilderResponse builder,
-        List<MaterialResponse> materials,
-        SlsaMetadataResponse metadata,
-        SlsaRecipeResponse recipe) {
+        @OutputCustomType.Parameter("builder") SlsaBuilderResponse builder,
+        @OutputCustomType.Parameter("materials") List<MaterialResponse> materials,
+        @OutputCustomType.Parameter("metadata") SlsaMetadataResponse metadata,
+        @OutputCustomType.Parameter("recipe") SlsaRecipeResponse recipe) {
         this.builder = builder;
         this.materials = materials;
         this.metadata = metadata;

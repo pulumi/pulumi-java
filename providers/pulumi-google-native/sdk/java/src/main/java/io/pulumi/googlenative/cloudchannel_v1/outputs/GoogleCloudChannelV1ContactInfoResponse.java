@@ -40,14 +40,14 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"displayName","email","firstName","lastName","phone","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ContactInfoResponse(
-        String displayName,
-        String email,
-        String firstName,
-        String lastName,
-        String phone,
-        String title) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("firstName") String firstName,
+        @OutputCustomType.Parameter("lastName") String lastName,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("title") String title) {
         this.displayName = displayName;
         this.email = email;
         this.firstName = firstName;

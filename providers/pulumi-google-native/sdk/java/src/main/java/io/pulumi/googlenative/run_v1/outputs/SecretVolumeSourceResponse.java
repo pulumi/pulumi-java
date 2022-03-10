@@ -34,12 +34,12 @@ public final class SecretVolumeSourceResponse {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"defaultMode","items","optional","secretName"})
+    @OutputCustomType.Constructor
     private SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<KeyToPathResponse> items,
-        Boolean optional,
-        String secretName) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<KeyToPathResponse> items,
+        @OutputCustomType.Parameter("optional") Boolean optional,
+        @OutputCustomType.Parameter("secretName") String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.optional = optional;

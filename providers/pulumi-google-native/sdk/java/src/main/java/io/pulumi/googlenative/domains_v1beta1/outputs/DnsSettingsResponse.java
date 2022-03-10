@@ -28,11 +28,11 @@ public final class DnsSettingsResponse {
      */
     private final GoogleDomainsDnsResponse googleDomainsDns;
 
-    @OutputCustomType.Constructor({"customDns","glueRecords","googleDomainsDns"})
+    @OutputCustomType.Constructor
     private DnsSettingsResponse(
-        CustomDnsResponse customDns,
-        List<GlueRecordResponse> glueRecords,
-        GoogleDomainsDnsResponse googleDomainsDns) {
+        @OutputCustomType.Parameter("customDns") CustomDnsResponse customDns,
+        @OutputCustomType.Parameter("glueRecords") List<GlueRecordResponse> glueRecords,
+        @OutputCustomType.Parameter("googleDomainsDns") GoogleDomainsDnsResponse googleDomainsDns) {
         this.customDns = customDns;
         this.glueRecords = glueRecords;
         this.googleDomainsDns = googleDomainsDns;

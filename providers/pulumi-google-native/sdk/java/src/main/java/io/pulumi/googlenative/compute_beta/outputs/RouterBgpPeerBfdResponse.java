@@ -31,12 +31,12 @@ public final class RouterBgpPeerBfdResponse {
      */
     private final String sessionInitializationMode;
 
-    @OutputCustomType.Constructor({"minReceiveInterval","minTransmitInterval","multiplier","sessionInitializationMode"})
+    @OutputCustomType.Constructor
     private RouterBgpPeerBfdResponse(
-        Integer minReceiveInterval,
-        Integer minTransmitInterval,
-        Integer multiplier,
-        String sessionInitializationMode) {
+        @OutputCustomType.Parameter("minReceiveInterval") Integer minReceiveInterval,
+        @OutputCustomType.Parameter("minTransmitInterval") Integer minTransmitInterval,
+        @OutputCustomType.Parameter("multiplier") Integer multiplier,
+        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;

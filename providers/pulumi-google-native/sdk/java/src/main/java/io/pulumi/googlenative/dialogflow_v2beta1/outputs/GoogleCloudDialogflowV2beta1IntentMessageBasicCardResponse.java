@@ -38,13 +38,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","formattedText","image","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
-        String formattedText,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("formattedText") String formattedText,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.formattedText = formattedText;
         this.image = image;

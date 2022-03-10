@@ -43,14 +43,14 @@ public final class ConditionResponse {
      */
     private final List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor({"devicePolicy","ipSubnetworks","members","negate","regions","requiredAccessLevels"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        DevicePolicyResponse devicePolicy,
-        List<String> ipSubnetworks,
-        List<String> members,
-        Boolean negate,
-        List<String> regions,
-        List<String> requiredAccessLevels) {
+        @OutputCustomType.Parameter("devicePolicy") DevicePolicyResponse devicePolicy,
+        @OutputCustomType.Parameter("ipSubnetworks") List<String> ipSubnetworks,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("negate") Boolean negate,
+        @OutputCustomType.Parameter("regions") List<String> regions,
+        @OutputCustomType.Parameter("requiredAccessLevels") List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;

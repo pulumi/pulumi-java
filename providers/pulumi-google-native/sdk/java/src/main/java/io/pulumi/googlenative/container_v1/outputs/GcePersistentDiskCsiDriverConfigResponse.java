@@ -15,8 +15,8 @@ public final class GcePersistentDiskCsiDriverConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GcePersistentDiskCsiDriverConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GcePersistentDiskCsiDriverConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -20,10 +20,10 @@ public final class FleetConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"fleetSpec","name"})
+    @OutputCustomType.Constructor
     private FleetConfigResponse(
-        String fleetSpec,
-        String name) {
+        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
+        @OutputCustomType.Parameter("name") String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }

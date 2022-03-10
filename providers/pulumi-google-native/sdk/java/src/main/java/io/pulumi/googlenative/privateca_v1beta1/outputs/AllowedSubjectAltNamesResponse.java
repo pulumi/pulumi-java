@@ -42,14 +42,14 @@ public final class AllowedSubjectAltNamesResponse {
      */
     private final List<String> allowedUris;
 
-    @OutputCustomType.Constructor({"allowCustomSans","allowGlobbingDnsWildcards","allowedDnsNames","allowedEmailAddresses","allowedIps","allowedUris"})
+    @OutputCustomType.Constructor
     private AllowedSubjectAltNamesResponse(
-        Boolean allowCustomSans,
-        Boolean allowGlobbingDnsWildcards,
-        List<String> allowedDnsNames,
-        List<String> allowedEmailAddresses,
-        List<String> allowedIps,
-        List<String> allowedUris) {
+        @OutputCustomType.Parameter("allowCustomSans") Boolean allowCustomSans,
+        @OutputCustomType.Parameter("allowGlobbingDnsWildcards") Boolean allowGlobbingDnsWildcards,
+        @OutputCustomType.Parameter("allowedDnsNames") List<String> allowedDnsNames,
+        @OutputCustomType.Parameter("allowedEmailAddresses") List<String> allowedEmailAddresses,
+        @OutputCustomType.Parameter("allowedIps") List<String> allowedIps,
+        @OutputCustomType.Parameter("allowedUris") List<String> allowedUris) {
         this.allowCustomSans = allowCustomSans;
         this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
         this.allowedDnsNames = allowedDnsNames;

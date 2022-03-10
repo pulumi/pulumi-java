@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
      */
     private final Boolean redact;
 
-    @OutputCustomType.Constructor({"entityType","isList","redact"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3IntentParameterResponse(
-        String entityType,
-        Boolean isList,
-        Boolean redact) {
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("isList") Boolean isList,
+        @OutputCustomType.Parameter("redact") Boolean redact) {
         this.entityType = entityType;
         this.isList = isList;
         this.redact = redact;

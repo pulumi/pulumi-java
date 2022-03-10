@@ -26,11 +26,11 @@ public final class StandardSqlDataTypeResponse {
      */
     private final String typeKind;
 
-    @OutputCustomType.Constructor({"arrayElementType","structType","typeKind"})
+    @OutputCustomType.Constructor
     private StandardSqlDataTypeResponse(
-        StandardSqlDataTypeResponse arrayElementType,
-        StandardSqlStructTypeResponse structType,
-        String typeKind) {
+        @OutputCustomType.Parameter("arrayElementType") StandardSqlDataTypeResponse arrayElementType,
+        @OutputCustomType.Parameter("structType") StandardSqlStructTypeResponse structType,
+        @OutputCustomType.Parameter("typeKind") String typeKind) {
         this.arrayElementType = arrayElementType;
         this.structType = structType;
         this.typeKind = typeKind;

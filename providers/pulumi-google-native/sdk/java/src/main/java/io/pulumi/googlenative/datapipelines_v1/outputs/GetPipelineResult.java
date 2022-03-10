@@ -69,19 +69,19 @@ public final class GetPipelineResult {
      */
     private final GoogleCloudDatapipelinesV1WorkloadResponse workload;
 
-    @OutputCustomType.Constructor({"createTime","displayName","jobCount","lastUpdateTime","name","pipelineSources","scheduleInfo","schedulerServiceAccountEmail","state","type","workload"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        String createTime,
-        String displayName,
-        Integer jobCount,
-        String lastUpdateTime,
-        String name,
-        Map<String,String> pipelineSources,
-        GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo,
-        String schedulerServiceAccountEmail,
-        String state,
-        String type,
-        GoogleCloudDatapipelinesV1WorkloadResponse workload) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("jobCount") Integer jobCount,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pipelineSources") Map<String,String> pipelineSources,
+        @OutputCustomType.Parameter("scheduleInfo") GoogleCloudDatapipelinesV1ScheduleSpecResponse scheduleInfo,
+        @OutputCustomType.Parameter("schedulerServiceAccountEmail") String schedulerServiceAccountEmail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workload") GoogleCloudDatapipelinesV1WorkloadResponse workload) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.jobCount = jobCount;

@@ -21,11 +21,11 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
     private final String ipv4Address;
     private final String kind;
 
-    @OutputCustomType.Constructor({"forwardingPath","ipv4Address","kind"})
+    @OutputCustomType.Constructor
     private PolicyAlternativeNameServerConfigTargetNameServerResponse(
-        String forwardingPath,
-        String ipv4Address,
-        String kind) {
+        @OutputCustomType.Parameter("forwardingPath") String forwardingPath,
+        @OutputCustomType.Parameter("ipv4Address") String ipv4Address,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
         this.kind = kind;

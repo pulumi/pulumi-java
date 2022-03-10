@@ -21,10 +21,10 @@ public final class AuthenticatorGroupsConfigResponse {
      */
     private final String securityGroup;
 
-    @OutputCustomType.Constructor({"enabled","securityGroup"})
+    @OutputCustomType.Constructor
     private AuthenticatorGroupsConfigResponse(
-        Boolean enabled,
-        String securityGroup) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("securityGroup") String securityGroup) {
         this.enabled = enabled;
         this.securityGroup = securityGroup;
     }

@@ -20,10 +20,10 @@ public final class SecretVersionResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"path","version"})
+    @OutputCustomType.Constructor
     private SecretVersionResponse(
-        String path,
-        String version) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("version") String version) {
         this.path = path;
         this.version = version;
     }

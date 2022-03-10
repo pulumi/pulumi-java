@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse {
      */
     private final String intentUniqueId;
 
-    @OutputCustomType.Constructor({"intentUniqueId"})
-    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(String intentUniqueId) {
+    @OutputCustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(@OutputCustomType.Parameter("intentUniqueId") String intentUniqueId) {
         this.intentUniqueId = intentUniqueId;
     }
 

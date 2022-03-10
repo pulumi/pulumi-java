@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
      */
     private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
-    @OutputCustomType.Constructor({"operationConfigType","operationConfigs"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1OperationGroupResponse(
-        String operationConfigType,
-        List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
+        @OutputCustomType.Parameter("operationConfigType") String operationConfigType,
+        @OutputCustomType.Parameter("operationConfigs") List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
         this.operationConfigType = operationConfigType;
         this.operationConfigs = operationConfigs;
     }

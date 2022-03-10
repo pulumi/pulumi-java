@@ -49,15 +49,15 @@ public final class GetFlowResult {
      */
     private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor({"description","displayName","eventHandlers","name","nluSettings","transitionRouteGroups","transitionRoutes"})
+    @OutputCustomType.Constructor
     private GetFlowResult(
-        String description,
-        String displayName,
-        List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
-        String name,
-        GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
-        List<String> transitionRouteGroups,
-        List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3NluSettingsResponse nluSettings,
+        @OutputCustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
+        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
         this.description = description;
         this.displayName = displayName;
         this.eventHandlers = eventHandlers;

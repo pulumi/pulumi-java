@@ -20,10 +20,10 @@ public final class ToolResultsHistoryResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"historyId","project"})
+    @OutputCustomType.Constructor
     private ToolResultsHistoryResponse(
-        String historyId,
-        String project) {
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("project") String project) {
         this.historyId = historyId;
         this.project = project;
     }

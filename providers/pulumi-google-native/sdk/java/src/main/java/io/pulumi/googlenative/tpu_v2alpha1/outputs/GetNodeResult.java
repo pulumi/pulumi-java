@@ -113,27 +113,27 @@ public final class GetNodeResult {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"acceleratorType","apiVersion","cidrBlock","createTime","dataDisks","description","health","healthDescription","labels","metadata","name","networkConfig","networkEndpoints","runtimeVersion","schedulingConfig","serviceAccount","state","symptoms","tags"})
+    @OutputCustomType.Constructor
     private GetNodeResult(
-        String acceleratorType,
-        String apiVersion,
-        String cidrBlock,
-        String createTime,
-        List<AttachedDiskResponse> dataDisks,
-        String description,
-        String health,
-        String healthDescription,
-        Map<String,String> labels,
-        Map<String,String> metadata,
-        String name,
-        NetworkConfigResponse networkConfig,
-        List<NetworkEndpointResponse> networkEndpoints,
-        String runtimeVersion,
-        SchedulingConfigResponse schedulingConfig,
-        ServiceAccountResponse serviceAccount,
-        String state,
-        List<SymptomResponse> symptoms,
-        List<String> tags) {
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataDisks") List<AttachedDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthDescription") String healthDescription,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
+        @OutputCustomType.Parameter("serviceAccount") ServiceAccountResponse serviceAccount,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.acceleratorType = acceleratorType;
         this.apiVersion = apiVersion;
         this.cidrBlock = cidrBlock;

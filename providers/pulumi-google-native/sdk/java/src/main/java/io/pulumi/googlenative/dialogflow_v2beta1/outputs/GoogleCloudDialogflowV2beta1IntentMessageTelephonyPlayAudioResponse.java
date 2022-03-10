@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
      */
     private final String audioUri;
 
-    @OutputCustomType.Constructor({"audioUri"})
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(String audioUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(@OutputCustomType.Parameter("audioUri") String audioUri) {
         this.audioUri = audioUri;
     }
 

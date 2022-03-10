@@ -68,19 +68,19 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      */
     private final String vmImage;
 
-    @OutputCustomType.Constructor({"accelerator","diskSizeGb","diskType","labels","machineType","maxConcurrentActions","minCpuPlatform","networkAccess","reserved","soleTenantNodeType","vmImage"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator,
-        String diskSizeGb,
-        String diskType,
-        Map<String,String> labels,
-        String machineType,
-        String maxConcurrentActions,
-        String minCpuPlatform,
-        String networkAccess,
-        Boolean reserved,
-        String soleTenantNodeType,
-        String vmImage) {
+        @OutputCustomType.Parameter("accelerator") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxConcurrentActions") String maxConcurrentActions,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("networkAccess") String networkAccess,
+        @OutputCustomType.Parameter("reserved") Boolean reserved,
+        @OutputCustomType.Parameter("soleTenantNodeType") String soleTenantNodeType,
+        @OutputCustomType.Parameter("vmImage") String vmImage) {
         this.accelerator = accelerator;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

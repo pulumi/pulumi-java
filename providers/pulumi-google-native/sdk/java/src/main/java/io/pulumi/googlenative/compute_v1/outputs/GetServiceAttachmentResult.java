@@ -100,25 +100,25 @@ public final class GetServiceAttachmentResult {
      */
     private final String targetService;
 
-    @OutputCustomType.Constructor({"connectedEndpoints","connectionPreference","consumerAcceptLists","consumerRejectLists","creationTimestamp","description","domainNames","enableProxyProtocol","fingerprint","kind","name","natSubnets","producerForwardingRule","pscServiceAttachmentId","region","selfLink","targetService"})
+    @OutputCustomType.Constructor
     private GetServiceAttachmentResult(
-        List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints,
-        String connectionPreference,
-        List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists,
-        List<String> consumerRejectLists,
-        String creationTimestamp,
-        String description,
-        List<String> domainNames,
-        Boolean enableProxyProtocol,
-        String fingerprint,
-        String kind,
-        String name,
-        List<String> natSubnets,
-        String producerForwardingRule,
-        Uint128Response pscServiceAttachmentId,
-        String region,
-        String selfLink,
-        String targetService) {
+        @OutputCustomType.Parameter("connectedEndpoints") List<ServiceAttachmentConnectedEndpointResponse> connectedEndpoints,
+        @OutputCustomType.Parameter("connectionPreference") String connectionPreference,
+        @OutputCustomType.Parameter("consumerAcceptLists") List<ServiceAttachmentConsumerProjectLimitResponse> consumerAcceptLists,
+        @OutputCustomType.Parameter("consumerRejectLists") List<String> consumerRejectLists,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("domainNames") List<String> domainNames,
+        @OutputCustomType.Parameter("enableProxyProtocol") Boolean enableProxyProtocol,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natSubnets") List<String> natSubnets,
+        @OutputCustomType.Parameter("producerForwardingRule") String producerForwardingRule,
+        @OutputCustomType.Parameter("pscServiceAttachmentId") Uint128Response pscServiceAttachmentId,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("targetService") String targetService) {
         this.connectedEndpoints = connectedEndpoints;
         this.connectionPreference = connectionPreference;
         this.consumerAcceptLists = consumerAcceptLists;

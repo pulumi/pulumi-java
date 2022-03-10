@@ -42,14 +42,14 @@ public final class MonitoredResourceDescriptorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","displayName","labels","launchStage","name","type"})
+    @OutputCustomType.Constructor
     private MonitoredResourceDescriptorResponse(
-        String description,
-        String displayName,
-        List<LabelDescriptorResponse> labels,
-        String launchStage,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @OutputCustomType.Parameter("launchStage") String launchStage,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

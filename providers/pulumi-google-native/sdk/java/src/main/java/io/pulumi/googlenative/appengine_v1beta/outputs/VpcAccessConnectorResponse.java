@@ -20,10 +20,10 @@ public final class VpcAccessConnectorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"egressSetting","name"})
+    @OutputCustomType.Constructor
     private VpcAccessConnectorResponse(
-        String egressSetting,
-        String name) {
+        @OutputCustomType.Parameter("egressSetting") String egressSetting,
+        @OutputCustomType.Parameter("name") String name) {
         this.egressSetting = egressSetting;
         this.name = name;
     }

@@ -20,10 +20,10 @@ public final class ContainerImageResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"repository","tag"})
+    @OutputCustomType.Constructor
     private ContainerImageResponse(
-        String repository,
-        String tag) {
+        @OutputCustomType.Parameter("repository") String repository,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.repository = repository;
         this.tag = tag;
     }

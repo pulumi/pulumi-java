@@ -45,15 +45,15 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
 
-    @OutputCustomType.Constructor({"excludedFields","identifyingFields","includedFields","rowsLimit","rowsLimitPercent","sampleMethod","tableReference"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2BigQueryOptionsResponse(
-        List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
-        List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
-        List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
-        String rowsLimit,
-        Integer rowsLimitPercent,
-        String sampleMethod,
-        GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
+        @OutputCustomType.Parameter("excludedFields") List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
+        @OutputCustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
+        @OutputCustomType.Parameter("includedFields") List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
+        @OutputCustomType.Parameter("rowsLimit") String rowsLimit,
+        @OutputCustomType.Parameter("rowsLimitPercent") Integer rowsLimitPercent,
+        @OutputCustomType.Parameter("sampleMethod") String sampleMethod,
+        @OutputCustomType.Parameter("tableReference") GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
         this.excludedFields = excludedFields;
         this.identifyingFields = identifyingFields;
         this.includedFields = includedFields;

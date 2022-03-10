@@ -43,14 +43,14 @@ public final class DocumentationResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor({"documentationRootUrl","overview","pages","rules","serviceRootUrl","summary"})
+    @OutputCustomType.Constructor
     private DocumentationResponse(
-        String documentationRootUrl,
-        String overview,
-        List<PageResponse> pages,
-        List<DocumentationRuleResponse> rules,
-        String serviceRootUrl,
-        String summary) {
+        @OutputCustomType.Parameter("documentationRootUrl") String documentationRootUrl,
+        @OutputCustomType.Parameter("overview") String overview,
+        @OutputCustomType.Parameter("pages") List<PageResponse> pages,
+        @OutputCustomType.Parameter("rules") List<DocumentationRuleResponse> rules,
+        @OutputCustomType.Parameter("serviceRootUrl") String serviceRootUrl,
+        @OutputCustomType.Parameter("summary") String summary) {
         this.documentationRootUrl = documentationRootUrl;
         this.overview = overview;
         this.pages = pages;

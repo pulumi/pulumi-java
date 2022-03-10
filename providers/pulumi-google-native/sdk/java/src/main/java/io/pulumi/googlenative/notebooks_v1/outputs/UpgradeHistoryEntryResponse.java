@@ -60,18 +60,18 @@ public final class UpgradeHistoryEntryResponse {
      */
     private final String vmImage;
 
-    @OutputCustomType.Constructor({"action","containerImage","createTime","framework","snapshot","state","targetImage","targetVersion","version","vmImage"})
+    @OutputCustomType.Constructor
     private UpgradeHistoryEntryResponse(
-        String action,
-        String containerImage,
-        String createTime,
-        String framework,
-        String snapshot,
-        String state,
-        String targetImage,
-        String targetVersion,
-        String version,
-        String vmImage) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("snapshot") String snapshot,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("targetImage") String targetImage,
+        @OutputCustomType.Parameter("targetVersion") String targetVersion,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmImage") String vmImage) {
         this.action = action;
         this.containerImage = containerImage;
         this.createTime = createTime;

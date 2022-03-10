@@ -33,12 +33,12 @@ public final class ExecStepConfigResponse {
      */
     private final String localPath;
 
-    @OutputCustomType.Constructor({"allowedSuccessCodes","gcsObject","interpreter","localPath"})
+    @OutputCustomType.Constructor
     private ExecStepConfigResponse(
-        List<Integer> allowedSuccessCodes,
-        GcsObjectResponse gcsObject,
-        String interpreter,
-        String localPath) {
+        @OutputCustomType.Parameter("allowedSuccessCodes") List<Integer> allowedSuccessCodes,
+        @OutputCustomType.Parameter("gcsObject") GcsObjectResponse gcsObject,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("localPath") String localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;

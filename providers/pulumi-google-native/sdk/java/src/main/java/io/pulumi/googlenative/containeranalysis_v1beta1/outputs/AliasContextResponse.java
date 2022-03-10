@@ -20,10 +20,10 @@ public final class AliasContextResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"kind","name"})
+    @OutputCustomType.Constructor
     private AliasContextResponse(
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.kind = kind;
         this.name = name;
     }

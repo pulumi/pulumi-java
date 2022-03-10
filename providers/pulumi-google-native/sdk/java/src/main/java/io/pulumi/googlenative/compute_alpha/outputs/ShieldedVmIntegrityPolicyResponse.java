@@ -15,8 +15,8 @@ public final class ShieldedVmIntegrityPolicyResponse {
      */
     private final Boolean updateAutoLearnPolicy;
 
-    @OutputCustomType.Constructor({"updateAutoLearnPolicy"})
-    private ShieldedVmIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
+    @OutputCustomType.Constructor
+    private ShieldedVmIntegrityPolicyResponse(@OutputCustomType.Parameter("updateAutoLearnPolicy") Boolean updateAutoLearnPolicy) {
         this.updateAutoLearnPolicy = updateAutoLearnPolicy;
     }
 

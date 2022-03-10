@@ -47,15 +47,15 @@ public final class StaticFilesHandlerResponse {
      */
     private final String uploadPathRegex;
 
-    @OutputCustomType.Constructor({"applicationReadable","expiration","httpHeaders","mimeType","path","requireMatchingFile","uploadPathRegex"})
+    @OutputCustomType.Constructor
     private StaticFilesHandlerResponse(
-        Boolean applicationReadable,
-        String expiration,
-        Map<String,String> httpHeaders,
-        String mimeType,
-        String path,
-        Boolean requireMatchingFile,
-        String uploadPathRegex) {
+        @OutputCustomType.Parameter("applicationReadable") Boolean applicationReadable,
+        @OutputCustomType.Parameter("expiration") String expiration,
+        @OutputCustomType.Parameter("httpHeaders") Map<String,String> httpHeaders,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("requireMatchingFile") Boolean requireMatchingFile,
+        @OutputCustomType.Parameter("uploadPathRegex") String uploadPathRegex) {
         this.applicationReadable = applicationReadable;
         this.expiration = expiration;
         this.httpHeaders = httpHeaders;

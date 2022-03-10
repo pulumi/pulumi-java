@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final Boolean dropVirtualAgentMessages;
 
-    @OutputCustomType.Constructor({"dropHandoffMessages","dropIvrMessages","dropVirtualAgentMessages"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(
-        Boolean dropHandoffMessages,
-        Boolean dropIvrMessages,
-        Boolean dropVirtualAgentMessages) {
+        @OutputCustomType.Parameter("dropHandoffMessages") Boolean dropHandoffMessages,
+        @OutputCustomType.Parameter("dropIvrMessages") Boolean dropIvrMessages,
+        @OutputCustomType.Parameter("dropVirtualAgentMessages") Boolean dropVirtualAgentMessages) {
         this.dropHandoffMessages = dropHandoffMessages;
         this.dropIvrMessages = dropIvrMessages;
         this.dropVirtualAgentMessages = dropVirtualAgentMessages;

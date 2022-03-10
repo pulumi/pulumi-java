@@ -57,17 +57,17 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String webServerIpv4ReservedRange;
 
-    @OutputCustomType.Constructor({"cloudComposerConnectionSubnetwork","cloudComposerNetworkIpv4CidrBlock","cloudComposerNetworkIpv4ReservedRange","cloudSqlIpv4CidrBlock","enablePrivateEnvironment","enablePrivatelyUsedPublicIps","privateClusterConfig","webServerIpv4CidrBlock","webServerIpv4ReservedRange"})
+    @OutputCustomType.Constructor
     private PrivateEnvironmentConfigResponse(
-        String cloudComposerConnectionSubnetwork,
-        String cloudComposerNetworkIpv4CidrBlock,
-        String cloudComposerNetworkIpv4ReservedRange,
-        String cloudSqlIpv4CidrBlock,
-        Boolean enablePrivateEnvironment,
-        Boolean enablePrivatelyUsedPublicIps,
-        PrivateClusterConfigResponse privateClusterConfig,
-        String webServerIpv4CidrBlock,
-        String webServerIpv4ReservedRange) {
+        @OutputCustomType.Parameter("cloudComposerConnectionSubnetwork") String cloudComposerConnectionSubnetwork,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
+        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
+        @OutputCustomType.Parameter("enablePrivateEnvironment") Boolean enablePrivateEnvironment,
+        @OutputCustomType.Parameter("enablePrivatelyUsedPublicIps") Boolean enablePrivatelyUsedPublicIps,
+        @OutputCustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
+        @OutputCustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
+        @OutputCustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;

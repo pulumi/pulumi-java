@@ -34,12 +34,12 @@ public final class GetModelIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetModelIamPolicyResult(
-        List<GoogleIamV1__AuditConfigResponse> auditConfigs,
-        List<GoogleIamV1__BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<GoogleIamV1__AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<GoogleIamV1__BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

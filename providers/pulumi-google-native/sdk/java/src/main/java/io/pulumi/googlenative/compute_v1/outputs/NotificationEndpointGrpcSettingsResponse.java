@@ -37,13 +37,13 @@ public final class NotificationEndpointGrpcSettingsResponse {
      */
     private final Integer retryDurationSec;
 
-    @OutputCustomType.Constructor({"authority","endpoint","payloadName","resendInterval","retryDurationSec"})
+    @OutputCustomType.Constructor
     private NotificationEndpointGrpcSettingsResponse(
-        String authority,
-        String endpoint,
-        String payloadName,
-        DurationResponse resendInterval,
-        Integer retryDurationSec) {
+        @OutputCustomType.Parameter("authority") String authority,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("payloadName") String payloadName,
+        @OutputCustomType.Parameter("resendInterval") DurationResponse resendInterval,
+        @OutputCustomType.Parameter("retryDurationSec") Integer retryDurationSec) {
         this.authority = authority;
         this.endpoint = endpoint;
         this.payloadName = payloadName;

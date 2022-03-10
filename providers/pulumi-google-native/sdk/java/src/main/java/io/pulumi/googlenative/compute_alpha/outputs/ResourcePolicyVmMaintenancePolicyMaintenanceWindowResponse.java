@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
     private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
-    @OutputCustomType.Constructor({"dailyMaintenanceWindow"})
-    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(@OutputCustomType.Parameter("dailyMaintenanceWindow") ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
 

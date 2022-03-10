@@ -20,10 +20,10 @@ public final class CertificateRawDataResponse {
      */
     private final String publicCertificate;
 
-    @OutputCustomType.Constructor({"privateKey","publicCertificate"})
+    @OutputCustomType.Constructor
     private CertificateRawDataResponse(
-        String privateKey,
-        String publicCertificate) {
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("publicCertificate") String publicCertificate) {
         this.privateKey = privateKey;
         this.publicCertificate = publicCertificate;
     }

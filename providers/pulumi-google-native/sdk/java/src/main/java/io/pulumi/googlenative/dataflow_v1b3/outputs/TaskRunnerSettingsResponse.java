@@ -108,27 +108,27 @@ public final class TaskRunnerSettingsResponse {
      */
     private final String workflowFileName;
 
-    @OutputCustomType.Constructor({"alsologtostderr","baseTaskDir","baseUrl","commandlinesFileName","continueOnException","dataflowApiVersion","harnessCommand","languageHint","logDir","logToSerialconsole","logUploadLocation","oauthScopes","parallelWorkerSettings","streamingWorkerMainClass","taskGroup","taskUser","tempStoragePrefix","vmId","workflowFileName"})
+    @OutputCustomType.Constructor
     private TaskRunnerSettingsResponse(
-        Boolean alsologtostderr,
-        String baseTaskDir,
-        String baseUrl,
-        String commandlinesFileName,
-        Boolean continueOnException,
-        String dataflowApiVersion,
-        String harnessCommand,
-        String languageHint,
-        String logDir,
-        Boolean logToSerialconsole,
-        String logUploadLocation,
-        List<String> oauthScopes,
-        WorkerSettingsResponse parallelWorkerSettings,
-        String streamingWorkerMainClass,
-        String taskGroup,
-        String taskUser,
-        String tempStoragePrefix,
-        String vmId,
-        String workflowFileName) {
+        @OutputCustomType.Parameter("alsologtostderr") Boolean alsologtostderr,
+        @OutputCustomType.Parameter("baseTaskDir") String baseTaskDir,
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("commandlinesFileName") String commandlinesFileName,
+        @OutputCustomType.Parameter("continueOnException") Boolean continueOnException,
+        @OutputCustomType.Parameter("dataflowApiVersion") String dataflowApiVersion,
+        @OutputCustomType.Parameter("harnessCommand") String harnessCommand,
+        @OutputCustomType.Parameter("languageHint") String languageHint,
+        @OutputCustomType.Parameter("logDir") String logDir,
+        @OutputCustomType.Parameter("logToSerialconsole") Boolean logToSerialconsole,
+        @OutputCustomType.Parameter("logUploadLocation") String logUploadLocation,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("parallelWorkerSettings") WorkerSettingsResponse parallelWorkerSettings,
+        @OutputCustomType.Parameter("streamingWorkerMainClass") String streamingWorkerMainClass,
+        @OutputCustomType.Parameter("taskGroup") String taskGroup,
+        @OutputCustomType.Parameter("taskUser") String taskUser,
+        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("workflowFileName") String workflowFileName) {
         this.alsologtostderr = alsologtostderr;
         this.baseTaskDir = baseTaskDir;
         this.baseUrl = baseUrl;

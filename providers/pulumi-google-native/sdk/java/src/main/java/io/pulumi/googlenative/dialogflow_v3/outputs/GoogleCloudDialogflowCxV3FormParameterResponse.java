@@ -48,15 +48,15 @@ public final class GoogleCloudDialogflowCxV3FormParameterResponse {
      */
     private final Boolean required;
 
-    @OutputCustomType.Constructor({"defaultValue","displayName","entityType","fillBehavior","isList","redact","required"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3FormParameterResponse(
-        Object defaultValue,
-        String displayName,
-        String entityType,
-        GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior,
-        Boolean isList,
-        Boolean redact,
-        Boolean required) {
+        @OutputCustomType.Parameter("defaultValue") Object defaultValue,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("fillBehavior") GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse fillBehavior,
+        @OutputCustomType.Parameter("isList") Boolean isList,
+        @OutputCustomType.Parameter("redact") Boolean redact,
+        @OutputCustomType.Parameter("required") Boolean required) {
         this.defaultValue = defaultValue;
         this.displayName = displayName;
         this.entityType = entityType;

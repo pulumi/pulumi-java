@@ -34,12 +34,12 @@ public final class GetDicomStoreResult {
      */
     private final List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs;
 
-    @OutputCustomType.Constructor({"labels","name","notificationConfig","streamConfigs"})
+    @OutputCustomType.Constructor
     private GetDicomStoreResult(
-        Map<String,String> labels,
-        String name,
-        NotificationConfigResponse notificationConfig,
-        List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("streamConfigs") List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
         this.labels = labels;
         this.name = name;
         this.notificationConfig = notificationConfig;

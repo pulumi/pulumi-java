@@ -30,12 +30,12 @@ public final class AuthorityResponse {
      */
     private final String workloadIdentityPool;
 
-    @OutputCustomType.Constructor({"identityProvider","issuer","oidcJwks","workloadIdentityPool"})
+    @OutputCustomType.Constructor
     private AuthorityResponse(
-        String identityProvider,
-        String issuer,
-        String oidcJwks,
-        String workloadIdentityPool) {
+        @OutputCustomType.Parameter("identityProvider") String identityProvider,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("oidcJwks") String oidcJwks,
+        @OutputCustomType.Parameter("workloadIdentityPool") String workloadIdentityPool) {
         this.identityProvider = identityProvider;
         this.issuer = issuer;
         this.oidcJwks = oidcJwks;

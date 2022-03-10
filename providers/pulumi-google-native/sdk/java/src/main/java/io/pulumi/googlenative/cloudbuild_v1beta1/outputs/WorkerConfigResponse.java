@@ -26,11 +26,11 @@ public final class WorkerConfigResponse {
      */
     private final Boolean noExternalIp;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","noExternalIp"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        Boolean noExternalIp) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("noExternalIp") Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;

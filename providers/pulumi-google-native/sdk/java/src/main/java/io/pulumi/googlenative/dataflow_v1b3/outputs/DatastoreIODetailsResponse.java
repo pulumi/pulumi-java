@@ -20,10 +20,10 @@ public final class DatastoreIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"namespace","project"})
+    @OutputCustomType.Constructor
     private DatastoreIODetailsResponse(
-        String namespace,
-        String project) {
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("project") String project) {
         this.namespace = namespace;
         this.project = project;
     }

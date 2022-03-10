@@ -32,12 +32,12 @@ public final class TableDataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"minAlignmentPeriod","tableDisplayOptions","tableTemplate","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private TableDataSetResponse(
-        String minAlignmentPeriod,
-        TableDisplayOptionsResponse tableDisplayOptions,
-        String tableTemplate,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @OutputCustomType.Parameter("tableDisplayOptions") TableDisplayOptionsResponse tableDisplayOptions,
+        @OutputCustomType.Parameter("tableTemplate") String tableTemplate,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.tableDisplayOptions = tableDisplayOptions;
         this.tableTemplate = tableTemplate;

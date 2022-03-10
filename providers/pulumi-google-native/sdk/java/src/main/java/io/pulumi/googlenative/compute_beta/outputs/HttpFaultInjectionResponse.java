@@ -21,10 +21,10 @@ public final class HttpFaultInjectionResponse {
      */
     private final HttpFaultDelayResponse delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private HttpFaultInjectionResponse(
-        HttpFaultAbortResponse abort,
-        HttpFaultDelayResponse delay) {
+        @OutputCustomType.Parameter("abort") HttpFaultAbortResponse abort,
+        @OutputCustomType.Parameter("delay") HttpFaultDelayResponse delay) {
         this.abort = abort;
         this.delay = delay;
     }

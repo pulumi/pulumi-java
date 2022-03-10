@@ -26,11 +26,11 @@ public final class PullRequestFilterResponse {
      */
     private final Boolean invertRegex;
 
-    @OutputCustomType.Constructor({"branch","commentControl","invertRegex"})
+    @OutputCustomType.Constructor
     private PullRequestFilterResponse(
-        String branch,
-        String commentControl,
-        Boolean invertRegex) {
+        @OutputCustomType.Parameter("branch") String branch,
+        @OutputCustomType.Parameter("commentControl") String commentControl,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;

@@ -23,12 +23,12 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse {
      */
     private final List<String> signatureRrdatas;
 
-    @OutputCustomType.Constructor({"kind","location","rrdatas","signatureRrdatas"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(
-        String kind,
-        String location,
-        List<String> rrdatas,
-        List<String> signatureRrdatas) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
+        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas) {
         this.kind = kind;
         this.location = location;
         this.rrdatas = rrdatas;

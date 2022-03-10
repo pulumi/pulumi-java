@@ -50,15 +50,15 @@ public final class GetBudgetResult {
      */
     private final List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules;
 
-    @OutputCustomType.Constructor({"amount","budgetFilter","displayName","etag","name","notificationsRule","thresholdRules"})
+    @OutputCustomType.Constructor
     private GetBudgetResult(
-        GoogleCloudBillingBudgetsV1BudgetAmountResponse amount,
-        GoogleCloudBillingBudgetsV1FilterResponse budgetFilter,
-        String displayName,
-        String etag,
-        String name,
-        GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule,
-        List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
+        @OutputCustomType.Parameter("amount") GoogleCloudBillingBudgetsV1BudgetAmountResponse amount,
+        @OutputCustomType.Parameter("budgetFilter") GoogleCloudBillingBudgetsV1FilterResponse budgetFilter,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationsRule") GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule,
+        @OutputCustomType.Parameter("thresholdRules") List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
         this.amount = amount;
         this.budgetFilter = budgetFilter;
         this.displayName = displayName;

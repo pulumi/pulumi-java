@@ -36,13 +36,13 @@ public final class GetNotificationConfigResult {
      */
     private final StreamingConfigResponse streamingConfig;
 
-    @OutputCustomType.Constructor({"description","name","pubsubTopic","serviceAccount","streamingConfig"})
+    @OutputCustomType.Constructor
     private GetNotificationConfigResult(
-        String description,
-        String name,
-        String pubsubTopic,
-        String serviceAccount,
-        StreamingConfigResponse streamingConfig) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("streamingConfig") StreamingConfigResponse streamingConfig) {
         this.description = description;
         this.name = name;
         this.pubsubTopic = pubsubTopic;

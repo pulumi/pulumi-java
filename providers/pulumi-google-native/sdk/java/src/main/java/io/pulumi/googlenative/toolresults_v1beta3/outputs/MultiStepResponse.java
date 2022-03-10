@@ -27,11 +27,11 @@ public final class MultiStepResponse {
      */
     private final String primaryStepId;
 
-    @OutputCustomType.Constructor({"multistepNumber","primaryStep","primaryStepId"})
+    @OutputCustomType.Constructor
     private MultiStepResponse(
-        Integer multistepNumber,
-        PrimaryStepResponse primaryStep,
-        String primaryStepId) {
+        @OutputCustomType.Parameter("multistepNumber") Integer multistepNumber,
+        @OutputCustomType.Parameter("primaryStep") PrimaryStepResponse primaryStep,
+        @OutputCustomType.Parameter("primaryStepId") String primaryStepId) {
         this.multistepNumber = multistepNumber;
         this.primaryStep = primaryStep;
         this.primaryStepId = primaryStepId;

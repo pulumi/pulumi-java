@@ -31,12 +31,12 @@ public final class ContactSettingsResponse {
      */
     private final ContactResponse technicalContact;
 
-    @OutputCustomType.Constructor({"adminContact","privacy","registrantContact","technicalContact"})
+    @OutputCustomType.Constructor
     private ContactSettingsResponse(
-        ContactResponse adminContact,
-        String privacy,
-        ContactResponse registrantContact,
-        ContactResponse technicalContact) {
+        @OutputCustomType.Parameter("adminContact") ContactResponse adminContact,
+        @OutputCustomType.Parameter("privacy") String privacy,
+        @OutputCustomType.Parameter("registrantContact") ContactResponse registrantContact,
+        @OutputCustomType.Parameter("technicalContact") ContactResponse technicalContact) {
         this.adminContact = adminContact;
         this.privacy = privacy;
         this.registrantContact = registrantContact;

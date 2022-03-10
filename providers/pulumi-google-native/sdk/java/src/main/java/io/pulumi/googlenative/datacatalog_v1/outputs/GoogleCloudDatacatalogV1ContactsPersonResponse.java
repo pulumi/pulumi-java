@@ -20,10 +20,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor({"designation","email"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1ContactsPersonResponse(
-        String designation,
-        String email) {
+        @OutputCustomType.Parameter("designation") String designation,
+        @OutputCustomType.Parameter("email") String email) {
         this.designation = designation;
         this.email = email;
     }

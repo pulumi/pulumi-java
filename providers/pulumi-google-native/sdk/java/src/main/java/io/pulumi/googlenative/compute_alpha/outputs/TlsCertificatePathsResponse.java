@@ -20,10 +20,10 @@ public final class TlsCertificatePathsResponse {
      */
     private final String privateKeyPath;
 
-    @OutputCustomType.Constructor({"certificatePath","privateKeyPath"})
+    @OutputCustomType.Constructor
     private TlsCertificatePathsResponse(
-        String certificatePath,
-        String privateKeyPath) {
+        @OutputCustomType.Parameter("certificatePath") String certificatePath,
+        @OutputCustomType.Parameter("privateKeyPath") String privateKeyPath) {
         this.certificatePath = certificatePath;
         this.privateKeyPath = privateKeyPath;
     }

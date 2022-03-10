@@ -27,11 +27,11 @@ public final class ConfigMapEnvSourceResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReference","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapEnvSourceResponse(
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.name = name;
         this.optional = optional;

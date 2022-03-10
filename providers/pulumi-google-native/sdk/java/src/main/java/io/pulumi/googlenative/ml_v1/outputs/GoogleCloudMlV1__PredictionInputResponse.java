@@ -71,20 +71,20 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor({"batchSize","dataFormat","inputPaths","maxWorkerCount","modelName","outputDataFormat","outputPath","region","runtimeVersion","signatureName","uri","versionName"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__PredictionInputResponse(
-        String batchSize,
-        String dataFormat,
-        List<String> inputPaths,
-        String maxWorkerCount,
-        String modelName,
-        String outputDataFormat,
-        String outputPath,
-        String region,
-        String runtimeVersion,
-        String signatureName,
-        String uri,
-        String versionName) {
+        @OutputCustomType.Parameter("batchSize") String batchSize,
+        @OutputCustomType.Parameter("dataFormat") String dataFormat,
+        @OutputCustomType.Parameter("inputPaths") List<String> inputPaths,
+        @OutputCustomType.Parameter("maxWorkerCount") String maxWorkerCount,
+        @OutputCustomType.Parameter("modelName") String modelName,
+        @OutputCustomType.Parameter("outputDataFormat") String outputDataFormat,
+        @OutputCustomType.Parameter("outputPath") String outputPath,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("signatureName") String signatureName,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("versionName") String versionName) {
         this.batchSize = batchSize;
         this.dataFormat = dataFormat;
         this.inputPaths = inputPaths;

@@ -21,10 +21,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
      */
     private final Boolean effective;
 
-    @OutputCustomType.Constructor({"currentRevision","effective"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatusAllInstancesConfigResponse(
-        String currentRevision,
-        Boolean effective) {
+        @OutputCustomType.Parameter("currentRevision") String currentRevision,
+        @OutputCustomType.Parameter("effective") Boolean effective) {
         this.currentRevision = currentRevision;
         this.effective = effective;
     }

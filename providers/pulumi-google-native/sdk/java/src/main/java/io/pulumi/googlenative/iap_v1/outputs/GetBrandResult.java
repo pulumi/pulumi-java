@@ -31,12 +31,12 @@ public final class GetBrandResult {
      */
     private final String supportEmail;
 
-    @OutputCustomType.Constructor({"applicationTitle","name","orgInternalOnly","supportEmail"})
+    @OutputCustomType.Constructor
     private GetBrandResult(
-        String applicationTitle,
-        String name,
-        Boolean orgInternalOnly,
-        String supportEmail) {
+        @OutputCustomType.Parameter("applicationTitle") String applicationTitle,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orgInternalOnly") Boolean orgInternalOnly,
+        @OutputCustomType.Parameter("supportEmail") String supportEmail) {
         this.applicationTitle = applicationTitle;
         this.name = name;
         this.orgInternalOnly = orgInternalOnly;

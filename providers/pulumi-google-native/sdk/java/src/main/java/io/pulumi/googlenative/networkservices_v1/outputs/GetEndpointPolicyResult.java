@@ -68,19 +68,19 @@ public final class GetEndpointPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authorizationPolicy","clientTlsPolicy","createTime","description","endpointMatcher","labels","name","serverTlsPolicy","trafficPortSelector","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetEndpointPolicyResult(
-        String authorizationPolicy,
-        String clientTlsPolicy,
-        String createTime,
-        String description,
-        EndpointMatcherResponse endpointMatcher,
-        Map<String,String> labels,
-        String name,
-        String serverTlsPolicy,
-        TrafficPortSelectorResponse trafficPortSelector,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("authorizationPolicy") String authorizationPolicy,
+        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointMatcher") EndpointMatcherResponse endpointMatcher,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverTlsPolicy") String serverTlsPolicy,
+        @OutputCustomType.Parameter("trafficPortSelector") TrafficPortSelectorResponse trafficPortSelector,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authorizationPolicy = authorizationPolicy;
         this.clientTlsPolicy = clientTlsPolicy;
         this.createTime = createTime;

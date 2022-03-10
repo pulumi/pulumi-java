@@ -53,16 +53,16 @@ public final class HadoopJobResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","loggingConfig","mainClass","mainJarFileUri","properties"})
+    @OutputCustomType.Constructor
     private HadoopJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainClass,
-        String mainJarFileUri,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("mainClass") String mainClass,
+        @OutputCustomType.Parameter("mainJarFileUri") String mainJarFileUri,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

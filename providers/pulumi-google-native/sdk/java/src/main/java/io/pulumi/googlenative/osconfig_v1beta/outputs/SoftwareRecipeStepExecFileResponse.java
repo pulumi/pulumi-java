@@ -32,12 +32,12 @@ public final class SoftwareRecipeStepExecFileResponse {
      */
     private final String localPath;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","args","artifactId","localPath"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepExecFileResponse(
-        List<Integer> allowedExitCodes,
-        List<String> args,
-        String artifactId,
-        String localPath) {
+        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("localPath") String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;

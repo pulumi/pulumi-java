@@ -51,16 +51,16 @@ public final class GetBackupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"encryptionInfo","endTime","expireTime","name","sizeBytes","sourceTable","startTime","state"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        EncryptionInfoResponse encryptionInfo,
-        String endTime,
-        String expireTime,
-        String name,
-        String sizeBytes,
-        String sourceTable,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.encryptionInfo = encryptionInfo;
         this.endTime = endTime;
         this.expireTime = expireTime;

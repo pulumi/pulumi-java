@@ -72,20 +72,20 @@ public final class GetBackupResult {
      */
     private final String storageBytes;
 
-    @OutputCustomType.Constructor({"capacityGb","createTime","description","downloadBytes","labels","name","satisfiesPzs","sourceFileShare","sourceInstance","sourceInstanceTier","state","storageBytes"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        String capacityGb,
-        String createTime,
-        String description,
-        String downloadBytes,
-        Map<String,String> labels,
-        String name,
-        Boolean satisfiesPzs,
-        String sourceFileShare,
-        String sourceInstance,
-        String sourceInstanceTier,
-        String state,
-        String storageBytes) {
+        @OutputCustomType.Parameter("capacityGb") String capacityGb,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("downloadBytes") String downloadBytes,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("sourceFileShare") String sourceFileShare,
+        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
+        @OutputCustomType.Parameter("sourceInstanceTier") String sourceInstanceTier,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes) {
         this.capacityGb = capacityGb;
         this.createTime = createTime;
         this.description = description;

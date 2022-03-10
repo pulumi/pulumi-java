@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"placeIds","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaFulfillmentInfoResponse(
-        List<String> placeIds,
-        String type) {
+        @OutputCustomType.Parameter("placeIds") List<String> placeIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.placeIds = placeIds;
         this.type = type;
     }

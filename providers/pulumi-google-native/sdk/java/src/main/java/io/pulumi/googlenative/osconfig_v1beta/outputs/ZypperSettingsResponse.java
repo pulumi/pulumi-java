@@ -42,14 +42,14 @@ public final class ZypperSettingsResponse {
      */
     private final Boolean withUpdate;
 
-    @OutputCustomType.Constructor({"categories","excludes","exclusivePatches","severities","withOptional","withUpdate"})
+    @OutputCustomType.Constructor
     private ZypperSettingsResponse(
-        List<String> categories,
-        List<String> excludes,
-        List<String> exclusivePatches,
-        List<String> severities,
-        Boolean withOptional,
-        Boolean withUpdate) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches,
+        @OutputCustomType.Parameter("severities") List<String> severities,
+        @OutputCustomType.Parameter("withOptional") Boolean withOptional,
+        @OutputCustomType.Parameter("withUpdate") Boolean withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

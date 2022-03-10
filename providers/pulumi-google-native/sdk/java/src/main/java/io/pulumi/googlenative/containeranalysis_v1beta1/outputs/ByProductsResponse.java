@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ByProductsResponse {
     private final Map<String,String> customValues;
 
-    @OutputCustomType.Constructor({"customValues"})
-    private ByProductsResponse(Map<String,String> customValues) {
+    @OutputCustomType.Constructor
+    private ByProductsResponse(@OutputCustomType.Parameter("customValues") Map<String,String> customValues) {
         this.customValues = customValues;
     }
 

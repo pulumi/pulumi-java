@@ -40,14 +40,14 @@ public final class InternalCheckerResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"displayName","gcpZone","name","network","peerProjectId","state"})
+    @OutputCustomType.Constructor
     private InternalCheckerResponse(
-        String displayName,
-        String gcpZone,
-        String name,
-        String network,
-        String peerProjectId,
-        String state) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("gcpZone") String gcpZone,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("peerProjectId") String peerProjectId,
+        @OutputCustomType.Parameter("state") String state) {
         this.displayName = displayName;
         this.gcpZone = gcpZone;
         this.name = name;

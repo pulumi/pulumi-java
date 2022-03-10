@@ -22,10 +22,10 @@ public final class ScriptStatisticsResponse {
      */
     private final List<ScriptStackFrameResponse> stackFrames;
 
-    @OutputCustomType.Constructor({"evaluationKind","stackFrames"})
+    @OutputCustomType.Constructor
     private ScriptStatisticsResponse(
-        String evaluationKind,
-        List<ScriptStackFrameResponse> stackFrames) {
+        @OutputCustomType.Parameter("evaluationKind") String evaluationKind,
+        @OutputCustomType.Parameter("stackFrames") List<ScriptStackFrameResponse> stackFrames) {
         this.evaluationKind = evaluationKind;
         this.stackFrames = stackFrames;
     }

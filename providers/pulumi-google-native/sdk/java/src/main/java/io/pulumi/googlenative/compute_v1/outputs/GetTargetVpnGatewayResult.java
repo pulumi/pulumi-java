@@ -61,18 +61,18 @@ public final class GetTargetVpnGatewayResult {
      */
     private final List<String> tunnels;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","forwardingRules","kind","name","network","region","selfLink","status","tunnels"})
+    @OutputCustomType.Constructor
     private GetTargetVpnGatewayResult(
-        String creationTimestamp,
-        String description,
-        List<String> forwardingRules,
-        String kind,
-        String name,
-        String network,
-        String region,
-        String selfLink,
-        String status,
-        List<String> tunnels) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("forwardingRules") List<String> forwardingRules,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tunnels") List<String> tunnels) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.forwardingRules = forwardingRules;

@@ -30,12 +30,12 @@ public final class AndroidAppInfoResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor({"name","packageName","versionCode","versionName"})
+    @OutputCustomType.Constructor
     private AndroidAppInfoResponse(
-        String name,
-        String packageName,
-        String versionCode,
-        String versionName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageName") String packageName,
+        @OutputCustomType.Parameter("versionCode") String versionCode,
+        @OutputCustomType.Parameter("versionName") String versionName) {
         this.name = name;
         this.packageName = packageName;
         this.versionCode = versionCode;

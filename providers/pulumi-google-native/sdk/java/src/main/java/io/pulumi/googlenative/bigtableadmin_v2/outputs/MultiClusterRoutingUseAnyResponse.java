@@ -16,8 +16,8 @@ public final class MultiClusterRoutingUseAnyResponse {
      */
     private final List<String> clusterIds;
 
-    @OutputCustomType.Constructor({"clusterIds"})
-    private MultiClusterRoutingUseAnyResponse(List<String> clusterIds) {
+    @OutputCustomType.Constructor
+    private MultiClusterRoutingUseAnyResponse(@OutputCustomType.Parameter("clusterIds") List<String> clusterIds) {
         this.clusterIds = clusterIds;
     }
 

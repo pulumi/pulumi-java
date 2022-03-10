@@ -31,12 +31,12 @@ public final class GetAgentPoolResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"bandwidthLimit","displayName","name","state"})
+    @OutputCustomType.Constructor
     private GetAgentPoolResult(
-        BandwidthLimitResponse bandwidthLimit,
-        String displayName,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("bandwidthLimit") BandwidthLimitResponse bandwidthLimit,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.bandwidthLimit = bandwidthLimit;
         this.displayName = displayName;
         this.name = name;

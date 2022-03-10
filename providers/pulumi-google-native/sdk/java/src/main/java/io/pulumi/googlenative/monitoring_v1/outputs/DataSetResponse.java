@@ -36,13 +36,13 @@ public final class DataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"legendTemplate","minAlignmentPeriod","plotType","targetAxis","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private DataSetResponse(
-        String legendTemplate,
-        String minAlignmentPeriod,
-        String plotType,
-        String targetAxis,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("legendTemplate") String legendTemplate,
+        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @OutputCustomType.Parameter("plotType") String plotType,
+        @OutputCustomType.Parameter("targetAxis") String targetAxis,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.legendTemplate = legendTemplate;
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.plotType = plotType;

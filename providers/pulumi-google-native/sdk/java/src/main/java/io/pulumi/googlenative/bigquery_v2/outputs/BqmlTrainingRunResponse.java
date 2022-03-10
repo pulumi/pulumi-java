@@ -33,12 +33,12 @@ public final class BqmlTrainingRunResponse {
      */
     private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
-    @OutputCustomType.Constructor({"iterationResults","startTime","state","trainingOptions"})
+    @OutputCustomType.Constructor
     private BqmlTrainingRunResponse(
-        List<BqmlIterationResultResponse> iterationResults,
-        String startTime,
-        String state,
-        BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
+        @OutputCustomType.Parameter("iterationResults") List<BqmlIterationResultResponse> iterationResults,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trainingOptions") BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
         this.iterationResults = iterationResults;
         this.startTime = startTime;
         this.state = state;

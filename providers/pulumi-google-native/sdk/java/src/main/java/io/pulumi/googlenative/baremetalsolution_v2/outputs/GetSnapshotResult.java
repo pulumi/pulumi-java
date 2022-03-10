@@ -35,13 +35,13 @@ public final class GetSnapshotResult {
      */
     private final String storageVolume;
 
-    @OutputCustomType.Constructor({"createTime","description","name","sizeBytes","storageVolume"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String createTime,
-        String description,
-        String name,
-        String sizeBytes,
-        String storageVolume) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("storageVolume") String storageVolume) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

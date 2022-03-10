@@ -34,12 +34,12 @@ public final class TestExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor({"testIssues","testSuiteOverviews","testTiming","toolExecution"})
+    @OutputCustomType.Constructor
     private TestExecutionStepResponse(
-        List<TestIssueResponse> testIssues,
-        List<TestSuiteOverviewResponse> testSuiteOverviews,
-        TestTimingResponse testTiming,
-        ToolExecutionResponse toolExecution) {
+        @OutputCustomType.Parameter("testIssues") List<TestIssueResponse> testIssues,
+        @OutputCustomType.Parameter("testSuiteOverviews") List<TestSuiteOverviewResponse> testSuiteOverviews,
+        @OutputCustomType.Parameter("testTiming") TestTimingResponse testTiming,
+        @OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.testIssues = testIssues;
         this.testSuiteOverviews = testSuiteOverviews;
         this.testTiming = testTiming;

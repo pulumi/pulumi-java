@@ -25,11 +25,11 @@ public final class HttpFilterConfigResponse {
      */
     private final String filterName;
 
-    @OutputCustomType.Constructor({"config","configTypeUrl","filterName"})
+    @OutputCustomType.Constructor
     private HttpFilterConfigResponse(
-        String config,
-        String configTypeUrl,
-        String filterName) {
+        @OutputCustomType.Parameter("config") String config,
+        @OutputCustomType.Parameter("configTypeUrl") String configTypeUrl,
+        @OutputCustomType.Parameter("filterName") String filterName) {
         this.config = config;
         this.configTypeUrl = configTypeUrl;
         this.filterName = filterName;

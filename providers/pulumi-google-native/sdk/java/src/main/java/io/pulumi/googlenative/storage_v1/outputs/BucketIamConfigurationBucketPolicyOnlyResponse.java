@@ -21,10 +21,10 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse {
      */
     private final String lockedTime;
 
-    @OutputCustomType.Constructor({"enabled","lockedTime"})
+    @OutputCustomType.Constructor
     private BucketIamConfigurationBucketPolicyOnlyResponse(
-        Boolean enabled,
-        String lockedTime) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("lockedTime") String lockedTime) {
         this.enabled = enabled;
         this.lockedTime = lockedTime;
     }

@@ -25,11 +25,11 @@ public final class SdkVersionResponse {
      */
     private final String versionDisplayName;
 
-    @OutputCustomType.Constructor({"sdkSupportStatus","version","versionDisplayName"})
+    @OutputCustomType.Constructor
     private SdkVersionResponse(
-        String sdkSupportStatus,
-        String version,
-        String versionDisplayName) {
+        @OutputCustomType.Parameter("sdkSupportStatus") String sdkSupportStatus,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionDisplayName") String versionDisplayName) {
         this.sdkSupportStatus = sdkSupportStatus;
         this.version = version;
         this.versionDisplayName = versionDisplayName;

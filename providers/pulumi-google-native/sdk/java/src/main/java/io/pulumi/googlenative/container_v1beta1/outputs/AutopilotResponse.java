@@ -15,8 +15,8 @@ public final class AutopilotResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private AutopilotResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private AutopilotResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -21,10 +21,10 @@ public final class CommonFeatureStateResponse {
      */
     private final FeatureStateResponse state;
 
-    @OutputCustomType.Constructor({"appdevexperience","state"})
+    @OutputCustomType.Constructor
     private CommonFeatureStateResponse(
-        AppDevExperienceFeatureStateResponse appdevexperience,
-        FeatureStateResponse state) {
+        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureStateResponse appdevexperience,
+        @OutputCustomType.Parameter("state") FeatureStateResponse state) {
         this.appdevexperience = appdevexperience;
         this.state = state;
     }

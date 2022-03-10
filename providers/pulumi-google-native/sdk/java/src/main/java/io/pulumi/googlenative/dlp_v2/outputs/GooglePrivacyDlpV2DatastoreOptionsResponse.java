@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
      */
     private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
-    @OutputCustomType.Constructor({"kind","partitionId"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DatastoreOptionsResponse(
-        GooglePrivacyDlpV2KindExpressionResponse kind,
-        GooglePrivacyDlpV2PartitionIdResponse partitionId) {
+        @OutputCustomType.Parameter("kind") GooglePrivacyDlpV2KindExpressionResponse kind,
+        @OutputCustomType.Parameter("partitionId") GooglePrivacyDlpV2PartitionIdResponse partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }

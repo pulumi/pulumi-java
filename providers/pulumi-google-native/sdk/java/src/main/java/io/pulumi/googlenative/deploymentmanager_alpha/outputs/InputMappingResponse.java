@@ -30,12 +30,12 @@ public final class InputMappingResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"fieldName","location","methodMatch","value"})
+    @OutputCustomType.Constructor
     private InputMappingResponse(
-        String fieldName,
-        String location,
-        String methodMatch,
-        String value) {
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("methodMatch") String methodMatch,
+        @OutputCustomType.Parameter("value") String value) {
         this.fieldName = fieldName;
         this.location = location;
         this.methodMatch = methodMatch;

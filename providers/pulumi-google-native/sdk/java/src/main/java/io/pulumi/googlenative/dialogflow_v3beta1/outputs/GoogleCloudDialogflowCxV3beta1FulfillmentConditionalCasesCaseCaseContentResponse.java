@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      */
     private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
-    @OutputCustomType.Constructor({"additionalCases","message"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse(
-        GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases,
-        GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
+        @OutputCustomType.Parameter("additionalCases") GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases,
+        @OutputCustomType.Parameter("message") GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message) {
         this.additionalCases = additionalCases;
         this.message = message;
     }

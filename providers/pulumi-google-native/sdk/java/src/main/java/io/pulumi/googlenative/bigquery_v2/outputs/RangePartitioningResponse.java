@@ -21,10 +21,10 @@ public final class RangePartitioningResponse {
      */
     private final RangePartitioningRangeResponse range;
 
-    @OutputCustomType.Constructor({"field","range"})
+    @OutputCustomType.Constructor
     private RangePartitioningResponse(
-        String field,
-        RangePartitioningRangeResponse range) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("range") RangePartitioningRangeResponse range) {
         this.field = field;
         this.range = range;
     }

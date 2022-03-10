@@ -15,8 +15,8 @@ public final class KubernetesDashboardResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private KubernetesDashboardResponse(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private KubernetesDashboardResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

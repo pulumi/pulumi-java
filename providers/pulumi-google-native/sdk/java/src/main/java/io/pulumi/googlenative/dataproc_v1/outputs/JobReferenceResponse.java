@@ -20,10 +20,10 @@ public final class JobReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"jobId","project"})
+    @OutputCustomType.Constructor
     private JobReferenceResponse(
-        String jobId,
-        String project) {
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("project") String project) {
         this.jobId = jobId;
         this.project = project;
     }

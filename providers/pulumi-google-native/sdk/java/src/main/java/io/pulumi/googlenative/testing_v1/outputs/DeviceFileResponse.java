@@ -21,10 +21,10 @@ public final class DeviceFileResponse {
      */
     private final RegularFileResponse regularFile;
 
-    @OutputCustomType.Constructor({"obbFile","regularFile"})
+    @OutputCustomType.Constructor
     private DeviceFileResponse(
-        ObbFileResponse obbFile,
-        RegularFileResponse regularFile) {
+        @OutputCustomType.Parameter("obbFile") ObbFileResponse obbFile,
+        @OutputCustomType.Parameter("regularFile") RegularFileResponse regularFile) {
         this.obbFile = obbFile;
         this.regularFile = regularFile;
     }

@@ -84,22 +84,22 @@ public final class GetFirewallPolicyResult {
      */
     private final String vpcNetworkScope;
 
-    @OutputCustomType.Constructor({"associations","creationTimestamp","description","fingerprint","kind","name","parent","region","ruleTupleCount","rules","selfLink","selfLinkWithId","shortName","vpcNetworkScope"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyResult(
-        List<FirewallPolicyAssociationResponse> associations,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        String parent,
-        String region,
-        Integer ruleTupleCount,
-        List<FirewallPolicyRuleResponse> rules,
-        String selfLink,
-        String selfLinkWithId,
-        String shortName,
-        String vpcNetworkScope) {
+        @OutputCustomType.Parameter("associations") List<FirewallPolicyAssociationResponse> associations,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("rules") List<FirewallPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("shortName") String shortName,
+        @OutputCustomType.Parameter("vpcNetworkScope") String vpcNetworkScope) {
         this.associations = associations;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

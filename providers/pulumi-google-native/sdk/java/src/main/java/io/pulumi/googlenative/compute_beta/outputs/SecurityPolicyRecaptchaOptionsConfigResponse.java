@@ -15,8 +15,8 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse {
      */
     private final String redirectSiteKey;
 
-    @OutputCustomType.Constructor({"redirectSiteKey"})
-    private SecurityPolicyRecaptchaOptionsConfigResponse(String redirectSiteKey) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRecaptchaOptionsConfigResponse(@OutputCustomType.Parameter("redirectSiteKey") String redirectSiteKey) {
         this.redirectSiteKey = redirectSiteKey;
     }
 

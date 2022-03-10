@@ -15,8 +15,8 @@ public final class AuthorizationLoggingOptionsResponse {
      */
     private final String permissionType;
 
-    @OutputCustomType.Constructor({"permissionType"})
-    private AuthorizationLoggingOptionsResponse(String permissionType) {
+    @OutputCustomType.Constructor
+    private AuthorizationLoggingOptionsResponse(@OutputCustomType.Parameter("permissionType") String permissionType) {
         this.permissionType = permissionType;
     }
 

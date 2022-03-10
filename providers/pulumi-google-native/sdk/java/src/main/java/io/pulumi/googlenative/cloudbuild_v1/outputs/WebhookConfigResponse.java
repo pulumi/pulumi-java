@@ -20,10 +20,10 @@ public final class WebhookConfigResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"secret","state"})
+    @OutputCustomType.Constructor
     private WebhookConfigResponse(
-        String secret,
-        String state) {
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("state") String state) {
         this.secret = secret;
         this.state = state;
     }

@@ -20,10 +20,10 @@ public final class BucketObjectCustomerEncryptionResponse {
      */
     private final String keySha256;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","keySha256"})
+    @OutputCustomType.Constructor
     private BucketObjectCustomerEncryptionResponse(
-        String encryptionAlgorithm,
-        String keySha256) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("keySha256") String keySha256) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.keySha256 = keySha256;
     }

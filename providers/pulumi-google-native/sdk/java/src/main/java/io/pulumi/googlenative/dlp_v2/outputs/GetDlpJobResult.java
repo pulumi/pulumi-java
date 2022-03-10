@@ -64,18 +64,18 @@ public final class GetDlpJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","endTime","errors","inspectDetails","jobTriggerName","name","riskDetails","startTime","state","type"})
+    @OutputCustomType.Constructor
     private GetDlpJobResult(
-        String createTime,
-        String endTime,
-        List<GooglePrivacyDlpV2ErrorResponse> errors,
-        GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
-        String jobTriggerName,
-        String name,
-        GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
-        String startTime,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @OutputCustomType.Parameter("inspectDetails") GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
+        @OutputCustomType.Parameter("jobTriggerName") String jobTriggerName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("riskDetails") GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.endTime = endTime;
         this.errors = errors;

@@ -83,21 +83,21 @@ public final class GetUptimeCheckConfigResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"checkerType","contentMatchers","displayName","httpCheck","internalCheckers","isInternal","monitoredResource","name","period","resourceGroup","selectedRegions","tcpCheck","timeout"})
+    @OutputCustomType.Constructor
     private GetUptimeCheckConfigResult(
-        String checkerType,
-        List<ContentMatcherResponse> contentMatchers,
-        String displayName,
-        HttpCheckResponse httpCheck,
-        List<InternalCheckerResponse> internalCheckers,
-        Boolean isInternal,
-        MonitoredResourceResponse monitoredResource,
-        String name,
-        String period,
-        ResourceGroupResponse resourceGroup,
-        List<String> selectedRegions,
-        TcpCheckResponse tcpCheck,
-        String timeout) {
+        @OutputCustomType.Parameter("checkerType") String checkerType,
+        @OutputCustomType.Parameter("contentMatchers") List<ContentMatcherResponse> contentMatchers,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("httpCheck") HttpCheckResponse httpCheck,
+        @OutputCustomType.Parameter("internalCheckers") List<InternalCheckerResponse> internalCheckers,
+        @OutputCustomType.Parameter("isInternal") Boolean isInternal,
+        @OutputCustomType.Parameter("monitoredResource") MonitoredResourceResponse monitoredResource,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("period") String period,
+        @OutputCustomType.Parameter("resourceGroup") ResourceGroupResponse resourceGroup,
+        @OutputCustomType.Parameter("selectedRegions") List<String> selectedRegions,
+        @OutputCustomType.Parameter("tcpCheck") TcpCheckResponse tcpCheck,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.checkerType = checkerType;
         this.contentMatchers = contentMatchers;
         this.displayName = displayName;

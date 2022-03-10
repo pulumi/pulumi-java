@@ -15,8 +15,8 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse 
      */
     private final Boolean allEffective;
 
-    @OutputCustomType.Constructor({"allEffective"})
-    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(Boolean allEffective) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse(@OutputCustomType.Parameter("allEffective") Boolean allEffective) {
         this.allEffective = allEffective;
     }
 

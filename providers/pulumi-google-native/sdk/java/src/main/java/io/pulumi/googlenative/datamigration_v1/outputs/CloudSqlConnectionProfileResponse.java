@@ -31,12 +31,12 @@ public final class CloudSqlConnectionProfileResponse {
      */
     private final CloudSqlSettingsResponse settings;
 
-    @OutputCustomType.Constructor({"cloudSqlId","privateIp","publicIp","settings"})
+    @OutputCustomType.Constructor
     private CloudSqlConnectionProfileResponse(
-        String cloudSqlId,
-        String privateIp,
-        String publicIp,
-        CloudSqlSettingsResponse settings) {
+        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("publicIp") String publicIp,
+        @OutputCustomType.Parameter("settings") CloudSqlSettingsResponse settings) {
         this.cloudSqlId = cloudSqlId;
         this.privateIp = privateIp;
         this.publicIp = publicIp;

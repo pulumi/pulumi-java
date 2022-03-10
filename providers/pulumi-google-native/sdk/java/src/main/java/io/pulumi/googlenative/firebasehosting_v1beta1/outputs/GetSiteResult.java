@@ -36,13 +36,13 @@ public final class GetSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appId","defaultUrl","labels","name","type"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        String appId,
-        String defaultUrl,
-        Map<String,String> labels,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("defaultUrl") String defaultUrl,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.appId = appId;
         this.defaultUrl = defaultUrl;
         this.labels = labels;

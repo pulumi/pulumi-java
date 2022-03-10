@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OSPolicyResourcePackageResourceZypperResponse(String name) {
+    @OutputCustomType.Constructor
+    private OSPolicyResourcePackageResourceZypperResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

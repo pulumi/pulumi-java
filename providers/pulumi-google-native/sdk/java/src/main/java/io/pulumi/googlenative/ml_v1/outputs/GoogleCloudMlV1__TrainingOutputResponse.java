@@ -56,16 +56,16 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
      */
     private final Map<String,String> webAccessUris;
 
-    @OutputCustomType.Constructor({"builtInAlgorithmOutput","completedTrialCount","consumedMLUnits","hyperparameterMetricTag","isBuiltInAlgorithmJob","isHyperparameterTuningJob","trials","webAccessUris"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__TrainingOutputResponse(
-        GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        String completedTrialCount,
-        Double consumedMLUnits,
-        String hyperparameterMetricTag,
-        Boolean isBuiltInAlgorithmJob,
-        Boolean isHyperparameterTuningJob,
-        List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
-        Map<String,String> webAccessUris) {
+        @OutputCustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
+        @OutputCustomType.Parameter("completedTrialCount") String completedTrialCount,
+        @OutputCustomType.Parameter("consumedMLUnits") Double consumedMLUnits,
+        @OutputCustomType.Parameter("hyperparameterMetricTag") String hyperparameterMetricTag,
+        @OutputCustomType.Parameter("isBuiltInAlgorithmJob") Boolean isBuiltInAlgorithmJob,
+        @OutputCustomType.Parameter("isHyperparameterTuningJob") Boolean isHyperparameterTuningJob,
+        @OutputCustomType.Parameter("trials") List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
+        @OutputCustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         this.completedTrialCount = completedTrialCount;
         this.consumedMLUnits = consumedMLUnits;

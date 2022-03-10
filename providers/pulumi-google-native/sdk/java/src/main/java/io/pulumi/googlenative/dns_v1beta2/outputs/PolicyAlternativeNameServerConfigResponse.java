@@ -18,10 +18,10 @@ public final class PolicyAlternativeNameServerConfigResponse {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
-    @OutputCustomType.Constructor({"kind","targetNameServers"})
+    @OutputCustomType.Constructor
     private PolicyAlternativeNameServerConfigResponse(
-        String kind,
-        List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }

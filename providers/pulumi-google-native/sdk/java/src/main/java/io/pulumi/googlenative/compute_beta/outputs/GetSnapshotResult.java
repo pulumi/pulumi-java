@@ -139,33 +139,33 @@ public final class GetSnapshotResult {
      */
     private final List<String> userLicenses;
 
-    @OutputCustomType.Constructor({"autoCreated","chainName","creationTimestamp","description","diskSizeGb","downloadBytes","guestFlush","kind","labelFingerprint","labels","licenseCodes","licenses","locationHint","name","satisfiesPzs","selfLink","snapshotEncryptionKey","sourceDisk","sourceDiskEncryptionKey","sourceDiskId","status","storageBytes","storageBytesStatus","storageLocations","userLicenses"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        Boolean autoCreated,
-        String chainName,
-        String creationTimestamp,
-        String description,
-        String diskSizeGb,
-        String downloadBytes,
-        Boolean guestFlush,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        List<String> licenseCodes,
-        List<String> licenses,
-        String locationHint,
-        String name,
-        Boolean satisfiesPzs,
-        String selfLink,
-        CustomerEncryptionKeyResponse snapshotEncryptionKey,
-        String sourceDisk,
-        CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
-        String sourceDiskId,
-        String status,
-        String storageBytes,
-        String storageBytesStatus,
-        List<String> storageLocations,
-        List<String> userLicenses) {
+        @OutputCustomType.Parameter("autoCreated") Boolean autoCreated,
+        @OutputCustomType.Parameter("chainName") String chainName,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("downloadBytes") String downloadBytes,
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("snapshotEncryptionKey") CustomerEncryptionKeyResponse snapshotEncryptionKey,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes,
+        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
+        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses) {
         this.autoCreated = autoCreated;
         this.chainName = chainName;
         this.creationTimestamp = creationTimestamp;

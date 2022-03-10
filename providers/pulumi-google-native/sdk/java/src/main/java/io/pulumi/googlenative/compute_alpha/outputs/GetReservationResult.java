@@ -78,21 +78,21 @@ public final class GetReservationResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"commitment","creationTimestamp","description","kind","name","satisfiesPzs","selfLink","selfLinkWithId","shareSettings","specificReservation","specificReservationRequired","status","zone"})
+    @OutputCustomType.Constructor
     private GetReservationResult(
-        String commitment,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String selfLinkWithId,
-        ShareSettingsResponse shareSettings,
-        AllocationSpecificSKUReservationResponse specificReservation,
-        Boolean specificReservationRequired,
-        String status,
-        String zone) {
+        @OutputCustomType.Parameter("commitment") String commitment,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @OutputCustomType.Parameter("specificReservation") AllocationSpecificSKUReservationResponse specificReservation,
+        @OutputCustomType.Parameter("specificReservationRequired") Boolean specificReservationRequired,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.commitment = commitment;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

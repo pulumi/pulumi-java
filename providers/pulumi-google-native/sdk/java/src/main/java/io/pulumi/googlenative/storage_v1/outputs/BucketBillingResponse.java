@@ -15,8 +15,8 @@ public final class BucketBillingResponse {
      */
     private final Boolean requesterPays;
 
-    @OutputCustomType.Constructor({"requesterPays"})
-    private BucketBillingResponse(Boolean requesterPays) {
+    @OutputCustomType.Constructor
+    private BucketBillingResponse(@OutputCustomType.Parameter("requesterPays") Boolean requesterPays) {
         this.requesterPays = requesterPays;
     }
 

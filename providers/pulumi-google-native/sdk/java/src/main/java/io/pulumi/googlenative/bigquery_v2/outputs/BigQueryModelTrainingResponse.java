@@ -21,10 +21,10 @@ public final class BigQueryModelTrainingResponse {
      */
     private final String expectedTotalIterations;
 
-    @OutputCustomType.Constructor({"currentIteration","expectedTotalIterations"})
+    @OutputCustomType.Constructor
     private BigQueryModelTrainingResponse(
-        Integer currentIteration,
-        String expectedTotalIterations) {
+        @OutputCustomType.Parameter("currentIteration") Integer currentIteration,
+        @OutputCustomType.Parameter("expectedTotalIterations") String expectedTotalIterations) {
         this.currentIteration = currentIteration;
         this.expectedTotalIterations = expectedTotalIterations;
     }

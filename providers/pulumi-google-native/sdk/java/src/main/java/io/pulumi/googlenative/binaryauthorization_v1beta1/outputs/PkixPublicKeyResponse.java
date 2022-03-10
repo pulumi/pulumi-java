@@ -20,10 +20,10 @@ public final class PkixPublicKeyResponse {
      */
     private final String signatureAlgorithm;
 
-    @OutputCustomType.Constructor({"publicKeyPem","signatureAlgorithm"})
+    @OutputCustomType.Constructor
     private PkixPublicKeyResponse(
-        String publicKeyPem,
-        String signatureAlgorithm) {
+        @OutputCustomType.Parameter("publicKeyPem") String publicKeyPem,
+        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }

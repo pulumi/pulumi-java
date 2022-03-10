@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      */
     private final String minValue;
 
-    @OutputCustomType.Constructor({"maxValue","minValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(
-        String maxValue,
-        String minValue) {
+        @OutputCustomType.Parameter("maxValue") String maxValue,
+        @OutputCustomType.Parameter("minValue") String minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }

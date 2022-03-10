@@ -31,12 +31,12 @@ public final class AggregationResponse {
      */
     private final String perSeriesAligner;
 
-    @OutputCustomType.Constructor({"alignmentPeriod","crossSeriesReducer","groupByFields","perSeriesAligner"})
+    @OutputCustomType.Constructor
     private AggregationResponse(
-        String alignmentPeriod,
-        String crossSeriesReducer,
-        List<String> groupByFields,
-        String perSeriesAligner) {
+        @OutputCustomType.Parameter("alignmentPeriod") String alignmentPeriod,
+        @OutputCustomType.Parameter("crossSeriesReducer") String crossSeriesReducer,
+        @OutputCustomType.Parameter("groupByFields") List<String> groupByFields,
+        @OutputCustomType.Parameter("perSeriesAligner") String perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;

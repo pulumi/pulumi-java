@@ -36,13 +36,13 @@ public final class NetworkConfigResponse {
      */
     private final String reservedIpRange;
 
-    @OutputCustomType.Constructor({"connectMode","ipAddresses","modes","network","reservedIpRange"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String connectMode,
-        List<String> ipAddresses,
-        List<String> modes,
-        String network,
-        String reservedIpRange) {
+        @OutputCustomType.Parameter("connectMode") String connectMode,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("modes") List<String> modes,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;

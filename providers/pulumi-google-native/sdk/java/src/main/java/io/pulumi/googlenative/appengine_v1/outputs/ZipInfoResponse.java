@@ -21,10 +21,10 @@ public final class ZipInfoResponse {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor({"filesCount","sourceUrl"})
+    @OutputCustomType.Constructor
     private ZipInfoResponse(
-        Integer filesCount,
-        String sourceUrl) {
+        @OutputCustomType.Parameter("filesCount") Integer filesCount,
+        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }

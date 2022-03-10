@@ -15,8 +15,8 @@ public final class UserInfoResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor({"email"})
-    private UserInfoResponse(String email) {
+    @OutputCustomType.Constructor
+    private UserInfoResponse(@OutputCustomType.Parameter("email") String email) {
         this.email = email;
     }
 

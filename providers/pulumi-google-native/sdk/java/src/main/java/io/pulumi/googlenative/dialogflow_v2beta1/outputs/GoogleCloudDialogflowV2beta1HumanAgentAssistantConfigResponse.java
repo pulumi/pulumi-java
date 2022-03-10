@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse
      */
     private final GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig;
 
-    @OutputCustomType.Constructor({"endUserSuggestionConfig","humanAgentSuggestionConfig","messageAnalysisConfig","notificationConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse(
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
-        GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
+        @OutputCustomType.Parameter("endUserSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse endUserSuggestionConfig,
+        @OutputCustomType.Parameter("humanAgentSuggestionConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse humanAgentSuggestionConfig,
+        @OutputCustomType.Parameter("messageAnalysisConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse messageAnalysisConfig,
+        @OutputCustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2beta1NotificationConfigResponse notificationConfig) {
         this.endUserSuggestionConfig = endUserSuggestionConfig;
         this.humanAgentSuggestionConfig = humanAgentSuggestionConfig;
         this.messageAnalysisConfig = messageAnalysisConfig;

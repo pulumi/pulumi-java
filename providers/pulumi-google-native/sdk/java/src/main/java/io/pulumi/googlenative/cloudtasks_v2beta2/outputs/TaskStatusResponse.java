@@ -31,12 +31,12 @@ public final class TaskStatusResponse {
      */
     private final AttemptStatusResponse lastAttemptStatus;
 
-    @OutputCustomType.Constructor({"attemptDispatchCount","attemptResponseCount","firstAttemptStatus","lastAttemptStatus"})
+    @OutputCustomType.Constructor
     private TaskStatusResponse(
-        Integer attemptDispatchCount,
-        Integer attemptResponseCount,
-        AttemptStatusResponse firstAttemptStatus,
-        AttemptStatusResponse lastAttemptStatus) {
+        @OutputCustomType.Parameter("attemptDispatchCount") Integer attemptDispatchCount,
+        @OutputCustomType.Parameter("attemptResponseCount") Integer attemptResponseCount,
+        @OutputCustomType.Parameter("firstAttemptStatus") AttemptStatusResponse firstAttemptStatus,
+        @OutputCustomType.Parameter("lastAttemptStatus") AttemptStatusResponse lastAttemptStatus) {
         this.attemptDispatchCount = attemptDispatchCount;
         this.attemptResponseCount = attemptResponseCount;
         this.firstAttemptStatus = firstAttemptStatus;

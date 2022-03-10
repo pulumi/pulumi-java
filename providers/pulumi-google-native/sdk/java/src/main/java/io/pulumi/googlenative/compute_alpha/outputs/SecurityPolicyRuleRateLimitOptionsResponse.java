@@ -53,16 +53,16 @@ public final class SecurityPolicyRuleRateLimitOptionsResponse {
      */
     private final SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold;
 
-    @OutputCustomType.Constructor({"banDurationSec","banThreshold","conformAction","enforceOnKey","enforceOnKeyName","exceedAction","exceedRedirectOptions","rateLimitThreshold"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsResponse(
-        Integer banDurationSec,
-        SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold,
-        String conformAction,
-        String enforceOnKey,
-        String enforceOnKeyName,
-        String exceedAction,
-        SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
-        SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
+        @OutputCustomType.Parameter("banDurationSec") Integer banDurationSec,
+        @OutputCustomType.Parameter("banThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse banThreshold,
+        @OutputCustomType.Parameter("conformAction") String conformAction,
+        @OutputCustomType.Parameter("enforceOnKey") String enforceOnKey,
+        @OutputCustomType.Parameter("enforceOnKeyName") String enforceOnKeyName,
+        @OutputCustomType.Parameter("exceedAction") String exceedAction,
+        @OutputCustomType.Parameter("exceedRedirectOptions") SecurityPolicyRuleRedirectOptionsResponse exceedRedirectOptions,
+        @OutputCustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsThresholdResponse rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
         this.conformAction = conformAction;

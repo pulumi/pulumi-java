@@ -25,11 +25,11 @@ public final class ColorResponse {
      */
     private final Double saturation;
 
-    @OutputCustomType.Constructor({"brightness","contrast","saturation"})
+    @OutputCustomType.Constructor
     private ColorResponse(
-        Double brightness,
-        Double contrast,
-        Double saturation) {
+        @OutputCustomType.Parameter("brightness") Double brightness,
+        @OutputCustomType.Parameter("contrast") Double contrast,
+        @OutputCustomType.Parameter("saturation") Double saturation) {
         this.brightness = brightness;
         this.contrast = contrast;
         this.saturation = saturation;

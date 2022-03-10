@@ -21,10 +21,10 @@ public final class StandardSqlFieldResponse {
      */
     private final StandardSqlDataTypeResponse type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private StandardSqlFieldResponse(
-        String name,
-        StandardSqlDataTypeResponse type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") StandardSqlDataTypeResponse type) {
         this.name = name;
         this.type = type;
     }

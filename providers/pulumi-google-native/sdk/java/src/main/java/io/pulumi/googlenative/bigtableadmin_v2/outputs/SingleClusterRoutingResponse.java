@@ -21,10 +21,10 @@ public final class SingleClusterRoutingResponse {
      */
     private final String clusterId;
 
-    @OutputCustomType.Constructor({"allowTransactionalWrites","clusterId"})
+    @OutputCustomType.Constructor
     private SingleClusterRoutingResponse(
-        Boolean allowTransactionalWrites,
-        String clusterId) {
+        @OutputCustomType.Parameter("allowTransactionalWrites") Boolean allowTransactionalWrites,
+        @OutputCustomType.Parameter("clusterId") String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = clusterId;
     }

@@ -99,25 +99,25 @@ public final class PackageInfoNoteResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"analyzed","attribution","checksum","copyright","detailedDescription","downloadLocation","externalRefs","filesLicenseInfo","homePage","licenseDeclared","originator","packageType","summaryDescription","supplier","title","verificationCode","version"})
+    @OutputCustomType.Constructor
     private PackageInfoNoteResponse(
-        Boolean analyzed,
-        String attribution,
-        String checksum,
-        String copyright,
-        String detailedDescription,
-        String downloadLocation,
-        List<ExternalRefResponse> externalRefs,
-        List<String> filesLicenseInfo,
-        String homePage,
-        LicenseResponse licenseDeclared,
-        String originator,
-        String packageType,
-        String summaryDescription,
-        String supplier,
-        String title,
-        String verificationCode,
-        String version) {
+        @OutputCustomType.Parameter("analyzed") Boolean analyzed,
+        @OutputCustomType.Parameter("attribution") String attribution,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("copyright") String copyright,
+        @OutputCustomType.Parameter("detailedDescription") String detailedDescription,
+        @OutputCustomType.Parameter("downloadLocation") String downloadLocation,
+        @OutputCustomType.Parameter("externalRefs") List<ExternalRefResponse> externalRefs,
+        @OutputCustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
+        @OutputCustomType.Parameter("homePage") String homePage,
+        @OutputCustomType.Parameter("licenseDeclared") LicenseResponse licenseDeclared,
+        @OutputCustomType.Parameter("originator") String originator,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
+        @OutputCustomType.Parameter("supplier") String supplier,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("verificationCode") String verificationCode,
+        @OutputCustomType.Parameter("version") String version) {
         this.analyzed = analyzed;
         this.attribution = attribution;
         this.checksum = checksum;

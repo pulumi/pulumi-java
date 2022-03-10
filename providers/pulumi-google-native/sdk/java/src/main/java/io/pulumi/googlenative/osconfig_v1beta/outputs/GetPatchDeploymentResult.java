@@ -75,20 +75,20 @@ public final class GetPatchDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","duration","instanceFilter","lastExecuteTime","name","oneTimeSchedule","patchConfig","recurringSchedule","rollout","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetPatchDeploymentResult(
-        String createTime,
-        String description,
-        String duration,
-        PatchInstanceFilterResponse instanceFilter,
-        String lastExecuteTime,
-        String name,
-        OneTimeScheduleResponse oneTimeSchedule,
-        PatchConfigResponse patchConfig,
-        RecurringScheduleResponse recurringSchedule,
-        PatchRolloutResponse rollout,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("instanceFilter") PatchInstanceFilterResponse instanceFilter,
+        @OutputCustomType.Parameter("lastExecuteTime") String lastExecuteTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oneTimeSchedule") OneTimeScheduleResponse oneTimeSchedule,
+        @OutputCustomType.Parameter("patchConfig") PatchConfigResponse patchConfig,
+        @OutputCustomType.Parameter("recurringSchedule") RecurringScheduleResponse recurringSchedule,
+        @OutputCustomType.Parameter("rollout") PatchRolloutResponse rollout,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.duration = duration;

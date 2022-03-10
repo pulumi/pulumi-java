@@ -42,14 +42,14 @@ public final class GetRolloutResult {
      */
     private final TrafficPercentStrategyResponse trafficPercentStrategy;
 
-    @OutputCustomType.Constructor({"createTime","deleteServiceStrategy","rolloutId","serviceName","status","trafficPercentStrategy"})
+    @OutputCustomType.Constructor
     private GetRolloutResult(
-        String createTime,
-        DeleteServiceStrategyResponse deleteServiceStrategy,
-        String rolloutId,
-        String serviceName,
-        String status,
-        TrafficPercentStrategyResponse trafficPercentStrategy) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteServiceStrategy") DeleteServiceStrategyResponse deleteServiceStrategy,
+        @OutputCustomType.Parameter("rolloutId") String rolloutId,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("trafficPercentStrategy") TrafficPercentStrategyResponse trafficPercentStrategy) {
         this.createTime = createTime;
         this.deleteServiceStrategy = deleteServiceStrategy;
         this.rolloutId = rolloutId;

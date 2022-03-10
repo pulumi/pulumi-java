@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String gcePdKmsKeyName;
 
-    @OutputCustomType.Constructor({"gcePdKmsKeyName"})
-    private EncryptionConfigResponse(String gcePdKmsKeyName) {
+    @OutputCustomType.Constructor
+    private EncryptionConfigResponse(@OutputCustomType.Parameter("gcePdKmsKeyName") String gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 

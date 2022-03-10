@@ -22,10 +22,10 @@ public final class VpcAccessibleServicesResponse {
      */
     private final Boolean enableRestriction;
 
-    @OutputCustomType.Constructor({"allowedServices","enableRestriction"})
+    @OutputCustomType.Constructor
     private VpcAccessibleServicesResponse(
-        List<String> allowedServices,
-        Boolean enableRestriction) {
+        @OutputCustomType.Parameter("allowedServices") List<String> allowedServices,
+        @OutputCustomType.Parameter("enableRestriction") Boolean enableRestriction) {
         this.allowedServices = allowedServices;
         this.enableRestriction = enableRestriction;
     }

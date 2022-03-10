@@ -37,13 +37,13 @@ public final class GetAppProfileResult {
      */
     private final SingleClusterRoutingResponse singleClusterRouting;
 
-    @OutputCustomType.Constructor({"description","etag","multiClusterRoutingUseAny","name","singleClusterRouting"})
+    @OutputCustomType.Constructor
     private GetAppProfileResult(
-        String description,
-        String etag,
-        MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
-        String name,
-        SingleClusterRoutingResponse singleClusterRouting) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("multiClusterRoutingUseAny") MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("singleClusterRouting") SingleClusterRoutingResponse singleClusterRouting) {
         this.description = description;
         this.etag = etag;
         this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;

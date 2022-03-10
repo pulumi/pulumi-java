@@ -56,16 +56,16 @@ public final class PathMatcherResponse {
      */
     private final List<HttpRouteRuleResponse> routeRules;
 
-    @OutputCustomType.Constructor({"defaultRouteAction","defaultService","defaultUrlRedirect","description","headerAction","name","pathRules","routeRules"})
+    @OutputCustomType.Constructor
     private PathMatcherResponse(
-        HttpRouteActionResponse defaultRouteAction,
-        String defaultService,
-        HttpRedirectActionResponse defaultUrlRedirect,
-        String description,
-        HttpHeaderActionResponse headerAction,
-        String name,
-        List<PathRuleResponse> pathRules,
-        List<HttpRouteRuleResponse> routeRules) {
+        @OutputCustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
+        @OutputCustomType.Parameter("defaultService") String defaultService,
+        @OutputCustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRules") List<PathRuleResponse> pathRules,
+        @OutputCustomType.Parameter("routeRules") List<HttpRouteRuleResponse> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;

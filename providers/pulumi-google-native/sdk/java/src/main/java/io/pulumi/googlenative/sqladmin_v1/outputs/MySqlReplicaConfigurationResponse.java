@@ -67,19 +67,19 @@ public final class MySqlReplicaConfigurationResponse {
      */
     private final Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","kind","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
+    @OutputCustomType.Constructor
     private MySqlReplicaConfigurationResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        Integer connectRetryInterval,
-        String dumpFilePath,
-        String kind,
-        String masterHeartbeatPeriod,
-        String password,
-        String sslCipher,
-        String username,
-        Boolean verifyServerCertificate) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
+        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("masterHeartbeatPeriod") String masterHeartbeatPeriod,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("sslCipher") String sslCipher,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

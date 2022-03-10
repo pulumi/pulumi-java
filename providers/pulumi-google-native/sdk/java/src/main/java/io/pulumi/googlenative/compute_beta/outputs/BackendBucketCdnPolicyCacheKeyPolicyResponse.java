@@ -21,10 +21,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
      */
     private final List<String> queryStringWhitelist;
 
-    @OutputCustomType.Constructor({"includeHttpHeaders","queryStringWhitelist"})
+    @OutputCustomType.Constructor
     private BackendBucketCdnPolicyCacheKeyPolicyResponse(
-        List<String> includeHttpHeaders,
-        List<String> queryStringWhitelist) {
+        @OutputCustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
+        @OutputCustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
         this.includeHttpHeaders = includeHttpHeaders;
         this.queryStringWhitelist = queryStringWhitelist;
     }

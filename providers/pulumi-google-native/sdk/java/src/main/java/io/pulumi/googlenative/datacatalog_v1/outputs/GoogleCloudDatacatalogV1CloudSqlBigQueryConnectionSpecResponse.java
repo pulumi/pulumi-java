@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"database","instanceId","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(
-        String database,
-        String instanceId,
-        String type) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.database = database;
         this.instanceId = instanceId;
         this.type = type;

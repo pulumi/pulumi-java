@@ -15,8 +15,8 @@ public final class FileIODetailsResponse {
      */
     private final String filePattern;
 
-    @OutputCustomType.Constructor({"filePattern"})
-    private FileIODetailsResponse(String filePattern) {
+    @OutputCustomType.Constructor
+    private FileIODetailsResponse(@OutputCustomType.Parameter("filePattern") String filePattern) {
         this.filePattern = filePattern;
     }
 

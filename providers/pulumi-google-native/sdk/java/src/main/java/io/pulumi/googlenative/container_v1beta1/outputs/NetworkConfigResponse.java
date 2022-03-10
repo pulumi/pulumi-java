@@ -59,17 +59,17 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"datapathProvider","defaultSnatStatus","dnsConfig","enableIntraNodeVisibility","enableL4ilbSubsetting","network","privateIpv6GoogleAccess","serviceExternalIpsConfig","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String datapathProvider,
-        DefaultSnatStatusResponse defaultSnatStatus,
-        DNSConfigResponse dnsConfig,
-        Boolean enableIntraNodeVisibility,
-        Boolean enableL4ilbSubsetting,
-        String network,
-        String privateIpv6GoogleAccess,
-        ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
-        String subnetwork) {
+        @OutputCustomType.Parameter("datapathProvider") String datapathProvider,
+        @OutputCustomType.Parameter("defaultSnatStatus") DefaultSnatStatusResponse defaultSnatStatus,
+        @OutputCustomType.Parameter("dnsConfig") DNSConfigResponse dnsConfig,
+        @OutputCustomType.Parameter("enableIntraNodeVisibility") Boolean enableIntraNodeVisibility,
+        @OutputCustomType.Parameter("enableL4ilbSubsetting") Boolean enableL4ilbSubsetting,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("serviceExternalIpsConfig") ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.datapathProvider = datapathProvider;
         this.defaultSnatStatus = defaultSnatStatus;
         this.dnsConfig = dnsConfig;

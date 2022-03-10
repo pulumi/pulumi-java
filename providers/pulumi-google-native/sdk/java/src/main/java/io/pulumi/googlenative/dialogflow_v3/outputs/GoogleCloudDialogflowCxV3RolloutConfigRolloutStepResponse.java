@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse {
      */
     private final Integer trafficPercent;
 
-    @OutputCustomType.Constructor({"displayName","minDuration","trafficPercent"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse(
-        String displayName,
-        String minDuration,
-        Integer trafficPercent) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("minDuration") String minDuration,
+        @OutputCustomType.Parameter("trafficPercent") Integer trafficPercent) {
         this.displayName = displayName;
         this.minDuration = minDuration;
         this.trafficPercent = trafficPercent;

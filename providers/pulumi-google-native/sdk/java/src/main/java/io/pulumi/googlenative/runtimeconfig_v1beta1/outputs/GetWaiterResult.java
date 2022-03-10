@@ -48,15 +48,15 @@ public final class GetWaiterResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"createTime","done","error","failure","name","success","timeout"})
+    @OutputCustomType.Constructor
     private GetWaiterResult(
-        String createTime,
-        Boolean done,
-        StatusResponse error,
-        EndConditionResponse failure,
-        String name,
-        EndConditionResponse success,
-        String timeout) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("done") Boolean done,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("failure") EndConditionResponse failure,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("success") EndConditionResponse success,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.createTime = createTime;
         this.done = done;
         this.error = error;

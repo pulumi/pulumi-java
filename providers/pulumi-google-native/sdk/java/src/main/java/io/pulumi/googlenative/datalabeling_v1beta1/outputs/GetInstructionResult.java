@@ -52,16 +52,16 @@ public final class GetInstructionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"blockingResources","createTime","dataType","description","displayName","name","pdfInstruction","updateTime"})
+    @OutputCustomType.Constructor
     private GetInstructionResult(
-        List<String> blockingResources,
-        String createTime,
-        String dataType,
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
-        String updateTime) {
+        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pdfInstruction") GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
         this.dataType = dataType;

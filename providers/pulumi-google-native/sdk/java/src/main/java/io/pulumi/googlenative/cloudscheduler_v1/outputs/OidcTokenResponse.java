@@ -20,10 +20,10 @@ public final class OidcTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"audience","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private OidcTokenResponse(
-        String audience,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

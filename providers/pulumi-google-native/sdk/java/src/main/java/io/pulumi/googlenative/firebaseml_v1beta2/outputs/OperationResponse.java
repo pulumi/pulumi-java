@@ -38,13 +38,13 @@ public final class OperationResponse {
      */
     private final Map<String,String> response;
 
-    @OutputCustomType.Constructor({"done","error","metadata","name","response"})
+    @OutputCustomType.Constructor
     private OperationResponse(
-        Boolean done,
-        StatusResponse error,
-        Map<String,String> metadata,
-        String name,
-        Map<String,String> response) {
+        @OutputCustomType.Parameter("done") Boolean done,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("response") Map<String,String> response) {
         this.done = done;
         this.error = error;
         this.metadata = metadata;

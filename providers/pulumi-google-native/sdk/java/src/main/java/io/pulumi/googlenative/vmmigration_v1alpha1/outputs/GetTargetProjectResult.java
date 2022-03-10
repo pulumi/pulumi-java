@@ -35,13 +35,13 @@ public final class GetTargetProjectResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","name","project","updateTime"})
+    @OutputCustomType.Constructor
     private GetTargetProjectResult(
-        String createTime,
-        String description,
-        String name,
-        String project,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

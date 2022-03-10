@@ -15,8 +15,8 @@ public final class FileReferenceResponse {
      */
     private final String fileUri;
 
-    @OutputCustomType.Constructor({"fileUri"})
-    private FileReferenceResponse(String fileUri) {
+    @OutputCustomType.Constructor
+    private FileReferenceResponse(@OutputCustomType.Parameter("fileUri") String fileUri) {
         this.fileUri = fileUri;
     }
 

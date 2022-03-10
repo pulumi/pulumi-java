@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
-    @OutputCustomType.Constructor({"actions","privacyMetric","sourceTable"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(
-        List<GooglePrivacyDlpV2ActionResponse> actions,
-        GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
-        GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
+        @OutputCustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
+        @OutputCustomType.Parameter("privacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
+        @OutputCustomType.Parameter("sourceTable") GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
         this.actions = actions;
         this.privacyMetric = privacyMetric;
         this.sourceTable = sourceTable;

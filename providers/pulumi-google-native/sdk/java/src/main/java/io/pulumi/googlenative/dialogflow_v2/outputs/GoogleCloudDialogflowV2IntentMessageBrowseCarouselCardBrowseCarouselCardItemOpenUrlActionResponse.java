@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      */
     private final String urlTypeHint;
 
-    @OutputCustomType.Constructor({"url","urlTypeHint"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(
-        String url,
-        String urlTypeHint) {
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("urlTypeHint") String urlTypeHint) {
         this.url = url;
         this.urlTypeHint = urlTypeHint;
     }

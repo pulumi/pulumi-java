@@ -38,13 +38,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"dial","openUrl","postbackData","shareLocation","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl,
-        String postbackData,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
-        String text) {
+        @OutputCustomType.Parameter("dial") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial,
+        @OutputCustomType.Parameter("openUrl") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl,
+        @OutputCustomType.Parameter("postbackData") String postbackData,
+        @OutputCustomType.Parameter("shareLocation") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation,
+        @OutputCustomType.Parameter("text") String text) {
         this.dial = dial;
         this.openUrl = openUrl;
         this.postbackData = postbackData;

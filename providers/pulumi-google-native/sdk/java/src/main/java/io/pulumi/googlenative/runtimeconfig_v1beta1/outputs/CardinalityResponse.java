@@ -21,10 +21,10 @@ public final class CardinalityResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"number","path"})
+    @OutputCustomType.Constructor
     private CardinalityResponse(
-        Integer number,
-        String path) {
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("path") String path) {
         this.number = number;
         this.path = path;
     }

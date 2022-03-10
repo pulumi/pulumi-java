@@ -79,21 +79,21 @@ public final class ExecutionTemplateResponse {
      */
     private final VertexAIParametersResponse vertexAiParameters;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImageUri","dataprocParameters","inputNotebookFile","jobType","kernelSpec","labels","masterType","outputNotebookFolder","parameters","paramsYamlFile","serviceAccount","vertexAiParameters"})
+    @OutputCustomType.Constructor
     private ExecutionTemplateResponse(
-        SchedulerAcceleratorConfigResponse acceleratorConfig,
-        String containerImageUri,
-        DataprocParametersResponse dataprocParameters,
-        String inputNotebookFile,
-        String jobType,
-        String kernelSpec,
-        Map<String,String> labels,
-        String masterType,
-        String outputNotebookFolder,
-        String parameters,
-        String paramsYamlFile,
-        String serviceAccount,
-        VertexAIParametersResponse vertexAiParameters) {
+        @OutputCustomType.Parameter("acceleratorConfig") SchedulerAcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("containerImageUri") String containerImageUri,
+        @OutputCustomType.Parameter("dataprocParameters") DataprocParametersResponse dataprocParameters,
+        @OutputCustomType.Parameter("inputNotebookFile") String inputNotebookFile,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("kernelSpec") String kernelSpec,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("masterType") String masterType,
+        @OutputCustomType.Parameter("outputNotebookFolder") String outputNotebookFolder,
+        @OutputCustomType.Parameter("parameters") String parameters,
+        @OutputCustomType.Parameter("paramsYamlFile") String paramsYamlFile,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("vertexAiParameters") VertexAIParametersResponse vertexAiParameters) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImageUri = containerImageUri;
         this.dataprocParameters = dataprocParameters;

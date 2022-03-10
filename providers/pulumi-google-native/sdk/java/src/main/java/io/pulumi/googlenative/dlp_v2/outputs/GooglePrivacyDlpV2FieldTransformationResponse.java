@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor({"condition","fields","infoTypeTransformations","primitiveTransformation"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FieldTransformationResponse(
-        GooglePrivacyDlpV2RecordConditionResponse condition,
-        List<GooglePrivacyDlpV2FieldIdResponse> fields,
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @OutputCustomType.Parameter("condition") GooglePrivacyDlpV2RecordConditionResponse condition,
+        @OutputCustomType.Parameter("fields") List<GooglePrivacyDlpV2FieldIdResponse> fields,
+        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.condition = condition;
         this.fields = fields;
         this.infoTypeTransformations = infoTypeTransformations;

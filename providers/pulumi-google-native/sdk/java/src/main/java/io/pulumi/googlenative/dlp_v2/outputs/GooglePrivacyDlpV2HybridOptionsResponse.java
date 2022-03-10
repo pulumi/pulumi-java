@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
      */
     private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
-    @OutputCustomType.Constructor({"description","labels","requiredFindingLabelKeys","tableOptions"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HybridOptionsResponse(
-        String description,
-        Map<String,String> labels,
-        List<String> requiredFindingLabelKeys,
-        GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("requiredFindingLabelKeys") List<String> requiredFindingLabelKeys,
+        @OutputCustomType.Parameter("tableOptions") GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
         this.description = description;
         this.labels = labels;
         this.requiredFindingLabelKeys = requiredFindingLabelKeys;

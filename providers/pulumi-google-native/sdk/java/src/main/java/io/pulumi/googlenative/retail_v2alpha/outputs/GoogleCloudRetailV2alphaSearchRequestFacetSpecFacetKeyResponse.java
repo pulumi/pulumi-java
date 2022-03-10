@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
      */
     private final List<String> restrictedValues;
 
-    @OutputCustomType.Constructor({"contains","intervals","key","orderBy","prefixes","query","restrictedValues"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse(
-        List<String> contains,
-        List<GoogleCloudRetailV2alphaIntervalResponse> intervals,
-        String key,
-        String orderBy,
-        List<String> prefixes,
-        String query,
-        List<String> restrictedValues) {
+        @OutputCustomType.Parameter("contains") List<String> contains,
+        @OutputCustomType.Parameter("intervals") List<GoogleCloudRetailV2alphaIntervalResponse> intervals,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("orderBy") String orderBy,
+        @OutputCustomType.Parameter("prefixes") List<String> prefixes,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("restrictedValues") List<String> restrictedValues) {
         this.contains = contains;
         this.intervals = intervals;
         this.key = key;

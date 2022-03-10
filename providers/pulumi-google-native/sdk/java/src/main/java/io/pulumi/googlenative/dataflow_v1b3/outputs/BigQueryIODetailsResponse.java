@@ -30,12 +30,12 @@ public final class BigQueryIODetailsResponse {
      */
     private final String table;
 
-    @OutputCustomType.Constructor({"dataset","project","query","table"})
+    @OutputCustomType.Constructor
     private BigQueryIODetailsResponse(
-        String dataset,
-        String project,
-        String query,
-        String table) {
+        @OutputCustomType.Parameter("dataset") String dataset,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("table") String table) {
         this.dataset = dataset;
         this.project = project;
         this.query = query;

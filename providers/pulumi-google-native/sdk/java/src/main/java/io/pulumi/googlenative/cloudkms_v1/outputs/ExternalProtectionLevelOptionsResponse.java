@@ -20,10 +20,10 @@ public final class ExternalProtectionLevelOptionsResponse {
      */
     private final String externalKeyUri;
 
-    @OutputCustomType.Constructor({"ekmConnectionKeyPath","externalKeyUri"})
+    @OutputCustomType.Constructor
     private ExternalProtectionLevelOptionsResponse(
-        String ekmConnectionKeyPath,
-        String externalKeyUri) {
+        @OutputCustomType.Parameter("ekmConnectionKeyPath") String ekmConnectionKeyPath,
+        @OutputCustomType.Parameter("externalKeyUri") String externalKeyUri) {
         this.ekmConnectionKeyPath = ekmConnectionKeyPath;
         this.externalKeyUri = externalKeyUri;
     }

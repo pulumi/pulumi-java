@@ -14,11 +14,11 @@ public final class ModelDefinitionModelOptionsResponse {
     private final String lossType;
     private final String modelType;
 
-    @OutputCustomType.Constructor({"labels","lossType","modelType"})
+    @OutputCustomType.Constructor
     private ModelDefinitionModelOptionsResponse(
-        List<String> labels,
-        String lossType,
-        String modelType) {
+        @OutputCustomType.Parameter("labels") List<String> labels,
+        @OutputCustomType.Parameter("lossType") String lossType,
+        @OutputCustomType.Parameter("modelType") String modelType) {
         this.labels = labels;
         this.lossType = lossType;
         this.modelType = modelType;

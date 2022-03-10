@@ -69,19 +69,19 @@ public final class GetBillingAccountSinkResult {
      */
     private final String writerIdentity;
 
-    @OutputCustomType.Constructor({"bigqueryOptions","createTime","description","destination","disabled","exclusions","filter","includeChildren","name","updateTime","writerIdentity"})
+    @OutputCustomType.Constructor
     private GetBillingAccountSinkResult(
-        BigQueryOptionsResponse bigqueryOptions,
-        String createTime,
-        String description,
-        String destination,
-        Boolean disabled,
-        List<LogExclusionResponse> exclusions,
-        String filter,
-        Boolean includeChildren,
-        String name,
-        String updateTime,
-        String writerIdentity) {
+        @OutputCustomType.Parameter("bigqueryOptions") BigQueryOptionsResponse bigqueryOptions,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("exclusions") List<LogExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("includeChildren") Boolean includeChildren,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("writerIdentity") String writerIdentity) {
         this.bigqueryOptions = bigqueryOptions;
         this.createTime = createTime;
         this.description = description;

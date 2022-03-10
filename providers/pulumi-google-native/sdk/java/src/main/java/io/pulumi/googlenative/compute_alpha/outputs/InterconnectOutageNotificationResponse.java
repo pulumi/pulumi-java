@@ -51,16 +51,16 @@ public final class InterconnectOutageNotificationResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"affectedCircuits","description","endTime","issueType","name","source","startTime","state"})
+    @OutputCustomType.Constructor
     private InterconnectOutageNotificationResponse(
-        List<String> affectedCircuits,
-        String description,
-        String endTime,
-        String issueType,
-        String name,
-        String source,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("affectedCircuits") List<String> affectedCircuits,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("issueType") String issueType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.affectedCircuits = affectedCircuits;
         this.description = description;
         this.endTime = endTime;

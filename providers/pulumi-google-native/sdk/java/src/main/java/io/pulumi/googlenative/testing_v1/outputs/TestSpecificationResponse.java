@@ -68,18 +68,18 @@ public final class TestSpecificationResponse {
      */
     private final String testTimeout;
 
-    @OutputCustomType.Constructor({"androidInstrumentationTest","androidRoboTest","androidTestLoop","disablePerformanceMetrics","disableVideoRecording","iosTestLoop","iosTestSetup","iosXcTest","testSetup","testTimeout"})
+    @OutputCustomType.Constructor
     private TestSpecificationResponse(
-        AndroidInstrumentationTestResponse androidInstrumentationTest,
-        AndroidRoboTestResponse androidRoboTest,
-        AndroidTestLoopResponse androidTestLoop,
-        Boolean disablePerformanceMetrics,
-        Boolean disableVideoRecording,
-        IosTestLoopResponse iosTestLoop,
-        IosTestSetupResponse iosTestSetup,
-        IosXcTestResponse iosXcTest,
-        TestSetupResponse testSetup,
-        String testTimeout) {
+        @OutputCustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
+        @OutputCustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
+        @OutputCustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
+        @OutputCustomType.Parameter("disablePerformanceMetrics") Boolean disablePerformanceMetrics,
+        @OutputCustomType.Parameter("disableVideoRecording") Boolean disableVideoRecording,
+        @OutputCustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
+        @OutputCustomType.Parameter("iosTestSetup") IosTestSetupResponse iosTestSetup,
+        @OutputCustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
+        @OutputCustomType.Parameter("testSetup") TestSetupResponse testSetup,
+        @OutputCustomType.Parameter("testTimeout") String testTimeout) {
         this.androidInstrumentationTest = androidInstrumentationTest;
         this.androidRoboTest = androidRoboTest;
         this.androidTestLoop = androidTestLoop;

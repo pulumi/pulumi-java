@@ -38,13 +38,13 @@ public final class RouterBgpResponse {
      */
     private final Integer keepaliveInterval;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn","keepaliveInterval"})
+    @OutputCustomType.Constructor
     private RouterBgpResponse(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        Integer asn,
-        Integer keepaliveInterval) {
+        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
+        @OutputCustomType.Parameter("asn") Integer asn,
+        @OutputCustomType.Parameter("keepaliveInterval") Integer keepaliveInterval) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

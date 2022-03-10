@@ -123,30 +123,30 @@ public final class GetReportResult {
      */
     private final String topk;
 
-    @OutputCustomType.Constructor({"chartType","comments","createdAt","dimensions","displayName","environment","filter","fromTime","lastModifiedAt","lastViewedAt","limit","metrics","name","offset","organization","properties","sortByCols","sortOrder","tags","timeUnit","toTime","topk"})
+    @OutputCustomType.Constructor
     private GetReportResult(
-        String chartType,
-        List<String> comments,
-        String createdAt,
-        List<String> dimensions,
-        String displayName,
-        String environment,
-        String filter,
-        String fromTime,
-        String lastModifiedAt,
-        String lastViewedAt,
-        String limit,
-        List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics,
-        String name,
-        String offset,
-        String organization,
-        List<GoogleCloudApigeeV1ReportPropertyResponse> properties,
-        List<String> sortByCols,
-        String sortOrder,
-        List<String> tags,
-        String timeUnit,
-        String toTime,
-        String topk) {
+        @OutputCustomType.Parameter("chartType") String chartType,
+        @OutputCustomType.Parameter("comments") List<String> comments,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("dimensions") List<String> dimensions,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("environment") String environment,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("fromTime") String fromTime,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastViewedAt") String lastViewedAt,
+        @OutputCustomType.Parameter("limit") String limit,
+        @OutputCustomType.Parameter("metrics") List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offset") String offset,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("properties") List<GoogleCloudApigeeV1ReportPropertyResponse> properties,
+        @OutputCustomType.Parameter("sortByCols") List<String> sortByCols,
+        @OutputCustomType.Parameter("sortOrder") String sortOrder,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit,
+        @OutputCustomType.Parameter("toTime") String toTime,
+        @OutputCustomType.Parameter("topk") String topk) {
         this.chartType = chartType;
         this.comments = comments;
         this.createdAt = createdAt;

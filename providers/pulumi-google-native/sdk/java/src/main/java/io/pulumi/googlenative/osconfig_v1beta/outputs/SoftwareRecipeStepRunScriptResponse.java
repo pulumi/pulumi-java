@@ -27,11 +27,11 @@ public final class SoftwareRecipeStepRunScriptResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","interpreter","script"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepRunScriptResponse(
-        List<Integer> allowedExitCodes,
-        String interpreter,
-        String script) {
+        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("script") String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = script;

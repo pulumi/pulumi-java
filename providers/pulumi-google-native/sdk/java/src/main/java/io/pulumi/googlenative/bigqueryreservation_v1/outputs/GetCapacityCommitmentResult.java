@@ -51,16 +51,16 @@ public final class GetCapacityCommitmentResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"commitmentEndTime","commitmentStartTime","failureStatus","name","plan","renewalPlan","slotCount","state"})
+    @OutputCustomType.Constructor
     private GetCapacityCommitmentResult(
-        String commitmentEndTime,
-        String commitmentStartTime,
-        StatusResponse failureStatus,
-        String name,
-        String plan,
-        String renewalPlan,
-        String slotCount,
-        String state) {
+        @OutputCustomType.Parameter("commitmentEndTime") String commitmentEndTime,
+        @OutputCustomType.Parameter("commitmentStartTime") String commitmentStartTime,
+        @OutputCustomType.Parameter("failureStatus") StatusResponse failureStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") String plan,
+        @OutputCustomType.Parameter("renewalPlan") String renewalPlan,
+        @OutputCustomType.Parameter("slotCount") String slotCount,
+        @OutputCustomType.Parameter("state") String state) {
         this.commitmentEndTime = commitmentEndTime;
         this.commitmentStartTime = commitmentStartTime;
         this.failureStatus = failureStatus;

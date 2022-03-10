@@ -37,13 +37,13 @@ public final class TemplateContentsResponse {
      */
     private final String template;
 
-    @OutputCustomType.Constructor({"imports","interpreter","mainTemplate","schema","template"})
+    @OutputCustomType.Constructor
     private TemplateContentsResponse(
-        List<ImportFileResponse> imports,
-        String interpreter,
-        String mainTemplate,
-        String schema,
-        String template) {
+        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("mainTemplate") String mainTemplate,
+        @OutputCustomType.Parameter("schema") String schema,
+        @OutputCustomType.Parameter("template") String template) {
         this.imports = imports;
         this.interpreter = interpreter;
         this.mainTemplate = mainTemplate;

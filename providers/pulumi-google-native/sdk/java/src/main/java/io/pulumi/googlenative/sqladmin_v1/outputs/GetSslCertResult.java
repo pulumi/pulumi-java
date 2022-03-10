@@ -55,17 +55,17 @@ public final class GetSslCertResult {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"cert","certSerialNumber","commonName","createTime","expirationTime","instance","kind","selfLink","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private GetSslCertResult(
-        String cert,
-        String certSerialNumber,
-        String commonName,
-        String createTime,
-        String expirationTime,
-        String instance,
-        String kind,
-        String selfLink,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("cert") String cert,
+        @OutputCustomType.Parameter("certSerialNumber") String certSerialNumber,
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.certSerialNumber = certSerialNumber;
         this.commonName = commonName;

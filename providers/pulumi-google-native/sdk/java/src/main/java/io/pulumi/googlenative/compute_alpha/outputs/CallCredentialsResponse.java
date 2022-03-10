@@ -21,10 +21,10 @@ public final class CallCredentialsResponse {
      */
     private final MetadataCredentialsFromPluginResponse fromPlugin;
 
-    @OutputCustomType.Constructor({"callCredentialType","fromPlugin"})
+    @OutputCustomType.Constructor
     private CallCredentialsResponse(
-        String callCredentialType,
-        MetadataCredentialsFromPluginResponse fromPlugin) {
+        @OutputCustomType.Parameter("callCredentialType") String callCredentialType,
+        @OutputCustomType.Parameter("fromPlugin") MetadataCredentialsFromPluginResponse fromPlugin) {
         this.callCredentialType = callCredentialType;
         this.fromPlugin = fromPlugin;
     }

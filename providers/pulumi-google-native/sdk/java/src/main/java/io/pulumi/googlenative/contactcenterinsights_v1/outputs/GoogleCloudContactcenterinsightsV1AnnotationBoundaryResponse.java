@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      */
     private final Integer wordIndex;
 
-    @OutputCustomType.Constructor({"transcriptIndex","wordIndex"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(
-        Integer transcriptIndex,
-        Integer wordIndex) {
+        @OutputCustomType.Parameter("transcriptIndex") Integer transcriptIndex,
+        @OutputCustomType.Parameter("wordIndex") Integer wordIndex) {
         this.transcriptIndex = transcriptIndex;
         this.wordIndex = wordIndex;
     }

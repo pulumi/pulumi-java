@@ -56,16 +56,16 @@ public final class GoogleCloudDialogflowCxV3IntentResponse {
      */
     private final List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases;
 
-    @OutputCustomType.Constructor({"description","displayName","isFallback","labels","name","parameters","priority","trainingPhrases"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3IntentResponse(
-        String description,
-        String displayName,
-        Boolean isFallback,
-        Map<String,String> labels,
-        String name,
-        List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
-        Integer priority,
-        List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isFallback") Boolean isFallback,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("trainingPhrases") List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
         this.description = description;
         this.displayName = displayName;
         this.isFallback = isFallback;

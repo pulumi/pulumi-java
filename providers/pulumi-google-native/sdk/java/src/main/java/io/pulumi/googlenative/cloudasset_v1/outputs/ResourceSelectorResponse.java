@@ -15,8 +15,8 @@ public final class ResourceSelectorResponse {
      */
     private final String fullResourceName;
 
-    @OutputCustomType.Constructor({"fullResourceName"})
-    private ResourceSelectorResponse(String fullResourceName) {
+    @OutputCustomType.Constructor
+    private ResourceSelectorResponse(@OutputCustomType.Parameter("fullResourceName") String fullResourceName) {
         this.fullResourceName = fullResourceName;
     }
 

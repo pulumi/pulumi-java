@@ -16,8 +16,8 @@ public final class OperationErrorResponse {
      */
     private final List<OperationErrorErrorsItemResponse> errors;
 
-    @OutputCustomType.Constructor({"errors"})
-    private OperationErrorResponse(List<OperationErrorErrorsItemResponse> errors) {
+    @OutputCustomType.Constructor
+    private OperationErrorResponse(@OutputCustomType.Parameter("errors") List<OperationErrorErrorsItemResponse> errors) {
         this.errors = errors;
     }
 

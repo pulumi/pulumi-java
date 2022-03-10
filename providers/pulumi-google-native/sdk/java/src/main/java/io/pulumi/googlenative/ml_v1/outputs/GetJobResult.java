@@ -80,21 +80,21 @@ public final class GetJobResult {
      */
     private final GoogleCloudMlV1__TrainingOutputResponse trainingOutput;
 
-    @OutputCustomType.Constructor({"createTime","endTime","errorMessage","etag","jobId","jobPosition","labels","predictionInput","predictionOutput","startTime","state","trainingInput","trainingOutput"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        String createTime,
-        String endTime,
-        String errorMessage,
-        String etag,
-        String jobId,
-        String jobPosition,
-        Map<String,String> labels,
-        GoogleCloudMlV1__PredictionInputResponse predictionInput,
-        GoogleCloudMlV1__PredictionOutputResponse predictionOutput,
-        String startTime,
-        String state,
-        GoogleCloudMlV1__TrainingInputResponse trainingInput,
-        GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("jobPosition") String jobPosition,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("predictionInput") GoogleCloudMlV1__PredictionInputResponse predictionInput,
+        @OutputCustomType.Parameter("predictionOutput") GoogleCloudMlV1__PredictionOutputResponse predictionOutput,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trainingInput") GoogleCloudMlV1__TrainingInputResponse trainingInput,
+        @OutputCustomType.Parameter("trainingOutput") GoogleCloudMlV1__TrainingOutputResponse trainingOutput) {
         this.createTime = createTime;
         this.endTime = endTime;
         this.errorMessage = errorMessage;

@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse {
      */
     private final List<String> trackingParameters;
 
-    @OutputCustomType.Constructor({"flow","trackingParameters"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3TestConfigResponse(
-        String flow,
-        List<String> trackingParameters) {
+        @OutputCustomType.Parameter("flow") String flow,
+        @OutputCustomType.Parameter("trackingParameters") List<String> trackingParameters) {
         this.flow = flow;
         this.trackingParameters = trackingParameters;
     }

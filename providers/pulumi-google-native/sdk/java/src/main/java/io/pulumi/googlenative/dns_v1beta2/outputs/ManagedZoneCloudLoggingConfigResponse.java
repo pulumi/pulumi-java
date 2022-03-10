@@ -17,10 +17,10 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     private final Boolean enableLogging;
     private final String kind;
 
-    @OutputCustomType.Constructor({"enableLogging","kind"})
+    @OutputCustomType.Constructor
     private ManagedZoneCloudLoggingConfigResponse(
-        Boolean enableLogging,
-        String kind) {
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.enableLogging = enableLogging;
         this.kind = kind;
     }

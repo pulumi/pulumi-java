@@ -20,10 +20,10 @@ public final class DeviceStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"binaryData","updateTime"})
+    @OutputCustomType.Constructor
     private DeviceStateResponse(
-        String binaryData,
-        String updateTime) {
+        @OutputCustomType.Parameter("binaryData") String binaryData,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }

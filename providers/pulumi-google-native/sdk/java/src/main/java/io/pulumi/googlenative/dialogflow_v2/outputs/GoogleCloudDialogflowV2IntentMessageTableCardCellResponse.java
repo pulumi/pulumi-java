@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardCellResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"text"})
-    private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(String text) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageTableCardCellResponse(@OutputCustomType.Parameter("text") String text) {
         this.text = text;
     }
 

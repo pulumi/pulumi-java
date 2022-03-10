@@ -27,11 +27,11 @@ public final class LoggingConfigResponse {
      */
     private final List<String> logActions;
 
-    @OutputCustomType.Constructor({"enableOnpremGcsTransferLogs","logActionStates","logActions"})
+    @OutputCustomType.Constructor
     private LoggingConfigResponse(
-        Boolean enableOnpremGcsTransferLogs,
-        List<String> logActionStates,
-        List<String> logActions) {
+        @OutputCustomType.Parameter("enableOnpremGcsTransferLogs") Boolean enableOnpremGcsTransferLogs,
+        @OutputCustomType.Parameter("logActionStates") List<String> logActionStates,
+        @OutputCustomType.Parameter("logActions") List<String> logActions) {
         this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
         this.logActionStates = logActionStates;
         this.logActions = logActions;

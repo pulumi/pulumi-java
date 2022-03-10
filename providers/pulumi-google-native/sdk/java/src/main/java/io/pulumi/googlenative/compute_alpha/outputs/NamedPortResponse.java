@@ -21,10 +21,10 @@ public final class NamedPortResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private NamedPortResponse(
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.name = name;
         this.port = port;
     }

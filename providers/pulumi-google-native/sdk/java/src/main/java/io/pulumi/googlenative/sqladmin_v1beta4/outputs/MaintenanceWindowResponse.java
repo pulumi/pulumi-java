@@ -31,12 +31,12 @@ public final class MaintenanceWindowResponse {
      */
     private final String updateTrack;
 
-    @OutputCustomType.Constructor({"day","hour","kind","updateTrack"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        Integer day,
-        Integer hour,
-        String kind,
-        String updateTrack) {
+        @OutputCustomType.Parameter("day") Integer day,
+        @OutputCustomType.Parameter("hour") Integer hour,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("updateTrack") String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.kind = kind;

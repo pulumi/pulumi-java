@@ -91,23 +91,23 @@ public final class GetJobResult {
      */
     private final String userUpdateTime;
 
-    @OutputCustomType.Constructor({"appEngineHttpTarget","attemptDeadline","description","httpTarget","lastAttemptTime","legacyAppEngineCron","name","pubsubTarget","retryConfig","schedule","scheduleTime","state","status","timeZone","userUpdateTime"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        AppEngineHttpTargetResponse appEngineHttpTarget,
-        String attemptDeadline,
-        String description,
-        HttpTargetResponse httpTarget,
-        String lastAttemptTime,
-        Boolean legacyAppEngineCron,
-        String name,
-        PubsubTargetResponse pubsubTarget,
-        RetryConfigResponse retryConfig,
-        String schedule,
-        String scheduleTime,
-        String state,
-        StatusResponse status,
-        String timeZone,
-        String userUpdateTime) {
+        @OutputCustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
+        @OutputCustomType.Parameter("attemptDeadline") String attemptDeadline,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("httpTarget") HttpTargetResponse httpTarget,
+        @OutputCustomType.Parameter("lastAttemptTime") String lastAttemptTime,
+        @OutputCustomType.Parameter("legacyAppEngineCron") Boolean legacyAppEngineCron,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pubsubTarget") PubsubTargetResponse pubsubTarget,
+        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("userUpdateTime") String userUpdateTime) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.attemptDeadline = attemptDeadline;
         this.description = description;

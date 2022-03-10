@@ -43,14 +43,14 @@ public final class HttpRequestResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"body","headers","httpMethod","oauthToken","oidcToken","url"})
+    @OutputCustomType.Constructor
     private HttpRequestResponse(
-        String body,
-        Map<String,String> headers,
-        String httpMethod,
-        OAuthTokenResponse oauthToken,
-        OidcTokenResponse oidcToken,
-        String url) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
+        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @OutputCustomType.Parameter("url") String url) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;

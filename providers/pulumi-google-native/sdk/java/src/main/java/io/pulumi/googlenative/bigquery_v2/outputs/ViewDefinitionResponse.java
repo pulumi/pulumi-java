@@ -33,12 +33,12 @@ public final class ViewDefinitionResponse {
      */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
-    @OutputCustomType.Constructor({"query","useExplicitColumnNames","useLegacySql","userDefinedFunctionResources"})
+    @OutputCustomType.Constructor
     private ViewDefinitionResponse(
-        String query,
-        Boolean useExplicitColumnNames,
-        Boolean useLegacySql,
-        List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("useExplicitColumnNames") Boolean useExplicitColumnNames,
+        @OutputCustomType.Parameter("useLegacySql") Boolean useLegacySql,
+        @OutputCustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
         this.query = query;
         this.useExplicitColumnNames = useExplicitColumnNames;
         this.useLegacySql = useLegacySql;

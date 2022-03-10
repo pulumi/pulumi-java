@@ -64,18 +64,18 @@ public final class GetFeatureResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","labels","membershipSpecs","membershipStates","name","resourceState","spec","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetFeatureResult(
-        String createTime,
-        String deleteTime,
-        Map<String,String> labels,
-        Map<String,String> membershipSpecs,
-        Map<String,String> membershipStates,
-        String name,
-        FeatureResourceStateResponse resourceState,
-        CommonFeatureSpecResponse spec,
-        CommonFeatureStateResponse state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("membershipSpecs") Map<String,String> membershipSpecs,
+        @OutputCustomType.Parameter("membershipStates") Map<String,String> membershipStates,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") FeatureResourceStateResponse resourceState,
+        @OutputCustomType.Parameter("spec") CommonFeatureSpecResponse spec,
+        @OutputCustomType.Parameter("state") CommonFeatureStateResponse state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.labels = labels;

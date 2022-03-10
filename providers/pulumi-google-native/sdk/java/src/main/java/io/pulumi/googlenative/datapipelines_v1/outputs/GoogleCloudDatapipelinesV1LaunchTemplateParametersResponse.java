@@ -38,13 +38,13 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor({"environment","jobName","parameters","transformNameMapping","update"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(
-        GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMapping,
-        Boolean update) {
+        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
+        @OutputCustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
+        @OutputCustomType.Parameter("update") Boolean update) {
         this.environment = environment;
         this.jobName = jobName;
         this.parameters = parameters;

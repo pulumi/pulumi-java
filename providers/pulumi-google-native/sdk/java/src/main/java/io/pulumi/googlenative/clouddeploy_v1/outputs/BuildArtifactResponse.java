@@ -20,10 +20,10 @@ public final class BuildArtifactResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"image","tag"})
+    @OutputCustomType.Constructor
     private BuildArtifactResponse(
-        String image,
-        String tag) {
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.image = image;
         this.tag = tag;
     }

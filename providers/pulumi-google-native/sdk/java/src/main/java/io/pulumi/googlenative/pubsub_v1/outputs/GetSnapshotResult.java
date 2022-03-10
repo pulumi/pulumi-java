@@ -31,12 +31,12 @@ public final class GetSnapshotResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"expireTime","labels","name","topic"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String expireTime,
-        Map<String,String> labels,
-        String name,
-        String topic) {
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.expireTime = expireTime;
         this.labels = labels;
         this.name = name;

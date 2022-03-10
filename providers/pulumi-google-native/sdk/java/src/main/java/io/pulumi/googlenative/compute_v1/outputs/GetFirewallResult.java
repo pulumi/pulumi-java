@@ -106,26 +106,26 @@ public final class GetFirewallResult {
      */
     private final List<String> targetTags;
 
-    @OutputCustomType.Constructor({"allowed","creationTimestamp","denied","description","destinationRanges","direction","disabled","kind","logConfig","name","network","priority","selfLink","sourceRanges","sourceServiceAccounts","sourceTags","targetServiceAccounts","targetTags"})
+    @OutputCustomType.Constructor
     private GetFirewallResult(
-        List<FirewallAllowedItemResponse> allowed,
-        String creationTimestamp,
-        List<FirewallDeniedItemResponse> denied,
-        String description,
-        List<String> destinationRanges,
-        String direction,
-        Boolean disabled,
-        String kind,
-        FirewallLogConfigResponse logConfig,
-        String name,
-        String network,
-        Integer priority,
-        String selfLink,
-        List<String> sourceRanges,
-        List<String> sourceServiceAccounts,
-        List<String> sourceTags,
-        List<String> targetServiceAccounts,
-        List<String> targetTags) {
+        @OutputCustomType.Parameter("allowed") List<FirewallAllowedItemResponse> allowed,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("denied") List<FirewallDeniedItemResponse> denied,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationRanges") List<String> destinationRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("logConfig") FirewallLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceRanges") List<String> sourceRanges,
+        @OutputCustomType.Parameter("sourceServiceAccounts") List<String> sourceServiceAccounts,
+        @OutputCustomType.Parameter("sourceTags") List<String> sourceTags,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @OutputCustomType.Parameter("targetTags") List<String> targetTags) {
         this.allowed = allowed;
         this.creationTimestamp = creationTimestamp;
         this.denied = denied;

@@ -21,10 +21,10 @@ public final class PipelineReadyConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"status","updateTime"})
+    @OutputCustomType.Constructor
     private PipelineReadyConditionResponse(
-        Boolean status,
-        String updateTime) {
+        @OutputCustomType.Parameter("status") Boolean status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.status = status;
         this.updateTime = updateTime;
     }

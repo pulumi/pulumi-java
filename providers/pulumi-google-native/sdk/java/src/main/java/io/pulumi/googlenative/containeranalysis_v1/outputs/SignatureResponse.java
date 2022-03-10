@@ -20,10 +20,10 @@ public final class SignatureResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor({"publicKeyId","signature"})
+    @OutputCustomType.Constructor
     private SignatureResponse(
-        String publicKeyId,
-        String signature) {
+        @OutputCustomType.Parameter("publicKeyId") String publicKeyId,
+        @OutputCustomType.Parameter("signature") String signature) {
         this.publicKeyId = publicKeyId;
         this.signature = signature;
     }

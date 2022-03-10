@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"phraseMatchRules","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(
-        List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
-        String type) {
+        @OutputCustomType.Parameter("phraseMatchRules") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
+        @OutputCustomType.Parameter("type") String type) {
         this.phraseMatchRules = phraseMatchRules;
         this.type = type;
     }

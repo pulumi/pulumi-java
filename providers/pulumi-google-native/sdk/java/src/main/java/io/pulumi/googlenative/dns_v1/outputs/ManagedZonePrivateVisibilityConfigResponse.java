@@ -18,10 +18,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"kind","networks"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigResponse(
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
         this.kind = kind;
         this.networks = networks;
     }

@@ -21,10 +21,10 @@ public final class ShareSettingsResponse {
      */
     private final String shareType;
 
-    @OutputCustomType.Constructor({"projectMap","shareType"})
+    @OutputCustomType.Constructor
     private ShareSettingsResponse(
-        Map<String,String> projectMap,
-        String shareType) {
+        @OutputCustomType.Parameter("projectMap") Map<String,String> projectMap,
+        @OutputCustomType.Parameter("shareType") String shareType) {
         this.projectMap = projectMap;
         this.shareType = shareType;
     }

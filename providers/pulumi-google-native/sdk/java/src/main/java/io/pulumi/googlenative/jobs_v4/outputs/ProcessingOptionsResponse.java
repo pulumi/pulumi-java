@@ -21,10 +21,10 @@ public final class ProcessingOptionsResponse {
      */
     private final String htmlSanitization;
 
-    @OutputCustomType.Constructor({"disableStreetAddressResolution","htmlSanitization"})
+    @OutputCustomType.Constructor
     private ProcessingOptionsResponse(
-        Boolean disableStreetAddressResolution,
-        String htmlSanitization) {
+        @OutputCustomType.Parameter("disableStreetAddressResolution") Boolean disableStreetAddressResolution,
+        @OutputCustomType.Parameter("htmlSanitization") String htmlSanitization) {
         this.disableStreetAddressResolution = disableStreetAddressResolution;
         this.htmlSanitization = htmlSanitization;
     }

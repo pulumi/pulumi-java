@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"quickReplies","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(
-        List<String> quickReplies,
-        String title) {
+        @OutputCustomType.Parameter("quickReplies") List<String> quickReplies,
+        @OutputCustomType.Parameter("title") String title) {
         this.quickReplies = quickReplies;
         this.title = title;
     }

@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageImageResponse {
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor({"accessibilityText","imageUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageImageResponse(
-        String accessibilityText,
-        String imageUri) {
+        @OutputCustomType.Parameter("accessibilityText") String accessibilityText,
+        @OutputCustomType.Parameter("imageUri") String imageUri) {
         this.accessibilityText = accessibilityText;
         this.imageUri = imageUri;
     }

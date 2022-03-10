@@ -56,16 +56,16 @@ public final class JobConfigurationResponse {
      */
     private final JobConfigurationQueryResponse query;
 
-    @OutputCustomType.Constructor({"copy","dryRun","extract","jobTimeoutMs","jobType","labels","load","query"})
+    @OutputCustomType.Constructor
     private JobConfigurationResponse(
-        JobConfigurationTableCopyResponse copy,
-        Boolean dryRun,
-        JobConfigurationExtractResponse extract,
-        String jobTimeoutMs,
-        String jobType,
-        Map<String,String> labels,
-        JobConfigurationLoadResponse load,
-        JobConfigurationQueryResponse query) {
+        @OutputCustomType.Parameter("copy") JobConfigurationTableCopyResponse copy,
+        @OutputCustomType.Parameter("dryRun") Boolean dryRun,
+        @OutputCustomType.Parameter("extract") JobConfigurationExtractResponse extract,
+        @OutputCustomType.Parameter("jobTimeoutMs") String jobTimeoutMs,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("load") JobConfigurationLoadResponse load,
+        @OutputCustomType.Parameter("query") JobConfigurationQueryResponse query) {
         this.copy = copy;
         this.dryRun = dryRun;
         this.extract = extract;

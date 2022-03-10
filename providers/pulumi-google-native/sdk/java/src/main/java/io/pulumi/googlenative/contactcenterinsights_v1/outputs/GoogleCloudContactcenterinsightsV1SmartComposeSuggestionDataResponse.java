@@ -32,12 +32,12 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
      */
     private final String suggestion;
 
-    @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","suggestion"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse(
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String suggestion) {
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("suggestion") String suggestion) {
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
         this.queryRecord = queryRecord;

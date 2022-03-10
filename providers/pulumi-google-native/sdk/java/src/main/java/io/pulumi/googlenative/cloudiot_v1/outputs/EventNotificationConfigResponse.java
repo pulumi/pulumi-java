@@ -20,10 +20,10 @@ public final class EventNotificationConfigResponse {
      */
     private final String subfolderMatches;
 
-    @OutputCustomType.Constructor({"pubsubTopicName","subfolderMatches"})
+    @OutputCustomType.Constructor
     private EventNotificationConfigResponse(
-        String pubsubTopicName,
-        String subfolderMatches) {
+        @OutputCustomType.Parameter("pubsubTopicName") String pubsubTopicName,
+        @OutputCustomType.Parameter("subfolderMatches") String subfolderMatches) {
         this.pubsubTopicName = pubsubTopicName;
         this.subfolderMatches = subfolderMatches;
     }

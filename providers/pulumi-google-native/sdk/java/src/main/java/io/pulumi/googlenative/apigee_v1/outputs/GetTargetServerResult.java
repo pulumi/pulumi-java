@@ -48,15 +48,15 @@ public final class GetTargetServerResult {
      */
     private final GoogleCloudApigeeV1TlsInfoResponse sSLInfo;
 
-    @OutputCustomType.Constructor({"description","host","isEnabled","name","port","protocol","sSLInfo"})
+    @OutputCustomType.Constructor
     private GetTargetServerResult(
-        String description,
-        String host,
-        Boolean isEnabled,
-        String name,
-        Integer port,
-        String protocol,
-        GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("sSLInfo") GoogleCloudApigeeV1TlsInfoResponse sSLInfo) {
         this.description = description;
         this.host = host;
         this.isEnabled = isEnabled;

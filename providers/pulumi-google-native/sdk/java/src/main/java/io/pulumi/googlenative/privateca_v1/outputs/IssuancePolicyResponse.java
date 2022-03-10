@@ -46,14 +46,14 @@ public final class IssuancePolicyResponse {
      */
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
-    @OutputCustomType.Constructor({"allowedIssuanceModes","allowedKeyTypes","baselineValues","identityConstraints","maximumLifetime","passthroughExtensions"})
+    @OutputCustomType.Constructor
     private IssuancePolicyResponse(
-        IssuanceModesResponse allowedIssuanceModes,
-        List<AllowedKeyTypeResponse> allowedKeyTypes,
-        X509ParametersResponse baselineValues,
-        CertificateIdentityConstraintsResponse identityConstraints,
-        String maximumLifetime,
-        CertificateExtensionConstraintsResponse passthroughExtensions) {
+        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedKeyTypes") List<AllowedKeyTypeResponse> allowedKeyTypes,
+        @OutputCustomType.Parameter("baselineValues") X509ParametersResponse baselineValues,
+        @OutputCustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
+        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @OutputCustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;

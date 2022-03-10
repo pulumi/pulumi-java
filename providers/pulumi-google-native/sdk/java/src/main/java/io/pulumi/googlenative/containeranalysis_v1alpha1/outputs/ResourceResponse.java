@@ -26,11 +26,11 @@ public final class ResourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"contentHash","name","uri"})
+    @OutputCustomType.Constructor
     private ResourceResponse(
-        HashResponse contentHash,
-        String name,
-        String uri) {
+        @OutputCustomType.Parameter("contentHash") HashResponse contentHash,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.contentHash = contentHash;
         this.name = name;
         this.uri = uri;

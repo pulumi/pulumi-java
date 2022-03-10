@@ -54,16 +54,16 @@ public final class SchedulingResponse {
      */
     private final String provisioningModel;
 
-    @OutputCustomType.Constructor({"automaticRestart","instanceTerminationAction","locationHint","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible","provisioningModel"})
+    @OutputCustomType.Constructor
     private SchedulingResponse(
-        Boolean automaticRestart,
-        String instanceTerminationAction,
-        String locationHint,
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible,
-        String provisioningModel) {
+        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @OutputCustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("provisioningModel") String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.instanceTerminationAction = instanceTerminationAction;
         this.locationHint = locationHint;

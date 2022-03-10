@@ -59,17 +59,17 @@ public final class RecurringScheduleResponse {
      */
     private final WeeklyScheduleResponse weekly;
 
-    @OutputCustomType.Constructor({"endTime","frequency","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
+    @OutputCustomType.Constructor
     private RecurringScheduleResponse(
-        String endTime,
-        String frequency,
-        String lastExecuteTime,
-        MonthlyScheduleResponse monthly,
-        String nextExecuteTime,
-        String startTime,
-        TimeOfDayResponse timeOfDay,
-        TimeZoneResponse timeZone,
-        WeeklyScheduleResponse weekly) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("lastExecuteTime") String lastExecuteTime,
+        @OutputCustomType.Parameter("monthly") MonthlyScheduleResponse monthly,
+        @OutputCustomType.Parameter("nextExecuteTime") String nextExecuteTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeOfDay") TimeOfDayResponse timeOfDay,
+        @OutputCustomType.Parameter("timeZone") TimeZoneResponse timeZone,
+        @OutputCustomType.Parameter("weekly") WeeklyScheduleResponse weekly) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.lastExecuteTime = lastExecuteTime;

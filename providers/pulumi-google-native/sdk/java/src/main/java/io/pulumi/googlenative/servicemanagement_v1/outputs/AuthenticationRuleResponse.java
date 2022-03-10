@@ -34,12 +34,12 @@ public final class AuthenticationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"allowWithoutCredential","oauth","requirements","selector"})
+    @OutputCustomType.Constructor
     private AuthenticationRuleResponse(
-        Boolean allowWithoutCredential,
-        OAuthRequirementsResponse oauth,
-        List<AuthRequirementResponse> requirements,
-        String selector) {
+        @OutputCustomType.Parameter("allowWithoutCredential") Boolean allowWithoutCredential,
+        @OutputCustomType.Parameter("oauth") OAuthRequirementsResponse oauth,
+        @OutputCustomType.Parameter("requirements") List<AuthRequirementResponse> requirements,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.allowWithoutCredential = allowWithoutCredential;
         this.oauth = oauth;
         this.requirements = requirements;

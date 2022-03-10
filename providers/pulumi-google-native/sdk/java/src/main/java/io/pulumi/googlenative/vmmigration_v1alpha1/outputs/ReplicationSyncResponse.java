@@ -15,8 +15,8 @@ public final class ReplicationSyncResponse {
      */
     private final String lastSyncTime;
 
-    @OutputCustomType.Constructor({"lastSyncTime"})
-    private ReplicationSyncResponse(String lastSyncTime) {
+    @OutputCustomType.Constructor
+    private ReplicationSyncResponse(@OutputCustomType.Parameter("lastSyncTime") String lastSyncTime) {
         this.lastSyncTime = lastSyncTime;
     }
 

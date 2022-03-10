@@ -20,10 +20,10 @@ public final class AppliedLicenseResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"osLicense","type"})
+    @OutputCustomType.Constructor
     private AppliedLicenseResponse(
-        String osLicense,
-        String type) {
+        @OutputCustomType.Parameter("osLicense") String osLicense,
+        @OutputCustomType.Parameter("type") String type) {
         this.osLicense = osLicense;
         this.type = type;
     }

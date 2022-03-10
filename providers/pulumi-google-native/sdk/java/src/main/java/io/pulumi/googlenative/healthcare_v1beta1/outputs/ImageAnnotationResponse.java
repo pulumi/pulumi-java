@@ -22,10 +22,10 @@ public final class ImageAnnotationResponse {
      */
     private final Integer frameIndex;
 
-    @OutputCustomType.Constructor({"boundingPolys","frameIndex"})
+    @OutputCustomType.Constructor
     private ImageAnnotationResponse(
-        List<BoundingPolyResponse> boundingPolys,
-        Integer frameIndex) {
+        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @OutputCustomType.Parameter("frameIndex") Integer frameIndex) {
         this.boundingPolys = boundingPolys;
         this.frameIndex = frameIndex;
     }

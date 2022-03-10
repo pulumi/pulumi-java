@@ -26,11 +26,11 @@ public final class MonitoringQueryLanguageConditionResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"duration","query","trigger"})
+    @OutputCustomType.Constructor
     private MonitoringQueryLanguageConditionResponse(
-        String duration,
-        String query,
-        TriggerResponse trigger) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
         this.duration = duration;
         this.query = query;
         this.trigger = trigger;

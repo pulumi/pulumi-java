@@ -27,11 +27,11 @@ public final class ResourceUsageExportConfigResponse {
      */
     private final Boolean enableNetworkEgressMetering;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","consumptionMeteringConfig","enableNetworkEgressMetering"})
+    @OutputCustomType.Constructor
     private ResourceUsageExportConfigResponse(
-        BigQueryDestinationResponse bigqueryDestination,
-        ConsumptionMeteringConfigResponse consumptionMeteringConfig,
-        Boolean enableNetworkEgressMetering) {
+        @OutputCustomType.Parameter("bigqueryDestination") BigQueryDestinationResponse bigqueryDestination,
+        @OutputCustomType.Parameter("consumptionMeteringConfig") ConsumptionMeteringConfigResponse consumptionMeteringConfig,
+        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering) {
         this.bigqueryDestination = bigqueryDestination;
         this.consumptionMeteringConfig = consumptionMeteringConfig;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;

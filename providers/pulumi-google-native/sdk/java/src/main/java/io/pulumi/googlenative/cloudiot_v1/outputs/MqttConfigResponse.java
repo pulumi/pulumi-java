@@ -15,8 +15,8 @@ public final class MqttConfigResponse {
      */
     private final String mqttEnabledState;
 
-    @OutputCustomType.Constructor({"mqttEnabledState"})
-    private MqttConfigResponse(String mqttEnabledState) {
+    @OutputCustomType.Constructor
+    private MqttConfigResponse(@OutputCustomType.Parameter("mqttEnabledState") String mqttEnabledState) {
         this.mqttEnabledState = mqttEnabledState;
     }
 

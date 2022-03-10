@@ -31,12 +31,12 @@ public final class UpgradeDistributionResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor({"classification","cpeUri","cve","severity"})
+    @OutputCustomType.Constructor
     private UpgradeDistributionResponse(
-        String classification,
-        String cpeUri,
-        List<String> cve,
-        String severity) {
+        @OutputCustomType.Parameter("classification") String classification,
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("cve") List<String> cve,
+        @OutputCustomType.Parameter("severity") String severity) {
         this.classification = classification;
         this.cpeUri = cpeUri;
         this.cve = cve;

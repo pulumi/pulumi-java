@@ -26,11 +26,11 @@ public final class GetTagTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","fields","name"})
+    @OutputCustomType.Constructor
     private GetTagTemplateResult(
-        String displayName,
-        Map<String,String> fields,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fields") Map<String,String> fields,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.fields = fields;
         this.name = name;

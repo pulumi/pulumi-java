@@ -117,29 +117,29 @@ public final class GetVpnTunnelResult {
      */
     private final Integer vpnGatewayInterface;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","detailedStatus","ikeVersion","kind","localTrafficSelector","name","peerExternalGateway","peerExternalGatewayInterface","peerGcpGateway","peerIp","region","remoteTrafficSelector","router","selfLink","sharedSecret","sharedSecretHash","status","targetVpnGateway","vpnGateway","vpnGatewayInterface"})
+    @OutputCustomType.Constructor
     private GetVpnTunnelResult(
-        String creationTimestamp,
-        String description,
-        String detailedStatus,
-        Integer ikeVersion,
-        String kind,
-        List<String> localTrafficSelector,
-        String name,
-        String peerExternalGateway,
-        Integer peerExternalGatewayInterface,
-        String peerGcpGateway,
-        String peerIp,
-        String region,
-        List<String> remoteTrafficSelector,
-        String router,
-        String selfLink,
-        String sharedSecret,
-        String sharedSecretHash,
-        String status,
-        String targetVpnGateway,
-        String vpnGateway,
-        Integer vpnGatewayInterface) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("detailedStatus") String detailedStatus,
+        @OutputCustomType.Parameter("ikeVersion") Integer ikeVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localTrafficSelector") List<String> localTrafficSelector,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerExternalGateway") String peerExternalGateway,
+        @OutputCustomType.Parameter("peerExternalGatewayInterface") Integer peerExternalGatewayInterface,
+        @OutputCustomType.Parameter("peerGcpGateway") String peerGcpGateway,
+        @OutputCustomType.Parameter("peerIp") String peerIp,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("remoteTrafficSelector") List<String> remoteTrafficSelector,
+        @OutputCustomType.Parameter("router") String router,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sharedSecret") String sharedSecret,
+        @OutputCustomType.Parameter("sharedSecretHash") String sharedSecretHash,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetVpnGateway") String targetVpnGateway,
+        @OutputCustomType.Parameter("vpnGateway") String vpnGateway,
+        @OutputCustomType.Parameter("vpnGatewayInterface") Integer vpnGatewayInterface) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.detailedStatus = detailedStatus;

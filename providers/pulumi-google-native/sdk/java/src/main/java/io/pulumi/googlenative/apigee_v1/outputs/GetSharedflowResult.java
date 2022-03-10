@@ -32,12 +32,12 @@ public final class GetSharedflowResult {
      */
     private final List<String> revision;
 
-    @OutputCustomType.Constructor({"latestRevisionId","metaData","name","revision"})
+    @OutputCustomType.Constructor
     private GetSharedflowResult(
-        String latestRevisionId,
-        GoogleCloudApigeeV1EntityMetadataResponse metaData,
-        String name,
-        List<String> revision) {
+        @OutputCustomType.Parameter("latestRevisionId") String latestRevisionId,
+        @OutputCustomType.Parameter("metaData") GoogleCloudApigeeV1EntityMetadataResponse metaData,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revision") List<String> revision) {
         this.latestRevisionId = latestRevisionId;
         this.metaData = metaData;
         this.name = name;

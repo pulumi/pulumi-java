@@ -26,11 +26,11 @@ public final class OsConstraintResponse {
      */
     private final Boolean requireVerifiedChromeOs;
 
-    @OutputCustomType.Constructor({"minimumVersion","osType","requireVerifiedChromeOs"})
+    @OutputCustomType.Constructor
     private OsConstraintResponse(
-        String minimumVersion,
-        String osType,
-        Boolean requireVerifiedChromeOs) {
+        @OutputCustomType.Parameter("minimumVersion") String minimumVersion,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("requireVerifiedChromeOs") Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;

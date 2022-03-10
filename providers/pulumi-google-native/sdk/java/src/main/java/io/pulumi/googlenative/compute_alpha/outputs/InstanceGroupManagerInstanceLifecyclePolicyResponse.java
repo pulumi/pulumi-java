@@ -15,8 +15,8 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
      */
     private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
 
-    @OutputCustomType.Constructor({"metadataBasedReadinessSignal"})
-    private InstanceGroupManagerInstanceLifecyclePolicyResponse(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerInstanceLifecyclePolicyResponse(@OutputCustomType.Parameter("metadataBasedReadinessSignal") InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
         this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
     }
 

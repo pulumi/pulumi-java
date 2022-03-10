@@ -21,10 +21,10 @@ public final class ParameterValidationResponse {
      */
     private final ValueValidationResponse values;
 
-    @OutputCustomType.Constructor({"regex","values"})
+    @OutputCustomType.Constructor
     private ParameterValidationResponse(
-        RegexValidationResponse regex,
-        ValueValidationResponse values) {
+        @OutputCustomType.Parameter("regex") RegexValidationResponse regex,
+        @OutputCustomType.Parameter("values") ValueValidationResponse values) {
         this.regex = regex;
         this.values = values;
     }

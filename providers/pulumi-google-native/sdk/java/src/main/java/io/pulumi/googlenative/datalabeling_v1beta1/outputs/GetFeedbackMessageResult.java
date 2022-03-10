@@ -34,14 +34,14 @@ public final class GetFeedbackMessageResult {
     private final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata;
     private final GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata;
 
-    @OutputCustomType.Constructor({"body","createTime","image","name","operatorFeedbackMetadata","requesterFeedbackMetadata"})
+    @OutputCustomType.Constructor
     private GetFeedbackMessageResult(
-        String body,
-        String createTime,
-        String image,
-        String name,
-        GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
-        GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operatorFeedbackMetadata") GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
+        @OutputCustomType.Parameter("requesterFeedbackMetadata") GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
         this.body = body;
         this.createTime = createTime;
         this.image = image;

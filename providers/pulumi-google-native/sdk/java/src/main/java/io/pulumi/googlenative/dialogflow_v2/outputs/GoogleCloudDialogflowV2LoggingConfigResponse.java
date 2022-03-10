@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse {
      */
     private final Boolean enableStackdriverLogging;
 
-    @OutputCustomType.Constructor({"enableStackdriverLogging"})
-    private GoogleCloudDialogflowV2LoggingConfigResponse(Boolean enableStackdriverLogging) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2LoggingConfigResponse(@OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
     }
 

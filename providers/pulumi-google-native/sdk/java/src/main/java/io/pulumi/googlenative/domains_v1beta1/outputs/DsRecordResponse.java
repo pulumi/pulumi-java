@@ -31,12 +31,12 @@ public final class DsRecordResponse {
      */
     private final Integer keyTag;
 
-    @OutputCustomType.Constructor({"algorithm","digest","digestType","keyTag"})
+    @OutputCustomType.Constructor
     private DsRecordResponse(
-        String algorithm,
-        String digest,
-        String digestType,
-        Integer keyTag) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("digest") String digest,
+        @OutputCustomType.Parameter("digestType") String digestType,
+        @OutputCustomType.Parameter("keyTag") Integer keyTag) {
         this.algorithm = algorithm;
         this.digest = digest;
         this.digestType = digestType;

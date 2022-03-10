@@ -21,10 +21,10 @@ public final class BackendServiceLogConfigResponse {
      */
     private final Double sampleRate;
 
-    @OutputCustomType.Constructor({"enable","sampleRate"})
+    @OutputCustomType.Constructor
     private BackendServiceLogConfigResponse(
-        Boolean enable,
-        Double sampleRate) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("sampleRate") Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

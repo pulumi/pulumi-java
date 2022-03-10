@@ -25,11 +25,11 @@ public final class NetworkEndpointGroupCloudRunResponse {
      */
     private final String urlMask;
 
-    @OutputCustomType.Constructor({"service","tag","urlMask"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupCloudRunResponse(
-        String service,
-        String tag,
-        String urlMask) {
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("urlMask") String urlMask) {
         this.service = service;
         this.tag = tag;
         this.urlMask = urlMask;

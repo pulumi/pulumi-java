@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"ssml","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(
-        String ssml,
-        String text) {
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("text") String text) {
         this.ssml = ssml;
         this.text = text;
     }

@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"parameterId","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse(
-        String parameterId,
-        String text) {
+        @OutputCustomType.Parameter("parameterId") String parameterId,
+        @OutputCustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }

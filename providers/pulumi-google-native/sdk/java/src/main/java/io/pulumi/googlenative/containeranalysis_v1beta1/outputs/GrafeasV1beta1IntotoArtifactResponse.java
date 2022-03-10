@@ -13,10 +13,10 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
     private final ArtifactHashesResponse hashes;
     private final String resourceUri;
 
-    @OutputCustomType.Constructor({"hashes","resourceUri"})
+    @OutputCustomType.Constructor
     private GrafeasV1beta1IntotoArtifactResponse(
-        ArtifactHashesResponse hashes,
-        String resourceUri) {
+        @OutputCustomType.Parameter("hashes") ArtifactHashesResponse hashes,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
         this.hashes = hashes;
         this.resourceUri = resourceUri;
     }

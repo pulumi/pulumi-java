@@ -30,12 +30,12 @@ public final class NetworkInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"externalIp","internalIp","network","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        String externalIp,
-        String internalIp,
-        String network,
-        String subnetwork) {
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("internalIp") String internalIp,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.externalIp = externalIp;
         this.internalIp = internalIp;
         this.network = network;

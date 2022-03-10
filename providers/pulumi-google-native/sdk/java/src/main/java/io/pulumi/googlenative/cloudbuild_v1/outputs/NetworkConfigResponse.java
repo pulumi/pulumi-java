@@ -20,10 +20,10 @@ public final class NetworkConfigResponse {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor({"egressOption","peeredNetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String egressOption,
-        String peeredNetwork) {
+        @OutputCustomType.Parameter("egressOption") String egressOption,
+        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.egressOption = egressOption;
         this.peeredNetwork = peeredNetwork;
     }

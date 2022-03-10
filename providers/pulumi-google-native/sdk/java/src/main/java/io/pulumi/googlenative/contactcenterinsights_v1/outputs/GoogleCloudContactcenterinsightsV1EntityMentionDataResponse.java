@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"entityUniqueId","sentiment","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(
-        String entityUniqueId,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        String type) {
+        @OutputCustomType.Parameter("entityUniqueId") String entityUniqueId,
+        @OutputCustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
+        @OutputCustomType.Parameter("type") String type) {
         this.entityUniqueId = entityUniqueId;
         this.sentiment = sentiment;
         this.type = type;

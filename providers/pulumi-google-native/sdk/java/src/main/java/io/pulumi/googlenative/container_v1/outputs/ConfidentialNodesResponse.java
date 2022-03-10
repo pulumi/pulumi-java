@@ -15,8 +15,8 @@ public final class ConfidentialNodesResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ConfidentialNodesResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ConfidentialNodesResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

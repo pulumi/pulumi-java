@@ -26,11 +26,11 @@ public final class CertificateChainsResponse {
      */
     private final List<String> googlePartitionCerts;
 
-    @OutputCustomType.Constructor({"caviumCerts","googleCardCerts","googlePartitionCerts"})
+    @OutputCustomType.Constructor
     private CertificateChainsResponse(
-        List<String> caviumCerts,
-        List<String> googleCardCerts,
-        List<String> googlePartitionCerts) {
+        @OutputCustomType.Parameter("caviumCerts") List<String> caviumCerts,
+        @OutputCustomType.Parameter("googleCardCerts") List<String> googleCardCerts,
+        @OutputCustomType.Parameter("googlePartitionCerts") List<String> googlePartitionCerts) {
         this.caviumCerts = caviumCerts;
         this.googleCardCerts = googleCardCerts;
         this.googlePartitionCerts = googlePartitionCerts;

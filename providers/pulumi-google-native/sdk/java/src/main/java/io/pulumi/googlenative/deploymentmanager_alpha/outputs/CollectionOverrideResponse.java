@@ -27,11 +27,11 @@ public final class CollectionOverrideResponse {
      */
     private final OptionsResponse options;
 
-    @OutputCustomType.Constructor({"collection","methodMap","options"})
+    @OutputCustomType.Constructor
     private CollectionOverrideResponse(
-        String collection,
-        MethodMapResponse methodMap,
-        OptionsResponse options) {
+        @OutputCustomType.Parameter("collection") String collection,
+        @OutputCustomType.Parameter("methodMap") MethodMapResponse methodMap,
+        @OutputCustomType.Parameter("options") OptionsResponse options) {
         this.collection = collection;
         this.methodMap = methodMap;
         this.options = options;

@@ -21,10 +21,10 @@ public final class AuthenticationResponse {
      */
     private final GoogleAccountResponse googleAccount;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        CustomAccountResponse customAccount,
-        GoogleAccountResponse googleAccount) {
+        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }

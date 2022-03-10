@@ -30,12 +30,12 @@ public final class GoogleCloudRetailV2alphaIntervalResponse {
      */
     private final Double minimum;
 
-    @OutputCustomType.Constructor({"exclusiveMaximum","exclusiveMinimum","maximum","minimum"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaIntervalResponse(
-        Double exclusiveMaximum,
-        Double exclusiveMinimum,
-        Double maximum,
-        Double minimum) {
+        @OutputCustomType.Parameter("exclusiveMaximum") Double exclusiveMaximum,
+        @OutputCustomType.Parameter("exclusiveMinimum") Double exclusiveMinimum,
+        @OutputCustomType.Parameter("maximum") Double maximum,
+        @OutputCustomType.Parameter("minimum") Double minimum) {
         this.exclusiveMaximum = exclusiveMaximum;
         this.exclusiveMinimum = exclusiveMinimum;
         this.maximum = maximum;

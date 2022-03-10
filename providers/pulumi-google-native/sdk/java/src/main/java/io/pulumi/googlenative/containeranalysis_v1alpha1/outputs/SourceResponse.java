@@ -45,14 +45,14 @@ public final class SourceResponse {
      */
     private final StorageSourceResponse storageSource;
 
-    @OutputCustomType.Constructor({"additionalContexts","artifactStorageSource","context","fileHashes","repoSource","storageSource"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
-        StorageSourceResponse artifactStorageSource,
-        GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
-        Map<String,String> fileHashes,
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource) {
+        @OutputCustomType.Parameter("additionalContexts") List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
+        @OutputCustomType.Parameter("artifactStorageSource") StorageSourceResponse artifactStorageSource,
+        @OutputCustomType.Parameter("context") GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
+        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes,
+        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSource = artifactStorageSource;
         this.context = context;

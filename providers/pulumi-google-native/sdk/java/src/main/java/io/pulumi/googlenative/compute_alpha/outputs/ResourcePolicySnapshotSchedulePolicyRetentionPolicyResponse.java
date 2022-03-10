@@ -22,11 +22,11 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
      */
     private final String onSourceDiskDelete;
 
-    @OutputCustomType.Constructor({"maxRetentionDays","onPolicySwitch","onSourceDiskDelete"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(
-        Integer maxRetentionDays,
-        String onPolicySwitch,
-        String onSourceDiskDelete) {
+        @OutputCustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
+        @OutputCustomType.Parameter("onPolicySwitch") String onPolicySwitch,
+        @OutputCustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
         this.maxRetentionDays = maxRetentionDays;
         this.onPolicySwitch = onPolicySwitch;
         this.onSourceDiskDelete = onSourceDiskDelete;

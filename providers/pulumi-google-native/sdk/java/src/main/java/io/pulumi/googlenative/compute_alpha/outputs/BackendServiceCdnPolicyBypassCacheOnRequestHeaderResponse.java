@@ -15,8 +15,8 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse {
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor({"headerName"})
-    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(String headerName) {
+    @OutputCustomType.Constructor
+    private BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(@OutputCustomType.Parameter("headerName") String headerName) {
         this.headerName = headerName;
     }
 

@@ -26,11 +26,11 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
      */
     private final String trackingMode;
 
-    @OutputCustomType.Constructor({"connectionPersistenceOnUnhealthyBackends","idleTimeoutSec","trackingMode"})
+    @OutputCustomType.Constructor
     private BackendServiceConnectionTrackingPolicyResponse(
-        String connectionPersistenceOnUnhealthyBackends,
-        Integer idleTimeoutSec,
-        String trackingMode) {
+        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") String connectionPersistenceOnUnhealthyBackends,
+        @OutputCustomType.Parameter("idleTimeoutSec") Integer idleTimeoutSec,
+        @OutputCustomType.Parameter("trackingMode") String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;

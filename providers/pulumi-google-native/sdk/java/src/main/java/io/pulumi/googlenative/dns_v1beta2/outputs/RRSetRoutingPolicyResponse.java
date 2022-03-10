@@ -17,13 +17,13 @@ public final class RRSetRoutingPolicyResponse {
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
     private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
-    @OutputCustomType.Constructor({"geo","geoPolicy","kind","wrr","wrrPolicy"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyResponse(
-        RRSetRoutingPolicyGeoPolicyResponse geo,
-        RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
-        String kind,
-        RRSetRoutingPolicyWrrPolicyResponse wrr,
-        RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
+        @OutputCustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
+        @OutputCustomType.Parameter("geoPolicy") RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr,
+        @OutputCustomType.Parameter("wrrPolicy") RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
         this.geo = geo;
         this.geoPolicy = geoPolicy;
         this.kind = kind;

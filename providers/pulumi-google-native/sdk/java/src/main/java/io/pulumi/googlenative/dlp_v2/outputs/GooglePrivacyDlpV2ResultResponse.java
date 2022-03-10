@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2ResultResponse {
      */
     private final String totalEstimatedBytes;
 
-    @OutputCustomType.Constructor({"hybridStats","infoTypeStats","processedBytes","totalEstimatedBytes"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ResultResponse(
-        GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats,
-        List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
-        String processedBytes,
-        String totalEstimatedBytes) {
+        @OutputCustomType.Parameter("hybridStats") GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats,
+        @OutputCustomType.Parameter("infoTypeStats") List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats,
+        @OutputCustomType.Parameter("processedBytes") String processedBytes,
+        @OutputCustomType.Parameter("totalEstimatedBytes") String totalEstimatedBytes) {
         this.hybridStats = hybridStats;
         this.infoTypeStats = infoTypeStats;
         this.processedBytes = processedBytes;

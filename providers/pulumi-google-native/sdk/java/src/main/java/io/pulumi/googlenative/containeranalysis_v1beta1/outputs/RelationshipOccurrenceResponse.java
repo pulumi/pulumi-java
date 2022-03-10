@@ -30,12 +30,12 @@ public final class RelationshipOccurrenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"comment","source","target","type"})
+    @OutputCustomType.Constructor
     private RelationshipOccurrenceResponse(
-        String comment,
-        String source,
-        String target,
-        String type) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.comment = comment;
         this.source = source;
         this.target = target;

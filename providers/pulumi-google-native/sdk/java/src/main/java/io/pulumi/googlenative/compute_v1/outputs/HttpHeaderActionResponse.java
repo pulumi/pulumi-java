@@ -32,12 +32,12 @@ public final class HttpHeaderActionResponse {
      */
     private final List<String> responseHeadersToRemove;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdd","requestHeadersToRemove","responseHeadersToAdd","responseHeadersToRemove"})
+    @OutputCustomType.Constructor
     private HttpHeaderActionResponse(
-        List<HttpHeaderOptionResponse> requestHeadersToAdd,
-        List<String> requestHeadersToRemove,
-        List<HttpHeaderOptionResponse> responseHeadersToAdd,
-        List<String> responseHeadersToRemove) {
+        @OutputCustomType.Parameter("requestHeadersToAdd") List<HttpHeaderOptionResponse> requestHeadersToAdd,
+        @OutputCustomType.Parameter("requestHeadersToRemove") List<String> requestHeadersToRemove,
+        @OutputCustomType.Parameter("responseHeadersToAdd") List<HttpHeaderOptionResponse> responseHeadersToAdd,
+        @OutputCustomType.Parameter("responseHeadersToRemove") List<String> responseHeadersToRemove) {
         this.requestHeadersToAdd = requestHeadersToAdd;
         this.requestHeadersToRemove = requestHeadersToRemove;
         this.responseHeadersToAdd = responseHeadersToAdd;

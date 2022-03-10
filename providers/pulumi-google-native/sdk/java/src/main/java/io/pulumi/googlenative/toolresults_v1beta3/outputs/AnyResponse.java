@@ -20,10 +20,10 @@ public final class AnyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"typeUrl","value"})
+    @OutputCustomType.Constructor
     private AnyResponse(
-        String typeUrl,
-        String value) {
+        @OutputCustomType.Parameter("typeUrl") String typeUrl,
+        @OutputCustomType.Parameter("value") String value) {
         this.typeUrl = typeUrl;
         this.value = value;
     }

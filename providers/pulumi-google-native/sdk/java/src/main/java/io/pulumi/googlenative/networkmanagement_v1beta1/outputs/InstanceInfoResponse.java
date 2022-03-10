@@ -51,16 +51,16 @@ public final class InstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","externalIp","$interface","internalIp","networkTags","networkUri","serviceAccount","uri"})
+    @OutputCustomType.Constructor
     private InstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String $interface,
-        String internalIp,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("internalIp") String internalIp,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.$interface = $interface;

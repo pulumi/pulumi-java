@@ -21,10 +21,10 @@ public final class LogConfigCloudAuditOptionsResponse {
      */
     private final String logName;
 
-    @OutputCustomType.Constructor({"authorizationLoggingOptions","logName"})
+    @OutputCustomType.Constructor
     private LogConfigCloudAuditOptionsResponse(
-        AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
-        String logName) {
+        @OutputCustomType.Parameter("authorizationLoggingOptions") AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
+        @OutputCustomType.Parameter("logName") String logName) {
         this.authorizationLoggingOptions = authorizationLoggingOptions;
         this.logName = logName;
     }

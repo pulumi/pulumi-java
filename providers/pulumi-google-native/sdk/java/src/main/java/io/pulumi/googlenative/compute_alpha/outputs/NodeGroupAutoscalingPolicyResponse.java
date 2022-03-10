@@ -26,11 +26,11 @@ public final class NodeGroupAutoscalingPolicyResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"maxNodes","minNodes","mode"})
+    @OutputCustomType.Constructor
     private NodeGroupAutoscalingPolicyResponse(
-        Integer maxNodes,
-        Integer minNodes,
-        String mode) {
+        @OutputCustomType.Parameter("maxNodes") Integer maxNodes,
+        @OutputCustomType.Parameter("minNodes") Integer minNodes,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;

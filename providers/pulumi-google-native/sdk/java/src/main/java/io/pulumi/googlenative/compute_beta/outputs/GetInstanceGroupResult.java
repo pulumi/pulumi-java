@@ -73,20 +73,20 @@ public final class GetInstanceGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","kind","name","namedPorts","network","region","selfLink","size","subnetwork","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceGroupResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        List<NamedPortResponse> namedPorts,
-        String network,
-        String region,
-        String selfLink,
-        Integer size,
-        String subnetwork,
-        String zone) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

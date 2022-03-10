@@ -21,10 +21,10 @@ public final class AccessSelectorResponse {
      */
     private final List<String> roles;
 
-    @OutputCustomType.Constructor({"permissions","roles"})
+    @OutputCustomType.Constructor
     private AccessSelectorResponse(
-        List<String> permissions,
-        List<String> roles) {
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("roles") List<String> roles) {
         this.permissions = permissions;
         this.roles = roles;
     }

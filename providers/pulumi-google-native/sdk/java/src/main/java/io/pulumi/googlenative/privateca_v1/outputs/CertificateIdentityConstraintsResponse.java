@@ -26,11 +26,11 @@ public final class CertificateIdentityConstraintsResponse {
      */
     private final ExprResponse celExpression;
 
-    @OutputCustomType.Constructor({"allowSubjectAltNamesPassthrough","allowSubjectPassthrough","celExpression"})
+    @OutputCustomType.Constructor
     private CertificateIdentityConstraintsResponse(
-        Boolean allowSubjectAltNamesPassthrough,
-        Boolean allowSubjectPassthrough,
-        ExprResponse celExpression) {
+        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @OutputCustomType.Parameter("celExpression") ExprResponse celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;

@@ -27,11 +27,11 @@ public final class VmUtilizationInfoResponse {
      */
     private final VmwareVmDetailsResponse vmwareVmDetails;
 
-    @OutputCustomType.Constructor({"utilization","vmId","vmwareVmDetails"})
+    @OutputCustomType.Constructor
     private VmUtilizationInfoResponse(
-        VmUtilizationMetricsResponse utilization,
-        String vmId,
-        VmwareVmDetailsResponse vmwareVmDetails) {
+        @OutputCustomType.Parameter("utilization") VmUtilizationMetricsResponse utilization,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("vmwareVmDetails") VmwareVmDetailsResponse vmwareVmDetails) {
         this.utilization = utilization;
         this.vmId = vmId;
         this.vmwareVmDetails = vmwareVmDetails;

@@ -16,8 +16,8 @@ public final class SerialPipelineResponse {
      */
     private final List<StageResponse> stages;
 
-    @OutputCustomType.Constructor({"stages"})
-    private SerialPipelineResponse(List<StageResponse> stages) {
+    @OutputCustomType.Constructor
+    private SerialPipelineResponse(@OutputCustomType.Parameter("stages") List<StageResponse> stages) {
         this.stages = stages;
     }
 

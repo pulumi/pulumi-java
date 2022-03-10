@@ -15,8 +15,8 @@ public final class DataCatalogConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private DataCatalogConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private DataCatalogConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

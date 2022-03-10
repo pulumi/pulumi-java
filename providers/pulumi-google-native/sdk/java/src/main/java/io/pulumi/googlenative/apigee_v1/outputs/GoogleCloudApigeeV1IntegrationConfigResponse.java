@@ -15,8 +15,8 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GoogleCloudApigeeV1IntegrationConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GoogleCloudApigeeV1IntegrationConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

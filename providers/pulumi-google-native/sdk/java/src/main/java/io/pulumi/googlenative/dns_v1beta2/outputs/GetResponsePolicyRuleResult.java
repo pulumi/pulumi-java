@@ -32,13 +32,13 @@ public final class GetResponsePolicyRuleResult {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor({"behavior","dnsName","kind","localData","ruleName"})
+    @OutputCustomType.Constructor
     private GetResponsePolicyRuleResult(
-        String behavior,
-        String dnsName,
-        String kind,
-        ResponsePolicyRuleLocalDataResponse localData,
-        String ruleName) {
+        @OutputCustomType.Parameter("behavior") String behavior,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localData") ResponsePolicyRuleLocalDataResponse localData,
+        @OutputCustomType.Parameter("ruleName") String ruleName) {
         this.behavior = behavior;
         this.dnsName = dnsName;
         this.kind = kind;

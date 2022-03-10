@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"env","instanceId","location"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(
-        String env,
-        String instanceId,
-        String location) {
+        @OutputCustomType.Parameter("env") String env,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("location") String location) {
         this.env = env;
         this.instanceId = instanceId;
         this.location = location;

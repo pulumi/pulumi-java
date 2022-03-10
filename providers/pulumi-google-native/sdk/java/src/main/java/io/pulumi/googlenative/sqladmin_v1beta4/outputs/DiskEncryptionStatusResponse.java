@@ -20,10 +20,10 @@ public final class DiskEncryptionStatusResponse {
      */
     private final String kmsKeyVersionName;
 
-    @OutputCustomType.Constructor({"kind","kmsKeyVersionName"})
+    @OutputCustomType.Constructor
     private DiskEncryptionStatusResponse(
-        String kind,
-        String kmsKeyVersionName) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kmsKeyVersionName") String kmsKeyVersionName) {
         this.kind = kind;
         this.kmsKeyVersionName = kmsKeyVersionName;
     }

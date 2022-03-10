@@ -31,12 +31,12 @@ public final class TransferOptionsResponse {
      */
     private final Boolean overwriteObjectsAlreadyExistingInSink;
 
-    @OutputCustomType.Constructor({"deleteObjectsFromSourceAfterTransfer","deleteObjectsUniqueInSink","metadataOptions","overwriteObjectsAlreadyExistingInSink"})
+    @OutputCustomType.Constructor
     private TransferOptionsResponse(
-        Boolean deleteObjectsFromSourceAfterTransfer,
-        Boolean deleteObjectsUniqueInSink,
-        MetadataOptionsResponse metadataOptions,
-        Boolean overwriteObjectsAlreadyExistingInSink) {
+        @OutputCustomType.Parameter("deleteObjectsFromSourceAfterTransfer") Boolean deleteObjectsFromSourceAfterTransfer,
+        @OutputCustomType.Parameter("deleteObjectsUniqueInSink") Boolean deleteObjectsUniqueInSink,
+        @OutputCustomType.Parameter("metadataOptions") MetadataOptionsResponse metadataOptions,
+        @OutputCustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.metadataOptions = metadataOptions;

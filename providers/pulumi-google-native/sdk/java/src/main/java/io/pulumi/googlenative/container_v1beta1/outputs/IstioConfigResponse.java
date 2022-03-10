@@ -21,10 +21,10 @@ public final class IstioConfigResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"auth","disabled"})
+    @OutputCustomType.Constructor
     private IstioConfigResponse(
-        String auth,
-        Boolean disabled) {
+        @OutputCustomType.Parameter("auth") String auth,
+        @OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }

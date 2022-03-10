@@ -20,10 +20,10 @@ public final class SubnetResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"name","project"})
+    @OutputCustomType.Constructor
     private SubnetResponse(
-        String name,
-        String project) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project) {
         this.name = name;
         this.project = project;
     }

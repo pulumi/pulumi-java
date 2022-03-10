@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ArtifactRuleResponse {
     private final List<String> artifactRule;
 
-    @OutputCustomType.Constructor({"artifactRule"})
-    private ArtifactRuleResponse(List<String> artifactRule) {
+    @OutputCustomType.Constructor
+    private ArtifactRuleResponse(@OutputCustomType.Parameter("artifactRule") List<String> artifactRule) {
         this.artifactRule = artifactRule;
     }
 

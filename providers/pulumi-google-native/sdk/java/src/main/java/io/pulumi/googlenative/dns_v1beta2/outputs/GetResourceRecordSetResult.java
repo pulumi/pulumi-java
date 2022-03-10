@@ -44,15 +44,15 @@ public final class GetResourceRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"kind","name","routingPolicy","rrdatas","signatureRrdatas","ttl","type"})
+    @OutputCustomType.Constructor
     private GetResourceRecordSetResult(
-        String kind,
-        String name,
-        RRSetRoutingPolicyResponse routingPolicy,
-        List<String> rrdatas,
-        List<String> signatureRrdatas,
-        Integer ttl,
-        String type) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routingPolicy") RRSetRoutingPolicyResponse routingPolicy,
+        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
+        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas,
+        @OutputCustomType.Parameter("ttl") Integer ttl,
+        @OutputCustomType.Parameter("type") String type) {
         this.kind = kind;
         this.name = name;
         this.routingPolicy = routingPolicy;

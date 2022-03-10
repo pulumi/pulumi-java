@@ -43,14 +43,14 @@ public final class ExecutionConfigResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor({"artifactStorage","defaultPool","privatePool","serviceAccount","usages","workerPool"})
+    @OutputCustomType.Constructor
     private ExecutionConfigResponse(
-        String artifactStorage,
-        DefaultPoolResponse defaultPool,
-        PrivatePoolResponse privatePool,
-        String serviceAccount,
-        List<String> usages,
-        String workerPool) {
+        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
+        @OutputCustomType.Parameter("defaultPool") DefaultPoolResponse defaultPool,
+        @OutputCustomType.Parameter("privatePool") PrivatePoolResponse privatePool,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("usages") List<String> usages,
+        @OutputCustomType.Parameter("workerPool") String workerPool) {
         this.artifactStorage = artifactStorage;
         this.defaultPool = defaultPool;
         this.privatePool = privatePool;

@@ -20,10 +20,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleRespon
      */
     private final String minSize;
 
-    @OutputCustomType.Constructor({"maxSize","minSize"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse(
-        String maxSize,
-        String minSize) {
+        @OutputCustomType.Parameter("maxSize") String maxSize,
+        @OutputCustomType.Parameter("minSize") String minSize) {
         this.maxSize = maxSize;
         this.minSize = minSize;
     }

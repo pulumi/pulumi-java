@@ -15,8 +15,8 @@ public final class ContainerInfoResponse {
      */
     private final String image;
 
-    @OutputCustomType.Constructor({"image"})
-    private ContainerInfoResponse(String image) {
+    @OutputCustomType.Constructor
+    private ContainerInfoResponse(@OutputCustomType.Parameter("image") String image) {
         this.image = image;
     }
 

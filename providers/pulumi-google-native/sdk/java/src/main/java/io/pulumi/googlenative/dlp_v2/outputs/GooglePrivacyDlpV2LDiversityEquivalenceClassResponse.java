@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
      */
     private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
-    @OutputCustomType.Constructor({"equivalenceClassSize","numDistinctSensitiveValues","quasiIdsValues","topSensitiveValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(
-        String equivalenceClassSize,
-        String numDistinctSensitiveValues,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
-        List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
+        @OutputCustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
+        @OutputCustomType.Parameter("numDistinctSensitiveValues") String numDistinctSensitiveValues,
+        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
+        @OutputCustomType.Parameter("topSensitiveValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
         this.equivalenceClassSize = equivalenceClassSize;
         this.numDistinctSensitiveValues = numDistinctSensitiveValues;
         this.quasiIdsValues = quasiIdsValues;

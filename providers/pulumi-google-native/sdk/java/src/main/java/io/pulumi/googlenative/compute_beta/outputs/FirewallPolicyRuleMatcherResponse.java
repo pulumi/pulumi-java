@@ -27,11 +27,11 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        List<String> destIpRanges,
-        List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;

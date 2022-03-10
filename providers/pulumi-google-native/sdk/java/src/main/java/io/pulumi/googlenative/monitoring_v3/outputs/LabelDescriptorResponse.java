@@ -25,11 +25,11 @@ public final class LabelDescriptorResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"description","key","valueType"})
+    @OutputCustomType.Constructor
     private LabelDescriptorResponse(
-        String description,
-        String key,
-        String valueType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;

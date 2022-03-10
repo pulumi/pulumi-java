@@ -37,13 +37,13 @@ public final class ConfigVariableResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"boolValue","intValue","key","secretValue","stringValue"})
+    @OutputCustomType.Constructor
     private ConfigVariableResponse(
-        Boolean boolValue,
-        String intValue,
-        String key,
-        SecretResponse secretValue,
-        String stringValue) {
+        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
+        @OutputCustomType.Parameter("intValue") String intValue,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("secretValue") SecretResponse secretValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.boolValue = boolValue;
         this.intValue = intValue;
         this.key = key;

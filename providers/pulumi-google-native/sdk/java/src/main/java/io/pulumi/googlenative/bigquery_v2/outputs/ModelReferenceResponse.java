@@ -25,11 +25,11 @@ public final class ModelReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"datasetId","modelId","project"})
+    @OutputCustomType.Constructor
     private ModelReferenceResponse(
-        String datasetId,
-        String modelId,
-        String project) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("modelId") String modelId,
+        @OutputCustomType.Parameter("project") String project) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.project = project;

@@ -31,12 +31,12 @@ public final class AllocationSpecificSKUReservationResponse {
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    @OutputCustomType.Constructor({"assuredCount","count","inUseCount","instanceProperties"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
-        String assuredCount,
-        String count,
-        String inUseCount,
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        @OutputCustomType.Parameter("assuredCount") String assuredCount,
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("inUseCount") String inUseCount,
+        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
         this.assuredCount = assuredCount;
         this.count = count;
         this.inUseCount = inUseCount;

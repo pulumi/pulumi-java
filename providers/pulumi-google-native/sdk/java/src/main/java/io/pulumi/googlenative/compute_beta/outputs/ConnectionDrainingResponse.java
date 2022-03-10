@@ -15,8 +15,8 @@ public final class ConnectionDrainingResponse {
      */
     private final Integer drainingTimeoutSec;
 
-    @OutputCustomType.Constructor({"drainingTimeoutSec"})
-    private ConnectionDrainingResponse(Integer drainingTimeoutSec) {
+    @OutputCustomType.Constructor
+    private ConnectionDrainingResponse(@OutputCustomType.Parameter("drainingTimeoutSec") Integer drainingTimeoutSec) {
         this.drainingTimeoutSec = drainingTimeoutSec;
     }
 

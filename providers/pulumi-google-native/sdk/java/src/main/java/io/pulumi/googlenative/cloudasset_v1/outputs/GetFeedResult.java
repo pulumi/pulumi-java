@@ -48,15 +48,15 @@ public final class GetFeedResult {
      */
     private final List<String> relationshipTypes;
 
-    @OutputCustomType.Constructor({"assetNames","assetTypes","condition","contentType","feedOutputConfig","name","relationshipTypes"})
+    @OutputCustomType.Constructor
     private GetFeedResult(
-        List<String> assetNames,
-        List<String> assetTypes,
-        ExprResponse condition,
-        String contentType,
-        FeedOutputConfigResponse feedOutputConfig,
-        String name,
-        List<String> relationshipTypes) {
+        @OutputCustomType.Parameter("assetNames") List<String> assetNames,
+        @OutputCustomType.Parameter("assetTypes") List<String> assetTypes,
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("feedOutputConfig") FeedOutputConfigResponse feedOutputConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relationshipTypes") List<String> relationshipTypes) {
         this.assetNames = assetNames;
         this.assetTypes = assetTypes;
         this.condition = condition;

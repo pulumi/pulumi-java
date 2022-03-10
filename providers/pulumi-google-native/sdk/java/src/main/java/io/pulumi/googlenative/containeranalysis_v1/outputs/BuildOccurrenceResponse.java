@@ -27,11 +27,11 @@ public final class BuildOccurrenceResponse {
      */
     private final String provenanceBytes;
 
-    @OutputCustomType.Constructor({"intotoStatement","provenance","provenanceBytes"})
+    @OutputCustomType.Constructor
     private BuildOccurrenceResponse(
-        InTotoStatementResponse intotoStatement,
-        BuildProvenanceResponse provenance,
-        String provenanceBytes) {
+        @OutputCustomType.Parameter("intotoStatement") InTotoStatementResponse intotoStatement,
+        @OutputCustomType.Parameter("provenance") BuildProvenanceResponse provenance,
+        @OutputCustomType.Parameter("provenanceBytes") String provenanceBytes) {
         this.intotoStatement = intotoStatement;
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;

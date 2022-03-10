@@ -25,11 +25,11 @@ public final class ComponentTransformResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"name","originalTransform","userName"})
+    @OutputCustomType.Constructor
     private ComponentTransformResponse(
-        String name,
-        String originalTransform,
-        String userName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originalTransform") String originalTransform,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransform = originalTransform;
         this.userName = userName;

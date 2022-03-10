@@ -21,10 +21,10 @@ public final class HttpFaultDelayResponse {
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor({"fixedDelay","percentage"})
+    @OutputCustomType.Constructor
     private HttpFaultDelayResponse(
-        DurationResponse fixedDelay,
-        Double percentage) {
+        @OutputCustomType.Parameter("fixedDelay") DurationResponse fixedDelay,
+        @OutputCustomType.Parameter("percentage") Double percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }

@@ -23,11 +23,11 @@ public final class AuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","exemptedMembers","service"})
+    @OutputCustomType.Constructor
     private AuditConfigResponse(
-        List<AuditLogConfigResponse> auditLogConfigs,
-        List<String> exemptedMembers,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
+        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.exemptedMembers = exemptedMembers;
         this.service = service;

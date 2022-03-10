@@ -67,19 +67,19 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"basicConstraints","expiryDate","isValid","issuer","publicKey","serialNumber","sigAlgName","subject","subjectAlternativeNames","validFrom","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1CertInfoResponse(
-        String basicConstraints,
-        String expiryDate,
-        String isValid,
-        String issuer,
-        String publicKey,
-        String serialNumber,
-        String sigAlgName,
-        String subject,
-        List<String> subjectAlternativeNames,
-        String validFrom,
-        Integer version) {
+        @OutputCustomType.Parameter("basicConstraints") String basicConstraints,
+        @OutputCustomType.Parameter("expiryDate") String expiryDate,
+        @OutputCustomType.Parameter("isValid") String isValid,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sigAlgName") String sigAlgName,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
+        @OutputCustomType.Parameter("validFrom") String validFrom,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.basicConstraints = basicConstraints;
         this.expiryDate = expiryDate;
         this.isValid = isValid;

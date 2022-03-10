@@ -64,19 +64,19 @@ public final class TableFieldSchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categories","collationSpec","description","fields","maxLength","mode","name","policyTags","precision","scale","type"})
+    @OutputCustomType.Constructor
     private TableFieldSchemaResponse(
-        TableFieldSchemaCategoriesResponse categories,
-        String collationSpec,
-        String description,
-        List<TableFieldSchemaResponse> fields,
-        String maxLength,
-        String mode,
-        String name,
-        TableFieldSchemaPolicyTagsResponse policyTags,
-        String precision,
-        String scale,
-        String type) {
+        @OutputCustomType.Parameter("categories") TableFieldSchemaCategoriesResponse categories,
+        @OutputCustomType.Parameter("collationSpec") String collationSpec,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fields") List<TableFieldSchemaResponse> fields,
+        @OutputCustomType.Parameter("maxLength") String maxLength,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyTags") TableFieldSchemaPolicyTagsResponse policyTags,
+        @OutputCustomType.Parameter("precision") String precision,
+        @OutputCustomType.Parameter("scale") String scale,
+        @OutputCustomType.Parameter("type") String type) {
         this.categories = categories;
         this.collationSpec = collationSpec;
         this.description = description;

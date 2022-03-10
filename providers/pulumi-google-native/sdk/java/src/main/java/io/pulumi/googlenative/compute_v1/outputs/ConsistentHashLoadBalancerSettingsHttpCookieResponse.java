@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
      */
     private final DurationResponse ttl;
 
-    @OutputCustomType.Constructor({"name","path","ttl"})
+    @OutputCustomType.Constructor
     private ConsistentHashLoadBalancerSettingsHttpCookieResponse(
-        String name,
-        String path,
-        DurationResponse ttl) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("ttl") DurationResponse ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;

@@ -25,11 +25,11 @@ public final class ExecutionStageStateResponse {
      */
     private final String executionStageState;
 
-    @OutputCustomType.Constructor({"currentStateTime","executionStageName","executionStageState"})
+    @OutputCustomType.Constructor
     private ExecutionStageStateResponse(
-        String currentStateTime,
-        String executionStageName,
-        String executionStageState) {
+        @OutputCustomType.Parameter("currentStateTime") String currentStateTime,
+        @OutputCustomType.Parameter("executionStageName") String executionStageName,
+        @OutputCustomType.Parameter("executionStageState") String executionStageState) {
         this.currentStateTime = currentStateTime;
         this.executionStageName = executionStageName;
         this.executionStageState = executionStageState;

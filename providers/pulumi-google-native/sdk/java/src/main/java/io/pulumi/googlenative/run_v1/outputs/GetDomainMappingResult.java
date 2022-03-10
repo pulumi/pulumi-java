@@ -38,13 +38,13 @@ public final class GetDomainMappingResult {
      */
     private final DomainMappingStatusResponse status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private GetDomainMappingResult(
-        String apiVersion,
-        String kind,
-        ObjectMetaResponse metadata,
-        DomainMappingSpecResponse spec,
-        DomainMappingStatusResponse status) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") DomainMappingSpecResponse spec,
+        @OutputCustomType.Parameter("status") DomainMappingStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

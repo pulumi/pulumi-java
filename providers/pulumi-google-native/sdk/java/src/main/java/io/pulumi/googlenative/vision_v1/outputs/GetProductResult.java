@@ -37,13 +37,13 @@ public final class GetProductResult {
      */
     private final List<KeyValueResponse> productLabels;
 
-    @OutputCustomType.Constructor({"description","displayName","name","productCategory","productLabels"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        String description,
-        String displayName,
-        String name,
-        String productCategory,
-        List<KeyValueResponse> productLabels) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("productCategory") String productCategory,
+        @OutputCustomType.Parameter("productLabels") List<KeyValueResponse> productLabels) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;

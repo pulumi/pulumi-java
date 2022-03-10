@@ -26,11 +26,11 @@ public final class AudioResponse {
      */
     private final Double lufs;
 
-    @OutputCustomType.Constructor({"highBoost","lowBoost","lufs"})
+    @OutputCustomType.Constructor
     private AudioResponse(
-        Boolean highBoost,
-        Boolean lowBoost,
-        Double lufs) {
+        @OutputCustomType.Parameter("highBoost") Boolean highBoost,
+        @OutputCustomType.Parameter("lowBoost") Boolean lowBoost,
+        @OutputCustomType.Parameter("lufs") Double lufs) {
         this.highBoost = highBoost;
         this.lowBoost = lowBoost;
         this.lufs = lufs;

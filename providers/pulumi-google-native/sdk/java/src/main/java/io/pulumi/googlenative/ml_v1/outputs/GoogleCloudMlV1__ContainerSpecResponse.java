@@ -38,13 +38,13 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
      */
     private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
-    @OutputCustomType.Constructor({"args","command","env","image","ports"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ContainerSpecResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudMlV1__EnvVarResponse> env,
-        String image,
-        List<GoogleCloudMlV1__ContainerPortResponse> ports) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<GoogleCloudMlV1__EnvVarResponse> env,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("ports") List<GoogleCloudMlV1__ContainerPortResponse> ports) {
         this.args = args;
         this.command = command;
         this.env = env;

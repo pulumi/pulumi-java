@@ -49,15 +49,15 @@ public final class GetTopicResult {
      */
     private final SchemaSettingsResponse schemaSettings;
 
-    @OutputCustomType.Constructor({"kmsKeyName","labels","messageRetentionDuration","messageStoragePolicy","name","satisfiesPzs","schemaSettings"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String kmsKeyName,
-        Map<String,String> labels,
-        String messageRetentionDuration,
-        MessageStoragePolicyResponse messageStoragePolicy,
-        String name,
-        Boolean satisfiesPzs,
-        SchemaSettingsResponse schemaSettings) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @OutputCustomType.Parameter("messageStoragePolicy") MessageStoragePolicyResponse messageStoragePolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("schemaSettings") SchemaSettingsResponse schemaSettings) {
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;
         this.messageRetentionDuration = messageRetentionDuration;

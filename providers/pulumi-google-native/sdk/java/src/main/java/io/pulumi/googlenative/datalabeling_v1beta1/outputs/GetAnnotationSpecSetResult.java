@@ -37,13 +37,13 @@ public final class GetAnnotationSpecSetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"annotationSpecs","blockingResources","description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetAnnotationSpecSetResult(
-        List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
-        List<String> blockingResources,
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("annotationSpecs") List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
+        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.annotationSpecs = annotationSpecs;
         this.blockingResources = blockingResources;
         this.description = description;

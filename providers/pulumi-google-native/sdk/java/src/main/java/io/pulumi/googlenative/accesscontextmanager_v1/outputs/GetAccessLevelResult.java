@@ -37,13 +37,13 @@ public final class GetAccessLevelResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"basic","custom","description","name","title"})
+    @OutputCustomType.Constructor
     private GetAccessLevelResult(
-        BasicLevelResponse basic,
-        CustomLevelResponse custom,
-        String description,
-        String name,
-        String title) {
+        @OutputCustomType.Parameter("basic") BasicLevelResponse basic,
+        @OutputCustomType.Parameter("custom") CustomLevelResponse custom,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("title") String title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;

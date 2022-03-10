@@ -25,11 +25,11 @@ public final class SystemParameterResponse {
      */
     private final String urlQueryParameter;
 
-    @OutputCustomType.Constructor({"httpHeader","name","urlQueryParameter"})
+    @OutputCustomType.Constructor
     private SystemParameterResponse(
-        String httpHeader,
-        String name,
-        String urlQueryParameter) {
+        @OutputCustomType.Parameter("httpHeader") String httpHeader,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("urlQueryParameter") String urlQueryParameter) {
         this.httpHeader = httpHeader;
         this.name = name;
         this.urlQueryParameter = urlQueryParameter;

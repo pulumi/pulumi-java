@@ -21,10 +21,10 @@ public final class TestDetailsResponse {
      */
     private final List<String> progressMessages;
 
-    @OutputCustomType.Constructor({"errorMessage","progressMessages"})
+    @OutputCustomType.Constructor
     private TestDetailsResponse(
-        String errorMessage,
-        List<String> progressMessages) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("progressMessages") List<String> progressMessages) {
         this.errorMessage = errorMessage;
         this.progressMessages = progressMessages;
     }

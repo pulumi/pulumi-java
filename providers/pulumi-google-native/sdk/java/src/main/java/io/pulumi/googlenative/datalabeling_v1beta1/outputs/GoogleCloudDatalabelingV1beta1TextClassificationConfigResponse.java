@@ -27,11 +27,11 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      */
     private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
-    @OutputCustomType.Constructor({"allowMultiLabel","annotationSpecSet","sentimentConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(
-        Boolean allowMultiLabel,
-        String annotationSpecSet,
-        GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
+        @OutputCustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("sentimentConfig") GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
         this.allowMultiLabel = allowMultiLabel;
         this.annotationSpecSet = annotationSpecSet;
         this.sentimentConfig = sentimentConfig;

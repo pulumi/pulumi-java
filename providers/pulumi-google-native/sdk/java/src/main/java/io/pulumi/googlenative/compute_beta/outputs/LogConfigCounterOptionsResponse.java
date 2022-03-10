@@ -27,11 +27,11 @@ public final class LogConfigCounterOptionsResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor({"customFields","field","metric"})
+    @OutputCustomType.Constructor
     private LogConfigCounterOptionsResponse(
-        List<LogConfigCounterOptionsCustomFieldResponse> customFields,
-        String field,
-        String metric) {
+        @OutputCustomType.Parameter("customFields") List<LogConfigCounterOptionsCustomFieldResponse> customFields,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("metric") String metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;

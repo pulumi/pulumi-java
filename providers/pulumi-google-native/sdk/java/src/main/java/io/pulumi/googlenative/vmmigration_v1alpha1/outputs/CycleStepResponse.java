@@ -38,13 +38,13 @@ public final class CycleStepResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","initializingReplication","postProcessing","replicating","startTime"})
+    @OutputCustomType.Constructor
     private CycleStepResponse(
-        String endTime,
-        InitializingReplicationStepResponse initializingReplication,
-        PostProcessingStepResponse postProcessing,
-        ReplicatingStepResponse replicating,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("initializingReplication") InitializingReplicationStepResponse initializingReplication,
+        @OutputCustomType.Parameter("postProcessing") PostProcessingStepResponse postProcessing,
+        @OutputCustomType.Parameter("replicating") ReplicatingStepResponse replicating,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.initializingReplication = initializingReplication;
         this.postProcessing = postProcessing;

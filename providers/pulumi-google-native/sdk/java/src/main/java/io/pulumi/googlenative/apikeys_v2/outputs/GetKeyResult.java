@@ -56,17 +56,17 @@ public final class GetKeyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","displayName","etag","keyString","name","restrictions","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        String keyString,
-        String name,
-        V2RestrictionsResponse restrictions,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("keyString") String keyString,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restrictions") V2RestrictionsResponse restrictions,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

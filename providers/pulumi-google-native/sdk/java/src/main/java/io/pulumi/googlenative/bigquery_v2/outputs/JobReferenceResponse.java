@@ -25,11 +25,11 @@ public final class JobReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"jobId","location","project"})
+    @OutputCustomType.Constructor
     private JobReferenceResponse(
-        String jobId,
-        String location,
-        String project) {
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("project") String project) {
         this.jobId = jobId;
         this.location = location;
         this.project = project;

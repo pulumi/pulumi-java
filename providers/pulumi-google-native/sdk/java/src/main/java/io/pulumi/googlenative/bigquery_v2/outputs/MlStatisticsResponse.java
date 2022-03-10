@@ -22,10 +22,10 @@ public final class MlStatisticsResponse {
      */
     private final String maxIterations;
 
-    @OutputCustomType.Constructor({"iterationResults","maxIterations"})
+    @OutputCustomType.Constructor
     private MlStatisticsResponse(
-        List<IterationResultResponse> iterationResults,
-        String maxIterations) {
+        @OutputCustomType.Parameter("iterationResults") List<IterationResultResponse> iterationResults,
+        @OutputCustomType.Parameter("maxIterations") String maxIterations) {
         this.iterationResults = iterationResults;
         this.maxIterations = maxIterations;
     }

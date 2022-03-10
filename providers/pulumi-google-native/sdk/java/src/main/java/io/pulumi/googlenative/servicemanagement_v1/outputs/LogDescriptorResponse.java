@@ -32,12 +32,12 @@ public final class LogDescriptorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","displayName","labels","name"})
+    @OutputCustomType.Constructor
     private LogDescriptorResponse(
-        String description,
-        String displayName,
-        List<LabelDescriptorResponse> labels,
-        String name) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

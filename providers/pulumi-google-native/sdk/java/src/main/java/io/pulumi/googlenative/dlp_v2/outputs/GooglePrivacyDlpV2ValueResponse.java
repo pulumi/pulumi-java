@@ -54,16 +54,16 @@ public final class GooglePrivacyDlpV2ValueResponse {
      */
     private final String timestampValue;
 
-    @OutputCustomType.Constructor({"booleanValue","dateValue","dayOfWeekValue","floatValue","integerValue","stringValue","timeValue","timestampValue"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ValueResponse(
-        Boolean booleanValue,
-        GoogleTypeDateResponse dateValue,
-        String dayOfWeekValue,
-        Double floatValue,
-        String integerValue,
-        String stringValue,
-        GoogleTypeTimeOfDayResponse timeValue,
-        String timestampValue) {
+        @OutputCustomType.Parameter("booleanValue") Boolean booleanValue,
+        @OutputCustomType.Parameter("dateValue") GoogleTypeDateResponse dateValue,
+        @OutputCustomType.Parameter("dayOfWeekValue") String dayOfWeekValue,
+        @OutputCustomType.Parameter("floatValue") Double floatValue,
+        @OutputCustomType.Parameter("integerValue") String integerValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue,
+        @OutputCustomType.Parameter("timeValue") GoogleTypeTimeOfDayResponse timeValue,
+        @OutputCustomType.Parameter("timestampValue") String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.dayOfWeekValue = dayOfWeekValue;

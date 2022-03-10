@@ -32,12 +32,12 @@ public final class HTTPGetActionResponse {
      */
     private final String scheme;
 
-    @OutputCustomType.Constructor({"host","httpHeaders","path","scheme"})
+    @OutputCustomType.Constructor
     private HTTPGetActionResponse(
-        String host,
-        List<HTTPHeaderResponse> httpHeaders,
-        String path,
-        String scheme) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("httpHeaders") List<HTTPHeaderResponse> httpHeaders,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scheme") String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;

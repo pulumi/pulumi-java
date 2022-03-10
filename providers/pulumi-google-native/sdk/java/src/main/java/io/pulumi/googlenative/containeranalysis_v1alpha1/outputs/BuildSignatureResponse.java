@@ -30,12 +30,12 @@ public final class BuildSignatureResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor({"keyId","keyType","publicKey","signature"})
+    @OutputCustomType.Constructor
     private BuildSignatureResponse(
-        String keyId,
-        String keyType,
-        String publicKey,
-        String signature) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("signature") String signature) {
         this.keyId = keyId;
         this.keyType = keyType;
         this.publicKey = publicKey;

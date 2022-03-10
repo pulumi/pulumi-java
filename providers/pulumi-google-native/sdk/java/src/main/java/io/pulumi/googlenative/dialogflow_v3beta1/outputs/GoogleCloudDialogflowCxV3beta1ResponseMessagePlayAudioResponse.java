@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioRespons
      */
     private final String audioUri;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","audioUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioResponse(
-        Boolean allowPlaybackInterruption,
-        String audioUri) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("audioUri") String audioUri) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.audioUri = audioUri;
     }

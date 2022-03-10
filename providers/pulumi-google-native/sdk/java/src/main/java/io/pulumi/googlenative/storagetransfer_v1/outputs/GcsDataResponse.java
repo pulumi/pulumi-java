@@ -20,10 +20,10 @@ public final class GcsDataResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"bucketName","path"})
+    @OutputCustomType.Constructor
     private GcsDataResponse(
-        String bucketName,
-        String path) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("path") String path) {
         this.bucketName = bucketName;
         this.path = path;
     }

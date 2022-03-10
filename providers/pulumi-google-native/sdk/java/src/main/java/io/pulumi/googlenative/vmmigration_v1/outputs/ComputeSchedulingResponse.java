@@ -33,12 +33,12 @@ public final class ComputeSchedulingResponse {
      */
     private final String restartType;
 
-    @OutputCustomType.Constructor({"minNodeCpus","nodeAffinities","onHostMaintenance","restartType"})
+    @OutputCustomType.Constructor
     private ComputeSchedulingResponse(
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        String restartType) {
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("restartType") String restartType) {
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;

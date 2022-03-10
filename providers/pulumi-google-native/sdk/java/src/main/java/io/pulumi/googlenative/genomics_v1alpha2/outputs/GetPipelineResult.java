@@ -54,16 +54,16 @@ public final class GetPipelineResult {
      */
     private final PipelineResourcesResponse resources;
 
-    @OutputCustomType.Constructor({"description","docker","inputParameters","name","outputParameters","pipelineId","project","resources"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        String description,
-        DockerExecutorResponse docker,
-        List<PipelineParameterResponse> inputParameters,
-        String name,
-        List<PipelineParameterResponse> outputParameters,
-        String pipelineId,
-        String project,
-        PipelineResourcesResponse resources) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("docker") DockerExecutorResponse docker,
+        @OutputCustomType.Parameter("inputParameters") List<PipelineParameterResponse> inputParameters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputParameters") List<PipelineParameterResponse> outputParameters,
+        @OutputCustomType.Parameter("pipelineId") String pipelineId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("resources") PipelineResourcesResponse resources) {
         this.description = description;
         this.docker = docker;
         this.inputParameters = inputParameters;

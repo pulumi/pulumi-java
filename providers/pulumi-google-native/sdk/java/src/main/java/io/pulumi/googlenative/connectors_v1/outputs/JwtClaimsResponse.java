@@ -25,11 +25,11 @@ public final class JwtClaimsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor({"audience","issuer","subject"})
+    @OutputCustomType.Constructor
     private JwtClaimsResponse(
-        String audience,
-        String issuer,
-        String subject) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("subject") String subject) {
         this.audience = audience;
         this.issuer = issuer;
         this.subject = subject;

@@ -37,13 +37,13 @@ public final class SubjectAltNamesResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor({"customSans","dnsNames","emailAddresses","ipAddresses","uris"})
+    @OutputCustomType.Constructor
     private SubjectAltNamesResponse(
-        List<X509ExtensionResponse> customSans,
-        List<String> dnsNames,
-        List<String> emailAddresses,
-        List<String> ipAddresses,
-        List<String> uris) {
+        @OutputCustomType.Parameter("customSans") List<X509ExtensionResponse> customSans,
+        @OutputCustomType.Parameter("dnsNames") List<String> dnsNames,
+        @OutputCustomType.Parameter("emailAddresses") List<String> emailAddresses,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("uris") List<String> uris) {
         this.customSans = customSans;
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;

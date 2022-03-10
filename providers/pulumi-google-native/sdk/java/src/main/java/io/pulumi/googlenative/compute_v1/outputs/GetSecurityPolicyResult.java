@@ -58,19 +58,19 @@ public final class GetSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adaptiveProtectionConfig","advancedOptionsConfig","creationTimestamp","description","fingerprint","kind","name","recaptchaOptionsConfig","rules","selfLink","type"})
+    @OutputCustomType.Constructor
     private GetSecurityPolicyResult(
-        SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        List<SecurityPolicyRuleResponse> rules,
-        String selfLink,
-        String type) {
+        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.creationTimestamp = creationTimestamp;

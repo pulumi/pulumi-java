@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"parameter","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(
-        String parameter,
-        Object value) {
+        @OutputCustomType.Parameter("parameter") String parameter,
+        @OutputCustomType.Parameter("value") Object value) {
         this.parameter = parameter;
         this.value = value;
     }

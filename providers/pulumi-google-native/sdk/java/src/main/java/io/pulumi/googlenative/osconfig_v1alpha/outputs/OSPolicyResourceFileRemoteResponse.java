@@ -20,10 +20,10 @@ public final class OSPolicyResourceFileRemoteResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"sha256Checksum","uri"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceFileRemoteResponse(
-        String sha256Checksum,
-        String uri) {
+        @OutputCustomType.Parameter("sha256Checksum") String sha256Checksum,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.sha256Checksum = sha256Checksum;
         this.uri = uri;
     }

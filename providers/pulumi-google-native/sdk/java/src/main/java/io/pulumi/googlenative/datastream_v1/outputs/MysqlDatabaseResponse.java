@@ -22,10 +22,10 @@ public final class MysqlDatabaseResponse {
      */
     private final List<MysqlTableResponse> mysqlTables;
 
-    @OutputCustomType.Constructor({"database","mysqlTables"})
+    @OutputCustomType.Constructor
     private MysqlDatabaseResponse(
-        String database,
-        List<MysqlTableResponse> mysqlTables) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("mysqlTables") List<MysqlTableResponse> mysqlTables) {
         this.database = database;
         this.mysqlTables = mysqlTables;
     }

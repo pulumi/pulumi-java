@@ -15,8 +15,8 @@ public final class SparkHistoryServerConfigResponse {
      */
     private final String dataprocCluster;
 
-    @OutputCustomType.Constructor({"dataprocCluster"})
-    private SparkHistoryServerConfigResponse(String dataprocCluster) {
+    @OutputCustomType.Constructor
+    private SparkHistoryServerConfigResponse(@OutputCustomType.Parameter("dataprocCluster") String dataprocCluster) {
         this.dataprocCluster = dataprocCluster;
     }
 

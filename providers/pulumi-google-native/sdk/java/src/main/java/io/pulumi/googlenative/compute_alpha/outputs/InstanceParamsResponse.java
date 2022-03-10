@@ -16,8 +16,8 @@ public final class InstanceParamsResponse {
      */
     private final Map<String,String> resourceManagerTags;
 
-    @OutputCustomType.Constructor({"resourceManagerTags"})
-    private InstanceParamsResponse(Map<String,String> resourceManagerTags) {
+    @OutputCustomType.Constructor
+    private InstanceParamsResponse(@OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
     }
 

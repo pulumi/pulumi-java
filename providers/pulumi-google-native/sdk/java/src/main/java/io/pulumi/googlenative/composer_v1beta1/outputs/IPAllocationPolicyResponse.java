@@ -36,13 +36,13 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useIpAliases;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName","useIpAliases"})
+    @OutputCustomType.Constructor
     private IPAllocationPolicyResponse(
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        Boolean useIpAliases) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

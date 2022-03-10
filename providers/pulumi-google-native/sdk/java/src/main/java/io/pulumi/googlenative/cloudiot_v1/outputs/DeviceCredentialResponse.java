@@ -21,10 +21,10 @@ public final class DeviceCredentialResponse {
      */
     private final PublicKeyCredentialResponse publicKey;
 
-    @OutputCustomType.Constructor({"expirationTime","publicKey"})
+    @OutputCustomType.Constructor
     private DeviceCredentialResponse(
-        String expirationTime,
-        PublicKeyCredentialResponse publicKey) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("publicKey") PublicKeyCredentialResponse publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }

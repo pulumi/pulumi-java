@@ -20,10 +20,10 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","startTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaConditionTimeRangeResponse(
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

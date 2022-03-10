@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"isControlGroup","trafficAllocation","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3VersionVariantsVariantResponse(
-        Boolean isControlGroup,
-        Double trafficAllocation,
-        String version) {
+        @OutputCustomType.Parameter("isControlGroup") Boolean isControlGroup,
+        @OutputCustomType.Parameter("trafficAllocation") Double trafficAllocation,
+        @OutputCustomType.Parameter("version") String version) {
         this.isControlGroup = isControlGroup;
         this.trafficAllocation = trafficAllocation;
         this.version = version;

@@ -52,16 +52,16 @@ public final class GetNotificationResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"customAttributes","etag","eventTypes","kind","objectNamePrefix","payloadFormat","selfLink","topic"})
+    @OutputCustomType.Constructor
     private GetNotificationResult(
-        Map<String,String> customAttributes,
-        String etag,
-        List<String> eventTypes,
-        String kind,
-        String objectNamePrefix,
-        String payloadFormat,
-        String selfLink,
-        String topic) {
+        @OutputCustomType.Parameter("customAttributes") Map<String,String> customAttributes,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventTypes") List<String> eventTypes,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("objectNamePrefix") String objectNamePrefix,
+        @OutputCustomType.Parameter("payloadFormat") String payloadFormat,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.customAttributes = customAttributes;
         this.etag = etag;
         this.eventTypes = eventTypes;

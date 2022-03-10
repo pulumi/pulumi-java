@@ -15,8 +15,8 @@ public final class ServiceExternalIPsConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ServiceExternalIPsConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ServiceExternalIPsConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

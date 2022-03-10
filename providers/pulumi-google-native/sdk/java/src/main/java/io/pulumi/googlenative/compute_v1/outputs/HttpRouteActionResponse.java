@@ -57,16 +57,16 @@ public final class HttpRouteActionResponse {
      */
     private final List<WeightedBackendServiceResponse> weightedBackendServices;
 
-    @OutputCustomType.Constructor({"corsPolicy","faultInjectionPolicy","maxStreamDuration","requestMirrorPolicy","retryPolicy","timeout","urlRewrite","weightedBackendServices"})
+    @OutputCustomType.Constructor
     private HttpRouteActionResponse(
-        CorsPolicyResponse corsPolicy,
-        HttpFaultInjectionResponse faultInjectionPolicy,
-        DurationResponse maxStreamDuration,
-        RequestMirrorPolicyResponse requestMirrorPolicy,
-        HttpRetryPolicyResponse retryPolicy,
-        DurationResponse timeout,
-        UrlRewriteResponse urlRewrite,
-        List<WeightedBackendServiceResponse> weightedBackendServices) {
+        @OutputCustomType.Parameter("corsPolicy") CorsPolicyResponse corsPolicy,
+        @OutputCustomType.Parameter("faultInjectionPolicy") HttpFaultInjectionResponse faultInjectionPolicy,
+        @OutputCustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
+        @OutputCustomType.Parameter("requestMirrorPolicy") RequestMirrorPolicyResponse requestMirrorPolicy,
+        @OutputCustomType.Parameter("retryPolicy") HttpRetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("timeout") DurationResponse timeout,
+        @OutputCustomType.Parameter("urlRewrite") UrlRewriteResponse urlRewrite,
+        @OutputCustomType.Parameter("weightedBackendServices") List<WeightedBackendServiceResponse> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.maxStreamDuration = maxStreamDuration;

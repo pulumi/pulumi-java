@@ -47,15 +47,15 @@ public final class GetIssueModelResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","inputDataConfig","name","state","trainingStats","updateTime"})
+    @OutputCustomType.Constructor
     private GetIssueModelResult(
-        String createTime,
-        String displayName,
-        GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
-        String name,
-        String state,
-        GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("inputDataConfig") GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trainingStats") GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.inputDataConfig = inputDataConfig;

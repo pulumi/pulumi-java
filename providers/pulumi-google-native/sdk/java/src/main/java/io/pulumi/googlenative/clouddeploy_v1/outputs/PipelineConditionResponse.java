@@ -21,10 +21,10 @@ public final class PipelineConditionResponse {
      */
     private final TargetsPresentConditionResponse targetsPresentCondition;
 
-    @OutputCustomType.Constructor({"pipelineReadyCondition","targetsPresentCondition"})
+    @OutputCustomType.Constructor
     private PipelineConditionResponse(
-        PipelineReadyConditionResponse pipelineReadyCondition,
-        TargetsPresentConditionResponse targetsPresentCondition) {
+        @OutputCustomType.Parameter("pipelineReadyCondition") PipelineReadyConditionResponse pipelineReadyCondition,
+        @OutputCustomType.Parameter("targetsPresentCondition") TargetsPresentConditionResponse targetsPresentCondition) {
         this.pipelineReadyCondition = pipelineReadyCondition;
         this.targetsPresentCondition = targetsPresentCondition;
     }

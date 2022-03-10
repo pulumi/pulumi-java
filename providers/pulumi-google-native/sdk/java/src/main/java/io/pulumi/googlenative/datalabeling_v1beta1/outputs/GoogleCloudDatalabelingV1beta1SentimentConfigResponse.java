@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse {
      */
     private final Boolean enableLabelSentimentSelection;
 
-    @OutputCustomType.Constructor({"enableLabelSentimentSelection"})
-    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(Boolean enableLabelSentimentSelection) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(@OutputCustomType.Parameter("enableLabelSentimentSelection") Boolean enableLabelSentimentSelection) {
         this.enableLabelSentimentSelection = enableLabelSentimentSelection;
     }
 

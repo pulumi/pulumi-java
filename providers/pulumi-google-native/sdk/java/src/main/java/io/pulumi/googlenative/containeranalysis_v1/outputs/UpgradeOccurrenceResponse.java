@@ -33,12 +33,12 @@ public final class UpgradeOccurrenceResponse {
      */
     private final WindowsUpdateResponse windowsUpdate;
 
-    @OutputCustomType.Constructor({"distribution","$package","parsedVersion","windowsUpdate"})
+    @OutputCustomType.Constructor
     private UpgradeOccurrenceResponse(
-        UpgradeDistributionResponse distribution,
-        String $package,
-        VersionResponse parsedVersion,
-        WindowsUpdateResponse windowsUpdate) {
+        @OutputCustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("parsedVersion") VersionResponse parsedVersion,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distribution = distribution;
         this.$package = $package;
         this.parsedVersion = parsedVersion;

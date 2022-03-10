@@ -27,11 +27,11 @@ public final class GoogleCloudChannelV1ParameterResponse {
      */
     private final GoogleCloudChannelV1ValueResponse value;
 
-    @OutputCustomType.Constructor({"editable","name","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ParameterResponse(
-        Boolean editable,
-        String name,
-        GoogleCloudChannelV1ValueResponse value) {
+        @OutputCustomType.Parameter("editable") Boolean editable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") GoogleCloudChannelV1ValueResponse value) {
         this.editable = editable;
         this.name = name;
         this.value = value;

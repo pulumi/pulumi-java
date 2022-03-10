@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private GooglePrivacyDlpV2CloudStorageFileSetResponse(String url) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CloudStorageFileSetResponse(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 

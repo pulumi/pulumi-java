@@ -21,10 +21,10 @@ public final class InstanceFailoverReplicaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"available","name"})
+    @OutputCustomType.Constructor
     private InstanceFailoverReplicaResponse(
-        Boolean available,
-        String name) {
+        @OutputCustomType.Parameter("available") Boolean available,
+        @OutputCustomType.Parameter("name") String name) {
         this.available = available;
         this.name = name;
     }

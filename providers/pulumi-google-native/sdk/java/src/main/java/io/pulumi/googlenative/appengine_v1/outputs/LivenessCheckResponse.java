@@ -46,15 +46,15 @@ public final class LivenessCheckResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"checkInterval","failureThreshold","host","initialDelay","path","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private LivenessCheckResponse(
-        String checkInterval,
-        Integer failureThreshold,
-        String host,
-        String initialDelay,
-        String path,
-        Integer successThreshold,
-        String timeout) {
+        @OutputCustomType.Parameter("checkInterval") String checkInterval,
+        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("initialDelay") String initialDelay,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
         this.host = host;

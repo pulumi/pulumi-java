@@ -20,10 +20,10 @@ public final class JobSchedulingResponse {
      */
     private final Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor({"maxFailuresPerHour","maxFailuresTotal"})
+    @OutputCustomType.Constructor
     private JobSchedulingResponse(
-        Integer maxFailuresPerHour,
-        Integer maxFailuresTotal) {
+        @OutputCustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
+        @OutputCustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }

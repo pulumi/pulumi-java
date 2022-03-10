@@ -21,10 +21,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
      */
     private final Double minAcceptableMeanAveragePrecision;
 
-    @OutputCustomType.Constructor({"email","minAcceptableMeanAveragePrecision"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(
-        String email,
-        Double minAcceptableMeanAveragePrecision) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("minAcceptableMeanAveragePrecision") Double minAcceptableMeanAveragePrecision) {
         this.email = email;
         this.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
     }

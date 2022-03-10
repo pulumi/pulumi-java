@@ -20,10 +20,10 @@ public final class GetKeyRingResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"createTime","name"})
+    @OutputCustomType.Constructor
     private GetKeyRingResult(
-        String createTime,
-        String name) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.createTime = createTime;
         this.name = name;
     }

@@ -42,14 +42,14 @@ public final class CloneJobResponse {
      */
     private final String stateTime;
 
-    @OutputCustomType.Constructor({"computeEngineTargetDetails","createTime","error","name","state","stateTime"})
+    @OutputCustomType.Constructor
     private CloneJobResponse(
-        ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        String createTime,
-        StatusResponse error,
-        String name,
-        String state,
-        String stateTime) {
+        @OutputCustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
         this.error = error;

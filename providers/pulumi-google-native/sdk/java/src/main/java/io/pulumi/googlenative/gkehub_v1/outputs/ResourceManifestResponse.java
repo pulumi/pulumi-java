@@ -21,10 +21,10 @@ public final class ResourceManifestResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor({"clusterScoped","manifest"})
+    @OutputCustomType.Constructor
     private ResourceManifestResponse(
-        Boolean clusterScoped,
-        String manifest) {
+        @OutputCustomType.Parameter("clusterScoped") Boolean clusterScoped,
+        @OutputCustomType.Parameter("manifest") String manifest) {
         this.clusterScoped = clusterScoped;
         this.manifest = manifest;
     }

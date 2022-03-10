@@ -35,13 +35,13 @@ public final class ApiConfigHandlerResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"authFailAction","login","script","securityLevel","url"})
+    @OutputCustomType.Constructor
     private ApiConfigHandlerResponse(
-        String authFailAction,
-        String login,
-        String script,
-        String securityLevel,
-        String url) {
+        @OutputCustomType.Parameter("authFailAction") String authFailAction,
+        @OutputCustomType.Parameter("login") String login,
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("securityLevel") String securityLevel,
+        @OutputCustomType.Parameter("url") String url) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.script = script;

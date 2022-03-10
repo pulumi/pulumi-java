@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"config","createTime","labels","name","state","updateTime","uuid"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        EnvironmentConfigResponse config,
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String updateTime,
-        String uuid) {
+        @OutputCustomType.Parameter("config") EnvironmentConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.config = config;
         this.createTime = createTime;
         this.labels = labels;

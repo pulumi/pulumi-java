@@ -15,8 +15,8 @@ public final class HttpDataResponse {
      */
     private final String listUrl;
 
-    @OutputCustomType.Constructor({"listUrl"})
-    private HttpDataResponse(String listUrl) {
+    @OutputCustomType.Constructor
+    private HttpDataResponse(@OutputCustomType.Parameter("listUrl") String listUrl) {
         this.listUrl = listUrl;
     }
 

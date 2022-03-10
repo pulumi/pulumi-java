@@ -21,10 +21,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      */
     private final String policy;
 
-    @OutputCustomType.Constructor({"allowedValues","policy"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(
-        List<String> allowedValues,
-        String policy) {
+        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
+        @OutputCustomType.Parameter("policy") String policy) {
         this.allowedValues = allowedValues;
         this.policy = policy;
     }

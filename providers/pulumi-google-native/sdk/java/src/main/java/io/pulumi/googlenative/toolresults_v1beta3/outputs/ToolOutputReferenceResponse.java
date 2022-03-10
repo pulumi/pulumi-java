@@ -27,11 +27,11 @@ public final class ToolOutputReferenceResponse {
      */
     private final TestCaseReferenceResponse testCase;
 
-    @OutputCustomType.Constructor({"creationTime","output","testCase"})
+    @OutputCustomType.Constructor
     private ToolOutputReferenceResponse(
-        TimestampResponse creationTime,
-        FileReferenceResponse output,
-        TestCaseReferenceResponse testCase) {
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("output") FileReferenceResponse output,
+        @OutputCustomType.Parameter("testCase") TestCaseReferenceResponse testCase) {
         this.creationTime = creationTime;
         this.output = output;
         this.testCase = testCase;

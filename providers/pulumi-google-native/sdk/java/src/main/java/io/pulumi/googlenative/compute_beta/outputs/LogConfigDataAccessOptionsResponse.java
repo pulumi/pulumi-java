@@ -15,8 +15,8 @@ public final class LogConfigDataAccessOptionsResponse {
      */
     private final String logMode;
 
-    @OutputCustomType.Constructor({"logMode"})
-    private LogConfigDataAccessOptionsResponse(String logMode) {
+    @OutputCustomType.Constructor
+    private LogConfigDataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 

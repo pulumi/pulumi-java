@@ -47,15 +47,15 @@ public final class GetProjectResult {
      */
     private final String projectNumber;
 
-    @OutputCustomType.Constructor({"createTime","labels","lifecycleState","name","parent","projectId","projectNumber"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String createTime,
-        Map<String,String> labels,
-        String lifecycleState,
-        String name,
-        ResourceIdResponse parent,
-        String projectId,
-        String projectNumber) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") ResourceIdResponse parent,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("projectNumber") String projectNumber) {
         this.createTime = createTime;
         this.labels = labels;
         this.lifecycleState = lifecycleState;

@@ -16,8 +16,8 @@ public final class PatchInstanceFilterGroupLabelResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private PatchInstanceFilterGroupLabelResponse(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private PatchInstanceFilterGroupLabelResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

@@ -30,12 +30,12 @@ public final class ExternalRefResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"category","comment","locator","type"})
+    @OutputCustomType.Constructor
     private ExternalRefResponse(
-        String category,
-        String comment,
-        String locator,
-        String type) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("locator") String locator,
+        @OutputCustomType.Parameter("type") String type) {
         this.category = category;
         this.comment = comment;
         this.locator = locator;

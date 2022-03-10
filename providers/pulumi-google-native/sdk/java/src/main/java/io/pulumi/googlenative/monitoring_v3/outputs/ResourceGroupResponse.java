@@ -20,10 +20,10 @@ public final class ResourceGroupResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"groupId","resourceType"})
+    @OutputCustomType.Constructor
     private ResourceGroupResponse(
-        String groupId,
-        String resourceType) {
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }

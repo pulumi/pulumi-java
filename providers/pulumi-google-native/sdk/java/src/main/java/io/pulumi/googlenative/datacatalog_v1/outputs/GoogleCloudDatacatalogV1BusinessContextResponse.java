@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
      */
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
-    @OutputCustomType.Constructor({"contacts","entryOverview"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1BusinessContextResponse(
-        GoogleCloudDatacatalogV1ContactsResponse contacts,
-        GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
+        @OutputCustomType.Parameter("contacts") GoogleCloudDatacatalogV1ContactsResponse contacts,
+        @OutputCustomType.Parameter("entryOverview") GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
         this.contacts = contacts;
         this.entryOverview = entryOverview;
     }

@@ -121,27 +121,27 @@ public final class GetJobResult {
      */
     private final List<YarnApplicationResponse> yarnApplications;
 
-    @OutputCustomType.Constructor({"done","driverControlFilesUri","driverOutputResourceUri","hadoopJob","hiveJob","jobUuid","labels","pigJob","placement","prestoJob","pysparkJob","reference","scheduling","sparkJob","sparkRJob","sparkSqlJob","status","statusHistory","yarnApplications"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        Boolean done,
-        String driverControlFilesUri,
-        String driverOutputResourceUri,
-        HadoopJobResponse hadoopJob,
-        HiveJobResponse hiveJob,
-        String jobUuid,
-        Map<String,String> labels,
-        PigJobResponse pigJob,
-        JobPlacementResponse placement,
-        PrestoJobResponse prestoJob,
-        PySparkJobResponse pysparkJob,
-        JobReferenceResponse reference,
-        JobSchedulingResponse scheduling,
-        SparkJobResponse sparkJob,
-        SparkRJobResponse sparkRJob,
-        SparkSqlJobResponse sparkSqlJob,
-        JobStatusResponse status,
-        List<JobStatusResponse> statusHistory,
-        List<YarnApplicationResponse> yarnApplications) {
+        @OutputCustomType.Parameter("done") Boolean done,
+        @OutputCustomType.Parameter("driverControlFilesUri") String driverControlFilesUri,
+        @OutputCustomType.Parameter("driverOutputResourceUri") String driverOutputResourceUri,
+        @OutputCustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
+        @OutputCustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
+        @OutputCustomType.Parameter("jobUuid") String jobUuid,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("pigJob") PigJobResponse pigJob,
+        @OutputCustomType.Parameter("placement") JobPlacementResponse placement,
+        @OutputCustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
+        @OutputCustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
+        @OutputCustomType.Parameter("reference") JobReferenceResponse reference,
+        @OutputCustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
+        @OutputCustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
+        @OutputCustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
+        @OutputCustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
+        @OutputCustomType.Parameter("status") JobStatusResponse status,
+        @OutputCustomType.Parameter("statusHistory") List<JobStatusResponse> statusHistory,
+        @OutputCustomType.Parameter("yarnApplications") List<YarnApplicationResponse> yarnApplications) {
         this.done = done;
         this.driverControlFilesUri = driverControlFilesUri;
         this.driverOutputResourceUri = driverOutputResourceUri;

@@ -21,10 +21,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
      */
     private final Double testingScore;
 
-    @OutputCustomType.Constructor({"testingChallenge","testingScore"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(
-        String testingChallenge,
-        Double testingScore) {
+        @OutputCustomType.Parameter("testingChallenge") String testingChallenge,
+        @OutputCustomType.Parameter("testingScore") Double testingScore) {
         this.testingChallenge = testingChallenge;
         this.testingScore = testingScore;
     }

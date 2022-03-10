@@ -83,21 +83,21 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
      */
     private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
 
-    @OutputCustomType.Constructor({"annotations","confidential","containerConcurrency","containers","encryptionKey","executionEnvironment","labels","revision","scaling","serviceAccount","timeout","volumes","vpcAccess"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2RevisionTemplateResponse(
-        Map<String,String> annotations,
-        Boolean confidential,
-        Integer containerConcurrency,
-        List<GoogleCloudRunOpV2ContainerResponse> containers,
-        String encryptionKey,
-        String executionEnvironment,
-        Map<String,String> labels,
-        String revision,
-        GoogleCloudRunOpV2RevisionScalingResponse scaling,
-        String serviceAccount,
-        String timeout,
-        List<GoogleCloudRunOpV2VolumeResponse> volumes,
-        GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("confidential") Boolean confidential,
+        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @OutputCustomType.Parameter("containers") List<GoogleCloudRunOpV2ContainerResponse> containers,
+        @OutputCustomType.Parameter("encryptionKey") String encryptionKey,
+        @OutputCustomType.Parameter("executionEnvironment") String executionEnvironment,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("revision") String revision,
+        @OutputCustomType.Parameter("scaling") GoogleCloudRunOpV2RevisionScalingResponse scaling,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("timeout") String timeout,
+        @OutputCustomType.Parameter("volumes") List<GoogleCloudRunOpV2VolumeResponse> volumes,
+        @OutputCustomType.Parameter("vpcAccess") GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
         this.annotations = annotations;
         this.confidential = confidential;
         this.containerConcurrency = containerConcurrency;

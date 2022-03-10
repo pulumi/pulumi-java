@@ -30,12 +30,12 @@ public final class GitFileSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"path","repoType","revision","uri"})
+    @OutputCustomType.Constructor
     private GitFileSourceResponse(
-        String path,
-        String repoType,
-        String revision,
-        String uri) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("repoType") String repoType,
+        @OutputCustomType.Parameter("revision") String revision,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.path = path;
         this.repoType = repoType;
         this.revision = revision;

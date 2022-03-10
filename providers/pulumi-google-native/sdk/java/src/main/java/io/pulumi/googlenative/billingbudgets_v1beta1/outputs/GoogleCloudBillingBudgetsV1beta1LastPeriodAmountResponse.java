@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse() {
     }
 

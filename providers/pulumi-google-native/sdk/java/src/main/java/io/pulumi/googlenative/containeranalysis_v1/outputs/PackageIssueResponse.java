@@ -57,17 +57,17 @@ public final class PackageIssueResponse {
      */
     private final String packageType;
 
-    @OutputCustomType.Constructor({"affectedCpeUri","affectedPackage","affectedVersion","effectiveSeverity","fixAvailable","fixedCpeUri","fixedPackage","fixedVersion","packageType"})
+    @OutputCustomType.Constructor
     private PackageIssueResponse(
-        String affectedCpeUri,
-        String affectedPackage,
-        VersionResponse affectedVersion,
-        String effectiveSeverity,
-        Boolean fixAvailable,
-        String fixedCpeUri,
-        String fixedPackage,
-        VersionResponse fixedVersion,
-        String packageType) {
+        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
+        @OutputCustomType.Parameter("affectedVersion") VersionResponse affectedVersion,
+        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @OutputCustomType.Parameter("fixAvailable") Boolean fixAvailable,
+        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
+        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @OutputCustomType.Parameter("packageType") String packageType) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersion = affectedVersion;

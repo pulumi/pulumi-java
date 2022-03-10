@@ -47,15 +47,15 @@ public final class CacheKeyPolicyResponse {
      */
     private final List<String> queryStringWhitelist;
 
-    @OutputCustomType.Constructor({"includeHost","includeHttpHeaders","includeNamedCookies","includeProtocol","includeQueryString","queryStringBlacklist","queryStringWhitelist"})
+    @OutputCustomType.Constructor
     private CacheKeyPolicyResponse(
-        Boolean includeHost,
-        List<String> includeHttpHeaders,
-        List<String> includeNamedCookies,
-        Boolean includeProtocol,
-        Boolean includeQueryString,
-        List<String> queryStringBlacklist,
-        List<String> queryStringWhitelist) {
+        @OutputCustomType.Parameter("includeHost") Boolean includeHost,
+        @OutputCustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
+        @OutputCustomType.Parameter("includeNamedCookies") List<String> includeNamedCookies,
+        @OutputCustomType.Parameter("includeProtocol") Boolean includeProtocol,
+        @OutputCustomType.Parameter("includeQueryString") Boolean includeQueryString,
+        @OutputCustomType.Parameter("queryStringBlacklist") List<String> queryStringBlacklist,
+        @OutputCustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
         this.includeHost = includeHost;
         this.includeHttpHeaders = includeHttpHeaders;
         this.includeNamedCookies = includeNamedCookies;

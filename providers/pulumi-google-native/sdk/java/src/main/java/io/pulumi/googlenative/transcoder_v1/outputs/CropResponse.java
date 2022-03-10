@@ -30,12 +30,12 @@ public final class CropResponse {
      */
     private final Integer topPixels;
 
-    @OutputCustomType.Constructor({"bottomPixels","leftPixels","rightPixels","topPixels"})
+    @OutputCustomType.Constructor
     private CropResponse(
-        Integer bottomPixels,
-        Integer leftPixels,
-        Integer rightPixels,
-        Integer topPixels) {
+        @OutputCustomType.Parameter("bottomPixels") Integer bottomPixels,
+        @OutputCustomType.Parameter("leftPixels") Integer leftPixels,
+        @OutputCustomType.Parameter("rightPixels") Integer rightPixels,
+        @OutputCustomType.Parameter("topPixels") Integer topPixels) {
         this.bottomPixels = bottomPixels;
         this.leftPixels = leftPixels;
         this.rightPixels = rightPixels;

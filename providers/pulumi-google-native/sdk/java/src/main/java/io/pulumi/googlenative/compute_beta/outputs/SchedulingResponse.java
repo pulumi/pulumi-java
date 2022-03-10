@@ -69,19 +69,19 @@ public final class SchedulingResponse {
      */
     private final String provisioningModel;
 
-    @OutputCustomType.Constructor({"automaticRestart","hostErrorTimeoutSeconds","instanceTerminationAction","locationHint","maintenanceFreezeDurationHours","maintenanceInterval","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible","provisioningModel"})
+    @OutputCustomType.Constructor
     private SchedulingResponse(
-        Boolean automaticRestart,
-        Integer hostErrorTimeoutSeconds,
-        String instanceTerminationAction,
-        String locationHint,
-        Integer maintenanceFreezeDurationHours,
-        String maintenanceInterval,
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible,
-        String provisioningModel) {
+        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @OutputCustomType.Parameter("hostErrorTimeoutSeconds") Integer hostErrorTimeoutSeconds,
+        @OutputCustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("maintenanceFreezeDurationHours") Integer maintenanceFreezeDurationHours,
+        @OutputCustomType.Parameter("maintenanceInterval") String maintenanceInterval,
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("provisioningModel") String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
         this.instanceTerminationAction = instanceTerminationAction;

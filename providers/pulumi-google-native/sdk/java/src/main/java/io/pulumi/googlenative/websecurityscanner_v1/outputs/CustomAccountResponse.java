@@ -25,11 +25,11 @@ public final class CustomAccountResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"loginUrl","password","username"})
+    @OutputCustomType.Constructor
     private CustomAccountResponse(
-        String loginUrl,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("loginUrl") String loginUrl,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.loginUrl = loginUrl;
         this.password = password;
         this.username = username;

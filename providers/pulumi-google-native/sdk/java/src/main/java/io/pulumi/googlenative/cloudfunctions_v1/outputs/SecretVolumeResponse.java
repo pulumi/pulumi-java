@@ -32,12 +32,12 @@ public final class SecretVolumeResponse {
      */
     private final List<SecretVersionResponse> versions;
 
-    @OutputCustomType.Constructor({"mountPath","project","secret","versions"})
+    @OutputCustomType.Constructor
     private SecretVolumeResponse(
-        String mountPath,
-        String project,
-        String secret,
-        List<SecretVersionResponse> versions) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("versions") List<SecretVersionResponse> versions) {
         this.mountPath = mountPath;
         this.project = project;
         this.secret = secret;

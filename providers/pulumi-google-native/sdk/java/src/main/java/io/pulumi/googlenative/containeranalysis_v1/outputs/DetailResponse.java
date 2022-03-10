@@ -82,22 +82,22 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor({"affectedCpeUri","affectedPackage","affectedVersionEnd","affectedVersionStart","description","fixedCpeUri","fixedPackage","fixedVersion","isObsolete","packageType","severityName","source","sourceUpdateTime","vendor"})
+    @OutputCustomType.Constructor
     private DetailResponse(
-        String affectedCpeUri,
-        String affectedPackage,
-        VersionResponse affectedVersionEnd,
-        VersionResponse affectedVersionStart,
-        String description,
-        String fixedCpeUri,
-        String fixedPackage,
-        VersionResponse fixedVersion,
-        Boolean isObsolete,
-        String packageType,
-        String severityName,
-        String source,
-        String sourceUpdateTime,
-        String vendor) {
+        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
+        @OutputCustomType.Parameter("affectedVersionEnd") VersionResponse affectedVersionEnd,
+        @OutputCustomType.Parameter("affectedVersionStart") VersionResponse affectedVersionStart,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
+        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
+        @OutputCustomType.Parameter("vendor") String vendor) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersionEnd = affectedVersionEnd;

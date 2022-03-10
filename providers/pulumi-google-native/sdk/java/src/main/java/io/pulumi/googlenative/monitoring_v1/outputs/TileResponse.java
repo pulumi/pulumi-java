@@ -36,13 +36,13 @@ public final class TileResponse {
      */
     private final Integer yPos;
 
-    @OutputCustomType.Constructor({"height","widget","width","xPos","yPos"})
+    @OutputCustomType.Constructor
     private TileResponse(
-        Integer height,
-        WidgetResponse widget,
-        Integer width,
-        Integer xPos,
-        Integer yPos) {
+        @OutputCustomType.Parameter("height") Integer height,
+        @OutputCustomType.Parameter("widget") WidgetResponse widget,
+        @OutputCustomType.Parameter("width") Integer width,
+        @OutputCustomType.Parameter("xPos") Integer xPos,
+        @OutputCustomType.Parameter("yPos") Integer yPos) {
         this.height = height;
         this.widget = widget;
         this.width = width;

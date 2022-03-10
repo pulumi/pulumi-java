@@ -15,8 +15,8 @@ public final class DetailsResponse {
      */
     private final AttestationResponse attestation;
 
-    @OutputCustomType.Constructor({"attestation"})
-    private DetailsResponse(AttestationResponse attestation) {
+    @OutputCustomType.Constructor
+    private DetailsResponse(@OutputCustomType.Parameter("attestation") AttestationResponse attestation) {
         this.attestation = attestation;
     }
 

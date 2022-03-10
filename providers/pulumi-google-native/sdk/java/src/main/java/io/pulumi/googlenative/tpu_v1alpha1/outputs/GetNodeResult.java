@@ -101,25 +101,25 @@ public final class GetNodeResult {
      */
     private final Boolean useServiceNetworking;
 
-    @OutputCustomType.Constructor({"acceleratorType","apiVersion","cidrBlock","createTime","description","health","healthDescription","labels","name","network","networkEndpoints","schedulingConfig","serviceAccount","state","symptoms","tensorflowVersion","useServiceNetworking"})
+    @OutputCustomType.Constructor
     private GetNodeResult(
-        String acceleratorType,
-        String apiVersion,
-        String cidrBlock,
-        String createTime,
-        String description,
-        String health,
-        String healthDescription,
-        Map<String,String> labels,
-        String name,
-        String network,
-        List<NetworkEndpointResponse> networkEndpoints,
-        SchedulingConfigResponse schedulingConfig,
-        String serviceAccount,
-        String state,
-        List<SymptomResponse> symptoms,
-        String tensorflowVersion,
-        Boolean useServiceNetworking) {
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthDescription") String healthDescription,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
+        @OutputCustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
+        @OutputCustomType.Parameter("tensorflowVersion") String tensorflowVersion,
+        @OutputCustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
         this.acceleratorType = acceleratorType;
         this.apiVersion = apiVersion;
         this.cidrBlock = cidrBlock;

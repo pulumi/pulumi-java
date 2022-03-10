@@ -20,10 +20,10 @@ public final class MysqlSourceConfigResponse {
      */
     private final MysqlRdbmsResponse includeObjects;
 
-    @OutputCustomType.Constructor({"excludeObjects","includeObjects"})
+    @OutputCustomType.Constructor
     private MysqlSourceConfigResponse(
-        MysqlRdbmsResponse excludeObjects,
-        MysqlRdbmsResponse includeObjects) {
+        @OutputCustomType.Parameter("excludeObjects") MysqlRdbmsResponse excludeObjects,
+        @OutputCustomType.Parameter("includeObjects") MysqlRdbmsResponse includeObjects) {
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }

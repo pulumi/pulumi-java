@@ -51,15 +51,15 @@ public final class GetRegistryResult {
      */
     private final StateNotificationConfigResponse stateNotificationConfig;
 
-    @OutputCustomType.Constructor({"credentials","eventNotificationConfigs","httpConfig","logLevel","mqttConfig","name","stateNotificationConfig"})
+    @OutputCustomType.Constructor
     private GetRegistryResult(
-        List<RegistryCredentialResponse> credentials,
-        List<EventNotificationConfigResponse> eventNotificationConfigs,
-        HttpConfigResponse httpConfig,
-        String logLevel,
-        MqttConfigResponse mqttConfig,
-        String name,
-        StateNotificationConfigResponse stateNotificationConfig) {
+        @OutputCustomType.Parameter("credentials") List<RegistryCredentialResponse> credentials,
+        @OutputCustomType.Parameter("eventNotificationConfigs") List<EventNotificationConfigResponse> eventNotificationConfigs,
+        @OutputCustomType.Parameter("httpConfig") HttpConfigResponse httpConfig,
+        @OutputCustomType.Parameter("logLevel") String logLevel,
+        @OutputCustomType.Parameter("mqttConfig") MqttConfigResponse mqttConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("stateNotificationConfig") StateNotificationConfigResponse stateNotificationConfig) {
         this.credentials = credentials;
         this.eventNotificationConfigs = eventNotificationConfigs;
         this.httpConfig = httpConfig;

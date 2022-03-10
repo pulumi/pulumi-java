@@ -21,10 +21,10 @@ public final class CustomErrorRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"isErrorType","selector"})
+    @OutputCustomType.Constructor
     private CustomErrorRuleResponse(
-        Boolean isErrorType,
-        String selector) {
+        @OutputCustomType.Parameter("isErrorType") Boolean isErrorType,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.isErrorType = isErrorType;
         this.selector = selector;
     }

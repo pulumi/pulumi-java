@@ -20,10 +20,10 @@ public final class LicenseResourceRequirementsResponse {
      */
     private final Integer minMemoryMb;
 
-    @OutputCustomType.Constructor({"minGuestCpuCount","minMemoryMb"})
+    @OutputCustomType.Constructor
     private LicenseResourceRequirementsResponse(
-        Integer minGuestCpuCount,
-        Integer minMemoryMb) {
+        @OutputCustomType.Parameter("minGuestCpuCount") Integer minGuestCpuCount,
+        @OutputCustomType.Parameter("minMemoryMb") Integer minMemoryMb) {
         this.minGuestCpuCount = minGuestCpuCount;
         this.minMemoryMb = minMemoryMb;
     }

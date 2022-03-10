@@ -15,8 +15,8 @@ public final class AutoscalingTargetsResponse {
      */
     private final Integer cpuUtilizationPercent;
 
-    @OutputCustomType.Constructor({"cpuUtilizationPercent"})
-    private AutoscalingTargetsResponse(Integer cpuUtilizationPercent) {
+    @OutputCustomType.Constructor
+    private AutoscalingTargetsResponse(@OutputCustomType.Parameter("cpuUtilizationPercent") Integer cpuUtilizationPercent) {
         this.cpuUtilizationPercent = cpuUtilizationPercent;
     }
 

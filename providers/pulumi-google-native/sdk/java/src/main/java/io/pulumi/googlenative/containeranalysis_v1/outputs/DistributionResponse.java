@@ -41,14 +41,14 @@ public final class DistributionResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"architecture","cpeUri","description","latestVersion","maintainer","url"})
+    @OutputCustomType.Constructor
     private DistributionResponse(
-        String architecture,
-        String cpeUri,
-        String description,
-        VersionResponse latestVersion,
-        String maintainer,
-        String url) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("latestVersion") VersionResponse latestVersion,
+        @OutputCustomType.Parameter("maintainer") String maintainer,
+        @OutputCustomType.Parameter("url") String url) {
         this.architecture = architecture;
         this.cpeUri = cpeUri;
         this.description = description;

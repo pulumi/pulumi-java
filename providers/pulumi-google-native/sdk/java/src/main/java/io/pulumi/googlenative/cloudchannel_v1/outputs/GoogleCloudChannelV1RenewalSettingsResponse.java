@@ -32,12 +32,12 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
      */
     private final Boolean resizeUnitCount;
 
-    @OutputCustomType.Constructor({"enableRenewal","paymentCycle","paymentPlan","resizeUnitCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1RenewalSettingsResponse(
-        Boolean enableRenewal,
-        GoogleCloudChannelV1PeriodResponse paymentCycle,
-        String paymentPlan,
-        Boolean resizeUnitCount) {
+        @OutputCustomType.Parameter("enableRenewal") Boolean enableRenewal,
+        @OutputCustomType.Parameter("paymentCycle") GoogleCloudChannelV1PeriodResponse paymentCycle,
+        @OutputCustomType.Parameter("paymentPlan") String paymentPlan,
+        @OutputCustomType.Parameter("resizeUnitCount") Boolean resizeUnitCount) {
         this.enableRenewal = enableRenewal;
         this.paymentCycle = paymentCycle;
         this.paymentPlan = paymentPlan;

@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
      */
     private final String regionCode;
 
-    @OutputCustomType.Constructor({"auxiliaryTables","quasiIds","regionCode"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(
-        List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
-        List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
-        String regionCode) {
+        @OutputCustomType.Parameter("auxiliaryTables") List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
+        @OutputCustomType.Parameter("regionCode") String regionCode) {
         this.auxiliaryTables = auxiliaryTables;
         this.quasiIds = quasiIds;
         this.regionCode = regionCode;

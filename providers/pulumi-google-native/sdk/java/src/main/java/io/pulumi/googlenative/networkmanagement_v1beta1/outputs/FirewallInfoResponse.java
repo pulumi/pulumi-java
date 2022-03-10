@@ -62,18 +62,18 @@ public final class FirewallInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"action","direction","displayName","firewallRuleType","networkUri","policy","priority","targetServiceAccounts","targetTags","uri"})
+    @OutputCustomType.Constructor
     private FirewallInfoResponse(
-        String action,
-        String direction,
-        String displayName,
-        String firewallRuleType,
-        String networkUri,
-        String policy,
-        Integer priority,
-        List<String> targetServiceAccounts,
-        List<String> targetTags,
-        String uri) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("firewallRuleType") String firewallRuleType,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @OutputCustomType.Parameter("targetTags") List<String> targetTags,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.action = action;
         this.direction = direction;
         this.displayName = displayName;

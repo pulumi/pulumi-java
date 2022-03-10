@@ -22,10 +22,10 @@ public final class CompositeFilterResponse {
      */
     private final List<FilterResponse> subFilters;
 
-    @OutputCustomType.Constructor({"logicOperator","subFilters"})
+    @OutputCustomType.Constructor
     private CompositeFilterResponse(
-        String logicOperator,
-        List<FilterResponse> subFilters) {
+        @OutputCustomType.Parameter("logicOperator") String logicOperator,
+        @OutputCustomType.Parameter("subFilters") List<FilterResponse> subFilters) {
         this.logicOperator = logicOperator;
         this.subFilters = subFilters;
     }

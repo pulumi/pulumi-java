@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final Boolean groupSuggestionResponses;
 
-    @OutputCustomType.Constructor({"featureConfigs","groupSuggestionResponses"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(
-        List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
-        Boolean groupSuggestionResponses) {
+        @OutputCustomType.Parameter("featureConfigs") List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
+        @OutputCustomType.Parameter("groupSuggestionResponses") Boolean groupSuggestionResponses) {
         this.featureConfigs = featureConfigs;
         this.groupSuggestionResponses = groupSuggestionResponses;
     }

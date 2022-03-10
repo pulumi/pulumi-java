@@ -12,10 +12,10 @@ public final class GrafeasV1beta1IntotoSignatureResponse {
     private final String keyid;
     private final String sig;
 
-    @OutputCustomType.Constructor({"keyid","sig"})
+    @OutputCustomType.Constructor
     private GrafeasV1beta1IntotoSignatureResponse(
-        String keyid,
-        String sig) {
+        @OutputCustomType.Parameter("keyid") String keyid,
+        @OutputCustomType.Parameter("sig") String sig) {
         this.keyid = keyid;
         this.sig = sig;
     }

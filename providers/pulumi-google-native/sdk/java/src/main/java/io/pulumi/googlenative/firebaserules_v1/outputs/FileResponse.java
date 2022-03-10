@@ -25,11 +25,11 @@ public final class FileResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"content","fingerprint","name"})
+    @OutputCustomType.Constructor
     private FileResponse(
-        String content,
-        String fingerprint,
-        String name) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("name") String name) {
         this.content = content;
         this.fingerprint = fingerprint;
         this.name = name;

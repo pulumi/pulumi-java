@@ -78,21 +78,21 @@ public final class GetAppResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiProducts","appFamily","appId","attributes","callbackUrl","createdAt","credentials","developerId","keyExpiresIn","lastModifiedAt","name","scopes","status"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        List<String> apiProducts,
-        String appFamily,
-        String appId,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String callbackUrl,
-        String createdAt,
-        List<GoogleCloudApigeeV1CredentialResponse> credentials,
-        String developerId,
-        String keyExpiresIn,
-        String lastModifiedAt,
-        String name,
-        List<String> scopes,
-        String status) {
+        @OutputCustomType.Parameter("apiProducts") List<String> apiProducts,
+        @OutputCustomType.Parameter("appFamily") String appFamily,
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("credentials") List<GoogleCloudApigeeV1CredentialResponse> credentials,
+        @OutputCustomType.Parameter("developerId") String developerId,
+        @OutputCustomType.Parameter("keyExpiresIn") String keyExpiresIn,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.appFamily = appFamily;
         this.appId = appId;

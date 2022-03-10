@@ -26,11 +26,11 @@ public final class HostRuleResponse {
      */
     private final String pathMatcher;
 
-    @OutputCustomType.Constructor({"description","hosts","pathMatcher"})
+    @OutputCustomType.Constructor
     private HostRuleResponse(
-        String description,
-        List<String> hosts,
-        String pathMatcher) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("pathMatcher") String pathMatcher) {
         this.description = description;
         this.hosts = hosts;
         this.pathMatcher = pathMatcher;

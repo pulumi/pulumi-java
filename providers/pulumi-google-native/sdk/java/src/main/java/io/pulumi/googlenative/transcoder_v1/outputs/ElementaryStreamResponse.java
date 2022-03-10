@@ -33,12 +33,12 @@ public final class ElementaryStreamResponse {
      */
     private final VideoStreamResponse videoStream;
 
-    @OutputCustomType.Constructor({"audioStream","key","textStream","videoStream"})
+    @OutputCustomType.Constructor
     private ElementaryStreamResponse(
-        AudioStreamResponse audioStream,
-        String key,
-        TextStreamResponse textStream,
-        VideoStreamResponse videoStream) {
+        @OutputCustomType.Parameter("audioStream") AudioStreamResponse audioStream,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("textStream") TextStreamResponse textStream,
+        @OutputCustomType.Parameter("videoStream") VideoStreamResponse videoStream) {
         this.audioStream = audioStream;
         this.key = key;
         this.textStream = textStream;

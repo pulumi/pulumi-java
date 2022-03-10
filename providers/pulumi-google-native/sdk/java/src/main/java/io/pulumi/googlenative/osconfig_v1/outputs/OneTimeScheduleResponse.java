@@ -15,8 +15,8 @@ public final class OneTimeScheduleResponse {
      */
     private final String executeTime;
 
-    @OutputCustomType.Constructor({"executeTime"})
-    private OneTimeScheduleResponse(String executeTime) {
+    @OutputCustomType.Constructor
+    private OneTimeScheduleResponse(@OutputCustomType.Parameter("executeTime") String executeTime) {
         this.executeTime = executeTime;
     }
 

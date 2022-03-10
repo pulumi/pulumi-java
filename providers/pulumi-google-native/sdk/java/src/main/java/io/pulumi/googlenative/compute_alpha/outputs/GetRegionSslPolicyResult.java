@@ -83,22 +83,22 @@ public final class GetRegionSslPolicyResult {
      */
     private final List<RegionSslPolicyWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","kind","minTlsVersion","name","profile","region","selfLink","selfLinkWithId","tlsSettings","warnings"})
+    @OutputCustomType.Constructor
     private GetRegionSslPolicyResult(
-        String creationTimestamp,
-        List<String> customFeatures,
-        String description,
-        List<String> enabledFeatures,
-        String fingerprint,
-        String kind,
-        String minTlsVersion,
-        String name,
-        String profile,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        ServerTlsSettingsResponse tlsSettings,
-        List<RegionSslPolicyWarningsItemResponse> warnings) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("tlsSettings") ServerTlsSettingsResponse tlsSettings,
+        @OutputCustomType.Parameter("warnings") List<RegionSslPolicyWarningsItemResponse> warnings) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

@@ -35,13 +35,13 @@ public final class GetViewResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"createTime","displayName","name","updateTime","value"})
+    @OutputCustomType.Constructor
     private GetViewResult(
-        String createTime,
-        String displayName,
-        String name,
-        String updateTime,
-        String value) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("value") String value) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.name = name;

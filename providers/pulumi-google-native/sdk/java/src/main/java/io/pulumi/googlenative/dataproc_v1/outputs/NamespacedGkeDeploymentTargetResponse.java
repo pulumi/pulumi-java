@@ -20,10 +20,10 @@ public final class NamespacedGkeDeploymentTargetResponse {
      */
     private final String targetGkeCluster;
 
-    @OutputCustomType.Constructor({"clusterNamespace","targetGkeCluster"})
+    @OutputCustomType.Constructor
     private NamespacedGkeDeploymentTargetResponse(
-        String clusterNamespace,
-        String targetGkeCluster) {
+        @OutputCustomType.Parameter("clusterNamespace") String clusterNamespace,
+        @OutputCustomType.Parameter("targetGkeCluster") String targetGkeCluster) {
         this.clusterNamespace = clusterNamespace;
         this.targetGkeCluster = targetGkeCluster;
     }

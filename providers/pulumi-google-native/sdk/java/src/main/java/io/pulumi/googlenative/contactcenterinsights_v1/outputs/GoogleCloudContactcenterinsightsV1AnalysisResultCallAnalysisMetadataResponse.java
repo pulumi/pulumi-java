@@ -45,14 +45,14 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments;
 
-    @OutputCustomType.Constructor({"annotations","entities","intents","issueModelResult","phraseMatchers","sentiments"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse(
-        List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations,
-        Map<String,String> entities,
-        Map<String,String> intents,
-        GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
-        Map<String,String> phraseMatchers,
-        List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
+        @OutputCustomType.Parameter("annotations") List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations,
+        @OutputCustomType.Parameter("entities") Map<String,String> entities,
+        @OutputCustomType.Parameter("intents") Map<String,String> intents,
+        @OutputCustomType.Parameter("issueModelResult") GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult,
+        @OutputCustomType.Parameter("phraseMatchers") Map<String,String> phraseMatchers,
+        @OutputCustomType.Parameter("sentiments") List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
         this.annotations = annotations;
         this.entities = entities;
         this.intents = intents;

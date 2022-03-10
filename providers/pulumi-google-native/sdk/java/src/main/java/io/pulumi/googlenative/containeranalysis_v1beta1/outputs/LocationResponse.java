@@ -26,11 +26,11 @@ public final class LocationResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor({"cpeUri","path","version"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        String cpeUri,
-        String path,
-        VersionResponse version) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("version") VersionResponse version) {
         this.cpeUri = cpeUri;
         this.path = path;
         this.version = version;

@@ -95,23 +95,23 @@ public final class GetStepResult {
      */
     private final ToolExecutionStepResponse toolExecutionStep;
 
-    @OutputCustomType.Constructor({"completionTime","creationTime","description","deviceUsageDuration","dimensionValue","hasImages","labels","multiStep","name","outcome","runDuration","state","stepId","testExecutionStep","toolExecutionStep"})
+    @OutputCustomType.Constructor
     private GetStepResult(
-        TimestampResponse completionTime,
-        TimestampResponse creationTime,
-        String description,
-        DurationResponse deviceUsageDuration,
-        List<StepDimensionValueEntryResponse> dimensionValue,
-        Boolean hasImages,
-        List<StepLabelsEntryResponse> labels,
-        MultiStepResponse multiStep,
-        String name,
-        OutcomeResponse outcome,
-        DurationResponse runDuration,
-        String state,
-        String stepId,
-        TestExecutionStepResponse testExecutionStep,
-        ToolExecutionStepResponse toolExecutionStep) {
+        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("deviceUsageDuration") DurationResponse deviceUsageDuration,
+        @OutputCustomType.Parameter("dimensionValue") List<StepDimensionValueEntryResponse> dimensionValue,
+        @OutputCustomType.Parameter("hasImages") Boolean hasImages,
+        @OutputCustomType.Parameter("labels") List<StepLabelsEntryResponse> labels,
+        @OutputCustomType.Parameter("multiStep") MultiStepResponse multiStep,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
+        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stepId") String stepId,
+        @OutputCustomType.Parameter("testExecutionStep") TestExecutionStepResponse testExecutionStep,
+        @OutputCustomType.Parameter("toolExecutionStep") ToolExecutionStepResponse toolExecutionStep) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.description = description;

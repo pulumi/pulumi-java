@@ -15,8 +15,8 @@ public final class PlacementPolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private PlacementPolicyResponse(String type) {
+    @OutputCustomType.Constructor
+    private PlacementPolicyResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

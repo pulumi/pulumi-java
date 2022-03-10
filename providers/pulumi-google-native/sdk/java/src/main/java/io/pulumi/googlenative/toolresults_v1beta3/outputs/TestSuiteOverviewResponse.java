@@ -53,16 +53,16 @@ public final class TestSuiteOverviewResponse {
      */
     private final FileReferenceResponse xmlSource;
 
-    @OutputCustomType.Constructor({"elapsedTime","errorCount","failureCount","flakyCount","name","skippedCount","totalCount","xmlSource"})
+    @OutputCustomType.Constructor
     private TestSuiteOverviewResponse(
-        DurationResponse elapsedTime,
-        Integer errorCount,
-        Integer failureCount,
-        Integer flakyCount,
-        String name,
-        Integer skippedCount,
-        Integer totalCount,
-        FileReferenceResponse xmlSource) {
+        @OutputCustomType.Parameter("elapsedTime") DurationResponse elapsedTime,
+        @OutputCustomType.Parameter("errorCount") Integer errorCount,
+        @OutputCustomType.Parameter("failureCount") Integer failureCount,
+        @OutputCustomType.Parameter("flakyCount") Integer flakyCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("skippedCount") Integer skippedCount,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount,
+        @OutputCustomType.Parameter("xmlSource") FileReferenceResponse xmlSource) {
         this.elapsedTime = elapsedTime;
         this.errorCount = errorCount;
         this.failureCount = failureCount;

@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
      */
     private final String processedCount;
 
-    @OutputCustomType.Constructor({"abortedCount","pendingCount","processedCount"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HybridInspectStatisticsResponse(
-        String abortedCount,
-        String pendingCount,
-        String processedCount) {
+        @OutputCustomType.Parameter("abortedCount") String abortedCount,
+        @OutputCustomType.Parameter("pendingCount") String pendingCount,
+        @OutputCustomType.Parameter("processedCount") String processedCount) {
         this.abortedCount = abortedCount;
         this.pendingCount = pendingCount;
         this.processedCount = processedCount;

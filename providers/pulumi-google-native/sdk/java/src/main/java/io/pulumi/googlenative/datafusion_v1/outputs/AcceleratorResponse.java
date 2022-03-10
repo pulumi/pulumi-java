@@ -20,10 +20,10 @@ public final class AcceleratorResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"acceleratorType","state"})
+    @OutputCustomType.Constructor
     private AcceleratorResponse(
-        String acceleratorType,
-        String state) {
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("state") String state) {
         this.acceleratorType = acceleratorType;
         this.state = state;
     }

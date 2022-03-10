@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemRespon
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","image","info","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectItemResponse(
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("info") GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.image = image;
         this.info = info;

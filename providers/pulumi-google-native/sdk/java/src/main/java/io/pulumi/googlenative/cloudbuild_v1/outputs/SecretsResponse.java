@@ -22,10 +22,10 @@ public final class SecretsResponse {
      */
     private final List<SecretManagerSecretResponse> secretManager;
 
-    @OutputCustomType.Constructor({"inline","secretManager"})
+    @OutputCustomType.Constructor
     private SecretsResponse(
-        List<InlineSecretResponse> inline,
-        List<SecretManagerSecretResponse> secretManager) {
+        @OutputCustomType.Parameter("inline") List<InlineSecretResponse> inline,
+        @OutputCustomType.Parameter("secretManager") List<SecretManagerSecretResponse> secretManager) {
         this.inline = inline;
         this.secretManager = secretManager;
     }

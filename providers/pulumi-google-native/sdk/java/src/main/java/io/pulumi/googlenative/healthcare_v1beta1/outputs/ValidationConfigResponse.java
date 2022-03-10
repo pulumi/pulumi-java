@@ -37,13 +37,13 @@ public final class ValidationConfigResponse {
      */
     private final List<String> enabledImplementationGuides;
 
-    @OutputCustomType.Constructor({"disableFhirpathValidation","disableProfileValidation","disableReferenceTypeValidation","disableRequiredFieldValidation","enabledImplementationGuides"})
+    @OutputCustomType.Constructor
     private ValidationConfigResponse(
-        Boolean disableFhirpathValidation,
-        Boolean disableProfileValidation,
-        Boolean disableReferenceTypeValidation,
-        Boolean disableRequiredFieldValidation,
-        List<String> enabledImplementationGuides) {
+        @OutputCustomType.Parameter("disableFhirpathValidation") Boolean disableFhirpathValidation,
+        @OutputCustomType.Parameter("disableProfileValidation") Boolean disableProfileValidation,
+        @OutputCustomType.Parameter("disableReferenceTypeValidation") Boolean disableReferenceTypeValidation,
+        @OutputCustomType.Parameter("disableRequiredFieldValidation") Boolean disableRequiredFieldValidation,
+        @OutputCustomType.Parameter("enabledImplementationGuides") List<String> enabledImplementationGuides) {
         this.disableFhirpathValidation = disableFhirpathValidation;
         this.disableProfileValidation = disableProfileValidation;
         this.disableReferenceTypeValidation = disableReferenceTypeValidation;

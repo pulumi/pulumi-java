@@ -20,10 +20,10 @@ public final class NormalizedVertexResponse {
      */
     private final Double y;
 
-    @OutputCustomType.Constructor({"x","y"})
+    @OutputCustomType.Constructor
     private NormalizedVertexResponse(
-        Double x,
-        Double y) {
+        @OutputCustomType.Parameter("x") Double x,
+        @OutputCustomType.Parameter("y") Double y) {
         this.x = x;
         this.y = y;
     }

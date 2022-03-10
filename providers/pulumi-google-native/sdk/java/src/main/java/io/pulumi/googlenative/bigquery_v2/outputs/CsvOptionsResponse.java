@@ -46,15 +46,15 @@ public final class CsvOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor({"allowJaggedRows","allowQuotedNewlines","encoding","fieldDelimiter","nullMarker","quote","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private CsvOptionsResponse(
-        Boolean allowJaggedRows,
-        Boolean allowQuotedNewlines,
-        String encoding,
-        String fieldDelimiter,
-        String nullMarker,
-        String quote,
-        String skipLeadingRows) {
+        @OutputCustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
+        @OutputCustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @OutputCustomType.Parameter("nullMarker") String nullMarker,
+        @OutputCustomType.Parameter("quote") String quote,
+        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;

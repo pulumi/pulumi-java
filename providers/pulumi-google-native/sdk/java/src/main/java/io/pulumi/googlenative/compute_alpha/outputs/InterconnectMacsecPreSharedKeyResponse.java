@@ -20,10 +20,10 @@ public final class InterconnectMacsecPreSharedKeyResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"name","startTime"})
+    @OutputCustomType.Constructor
     private InterconnectMacsecPreSharedKeyResponse(
-        String name,
-        String startTime) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.name = name;
         this.startTime = startTime;
     }

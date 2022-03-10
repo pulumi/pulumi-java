@@ -92,24 +92,24 @@ public final class GetRegionTargetHttpsProxyResult {
      */
     private final String urlMap;
 
-    @OutputCustomType.Constructor({"authorizationPolicy","certificateMap","creationTimestamp","description","fingerprint","httpFilters","kind","name","proxyBind","quicOverride","region","selfLink","serverTlsPolicy","sslCertificates","sslPolicy","urlMap"})
+    @OutputCustomType.Constructor
     private GetRegionTargetHttpsProxyResult(
-        String authorizationPolicy,
-        String certificateMap,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        List<String> httpFilters,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String quicOverride,
-        String region,
-        String selfLink,
-        String serverTlsPolicy,
-        List<String> sslCertificates,
-        String sslPolicy,
-        String urlMap) {
+        @OutputCustomType.Parameter("authorizationPolicy") String authorizationPolicy,
+        @OutputCustomType.Parameter("certificateMap") String certificateMap,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("httpFilters") List<String> httpFilters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("quicOverride") String quicOverride,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverTlsPolicy") String serverTlsPolicy,
+        @OutputCustomType.Parameter("sslCertificates") List<String> sslCertificates,
+        @OutputCustomType.Parameter("sslPolicy") String sslPolicy,
+        @OutputCustomType.Parameter("urlMap") String urlMap) {
         this.authorizationPolicy = authorizationPolicy;
         this.certificateMap = certificateMap;
         this.creationTimestamp = creationTimestamp;

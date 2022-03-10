@@ -97,25 +97,25 @@ public final class RouterNatResponse {
      */
     private final Integer udpIdleTimeoutSec;
 
-    @OutputCustomType.Constructor({"drainNatIps","enableDynamicPortAllocation","enableEndpointIndependentMapping","icmpIdleTimeoutSec","logConfig","maxPortsPerVm","minPortsPerVm","name","natIpAllocateOption","natIps","rules","sourceSubnetworkIpRangesToNat","subnetworks","tcpEstablishedIdleTimeoutSec","tcpTimeWaitTimeoutSec","tcpTransitoryIdleTimeoutSec","udpIdleTimeoutSec"})
+    @OutputCustomType.Constructor
     private RouterNatResponse(
-        List<String> drainNatIps,
-        Boolean enableDynamicPortAllocation,
-        Boolean enableEndpointIndependentMapping,
-        Integer icmpIdleTimeoutSec,
-        RouterNatLogConfigResponse logConfig,
-        Integer maxPortsPerVm,
-        Integer minPortsPerVm,
-        String name,
-        String natIpAllocateOption,
-        List<String> natIps,
-        List<RouterNatRuleResponse> rules,
-        String sourceSubnetworkIpRangesToNat,
-        List<RouterNatSubnetworkToNatResponse> subnetworks,
-        Integer tcpEstablishedIdleTimeoutSec,
-        Integer tcpTimeWaitTimeoutSec,
-        Integer tcpTransitoryIdleTimeoutSec,
-        Integer udpIdleTimeoutSec) {
+        @OutputCustomType.Parameter("drainNatIps") List<String> drainNatIps,
+        @OutputCustomType.Parameter("enableDynamicPortAllocation") Boolean enableDynamicPortAllocation,
+        @OutputCustomType.Parameter("enableEndpointIndependentMapping") Boolean enableEndpointIndependentMapping,
+        @OutputCustomType.Parameter("icmpIdleTimeoutSec") Integer icmpIdleTimeoutSec,
+        @OutputCustomType.Parameter("logConfig") RouterNatLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("maxPortsPerVm") Integer maxPortsPerVm,
+        @OutputCustomType.Parameter("minPortsPerVm") Integer minPortsPerVm,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natIpAllocateOption") String natIpAllocateOption,
+        @OutputCustomType.Parameter("natIps") List<String> natIps,
+        @OutputCustomType.Parameter("rules") List<RouterNatRuleResponse> rules,
+        @OutputCustomType.Parameter("sourceSubnetworkIpRangesToNat") String sourceSubnetworkIpRangesToNat,
+        @OutputCustomType.Parameter("subnetworks") List<RouterNatSubnetworkToNatResponse> subnetworks,
+        @OutputCustomType.Parameter("tcpEstablishedIdleTimeoutSec") Integer tcpEstablishedIdleTimeoutSec,
+        @OutputCustomType.Parameter("tcpTimeWaitTimeoutSec") Integer tcpTimeWaitTimeoutSec,
+        @OutputCustomType.Parameter("tcpTransitoryIdleTimeoutSec") Integer tcpTransitoryIdleTimeoutSec,
+        @OutputCustomType.Parameter("udpIdleTimeoutSec") Integer udpIdleTimeoutSec) {
         this.drainNatIps = drainNatIps;
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;

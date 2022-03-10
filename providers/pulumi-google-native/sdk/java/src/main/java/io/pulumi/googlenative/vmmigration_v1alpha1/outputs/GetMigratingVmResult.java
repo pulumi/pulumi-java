@@ -104,25 +104,25 @@ public final class GetMigratingVmResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"computeEngineTargetDefaults","createTime","currentSyncInfo","description","displayName","error","group","labels","lastSync","name","policy","recentCloneJobs","recentCutoverJobs","sourceVmId","state","stateTime","updateTime"})
+    @OutputCustomType.Constructor
     private GetMigratingVmResult(
-        ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
-        String createTime,
-        ReplicationCycleResponse currentSyncInfo,
-        String description,
-        String displayName,
-        StatusResponse error,
-        String group,
-        Map<String,String> labels,
-        ReplicationSyncResponse lastSync,
-        String name,
-        SchedulePolicyResponse policy,
-        List<CloneJobResponse> recentCloneJobs,
-        List<CutoverJobResponse> recentCutoverJobs,
-        String sourceVmId,
-        String state,
-        String stateTime,
-        String updateTime) {
+        @OutputCustomType.Parameter("computeEngineTargetDefaults") ComputeEngineTargetDefaultsResponse computeEngineTargetDefaults,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("currentSyncInfo") ReplicationCycleResponse currentSyncInfo,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastSync") ReplicationSyncResponse lastSync,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") SchedulePolicyResponse policy,
+        @OutputCustomType.Parameter("recentCloneJobs") List<CloneJobResponse> recentCloneJobs,
+        @OutputCustomType.Parameter("recentCutoverJobs") List<CutoverJobResponse> recentCutoverJobs,
+        @OutputCustomType.Parameter("sourceVmId") String sourceVmId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateTime") String stateTime,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.computeEngineTargetDefaults = computeEngineTargetDefaults;
         this.createTime = createTime;
         this.currentSyncInfo = currentSyncInfo;

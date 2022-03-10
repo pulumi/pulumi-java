@@ -76,20 +76,20 @@ public final class GceClusterConfigResponse {
      */
     private final String zoneUri;
 
-    @OutputCustomType.Constructor({"internalIpOnly","metadata","networkUri","nodeGroupAffinity","privateIpv6GoogleAccess","reservationAffinity","serviceAccount","serviceAccountScopes","shieldedInstanceConfig","subnetworkUri","tags","zoneUri"})
+    @OutputCustomType.Constructor
     private GceClusterConfigResponse(
-        Boolean internalIpOnly,
-        Map<String,String> metadata,
-        String networkUri,
-        NodeGroupAffinityResponse nodeGroupAffinity,
-        String privateIpv6GoogleAccess,
-        ReservationAffinityResponse reservationAffinity,
-        String serviceAccount,
-        List<String> serviceAccountScopes,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String subnetworkUri,
-        List<String> tags,
-        String zoneUri) {
+        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("nodeGroupAffinity") NodeGroupAffinityResponse nodeGroupAffinity,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("zoneUri") String zoneUri) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.networkUri = networkUri;

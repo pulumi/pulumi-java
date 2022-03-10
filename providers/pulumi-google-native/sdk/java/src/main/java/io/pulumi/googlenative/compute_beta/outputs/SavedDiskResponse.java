@@ -30,12 +30,12 @@ public final class SavedDiskResponse {
      */
     private final String storageBytesStatus;
 
-    @OutputCustomType.Constructor({"kind","sourceDisk","storageBytes","storageBytesStatus"})
+    @OutputCustomType.Constructor
     private SavedDiskResponse(
-        String kind,
-        String sourceDisk,
-        String storageBytes,
-        String storageBytesStatus) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes,
+        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus) {
         this.kind = kind;
         this.sourceDisk = sourceDisk;
         this.storageBytes = storageBytes;

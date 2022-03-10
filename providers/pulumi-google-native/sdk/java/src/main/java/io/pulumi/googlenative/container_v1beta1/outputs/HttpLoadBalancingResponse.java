@@ -15,8 +15,8 @@ public final class HttpLoadBalancingResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private HttpLoadBalancingResponse(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private HttpLoadBalancingResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

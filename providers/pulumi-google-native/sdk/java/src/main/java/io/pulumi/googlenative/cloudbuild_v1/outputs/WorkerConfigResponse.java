@@ -20,10 +20,10 @@ public final class WorkerConfigResponse {
      */
     private final String machineType;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
     }

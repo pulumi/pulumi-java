@@ -51,15 +51,15 @@ public final class TestSetupResponse {
      */
     private final String networkProfile;
 
-    @OutputCustomType.Constructor({"account","additionalApks","directoriesToPull","dontAutograntPermissions","environmentVariables","filesToPush","networkProfile"})
+    @OutputCustomType.Constructor
     private TestSetupResponse(
-        AccountResponse account,
-        List<ApkResponse> additionalApks,
-        List<String> directoriesToPull,
-        Boolean dontAutograntPermissions,
-        List<EnvironmentVariableResponse> environmentVariables,
-        List<DeviceFileResponse> filesToPush,
-        String networkProfile) {
+        @OutputCustomType.Parameter("account") AccountResponse account,
+        @OutputCustomType.Parameter("additionalApks") List<ApkResponse> additionalApks,
+        @OutputCustomType.Parameter("directoriesToPull") List<String> directoriesToPull,
+        @OutputCustomType.Parameter("dontAutograntPermissions") Boolean dontAutograntPermissions,
+        @OutputCustomType.Parameter("environmentVariables") List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("filesToPush") List<DeviceFileResponse> filesToPush,
+        @OutputCustomType.Parameter("networkProfile") String networkProfile) {
         this.account = account;
         this.additionalApks = additionalApks;
         this.directoriesToPull = directoriesToPull;

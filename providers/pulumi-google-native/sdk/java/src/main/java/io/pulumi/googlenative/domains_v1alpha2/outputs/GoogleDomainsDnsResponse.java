@@ -27,11 +27,11 @@ public final class GoogleDomainsDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor({"dsRecords","dsState","nameServers"})
+    @OutputCustomType.Constructor
     private GoogleDomainsDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        String dsState,
-        List<String> nameServers) {
+        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @OutputCustomType.Parameter("dsState") String dsState,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.dsState = dsState;
         this.nameServers = nameServers;

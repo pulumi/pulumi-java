@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
      */
     private final Boolean wildcardMatch;
 
-    @OutputCustomType.Constructor({"value","wildcardMatch"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1TlsInfoCommonNameResponse(
-        String value,
-        Boolean wildcardMatch) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("wildcardMatch") Boolean wildcardMatch) {
         this.value = value;
         this.wildcardMatch = wildcardMatch;
     }

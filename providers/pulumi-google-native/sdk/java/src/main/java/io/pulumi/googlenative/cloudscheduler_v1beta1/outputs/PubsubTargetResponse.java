@@ -26,11 +26,11 @@ public final class PubsubTargetResponse {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"attributes","data","topicName"})
+    @OutputCustomType.Constructor
     private PubsubTargetResponse(
-        Map<String,String> attributes,
-        String data,
-        String topicName) {
+        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;

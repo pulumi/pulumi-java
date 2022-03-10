@@ -31,12 +31,12 @@ public final class SparkRBatchResponse {
      */
     private final String mainRFileUri;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","mainRFileUri"})
+    @OutputCustomType.Constructor
     private SparkRBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        String mainRFileUri) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

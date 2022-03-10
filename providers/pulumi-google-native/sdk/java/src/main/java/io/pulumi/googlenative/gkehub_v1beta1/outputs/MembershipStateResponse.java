@@ -25,11 +25,11 @@ public final class MembershipStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"code","description","updateTime"})
+    @OutputCustomType.Constructor
     private MembershipStateResponse(
-        String code,
-        String description,
-        String updateTime) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;

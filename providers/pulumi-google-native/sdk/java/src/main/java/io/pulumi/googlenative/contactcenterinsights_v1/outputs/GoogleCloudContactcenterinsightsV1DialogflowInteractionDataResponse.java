@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      */
     private final String dialogflowIntentId;
 
-    @OutputCustomType.Constructor({"confidence","dialogflowIntentId"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(
-        Double confidence,
-        String dialogflowIntentId) {
+        @OutputCustomType.Parameter("confidence") Double confidence,
+        @OutputCustomType.Parameter("dialogflowIntentId") String dialogflowIntentId) {
         this.confidence = confidence;
         this.dialogflowIntentId = dialogflowIntentId;
     }

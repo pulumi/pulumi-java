@@ -15,8 +15,8 @@ public final class CloudEndpointsResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"service"})
-    private CloudEndpointsResponse(String service) {
+    @OutputCustomType.Constructor
+    private CloudEndpointsResponse(@OutputCustomType.Parameter("service") String service) {
         this.service = service;
     }
 

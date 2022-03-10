@@ -15,8 +15,8 @@ public final class AppEngineResponse {
      */
     private final String moduleId;
 
-    @OutputCustomType.Constructor({"moduleId"})
-    private AppEngineResponse(String moduleId) {
+    @OutputCustomType.Constructor
+    private AppEngineResponse(@OutputCustomType.Parameter("moduleId") String moduleId) {
         this.moduleId = moduleId;
     }
 

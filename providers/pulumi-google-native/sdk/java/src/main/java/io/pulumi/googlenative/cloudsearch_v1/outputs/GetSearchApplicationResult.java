@@ -73,19 +73,19 @@ public final class GetSearchApplicationResult {
      */
     private final List<SourceConfigResponse> sourceConfig;
 
-    @OutputCustomType.Constructor({"dataSourceRestrictions","defaultFacetOptions","defaultSortOptions","displayName","enableAuditLog","name","operationIds","queryInterpretationConfig","returnResultThumbnailUrls","scoringConfig","sourceConfig"})
+    @OutputCustomType.Constructor
     private GetSearchApplicationResult(
-        List<DataSourceRestrictionResponse> dataSourceRestrictions,
-        List<FacetOptionsResponse> defaultFacetOptions,
-        SortOptionsResponse defaultSortOptions,
-        String displayName,
-        Boolean enableAuditLog,
-        String name,
-        List<String> operationIds,
-        QueryInterpretationConfigResponse queryInterpretationConfig,
-        Boolean returnResultThumbnailUrls,
-        ScoringConfigResponse scoringConfig,
-        List<SourceConfigResponse> sourceConfig) {
+        @OutputCustomType.Parameter("dataSourceRestrictions") List<DataSourceRestrictionResponse> dataSourceRestrictions,
+        @OutputCustomType.Parameter("defaultFacetOptions") List<FacetOptionsResponse> defaultFacetOptions,
+        @OutputCustomType.Parameter("defaultSortOptions") SortOptionsResponse defaultSortOptions,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableAuditLog") Boolean enableAuditLog,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
+        @OutputCustomType.Parameter("queryInterpretationConfig") QueryInterpretationConfigResponse queryInterpretationConfig,
+        @OutputCustomType.Parameter("returnResultThumbnailUrls") Boolean returnResultThumbnailUrls,
+        @OutputCustomType.Parameter("scoringConfig") ScoringConfigResponse scoringConfig,
+        @OutputCustomType.Parameter("sourceConfig") List<SourceConfigResponse> sourceConfig) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         this.defaultFacetOptions = defaultFacetOptions;
         this.defaultSortOptions = defaultSortOptions;

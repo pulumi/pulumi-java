@@ -30,12 +30,12 @@ public final class ToolResultsStepResponse {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"executionId","historyId","project","stepId"})
+    @OutputCustomType.Constructor
     private ToolResultsStepResponse(
-        String executionId,
-        String historyId,
-        String project,
-        String stepId) {
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.executionId = executionId;
         this.historyId = historyId;
         this.project = project;

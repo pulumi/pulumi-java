@@ -20,10 +20,10 @@ public final class GaugeViewResponse {
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor({"lowerBound","upperBound"})
+    @OutputCustomType.Constructor
     private GaugeViewResponse(
-        Double lowerBound,
-        Double upperBound) {
+        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
+        @OutputCustomType.Parameter("upperBound") Double upperBound) {
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
     }

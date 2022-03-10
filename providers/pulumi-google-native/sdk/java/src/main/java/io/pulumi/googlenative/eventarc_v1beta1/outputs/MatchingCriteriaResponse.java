@@ -20,10 +20,10 @@ public final class MatchingCriteriaResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"attribute","value"})
+    @OutputCustomType.Constructor
     private MatchingCriteriaResponse(
-        String attribute,
-        String value) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("value") String value) {
         this.attribute = attribute;
         this.value = value;
     }

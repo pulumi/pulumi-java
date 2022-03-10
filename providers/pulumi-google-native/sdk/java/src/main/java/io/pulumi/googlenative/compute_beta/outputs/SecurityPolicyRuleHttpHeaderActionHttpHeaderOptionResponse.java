@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse {
      */
     private final String headerValue;
 
-    @OutputCustomType.Constructor({"headerName","headerValue"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse(
-        String headerName,
-        String headerValue) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }

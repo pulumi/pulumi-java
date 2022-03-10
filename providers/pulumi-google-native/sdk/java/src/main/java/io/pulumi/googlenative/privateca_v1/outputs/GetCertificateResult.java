@@ -85,22 +85,22 @@ public final class GetCertificateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"certificateDescription","certificateTemplate","config","createTime","issuerCertificateAuthority","labels","lifetime","name","pemCertificate","pemCertificateChain","pemCsr","revocationDetails","subjectMode","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        CertificateDescriptionResponse certificateDescription,
-        String certificateTemplate,
-        CertificateConfigResponse config,
-        String createTime,
-        String issuerCertificateAuthority,
-        Map<String,String> labels,
-        String lifetime,
-        String name,
-        String pemCertificate,
-        List<String> pemCertificateChain,
-        String pemCsr,
-        RevocationDetailsResponse revocationDetails,
-        String subjectMode,
-        String updateTime) {
+        @OutputCustomType.Parameter("certificateDescription") CertificateDescriptionResponse certificateDescription,
+        @OutputCustomType.Parameter("certificateTemplate") String certificateTemplate,
+        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("issuerCertificateAuthority") String issuerCertificateAuthority,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pemCertificate") String pemCertificate,
+        @OutputCustomType.Parameter("pemCertificateChain") List<String> pemCertificateChain,
+        @OutputCustomType.Parameter("pemCsr") String pemCsr,
+        @OutputCustomType.Parameter("revocationDetails") RevocationDetailsResponse revocationDetails,
+        @OutputCustomType.Parameter("subjectMode") String subjectMode,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.certificateDescription = certificateDescription;
         this.certificateTemplate = certificateTemplate;
         this.config = config;

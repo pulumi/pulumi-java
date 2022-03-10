@@ -16,8 +16,8 @@ public final class GoogleCloudDatacatalogV1SchemaResponse {
      */
     private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private GoogleCloudDatacatalogV1SchemaResponse(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1SchemaResponse(@OutputCustomType.Parameter("columns") List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns) {
         this.columns = columns;
     }
 

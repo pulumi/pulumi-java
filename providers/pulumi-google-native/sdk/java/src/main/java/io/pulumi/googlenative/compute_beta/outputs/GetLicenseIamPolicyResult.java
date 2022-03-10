@@ -40,13 +40,13 @@ public final class GetLicenseIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","rules","version"})
+    @OutputCustomType.Constructor
     private GetLicenseIamPolicyResult(
-        List<AuditConfigResponse> auditConfigs,
-        List<BindingResponse> bindings,
-        String etag,
-        List<RuleResponse> rules,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("rules") List<RuleResponse> rules,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;

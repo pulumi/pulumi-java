@@ -55,16 +55,16 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      */
     private final String stockState;
 
-    @OutputCustomType.Constructor({"availableQuantity","canonicalProductUri","costs","currencyCode","exactPrice","images","priceRange","stockState"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse(
-        String availableQuantity,
-        String canonicalProductUri,
-        Map<String,String> costs,
-        String currencyCode,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice,
-        List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
-        String stockState) {
+        @OutputCustomType.Parameter("availableQuantity") String availableQuantity,
+        @OutputCustomType.Parameter("canonicalProductUri") String canonicalProductUri,
+        @OutputCustomType.Parameter("costs") Map<String,String> costs,
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("exactPrice") GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice,
+        @OutputCustomType.Parameter("images") List<GoogleCloudRecommendationengineV1beta1ImageResponse> images,
+        @OutputCustomType.Parameter("priceRange") GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange,
+        @OutputCustomType.Parameter("stockState") String stockState) {
         this.availableQuantity = availableQuantity;
         this.canonicalProductUri = canonicalProductUri;
         this.costs = costs;

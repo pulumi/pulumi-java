@@ -90,24 +90,24 @@ public final class GetApiProductResult {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"apiResources","approvalType","attributes","createdAt","description","displayName","environments","graphqlOperationGroup","lastModifiedAt","name","operationGroup","proxies","quota","quotaInterval","quotaTimeUnit","scopes"})
+    @OutputCustomType.Constructor
     private GetApiProductResult(
-        List<String> apiResources,
-        String approvalType,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String createdAt,
-        String description,
-        String displayName,
-        List<String> environments,
-        GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
-        String lastModifiedAt,
-        String name,
-        GoogleCloudApigeeV1OperationGroupResponse operationGroup,
-        List<String> proxies,
-        String quota,
-        String quotaInterval,
-        String quotaTimeUnit,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("apiResources") List<String> apiResources,
+        @OutputCustomType.Parameter("approvalType") String approvalType,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("environments") List<String> environments,
+        @OutputCustomType.Parameter("graphqlOperationGroup") GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationGroup") GoogleCloudApigeeV1OperationGroupResponse operationGroup,
+        @OutputCustomType.Parameter("proxies") List<String> proxies,
+        @OutputCustomType.Parameter("quota") String quota,
+        @OutputCustomType.Parameter("quotaInterval") String quotaInterval,
+        @OutputCustomType.Parameter("quotaTimeUnit") String quotaTimeUnit,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.apiResources = apiResources;
         this.approvalType = approvalType;
         this.attributes = attributes;

@@ -27,11 +27,11 @@ public final class TargetsPresentConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"missingTargets","status","updateTime"})
+    @OutputCustomType.Constructor
     private TargetsPresentConditionResponse(
-        List<String> missingTargets,
-        Boolean status,
-        String updateTime) {
+        @OutputCustomType.Parameter("missingTargets") List<String> missingTargets,
+        @OutputCustomType.Parameter("status") Boolean status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.missingTargets = missingTargets;
         this.status = status;
         this.updateTime = updateTime;

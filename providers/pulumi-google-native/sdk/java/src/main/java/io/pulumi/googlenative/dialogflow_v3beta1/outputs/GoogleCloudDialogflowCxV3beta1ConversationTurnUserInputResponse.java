@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      */
     private final Boolean isWebhookEnabled;
 
-    @OutputCustomType.Constructor({"enableSentimentAnalysis","injectedParameters","input","isWebhookEnabled"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse(
-        Boolean enableSentimentAnalysis,
-        Map<String,String> injectedParameters,
-        GoogleCloudDialogflowCxV3beta1QueryInputResponse input,
-        Boolean isWebhookEnabled) {
+        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis,
+        @OutputCustomType.Parameter("injectedParameters") Map<String,String> injectedParameters,
+        @OutputCustomType.Parameter("input") GoogleCloudDialogflowCxV3beta1QueryInputResponse input,
+        @OutputCustomType.Parameter("isWebhookEnabled") Boolean isWebhookEnabled) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         this.injectedParameters = injectedParameters;
         this.input = input;

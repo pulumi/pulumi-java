@@ -25,11 +25,11 @@ public final class InstanceReferenceResponse {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"name","project","region"})
+    @OutputCustomType.Constructor
     private InstanceReferenceResponse(
-        String name,
-        String project,
-        String region) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region) {
         this.name = name;
         this.project = project;
         this.region = region;

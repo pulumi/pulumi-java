@@ -96,24 +96,24 @@ public final class GetTransferConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"dataRefreshWindowDays","dataSourceId","datasetRegion","destinationDatasetId","disabled","displayName","emailPreferences","name","nextRunTime","notificationPubsubTopic","ownerInfo","params","schedule","scheduleOptions","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetTransferConfigResult(
-        Integer dataRefreshWindowDays,
-        String dataSourceId,
-        String datasetRegion,
-        String destinationDatasetId,
-        Boolean disabled,
-        String displayName,
-        EmailPreferencesResponse emailPreferences,
-        String name,
-        String nextRunTime,
-        String notificationPubsubTopic,
-        UserInfoResponse ownerInfo,
-        Map<String,String> params,
-        String schedule,
-        ScheduleOptionsResponse scheduleOptions,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("dataRefreshWindowDays") Integer dataRefreshWindowDays,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("datasetRegion") String datasetRegion,
+        @OutputCustomType.Parameter("destinationDatasetId") String destinationDatasetId,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("emailPreferences") EmailPreferencesResponse emailPreferences,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
+        @OutputCustomType.Parameter("notificationPubsubTopic") String notificationPubsubTopic,
+        @OutputCustomType.Parameter("ownerInfo") UserInfoResponse ownerInfo,
+        @OutputCustomType.Parameter("params") Map<String,String> params,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("scheduleOptions") ScheduleOptionsResponse scheduleOptions,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = dataSourceId;
         this.datasetRegion = datasetRegion;

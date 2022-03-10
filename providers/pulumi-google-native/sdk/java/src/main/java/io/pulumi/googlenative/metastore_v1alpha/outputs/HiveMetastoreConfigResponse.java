@@ -37,13 +37,13 @@ public final class HiveMetastoreConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"auxiliaryVersions","configOverrides","endpointProtocol","kerberosConfig","version"})
+    @OutputCustomType.Constructor
     private HiveMetastoreConfigResponse(
-        Map<String,String> auxiliaryVersions,
-        Map<String,String> configOverrides,
-        String endpointProtocol,
-        KerberosConfigResponse kerberosConfig,
-        String version) {
+        @OutputCustomType.Parameter("auxiliaryVersions") Map<String,String> auxiliaryVersions,
+        @OutputCustomType.Parameter("configOverrides") Map<String,String> configOverrides,
+        @OutputCustomType.Parameter("endpointProtocol") String endpointProtocol,
+        @OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig,
+        @OutputCustomType.Parameter("version") String version) {
         this.auxiliaryVersions = auxiliaryVersions;
         this.configOverrides = configOverrides;
         this.endpointProtocol = endpointProtocol;

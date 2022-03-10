@@ -20,10 +20,10 @@ public final class SearchParameterResponse {
      */
     private final String parameter;
 
-    @OutputCustomType.Constructor({"canonicalUrl","parameter"})
+    @OutputCustomType.Constructor
     private SearchParameterResponse(
-        String canonicalUrl,
-        String parameter) {
+        @OutputCustomType.Parameter("canonicalUrl") String canonicalUrl,
+        @OutputCustomType.Parameter("parameter") String parameter) {
         this.canonicalUrl = canonicalUrl;
         this.parameter = parameter;
     }

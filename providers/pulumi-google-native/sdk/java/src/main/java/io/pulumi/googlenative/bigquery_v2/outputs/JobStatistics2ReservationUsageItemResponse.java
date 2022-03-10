@@ -20,10 +20,10 @@ public final class JobStatistics2ReservationUsageItemResponse {
      */
     private final String slotMs;
 
-    @OutputCustomType.Constructor({"name","slotMs"})
+    @OutputCustomType.Constructor
     private JobStatistics2ReservationUsageItemResponse(
-        String name,
-        String slotMs) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("slotMs") String slotMs) {
         this.name = name;
         this.slotMs = slotMs;
     }

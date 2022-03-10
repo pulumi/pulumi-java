@@ -21,10 +21,10 @@ public final class AsyncOptionsResponse {
      */
     private final PollingOptionsResponse pollingOptions;
 
-    @OutputCustomType.Constructor({"methodMatch","pollingOptions"})
+    @OutputCustomType.Constructor
     private AsyncOptionsResponse(
-        String methodMatch,
-        PollingOptionsResponse pollingOptions) {
+        @OutputCustomType.Parameter("methodMatch") String methodMatch,
+        @OutputCustomType.Parameter("pollingOptions") PollingOptionsResponse pollingOptions) {
         this.methodMatch = methodMatch;
         this.pollingOptions = pollingOptions;
     }

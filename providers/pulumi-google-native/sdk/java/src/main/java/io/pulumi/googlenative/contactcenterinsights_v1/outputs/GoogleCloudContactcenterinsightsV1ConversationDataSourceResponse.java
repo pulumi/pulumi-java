@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      */
     private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
-    @OutputCustomType.Constructor({"dialogflowSource","gcsSource"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(
-        GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
-        GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
+        @OutputCustomType.Parameter("dialogflowSource") GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
+        @OutputCustomType.Parameter("gcsSource") GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
         this.dialogflowSource = dialogflowSource;
         this.gcsSource = gcsSource;
     }

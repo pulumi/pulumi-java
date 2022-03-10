@@ -15,8 +15,8 @@ public final class ConfigFileResponse {
      */
     private final String content;
 
-    @OutputCustomType.Constructor({"content"})
-    private ConfigFileResponse(String content) {
+    @OutputCustomType.Constructor
+    private ConfigFileResponse(@OutputCustomType.Parameter("content") String content) {
         this.content = content;
     }
 

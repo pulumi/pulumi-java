@@ -61,19 +61,19 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categoricalValueSpec","childParameterSpecs","discreteValueSpec","doubleValueSpec","integerValueSpec","parameter","parentCategoricalValues","parentDiscreteValues","parentIntValues","scaleType","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_StudyConfig_ParameterSpecResponse(
-        GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec,
-        List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs,
-        GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec,
-        GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec,
-        GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec,
-        String parameter,
-        GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues,
-        GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues,
-        GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues,
-        String scaleType,
-        String type) {
+        @OutputCustomType.Parameter("categoricalValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec,
+        @OutputCustomType.Parameter("childParameterSpecs") List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs,
+        @OutputCustomType.Parameter("discreteValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec,
+        @OutputCustomType.Parameter("doubleValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec,
+        @OutputCustomType.Parameter("integerValueSpec") GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec,
+        @OutputCustomType.Parameter("parameter") String parameter,
+        @OutputCustomType.Parameter("parentCategoricalValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues,
+        @OutputCustomType.Parameter("parentDiscreteValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues,
+        @OutputCustomType.Parameter("parentIntValues") GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("type") String type) {
         this.categoricalValueSpec = categoricalValueSpec;
         this.childParameterSpecs = childParameterSpecs;
         this.discreteValueSpec = discreteValueSpec;

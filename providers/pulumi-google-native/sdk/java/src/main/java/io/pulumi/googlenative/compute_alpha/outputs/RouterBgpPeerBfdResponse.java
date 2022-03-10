@@ -46,15 +46,15 @@ public final class RouterBgpPeerBfdResponse {
      */
     private final Integer slowTimerInterval;
 
-    @OutputCustomType.Constructor({"minReceiveInterval","minTransmitInterval","mode","multiplier","packetMode","sessionInitializationMode","slowTimerInterval"})
+    @OutputCustomType.Constructor
     private RouterBgpPeerBfdResponse(
-        Integer minReceiveInterval,
-        Integer minTransmitInterval,
-        String mode,
-        Integer multiplier,
-        String packetMode,
-        String sessionInitializationMode,
-        Integer slowTimerInterval) {
+        @OutputCustomType.Parameter("minReceiveInterval") Integer minReceiveInterval,
+        @OutputCustomType.Parameter("minTransmitInterval") Integer minTransmitInterval,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("multiplier") Integer multiplier,
+        @OutputCustomType.Parameter("packetMode") String packetMode,
+        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode,
+        @OutputCustomType.Parameter("slowTimerInterval") Integer slowTimerInterval) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.mode = mode;

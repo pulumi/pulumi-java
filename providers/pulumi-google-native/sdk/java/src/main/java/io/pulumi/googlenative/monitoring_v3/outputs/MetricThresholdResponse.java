@@ -54,16 +54,16 @@ public final class MetricThresholdResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"aggregations","comparison","denominatorAggregations","denominatorFilter","duration","filter","thresholdValue","trigger"})
+    @OutputCustomType.Constructor
     private MetricThresholdResponse(
-        List<AggregationResponse> aggregations,
-        String comparison,
-        List<AggregationResponse> denominatorAggregations,
-        String denominatorFilter,
-        String duration,
-        String filter,
-        Double thresholdValue,
-        TriggerResponse trigger) {
+        @OutputCustomType.Parameter("aggregations") List<AggregationResponse> aggregations,
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("denominatorAggregations") List<AggregationResponse> denominatorAggregations,
+        @OutputCustomType.Parameter("denominatorFilter") String denominatorFilter,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("thresholdValue") Double thresholdValue,
+        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
         this.aggregations = aggregations;
         this.comparison = comparison;
         this.denominatorAggregations = denominatorAggregations;

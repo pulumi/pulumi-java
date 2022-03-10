@@ -33,12 +33,12 @@ public final class OSPolicyResourceFileResponse {
      */
     private final OSPolicyResourceFileRemoteResponse remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceFileResponse(
-        Boolean allowInsecure,
-        OSPolicyResourceFileGcsResponse gcs,
-        String localPath,
-        OSPolicyResourceFileRemoteResponse remote) {
+        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") OSPolicyResourceFileGcsResponse gcs,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("remote") OSPolicyResourceFileRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

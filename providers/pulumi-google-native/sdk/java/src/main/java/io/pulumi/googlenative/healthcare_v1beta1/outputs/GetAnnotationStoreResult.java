@@ -21,10 +21,10 @@ public final class GetAnnotationStoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"labels","name"})
+    @OutputCustomType.Constructor
     private GetAnnotationStoreResult(
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.labels = labels;
         this.name = name;
     }

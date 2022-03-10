@@ -18,11 +18,11 @@ public final class FutureReservationTimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","endTime","startTime"})
+    @OutputCustomType.Constructor
     private FutureReservationTimeWindowResponse(
-        DurationResponse duration,
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") DurationResponse duration,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.endTime = endTime;
         this.startTime = startTime;

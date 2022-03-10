@@ -34,12 +34,12 @@ public final class SourceProvenanceResponse {
      */
     private final StorageSourceManifestResponse resolvedStorageSourceManifest;
 
-    @OutputCustomType.Constructor({"fileHashes","resolvedRepoSource","resolvedStorageSource","resolvedStorageSourceManifest"})
+    @OutputCustomType.Constructor
     private SourceProvenanceResponse(
-        Map<String,String> fileHashes,
-        RepoSourceResponse resolvedRepoSource,
-        StorageSourceResponse resolvedStorageSource,
-        StorageSourceManifestResponse resolvedStorageSourceManifest) {
+        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes,
+        @OutputCustomType.Parameter("resolvedRepoSource") RepoSourceResponse resolvedRepoSource,
+        @OutputCustomType.Parameter("resolvedStorageSource") StorageSourceResponse resolvedStorageSource,
+        @OutputCustomType.Parameter("resolvedStorageSourceManifest") StorageSourceManifestResponse resolvedStorageSourceManifest) {
         this.fileHashes = fileHashes;
         this.resolvedRepoSource = resolvedRepoSource;
         this.resolvedStorageSource = resolvedStorageSource;

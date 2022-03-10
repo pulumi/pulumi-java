@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"destinationName","uri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse(
-        String destinationName,
-        String uri) {
+        @OutputCustomType.Parameter("destinationName") String destinationName,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.destinationName = destinationName;
         this.uri = uri;
     }

@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
-    @OutputCustomType.Constructor({"action","reply"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
+        @OutputCustomType.Parameter("action") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
+        @OutputCustomType.Parameter("reply") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
         this.action = action;
         this.reply = reply;
     }

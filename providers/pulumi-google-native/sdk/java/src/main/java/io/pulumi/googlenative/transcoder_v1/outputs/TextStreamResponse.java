@@ -22,10 +22,10 @@ public final class TextStreamResponse {
      */
     private final List<TextMappingResponse> mapping;
 
-    @OutputCustomType.Constructor({"codec","mapping"})
+    @OutputCustomType.Constructor
     private TextStreamResponse(
-        String codec,
-        List<TextMappingResponse> mapping) {
+        @OutputCustomType.Parameter("codec") String codec,
+        @OutputCustomType.Parameter("mapping") List<TextMappingResponse> mapping) {
         this.codec = codec;
         this.mapping = mapping;
     }

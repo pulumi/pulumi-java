@@ -20,10 +20,10 @@ public final class WarningResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"priority","text"})
+    @OutputCustomType.Constructor
     private WarningResponse(
-        String priority,
-        String text) {
+        @OutputCustomType.Parameter("priority") String priority,
+        @OutputCustomType.Parameter("text") String text) {
         this.priority = priority;
         this.text = text;
     }

@@ -41,14 +41,14 @@ public final class GetDebugSessionResult {
      */
     private final Integer validity;
 
-    @OutputCustomType.Constructor({"count","filter","name","timeout","tracesize","validity"})
+    @OutputCustomType.Constructor
     private GetDebugSessionResult(
-        Integer count,
-        String filter,
-        String name,
-        String timeout,
-        Integer tracesize,
-        Integer validity) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeout") String timeout,
+        @OutputCustomType.Parameter("tracesize") Integer tracesize,
+        @OutputCustomType.Parameter("validity") Integer validity) {
         this.count = count;
         this.filter = filter;
         this.name = name;

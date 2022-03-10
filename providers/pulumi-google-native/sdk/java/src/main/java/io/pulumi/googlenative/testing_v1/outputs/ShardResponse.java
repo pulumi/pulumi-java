@@ -26,11 +26,11 @@ public final class ShardResponse {
      */
     private final TestTargetsForShardResponse testTargetsForShard;
 
-    @OutputCustomType.Constructor({"numShards","shardIndex","testTargetsForShard"})
+    @OutputCustomType.Constructor
     private ShardResponse(
-        Integer numShards,
-        Integer shardIndex,
-        TestTargetsForShardResponse testTargetsForShard) {
+        @OutputCustomType.Parameter("numShards") Integer numShards,
+        @OutputCustomType.Parameter("shardIndex") Integer shardIndex,
+        @OutputCustomType.Parameter("testTargetsForShard") TestTargetsForShardResponse testTargetsForShard) {
         this.numShards = numShards;
         this.shardIndex = shardIndex;
         this.testTargetsForShard = testTargetsForShard;

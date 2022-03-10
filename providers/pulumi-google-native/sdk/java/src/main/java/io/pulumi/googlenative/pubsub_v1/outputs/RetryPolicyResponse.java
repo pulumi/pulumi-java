@@ -20,10 +20,10 @@ public final class RetryPolicyResponse {
      */
     private final String minimumBackoff;
 
-    @OutputCustomType.Constructor({"maximumBackoff","minimumBackoff"})
+    @OutputCustomType.Constructor
     private RetryPolicyResponse(
-        String maximumBackoff,
-        String minimumBackoff) {
+        @OutputCustomType.Parameter("maximumBackoff") String maximumBackoff,
+        @OutputCustomType.Parameter("minimumBackoff") String minimumBackoff) {
         this.maximumBackoff = maximumBackoff;
         this.minimumBackoff = minimumBackoff;
     }

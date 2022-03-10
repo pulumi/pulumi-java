@@ -31,12 +31,12 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"percent","revision","tag","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2TrafficTargetResponse(
-        Integer percent,
-        String revision,
-        String tag,
-        String type) {
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revision") String revision,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("type") String type) {
         this.percent = percent;
         this.revision = revision;
         this.tag = tag;

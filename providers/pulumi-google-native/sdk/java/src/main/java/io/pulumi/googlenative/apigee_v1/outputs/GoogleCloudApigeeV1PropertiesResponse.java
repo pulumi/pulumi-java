@@ -16,8 +16,8 @@ public final class GoogleCloudApigeeV1PropertiesResponse {
      */
     private final List<GoogleCloudApigeeV1PropertyResponse> property;
 
-    @OutputCustomType.Constructor({"property"})
-    private GoogleCloudApigeeV1PropertiesResponse(List<GoogleCloudApigeeV1PropertyResponse> property) {
+    @OutputCustomType.Constructor
+    private GoogleCloudApigeeV1PropertiesResponse(@OutputCustomType.Parameter("property") List<GoogleCloudApigeeV1PropertyResponse> property) {
         this.property = property;
     }
 
