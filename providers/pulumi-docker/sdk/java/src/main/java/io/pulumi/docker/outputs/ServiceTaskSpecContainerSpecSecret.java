@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecSecret {
     private final String secretId;
     private final @Nullable String secretName;
 
-    @OutputCustomType.Constructor({"fileGid","fileMode","fileName","fileUid","secretId","secretName"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecSecret(
-        @Nullable String fileGid,
-        @Nullable Integer fileMode,
-        String fileName,
-        @Nullable String fileUid,
-        String secretId,
-        @Nullable String secretName) {
+        @OutputCustomType.Parameter("fileGid") @Nullable String fileGid,
+        @OutputCustomType.Parameter("fileMode") @Nullable Integer fileMode,
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("fileUid") @Nullable String fileUid,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName) {
         this.fileGid = fileGid;
         this.fileMode = fileMode;
         this.fileName = fileName;

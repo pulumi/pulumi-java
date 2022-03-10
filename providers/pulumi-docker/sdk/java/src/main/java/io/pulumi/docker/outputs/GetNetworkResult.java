@@ -22,15 +22,15 @@ public final class GetNetworkResult {
     private final Map<String,Object> options;
     private final String scope;
 
-    @OutputCustomType.Constructor({"driver","id","internal","ipamConfigs","name","options","scope"})
+    @OutputCustomType.Constructor
     private GetNetworkResult(
-        String driver,
-        String id,
-        Boolean internal,
-        List<GetNetworkIpamConfig> ipamConfigs,
-        String name,
-        Map<String,Object> options,
-        String scope) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internal") Boolean internal,
+        @OutputCustomType.Parameter("ipamConfigs") List<GetNetworkIpamConfig> ipamConfigs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") Map<String,Object> options,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.driver = driver;
         this.id = id;
         this.internal = internal;

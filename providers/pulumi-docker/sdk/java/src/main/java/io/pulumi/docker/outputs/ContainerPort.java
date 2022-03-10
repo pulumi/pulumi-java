@@ -17,12 +17,12 @@ public final class ContainerPort {
     private final @Nullable String ip;
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"external","internal","ip","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPort(
-        @Nullable Integer external,
-        Integer internal,
-        @Nullable String ip,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("external") @Nullable Integer external,
+        @OutputCustomType.Parameter("internal") Integer internal,
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.external = external;
         this.internal = internal;
         this.ip = ip;

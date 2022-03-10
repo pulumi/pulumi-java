@@ -20,16 +20,16 @@ public final class RegistryImageBuildAuthConfig {
     private final @Nullable String serverAddress;
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"auth","email","hostName","identityToken","password","registryToken","serverAddress","userName"})
+    @OutputCustomType.Constructor
     private RegistryImageBuildAuthConfig(
-        @Nullable String auth,
-        @Nullable String email,
-        String hostName,
-        @Nullable String identityToken,
-        @Nullable String password,
-        @Nullable String registryToken,
-        @Nullable String serverAddress,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("auth") @Nullable String auth,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("identityToken") @Nullable String identityToken,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("registryToken") @Nullable String registryToken,
+        @OutputCustomType.Parameter("serverAddress") @Nullable String serverAddress,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.auth = auth;
         this.email = email;
         this.hostName = hostName;

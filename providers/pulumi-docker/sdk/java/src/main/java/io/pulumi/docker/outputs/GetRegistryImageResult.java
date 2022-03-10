@@ -21,12 +21,12 @@ public final class GetRegistryImageResult {
     private final String name;
     private final String sha256Digest;
 
-    @OutputCustomType.Constructor({"id","insecureSkipVerify","name","sha256Digest"})
+    @OutputCustomType.Constructor
     private GetRegistryImageResult(
-        String id,
-        @Nullable Boolean insecureSkipVerify,
-        String name,
-        String sha256Digest) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("insecureSkipVerify") @Nullable Boolean insecureSkipVerify,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sha256Digest") String sha256Digest) {
         this.id = id;
         this.insecureSkipVerify = insecureSkipVerify;
         this.name = name;

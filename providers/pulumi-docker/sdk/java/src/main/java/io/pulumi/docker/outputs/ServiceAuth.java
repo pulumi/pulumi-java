@@ -15,11 +15,11 @@ public final class ServiceAuth {
     private final String serverAddress;
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","serverAddress","username"})
+    @OutputCustomType.Constructor
     private ServiceAuth(
-        @Nullable String password,
-        String serverAddress,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("serverAddress") String serverAddress,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.serverAddress = serverAddress;
         this.username = username;

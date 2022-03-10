@@ -27,16 +27,16 @@ public final class ServiceTaskSpec {
     private final @Nullable ServiceTaskSpecRestartPolicy restartPolicy;
     private final @Nullable String runtime;
 
-    @OutputCustomType.Constructor({"containerSpec","forceUpdate","logDriver","networks","placement","resources","restartPolicy","runtime"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpec(
-        ServiceTaskSpecContainerSpec containerSpec,
-        @Nullable Integer forceUpdate,
-        @Nullable ServiceTaskSpecLogDriver logDriver,
-        @Nullable List<String> networks,
-        @Nullable ServiceTaskSpecPlacement placement,
-        @Nullable ServiceTaskSpecResources resources,
-        @Nullable ServiceTaskSpecRestartPolicy restartPolicy,
-        @Nullable String runtime) {
+        @OutputCustomType.Parameter("containerSpec") ServiceTaskSpecContainerSpec containerSpec,
+        @OutputCustomType.Parameter("forceUpdate") @Nullable Integer forceUpdate,
+        @OutputCustomType.Parameter("logDriver") @Nullable ServiceTaskSpecLogDriver logDriver,
+        @OutputCustomType.Parameter("networks") @Nullable List<String> networks,
+        @OutputCustomType.Parameter("placement") @Nullable ServiceTaskSpecPlacement placement,
+        @OutputCustomType.Parameter("resources") @Nullable ServiceTaskSpecResources resources,
+        @OutputCustomType.Parameter("restartPolicy") @Nullable ServiceTaskSpecRestartPolicy restartPolicy,
+        @OutputCustomType.Parameter("runtime") @Nullable String runtime) {
         this.containerSpec = containerSpec;
         this.forceUpdate = forceUpdate;
         this.logDriver = logDriver;

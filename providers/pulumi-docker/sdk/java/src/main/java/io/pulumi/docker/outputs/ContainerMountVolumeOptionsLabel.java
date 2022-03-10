@@ -12,10 +12,10 @@ public final class ContainerMountVolumeOptionsLabel {
     private final String label;
     private final String value;
 
-    @OutputCustomType.Constructor({"label","value"})
+    @OutputCustomType.Constructor
     private ContainerMountVolumeOptionsLabel(
-        String label,
-        String value) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("value") String value) {
         this.label = label;
         this.value = value;
     }
