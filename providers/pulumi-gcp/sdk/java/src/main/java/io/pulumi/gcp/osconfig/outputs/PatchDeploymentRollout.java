@@ -27,10 +27,10 @@ public final class PatchDeploymentRollout {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"disruptionBudget","mode"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRollout(
-        PatchDeploymentRolloutDisruptionBudget disruptionBudget,
-        String mode) {
+        @OutputCustomType.Parameter("disruptionBudget") PatchDeploymentRolloutDisruptionBudget disruptionBudget,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.disruptionBudget = disruptionBudget;
         this.mode = mode;
     }

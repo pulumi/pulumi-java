@@ -25,10 +25,10 @@ public final class SecurityScanConfigAuthentication {
      */
     private final @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount"})
+    @OutputCustomType.Constructor
     private SecurityScanConfigAuthentication(
-        @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
-        @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
+        @OutputCustomType.Parameter("customAccount") @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
+        @OutputCustomType.Parameter("googleAccount") @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }

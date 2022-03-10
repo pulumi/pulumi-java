@@ -26,10 +26,10 @@ public final class ReservationShareSettings {
      */
     private final @Nullable String shareType;
 
-    @OutputCustomType.Constructor({"projectMaps","shareType"})
+    @OutputCustomType.Constructor
     private ReservationShareSettings(
-        @Nullable List<ReservationShareSettingsProjectMap> projectMaps,
-        @Nullable String shareType) {
+        @OutputCustomType.Parameter("projectMaps") @Nullable List<ReservationShareSettingsProjectMap> projectMaps,
+        @OutputCustomType.Parameter("shareType") @Nullable String shareType) {
         this.projectMaps = projectMaps;
         this.shareType = shareType;
     }

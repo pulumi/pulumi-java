@@ -31,11 +31,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable List<String> includeRegexes;
 
-    @OutputCustomType.Constructor({"bucketName","excludeRegexes","includeRegexes"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet(
-        String bucketName,
-        @Nullable List<String> excludeRegexes,
-        @Nullable List<String> includeRegexes) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("excludeRegexes") @Nullable List<String> excludeRegexes,
+        @OutputCustomType.Parameter("includeRegexes") @Nullable List<String> includeRegexes) {
         this.bucketName = bucketName;
         this.excludeRegexes = excludeRegexes;
         this.includeRegexes = includeRegexes;

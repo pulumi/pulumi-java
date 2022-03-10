@@ -17,12 +17,12 @@ public final class GetRouterBgp {
     private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
     private final Integer asn;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn"})
+    @OutputCustomType.Constructor
     private GetRouterBgp(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
-        Integer asn) {
+        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @OutputCustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

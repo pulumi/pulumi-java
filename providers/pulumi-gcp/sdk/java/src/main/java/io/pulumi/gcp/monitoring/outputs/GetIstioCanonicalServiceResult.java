@@ -27,17 +27,17 @@ public final class GetIstioCanonicalServiceResult {
     private final String serviceId;
     private final List<GetIstioCanonicalServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"canonicalService","canonicalServiceNamespace","displayName","id","meshUid","name","project","serviceId","telemetries"})
+    @OutputCustomType.Constructor
     private GetIstioCanonicalServiceResult(
-        String canonicalService,
-        String canonicalServiceNamespace,
-        String displayName,
-        String id,
-        String meshUid,
-        String name,
-        @Nullable String project,
-        String serviceId,
-        List<GetIstioCanonicalServiceTelemetry> telemetries) {
+        @OutputCustomType.Parameter("canonicalService") String canonicalService,
+        @OutputCustomType.Parameter("canonicalServiceNamespace") String canonicalServiceNamespace,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("meshUid") String meshUid,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("telemetries") List<GetIstioCanonicalServiceTelemetry> telemetries) {
         this.canonicalService = canonicalService;
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         this.displayName = displayName;

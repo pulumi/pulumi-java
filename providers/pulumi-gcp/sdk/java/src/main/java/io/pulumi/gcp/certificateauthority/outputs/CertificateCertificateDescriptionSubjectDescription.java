@@ -37,14 +37,14 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      */
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects;
 
-    @OutputCustomType.Constructor({"hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subjectAltNames","subjects"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescription(
-        @Nullable String hexSerialNumber,
-        @Nullable String lifetime,
-        @Nullable String notAfterTime,
-        @Nullable String notBeforeTime,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
+        @OutputCustomType.Parameter("hexSerialNumber") @Nullable String hexSerialNumber,
+        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
+        @OutputCustomType.Parameter("notAfterTime") @Nullable String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") @Nullable String notBeforeTime,
+        @OutputCustomType.Parameter("subjectAltNames") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
+        @OutputCustomType.Parameter("subjects") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
         this.notAfterTime = notAfterTime;

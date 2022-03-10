@@ -18,8 +18,8 @@ public final class InboundSamlConfigSpConfigSpCertificate {
      */
     private final @Nullable String x509Certificate;
 
-    @OutputCustomType.Constructor({"x509Certificate"})
-    private InboundSamlConfigSpConfigSpCertificate(@Nullable String x509Certificate) {
+    @OutputCustomType.Constructor
+    private InboundSamlConfigSpConfigSpCertificate(@OutputCustomType.Parameter("x509Certificate") @Nullable String x509Certificate) {
         this.x509Certificate = x509Certificate;
     }
 

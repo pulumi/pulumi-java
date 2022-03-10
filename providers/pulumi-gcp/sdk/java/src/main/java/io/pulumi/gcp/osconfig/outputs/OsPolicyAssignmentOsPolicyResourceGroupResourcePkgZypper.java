@@ -15,8 +15,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper(String name) {
+    @OutputCustomType.Constructor
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

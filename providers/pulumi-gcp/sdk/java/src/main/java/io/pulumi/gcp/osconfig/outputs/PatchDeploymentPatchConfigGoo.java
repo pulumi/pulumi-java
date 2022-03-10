@@ -15,8 +15,8 @@ public final class PatchDeploymentPatchConfigGoo {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private PatchDeploymentPatchConfigGoo(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private PatchDeploymentPatchConfigGoo(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

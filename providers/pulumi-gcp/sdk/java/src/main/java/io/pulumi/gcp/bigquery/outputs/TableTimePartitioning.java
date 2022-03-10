@@ -39,12 +39,12 @@ public final class TableTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationMs","field","requirePartitionFilter","type"})
+    @OutputCustomType.Constructor
     private TableTimePartitioning(
-        @Nullable Integer expirationMs,
-        @Nullable String field,
-        @Nullable Boolean requirePartitionFilter,
-        String type) {
+        @OutputCustomType.Parameter("expirationMs") @Nullable Integer expirationMs,
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;

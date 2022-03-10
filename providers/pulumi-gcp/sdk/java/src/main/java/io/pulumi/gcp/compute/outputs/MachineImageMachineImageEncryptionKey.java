@@ -36,12 +36,12 @@ public final class MachineImageMachineImageEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeyName","kmsKeyServiceAccount","rawKey","sha256"})
+    @OutputCustomType.Constructor
     private MachineImageMachineImageEncryptionKey(
-        @Nullable String kmsKeyName,
-        @Nullable String kmsKeyServiceAccount,
-        @Nullable String rawKey,
-        @Nullable String sha256) {
+        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
+        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

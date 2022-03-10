@@ -47,11 +47,11 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
      */
     private final @Nullable List<String> retryConditions;
 
-    @OutputCustomType.Constructor({"numRetries","perTryTimeout","retryConditions"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionRetryPolicy(
-        @Nullable Integer numRetries,
-        @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
-        @Nullable List<String> retryConditions) {
+        @OutputCustomType.Parameter("numRetries") @Nullable Integer numRetries,
+        @OutputCustomType.Parameter("perTryTimeout") @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
+        @OutputCustomType.Parameter("retryConditions") @Nullable List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;

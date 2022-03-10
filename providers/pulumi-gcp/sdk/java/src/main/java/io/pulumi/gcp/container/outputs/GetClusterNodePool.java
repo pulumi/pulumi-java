@@ -35,22 +35,22 @@ public final class GetClusterNodePool {
     private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
     private final String version;
 
-    @OutputCustomType.Constructor({"autoscalings","initialNodeCount","instanceGroupUrls","managedInstanceGroupUrls","managements","maxPodsPerNode","name","namePrefix","networkConfigs","nodeConfigs","nodeCount","nodeLocations","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private GetClusterNodePool(
-        List<GetClusterNodePoolAutoscaling> autoscalings,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> managedInstanceGroupUrls,
-        List<GetClusterNodePoolManagement> managements,
-        Integer maxPodsPerNode,
-        String name,
-        String namePrefix,
-        List<GetClusterNodePoolNetworkConfig> networkConfigs,
-        List<GetClusterNodePoolNodeConfig> nodeConfigs,
-        Integer nodeCount,
-        List<String> nodeLocations,
-        List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
-        String version) {
+        @OutputCustomType.Parameter("autoscalings") List<GetClusterNodePoolAutoscaling> autoscalings,
+        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("managedInstanceGroupUrls") List<String> managedInstanceGroupUrls,
+        @OutputCustomType.Parameter("managements") List<GetClusterNodePoolManagement> managements,
+        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("networkConfigs") List<GetClusterNodePoolNetworkConfig> networkConfigs,
+        @OutputCustomType.Parameter("nodeConfigs") List<GetClusterNodePoolNodeConfig> nodeConfigs,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("nodeLocations") List<String> nodeLocations,
+        @OutputCustomType.Parameter("upgradeSettings") List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
+        @OutputCustomType.Parameter("version") String version) {
         this.autoscalings = autoscalings;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;

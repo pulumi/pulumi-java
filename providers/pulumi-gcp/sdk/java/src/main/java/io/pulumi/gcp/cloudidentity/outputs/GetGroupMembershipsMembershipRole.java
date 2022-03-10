@@ -15,8 +15,8 @@ public final class GetGroupMembershipsMembershipRole {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetGroupMembershipsMembershipRole(String name) {
+    @OutputCustomType.Constructor
+    private GetGroupMembershipsMembershipRole(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -36,12 +36,12 @@ public final class FlexibleAppVersionResources {
      */
     private final @Nullable List<FlexibleAppVersionResourcesVolume> volumes;
 
-    @OutputCustomType.Constructor({"cpu","diskGb","memoryGb","volumes"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionResources(
-        @Nullable Integer cpu,
-        @Nullable Integer diskGb,
-        @Nullable Double memoryGb,
-        @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
+        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
+        @OutputCustomType.Parameter("diskGb") @Nullable Integer diskGb,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("volumes") @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.memoryGb = memoryGb;

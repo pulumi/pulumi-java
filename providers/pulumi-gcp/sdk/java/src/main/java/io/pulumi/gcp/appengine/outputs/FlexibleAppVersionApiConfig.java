@@ -42,13 +42,13 @@ public final class FlexibleAppVersionApiConfig {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"authFailAction","login","script","securityLevel","url"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionApiConfig(
-        @Nullable String authFailAction,
-        @Nullable String login,
-        String script,
-        @Nullable String securityLevel,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.script = script;

@@ -43,26 +43,26 @@ public final class GetHealthCheckResult {
     private final String type;
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"checkIntervalSec","creationTimestamp","description","grpcHealthChecks","healthyThreshold","http2HealthChecks","httpHealthChecks","httpsHealthChecks","id","logConfigs","name","project","selfLink","sslHealthChecks","tcpHealthChecks","timeoutSec","type","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetHealthCheckResult(
-        Integer checkIntervalSec,
-        String creationTimestamp,
-        String description,
-        List<GetHealthCheckGrpcHealthCheck> grpcHealthChecks,
-        Integer healthyThreshold,
-        List<GetHealthCheckHttp2HealthCheck> http2HealthChecks,
-        List<GetHealthCheckHttpHealthCheck> httpHealthChecks,
-        List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks,
-        String id,
-        List<GetHealthCheckLogConfig> logConfigs,
-        String name,
-        @Nullable String project,
-        String selfLink,
-        List<GetHealthCheckSslHealthCheck> sslHealthChecks,
-        List<GetHealthCheckTcpHealthCheck> tcpHealthChecks,
-        Integer timeoutSec,
-        String type,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("grpcHealthChecks") List<GetHealthCheckGrpcHealthCheck> grpcHealthChecks,
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("http2HealthChecks") List<GetHealthCheckHttp2HealthCheck> http2HealthChecks,
+        @OutputCustomType.Parameter("httpHealthChecks") List<GetHealthCheckHttpHealthCheck> httpHealthChecks,
+        @OutputCustomType.Parameter("httpsHealthChecks") List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logConfigs") List<GetHealthCheckLogConfig> logConfigs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sslHealthChecks") List<GetHealthCheckSslHealthCheck> sslHealthChecks,
+        @OutputCustomType.Parameter("tcpHealthChecks") List<GetHealthCheckTcpHealthCheck> tcpHealthChecks,
+        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

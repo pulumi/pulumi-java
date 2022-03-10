@@ -16,12 +16,12 @@ public final class DeviceConfig {
     private final @Nullable String deviceAckTime;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"binaryData","cloudUpdateTime","deviceAckTime","version"})
+    @OutputCustomType.Constructor
     private DeviceConfig(
-        @Nullable String binaryData,
-        @Nullable String cloudUpdateTime,
-        @Nullable String deviceAckTime,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("binaryData") @Nullable String binaryData,
+        @OutputCustomType.Parameter("cloudUpdateTime") @Nullable String cloudUpdateTime,
+        @OutputCustomType.Parameter("deviceAckTime") @Nullable String deviceAckTime,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.binaryData = binaryData;
         this.cloudUpdateTime = cloudUpdateTime;
         this.deviceAckTime = deviceAckTime;

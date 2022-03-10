@@ -25,10 +25,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionTimeout {
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionTimeout(
-        @Nullable Integer nanos,
-        String seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

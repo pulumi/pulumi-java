@@ -27,11 +27,11 @@ public final class ImageIamBindingCondition {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","expression","title"})
+    @OutputCustomType.Constructor
     private ImageIamBindingCondition(
-        @Nullable String description,
-        String expression,
-        String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.title = title;

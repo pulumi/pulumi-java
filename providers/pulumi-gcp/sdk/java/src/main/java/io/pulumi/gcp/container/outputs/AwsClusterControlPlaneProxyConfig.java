@@ -20,10 +20,10 @@ public final class AwsClusterControlPlaneProxyConfig {
      */
     private final String secretVersion;
 
-    @OutputCustomType.Constructor({"secretArn","secretVersion"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlaneProxyConfig(
-        String secretArn,
-        String secretVersion) {
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("secretVersion") String secretVersion) {
         this.secretArn = secretArn;
         this.secretVersion = secretVersion;
     }

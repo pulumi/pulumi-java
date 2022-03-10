@@ -26,16 +26,16 @@ public final class GetHcVpnGatewayResult {
     private final String selfLink;
     private final List<GetHcVpnGatewayVpnInterface> vpnInterfaces;
 
-    @OutputCustomType.Constructor({"description","id","name","network","project","region","selfLink","vpnInterfaces"})
+    @OutputCustomType.Constructor
     private GetHcVpnGatewayResult(
-        String description,
-        String id,
-        String name,
-        String network,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("vpnInterfaces") List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
         this.description = description;
         this.id = id;
         this.name = name;

@@ -32,11 +32,11 @@ public final class PacketMirroringFilter {
      */
     private final @Nullable List<String> ipProtocols;
 
-    @OutputCustomType.Constructor({"cidrRanges","direction","ipProtocols"})
+    @OutputCustomType.Constructor
     private PacketMirroringFilter(
-        @Nullable List<String> cidrRanges,
-        @Nullable String direction,
-        @Nullable List<String> ipProtocols) {
+        @OutputCustomType.Parameter("cidrRanges") @Nullable List<String> cidrRanges,
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;

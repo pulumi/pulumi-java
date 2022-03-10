@@ -30,11 +30,11 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"domain","path","service"})
+    @OutputCustomType.Constructor
     private ApplicationUrlDispatchRulesDispatchRule(
-        @Nullable String domain,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;

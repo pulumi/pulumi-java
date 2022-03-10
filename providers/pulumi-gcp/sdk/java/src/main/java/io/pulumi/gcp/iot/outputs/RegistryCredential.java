@@ -17,8 +17,8 @@ public final class RegistryCredential {
      */
     private final Map<String,Object> publicKeyCertificate;
 
-    @OutputCustomType.Constructor({"publicKeyCertificate"})
-    private RegistryCredential(Map<String,Object> publicKeyCertificate) {
+    @OutputCustomType.Constructor
+    private RegistryCredential(@OutputCustomType.Parameter("publicKeyCertificate") Map<String,Object> publicKeyCertificate) {
         this.publicKeyCertificate = publicKeyCertificate;
     }
 

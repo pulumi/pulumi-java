@@ -28,11 +28,11 @@ public final class FirewallPolicyRuleMatch {
      */
     private final @Nullable List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatch(
-        @Nullable List<String> destIpRanges,
-        List<FirewallPolicyRuleMatchLayer4Config> layer4Configs,
-        @Nullable List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
+        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatchLayer4Config> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;

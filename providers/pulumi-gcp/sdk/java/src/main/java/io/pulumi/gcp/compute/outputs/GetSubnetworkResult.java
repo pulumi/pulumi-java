@@ -59,19 +59,19 @@ public final class GetSubnetworkResult {
     private final List<GetSubnetworkSecondaryIpRange> secondaryIpRanges;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"description","gatewayAddress","id","ipCidrRange","name","network","privateIpGoogleAccess","project","region","secondaryIpRanges","selfLink"})
+    @OutputCustomType.Constructor
     private GetSubnetworkResult(
-        String description,
-        String gatewayAddress,
-        String id,
-        String ipCidrRange,
-        @Nullable String name,
-        String network,
-        Boolean privateIpGoogleAccess,
-        String project,
-        String region,
-        List<GetSubnetworkSecondaryIpRange> secondaryIpRanges,
-        String selfLink) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("secondaryIpRanges") List<GetSubnetworkSecondaryIpRange> secondaryIpRanges,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.description = description;
         this.gatewayAddress = gatewayAddress;
         this.id = id;

@@ -23,10 +23,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String commonCharactersToIgnore;
 
-    @OutputCustomType.Constructor({"charactersToSkip","commonCharactersToIgnore"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore(
-        @Nullable String charactersToSkip,
-        @Nullable String commonCharactersToIgnore) {
+        @OutputCustomType.Parameter("charactersToSkip") @Nullable String charactersToSkip,
+        @OutputCustomType.Parameter("commonCharactersToIgnore") @Nullable String commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }

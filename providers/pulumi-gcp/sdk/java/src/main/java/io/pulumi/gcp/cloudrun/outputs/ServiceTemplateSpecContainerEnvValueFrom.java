@@ -16,8 +16,8 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
      */
     private final ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef;
 
-    @OutputCustomType.Constructor({"secretKeyRef"})
-    private ServiceTemplateSpecContainerEnvValueFrom(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
+    @OutputCustomType.Constructor
+    private ServiceTemplateSpecContainerEnvValueFrom(@OutputCustomType.Parameter("secretKeyRef") ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
     }
 

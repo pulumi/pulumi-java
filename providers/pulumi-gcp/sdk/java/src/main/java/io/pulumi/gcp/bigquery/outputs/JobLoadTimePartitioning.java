@@ -30,11 +30,11 @@ public final class JobLoadTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationMs","field","type"})
+    @OutputCustomType.Constructor
     private JobLoadTimePartitioning(
-        @Nullable String expirationMs,
-        @Nullable String field,
-        String type) {
+        @OutputCustomType.Parameter("expirationMs") @Nullable String expirationMs,
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.type = type;

@@ -33,11 +33,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      */
     private final @Nullable Double threshold;
 
-    @OutputCustomType.Constructor({"basicSliPerformance","performance","threshold"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThreshold(
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
-        @Nullable Double threshold) {
+        @OutputCustomType.Parameter("basicSliPerformance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
+        @OutputCustomType.Parameter("performance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;

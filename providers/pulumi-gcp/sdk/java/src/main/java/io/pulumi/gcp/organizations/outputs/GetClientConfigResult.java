@@ -35,13 +35,13 @@ public final class GetClientConfigResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"accessToken","id","project","region","zone"})
+    @OutputCustomType.Constructor
     private GetClientConfigResult(
-        String accessToken,
-        String id,
-        String project,
-        String region,
-        String zone) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.accessToken = accessToken;
         this.id = id;
         this.project = project;

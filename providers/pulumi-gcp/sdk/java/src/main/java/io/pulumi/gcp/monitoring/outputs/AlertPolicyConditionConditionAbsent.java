@@ -70,12 +70,12 @@ public final class AlertPolicyConditionConditionAbsent {
      */
     private final @Nullable AlertPolicyConditionConditionAbsentTrigger trigger;
 
-    @OutputCustomType.Constructor({"aggregations","duration","filter","trigger"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionAbsent(
-        @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
-        String duration,
-        @Nullable String filter,
-        @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
+        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;

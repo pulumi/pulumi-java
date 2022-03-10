@@ -16,8 +16,8 @@ public final class ImageGuestOsFeature {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ImageGuestOsFeature(String type) {
+    @OutputCustomType.Constructor
+    private ImageGuestOsFeature(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -73,14 +73,14 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"headerAction","matchRules","priority","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRule(
-        @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
-        @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
-        Integer priority,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
-        @Nullable String service,
-        @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("headerAction") @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
+        @OutputCustomType.Parameter("matchRules") @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = priority;

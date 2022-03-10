@@ -17,8 +17,8 @@ public final class SecretReplicationUserManaged {
      */
     private final List<SecretReplicationUserManagedReplica> replicas;
 
-    @OutputCustomType.Constructor({"replicas"})
-    private SecretReplicationUserManaged(List<SecretReplicationUserManagedReplica> replicas) {
+    @OutputCustomType.Constructor
+    private SecretReplicationUserManaged(@OutputCustomType.Parameter("replicas") List<SecretReplicationUserManagedReplica> replicas) {
         this.replicas = replicas;
     }
 

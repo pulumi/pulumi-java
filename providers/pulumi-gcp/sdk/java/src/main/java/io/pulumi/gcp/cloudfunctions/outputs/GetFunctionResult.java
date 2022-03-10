@@ -119,32 +119,32 @@ public final class GetFunctionResult {
      */
     private final String vpcConnectorEgressSettings;
 
-    @OutputCustomType.Constructor({"availableMemoryMb","buildEnvironmentVariables","description","entryPoint","environmentVariables","eventTriggers","httpsTriggerUrl","id","ingressSettings","labels","maxInstances","minInstances","name","project","region","runtime","serviceAccountEmail","sourceArchiveBucket","sourceArchiveObject","sourceRepositories","timeout","triggerHttp","vpcConnector","vpcConnectorEgressSettings"})
+    @OutputCustomType.Constructor
     private GetFunctionResult(
-        Integer availableMemoryMb,
-        Map<String,Object> buildEnvironmentVariables,
-        String description,
-        String entryPoint,
-        Map<String,Object> environmentVariables,
-        List<GetFunctionEventTrigger> eventTriggers,
-        String httpsTriggerUrl,
-        String id,
-        String ingressSettings,
-        Map<String,Object> labels,
-        Integer maxInstances,
-        Integer minInstances,
-        String name,
-        @Nullable String project,
-        @Nullable String region,
-        String runtime,
-        String serviceAccountEmail,
-        String sourceArchiveBucket,
-        String sourceArchiveObject,
-        List<GetFunctionSourceRepository> sourceRepositories,
-        Integer timeout,
-        Boolean triggerHttp,
-        String vpcConnector,
-        String vpcConnectorEgressSettings) {
+        @OutputCustomType.Parameter("availableMemoryMb") Integer availableMemoryMb,
+        @OutputCustomType.Parameter("buildEnvironmentVariables") Map<String,Object> buildEnvironmentVariables,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("entryPoint") String entryPoint,
+        @OutputCustomType.Parameter("environmentVariables") Map<String,Object> environmentVariables,
+        @OutputCustomType.Parameter("eventTriggers") List<GetFunctionEventTrigger> eventTriggers,
+        @OutputCustomType.Parameter("httpsTriggerUrl") String httpsTriggerUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ingressSettings") String ingressSettings,
+        @OutputCustomType.Parameter("labels") Map<String,Object> labels,
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") Integer minInstances,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("runtime") String runtime,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("sourceArchiveBucket") String sourceArchiveBucket,
+        @OutputCustomType.Parameter("sourceArchiveObject") String sourceArchiveObject,
+        @OutputCustomType.Parameter("sourceRepositories") List<GetFunctionSourceRepository> sourceRepositories,
+        @OutputCustomType.Parameter("timeout") Integer timeout,
+        @OutputCustomType.Parameter("triggerHttp") Boolean triggerHttp,
+        @OutputCustomType.Parameter("vpcConnector") String vpcConnector,
+        @OutputCustomType.Parameter("vpcConnectorEgressSettings") String vpcConnectorEgressSettings) {
         this.availableMemoryMb = availableMemoryMb;
         this.buildEnvironmentVariables = buildEnvironmentVariables;
         this.description = description;

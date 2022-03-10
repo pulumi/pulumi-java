@@ -28,11 +28,11 @@ public final class RegionInstanceGroupManagerVersion {
      */
     private final @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize;
 
-    @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerVersion(
-        String instanceTemplate,
-        @Nullable String name,
-        @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetSize") @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;

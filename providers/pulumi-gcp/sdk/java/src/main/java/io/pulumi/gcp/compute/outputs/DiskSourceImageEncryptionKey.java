@@ -40,12 +40,12 @@ public final class DiskSourceImageEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeySelfLink","kmsKeyServiceAccount","rawKey","sha256"})
+    @OutputCustomType.Constructor
     private DiskSourceImageEncryptionKey(
-        @Nullable String kmsKeySelfLink,
-        @Nullable String kmsKeyServiceAccount,
-        @Nullable String rawKey,
-        @Nullable String sha256) {
+        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
+        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeySelfLink = kmsKeySelfLink;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

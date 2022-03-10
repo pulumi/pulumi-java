@@ -21,10 +21,10 @@ public final class DeviceCredentialPublicKey {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"format","key"})
+    @OutputCustomType.Constructor
     private DeviceCredentialPublicKey(
-        String format,
-        String key) {
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("key") String key) {
         this.format = format;
         this.key = key;
     }

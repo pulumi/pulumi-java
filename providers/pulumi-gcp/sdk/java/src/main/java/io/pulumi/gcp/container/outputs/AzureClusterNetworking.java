@@ -26,11 +26,11 @@ public final class AzureClusterNetworking {
      */
     private final String virtualNetworkId;
 
-    @OutputCustomType.Constructor({"podAddressCidrBlocks","serviceAddressCidrBlocks","virtualNetworkId"})
+    @OutputCustomType.Constructor
     private AzureClusterNetworking(
-        List<String> podAddressCidrBlocks,
-        List<String> serviceAddressCidrBlocks,
-        String virtualNetworkId) {
+        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @OutputCustomType.Parameter("virtualNetworkId") String virtualNetworkId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.virtualNetworkId = virtualNetworkId;

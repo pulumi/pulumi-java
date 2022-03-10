@@ -33,11 +33,11 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
      */
     private final @Nullable Integer numLocalSsds;
 
-    @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","numLocalSsds"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigWorkerConfigDiskConfig(
-        @Nullable Integer bootDiskSizeGb,
-        @Nullable String bootDiskType,
-        @Nullable Integer numLocalSsds) {
+        @OutputCustomType.Parameter("bootDiskSizeGb") @Nullable Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") @Nullable String bootDiskType,
+        @OutputCustomType.Parameter("numLocalSsds") @Nullable Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.numLocalSsds = numLocalSsds;

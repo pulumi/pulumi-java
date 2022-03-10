@@ -23,10 +23,10 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor({"aggregationWindowLength","targetUtilization"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionAutomaticScalingCpuUtilization(
-        @Nullable String aggregationWindowLength,
-        Double targetUtilization) {
+        @OutputCustomType.Parameter("aggregationWindowLength") @Nullable String aggregationWindowLength,
+        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
         this.targetUtilization = targetUtilization;
     }

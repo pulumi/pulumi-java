@@ -28,19 +28,19 @@ public final class GetRegionSslCertificateResult {
     private final @Nullable String region;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"certificate","certificateId","creationTimestamp","description","id","name","namePrefix","privateKey","project","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRegionSslCertificateResult(
-        String certificate,
-        Integer certificateId,
-        String creationTimestamp,
-        String description,
-        String id,
-        String name,
-        String namePrefix,
-        String privateKey,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("certificateId") Integer certificateId,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.certificate = certificate;
         this.certificateId = certificateId;
         this.creationTimestamp = creationTimestamp;

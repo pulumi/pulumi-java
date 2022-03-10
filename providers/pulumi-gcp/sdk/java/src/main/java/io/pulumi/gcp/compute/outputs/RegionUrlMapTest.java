@@ -32,12 +32,12 @@ public final class RegionUrlMapTest {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"description","host","path","service"})
+    @OutputCustomType.Constructor
     private RegionUrlMapTest(
-        @Nullable String description,
-        String host,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.description = description;
         this.host = host;
         this.path = path;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MembershipAuthority {
     private final String issuer;
 
-    @OutputCustomType.Constructor({"issuer"})
-    private MembershipAuthority(String issuer) {
+    @OutputCustomType.Constructor
+    private MembershipAuthority(@OutputCustomType.Parameter("issuer") String issuer) {
         this.issuer = issuer;
     }
 

@@ -21,10 +21,10 @@ public final class InstanceReservationAffinitySpecificReservation {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","values"})
+    @OutputCustomType.Constructor
     private InstanceReservationAffinitySpecificReservation(
-        String key,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }

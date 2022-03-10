@@ -27,10 +27,10 @@ public final class TagTemplateFieldType {
      */
     private final @Nullable String primitiveType;
 
-    @OutputCustomType.Constructor({"enumType","primitiveType"})
+    @OutputCustomType.Constructor
     private TagTemplateFieldType(
-        @Nullable TagTemplateFieldTypeEnumType enumType,
-        @Nullable String primitiveType) {
+        @OutputCustomType.Parameter("enumType") @Nullable TagTemplateFieldTypeEnumType enumType,
+        @OutputCustomType.Parameter("primitiveType") @Nullable String primitiveType) {
         this.enumType = enumType;
         this.primitiveType = primitiveType;
     }

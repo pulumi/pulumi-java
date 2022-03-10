@@ -30,11 +30,11 @@ public final class PreventionJobTriggerInspectJob {
      */
     private final PreventionJobTriggerInspectJobStorageConfig storageConfig;
 
-    @OutputCustomType.Constructor({"actions","inspectTemplateName","storageConfig"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJob(
-        List<PreventionJobTriggerInspectJobAction> actions,
-        String inspectTemplateName,
-        PreventionJobTriggerInspectJobStorageConfig storageConfig) {
+        @OutputCustomType.Parameter("actions") List<PreventionJobTriggerInspectJobAction> actions,
+        @OutputCustomType.Parameter("inspectTemplateName") String inspectTemplateName,
+        @OutputCustomType.Parameter("storageConfig") PreventionJobTriggerInspectJobStorageConfig storageConfig) {
         this.actions = actions;
         this.inspectTemplateName = inspectTemplateName;
         this.storageConfig = storageConfig;

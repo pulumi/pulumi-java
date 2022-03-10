@@ -12,10 +12,10 @@ public final class GetBackendServiceCdnPolicyNegativeCachingPolicy {
     private final Integer code;
     private final Integer ttl;
 
-    @OutputCustomType.Constructor({"code","ttl"})
+    @OutputCustomType.Constructor
     private GetBackendServiceCdnPolicyNegativeCachingPolicy(
-        Integer code,
-        Integer ttl) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("ttl") Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

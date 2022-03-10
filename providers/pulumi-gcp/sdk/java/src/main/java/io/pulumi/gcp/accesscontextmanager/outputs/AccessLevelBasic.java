@@ -31,10 +31,10 @@ public final class AccessLevelBasic {
      */
     private final List<AccessLevelBasicCondition> conditions;
 
-    @OutputCustomType.Constructor({"combiningFunction","conditions"})
+    @OutputCustomType.Constructor
     private AccessLevelBasic(
-        @Nullable String combiningFunction,
-        List<AccessLevelBasicCondition> conditions) {
+        @OutputCustomType.Parameter("combiningFunction") @Nullable String combiningFunction,
+        @OutputCustomType.Parameter("conditions") List<AccessLevelBasicCondition> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = conditions;
     }

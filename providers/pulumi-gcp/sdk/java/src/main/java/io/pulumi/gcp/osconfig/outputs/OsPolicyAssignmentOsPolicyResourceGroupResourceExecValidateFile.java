@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFi
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile(
-        @Nullable Boolean allowInsecure,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs gcs,
-        @Nullable String localPath,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileGcs gcs,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFileRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

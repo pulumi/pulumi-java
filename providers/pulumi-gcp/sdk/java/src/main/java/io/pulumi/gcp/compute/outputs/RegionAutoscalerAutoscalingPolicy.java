@@ -96,18 +96,18 @@ public final class RegionAutoscalerAutoscalingPolicy {
      */
     private final @Nullable List<RegionAutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","cpuUtilization","loadBalancingUtilization","maxReplicas","metrics","minReplicas","mode","scaleDownControl","scaleInControl","scalingSchedules"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicy(
-        @Nullable Integer cooldownPeriod,
-        @Nullable RegionAutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
-        @Nullable RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
-        Integer maxReplicas,
-        @Nullable List<RegionAutoscalerAutoscalingPolicyMetric> metrics,
-        Integer minReplicas,
-        @Nullable String mode,
-        @Nullable RegionAutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
-        @Nullable RegionAutoscalerAutoscalingPolicyScaleInControl scaleInControl,
-        @Nullable List<RegionAutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        @OutputCustomType.Parameter("cooldownPeriod") @Nullable Integer cooldownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") @Nullable RegionAutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
+        @OutputCustomType.Parameter("loadBalancingUtilization") @Nullable RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("metrics") @Nullable List<RegionAutoscalerAutoscalingPolicyMetric> metrics,
+        @OutputCustomType.Parameter("minReplicas") Integer minReplicas,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("scaleDownControl") @Nullable RegionAutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
+        @OutputCustomType.Parameter("scaleInControl") @Nullable RegionAutoscalerAutoscalingPolicyScaleInControl scaleInControl,
+        @OutputCustomType.Parameter("scalingSchedules") @Nullable List<RegionAutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;

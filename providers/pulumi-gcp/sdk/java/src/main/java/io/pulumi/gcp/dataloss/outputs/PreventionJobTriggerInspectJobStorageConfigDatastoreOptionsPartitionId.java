@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor({"namespaceId","projectId"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId(
-        @Nullable String namespaceId,
-        String projectId) {
+        @OutputCustomType.Parameter("namespaceId") @Nullable String namespaceId,
+        @OutputCustomType.Parameter("projectId") String projectId) {
         this.namespaceId = namespaceId;
         this.projectId = projectId;
     }

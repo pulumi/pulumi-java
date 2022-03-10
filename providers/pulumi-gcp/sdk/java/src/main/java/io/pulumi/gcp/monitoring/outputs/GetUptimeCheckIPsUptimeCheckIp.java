@@ -29,11 +29,11 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"ipAddress","location","region"})
+    @OutputCustomType.Constructor
     private GetUptimeCheckIPsUptimeCheckIp(
-        String ipAddress,
-        String location,
-        String region) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("region") String region) {
         this.ipAddress = ipAddress;
         this.location = location;
         this.region = region;

@@ -22,10 +22,10 @@ public final class BucketLifecycleRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"storageClass","type"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleAction(
-        @Nullable String storageClass,
-        String type) {
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass,
+        @OutputCustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

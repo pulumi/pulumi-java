@@ -13,10 +13,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule
     private final Integer hoursInCycle;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"hoursInCycle","startTime"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(
-        Integer hoursInCycle,
-        String startTime) {
+        @OutputCustomType.Parameter("hoursInCycle") Integer hoursInCycle,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.hoursInCycle = hoursInCycle;
         this.startTime = startTime;
     }

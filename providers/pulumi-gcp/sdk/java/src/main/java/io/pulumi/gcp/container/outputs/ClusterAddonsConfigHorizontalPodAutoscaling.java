@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigHorizontalPodAutoscaling {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private ClusterAddonsConfigHorizontalPodAutoscaling(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private ClusterAddonsConfigHorizontalPodAutoscaling(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

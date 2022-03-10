@@ -105,23 +105,23 @@ public final class ClusterClusterConfigSecurityConfigKerberosConfig {
      */
     private final @Nullable String truststoreUri;
 
-    @OutputCustomType.Constructor({"crossRealmTrustAdminServer","crossRealmTrustKdc","crossRealmTrustRealm","crossRealmTrustSharedPasswordUri","enableKerberos","kdcDbKeyUri","keyPasswordUri","keystorePasswordUri","keystoreUri","kmsKeyUri","realm","rootPrincipalPasswordUri","tgtLifetimeHours","truststorePasswordUri","truststoreUri"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigSecurityConfigKerberosConfig(
-        @Nullable String crossRealmTrustAdminServer,
-        @Nullable String crossRealmTrustKdc,
-        @Nullable String crossRealmTrustRealm,
-        @Nullable String crossRealmTrustSharedPasswordUri,
-        @Nullable Boolean enableKerberos,
-        @Nullable String kdcDbKeyUri,
-        @Nullable String keyPasswordUri,
-        @Nullable String keystorePasswordUri,
-        @Nullable String keystoreUri,
-        String kmsKeyUri,
-        @Nullable String realm,
-        String rootPrincipalPasswordUri,
-        @Nullable Integer tgtLifetimeHours,
-        @Nullable String truststorePasswordUri,
-        @Nullable String truststoreUri) {
+        @OutputCustomType.Parameter("crossRealmTrustAdminServer") @Nullable String crossRealmTrustAdminServer,
+        @OutputCustomType.Parameter("crossRealmTrustKdc") @Nullable String crossRealmTrustKdc,
+        @OutputCustomType.Parameter("crossRealmTrustRealm") @Nullable String crossRealmTrustRealm,
+        @OutputCustomType.Parameter("crossRealmTrustSharedPasswordUri") @Nullable String crossRealmTrustSharedPasswordUri,
+        @OutputCustomType.Parameter("enableKerberos") @Nullable Boolean enableKerberos,
+        @OutputCustomType.Parameter("kdcDbKeyUri") @Nullable String kdcDbKeyUri,
+        @OutputCustomType.Parameter("keyPasswordUri") @Nullable String keyPasswordUri,
+        @OutputCustomType.Parameter("keystorePasswordUri") @Nullable String keystorePasswordUri,
+        @OutputCustomType.Parameter("keystoreUri") @Nullable String keystoreUri,
+        @OutputCustomType.Parameter("kmsKeyUri") String kmsKeyUri,
+        @OutputCustomType.Parameter("realm") @Nullable String realm,
+        @OutputCustomType.Parameter("rootPrincipalPasswordUri") String rootPrincipalPasswordUri,
+        @OutputCustomType.Parameter("tgtLifetimeHours") @Nullable Integer tgtLifetimeHours,
+        @OutputCustomType.Parameter("truststorePasswordUri") @Nullable String truststorePasswordUri,
+        @OutputCustomType.Parameter("truststoreUri") @Nullable String truststoreUri) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;

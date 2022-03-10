@@ -21,10 +21,10 @@ public final class NodePoolAutoscaling {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private NodePoolAutoscaling(
-        Integer maxNodeCount,
-        Integer minNodeCount) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }

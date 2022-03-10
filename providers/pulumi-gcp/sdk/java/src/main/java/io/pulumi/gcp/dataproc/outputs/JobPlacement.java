@@ -14,10 +14,10 @@ public final class JobPlacement {
     private final String clusterName;
     private final @Nullable String clusterUuid;
 
-    @OutputCustomType.Constructor({"clusterName","clusterUuid"})
+    @OutputCustomType.Constructor
     private JobPlacement(
-        String clusterName,
-        @Nullable String clusterUuid) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterUuid") @Nullable String clusterUuid) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
     }

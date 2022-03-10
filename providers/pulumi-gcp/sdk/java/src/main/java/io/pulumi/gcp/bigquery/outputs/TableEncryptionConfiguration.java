@@ -26,10 +26,10 @@ public final class TableEncryptionConfiguration {
      */
     private final @Nullable String kmsKeyVersion;
 
-    @OutputCustomType.Constructor({"kmsKeyName","kmsKeyVersion"})
+    @OutputCustomType.Constructor
     private TableEncryptionConfiguration(
-        String kmsKeyName,
-        @Nullable String kmsKeyVersion) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }

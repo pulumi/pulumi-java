@@ -32,12 +32,12 @@ public final class OrganizationPolicyListPolicy {
      */
     private final @Nullable String suggestedValue;
 
-    @OutputCustomType.Constructor({"allow","deny","inheritFromParent","suggestedValue"})
+    @OutputCustomType.Constructor
     private OrganizationPolicyListPolicy(
-        @Nullable OrganizationPolicyListPolicyAllow allow,
-        @Nullable OrganizationPolicyListPolicyDeny deny,
-        @Nullable Boolean inheritFromParent,
-        @Nullable String suggestedValue) {
+        @OutputCustomType.Parameter("allow") @Nullable OrganizationPolicyListPolicyAllow allow,
+        @OutputCustomType.Parameter("deny") @Nullable OrganizationPolicyListPolicyDeny deny,
+        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @OutputCustomType.Parameter("suggestedValue") @Nullable String suggestedValue) {
         this.allow = allow;
         this.deny = deny;
         this.inheritFromParent = inheritFromParent;

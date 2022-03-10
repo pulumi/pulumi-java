@@ -23,10 +23,10 @@ public final class CertificateTemplatePassthroughExtensions {
      */
     private final @Nullable List<String> knownExtensions;
 
-    @OutputCustomType.Constructor({"additionalExtensions","knownExtensions"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePassthroughExtensions(
-        @Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions,
-        @Nullable List<String> knownExtensions) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePassthroughExtensionsAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("knownExtensions") @Nullable List<String> knownExtensions) {
         this.additionalExtensions = additionalExtensions;
         this.knownExtensions = knownExtensions;
     }

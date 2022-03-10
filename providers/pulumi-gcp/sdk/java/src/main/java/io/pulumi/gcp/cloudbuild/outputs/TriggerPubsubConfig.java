@@ -35,12 +35,12 @@ public final class TriggerPubsubConfig {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"serviceAccountEmail","state","subscription","topic"})
+    @OutputCustomType.Constructor
     private TriggerPubsubConfig(
-        @Nullable String serviceAccountEmail,
-        @Nullable String state,
-        @Nullable String subscription,
-        String topic) {
+        @OutputCustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscription") @Nullable String subscription,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;

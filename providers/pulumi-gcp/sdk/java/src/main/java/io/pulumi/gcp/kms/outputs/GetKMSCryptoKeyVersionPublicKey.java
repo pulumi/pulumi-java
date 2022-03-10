@@ -20,10 +20,10 @@ public final class GetKMSCryptoKeyVersionPublicKey {
      */
     private final String pem;
 
-    @OutputCustomType.Constructor({"algorithm","pem"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyVersionPublicKey(
-        String algorithm,
-        String pem) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("pem") String pem) {
         this.algorithm = algorithm;
         this.pem = pem;
     }

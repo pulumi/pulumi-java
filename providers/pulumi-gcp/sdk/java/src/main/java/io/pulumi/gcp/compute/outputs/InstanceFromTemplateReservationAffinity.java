@@ -15,10 +15,10 @@ public final class InstanceFromTemplateReservationAffinity {
     private final @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation;
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservation","type"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateReservationAffinity(
-        @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation,
-        String type) {
+        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceFromTemplateReservationAffinitySpecificReservation specificReservation,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }

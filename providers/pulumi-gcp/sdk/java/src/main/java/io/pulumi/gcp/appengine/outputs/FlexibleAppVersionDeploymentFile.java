@@ -27,11 +27,11 @@ public final class FlexibleAppVersionDeploymentFile {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor({"name","sha1Sum","sourceUrl"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionDeploymentFile(
-        String name,
-        @Nullable String sha1Sum,
-        String sourceUrl) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sha1Sum") @Nullable String sha1Sum,
+        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
         this.name = name;
         this.sha1Sum = sha1Sum;
         this.sourceUrl = sourceUrl;

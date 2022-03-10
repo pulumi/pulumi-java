@@ -20,8 +20,8 @@ public final class DicomStoreNotificationConfig {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"pubsubTopic"})
-    private DicomStoreNotificationConfig(String pubsubTopic) {
+    @OutputCustomType.Constructor
+    private DicomStoreNotificationConfig(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 

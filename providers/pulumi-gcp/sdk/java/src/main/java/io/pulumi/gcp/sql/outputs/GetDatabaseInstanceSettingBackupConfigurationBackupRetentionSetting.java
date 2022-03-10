@@ -13,10 +13,10 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     private final Integer retainedBackups;
     private final String retentionUnit;
 
-    @OutputCustomType.Constructor({"retainedBackups","retentionUnit"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(
-        Integer retainedBackups,
-        String retentionUnit) {
+        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @OutputCustomType.Parameter("retentionUnit") String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }

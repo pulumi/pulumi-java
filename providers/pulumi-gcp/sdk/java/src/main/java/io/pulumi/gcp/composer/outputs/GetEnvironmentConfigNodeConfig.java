@@ -25,19 +25,19 @@ public final class GetEnvironmentConfigNodeConfig {
     private final List<String> tags;
     private final String zone;
 
-    @OutputCustomType.Constructor({"diskSizeGb","enableIpMasqAgent","ipAllocationPolicies","machineType","maxPodsPerNode","network","oauthScopes","serviceAccount","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigNodeConfig(
-        Integer diskSizeGb,
-        Boolean enableIpMasqAgent,
-        List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies,
-        String machineType,
-        Integer maxPodsPerNode,
-        String network,
-        List<String> oauthScopes,
-        String serviceAccount,
-        String subnetwork,
-        List<String> tags,
-        String zone) {
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
+        @OutputCustomType.Parameter("ipAllocationPolicies") List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicies = ipAllocationPolicies;

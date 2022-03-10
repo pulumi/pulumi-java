@@ -13,10 +13,10 @@ public final class GetInstanceTemplateAdvancedMachineFeature {
     private final Boolean enableNestedVirtualization;
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","threadsPerCore"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateAdvancedMachineFeature(
-        Boolean enableNestedVirtualization,
-        Integer threadsPerCore) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.threadsPerCore = threadsPerCore;
     }

@@ -89,23 +89,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      */
     private final @Nullable String truststorePassword;
 
-    @OutputCustomType.Constructor({"crossRealmTrustAdminServer","crossRealmTrustKdc","crossRealmTrustRealm","crossRealmTrustSharedPassword","enableKerberos","kdcDbKey","keyPassword","keystore","keystorePassword","kmsKey","realm","rootPrincipalPassword","tgtLifetimeHours","truststore","truststorePassword"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig(
-        @Nullable String crossRealmTrustAdminServer,
-        @Nullable String crossRealmTrustKdc,
-        @Nullable String crossRealmTrustRealm,
-        @Nullable String crossRealmTrustSharedPassword,
-        @Nullable Boolean enableKerberos,
-        @Nullable String kdcDbKey,
-        @Nullable String keyPassword,
-        @Nullable String keystore,
-        @Nullable String keystorePassword,
-        @Nullable String kmsKey,
-        @Nullable String realm,
-        @Nullable String rootPrincipalPassword,
-        @Nullable Integer tgtLifetimeHours,
-        @Nullable String truststore,
-        @Nullable String truststorePassword) {
+        @OutputCustomType.Parameter("crossRealmTrustAdminServer") @Nullable String crossRealmTrustAdminServer,
+        @OutputCustomType.Parameter("crossRealmTrustKdc") @Nullable String crossRealmTrustKdc,
+        @OutputCustomType.Parameter("crossRealmTrustRealm") @Nullable String crossRealmTrustRealm,
+        @OutputCustomType.Parameter("crossRealmTrustSharedPassword") @Nullable String crossRealmTrustSharedPassword,
+        @OutputCustomType.Parameter("enableKerberos") @Nullable Boolean enableKerberos,
+        @OutputCustomType.Parameter("kdcDbKey") @Nullable String kdcDbKey,
+        @OutputCustomType.Parameter("keyPassword") @Nullable String keyPassword,
+        @OutputCustomType.Parameter("keystore") @Nullable String keystore,
+        @OutputCustomType.Parameter("keystorePassword") @Nullable String keystorePassword,
+        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey,
+        @OutputCustomType.Parameter("realm") @Nullable String realm,
+        @OutputCustomType.Parameter("rootPrincipalPassword") @Nullable String rootPrincipalPassword,
+        @OutputCustomType.Parameter("tgtLifetimeHours") @Nullable Integer tgtLifetimeHours,
+        @OutputCustomType.Parameter("truststore") @Nullable String truststore,
+        @OutputCustomType.Parameter("truststorePassword") @Nullable String truststorePassword) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;

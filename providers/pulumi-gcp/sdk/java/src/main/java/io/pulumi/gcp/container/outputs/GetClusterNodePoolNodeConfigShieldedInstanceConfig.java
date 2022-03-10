@@ -12,10 +12,10 @@ public final class GetClusterNodePoolNodeConfigShieldedInstanceConfig {
     private final Boolean enableIntegrityMonitoring;
     private final Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
+    @OutputCustomType.Constructor
     private GetClusterNodePoolNodeConfigShieldedInstanceConfig(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }

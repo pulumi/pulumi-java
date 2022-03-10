@@ -40,15 +40,15 @@ public final class GetNetworkResult {
      */
     private final List<String> subnetworksSelfLinks;
 
-    @OutputCustomType.Constructor({"description","gatewayIpv4","id","name","project","selfLink","subnetworksSelfLinks"})
+    @OutputCustomType.Constructor
     private GetNetworkResult(
-        String description,
-        String gatewayIpv4,
-        String id,
-        String name,
-        @Nullable String project,
-        String selfLink,
-        List<String> subnetworksSelfLinks) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("gatewayIpv4") String gatewayIpv4,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("subnetworksSelfLinks") List<String> subnetworksSelfLinks) {
         this.description = description;
         this.gatewayIpv4 = gatewayIpv4;
         this.id = id;

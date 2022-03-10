@@ -51,16 +51,16 @@ public final class JobPysparkConfig {
      */
     private final @Nullable List<String> pythonFileUris;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","loggingConfig","mainPythonFileUri","properties","pythonFileUris"})
+    @OutputCustomType.Constructor
     private JobPysparkConfig(
-        @Nullable List<String> archiveUris,
-        @Nullable List<String> args,
-        @Nullable List<String> fileUris,
-        @Nullable List<String> jarFileUris,
-        @Nullable JobPysparkConfigLoggingConfig loggingConfig,
-        String mainPythonFileUri,
-        @Nullable Map<String,String> properties,
-        @Nullable List<String> pythonFileUris) {
+        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable JobPysparkConfigLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("mainPythonFileUri") String mainPythonFileUri,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("pythonFileUris") @Nullable List<String> pythonFileUris) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

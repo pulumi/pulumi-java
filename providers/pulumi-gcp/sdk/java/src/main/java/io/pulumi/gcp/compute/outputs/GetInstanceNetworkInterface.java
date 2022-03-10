@@ -56,20 +56,20 @@ public final class GetInstanceNetworkInterface {
      */
     private final String subnetworkProject;
 
-    @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","ipv6AccessConfigs","ipv6AccessType","name","network","networkIp","nicType","queueCount","stackType","subnetwork","subnetworkProject"})
+    @OutputCustomType.Constructor
     private GetInstanceNetworkInterface(
-        List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs,
-        List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges,
-        List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
-        String ipv6AccessType,
-        String name,
-        String network,
-        String networkIp,
-        String nicType,
-        Integer queueCount,
-        String stackType,
-        String subnetwork,
-        String subnetworkProject) {
+        @OutputCustomType.Parameter("accessConfigs") List<GetInstanceNetworkInterfaceAccessConfig> accessConfigs,
+        @OutputCustomType.Parameter("aliasIpRanges") List<GetInstanceNetworkInterfaceAliasIpRange> aliasIpRanges,
+        @OutputCustomType.Parameter("ipv6AccessConfigs") List<GetInstanceNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
+        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkIp") String networkIp,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("queueCount") Integer queueCount,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("subnetworkProject") String subnetworkProject) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.ipv6AccessConfigs = ipv6AccessConfigs;

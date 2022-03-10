@@ -15,8 +15,8 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

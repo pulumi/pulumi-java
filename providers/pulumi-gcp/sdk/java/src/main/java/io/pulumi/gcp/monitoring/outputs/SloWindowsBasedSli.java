@@ -64,13 +64,13 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable String windowPeriod;
 
-    @OutputCustomType.Constructor({"goodBadMetricFilter","goodTotalRatioThreshold","metricMeanInRange","metricSumInRange","windowPeriod"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSli(
-        @Nullable String goodBadMetricFilter,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
-        @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
-        @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
-        @Nullable String windowPeriod) {
+        @OutputCustomType.Parameter("goodBadMetricFilter") @Nullable String goodBadMetricFilter,
+        @OutputCustomType.Parameter("goodTotalRatioThreshold") @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
+        @OutputCustomType.Parameter("metricMeanInRange") @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
+        @OutputCustomType.Parameter("metricSumInRange") @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
+        @OutputCustomType.Parameter("windowPeriod") @Nullable String windowPeriod) {
         this.goodBadMetricFilter = goodBadMetricFilter;
         this.goodTotalRatioThreshold = goodTotalRatioThreshold;
         this.metricMeanInRange = metricMeanInRange;

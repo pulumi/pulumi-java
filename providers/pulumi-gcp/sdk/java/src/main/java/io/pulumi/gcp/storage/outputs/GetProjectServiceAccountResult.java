@@ -25,12 +25,12 @@ public final class GetProjectServiceAccountResult {
     private final String project;
     private final @Nullable String userProject;
 
-    @OutputCustomType.Constructor({"emailAddress","id","project","userProject"})
+    @OutputCustomType.Constructor
     private GetProjectServiceAccountResult(
-        String emailAddress,
-        String id,
-        String project,
-        @Nullable String userProject) {
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("userProject") @Nullable String userProject) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.project = project;

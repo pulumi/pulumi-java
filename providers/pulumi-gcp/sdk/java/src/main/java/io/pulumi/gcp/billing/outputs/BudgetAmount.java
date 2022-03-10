@@ -29,10 +29,10 @@ public final class BudgetAmount {
      */
     private final @Nullable BudgetAmountSpecifiedAmount specifiedAmount;
 
-    @OutputCustomType.Constructor({"lastPeriodAmount","specifiedAmount"})
+    @OutputCustomType.Constructor
     private BudgetAmount(
-        @Nullable Boolean lastPeriodAmount,
-        @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
+        @OutputCustomType.Parameter("lastPeriodAmount") @Nullable Boolean lastPeriodAmount,
+        @OutputCustomType.Parameter("specifiedAmount") @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }

@@ -16,12 +16,12 @@ public final class JobStatus {
     private final @Nullable String stateStartTime;
     private final @Nullable String substate;
 
-    @OutputCustomType.Constructor({"details","state","stateStartTime","substate"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable String details,
-        @Nullable String state,
-        @Nullable String stateStartTime,
-        @Nullable String substate) {
+        @OutputCustomType.Parameter("details") @Nullable String details,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stateStartTime") @Nullable String stateStartTime,
+        @OutputCustomType.Parameter("substate") @Nullable String substate) {
         this.details = details;
         this.state = state;
         this.stateStartTime = stateStartTime;

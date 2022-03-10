@@ -48,14 +48,14 @@ public final class StandardAppVersionAutomaticScaling {
      */
     private final @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings;
 
-    @OutputCustomType.Constructor({"maxConcurrentRequests","maxIdleInstances","maxPendingLatency","minIdleInstances","minPendingLatency","standardSchedulerSettings"})
+    @OutputCustomType.Constructor
     private StandardAppVersionAutomaticScaling(
-        @Nullable Integer maxConcurrentRequests,
-        @Nullable Integer maxIdleInstances,
-        @Nullable String maxPendingLatency,
-        @Nullable Integer minIdleInstances,
-        @Nullable String minPendingLatency,
-        @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
+        @OutputCustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
+        @OutputCustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
+        @OutputCustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
+        @OutputCustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
+        @OutputCustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
+        @OutputCustomType.Parameter("standardSchedulerSettings") @Nullable StandardAppVersionAutomaticScalingStandardSchedulerSettings standardSchedulerSettings) {
         this.maxConcurrentRequests = maxConcurrentRequests;
         this.maxIdleInstances = maxIdleInstances;
         this.maxPendingLatency = maxPendingLatency;

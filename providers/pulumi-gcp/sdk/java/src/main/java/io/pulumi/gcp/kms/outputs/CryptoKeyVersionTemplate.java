@@ -23,10 +23,10 @@ public final class CryptoKeyVersionTemplate {
      */
     private final @Nullable String protectionLevel;
 
-    @OutputCustomType.Constructor({"algorithm","protectionLevel"})
+    @OutputCustomType.Constructor
     private CryptoKeyVersionTemplate(
-        String algorithm,
-        @Nullable String protectionLevel) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("protectionLevel") @Nullable String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

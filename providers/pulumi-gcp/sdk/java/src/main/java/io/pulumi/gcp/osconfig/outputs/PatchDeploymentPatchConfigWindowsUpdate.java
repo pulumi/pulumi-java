@@ -29,11 +29,11 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      */
     private final @Nullable List<String> exclusivePatches;
 
-    @OutputCustomType.Constructor({"classifications","excludes","exclusivePatches"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigWindowsUpdate(
-        @Nullable List<String> classifications,
-        @Nullable List<String> excludes,
-        @Nullable List<String> exclusivePatches) {
+        @OutputCustomType.Parameter("classifications") @Nullable List<String> classifications,
+        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

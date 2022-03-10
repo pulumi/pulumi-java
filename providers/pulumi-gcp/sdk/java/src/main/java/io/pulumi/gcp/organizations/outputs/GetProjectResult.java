@@ -32,18 +32,18 @@ public final class GetProjectResult {
     private final @Nullable String projectId;
     private final Boolean skipDelete;
 
-    @OutputCustomType.Constructor({"autoCreateNetwork","billingAccount","folderId","id","labels","name","number","orgId","projectId","skipDelete"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        Boolean autoCreateNetwork,
-        String billingAccount,
-        String folderId,
-        String id,
-        Map<String,String> labels,
-        String name,
-        String number,
-        String orgId,
-        @Nullable String projectId,
-        Boolean skipDelete) {
+        @OutputCustomType.Parameter("autoCreateNetwork") Boolean autoCreateNetwork,
+        @OutputCustomType.Parameter("billingAccount") String billingAccount,
+        @OutputCustomType.Parameter("folderId") String folderId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("number") String number,
+        @OutputCustomType.Parameter("orgId") String orgId,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("skipDelete") Boolean skipDelete) {
         this.autoCreateNetwork = autoCreateNetwork;
         this.billingAccount = billingAccount;
         this.folderId = folderId;

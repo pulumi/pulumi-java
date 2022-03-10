@@ -26,13 +26,13 @@ public final class GetZonesResult {
     private final @Nullable String region;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"id","names","project","region","status"})
+    @OutputCustomType.Constructor
     private GetZonesResult(
-        String id,
-        List<String> names,
-        String project,
-        @Nullable String region,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.id = id;
         this.names = names;
         this.project = project;

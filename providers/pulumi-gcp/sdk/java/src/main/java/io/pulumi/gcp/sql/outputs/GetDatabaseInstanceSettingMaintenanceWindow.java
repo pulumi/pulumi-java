@@ -14,11 +14,11 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
     private final Integer hour;
     private final String updateTrack;
 
-    @OutputCustomType.Constructor({"day","hour","updateTrack"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingMaintenanceWindow(
-        Integer day,
-        Integer hour,
-        String updateTrack) {
+        @OutputCustomType.Parameter("day") Integer day,
+        @OutputCustomType.Parameter("hour") Integer hour,
+        @OutputCustomType.Parameter("updateTrack") String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;

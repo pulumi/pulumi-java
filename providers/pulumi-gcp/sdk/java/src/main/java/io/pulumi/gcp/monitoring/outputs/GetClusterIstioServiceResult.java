@@ -28,18 +28,18 @@ public final class GetClusterIstioServiceResult {
     private final String serviceNamespace;
     private final List<GetClusterIstioServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"clusterName","displayName","id","location","name","project","serviceId","serviceName","serviceNamespace","telemetries"})
+    @OutputCustomType.Constructor
     private GetClusterIstioServiceResult(
-        String clusterName,
-        String displayName,
-        String id,
-        String location,
-        String name,
-        @Nullable String project,
-        String serviceId,
-        String serviceName,
-        String serviceNamespace,
-        List<GetClusterIstioServiceTelemetry> telemetries) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @OutputCustomType.Parameter("telemetries") List<GetClusterIstioServiceTelemetry> telemetries) {
         this.clusterName = clusterName;
         this.displayName = displayName;
         this.id = id;

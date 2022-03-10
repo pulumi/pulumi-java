@@ -60,16 +60,16 @@ public final class TagField {
      */
     private final @Nullable String timestampValue;
 
-    @OutputCustomType.Constructor({"boolValue","displayName","doubleValue","enumValue","fieldName","order","stringValue","timestampValue"})
+    @OutputCustomType.Constructor
     private TagField(
-        @Nullable Boolean boolValue,
-        @Nullable String displayName,
-        @Nullable Double doubleValue,
-        @Nullable String enumValue,
-        String fieldName,
-        @Nullable Integer order,
-        @Nullable String stringValue,
-        @Nullable String timestampValue) {
+        @OutputCustomType.Parameter("boolValue") @Nullable Boolean boolValue,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @OutputCustomType.Parameter("enumValue") @Nullable String enumValue,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("timestampValue") @Nullable String timestampValue) {
         this.boolValue = boolValue;
         this.displayName = displayName;
         this.doubleValue = doubleValue;

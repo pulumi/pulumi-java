@@ -15,8 +15,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPath {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private PreventionStoredInfoTypeLargeCustomDictionaryOutputPath(String path) {
+    @OutputCustomType.Constructor
+    private PreventionStoredInfoTypeLargeCustomDictionaryOutputPath(@OutputCustomType.Parameter("path") String path) {
         this.path = path;
     }
 

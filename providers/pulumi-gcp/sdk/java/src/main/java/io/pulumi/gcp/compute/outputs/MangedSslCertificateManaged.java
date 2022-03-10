@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class MangedSslCertificateManaged {
     private final List<String> domains;
 
-    @OutputCustomType.Constructor({"domains"})
-    private MangedSslCertificateManaged(List<String> domains) {
+    @OutputCustomType.Constructor
+    private MangedSslCertificateManaged(@OutputCustomType.Parameter("domains") List<String> domains) {
         this.domains = domains;
     }
 

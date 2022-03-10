@@ -32,11 +32,11 @@ public final class ClusterMaintenancePolicy {
      */
     private final @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow;
 
-    @OutputCustomType.Constructor({"dailyMaintenanceWindow","maintenanceExclusions","recurringWindow"})
+    @OutputCustomType.Constructor
     private ClusterMaintenancePolicy(
-        @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
-        @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
+        @OutputCustomType.Parameter("dailyMaintenanceWindow") @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
+        @OutputCustomType.Parameter("maintenanceExclusions") @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
+        @OutputCustomType.Parameter("recurringWindow") @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;

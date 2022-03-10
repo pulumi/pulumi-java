@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetSecretTopic {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetSecretTopic(String name) {
+    @OutputCustomType.Constructor
+    private GetSecretTopic(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

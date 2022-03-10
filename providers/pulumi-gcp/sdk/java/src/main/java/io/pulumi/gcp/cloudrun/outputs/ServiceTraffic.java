@@ -32,11 +32,11 @@ public final class ServiceTraffic {
      */
     private final @Nullable String revisionName;
 
-    @OutputCustomType.Constructor({"latestRevision","percent","revisionName"})
+    @OutputCustomType.Constructor
     private ServiceTraffic(
-        @Nullable Boolean latestRevision,
-        Integer percent,
-        @Nullable String revisionName) {
+        @OutputCustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revisionName") @Nullable String revisionName) {
         this.latestRevision = latestRevision;
         this.percent = percent;
         this.revisionName = revisionName;

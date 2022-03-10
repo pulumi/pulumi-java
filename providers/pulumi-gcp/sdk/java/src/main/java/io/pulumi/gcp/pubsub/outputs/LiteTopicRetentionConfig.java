@@ -27,10 +27,10 @@ public final class LiteTopicRetentionConfig {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor({"perPartitionBytes","period"})
+    @OutputCustomType.Constructor
     private LiteTopicRetentionConfig(
-        String perPartitionBytes,
-        @Nullable String period) {
+        @OutputCustomType.Parameter("perPartitionBytes") String perPartitionBytes,
+        @OutputCustomType.Parameter("period") @Nullable String period) {
         this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }

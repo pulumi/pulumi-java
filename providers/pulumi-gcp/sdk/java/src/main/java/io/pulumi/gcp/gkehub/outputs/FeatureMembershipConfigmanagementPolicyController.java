@@ -44,14 +44,14 @@ public final class FeatureMembershipConfigmanagementPolicyController {
      */
     private final @Nullable Boolean templateLibraryInstalled;
 
-    @OutputCustomType.Constructor({"auditIntervalSeconds","enabled","exemptableNamespaces","logDeniesEnabled","referentialRulesEnabled","templateLibraryInstalled"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementPolicyController(
-        @Nullable String auditIntervalSeconds,
-        @Nullable Boolean enabled,
-        @Nullable List<String> exemptableNamespaces,
-        @Nullable Boolean logDeniesEnabled,
-        @Nullable Boolean referentialRulesEnabled,
-        @Nullable Boolean templateLibraryInstalled) {
+        @OutputCustomType.Parameter("auditIntervalSeconds") @Nullable String auditIntervalSeconds,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("exemptableNamespaces") @Nullable List<String> exemptableNamespaces,
+        @OutputCustomType.Parameter("logDeniesEnabled") @Nullable Boolean logDeniesEnabled,
+        @OutputCustomType.Parameter("referentialRulesEnabled") @Nullable Boolean referentialRulesEnabled,
+        @OutputCustomType.Parameter("templateLibraryInstalled") @Nullable Boolean templateLibraryInstalled) {
         this.auditIntervalSeconds = auditIntervalSeconds;
         this.enabled = enabled;
         this.exemptableNamespaces = exemptableNamespaces;

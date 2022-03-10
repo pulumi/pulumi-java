@@ -32,12 +32,12 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
      */
     private final @Nullable Integer targetWriteOpsPerSecond;
 
-    @OutputCustomType.Constructor({"targetReadBytesPerSecond","targetReadOpsPerSecond","targetWriteBytesPerSecond","targetWriteOpsPerSecond"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionAutomaticScalingDiskUtilization(
-        @Nullable Integer targetReadBytesPerSecond,
-        @Nullable Integer targetReadOpsPerSecond,
-        @Nullable Integer targetWriteBytesPerSecond,
-        @Nullable Integer targetWriteOpsPerSecond) {
+        @OutputCustomType.Parameter("targetReadBytesPerSecond") @Nullable Integer targetReadBytesPerSecond,
+        @OutputCustomType.Parameter("targetReadOpsPerSecond") @Nullable Integer targetReadOpsPerSecond,
+        @OutputCustomType.Parameter("targetWriteBytesPerSecond") @Nullable Integer targetWriteBytesPerSecond,
+        @OutputCustomType.Parameter("targetWriteOpsPerSecond") @Nullable Integer targetWriteOpsPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;

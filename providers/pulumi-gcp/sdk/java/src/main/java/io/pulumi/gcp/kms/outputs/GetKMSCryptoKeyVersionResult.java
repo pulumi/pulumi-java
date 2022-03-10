@@ -47,16 +47,16 @@ public final class GetKMSCryptoKeyVersionResult {
     private final String state;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"algorithm","cryptoKey","id","name","protectionLevel","publicKeys","state","version"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyVersionResult(
-        String algorithm,
-        String cryptoKey,
-        String id,
-        String name,
-        String protectionLevel,
-        List<GetKMSCryptoKeyVersionPublicKey> publicKeys,
-        String state,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
+        @OutputCustomType.Parameter("publicKeys") List<GetKMSCryptoKeyVersionPublicKey> publicKeys,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.algorithm = algorithm;
         this.cryptoKey = cryptoKey;
         this.id = id;

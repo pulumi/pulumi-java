@@ -45,29 +45,29 @@ public final class GetDatabaseInstanceResult {
     private final String serviceAccountEmailAddress;
     private final List<GetDatabaseInstanceSetting> settings;
 
-    @OutputCustomType.Constructor({"clones","connectionName","databaseVersion","deletionProtection","encryptionKeyName","firstIpAddress","id","ipAddresses","masterInstanceName","name","privateIpAddress","project","publicIpAddress","region","replicaConfigurations","restoreBackupContexts","rootPassword","selfLink","serverCaCerts","serviceAccountEmailAddress","settings"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceResult(
-        List<GetDatabaseInstanceClone> clones,
-        String connectionName,
-        String databaseVersion,
-        Boolean deletionProtection,
-        String encryptionKeyName,
-        String firstIpAddress,
-        String id,
-        List<GetDatabaseInstanceIpAddress> ipAddresses,
-        String masterInstanceName,
-        String name,
-        String privateIpAddress,
-        @Nullable String project,
-        String publicIpAddress,
-        String region,
-        List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
-        List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
-        String rootPassword,
-        String selfLink,
-        List<GetDatabaseInstanceServerCaCert> serverCaCerts,
-        String serviceAccountEmailAddress,
-        List<GetDatabaseInstanceSetting> settings) {
+        @OutputCustomType.Parameter("clones") List<GetDatabaseInstanceClone> clones,
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
+        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @OutputCustomType.Parameter("firstIpAddress") String firstIpAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddresses") List<GetDatabaseInstanceIpAddress> ipAddresses,
+        @OutputCustomType.Parameter("masterInstanceName") String masterInstanceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("replicaConfigurations") List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
+        @OutputCustomType.Parameter("restoreBackupContexts") List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
+        @OutputCustomType.Parameter("rootPassword") String rootPassword,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverCaCerts") List<GetDatabaseInstanceServerCaCert> serverCaCerts,
+        @OutputCustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
+        @OutputCustomType.Parameter("settings") List<GetDatabaseInstanceSetting> settings) {
         this.clones = clones;
         this.connectionName = connectionName;
         this.databaseVersion = databaseVersion;

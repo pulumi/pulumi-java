@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetOrganizationPolicyRestorePolicy {
     private final Boolean $default;
 
-    @OutputCustomType.Constructor({"$default"})
-    private GetOrganizationPolicyRestorePolicy(Boolean $default) {
+    @OutputCustomType.Constructor
+    private GetOrganizationPolicyRestorePolicy(@OutputCustomType.Parameter("default") Boolean $default) {
         this.$default = $default;
     }
 

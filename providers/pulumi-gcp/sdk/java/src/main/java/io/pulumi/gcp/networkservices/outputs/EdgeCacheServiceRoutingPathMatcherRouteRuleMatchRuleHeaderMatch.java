@@ -45,14 +45,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      */
     private final @Nullable String suffixMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","headerName","invertMatch","prefixMatch","presentMatch","suffixMatch"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch(
-        @Nullable String exactMatch,
-        String headerName,
-        @Nullable Boolean invertMatch,
-        @Nullable String prefixMatch,
-        @Nullable Boolean presentMatch,
-        @Nullable String suffixMatch) {
+        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("invertMatch") @Nullable Boolean invertMatch,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
+        @OutputCustomType.Parameter("suffixMatch") @Nullable String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;

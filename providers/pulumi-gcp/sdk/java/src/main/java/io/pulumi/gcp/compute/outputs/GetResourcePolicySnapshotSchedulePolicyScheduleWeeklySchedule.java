@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
-    @OutputCustomType.Constructor({"dayOfWeeks"})
-    private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
+    @OutputCustomType.Constructor
+    private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(@OutputCustomType.Parameter("dayOfWeeks") List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
     }
 

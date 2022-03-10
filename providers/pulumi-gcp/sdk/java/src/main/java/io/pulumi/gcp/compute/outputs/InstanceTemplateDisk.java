@@ -107,22 +107,22 @@ public final class InstanceTemplateDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKey","diskName","diskSizeGb","diskType","$interface","labels","mode","resourcePolicies","source","sourceImage","type"})
+    @OutputCustomType.Constructor
     private InstanceTemplateDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable Boolean boot,
-        @Nullable String deviceName,
-        @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGb,
-        @Nullable String diskType,
-        @Nullable String $interface,
-        @Nullable Map<String,String> labels,
-        @Nullable String mode,
-        @Nullable String resourcePolicies,
-        @Nullable String source,
-        @Nullable String sourceImage,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("interface") @Nullable String $interface,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("resourcePolicies") @Nullable String resourcePolicies,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("sourceImage") @Nullable String sourceImage,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

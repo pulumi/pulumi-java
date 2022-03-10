@@ -24,10 +24,10 @@ public final class FeatureMembershipConfigmanagementConfigSync {
      */
     private final @Nullable String sourceFormat;
 
-    @OutputCustomType.Constructor({"git","sourceFormat"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementConfigSync(
-        @Nullable FeatureMembershipConfigmanagementConfigSyncGit git,
-        @Nullable String sourceFormat) {
+        @OutputCustomType.Parameter("git") @Nullable FeatureMembershipConfigmanagementConfigSyncGit git,
+        @OutputCustomType.Parameter("sourceFormat") @Nullable String sourceFormat) {
         this.git = git;
         this.sourceFormat = sourceFormat;
     }

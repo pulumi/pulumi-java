@@ -86,21 +86,21 @@ public final class AwsClusterControlPlane {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"awsServicesAuthentication","configEncryption","databaseEncryption","iamInstanceProfile","instanceType","mainVolume","proxyConfig","rootVolume","securityGroupIds","sshConfig","subnetIds","tags","version"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlane(
-        AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
-        AwsClusterControlPlaneConfigEncryption configEncryption,
-        AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
-        String iamInstanceProfile,
-        @Nullable String instanceType,
-        @Nullable AwsClusterControlPlaneMainVolume mainVolume,
-        @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
-        @Nullable AwsClusterControlPlaneRootVolume rootVolume,
-        @Nullable List<String> securityGroupIds,
-        @Nullable AwsClusterControlPlaneSshConfig sshConfig,
-        List<String> subnetIds,
-        @Nullable Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("awsServicesAuthentication") AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
+        @OutputCustomType.Parameter("configEncryption") AwsClusterControlPlaneConfigEncryption configEncryption,
+        @OutputCustomType.Parameter("databaseEncryption") AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("mainVolume") @Nullable AwsClusterControlPlaneMainVolume mainVolume,
+        @OutputCustomType.Parameter("proxyConfig") @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
+        @OutputCustomType.Parameter("rootVolume") @Nullable AwsClusterControlPlaneRootVolume rootVolume,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("sshConfig") @Nullable AwsClusterControlPlaneSshConfig sshConfig,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.awsServicesAuthentication = awsServicesAuthentication;
         this.configEncryption = configEncryption;
         this.databaseEncryption = databaseEncryption;

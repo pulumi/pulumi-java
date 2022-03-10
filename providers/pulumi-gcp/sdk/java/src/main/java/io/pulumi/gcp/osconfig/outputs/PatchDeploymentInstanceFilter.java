@@ -44,13 +44,13 @@ public final class PatchDeploymentInstanceFilter {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"all","groupLabels","instanceNamePrefixes","instances","zones"})
+    @OutputCustomType.Constructor
     private PatchDeploymentInstanceFilter(
-        @Nullable Boolean all,
-        @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
-        @Nullable List<String> instanceNamePrefixes,
-        @Nullable List<String> instances,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("all") @Nullable Boolean all,
+        @OutputCustomType.Parameter("groupLabels") @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;

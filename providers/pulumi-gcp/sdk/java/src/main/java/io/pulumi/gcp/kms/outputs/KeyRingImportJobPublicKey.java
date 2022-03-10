@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class KeyRingImportJobPublicKey {
     private final @Nullable String pem;
 
-    @OutputCustomType.Constructor({"pem"})
-    private KeyRingImportJobPublicKey(@Nullable String pem) {
+    @OutputCustomType.Constructor
+    private KeyRingImportJobPublicKey(@OutputCustomType.Parameter("pem") @Nullable String pem) {
         this.pem = pem;
     }
 

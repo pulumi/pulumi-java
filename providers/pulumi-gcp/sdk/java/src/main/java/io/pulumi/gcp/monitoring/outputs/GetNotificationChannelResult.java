@@ -31,19 +31,19 @@ public final class GetNotificationChannelResult {
     private final @Nullable Map<String,String> userLabels;
     private final String verificationStatus;
 
-    @OutputCustomType.Constructor({"description","displayName","enabled","id","labels","name","project","sensitiveLabels","type","userLabels","verificationStatus"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        String description,
-        @Nullable String displayName,
-        Boolean enabled,
-        String id,
-        @Nullable Map<String,String> labels,
-        String name,
-        @Nullable String project,
-        List<GetNotificationChannelSensitiveLabel> sensitiveLabels,
-        @Nullable String type,
-        @Nullable Map<String,String> userLabels,
-        String verificationStatus) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("sensitiveLabels") List<GetNotificationChannelSensitiveLabel> sensitiveLabels,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
+        @OutputCustomType.Parameter("verificationStatus") String verificationStatus) {
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;

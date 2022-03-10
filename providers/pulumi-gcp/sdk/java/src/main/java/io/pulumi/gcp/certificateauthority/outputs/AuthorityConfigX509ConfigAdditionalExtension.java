@@ -29,11 +29,11 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"critical","objectId","value"})
+    @OutputCustomType.Constructor
     private AuthorityConfigX509ConfigAdditionalExtension(
-        Boolean critical,
-        AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId,
-        String value) {
+        @OutputCustomType.Parameter("critical") Boolean critical,
+        @OutputCustomType.Parameter("objectId") AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId,
+        @OutputCustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

@@ -14,11 +14,11 @@ public final class GetClusterClusterAutoscalingResourceLimit {
     private final Integer minimum;
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"maximum","minimum","resourceType"})
+    @OutputCustomType.Constructor
     private GetClusterClusterAutoscalingResourceLimit(
-        Integer maximum,
-        Integer minimum,
-        String resourceType) {
+        @OutputCustomType.Parameter("maximum") Integer maximum,
+        @OutputCustomType.Parameter("minimum") Integer minimum,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;

@@ -24,10 +24,10 @@ public final class JobHttpTargetOidcToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"audience","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private JobHttpTargetOidcToken(
-        @Nullable String audience,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

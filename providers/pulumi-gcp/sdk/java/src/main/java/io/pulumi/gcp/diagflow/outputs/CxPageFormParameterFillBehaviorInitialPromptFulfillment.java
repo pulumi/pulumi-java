@@ -36,12 +36,12 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillment {
      */
     private final @Nullable String webhook;
 
-    @OutputCustomType.Constructor({"messages","returnPartialResponses","tag","webhook"})
+    @OutputCustomType.Constructor
     private CxPageFormParameterFillBehaviorInitialPromptFulfillment(
-        @Nullable List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage> messages,
-        @Nullable Boolean returnPartialResponses,
-        @Nullable String tag,
-        @Nullable String webhook) {
+        @OutputCustomType.Parameter("messages") @Nullable List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage> messages,
+        @OutputCustomType.Parameter("returnPartialResponses") @Nullable Boolean returnPartialResponses,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("webhook") @Nullable String webhook) {
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;
         this.tag = tag;

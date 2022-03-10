@@ -57,17 +57,17 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
      */
     private final @Nullable Boolean keyEncipherment;
 
-    @OutputCustomType.Constructor({"certSign","contentCommitment","crlSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyEncipherment"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption(
-        @Nullable Boolean certSign,
-        @Nullable Boolean contentCommitment,
-        @Nullable Boolean crlSign,
-        @Nullable Boolean dataEncipherment,
-        @Nullable Boolean decipherOnly,
-        @Nullable Boolean digitalSignature,
-        @Nullable Boolean encipherOnly,
-        @Nullable Boolean keyAgreement,
-        @Nullable Boolean keyEncipherment) {
+        @OutputCustomType.Parameter("certSign") @Nullable Boolean certSign,
+        @OutputCustomType.Parameter("contentCommitment") @Nullable Boolean contentCommitment,
+        @OutputCustomType.Parameter("crlSign") @Nullable Boolean crlSign,
+        @OutputCustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
+        @OutputCustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
+        @OutputCustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
+        @OutputCustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
+        @OutputCustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
+        @OutputCustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;

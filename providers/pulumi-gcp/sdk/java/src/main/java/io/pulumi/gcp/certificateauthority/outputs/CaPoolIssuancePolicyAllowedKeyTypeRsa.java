@@ -24,10 +24,10 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsa {
      */
     private final @Nullable String minModulusSize;
 
-    @OutputCustomType.Constructor({"maxModulusSize","minModulusSize"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyAllowedKeyTypeRsa(
-        @Nullable String maxModulusSize,
-        @Nullable String minModulusSize) {
+        @OutputCustomType.Parameter("maxModulusSize") @Nullable String maxModulusSize,
+        @OutputCustomType.Parameter("minModulusSize") @Nullable String minModulusSize) {
         this.maxModulusSize = maxModulusSize;
         this.minModulusSize = minModulusSize;
     }

@@ -25,10 +25,10 @@ public final class PerInstanceConfigPreservedState {
      */
     private final @Nullable Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"disks","metadata"})
+    @OutputCustomType.Constructor
     private PerInstanceConfigPreservedState(
-        @Nullable List<PerInstanceConfigPreservedStateDisk> disks,
-        @Nullable Map<String,String> metadata) {
+        @OutputCustomType.Parameter("disks") @Nullable List<PerInstanceConfigPreservedStateDisk> disks,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata) {
         this.disks = disks;
         this.metadata = metadata;
     }

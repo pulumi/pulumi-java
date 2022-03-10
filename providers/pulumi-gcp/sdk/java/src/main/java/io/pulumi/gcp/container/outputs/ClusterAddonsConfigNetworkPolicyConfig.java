@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigNetworkPolicyConfig {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private ClusterAddonsConfigNetworkPolicyConfig(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private ClusterAddonsConfigNetworkPolicyConfig(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

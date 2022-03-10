@@ -15,8 +15,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(String name) {
+    @OutputCustomType.Constructor
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

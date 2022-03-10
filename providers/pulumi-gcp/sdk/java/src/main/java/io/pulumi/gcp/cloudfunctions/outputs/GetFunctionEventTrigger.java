@@ -29,11 +29,11 @@ public final class GetFunctionEventTrigger {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor({"eventType","failurePolicies","resource"})
+    @OutputCustomType.Constructor
     private GetFunctionEventTrigger(
-        String eventType,
-        List<GetFunctionEventTriggerFailurePolicy> failurePolicies,
-        String resource) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("failurePolicies") List<GetFunctionEventTriggerFailurePolicy> failurePolicies,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.eventType = eventType;
         this.failurePolicies = failurePolicies;
         this.resource = resource;

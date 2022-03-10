@@ -44,16 +44,16 @@ public final class GetOrganizationResult {
     private final String orgId;
     private final @Nullable String organization;
 
-    @OutputCustomType.Constructor({"createTime","directoryCustomerId","domain","id","lifecycleState","name","orgId","organization"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        String createTime,
-        String directoryCustomerId,
-        String domain,
-        String id,
-        String lifecycleState,
-        String name,
-        String orgId,
-        @Nullable String organization) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("directoryCustomerId") String directoryCustomerId,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orgId") String orgId,
+        @OutputCustomType.Parameter("organization") @Nullable String organization) {
         this.createTime = createTime;
         this.directoryCustomerId = directoryCustomerId;
         this.domain = domain;

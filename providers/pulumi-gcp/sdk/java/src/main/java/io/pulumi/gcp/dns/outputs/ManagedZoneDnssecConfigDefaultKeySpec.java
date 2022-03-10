@@ -40,12 +40,12 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor({"algorithm","keyLength","keyType","kind"})
+    @OutputCustomType.Constructor
     private ManagedZoneDnssecConfigDefaultKeySpec(
-        @Nullable String algorithm,
-        @Nullable Integer keyLength,
-        @Nullable String keyType,
-        @Nullable String kind) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("keyLength") @Nullable Integer keyLength,
+        @OutputCustomType.Parameter("keyType") @Nullable String keyType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;

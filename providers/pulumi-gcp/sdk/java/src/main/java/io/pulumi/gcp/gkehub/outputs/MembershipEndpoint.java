@@ -18,8 +18,8 @@ public final class MembershipEndpoint {
      */
     private final @Nullable MembershipEndpointGkeCluster gkeCluster;
 
-    @OutputCustomType.Constructor({"gkeCluster"})
-    private MembershipEndpoint(@Nullable MembershipEndpointGkeCluster gkeCluster) {
+    @OutputCustomType.Constructor
+    private MembershipEndpoint(@OutputCustomType.Parameter("gkeCluster") @Nullable MembershipEndpointGkeCluster gkeCluster) {
         this.gkeCluster = gkeCluster;
     }
 

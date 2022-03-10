@@ -23,10 +23,10 @@ public final class BucketRetentionPolicy {
      */
     private final Integer retentionPeriod;
 
-    @OutputCustomType.Constructor({"isLocked","retentionPeriod"})
+    @OutputCustomType.Constructor
     private BucketRetentionPolicy(
-        @Nullable Boolean isLocked,
-        Integer retentionPeriod) {
+        @OutputCustomType.Parameter("isLocked") @Nullable Boolean isLocked,
+        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;
     }

@@ -30,12 +30,12 @@ public final class TransferJobScheduleStartTimeOfDay {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"hours","minutes","nanos","seconds"})
+    @OutputCustomType.Constructor
     private TransferJobScheduleStartTimeOfDay(
-        Integer hours,
-        Integer minutes,
-        Integer nanos,
-        Integer seconds) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes,
+        @OutputCustomType.Parameter("nanos") Integer nanos,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;

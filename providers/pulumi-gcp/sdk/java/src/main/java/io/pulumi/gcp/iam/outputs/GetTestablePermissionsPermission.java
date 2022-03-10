@@ -36,13 +36,13 @@ public final class GetTestablePermissionsPermission {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"apiDisabled","customSupportLevel","name","stage","title"})
+    @OutputCustomType.Constructor
     private GetTestablePermissionsPermission(
-        Boolean apiDisabled,
-        String customSupportLevel,
-        String name,
-        String stage,
-        String title) {
+        @OutputCustomType.Parameter("apiDisabled") Boolean apiDisabled,
+        @OutputCustomType.Parameter("customSupportLevel") String customSupportLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("title") String title) {
         this.apiDisabled = apiDisabled;
         this.customSupportLevel = customSupportLevel;
         this.name = name;

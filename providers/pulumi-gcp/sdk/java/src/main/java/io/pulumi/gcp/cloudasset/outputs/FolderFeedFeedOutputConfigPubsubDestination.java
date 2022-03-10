@@ -15,8 +15,8 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private FolderFeedFeedOutputConfigPubsubDestination(String topic) {
+    @OutputCustomType.Constructor
+    private FolderFeedFeedOutputConfigPubsubDestination(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 

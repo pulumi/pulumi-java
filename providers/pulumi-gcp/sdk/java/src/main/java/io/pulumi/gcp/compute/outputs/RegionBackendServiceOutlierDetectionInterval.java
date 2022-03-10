@@ -25,10 +25,10 @@ public final class RegionBackendServiceOutlierDetectionInterval {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceOutlierDetectionInterval(
-        @Nullable Integer nanos,
-        Integer seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

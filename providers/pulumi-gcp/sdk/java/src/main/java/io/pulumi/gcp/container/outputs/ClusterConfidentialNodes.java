@@ -16,8 +16,8 @@ public final class ClusterConfidentialNodes {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterConfidentialNodes(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterConfidentialNodes(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

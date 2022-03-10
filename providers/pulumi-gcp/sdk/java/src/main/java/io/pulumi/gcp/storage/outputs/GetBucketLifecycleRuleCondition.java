@@ -21,17 +21,17 @@ public final class GetBucketLifecycleRuleCondition {
     private final Integer numNewerVersions;
     private final String withState;
 
-    @OutputCustomType.Constructor({"age","createdBefore","customTimeBefore","daysSinceCustomTime","daysSinceNoncurrentTime","matchesStorageClasses","noncurrentTimeBefore","numNewerVersions","withState"})
+    @OutputCustomType.Constructor
     private GetBucketLifecycleRuleCondition(
-        Integer age,
-        String createdBefore,
-        String customTimeBefore,
-        Integer daysSinceCustomTime,
-        Integer daysSinceNoncurrentTime,
-        List<String> matchesStorageClasses,
-        String noncurrentTimeBefore,
-        Integer numNewerVersions,
-        String withState) {
+        @OutputCustomType.Parameter("age") Integer age,
+        @OutputCustomType.Parameter("createdBefore") String createdBefore,
+        @OutputCustomType.Parameter("customTimeBefore") String customTimeBefore,
+        @OutputCustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
+        @OutputCustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
+        @OutputCustomType.Parameter("matchesStorageClasses") List<String> matchesStorageClasses,
+        @OutputCustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
+        @OutputCustomType.Parameter("numNewerVersions") Integer numNewerVersions,
+        @OutputCustomType.Parameter("withState") String withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

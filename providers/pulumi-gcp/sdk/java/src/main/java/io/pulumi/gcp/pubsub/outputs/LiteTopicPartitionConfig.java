@@ -24,10 +24,10 @@ public final class LiteTopicPartitionConfig {
      */
     private final Integer count;
 
-    @OutputCustomType.Constructor({"capacity","count"})
+    @OutputCustomType.Constructor
     private LiteTopicPartitionConfig(
-        @Nullable LiteTopicPartitionConfigCapacity capacity,
-        Integer count) {
+        @OutputCustomType.Parameter("capacity") @Nullable LiteTopicPartitionConfigCapacity capacity,
+        @OutputCustomType.Parameter("count") Integer count) {
         this.capacity = capacity;
         this.count = count;
     }

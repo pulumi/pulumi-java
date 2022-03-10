@@ -21,8 +21,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
      */
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor({"kmsKey"})
-    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(@Nullable String kmsKey) {
+    @OutputCustomType.Constructor
+    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.kmsKey = kmsKey;
     }
 

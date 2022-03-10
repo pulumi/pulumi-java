@@ -39,11 +39,11 @@ public final class DomainMappingSslSettings {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor({"certificateId","pendingManagedCertificateId","sslManagementType"})
+    @OutputCustomType.Constructor
     private DomainMappingSslSettings(
-        @Nullable String certificateId,
-        @Nullable String pendingManagedCertificateId,
-        String sslManagementType) {
+        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
+        @OutputCustomType.Parameter("pendingManagedCertificateId") @Nullable String pendingManagedCertificateId,
+        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;

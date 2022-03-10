@@ -22,10 +22,10 @@ public final class JobQueryDefaultDataset {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId"})
+    @OutputCustomType.Constructor
     private JobQueryDefaultDataset(
-        String datasetId,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
     }

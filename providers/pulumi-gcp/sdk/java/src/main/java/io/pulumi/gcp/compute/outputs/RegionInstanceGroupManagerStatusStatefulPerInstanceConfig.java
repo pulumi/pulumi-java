@@ -17,8 +17,8 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
      */
     private final @Nullable Boolean allEffective;
 
-    @OutputCustomType.Constructor({"allEffective"})
-    private RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(@Nullable Boolean allEffective) {
+    @OutputCustomType.Constructor
+    private RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(@OutputCustomType.Parameter("allEffective") @Nullable Boolean allEffective) {
         this.allEffective = allEffective;
     }
 

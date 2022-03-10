@@ -28,10 +28,10 @@ public final class GameServerConfigFleetConfig {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"fleetSpec","name"})
+    @OutputCustomType.Constructor
     private GameServerConfigFleetConfig(
-        String fleetSpec,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }

@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigHttpLoadBalancing {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private ClusterAddonsConfigHttpLoadBalancing(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private ClusterAddonsConfigHttpLoadBalancing(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

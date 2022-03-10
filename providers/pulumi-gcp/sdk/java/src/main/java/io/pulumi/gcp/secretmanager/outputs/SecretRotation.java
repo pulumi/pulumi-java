@@ -24,10 +24,10 @@ public final class SecretRotation {
      */
     private final @Nullable String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private SecretRotation(
-        @Nullable String nextRotationTime,
-        @Nullable String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") @Nullable String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") @Nullable String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

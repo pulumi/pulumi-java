@@ -17,8 +17,8 @@ public final class CxAgentSpeechToTextSettings {
      */
     private final @Nullable Boolean enableSpeechAdaptation;
 
-    @OutputCustomType.Constructor({"enableSpeechAdaptation"})
-    private CxAgentSpeechToTextSettings(@Nullable Boolean enableSpeechAdaptation) {
+    @OutputCustomType.Constructor
+    private CxAgentSpeechToTextSettings(@OutputCustomType.Parameter("enableSpeechAdaptation") @Nullable Boolean enableSpeechAdaptation) {
         this.enableSpeechAdaptation = enableSpeechAdaptation;
     }
 

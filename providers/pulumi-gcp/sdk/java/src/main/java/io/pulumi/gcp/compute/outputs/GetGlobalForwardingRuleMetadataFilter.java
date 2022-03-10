@@ -14,10 +14,10 @@ public final class GetGlobalForwardingRuleMetadataFilter {
     private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor({"filterLabels","filterMatchCriteria"})
+    @OutputCustomType.Constructor
     private GetGlobalForwardingRuleMetadataFilter(
-        List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
+        @OutputCustomType.Parameter("filterLabels") List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
+        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

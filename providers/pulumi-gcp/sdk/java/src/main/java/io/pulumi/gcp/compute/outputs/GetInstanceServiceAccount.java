@@ -21,10 +21,10 @@ public final class GetInstanceServiceAccount {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"email","scopes"})
+    @OutputCustomType.Constructor
     private GetInstanceServiceAccount(
-        String email,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }

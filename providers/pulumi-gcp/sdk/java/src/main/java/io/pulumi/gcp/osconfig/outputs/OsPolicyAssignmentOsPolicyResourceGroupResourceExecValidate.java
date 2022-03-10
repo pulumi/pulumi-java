@@ -39,13 +39,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"args","file","interpreter","outputFilePath","script"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(
-        @Nullable List<String> args,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
-        String interpreter,
-        @Nullable String outputFilePath,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("outputFilePath") @Nullable String outputFilePath,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;

@@ -69,15 +69,15 @@ public final class HealthCheckHttp2HealthCheck {
      */
     private final @Nullable String response;
 
-    @OutputCustomType.Constructor({"host","port","portName","portSpecification","proxyHeader","requestPath","response"})
+    @OutputCustomType.Constructor
     private HealthCheckHttp2HealthCheck(
-        @Nullable String host,
-        @Nullable Integer port,
-        @Nullable String portName,
-        @Nullable String portSpecification,
-        @Nullable String proxyHeader,
-        @Nullable String requestPath,
-        @Nullable String response) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("portName") @Nullable String portName,
+        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
+        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
+        @OutputCustomType.Parameter("response") @Nullable String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;

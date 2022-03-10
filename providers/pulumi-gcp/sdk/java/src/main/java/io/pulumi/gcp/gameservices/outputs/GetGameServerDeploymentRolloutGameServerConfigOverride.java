@@ -14,10 +14,10 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
     private final String configVersion;
     private final List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors;
 
-    @OutputCustomType.Constructor({"configVersion","realmsSelectors"})
+    @OutputCustomType.Constructor
     private GetGameServerDeploymentRolloutGameServerConfigOverride(
-        String configVersion,
-        List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
+        @OutputCustomType.Parameter("configVersion") String configVersion,
+        @OutputCustomType.Parameter("realmsSelectors") List<GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector> realmsSelectors) {
         this.configVersion = configVersion;
         this.realmsSelectors = realmsSelectors;
     }

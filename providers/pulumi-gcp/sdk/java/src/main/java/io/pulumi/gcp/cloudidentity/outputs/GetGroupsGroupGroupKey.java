@@ -12,10 +12,10 @@ public final class GetGroupsGroupGroupKey {
     private final String id;
     private final String namespace;
 
-    @OutputCustomType.Constructor({"id","namespace"})
+    @OutputCustomType.Constructor
     private GetGroupsGroupGroupKey(
-        String id,
-        String namespace) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.id = id;
         this.namespace = namespace;
     }

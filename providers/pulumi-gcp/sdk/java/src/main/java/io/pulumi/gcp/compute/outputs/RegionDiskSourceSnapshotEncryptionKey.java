@@ -30,11 +30,11 @@ public final class RegionDiskSourceSnapshotEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeyName","rawKey","sha256"})
+    @OutputCustomType.Constructor
     private RegionDiskSourceSnapshotEncryptionKey(
-        @Nullable String kmsKeyName,
-        @Nullable String rawKey,
-        @Nullable String sha256) {
+        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
+        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.rawKey = rawKey;
         this.sha256 = sha256;

@@ -23,10 +23,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      */
     private final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table;
 
-    @OutputCustomType.Constructor({"field","table"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(
-        PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
-        PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
+        @OutputCustomType.Parameter("field") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
+        @OutputCustomType.Parameter("table") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
         this.field = field;
         this.table = table;
     }

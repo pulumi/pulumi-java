@@ -21,15 +21,15 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
     private final String startTime;
     private final Integer transactionLogRetentionDays;
 
-    @OutputCustomType.Constructor({"backupRetentionSettings","binaryLogEnabled","enabled","location","pointInTimeRecoveryEnabled","startTime","transactionLogRetentionDays"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingBackupConfiguration(
-        List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings,
-        Boolean binaryLogEnabled,
-        Boolean enabled,
-        String location,
-        Boolean pointInTimeRecoveryEnabled,
-        String startTime,
-        Integer transactionLogRetentionDays) {
+        @OutputCustomType.Parameter("backupRetentionSettings") List<GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting> backupRetentionSettings,
+        @OutputCustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;

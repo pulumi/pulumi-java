@@ -20,12 +20,12 @@ public final class GetConfigResult {
     private final String name;
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"description","id","name","project"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        String description,
-        String id,
-        String name,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.description = description;
         this.id = id;
         this.name = name;

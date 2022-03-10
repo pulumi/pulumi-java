@@ -39,12 +39,12 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig;
 
-    @OutputCustomType.Constructor({"bigQueryOptions","cloudStorageOptions","datastoreOptions","timespanConfig"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfig(
-        @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions,
-        @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions,
-        @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions,
-        @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig) {
+        @OutputCustomType.Parameter("bigQueryOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions,
+        @OutputCustomType.Parameter("cloudStorageOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions,
+        @OutputCustomType.Parameter("datastoreOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions,
+        @OutputCustomType.Parameter("timespanConfig") @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig) {
         this.bigQueryOptions = bigQueryOptions;
         this.cloudStorageOptions = cloudStorageOptions;
         this.datastoreOptions = datastoreOptions;

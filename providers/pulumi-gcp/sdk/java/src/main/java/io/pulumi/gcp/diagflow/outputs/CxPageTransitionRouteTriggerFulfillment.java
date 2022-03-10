@@ -36,12 +36,12 @@ public final class CxPageTransitionRouteTriggerFulfillment {
      */
     private final @Nullable String webhook;
 
-    @OutputCustomType.Constructor({"messages","returnPartialResponses","tag","webhook"})
+    @OutputCustomType.Constructor
     private CxPageTransitionRouteTriggerFulfillment(
-        @Nullable List<CxPageTransitionRouteTriggerFulfillmentMessage> messages,
-        @Nullable Boolean returnPartialResponses,
-        @Nullable String tag,
-        @Nullable String webhook) {
+        @OutputCustomType.Parameter("messages") @Nullable List<CxPageTransitionRouteTriggerFulfillmentMessage> messages,
+        @OutputCustomType.Parameter("returnPartialResponses") @Nullable Boolean returnPartialResponses,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("webhook") @Nullable String webhook) {
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;
         this.tag = tag;

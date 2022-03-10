@@ -22,15 +22,15 @@ public final class GetProjectProject {
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor({"createTime","labels","lifecycleState","name","number","parent","projectId"})
+    @OutputCustomType.Constructor
     private GetProjectProject(
-        String createTime,
-        Map<String,String> labels,
-        String lifecycleState,
-        String name,
-        String number,
-        Map<String,String> parent,
-        String projectId) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("number") String number,
+        @OutputCustomType.Parameter("parent") Map<String,String> parent,
+        @OutputCustomType.Parameter("projectId") String projectId) {
         this.createTime = createTime;
         this.labels = labels;
         this.lifecycleState = lifecycleState;

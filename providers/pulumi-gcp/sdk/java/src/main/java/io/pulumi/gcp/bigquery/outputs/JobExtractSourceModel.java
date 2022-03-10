@@ -25,11 +25,11 @@ public final class JobExtractSourceModel {
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor({"datasetId","modelId","projectId"})
+    @OutputCustomType.Constructor
     private JobExtractSourceModel(
-        String datasetId,
-        String modelId,
-        String projectId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("modelId") String modelId,
+        @OutputCustomType.Parameter("projectId") String projectId) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.projectId = projectId;

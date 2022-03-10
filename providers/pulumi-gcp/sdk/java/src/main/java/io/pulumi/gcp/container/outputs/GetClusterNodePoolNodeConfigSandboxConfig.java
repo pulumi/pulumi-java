@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodePoolNodeConfigSandboxConfig {
     private final String sandboxType;
 
-    @OutputCustomType.Constructor({"sandboxType"})
-    private GetClusterNodePoolNodeConfigSandboxConfig(String sandboxType) {
+    @OutputCustomType.Constructor
+    private GetClusterNodePoolNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 

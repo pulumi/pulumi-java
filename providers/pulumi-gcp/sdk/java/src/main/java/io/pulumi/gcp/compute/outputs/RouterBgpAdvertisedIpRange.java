@@ -23,10 +23,10 @@ public final class RouterBgpAdvertisedIpRange {
      */
     private final String range;
 
-    @OutputCustomType.Constructor({"description","range"})
+    @OutputCustomType.Constructor
     private RouterBgpAdvertisedIpRange(
-        @Nullable String description,
-        String range) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("range") String range) {
         this.description = description;
         this.range = range;
     }

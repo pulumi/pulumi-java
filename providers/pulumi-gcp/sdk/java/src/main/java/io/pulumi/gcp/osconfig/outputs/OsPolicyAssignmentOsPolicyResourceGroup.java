@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
      */
     private final List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources;
 
-    @OutputCustomType.Constructor({"inventoryFilters","resources"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroup(
-        @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters,
-        List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
+        @OutputCustomType.Parameter("inventoryFilters") @Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter> inventoryFilters,
+        @OutputCustomType.Parameter("resources") List<OsPolicyAssignmentOsPolicyResourceGroupResource> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = resources;
     }

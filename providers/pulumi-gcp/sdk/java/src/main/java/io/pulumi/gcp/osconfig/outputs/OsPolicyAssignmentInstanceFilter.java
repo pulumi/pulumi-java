@@ -36,12 +36,12 @@ public final class OsPolicyAssignmentInstanceFilter {
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories;
 
-    @OutputCustomType.Constructor({"all","exclusionLabels","inclusionLabels","inventories"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentInstanceFilter(
-        @Nullable Boolean all,
-        @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
-        @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
-        @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
+        @OutputCustomType.Parameter("all") @Nullable Boolean all,
+        @OutputCustomType.Parameter("exclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
+        @OutputCustomType.Parameter("inclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
+        @OutputCustomType.Parameter("inventories") @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;

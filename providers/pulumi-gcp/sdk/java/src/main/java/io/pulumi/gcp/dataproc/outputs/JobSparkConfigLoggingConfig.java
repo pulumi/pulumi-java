@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class JobSparkConfigLoggingConfig {
     private final Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private JobSparkConfigLoggingConfig(Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private JobSparkConfigLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

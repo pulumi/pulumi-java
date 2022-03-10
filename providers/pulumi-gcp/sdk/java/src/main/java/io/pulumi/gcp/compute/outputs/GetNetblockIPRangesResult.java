@@ -34,13 +34,13 @@ public final class GetNetblockIPRangesResult {
     private final String id;
     private final @Nullable String rangeType;
 
-    @OutputCustomType.Constructor({"cidrBlocks","cidrBlocksIpv4s","cidrBlocksIpv6s","id","rangeType"})
+    @OutputCustomType.Constructor
     private GetNetblockIPRangesResult(
-        List<String> cidrBlocks,
-        List<String> cidrBlocksIpv4s,
-        List<String> cidrBlocksIpv6s,
-        String id,
-        @Nullable String rangeType) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("cidrBlocksIpv4s") List<String> cidrBlocksIpv4s,
+        @OutputCustomType.Parameter("cidrBlocksIpv6s") List<String> cidrBlocksIpv6s,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rangeType") @Nullable String rangeType) {
         this.cidrBlocks = cidrBlocks;
         this.cidrBlocksIpv4s = cidrBlocksIpv4s;
         this.cidrBlocksIpv6s = cidrBlocksIpv6s;

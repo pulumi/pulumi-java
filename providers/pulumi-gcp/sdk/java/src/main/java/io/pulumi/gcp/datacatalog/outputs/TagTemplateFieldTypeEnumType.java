@@ -21,8 +21,8 @@ public final class TagTemplateFieldTypeEnumType {
      */
     private final List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues;
 
-    @OutputCustomType.Constructor({"allowedValues"})
-    private TagTemplateFieldTypeEnumType(List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues) {
+    @OutputCustomType.Constructor
+    private TagTemplateFieldTypeEnumType(@OutputCustomType.Parameter("allowedValues") List<TagTemplateFieldTypeEnumTypeAllowedValue> allowedValues) {
         this.allowedValues = allowedValues;
     }
 

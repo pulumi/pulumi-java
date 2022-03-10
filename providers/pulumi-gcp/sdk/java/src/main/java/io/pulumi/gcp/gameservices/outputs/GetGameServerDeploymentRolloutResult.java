@@ -27,14 +27,14 @@ public final class GetGameServerDeploymentRolloutResult {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"defaultGameServerConfig","deploymentId","gameServerConfigOverrides","id","name","project"})
+    @OutputCustomType.Constructor
     private GetGameServerDeploymentRolloutResult(
-        String defaultGameServerConfig,
-        String deploymentId,
-        List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides,
-        String id,
-        String name,
-        String project) {
+        @OutputCustomType.Parameter("defaultGameServerConfig") String defaultGameServerConfig,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("gameServerConfigOverrides") List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project) {
         this.defaultGameServerConfig = defaultGameServerConfig;
         this.deploymentId = deploymentId;
         this.gameServerConfigOverrides = gameServerConfigOverrides;

@@ -34,20 +34,20 @@ public final class InstanceFromMachineImageNetworkInterface {
     private final @Nullable String subnetwork;
     private final @Nullable String subnetworkProject;
 
-    @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","ipv6AccessConfigs","ipv6AccessType","name","network","networkIp","nicType","queueCount","stackType","subnetwork","subnetworkProject"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageNetworkInterface(
-        @Nullable List<InstanceFromMachineImageNetworkInterfaceAccessConfig> accessConfigs,
-        @Nullable List<InstanceFromMachineImageNetworkInterfaceAliasIpRange> aliasIpRanges,
-        @Nullable List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
-        @Nullable String ipv6AccessType,
-        @Nullable String name,
-        @Nullable String network,
-        @Nullable String networkIp,
-        @Nullable String nicType,
-        @Nullable Integer queueCount,
-        @Nullable String stackType,
-        @Nullable String subnetwork,
-        @Nullable String subnetworkProject) {
+        @OutputCustomType.Parameter("accessConfigs") @Nullable List<InstanceFromMachineImageNetworkInterfaceAccessConfig> accessConfigs,
+        @OutputCustomType.Parameter("aliasIpRanges") @Nullable List<InstanceFromMachineImageNetworkInterfaceAliasIpRange> aliasIpRanges,
+        @OutputCustomType.Parameter("ipv6AccessConfigs") @Nullable List<InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
+        @OutputCustomType.Parameter("ipv6AccessType") @Nullable String ipv6AccessType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("networkIp") @Nullable String networkIp,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("queueCount") @Nullable Integer queueCount,
+        @OutputCustomType.Parameter("stackType") @Nullable String stackType,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("subnetworkProject") @Nullable String subnetworkProject) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.ipv6AccessConfigs = ipv6AccessConfigs;

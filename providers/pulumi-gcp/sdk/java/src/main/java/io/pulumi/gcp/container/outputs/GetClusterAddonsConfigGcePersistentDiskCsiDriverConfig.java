@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

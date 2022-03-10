@@ -15,8 +15,8 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor({"displayName"})
-    private TagTemplateFieldTypeEnumTypeAllowedValue(String displayName) {
+    @OutputCustomType.Constructor
+    private TagTemplateFieldTypeEnumTypeAllowedValue(@OutputCustomType.Parameter("displayName") String displayName) {
         this.displayName = displayName;
     }
 

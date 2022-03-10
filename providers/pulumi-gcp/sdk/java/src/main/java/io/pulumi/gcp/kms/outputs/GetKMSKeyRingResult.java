@@ -20,12 +20,12 @@ public final class GetKMSKeyRingResult {
     private final String name;
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"id","location","name","project"})
+    @OutputCustomType.Constructor
     private GetKMSKeyRingResult(
-        String id,
-        String location,
-        String name,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.id = id;
         this.location = location;
         this.name = name;

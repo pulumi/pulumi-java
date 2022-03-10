@@ -12,10 +12,10 @@ public final class GetTopicSchemaSetting {
     private final String encoding;
     private final String schema;
 
-    @OutputCustomType.Constructor({"encoding","schema"})
+    @OutputCustomType.Constructor
     private GetTopicSchemaSetting(
-        String encoding,
-        String schema) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

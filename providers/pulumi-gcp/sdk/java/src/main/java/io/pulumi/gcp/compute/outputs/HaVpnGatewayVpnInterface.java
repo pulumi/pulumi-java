@@ -34,11 +34,11 @@ public final class HaVpnGatewayVpnInterface {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"id","interconnectAttachment","ipAddress"})
+    @OutputCustomType.Constructor
     private HaVpnGatewayVpnInterface(
-        @Nullable Integer id,
-        @Nullable String interconnectAttachment,
-        @Nullable String ipAddress) {
+        @OutputCustomType.Parameter("id") @Nullable Integer id,
+        @OutputCustomType.Parameter("interconnectAttachment") @Nullable String interconnectAttachment,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;

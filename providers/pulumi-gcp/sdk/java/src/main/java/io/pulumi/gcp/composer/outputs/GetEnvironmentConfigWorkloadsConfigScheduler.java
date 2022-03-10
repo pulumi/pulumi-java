@@ -15,12 +15,12 @@ public final class GetEnvironmentConfigWorkloadsConfigScheduler {
     private final Double memoryGb;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor({"count","cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigScheduler(
-        Integer count,
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;

@@ -15,8 +15,8 @@ public final class TableColumnFamily {
      */
     private final String family;
 
-    @OutputCustomType.Constructor({"family"})
-    private TableColumnFamily(String family) {
+    @OutputCustomType.Constructor
+    private TableColumnFamily(@OutputCustomType.Parameter("family") String family) {
         this.family = family;
     }
 

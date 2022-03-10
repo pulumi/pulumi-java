@@ -29,11 +29,11 @@ public final class InstanceReservationAffinity {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"consumeReservationType","key","values"})
+    @OutputCustomType.Constructor
     private InstanceReservationAffinity(
-        String consumeReservationType,
-        @Nullable String key,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("consumeReservationType") String consumeReservationType,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;

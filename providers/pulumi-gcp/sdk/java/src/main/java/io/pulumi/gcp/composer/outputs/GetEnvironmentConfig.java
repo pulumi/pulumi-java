@@ -37,23 +37,23 @@ public final class GetEnvironmentConfig {
     private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
     private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
-    @OutputCustomType.Constructor({"airflowUri","dagGcsPrefix","databaseConfigs","encryptionConfigs","environmentSize","gkeCluster","maintenanceWindows","masterAuthorizedNetworksConfigs","nodeConfigs","nodeCount","privateEnvironmentConfigs","softwareConfigs","webServerConfigs","webServerNetworkAccessControls","workloadsConfigs"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfig(
-        String airflowUri,
-        String dagGcsPrefix,
-        List<GetEnvironmentConfigDatabaseConfig> databaseConfigs,
-        List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs,
-        String environmentSize,
-        String gkeCluster,
-        List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows,
-        List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
-        List<GetEnvironmentConfigNodeConfig> nodeConfigs,
-        Integer nodeCount,
-        List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs,
-        List<GetEnvironmentConfigSoftwareConfig> softwareConfigs,
-        List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
-        List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
-        List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
+        @OutputCustomType.Parameter("airflowUri") String airflowUri,
+        @OutputCustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
+        @OutputCustomType.Parameter("databaseConfigs") List<GetEnvironmentConfigDatabaseConfig> databaseConfigs,
+        @OutputCustomType.Parameter("encryptionConfigs") List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs,
+        @OutputCustomType.Parameter("environmentSize") String environmentSize,
+        @OutputCustomType.Parameter("gkeCluster") String gkeCluster,
+        @OutputCustomType.Parameter("maintenanceWindows") List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows,
+        @OutputCustomType.Parameter("masterAuthorizedNetworksConfigs") List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
+        @OutputCustomType.Parameter("nodeConfigs") List<GetEnvironmentConfigNodeConfig> nodeConfigs,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("privateEnvironmentConfigs") List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs,
+        @OutputCustomType.Parameter("softwareConfigs") List<GetEnvironmentConfigSoftwareConfig> softwareConfigs,
+        @OutputCustomType.Parameter("webServerConfigs") List<GetEnvironmentConfigWebServerConfig> webServerConfigs,
+        @OutputCustomType.Parameter("webServerNetworkAccessControls") List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls,
+        @OutputCustomType.Parameter("workloadsConfigs") List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfigs = databaseConfigs;

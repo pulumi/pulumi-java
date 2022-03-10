@@ -17,8 +17,8 @@ public final class TriggerTransport {
      */
     private final @Nullable List<TriggerTransportPubsub> pubsubs;
 
-    @OutputCustomType.Constructor({"pubsubs"})
-    private TriggerTransport(@Nullable List<TriggerTransportPubsub> pubsubs) {
+    @OutputCustomType.Constructor
+    private TriggerTransport(@OutputCustomType.Parameter("pubsubs") @Nullable List<TriggerTransportPubsub> pubsubs) {
         this.pubsubs = pubsubs;
     }
 

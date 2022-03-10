@@ -84,20 +84,20 @@ public final class FlexibleAppVersionAutomaticScaling {
      */
     private final @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization;
 
-    @OutputCustomType.Constructor({"coolDownPeriod","cpuUtilization","diskUtilization","maxConcurrentRequests","maxIdleInstances","maxPendingLatency","maxTotalInstances","minIdleInstances","minPendingLatency","minTotalInstances","networkUtilization","requestUtilization"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionAutomaticScaling(
-        @Nullable String coolDownPeriod,
-        FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
-        @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
-        @Nullable Integer maxConcurrentRequests,
-        @Nullable Integer maxIdleInstances,
-        @Nullable String maxPendingLatency,
-        @Nullable Integer maxTotalInstances,
-        @Nullable Integer minIdleInstances,
-        @Nullable String minPendingLatency,
-        @Nullable Integer minTotalInstances,
-        @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
-        @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
+        @OutputCustomType.Parameter("coolDownPeriod") @Nullable String coolDownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
+        @OutputCustomType.Parameter("diskUtilization") @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
+        @OutputCustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
+        @OutputCustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
+        @OutputCustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
+        @OutputCustomType.Parameter("maxTotalInstances") @Nullable Integer maxTotalInstances,
+        @OutputCustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
+        @OutputCustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
+        @OutputCustomType.Parameter("minTotalInstances") @Nullable Integer minTotalInstances,
+        @OutputCustomType.Parameter("networkUtilization") @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
+        @OutputCustomType.Parameter("requestUtilization") @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.diskUtilization = diskUtilization;

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class CertificateCertificateDescriptionCertFingerprint {
     private final @Nullable String sha256Hash;
 
-    @OutputCustomType.Constructor({"sha256Hash"})
-    private CertificateCertificateDescriptionCertFingerprint(@Nullable String sha256Hash) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionCertFingerprint(@OutputCustomType.Parameter("sha256Hash") @Nullable String sha256Hash) {
         this.sha256Hash = sha256Hash;
     }
 

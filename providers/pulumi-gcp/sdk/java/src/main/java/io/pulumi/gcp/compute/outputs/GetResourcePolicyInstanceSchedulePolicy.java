@@ -18,13 +18,13 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules;
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules;
 
-    @OutputCustomType.Constructor({"expirationTime","startTime","timeZone","vmStartSchedules","vmStopSchedules"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyInstanceSchedulePolicy(
-        String expirationTime,
-        String startTime,
-        String timeZone,
-        List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
-        List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("vmStartSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
+        @OutputCustomType.Parameter("vmStopSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
         this.timeZone = timeZone;

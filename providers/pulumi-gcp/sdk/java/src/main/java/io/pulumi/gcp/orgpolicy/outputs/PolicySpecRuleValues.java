@@ -22,10 +22,10 @@ public final class PolicySpecRuleValues {
      */
     private final @Nullable List<String> deniedValues;
 
-    @OutputCustomType.Constructor({"allowedValues","deniedValues"})
+    @OutputCustomType.Constructor
     private PolicySpecRuleValues(
-        @Nullable List<String> allowedValues,
-        @Nullable List<String> deniedValues) {
+        @OutputCustomType.Parameter("allowedValues") @Nullable List<String> allowedValues,
+        @OutputCustomType.Parameter("deniedValues") @Nullable List<String> deniedValues) {
         this.allowedValues = allowedValues;
         this.deniedValues = deniedValues;
     }

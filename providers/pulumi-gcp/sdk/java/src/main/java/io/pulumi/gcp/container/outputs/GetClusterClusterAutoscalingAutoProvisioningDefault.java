@@ -15,12 +15,12 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
     private final List<String> oauthScopes;
     private final String serviceAccount;
 
-    @OutputCustomType.Constructor({"imageType","minCpuPlatform","oauthScopes","serviceAccount"})
+    @OutputCustomType.Constructor
     private GetClusterClusterAutoscalingAutoProvisioningDefault(
-        String imageType,
-        String minCpuPlatform,
-        List<String> oauthScopes,
-        String serviceAccount) {
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;

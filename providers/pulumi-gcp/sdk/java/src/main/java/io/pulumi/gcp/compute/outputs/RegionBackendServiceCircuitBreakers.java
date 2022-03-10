@@ -51,14 +51,14 @@ public final class RegionBackendServiceCircuitBreakers {
      */
     private final @Nullable Integer maxRetries;
 
-    @OutputCustomType.Constructor({"connectTimeout","maxConnections","maxPendingRequests","maxRequests","maxRequestsPerConnection","maxRetries"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceCircuitBreakers(
-        @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
-        @Nullable Integer maxConnections,
-        @Nullable Integer maxPendingRequests,
-        @Nullable Integer maxRequests,
-        @Nullable Integer maxRequestsPerConnection,
-        @Nullable Integer maxRetries) {
+        @OutputCustomType.Parameter("connectTimeout") @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
+        @OutputCustomType.Parameter("maxConnections") @Nullable Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") @Nullable Integer maxPendingRequests,
+        @OutputCustomType.Parameter("maxRequests") @Nullable Integer maxRequests,
+        @OutputCustomType.Parameter("maxRequestsPerConnection") @Nullable Integer maxRequestsPerConnection,
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries) {
         this.connectTimeout = connectTimeout;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;

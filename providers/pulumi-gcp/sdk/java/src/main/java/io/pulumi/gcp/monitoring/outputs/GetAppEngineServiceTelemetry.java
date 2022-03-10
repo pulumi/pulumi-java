@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetAppEngineServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private GetAppEngineServiceTelemetry(String resourceName) {
+    @OutputCustomType.Constructor
+    private GetAppEngineServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

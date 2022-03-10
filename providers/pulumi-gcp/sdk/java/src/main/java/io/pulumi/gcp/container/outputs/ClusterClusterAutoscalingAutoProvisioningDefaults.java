@@ -41,12 +41,12 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      */
     private final @Nullable String serviceAccount;
 
-    @OutputCustomType.Constructor({"imageType","minCpuPlatform","oauthScopes","serviceAccount"})
+    @OutputCustomType.Constructor
     private ClusterClusterAutoscalingAutoProvisioningDefaults(
-        @Nullable String imageType,
-        @Nullable String minCpuPlatform,
-        @Nullable List<String> oauthScopes,
-        @Nullable String serviceAccount) {
+        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;

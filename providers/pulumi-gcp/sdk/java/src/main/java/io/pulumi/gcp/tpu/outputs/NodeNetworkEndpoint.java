@@ -15,10 +15,10 @@ public final class NodeNetworkEndpoint {
     private final @Nullable String ipAddress;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"ipAddress","port"})
+    @OutputCustomType.Constructor
     private NodeNetworkEndpoint(
-        @Nullable String ipAddress,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

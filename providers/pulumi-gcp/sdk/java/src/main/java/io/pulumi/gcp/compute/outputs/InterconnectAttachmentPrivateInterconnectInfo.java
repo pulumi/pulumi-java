@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class InterconnectAttachmentPrivateInterconnectInfo {
     private final @Nullable Integer tag8021q;
 
-    @OutputCustomType.Constructor({"tag8021q"})
-    private InterconnectAttachmentPrivateInterconnectInfo(@Nullable Integer tag8021q) {
+    @OutputCustomType.Constructor
+    private InterconnectAttachmentPrivateInterconnectInfo(@OutputCustomType.Parameter("tag8021q") @Nullable Integer tag8021q) {
         this.tag8021q = tag8021q;
     }
 

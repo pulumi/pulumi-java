@@ -27,10 +27,10 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
      */
     private final @Nullable Double percent;
 
-    @OutputCustomType.Constructor({"count","percent"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionAbsentTrigger(
-        @Nullable Integer count,
-        @Nullable Double percent) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("percent") @Nullable Double percent) {
         this.count = count;
         this.percent = percent;
     }

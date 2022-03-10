@@ -16,8 +16,8 @@ public final class GuestPoliciesAssignmentGroupLabel {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private GuestPoliciesAssignmentGroupLabel(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private GuestPoliciesAssignmentGroupLabel(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

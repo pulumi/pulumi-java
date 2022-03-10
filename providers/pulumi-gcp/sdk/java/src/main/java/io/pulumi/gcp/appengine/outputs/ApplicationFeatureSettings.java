@@ -16,8 +16,8 @@ public final class ApplicationFeatureSettings {
      */
     private final Boolean splitHealthChecks;
 
-    @OutputCustomType.Constructor({"splitHealthChecks"})
-    private ApplicationFeatureSettings(Boolean splitHealthChecks) {
+    @OutputCustomType.Constructor
+    private ApplicationFeatureSettings(@OutputCustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks) {
         this.splitHealthChecks = splitHealthChecks;
     }
 

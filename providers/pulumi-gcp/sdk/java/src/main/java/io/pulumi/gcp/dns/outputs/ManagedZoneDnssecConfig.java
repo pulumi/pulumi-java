@@ -41,12 +41,12 @@ public final class ManagedZoneDnssecConfig {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"defaultKeySpecs","kind","nonExistence","state"})
+    @OutputCustomType.Constructor
     private ManagedZoneDnssecConfig(
-        @Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs,
-        @Nullable String kind,
-        @Nullable String nonExistence,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("defaultKeySpecs") @Nullable List<ManagedZoneDnssecConfigDefaultKeySpec> defaultKeySpecs,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("nonExistence") @Nullable String nonExistence,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.defaultKeySpecs = defaultKeySpecs;
         this.kind = kind;
         this.nonExistence = nonExistence;

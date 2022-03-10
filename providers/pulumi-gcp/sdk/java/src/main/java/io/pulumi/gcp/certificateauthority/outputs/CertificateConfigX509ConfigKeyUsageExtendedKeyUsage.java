@@ -42,14 +42,14 @@ public final class CertificateConfigX509ConfigKeyUsageExtendedKeyUsage {
      */
     private final @Nullable Boolean timeStamping;
 
-    @OutputCustomType.Constructor({"clientAuth","codeSigning","emailProtection","ocspSigning","serverAuth","timeStamping"})
+    @OutputCustomType.Constructor
     private CertificateConfigX509ConfigKeyUsageExtendedKeyUsage(
-        @Nullable Boolean clientAuth,
-        @Nullable Boolean codeSigning,
-        @Nullable Boolean emailProtection,
-        @Nullable Boolean ocspSigning,
-        @Nullable Boolean serverAuth,
-        @Nullable Boolean timeStamping) {
+        @OutputCustomType.Parameter("clientAuth") @Nullable Boolean clientAuth,
+        @OutputCustomType.Parameter("codeSigning") @Nullable Boolean codeSigning,
+        @OutputCustomType.Parameter("emailProtection") @Nullable Boolean emailProtection,
+        @OutputCustomType.Parameter("ocspSigning") @Nullable Boolean ocspSigning,
+        @OutputCustomType.Parameter("serverAuth") @Nullable Boolean serverAuth,
+        @OutputCustomType.Parameter("timeStamping") @Nullable Boolean timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;

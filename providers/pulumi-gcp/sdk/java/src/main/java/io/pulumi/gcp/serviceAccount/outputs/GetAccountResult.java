@@ -41,15 +41,15 @@ public final class GetAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"accountId","displayName","email","id","name","project","uniqueId"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String accountId,
-        String displayName,
-        String email,
-        String id,
-        String name,
-        @Nullable String project,
-        String uniqueId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.accountId = accountId;
         this.displayName = displayName;
         this.email = email;

@@ -22,10 +22,10 @@ public final class MetricDescriptorMetadata {
      */
     private final @Nullable String samplePeriod;
 
-    @OutputCustomType.Constructor({"ingestDelay","samplePeriod"})
+    @OutputCustomType.Constructor
     private MetricDescriptorMetadata(
-        @Nullable String ingestDelay,
-        @Nullable String samplePeriod) {
+        @OutputCustomType.Parameter("ingestDelay") @Nullable String ingestDelay,
+        @OutputCustomType.Parameter("samplePeriod") @Nullable String samplePeriod) {
         this.ingestDelay = ingestDelay;
         this.samplePeriod = samplePeriod;
     }

@@ -41,13 +41,13 @@ public final class GuestPoliciesPackageRepositoryApt {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"archiveType","components","distribution","gpgKey","uri"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepositoryApt(
-        @Nullable String archiveType,
-        List<String> components,
-        String distribution,
-        @Nullable String gpgKey,
-        String uri) {
+        @OutputCustomType.Parameter("archiveType") @Nullable String archiveType,
+        @OutputCustomType.Parameter("components") List<String> components,
+        @OutputCustomType.Parameter("distribution") String distribution,
+        @OutputCustomType.Parameter("gpgKey") @Nullable String gpgKey,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.archiveType = archiveType;
         this.components = components;
         this.distribution = distribution;

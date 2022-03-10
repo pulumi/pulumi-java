@@ -26,10 +26,10 @@ public final class ServicePerimeterStatusEgressPolicy {
      */
     private final @Nullable ServicePerimeterStatusEgressPolicyEgressTo egressTo;
 
-    @OutputCustomType.Constructor({"egressFrom","egressTo"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusEgressPolicy(
-        @Nullable ServicePerimeterStatusEgressPolicyEgressFrom egressFrom,
-        @Nullable ServicePerimeterStatusEgressPolicyEgressTo egressTo) {
+        @OutputCustomType.Parameter("egressFrom") @Nullable ServicePerimeterStatusEgressPolicyEgressFrom egressFrom,
+        @OutputCustomType.Parameter("egressTo") @Nullable ServicePerimeterStatusEgressPolicyEgressTo egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }

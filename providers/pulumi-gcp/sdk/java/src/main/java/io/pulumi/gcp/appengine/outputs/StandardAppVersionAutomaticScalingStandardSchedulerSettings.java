@@ -33,12 +33,12 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
      */
     private final @Nullable Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","targetCpuUtilization","targetThroughputUtilization"})
+    @OutputCustomType.Constructor
     private StandardAppVersionAutomaticScalingStandardSchedulerSettings(
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable Double targetCpuUtilization,
-        @Nullable Double targetThroughputUtilization) {
+        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("targetCpuUtilization") @Nullable Double targetCpuUtilization,
+        @OutputCustomType.Parameter("targetThroughputUtilization") @Nullable Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;

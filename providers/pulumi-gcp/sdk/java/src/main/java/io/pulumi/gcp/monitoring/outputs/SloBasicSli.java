@@ -57,13 +57,13 @@ public final class SloBasicSli {
      */
     private final @Nullable List<String> versions;
 
-    @OutputCustomType.Constructor({"availability","latency","locations","methods","versions"})
+    @OutputCustomType.Constructor
     private SloBasicSli(
-        @Nullable SloBasicSliAvailability availability,
-        @Nullable SloBasicSliLatency latency,
-        @Nullable List<String> locations,
-        @Nullable List<String> methods,
-        @Nullable List<String> versions) {
+        @OutputCustomType.Parameter("availability") @Nullable SloBasicSliAvailability availability,
+        @OutputCustomType.Parameter("latency") @Nullable SloBasicSliLatency latency,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("versions") @Nullable List<String> versions) {
         this.availability = availability;
         this.latency = latency;
         this.locations = locations;

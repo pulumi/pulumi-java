@@ -71,18 +71,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
      */
     private final @Nullable String preemptibility;
 
-    @OutputCustomType.Constructor({"accelerators","diskConfig","image","instanceNames","isPreemptible","machineType","managedGroupConfigs","minCpuPlatform","numInstances","preemptibility"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigWorkerConfig(
-        @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig,
-        @Nullable String image,
-        @Nullable List<String> instanceNames,
-        @Nullable Boolean isPreemptible,
-        @Nullable String machineType,
-        @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs,
-        @Nullable String minCpuPlatform,
-        @Nullable Integer numInstances,
-        @Nullable String preemptibility) {
+        @OutputCustomType.Parameter("accelerators") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators,
+        @OutputCustomType.Parameter("diskConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @OutputCustomType.Parameter("isPreemptible") @Nullable Boolean isPreemptible,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("managedGroupConfigs") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances,
+        @OutputCustomType.Parameter("preemptibility") @Nullable String preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.image = image;

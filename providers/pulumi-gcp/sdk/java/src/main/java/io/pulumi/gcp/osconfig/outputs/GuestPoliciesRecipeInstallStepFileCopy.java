@@ -39,12 +39,12 @@ public final class GuestPoliciesRecipeInstallStepFileCopy {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor({"artifactId","destination","overwrite","permissions"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStepFileCopy(
-        String artifactId,
-        String destination,
-        @Nullable Boolean overwrite,
-        @Nullable String permissions) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;

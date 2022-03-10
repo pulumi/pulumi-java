@@ -32,14 +32,14 @@ public final class GetGlobalAddressResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"address","id","name","project","selfLink","status"})
+    @OutputCustomType.Constructor
     private GetGlobalAddressResult(
-        String address,
-        String id,
-        String name,
-        String project,
-        String selfLink,
-        String status) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status) {
         this.address = address;
         this.id = id;
         this.name = name;

@@ -23,12 +23,12 @@ public final class GetNodeTypesResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor({"id","names","project","zone"})
+    @OutputCustomType.Constructor
     private GetNodeTypesResult(
-        String id,
-        List<String> names,
-        String project,
-        String zone) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.id = id;
         this.names = names;
         this.project = project;

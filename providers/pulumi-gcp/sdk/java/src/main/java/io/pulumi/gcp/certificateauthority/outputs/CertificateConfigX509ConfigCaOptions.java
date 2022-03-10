@@ -37,12 +37,12 @@ public final class CertificateConfigX509ConfigCaOptions {
      */
     private final @Nullable Boolean zeroMaxIssuerPathLength;
 
-    @OutputCustomType.Constructor({"isCa","maxIssuerPathLength","nonCa","zeroMaxIssuerPathLength"})
+    @OutputCustomType.Constructor
     private CertificateConfigX509ConfigCaOptions(
-        @Nullable Boolean isCa,
-        @Nullable Integer maxIssuerPathLength,
-        @Nullable Boolean nonCa,
-        @Nullable Boolean zeroMaxIssuerPathLength) {
+        @OutputCustomType.Parameter("isCa") @Nullable Boolean isCa,
+        @OutputCustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength,
+        @OutputCustomType.Parameter("nonCa") @Nullable Boolean nonCa,
+        @OutputCustomType.Parameter("zeroMaxIssuerPathLength") @Nullable Boolean zeroMaxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
         this.nonCa = nonCa;

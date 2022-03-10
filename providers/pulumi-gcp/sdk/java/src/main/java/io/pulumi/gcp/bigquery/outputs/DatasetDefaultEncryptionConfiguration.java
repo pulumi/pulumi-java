@@ -17,8 +17,8 @@ public final class DatasetDefaultEncryptionConfiguration {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private DatasetDefaultEncryptionConfiguration(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private DatasetDefaultEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

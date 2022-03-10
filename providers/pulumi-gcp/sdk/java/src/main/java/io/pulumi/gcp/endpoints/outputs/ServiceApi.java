@@ -18,12 +18,12 @@ public final class ServiceApi {
     private final @Nullable String syntax;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"methods","name","syntax","version"})
+    @OutputCustomType.Constructor
     private ServiceApi(
-        @Nullable List<ServiceApiMethod> methods,
-        @Nullable String name,
-        @Nullable String syntax,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("methods") @Nullable List<ServiceApiMethod> methods,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("syntax") @Nullable String syntax,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.methods = methods;
         this.name = name;
         this.syntax = syntax;

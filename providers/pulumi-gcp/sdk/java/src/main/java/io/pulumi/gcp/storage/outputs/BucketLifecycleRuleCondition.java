@@ -59,17 +59,17 @@ public final class BucketLifecycleRuleCondition {
      */
     private final @Nullable String withState;
 
-    @OutputCustomType.Constructor({"age","createdBefore","customTimeBefore","daysSinceCustomTime","daysSinceNoncurrentTime","matchesStorageClasses","noncurrentTimeBefore","numNewerVersions","withState"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleCondition(
-        @Nullable Integer age,
-        @Nullable String createdBefore,
-        @Nullable String customTimeBefore,
-        @Nullable Integer daysSinceCustomTime,
-        @Nullable Integer daysSinceNoncurrentTime,
-        @Nullable List<String> matchesStorageClasses,
-        @Nullable String noncurrentTimeBefore,
-        @Nullable Integer numNewerVersions,
-        @Nullable String withState) {
+        @OutputCustomType.Parameter("age") @Nullable Integer age,
+        @OutputCustomType.Parameter("createdBefore") @Nullable String createdBefore,
+        @OutputCustomType.Parameter("customTimeBefore") @Nullable String customTimeBefore,
+        @OutputCustomType.Parameter("daysSinceCustomTime") @Nullable Integer daysSinceCustomTime,
+        @OutputCustomType.Parameter("daysSinceNoncurrentTime") @Nullable Integer daysSinceNoncurrentTime,
+        @OutputCustomType.Parameter("matchesStorageClasses") @Nullable List<String> matchesStorageClasses,
+        @OutputCustomType.Parameter("noncurrentTimeBefore") @Nullable String noncurrentTimeBefore,
+        @OutputCustomType.Parameter("numNewerVersions") @Nullable Integer numNewerVersions,
+        @OutputCustomType.Parameter("withState") @Nullable String withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

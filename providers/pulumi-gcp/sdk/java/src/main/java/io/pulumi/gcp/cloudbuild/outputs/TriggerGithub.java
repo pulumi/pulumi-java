@@ -39,12 +39,12 @@ public final class TriggerGithub {
      */
     private final @Nullable TriggerGithubPush push;
 
-    @OutputCustomType.Constructor({"name","owner","pullRequest","push"})
+    @OutputCustomType.Constructor
     private TriggerGithub(
-        @Nullable String name,
-        @Nullable String owner,
-        @Nullable TriggerGithubPullRequest pullRequest,
-        @Nullable TriggerGithubPush push) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("pullRequest") @Nullable TriggerGithubPullRequest pullRequest,
+        @OutputCustomType.Parameter("push") @Nullable TriggerGithubPush push) {
         this.name = name;
         this.owner = owner;
         this.pullRequest = pullRequest;

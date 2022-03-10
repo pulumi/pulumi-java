@@ -17,13 +17,13 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
     private final List<String> queryStringBlacklists;
     private final List<String> queryStringWhitelists;
 
-    @OutputCustomType.Constructor({"includeHost","includeProtocol","includeQueryString","queryStringBlacklists","queryStringWhitelists"})
+    @OutputCustomType.Constructor
     private GetBackendServiceCdnPolicyCacheKeyPolicy(
-        Boolean includeHost,
-        Boolean includeProtocol,
-        Boolean includeQueryString,
-        List<String> queryStringBlacklists,
-        List<String> queryStringWhitelists) {
+        @OutputCustomType.Parameter("includeHost") Boolean includeHost,
+        @OutputCustomType.Parameter("includeProtocol") Boolean includeProtocol,
+        @OutputCustomType.Parameter("includeQueryString") Boolean includeQueryString,
+        @OutputCustomType.Parameter("queryStringBlacklists") List<String> queryStringBlacklists,
+        @OutputCustomType.Parameter("queryStringWhitelists") List<String> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;

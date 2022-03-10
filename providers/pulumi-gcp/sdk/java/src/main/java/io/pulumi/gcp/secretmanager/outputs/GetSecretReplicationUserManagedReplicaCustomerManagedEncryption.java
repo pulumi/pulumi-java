@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncryption {
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

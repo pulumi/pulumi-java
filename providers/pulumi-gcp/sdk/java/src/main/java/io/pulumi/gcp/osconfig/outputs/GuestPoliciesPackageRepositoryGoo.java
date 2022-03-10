@@ -23,10 +23,10 @@ public final class GuestPoliciesPackageRepositoryGoo {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"name","url"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepositoryGoo(
-        String name,
-        String url) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

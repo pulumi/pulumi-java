@@ -81,17 +81,17 @@ public final class ClusterClusterConfigGceClusterConfig {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"internalIpOnly","metadata","network","serviceAccount","serviceAccountScopes","shieldedInstanceConfig","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigGceClusterConfig(
-        @Nullable Boolean internalIpOnly,
-        @Nullable Map<String,String> metadata,
-        @Nullable String network,
-        @Nullable String serviceAccount,
-        @Nullable List<String> serviceAccountScopes,
-        @Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @Nullable String subnetwork,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;

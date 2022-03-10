@@ -15,8 +15,8 @@ public final class AzureClusterAuthorizationAdminUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private AzureClusterAuthorizationAdminUser(String username) {
+    @OutputCustomType.Constructor
+    private AzureClusterAuthorizationAdminUser(@OutputCustomType.Parameter("username") String username) {
         this.username = username;
     }
 

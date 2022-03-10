@@ -22,16 +22,16 @@ public final class GetBackendBucketCdnPolicy {
     private final Integer serveWhileStale;
     private final Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor({"cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicies","serveWhileStale","signedUrlCacheMaxAgeSec"})
+    @OutputCustomType.Constructor
     private GetBackendBucketCdnPolicy(
-        String cacheMode,
-        Integer clientTtl,
-        Integer defaultTtl,
-        Integer maxTtl,
-        Boolean negativeCaching,
-        List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        Integer serveWhileStale,
-        Integer signedUrlCacheMaxAgeSec) {
+        @OutputCustomType.Parameter("cacheMode") String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicies") List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") Integer signedUrlCacheMaxAgeSec) {
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;
         this.defaultTtl = defaultTtl;

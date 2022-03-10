@@ -34,21 +34,21 @@ public final class GetWorkloadIdentityPoolProviderResult {
     private final String workloadIdentityPoolId;
     private final String workloadIdentityPoolProviderId;
 
-    @OutputCustomType.Constructor({"attributeCondition","attributeMapping","aws","description","disabled","displayName","id","name","oidcs","project","state","workloadIdentityPoolId","workloadIdentityPoolProviderId"})
+    @OutputCustomType.Constructor
     private GetWorkloadIdentityPoolProviderResult(
-        String attributeCondition,
-        Map<String,String> attributeMapping,
-        List<GetWorkloadIdentityPoolProviderAw> aws,
-        String description,
-        Boolean disabled,
-        String displayName,
-        String id,
-        String name,
-        List<GetWorkloadIdentityPoolProviderOidc> oidcs,
-        @Nullable String project,
-        String state,
-        String workloadIdentityPoolId,
-        String workloadIdentityPoolProviderId) {
+        @OutputCustomType.Parameter("attributeCondition") String attributeCondition,
+        @OutputCustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
+        @OutputCustomType.Parameter("aws") List<GetWorkloadIdentityPoolProviderAw> aws,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oidcs") List<GetWorkloadIdentityPoolProviderOidc> oidcs,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId,
+        @OutputCustomType.Parameter("workloadIdentityPoolProviderId") String workloadIdentityPoolProviderId) {
         this.attributeCondition = attributeCondition;
         this.attributeMapping = attributeMapping;
         this.aws = aws;

@@ -33,12 +33,12 @@ public final class ConnectionCloudSql {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credential","database","instanceId","type"})
+    @OutputCustomType.Constructor
     private ConnectionCloudSql(
-        ConnectionCloudSqlCredential credential,
-        String database,
-        String instanceId,
-        String type) {
+        @OutputCustomType.Parameter("credential") ConnectionCloudSqlCredential credential,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.credential = credential;
         this.database = database;
         this.instanceId = instanceId;

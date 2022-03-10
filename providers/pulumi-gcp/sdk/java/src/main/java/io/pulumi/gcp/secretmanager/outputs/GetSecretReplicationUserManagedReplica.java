@@ -14,10 +14,10 @@ public final class GetSecretReplicationUserManagedReplica {
     private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
     private final String location;
 
-    @OutputCustomType.Constructor({"customerManagedEncryptions","location"})
+    @OutputCustomType.Constructor
     private GetSecretReplicationUserManagedReplica(
-        List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions,
-        String location) {
+        @OutputCustomType.Parameter("customerManagedEncryptions") List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions,
+        @OutputCustomType.Parameter("location") String location) {
         this.customerManagedEncryptions = customerManagedEncryptions;
         this.location = location;
     }

@@ -83,20 +83,20 @@ public final class WorkflowTemplateJob {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"hadoopJob","hiveJob","labels","pigJob","prerequisiteStepIds","prestoJob","pysparkJob","scheduling","sparkJob","sparkRJob","sparkSqlJob","stepId"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJob(
-        @Nullable WorkflowTemplateJobHadoopJob hadoopJob,
-        @Nullable WorkflowTemplateJobHiveJob hiveJob,
-        @Nullable Map<String,String> labels,
-        @Nullable WorkflowTemplateJobPigJob pigJob,
-        @Nullable List<String> prerequisiteStepIds,
-        @Nullable WorkflowTemplateJobPrestoJob prestoJob,
-        @Nullable WorkflowTemplateJobPysparkJob pysparkJob,
-        @Nullable WorkflowTemplateJobScheduling scheduling,
-        @Nullable WorkflowTemplateJobSparkJob sparkJob,
-        @Nullable WorkflowTemplateJobSparkRJob sparkRJob,
-        @Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob,
-        String stepId) {
+        @OutputCustomType.Parameter("hadoopJob") @Nullable WorkflowTemplateJobHadoopJob hadoopJob,
+        @OutputCustomType.Parameter("hiveJob") @Nullable WorkflowTemplateJobHiveJob hiveJob,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("pigJob") @Nullable WorkflowTemplateJobPigJob pigJob,
+        @OutputCustomType.Parameter("prerequisiteStepIds") @Nullable List<String> prerequisiteStepIds,
+        @OutputCustomType.Parameter("prestoJob") @Nullable WorkflowTemplateJobPrestoJob prestoJob,
+        @OutputCustomType.Parameter("pysparkJob") @Nullable WorkflowTemplateJobPysparkJob pysparkJob,
+        @OutputCustomType.Parameter("scheduling") @Nullable WorkflowTemplateJobScheduling scheduling,
+        @OutputCustomType.Parameter("sparkJob") @Nullable WorkflowTemplateJobSparkJob sparkJob,
+        @OutputCustomType.Parameter("sparkRJob") @Nullable WorkflowTemplateJobSparkRJob sparkRJob,
+        @OutputCustomType.Parameter("sparkSqlJob") @Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.hadoopJob = hadoopJob;
         this.hiveJob = hiveJob;
         this.labels = labels;

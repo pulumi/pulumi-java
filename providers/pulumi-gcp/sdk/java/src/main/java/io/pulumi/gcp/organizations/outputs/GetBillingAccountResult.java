@@ -32,14 +32,14 @@ public final class GetBillingAccountResult {
      */
     private final List<String> projectIds;
 
-    @OutputCustomType.Constructor({"billingAccount","displayName","id","name","open","projectIds"})
+    @OutputCustomType.Constructor
     private GetBillingAccountResult(
-        @Nullable String billingAccount,
-        String displayName,
-        String id,
-        String name,
-        Boolean open,
-        List<String> projectIds) {
+        @OutputCustomType.Parameter("billingAccount") @Nullable String billingAccount,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("open") Boolean open,
+        @OutputCustomType.Parameter("projectIds") List<String> projectIds) {
         this.billingAccount = billingAccount;
         this.displayName = displayName;
         this.id = id;

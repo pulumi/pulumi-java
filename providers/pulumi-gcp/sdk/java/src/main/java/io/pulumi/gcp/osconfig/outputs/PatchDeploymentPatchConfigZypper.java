@@ -45,14 +45,14 @@ public final class PatchDeploymentPatchConfigZypper {
      */
     private final @Nullable Boolean withUpdate;
 
-    @OutputCustomType.Constructor({"categories","excludes","exclusivePatches","severities","withOptional","withUpdate"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigZypper(
-        @Nullable List<String> categories,
-        @Nullable List<String> excludes,
-        @Nullable List<String> exclusivePatches,
-        @Nullable List<String> severities,
-        @Nullable Boolean withOptional,
-        @Nullable Boolean withUpdate) {
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches,
+        @OutputCustomType.Parameter("severities") @Nullable List<String> severities,
+        @OutputCustomType.Parameter("withOptional") @Nullable Boolean withOptional,
+        @OutputCustomType.Parameter("withUpdate") @Nullable Boolean withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

@@ -30,10 +30,10 @@ public final class FirewallAllow {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"ports","protocol"})
+    @OutputCustomType.Constructor
     private FirewallAllow(
-        @Nullable List<String> ports,
-        String protocol) {
+        @OutputCustomType.Parameter("ports") @Nullable List<String> ports,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.ports = ports;
         this.protocol = protocol;
     }

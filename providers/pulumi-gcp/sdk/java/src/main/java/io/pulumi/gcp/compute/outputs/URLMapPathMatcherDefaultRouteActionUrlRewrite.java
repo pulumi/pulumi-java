@@ -26,10 +26,10 @@ public final class URLMapPathMatcherDefaultRouteActionUrlRewrite {
      */
     private final @Nullable String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionUrlRewrite(
-        @Nullable String hostRewrite,
-        @Nullable String pathPrefixRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }

@@ -35,10 +35,10 @@ public final class Hl7StoreNotificationConfigs {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"filter","pubsubTopic"})
+    @OutputCustomType.Constructor
     private Hl7StoreNotificationConfigs(
-        @Nullable String filter,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }

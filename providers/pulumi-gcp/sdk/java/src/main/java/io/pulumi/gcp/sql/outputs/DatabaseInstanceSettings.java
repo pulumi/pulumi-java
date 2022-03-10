@@ -81,25 +81,25 @@ public final class DatabaseInstanceSettings {
     private final @Nullable Map<String,String> userLabels;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"activationPolicy","availabilityType","backupConfiguration","collation","databaseFlags","diskAutoresize","diskAutoresizeLimit","diskSize","diskType","insightsConfig","ipConfiguration","locationPreference","maintenanceWindow","pricingPlan","tier","userLabels","version"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettings(
-        @Nullable String activationPolicy,
-        @Nullable String availabilityType,
-        @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
-        @Nullable String collation,
-        @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
-        @Nullable Boolean diskAutoresize,
-        @Nullable Integer diskAutoresizeLimit,
-        @Nullable Integer diskSize,
-        @Nullable String diskType,
-        @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
-        @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
-        @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
-        @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
-        @Nullable String pricingPlan,
-        String tier,
-        @Nullable Map<String,String> userLabels,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("activationPolicy") @Nullable String activationPolicy,
+        @OutputCustomType.Parameter("availabilityType") @Nullable String availabilityType,
+        @OutputCustomType.Parameter("backupConfiguration") @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("databaseFlags") @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
+        @OutputCustomType.Parameter("diskAutoresize") @Nullable Boolean diskAutoresize,
+        @OutputCustomType.Parameter("diskAutoresizeLimit") @Nullable Integer diskAutoresizeLimit,
+        @OutputCustomType.Parameter("diskSize") @Nullable Integer diskSize,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("insightsConfig") @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
+        @OutputCustomType.Parameter("locationPreference") @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
+        @OutputCustomType.Parameter("pricingPlan") @Nullable String pricingPlan,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.activationPolicy = activationPolicy;
         this.availabilityType = availabilityType;
         this.backupConfiguration = backupConfiguration;

@@ -29,18 +29,18 @@ public final class GetInstanceResult {
     private final @Nullable String project;
     private final String state;
 
-    @OutputCustomType.Constructor({"config","displayName","forceDestroy","id","labels","name","numNodes","processingUnits","project","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        @Nullable String config,
-        @Nullable String displayName,
-        Boolean forceDestroy,
-        String id,
-        Map<String,String> labels,
-        String name,
-        Integer numNodes,
-        Integer processingUnits,
-        @Nullable String project,
-        String state) {
+        @OutputCustomType.Parameter("config") @Nullable String config,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("forceDestroy") Boolean forceDestroy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numNodes") Integer numNodes,
+        @OutputCustomType.Parameter("processingUnits") Integer processingUnits,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.displayName = displayName;
         this.forceDestroy = forceDestroy;

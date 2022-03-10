@@ -23,11 +23,11 @@ public final class GetProjectResult {
      */
     private final List<GetProjectProject> projects;
 
-    @OutputCustomType.Constructor({"filter","id","projects"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String filter,
-        String id,
-        List<GetProjectProject> projects) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("projects") List<GetProjectProject> projects) {
         this.filter = filter;
         this.id = id;
         this.projects = projects;

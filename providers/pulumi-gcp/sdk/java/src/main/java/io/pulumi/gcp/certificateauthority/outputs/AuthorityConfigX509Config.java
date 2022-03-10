@@ -46,13 +46,13 @@ public final class AuthorityConfigX509Config {
      */
     private final @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private AuthorityConfigX509Config(
-        @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
-        @Nullable List<String> aiaOcspServers,
-        AuthorityConfigX509ConfigCaOptions caOptions,
-        AuthorityConfigX509ConfigKeyUsage keyUsage,
-        @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") AuthorityConfigX509ConfigCaOptions caOptions,
+        @OutputCustomType.Parameter("keyUsage") AuthorityConfigX509ConfigKeyUsage keyUsage,
+        @OutputCustomType.Parameter("policyIds") @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleMatchExpr {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"expression"})
-    private SecurityPolicyRuleMatchExpr(String expression) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRuleMatchExpr(@OutputCustomType.Parameter("expression") String expression) {
         this.expression = expression;
     }
 

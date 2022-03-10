@@ -33,15 +33,15 @@ public final class GetAddressResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"address","id","name","project","region","selfLink","status"})
+    @OutputCustomType.Constructor
     private GetAddressResult(
-        String address,
-        String id,
-        String name,
-        String project,
-        String region,
-        String selfLink,
-        String status) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status) {
         this.address = address;
         this.id = id;
         this.name = name;

@@ -35,11 +35,11 @@ public final class BudgetAmountSpecifiedAmount {
      */
     private final @Nullable String units;
 
-    @OutputCustomType.Constructor({"currencyCode","nanos","units"})
+    @OutputCustomType.Constructor
     private BudgetAmountSpecifiedAmount(
-        @Nullable String currencyCode,
-        @Nullable Integer nanos,
-        @Nullable String units) {
+        @OutputCustomType.Parameter("currencyCode") @Nullable String currencyCode,
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("units") @Nullable String units) {
         this.currencyCode = currencyCode;
         this.nanos = nanos;
         this.units = units;

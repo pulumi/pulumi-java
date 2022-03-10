@@ -14,10 +14,10 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange 
     private final @Nullable String description;
     private final String value;
 
-    @OutputCustomType.Constructor({"description","value"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(
-        @Nullable String description,
-        String value) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("value") String value) {
         this.description = description;
         this.value = value;
     }

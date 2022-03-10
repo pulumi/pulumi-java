@@ -22,10 +22,10 @@ public final class ReservationShareSettingsProjectMap {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"id","projectId"})
+    @OutputCustomType.Constructor
     private ReservationShareSettingsProjectMap(
-        String id,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.id = id;
         this.projectId = projectId;
     }

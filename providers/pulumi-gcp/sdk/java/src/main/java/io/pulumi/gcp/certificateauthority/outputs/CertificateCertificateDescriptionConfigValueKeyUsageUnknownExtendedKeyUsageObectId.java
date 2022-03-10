@@ -17,8 +17,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
      */
     private final @Nullable List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId(@Nullable List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId(@OutputCustomType.Parameter("objectIdPaths") @Nullable List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

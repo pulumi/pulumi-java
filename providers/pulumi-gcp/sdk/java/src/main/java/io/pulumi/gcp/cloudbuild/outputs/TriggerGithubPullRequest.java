@@ -29,11 +29,11 @@ public final class TriggerGithubPullRequest {
      */
     private final @Nullable Boolean invertRegex;
 
-    @OutputCustomType.Constructor({"branch","commentControl","invertRegex"})
+    @OutputCustomType.Constructor
     private TriggerGithubPullRequest(
-        String branch,
-        @Nullable String commentControl,
-        @Nullable Boolean invertRegex) {
+        @OutputCustomType.Parameter("branch") String branch,
+        @OutputCustomType.Parameter("commentControl") @Nullable String commentControl,
+        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;

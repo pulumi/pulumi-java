@@ -18,8 +18,8 @@ public final class CxPageFormParameterFillBehavior {
      */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment;
 
-    @OutputCustomType.Constructor({"initialPromptFulfillment"})
-    private CxPageFormParameterFillBehavior(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
+    @OutputCustomType.Constructor
+    private CxPageFormParameterFillBehavior(@OutputCustomType.Parameter("initialPromptFulfillment") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillment initialPromptFulfillment) {
         this.initialPromptFulfillment = initialPromptFulfillment;
     }
 

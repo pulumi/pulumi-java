@@ -20,8 +20,8 @@ public final class PreventionJobTriggerTriggerSchedule {
      */
     private final @Nullable String recurrencePeriodDuration;
 
-    @OutputCustomType.Constructor({"recurrencePeriodDuration"})
-    private PreventionJobTriggerTriggerSchedule(@Nullable String recurrencePeriodDuration) {
+    @OutputCustomType.Constructor
+    private PreventionJobTriggerTriggerSchedule(@OutputCustomType.Parameter("recurrencePeriodDuration") @Nullable String recurrencePeriodDuration) {
         this.recurrencePeriodDuration = recurrencePeriodDuration;
     }
 

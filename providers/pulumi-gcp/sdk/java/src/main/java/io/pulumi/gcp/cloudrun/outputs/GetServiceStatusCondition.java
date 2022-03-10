@@ -14,12 +14,12 @@ public final class GetServiceStatusCondition {
     private final String status;
     private final String type;
 
-    @OutputCustomType.Constructor({"message","reason","status","type"})
+    @OutputCustomType.Constructor
     private GetServiceStatusCondition(
-        String message,
-        String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.message = message;
         this.reason = reason;
         this.status = status;

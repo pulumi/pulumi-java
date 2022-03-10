@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source;
 
-    @OutputCustomType.Constructor({"pullDeps","source"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb(
-        @Nullable Boolean pullDeps,
-        OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
+        @OutputCustomType.Parameter("pullDeps") @Nullable Boolean pullDeps,
+        @OutputCustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
         this.pullDeps = pullDeps;
         this.source = source;
     }

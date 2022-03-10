@@ -14,10 +14,10 @@ public final class ServiceAttachmentConnectedEndpoint {
     private final @Nullable String endpoint;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"endpoint","status"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConnectedEndpoint(
-        @Nullable String endpoint,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.endpoint = endpoint;
         this.status = status;
     }

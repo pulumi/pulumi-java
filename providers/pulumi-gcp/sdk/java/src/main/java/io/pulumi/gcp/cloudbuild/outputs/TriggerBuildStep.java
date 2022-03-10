@@ -106,19 +106,19 @@ public final class TriggerBuildStep {
      */
     private final @Nullable List<String> waitFors;
 
-    @OutputCustomType.Constructor({"args","dir","entrypoint","envs","id","name","secretEnvs","timeout","timing","volumes","waitFors"})
+    @OutputCustomType.Constructor
     private TriggerBuildStep(
-        @Nullable List<String> args,
-        @Nullable String dir,
-        @Nullable String entrypoint,
-        @Nullable List<String> envs,
-        @Nullable String id,
-        String name,
-        @Nullable List<String> secretEnvs,
-        @Nullable String timeout,
-        @Nullable String timing,
-        @Nullable List<TriggerBuildStepVolume> volumes,
-        @Nullable List<String> waitFors) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("dir") @Nullable String dir,
+        @OutputCustomType.Parameter("entrypoint") @Nullable String entrypoint,
+        @OutputCustomType.Parameter("envs") @Nullable List<String> envs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secretEnvs") @Nullable List<String> secretEnvs,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
+        @OutputCustomType.Parameter("timing") @Nullable String timing,
+        @OutputCustomType.Parameter("volumes") @Nullable List<TriggerBuildStepVolume> volumes,
+        @OutputCustomType.Parameter("waitFors") @Nullable List<String> waitFors) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;

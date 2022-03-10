@@ -38,12 +38,12 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor({"allowedSuccessCodes","gcsObject","interpreter","localPath"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigPostStepLinuxExecStepConfig(
-        @Nullable List<Integer> allowedSuccessCodes,
-        @Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject gcsObject,
-        @Nullable String interpreter,
-        @Nullable String localPath) {
+        @OutputCustomType.Parameter("allowedSuccessCodes") @Nullable List<Integer> allowedSuccessCodes,
+        @OutputCustomType.Parameter("gcsObject") @Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject gcsObject,
+        @OutputCustomType.Parameter("interpreter") @Nullable String interpreter,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;

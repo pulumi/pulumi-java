@@ -16,8 +16,8 @@ public final class ApiConfigGatewayConfig {
      */
     private final ApiConfigGatewayConfigBackendConfig backendConfig;
 
-    @OutputCustomType.Constructor({"backendConfig"})
-    private ApiConfigGatewayConfig(ApiConfigGatewayConfigBackendConfig backendConfig) {
+    @OutputCustomType.Constructor
+    private ApiConfigGatewayConfig(@OutputCustomType.Parameter("backendConfig") ApiConfigGatewayConfigBackendConfig backendConfig) {
         this.backendConfig = backendConfig;
     }
 

@@ -43,16 +43,16 @@ public final class GetInstanceBootDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"autoDelete","deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","initializeParams","kmsKeySelfLink","mode","source"})
+    @OutputCustomType.Constructor
     private GetInstanceBootDisk(
-        Boolean autoDelete,
-        String deviceName,
-        String diskEncryptionKeyRaw,
-        String diskEncryptionKeySha256,
-        List<GetInstanceBootDiskInitializeParam> initializeParams,
-        String kmsKeySelfLink,
-        String mode,
-        String source) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
+        @OutputCustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
+        @OutputCustomType.Parameter("initializeParams") List<GetInstanceBootDiskInitializeParam> initializeParams,
+        @OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;

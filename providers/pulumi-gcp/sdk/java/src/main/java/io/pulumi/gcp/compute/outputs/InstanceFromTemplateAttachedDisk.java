@@ -18,14 +18,14 @@ public final class InstanceFromTemplateAttachedDisk {
     private final @Nullable String mode;
     private final String source;
 
-    @OutputCustomType.Constructor({"deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","kmsKeySelfLink","mode","source"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateAttachedDisk(
-        @Nullable String deviceName,
-        @Nullable String diskEncryptionKeyRaw,
-        @Nullable String diskEncryptionKeySha256,
-        @Nullable String kmsKeySelfLink,
-        @Nullable String mode,
-        String source) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
+        @OutputCustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
+        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") String source) {
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;

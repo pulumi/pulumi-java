@@ -23,8 +23,8 @@ public final class NoteAttestationAuthority {
      */
     private final NoteAttestationAuthorityHint hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private NoteAttestationAuthority(NoteAttestationAuthorityHint hint) {
+    @OutputCustomType.Constructor
+    private NoteAttestationAuthority(@OutputCustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
         this.hint = hint;
     }
 

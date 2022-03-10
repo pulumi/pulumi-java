@@ -14,10 +14,10 @@ public final class AlertPolicyCreationRecord {
     private final @Nullable String mutateTime;
     private final @Nullable String mutatedBy;
 
-    @OutputCustomType.Constructor({"mutateTime","mutatedBy"})
+    @OutputCustomType.Constructor
     private AlertPolicyCreationRecord(
-        @Nullable String mutateTime,
-        @Nullable String mutatedBy) {
+        @OutputCustomType.Parameter("mutateTime") @Nullable String mutateTime,
+        @OutputCustomType.Parameter("mutatedBy") @Nullable String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }

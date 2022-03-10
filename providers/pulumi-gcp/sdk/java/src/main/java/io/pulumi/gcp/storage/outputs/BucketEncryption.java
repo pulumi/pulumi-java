@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BucketEncryption {
     private final String defaultKmsKeyName;
 
-    @OutputCustomType.Constructor({"defaultKmsKeyName"})
-    private BucketEncryption(String defaultKmsKeyName) {
+    @OutputCustomType.Constructor
+    private BucketEncryption(@OutputCustomType.Parameter("defaultKmsKeyName") String defaultKmsKeyName) {
         this.defaultKmsKeyName = defaultKmsKeyName;
     }
 

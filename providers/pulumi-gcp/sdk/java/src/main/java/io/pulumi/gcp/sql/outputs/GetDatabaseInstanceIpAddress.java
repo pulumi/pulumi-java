@@ -13,11 +13,11 @@ public final class GetDatabaseInstanceIpAddress {
     private final String timeToRetire;
     private final String type;
 
-    @OutputCustomType.Constructor({"ipAddress","timeToRetire","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceIpAddress(
-        String ipAddress,
-        String timeToRetire,
-        String type) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("timeToRetire") String timeToRetire,
+        @OutputCustomType.Parameter("type") String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;

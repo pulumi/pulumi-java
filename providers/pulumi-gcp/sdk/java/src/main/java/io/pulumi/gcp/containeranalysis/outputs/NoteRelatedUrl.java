@@ -22,10 +22,10 @@ public final class NoteRelatedUrl {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"label","url"})
+    @OutputCustomType.Constructor
     private NoteRelatedUrl(
-        @Nullable String label,
-        String url) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }

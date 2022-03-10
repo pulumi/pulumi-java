@@ -40,12 +40,12 @@ public final class GameServerConfigScalingConfig {
      */
     private final @Nullable List<GameServerConfigScalingConfigSelector> selectors;
 
-    @OutputCustomType.Constructor({"fleetAutoscalerSpec","name","schedules","selectors"})
+    @OutputCustomType.Constructor
     private GameServerConfigScalingConfig(
-        String fleetAutoscalerSpec,
-        String name,
-        @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
-        @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
+        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
+        @OutputCustomType.Parameter("selectors") @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;

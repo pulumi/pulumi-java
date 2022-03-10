@@ -48,13 +48,13 @@ public final class JobAppEngineHttpTarget {
      */
     private final String relativeUri;
 
-    @OutputCustomType.Constructor({"appEngineRouting","body","headers","httpMethod","relativeUri"})
+    @OutputCustomType.Constructor
     private JobAppEngineHttpTarget(
-        @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting,
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String httpMethod,
-        String relativeUri) {
+        @OutputCustomType.Parameter("appEngineRouting") @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("relativeUri") String relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;

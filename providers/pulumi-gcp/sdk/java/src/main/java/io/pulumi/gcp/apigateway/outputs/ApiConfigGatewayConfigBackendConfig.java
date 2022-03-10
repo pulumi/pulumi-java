@@ -16,8 +16,8 @@ public final class ApiConfigGatewayConfigBackendConfig {
      */
     private final String googleServiceAccount;
 
-    @OutputCustomType.Constructor({"googleServiceAccount"})
-    private ApiConfigGatewayConfigBackendConfig(String googleServiceAccount) {
+    @OutputCustomType.Constructor
+    private ApiConfigGatewayConfigBackendConfig(@OutputCustomType.Parameter("googleServiceAccount") String googleServiceAccount) {
         this.googleServiceAccount = googleServiceAccount;
     }
 

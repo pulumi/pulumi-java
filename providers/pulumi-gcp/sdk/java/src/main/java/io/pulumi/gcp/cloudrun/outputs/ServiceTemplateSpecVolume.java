@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecVolume {
      */
     private final ServiceTemplateSpecVolumeSecret secret;
 
-    @OutputCustomType.Constructor({"name","secret"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecVolume(
-        String name,
-        ServiceTemplateSpecVolumeSecret secret) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") ServiceTemplateSpecVolumeSecret secret) {
         this.name = name;
         this.secret = secret;
     }

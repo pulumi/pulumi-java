@@ -17,8 +17,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceL
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor({"threshold"})
-    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency(String threshold) {
+    @OutputCustomType.Constructor
+    private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency(@OutputCustomType.Parameter("threshold") String threshold) {
         this.threshold = threshold;
     }
 

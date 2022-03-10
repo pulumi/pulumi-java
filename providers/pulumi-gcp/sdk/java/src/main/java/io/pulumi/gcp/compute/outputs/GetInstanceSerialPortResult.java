@@ -25,14 +25,14 @@ public final class GetInstanceSerialPortResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor({"contents","id","instance","port","project","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceSerialPortResult(
-        String contents,
-        String id,
-        String instance,
-        Integer port,
-        String project,
-        String zone) {
+        @OutputCustomType.Parameter("contents") String contents,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.contents = contents;
         this.id = id;
         this.instance = instance;

@@ -24,10 +24,10 @@ public final class ClusterNetworkPolicy {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor({"enabled","provider"})
+    @OutputCustomType.Constructor
     private ClusterNetworkPolicy(
-        Boolean enabled,
-        @Nullable String provider) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("provider") @Nullable String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }

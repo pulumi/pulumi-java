@@ -18,11 +18,11 @@ public final class JobStatus {
     private final @Nullable List<JobStatusError> errors;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"errorResults","errors","state"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable List<JobStatusErrorResult> errorResults,
-        @Nullable List<JobStatusError> errors,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("errorResults") @Nullable List<JobStatusErrorResult> errorResults,
+        @OutputCustomType.Parameter("errors") @Nullable List<JobStatusError> errors,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.errorResults = errorResults;
         this.errors = errors;
         this.state = state;

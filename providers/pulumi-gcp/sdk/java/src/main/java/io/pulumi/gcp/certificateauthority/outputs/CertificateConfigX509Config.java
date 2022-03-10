@@ -47,13 +47,13 @@ public final class CertificateConfigX509Config {
      */
     private final @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private CertificateConfigX509Config(
-        @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions,
-        @Nullable List<String> aiaOcspServers,
-        @Nullable CertificateConfigX509ConfigCaOptions caOptions,
-        CertificateConfigX509ConfigKeyUsage keyUsage,
-        @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateConfigX509ConfigAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") @Nullable CertificateConfigX509ConfigCaOptions caOptions,
+        @OutputCustomType.Parameter("keyUsage") CertificateConfigX509ConfigKeyUsage keyUsage,
+        @OutputCustomType.Parameter("policyIds") @Nullable List<CertificateConfigX509ConfigPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

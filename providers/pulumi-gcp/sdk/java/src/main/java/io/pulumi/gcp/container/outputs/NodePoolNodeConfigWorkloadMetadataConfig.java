@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class NodePoolNodeConfigWorkloadMetadataConfig {
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private NodePoolNodeConfigWorkloadMetadataConfig(String mode) {
+    @OutputCustomType.Constructor
+    private NodePoolNodeConfigWorkloadMetadataConfig(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

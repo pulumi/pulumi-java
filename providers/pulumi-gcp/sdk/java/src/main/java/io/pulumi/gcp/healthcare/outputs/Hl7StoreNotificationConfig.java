@@ -20,8 +20,8 @@ public final class Hl7StoreNotificationConfig {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"pubsubTopic"})
-    private Hl7StoreNotificationConfig(String pubsubTopic) {
+    @OutputCustomType.Constructor
+    private Hl7StoreNotificationConfig(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 

@@ -52,13 +52,13 @@ public final class MetricMetricDescriptor {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"displayName","labels","metricKind","unit","valueType"})
+    @OutputCustomType.Constructor
     private MetricMetricDescriptor(
-        @Nullable String displayName,
-        @Nullable List<MetricMetricDescriptorLabel> labels,
-        String metricKind,
-        @Nullable String unit,
-        String valueType) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("labels") @Nullable List<MetricMetricDescriptorLabel> labels,
+        @OutputCustomType.Parameter("metricKind") String metricKind,
+        @OutputCustomType.Parameter("unit") @Nullable String unit,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.displayName = displayName;
         this.labels = labels;
         this.metricKind = metricKind;

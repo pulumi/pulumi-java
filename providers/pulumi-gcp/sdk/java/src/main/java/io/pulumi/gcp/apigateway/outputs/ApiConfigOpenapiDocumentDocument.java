@@ -20,10 +20,10 @@ public final class ApiConfigOpenapiDocumentDocument {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"contents","path"})
+    @OutputCustomType.Constructor
     private ApiConfigOpenapiDocumentDocument(
-        String contents,
-        String path) {
+        @OutputCustomType.Parameter("contents") String contents,
+        @OutputCustomType.Parameter("path") String path) {
         this.contents = contents;
         this.path = path;
     }

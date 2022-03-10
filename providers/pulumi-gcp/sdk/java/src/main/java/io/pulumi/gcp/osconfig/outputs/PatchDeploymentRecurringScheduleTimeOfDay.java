@@ -33,12 +33,12 @@ public final class PatchDeploymentRecurringScheduleTimeOfDay {
      */
     private final @Nullable Integer seconds;
 
-    @OutputCustomType.Constructor({"hours","minutes","nanos","seconds"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringScheduleTimeOfDay(
-        @Nullable Integer hours,
-        @Nullable Integer minutes,
-        @Nullable Integer nanos,
-        @Nullable Integer seconds) {
+        @OutputCustomType.Parameter("hours") @Nullable Integer hours,
+        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") @Nullable Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;

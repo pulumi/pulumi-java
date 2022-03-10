@@ -21,10 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"daysInCycle","startTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(
-        Integer daysInCycle,
-        String startTime) {
+        @OutputCustomType.Parameter("daysInCycle") Integer daysInCycle,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.daysInCycle = daysInCycle;
         this.startTime = startTime;
     }

@@ -16,8 +16,8 @@ public final class ClusterVerticalPodAutoscaling {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterVerticalPodAutoscaling(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterVerticalPodAutoscaling(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

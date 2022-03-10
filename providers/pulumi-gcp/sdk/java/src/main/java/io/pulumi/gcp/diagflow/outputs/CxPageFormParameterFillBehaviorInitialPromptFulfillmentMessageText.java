@@ -25,10 +25,10 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      */
     private final @Nullable List<String> texts;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","texts"})
+    @OutputCustomType.Constructor
     private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText(
-        @Nullable Boolean allowPlaybackInterruption,
-        @Nullable List<String> texts) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") @Nullable Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("texts") @Nullable List<String> texts) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.texts = texts;
     }

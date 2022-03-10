@@ -35,10 +35,10 @@ public final class EntryGcsFilesetSpec {
      */
     private final @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs;
 
-    @OutputCustomType.Constructor({"filePatterns","sampleGcsFileSpecs"})
+    @OutputCustomType.Constructor
     private EntryGcsFilesetSpec(
-        List<String> filePatterns,
-        @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
+        @OutputCustomType.Parameter("filePatterns") List<String> filePatterns,
+        @OutputCustomType.Parameter("sampleGcsFileSpecs") @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
         this.filePatterns = filePatterns;
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }

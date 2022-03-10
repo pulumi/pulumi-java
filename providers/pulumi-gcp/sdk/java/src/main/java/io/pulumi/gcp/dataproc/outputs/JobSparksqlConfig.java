@@ -43,14 +43,14 @@ public final class JobSparksqlConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"jarFileUris","loggingConfig","properties","queryFileUri","queryLists","scriptVariables"})
+    @OutputCustomType.Constructor
     private JobSparksqlConfig(
-        @Nullable List<String> jarFileUris,
-        @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable List<String> queryLists,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;

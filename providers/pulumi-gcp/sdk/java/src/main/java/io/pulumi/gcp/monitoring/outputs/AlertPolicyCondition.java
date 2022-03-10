@@ -63,14 +63,14 @@ public final class AlertPolicyCondition {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"conditionAbsent","conditionMatchedLog","conditionMonitoringQueryLanguage","conditionThreshold","displayName","name"})
+    @OutputCustomType.Constructor
     private AlertPolicyCondition(
-        @Nullable AlertPolicyConditionConditionAbsent conditionAbsent,
-        @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog,
-        @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage,
-        @Nullable AlertPolicyConditionConditionThreshold conditionThreshold,
-        String displayName,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("conditionAbsent") @Nullable AlertPolicyConditionConditionAbsent conditionAbsent,
+        @OutputCustomType.Parameter("conditionMatchedLog") @Nullable AlertPolicyConditionConditionMatchedLog conditionMatchedLog,
+        @OutputCustomType.Parameter("conditionMonitoringQueryLanguage") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguage conditionMonitoringQueryLanguage,
+        @OutputCustomType.Parameter("conditionThreshold") @Nullable AlertPolicyConditionConditionThreshold conditionThreshold,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;

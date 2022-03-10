@@ -26,10 +26,10 @@ public final class SubnetworkSecondaryIpRange {
      */
     private final String rangeName;
 
-    @OutputCustomType.Constructor({"ipCidrRange","rangeName"})
+    @OutputCustomType.Constructor
     private SubnetworkSecondaryIpRange(
-        String ipCidrRange,
-        String rangeName) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("rangeName") String rangeName) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
     }

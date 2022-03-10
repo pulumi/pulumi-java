@@ -64,14 +64,14 @@ public final class RegionHealthCheckSslHealthCheck {
      */
     private final @Nullable String response;
 
-    @OutputCustomType.Constructor({"port","portName","portSpecification","proxyHeader","request","response"})
+    @OutputCustomType.Constructor
     private RegionHealthCheckSslHealthCheck(
-        @Nullable Integer port,
-        @Nullable String portName,
-        @Nullable String portSpecification,
-        @Nullable String proxyHeader,
-        @Nullable String request,
-        @Nullable String response) {
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("portName") @Nullable String portName,
+        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
+        @OutputCustomType.Parameter("request") @Nullable String request,
+        @OutputCustomType.Parameter("response") @Nullable String response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;

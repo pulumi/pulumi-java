@@ -24,10 +24,10 @@ public final class CxEntityTypeEntity {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"synonyms","value"})
+    @OutputCustomType.Constructor
     private CxEntityTypeEntity(
-        @Nullable List<String> synonyms,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("synonyms") @Nullable List<String> synonyms,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

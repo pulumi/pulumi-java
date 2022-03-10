@@ -19,8 +19,8 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private ClusterNodePoolNodeConfigWorkloadMetadataConfig(String mode) {
+    @OutputCustomType.Constructor
+    private ClusterNodePoolNodeConfigWorkloadMetadataConfig(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

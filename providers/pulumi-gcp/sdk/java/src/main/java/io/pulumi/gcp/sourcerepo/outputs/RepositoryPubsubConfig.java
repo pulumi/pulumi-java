@@ -33,11 +33,11 @@ public final class RepositoryPubsubConfig {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"messageFormat","serviceAccountEmail","topic"})
+    @OutputCustomType.Constructor
     private RepositoryPubsubConfig(
-        String messageFormat,
-        @Nullable String serviceAccountEmail,
-        String topic) {
+        @OutputCustomType.Parameter("messageFormat") String messageFormat,
+        @OutputCustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.serviceAccountEmail = serviceAccountEmail;
         this.topic = topic;

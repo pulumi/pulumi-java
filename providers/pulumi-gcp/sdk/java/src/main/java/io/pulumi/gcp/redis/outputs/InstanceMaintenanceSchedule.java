@@ -37,11 +37,11 @@ public final class InstanceMaintenanceSchedule {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endTime","scheduleDeadlineTime","startTime"})
+    @OutputCustomType.Constructor
     private InstanceMaintenanceSchedule(
-        @Nullable String endTime,
-        @Nullable String scheduleDeadlineTime,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("scheduleDeadlineTime") @Nullable String scheduleDeadlineTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         this.startTime = startTime;

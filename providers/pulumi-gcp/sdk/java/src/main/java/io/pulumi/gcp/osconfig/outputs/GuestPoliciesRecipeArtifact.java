@@ -40,12 +40,12 @@ public final class GuestPoliciesRecipeArtifact {
      */
     private final @Nullable GuestPoliciesRecipeArtifactRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","id","remote"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeArtifact(
-        @Nullable Boolean allowInsecure,
-        @Nullable GuestPoliciesRecipeArtifactGcs gcs,
-        String id,
-        @Nullable GuestPoliciesRecipeArtifactRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable GuestPoliciesRecipeArtifactGcs gcs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("remote") @Nullable GuestPoliciesRecipeArtifactRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.id = id;

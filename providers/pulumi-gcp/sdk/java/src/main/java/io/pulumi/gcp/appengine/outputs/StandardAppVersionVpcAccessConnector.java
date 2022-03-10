@@ -15,8 +15,8 @@ public final class StandardAppVersionVpcAccessConnector {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private StandardAppVersionVpcAccessConnector(String name) {
+    @OutputCustomType.Constructor
+    private StandardAppVersionVpcAccessConnector(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

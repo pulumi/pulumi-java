@@ -67,16 +67,16 @@ public final class PatchDeploymentPatchConfig {
      */
     private final @Nullable PatchDeploymentPatchConfigZypper zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","postStep","preStep","rebootConfig","windowsUpdate","yum","zypper"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfig(
-        @Nullable PatchDeploymentPatchConfigApt apt,
-        @Nullable PatchDeploymentPatchConfigGoo goo,
-        @Nullable PatchDeploymentPatchConfigPostStep postStep,
-        @Nullable PatchDeploymentPatchConfigPreStep preStep,
-        @Nullable String rebootConfig,
-        @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate,
-        @Nullable PatchDeploymentPatchConfigYum yum,
-        @Nullable PatchDeploymentPatchConfigZypper zypper) {
+        @OutputCustomType.Parameter("apt") @Nullable PatchDeploymentPatchConfigApt apt,
+        @OutputCustomType.Parameter("goo") @Nullable PatchDeploymentPatchConfigGoo goo,
+        @OutputCustomType.Parameter("postStep") @Nullable PatchDeploymentPatchConfigPostStep postStep,
+        @OutputCustomType.Parameter("preStep") @Nullable PatchDeploymentPatchConfigPreStep preStep,
+        @OutputCustomType.Parameter("rebootConfig") @Nullable String rebootConfig,
+        @OutputCustomType.Parameter("windowsUpdate") @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate,
+        @OutputCustomType.Parameter("yum") @Nullable PatchDeploymentPatchConfigYum yum,
+        @OutputCustomType.Parameter("zypper") @Nullable PatchDeploymentPatchConfigZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.postStep = postStep;

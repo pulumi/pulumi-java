@@ -33,12 +33,12 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","args","artifactId","localPath"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStepFileExec(
-        @Nullable String allowedExitCodes,
-        @Nullable List<String> args,
-        @Nullable String artifactId,
-        @Nullable String localPath) {
+        @OutputCustomType.Parameter("allowedExitCodes") @Nullable String allowedExitCodes,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;

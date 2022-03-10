@@ -32,19 +32,19 @@ public final class GetSecretResult {
     private final List<GetSecretTopic> topics;
     private final String ttl;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","id","labels","name","project","replications","rotations","secretId","topics","ttl"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        String expireTime,
-        String id,
-        Map<String,String> labels,
-        String name,
-        @Nullable String project,
-        List<GetSecretReplication> replications,
-        List<GetSecretRotation> rotations,
-        String secretId,
-        List<GetSecretTopic> topics,
-        String ttl) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("replications") List<GetSecretReplication> replications,
+        @OutputCustomType.Parameter("rotations") List<GetSecretRotation> rotations,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("topics") List<GetSecretTopic> topics,
+        @OutputCustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.id = id;

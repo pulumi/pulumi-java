@@ -18,14 +18,14 @@ public final class GetBackendServiceCircuitBreaker {
     private final Integer maxRequestsPerConnection;
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor({"connectTimeouts","maxConnections","maxPendingRequests","maxRequests","maxRequestsPerConnection","maxRetries"})
+    @OutputCustomType.Constructor
     private GetBackendServiceCircuitBreaker(
-        List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts,
-        Integer maxConnections,
-        Integer maxPendingRequests,
-        Integer maxRequests,
-        Integer maxRequestsPerConnection,
-        Integer maxRetries) {
+        @OutputCustomType.Parameter("connectTimeouts") List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts,
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
+        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
         this.connectTimeouts = connectTimeouts;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;

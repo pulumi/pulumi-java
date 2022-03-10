@@ -51,11 +51,11 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      */
     private final @Nullable String trackingMode;
 
-    @OutputCustomType.Constructor({"connectionPersistenceOnUnhealthyBackends","idleTimeoutSec","trackingMode"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceConnectionTrackingPolicy(
-        @Nullable String connectionPersistenceOnUnhealthyBackends,
-        @Nullable Integer idleTimeoutSec,
-        @Nullable String trackingMode) {
+        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") @Nullable String connectionPersistenceOnUnhealthyBackends,
+        @OutputCustomType.Parameter("idleTimeoutSec") @Nullable Integer idleTimeoutSec,
+        @OutputCustomType.Parameter("trackingMode") @Nullable String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;

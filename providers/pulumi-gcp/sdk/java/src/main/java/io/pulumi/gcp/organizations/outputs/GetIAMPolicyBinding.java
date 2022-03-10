@@ -38,11 +38,11 @@ public final class GetIAMPolicyBinding {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"condition","members","role"})
+    @OutputCustomType.Constructor
     private GetIAMPolicyBinding(
-        @Nullable GetIAMPolicyBindingCondition condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("condition") @Nullable GetIAMPolicyBindingCondition condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;

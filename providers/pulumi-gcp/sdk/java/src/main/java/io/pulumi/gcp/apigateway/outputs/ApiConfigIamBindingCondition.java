@@ -15,11 +15,11 @@ public final class ApiConfigIamBindingCondition {
     private final String expression;
     private final String title;
 
-    @OutputCustomType.Constructor({"description","expression","title"})
+    @OutputCustomType.Constructor
     private ApiConfigIamBindingCondition(
-        @Nullable String description,
-        String expression,
-        String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.title = title;

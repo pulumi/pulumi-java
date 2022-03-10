@@ -20,10 +20,10 @@ public final class AwsNodePoolAutoscaling {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private AwsNodePoolAutoscaling(
-        Integer maxNodeCount,
-        Integer minNodeCount) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }

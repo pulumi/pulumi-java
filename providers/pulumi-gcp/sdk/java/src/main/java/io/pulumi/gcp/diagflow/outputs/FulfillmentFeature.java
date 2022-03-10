@@ -17,8 +17,8 @@ public final class FulfillmentFeature {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private FulfillmentFeature(String type) {
+    @OutputCustomType.Constructor
+    private FulfillmentFeature(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

@@ -42,13 +42,13 @@ public final class PolicySpec {
      */
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"etag","inheritFromParent","reset","rules","updateTime"})
+    @OutputCustomType.Constructor
     private PolicySpec(
-        @Nullable String etag,
-        @Nullable Boolean inheritFromParent,
-        @Nullable Boolean reset,
-        @Nullable List<PolicySpecRule> rules,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @OutputCustomType.Parameter("reset") @Nullable Boolean reset,
+        @OutputCustomType.Parameter("rules") @Nullable List<PolicySpecRule> rules,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.etag = etag;
         this.inheritFromParent = inheritFromParent;
         this.reset = reset;

@@ -14,10 +14,10 @@ public final class IamAuditConfigAuditLogConfig {
     private final @Nullable List<String> exemptedMembers;
     private final String logType;
 
-    @OutputCustomType.Constructor({"exemptedMembers","logType"})
+    @OutputCustomType.Constructor
     private IamAuditConfigAuditLogConfig(
-        @Nullable List<String> exemptedMembers,
-        String logType) {
+        @OutputCustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }

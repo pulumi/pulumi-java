@@ -19,8 +19,8 @@ public final class CustomServiceTelemetry {
      */
     private final @Nullable String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private CustomServiceTelemetry(@Nullable String resourceName) {
+    @OutputCustomType.Constructor
+    private CustomServiceTelemetry(@OutputCustomType.Parameter("resourceName") @Nullable String resourceName) {
         this.resourceName = resourceName;
     }
 

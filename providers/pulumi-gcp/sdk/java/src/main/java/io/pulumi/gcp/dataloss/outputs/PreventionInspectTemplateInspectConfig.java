@@ -67,16 +67,16 @@ public final class PreventionInspectTemplateInspectConfig {
      */
     private final @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets;
 
-    @OutputCustomType.Constructor({"contentOptions","customInfoTypes","excludeInfoTypes","includeQuote","infoTypes","limits","minLikelihood","ruleSets"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfig(
-        @Nullable List<String> contentOptions,
-        @Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes,
-        @Nullable Boolean excludeInfoTypes,
-        @Nullable Boolean includeQuote,
-        @Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes,
-        @Nullable PreventionInspectTemplateInspectConfigLimits limits,
-        @Nullable String minLikelihood,
-        @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
+        @OutputCustomType.Parameter("contentOptions") @Nullable List<String> contentOptions,
+        @OutputCustomType.Parameter("customInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes,
+        @OutputCustomType.Parameter("excludeInfoTypes") @Nullable Boolean excludeInfoTypes,
+        @OutputCustomType.Parameter("includeQuote") @Nullable Boolean includeQuote,
+        @OutputCustomType.Parameter("infoTypes") @Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes,
+        @OutputCustomType.Parameter("limits") @Nullable PreventionInspectTemplateInspectConfigLimits limits,
+        @OutputCustomType.Parameter("minLikelihood") @Nullable String minLikelihood,
+        @OutputCustomType.Parameter("ruleSets") @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
         this.contentOptions = contentOptions;
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;

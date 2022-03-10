@@ -54,14 +54,14 @@ public final class SecurityPolicyRule {
      */
     private final @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions;
 
-    @OutputCustomType.Constructor({"action","description","match","preview","priority","rateLimitOptions"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRule(
-        String action,
-        @Nullable String description,
-        SecurityPolicyRuleMatch match,
-        @Nullable Boolean preview,
-        Integer priority,
-        @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatch match,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitOptions") @Nullable SecurityPolicyRuleRateLimitOptions rateLimitOptions) {
         this.action = action;
         this.description = description;
         this.match = match;

@@ -28,11 +28,11 @@ public final class MetricBucketOptionsLinearBuckets {
      */
     private final @Nullable Double width;
 
-    @OutputCustomType.Constructor({"numFiniteBuckets","offset","width"})
+    @OutputCustomType.Constructor
     private MetricBucketOptionsLinearBuckets(
-        @Nullable Integer numFiniteBuckets,
-        @Nullable Double offset,
-        @Nullable Double width) {
+        @OutputCustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
+        @OutputCustomType.Parameter("offset") @Nullable Double offset,
+        @OutputCustomType.Parameter("width") @Nullable Double width) {
         this.numFiniteBuckets = numFiniteBuckets;
         this.offset = offset;
         this.width = width;

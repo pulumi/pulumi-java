@@ -29,18 +29,18 @@ public final class GetRouterResult {
     private final @Nullable String region;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bgps","creationTimestamp","description","encryptedInterconnectRouter","id","name","network","project","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRouterResult(
-        List<GetRouterBgp> bgps,
-        String creationTimestamp,
-        String description,
-        Boolean encryptedInterconnectRouter,
-        String id,
-        String name,
-        String network,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("bgps") List<GetRouterBgp> bgps,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bgps = bgps;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

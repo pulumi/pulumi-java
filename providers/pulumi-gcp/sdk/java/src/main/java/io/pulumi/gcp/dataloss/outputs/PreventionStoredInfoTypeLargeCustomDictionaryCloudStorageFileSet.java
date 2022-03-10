@@ -15,8 +15,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(String url) {
+    @OutputCustomType.Constructor
+    private PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 

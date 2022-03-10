@@ -25,13 +25,13 @@ public final class GetKMSSecretResult {
      */
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"additionalAuthenticatedData","ciphertext","cryptoKey","id","plaintext"})
+    @OutputCustomType.Constructor
     private GetKMSSecretResult(
-        @Nullable String additionalAuthenticatedData,
-        String ciphertext,
-        String cryptoKey,
-        String id,
-        String plaintext) {
+        @OutputCustomType.Parameter("additionalAuthenticatedData") @Nullable String additionalAuthenticatedData,
+        @OutputCustomType.Parameter("ciphertext") String ciphertext,
+        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;

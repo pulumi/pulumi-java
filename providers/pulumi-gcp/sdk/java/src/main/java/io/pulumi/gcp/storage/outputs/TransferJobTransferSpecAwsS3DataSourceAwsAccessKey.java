@@ -20,10 +20,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
      */
     private final String secretAccessKey;
 
-    @OutputCustomType.Constructor({"accessKeyId","secretAccessKey"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecAwsS3DataSourceAwsAccessKey(
-        String accessKeyId,
-        String secretAccessKey) {
+        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
+        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey) {
         this.accessKeyId = accessKeyId;
         this.secretAccessKey = secretAccessKey;
     }

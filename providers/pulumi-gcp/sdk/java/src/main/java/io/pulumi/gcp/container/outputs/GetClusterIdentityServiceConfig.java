@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterIdentityServiceConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterIdentityServiceConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterIdentityServiceConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

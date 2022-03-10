@@ -45,17 +45,17 @@ public final class GetSecretVersionResult {
     private final String secretData;
     private final String version;
 
-    @OutputCustomType.Constructor({"createTime","destroyTime","enabled","id","name","project","secret","secretData","version"})
+    @OutputCustomType.Constructor
     private GetSecretVersionResult(
-        String createTime,
-        String destroyTime,
-        Boolean enabled,
-        String id,
-        String name,
-        String project,
-        String secret,
-        String secretData,
-        String version) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destroyTime") String destroyTime,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("secretData") String secretData,
+        @OutputCustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.destroyTime = destroyTime;
         this.enabled = enabled;

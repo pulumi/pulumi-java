@@ -30,11 +30,11 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"expirationTime","name","value"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(
-        @Nullable String expirationTime,
-        @Nullable String name,
-        String value) {
+        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.expirationTime = expirationTime;
         this.name = name;
         this.value = value;

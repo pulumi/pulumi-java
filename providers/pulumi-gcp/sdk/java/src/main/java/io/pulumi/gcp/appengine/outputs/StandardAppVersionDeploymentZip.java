@@ -23,10 +23,10 @@ public final class StandardAppVersionDeploymentZip {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor({"filesCount","sourceUrl"})
+    @OutputCustomType.Constructor
     private StandardAppVersionDeploymentZip(
-        @Nullable Integer filesCount,
-        String sourceUrl) {
+        @OutputCustomType.Parameter("filesCount") @Nullable Integer filesCount,
+        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }

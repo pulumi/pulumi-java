@@ -29,14 +29,14 @@ public final class GetEnvironmentResult {
     private final @Nullable String project;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"configs","id","labels","name","project","region"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        List<GetEnvironmentConfig> configs,
-        String id,
-        Map<String,String> labels,
-        String name,
-        @Nullable String project,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("configs") List<GetEnvironmentConfig> configs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.configs = configs;
         this.id = id;
         this.labels = labels;

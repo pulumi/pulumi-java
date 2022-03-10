@@ -17,8 +17,8 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      */
     private final @Nullable List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId(@Nullable List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId(@OutputCustomType.Parameter("objectIdPaths") @Nullable List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

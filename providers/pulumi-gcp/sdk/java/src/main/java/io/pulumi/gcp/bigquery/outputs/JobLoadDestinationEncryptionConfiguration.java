@@ -24,10 +24,10 @@ public final class JobLoadDestinationEncryptionConfiguration {
      */
     private final @Nullable String kmsKeyVersion;
 
-    @OutputCustomType.Constructor({"kmsKeyName","kmsKeyVersion"})
+    @OutputCustomType.Constructor
     private JobLoadDestinationEncryptionConfiguration(
-        String kmsKeyName,
-        @Nullable String kmsKeyVersion) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }

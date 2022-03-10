@@ -23,11 +23,11 @@ public final class GetGroupMembershipsResult {
      */
     private final List<GetGroupMembershipsMembership> memberships;
 
-    @OutputCustomType.Constructor({"group","id","memberships"})
+    @OutputCustomType.Constructor
     private GetGroupMembershipsResult(
-        String group,
-        String id,
-        List<GetGroupMembershipsMembership> memberships) {
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("memberships") List<GetGroupMembershipsMembership> memberships) {
         this.group = group;
         this.id = id;
         this.memberships = memberships;

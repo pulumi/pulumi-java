@@ -22,10 +22,10 @@ public final class SpokeLinkedVpnTunnels {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor({"siteToSiteDataTransfer","uris"})
+    @OutputCustomType.Constructor
     private SpokeLinkedVpnTunnels(
-        Boolean siteToSiteDataTransfer,
-        List<String> uris) {
+        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer,
+        @OutputCustomType.Parameter("uris") List<String> uris) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         this.uris = uris;
     }

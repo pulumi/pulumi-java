@@ -41,12 +41,12 @@ public final class PolicyClusterAdmissionRule {
      */
     private final @Nullable List<String> requireAttestationsBies;
 
-    @OutputCustomType.Constructor({"cluster","enforcementMode","evaluationMode","requireAttestationsBies"})
+    @OutputCustomType.Constructor
     private PolicyClusterAdmissionRule(
-        String cluster,
-        String enforcementMode,
-        String evaluationMode,
-        @Nullable List<String> requireAttestationsBies) {
+        @OutputCustomType.Parameter("cluster") String cluster,
+        @OutputCustomType.Parameter("enforcementMode") String enforcementMode,
+        @OutputCustomType.Parameter("evaluationMode") String evaluationMode,
+        @OutputCustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
         this.cluster = cluster;
         this.enforcementMode = enforcementMode;
         this.evaluationMode = evaluationMode;

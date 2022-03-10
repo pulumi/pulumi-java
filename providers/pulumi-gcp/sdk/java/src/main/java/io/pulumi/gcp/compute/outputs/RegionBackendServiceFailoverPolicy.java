@@ -45,11 +45,11 @@ public final class RegionBackendServiceFailoverPolicy {
      */
     private final @Nullable Double failoverRatio;
 
-    @OutputCustomType.Constructor({"disableConnectionDrainOnFailover","dropTrafficIfUnhealthy","failoverRatio"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceFailoverPolicy(
-        @Nullable Boolean disableConnectionDrainOnFailover,
-        @Nullable Boolean dropTrafficIfUnhealthy,
-        @Nullable Double failoverRatio) {
+        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") @Nullable Boolean disableConnectionDrainOnFailover,
+        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") @Nullable Boolean dropTrafficIfUnhealthy,
+        @OutputCustomType.Parameter("failoverRatio") @Nullable Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;
