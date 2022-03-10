@@ -62,16 +62,16 @@ public final class JobExtract {
      */
     private final @Nullable Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"compression","destinationFormat","destinationUris","fieldDelimiter","printHeader","sourceModel","sourceTable","useAvroLogicalTypes"})
+    @OutputCustomType.Constructor
     private JobExtract(
-        @Nullable String compression,
-        @Nullable String destinationFormat,
-        List<String> destinationUris,
-        @Nullable String fieldDelimiter,
-        @Nullable Boolean printHeader,
-        @Nullable JobExtractSourceModel sourceModel,
-        @Nullable JobExtractSourceTable sourceTable,
-        @Nullable Boolean useAvroLogicalTypes) {
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("destinationFormat") @Nullable String destinationFormat,
+        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("printHeader") @Nullable Boolean printHeader,
+        @OutputCustomType.Parameter("sourceModel") @Nullable JobExtractSourceModel sourceModel,
+        @OutputCustomType.Parameter("sourceTable") @Nullable JobExtractSourceTable sourceTable,
+        @OutputCustomType.Parameter("useAvroLogicalTypes") @Nullable Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUris = destinationUris;

@@ -56,13 +56,13 @@ public final class JobCopy {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor({"createDisposition","destinationEncryptionConfiguration","destinationTable","sourceTables","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobCopy(
-        @Nullable String createDisposition,
-        @Nullable JobCopyDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @Nullable JobCopyDestinationTable destinationTable,
-        List<JobCopySourceTable> sourceTables,
-        @Nullable String writeDisposition) {
+        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobCopyDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") @Nullable JobCopyDestinationTable destinationTable,
+        @OutputCustomType.Parameter("sourceTables") List<JobCopySourceTable> sourceTables,
+        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         this.destinationTable = destinationTable;

@@ -82,15 +82,15 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteAction {
      */
     private final @Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices;
 
-    @OutputCustomType.Constructor({"corsPolicy","faultInjectionPolicy","requestMirrorPolicy","retryPolicy","timeout","urlRewrite","weightedBackendServices"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleRouteAction(
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionTimeout timeout,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
-        @Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        @OutputCustomType.Parameter("corsPolicy") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
+        @OutputCustomType.Parameter("faultInjectionPolicy") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
+        @OutputCustomType.Parameter("requestMirrorPolicy") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionTimeout timeout,
+        @OutputCustomType.Parameter("urlRewrite") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
+        @OutputCustomType.Parameter("weightedBackendServices") @Nullable List<RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.requestMirrorPolicy = requestMirrorPolicy;

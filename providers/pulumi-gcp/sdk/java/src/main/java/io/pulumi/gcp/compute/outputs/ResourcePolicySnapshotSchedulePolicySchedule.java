@@ -32,11 +32,11 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","hourlySchedule","weeklySchedule"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySchedule(
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
+        @OutputCustomType.Parameter("hourlySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
+        @OutputCustomType.Parameter("weeklySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;

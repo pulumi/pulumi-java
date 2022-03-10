@@ -15,11 +15,11 @@ public final class FeatureStateState {
     private final @Nullable String description;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"code","description","updateTime"})
+    @OutputCustomType.Constructor
     private FeatureStateState(
-        @Nullable String code,
-        @Nullable String description,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;

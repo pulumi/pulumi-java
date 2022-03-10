@@ -12,10 +12,10 @@ public final class GetClusterDatabaseEncryption {
     private final String keyName;
     private final String state;
 
-    @OutputCustomType.Constructor({"keyName","state"})
+    @OutputCustomType.Constructor
     private GetClusterDatabaseEncryption(
-        String keyName,
-        String state) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("state") String state) {
         this.keyName = keyName;
         this.state = state;
     }

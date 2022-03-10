@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigHttpLoadBalancing {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private GetClusterAddonsConfigHttpLoadBalancing(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigHttpLoadBalancing(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

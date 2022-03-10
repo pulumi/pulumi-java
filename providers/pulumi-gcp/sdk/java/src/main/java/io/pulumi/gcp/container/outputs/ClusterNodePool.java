@@ -67,22 +67,22 @@ public final class ClusterNodePool {
     private final @Nullable ClusterNodePoolUpgradeSettings upgradeSettings;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"autoscaling","initialNodeCount","instanceGroupUrls","managedInstanceGroupUrls","management","maxPodsPerNode","name","namePrefix","networkConfig","nodeConfig","nodeCount","nodeLocations","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private ClusterNodePool(
-        @Nullable ClusterNodePoolAutoscaling autoscaling,
-        @Nullable Integer initialNodeCount,
-        @Nullable List<String> instanceGroupUrls,
-        @Nullable List<String> managedInstanceGroupUrls,
-        @Nullable ClusterNodePoolManagement management,
-        @Nullable Integer maxPodsPerNode,
-        @Nullable String name,
-        @Nullable String namePrefix,
-        @Nullable ClusterNodePoolNetworkConfig networkConfig,
-        @Nullable ClusterNodePoolNodeConfig nodeConfig,
-        @Nullable Integer nodeCount,
-        @Nullable List<String> nodeLocations,
-        @Nullable ClusterNodePoolUpgradeSettings upgradeSettings,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("autoscaling") @Nullable ClusterNodePoolAutoscaling autoscaling,
+        @OutputCustomType.Parameter("initialNodeCount") @Nullable Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") @Nullable List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("managedInstanceGroupUrls") @Nullable List<String> managedInstanceGroupUrls,
+        @OutputCustomType.Parameter("management") @Nullable ClusterNodePoolManagement management,
+        @OutputCustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("networkConfig") @Nullable ClusterNodePoolNetworkConfig networkConfig,
+        @OutputCustomType.Parameter("nodeConfig") @Nullable ClusterNodePoolNodeConfig nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @OutputCustomType.Parameter("nodeLocations") @Nullable List<String> nodeLocations,
+        @OutputCustomType.Parameter("upgradeSettings") @Nullable ClusterNodePoolUpgradeSettings upgradeSettings,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.autoscaling = autoscaling;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;

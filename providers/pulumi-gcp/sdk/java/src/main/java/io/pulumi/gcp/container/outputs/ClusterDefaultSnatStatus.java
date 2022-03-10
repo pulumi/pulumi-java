@@ -16,8 +16,8 @@ public final class ClusterDefaultSnatStatus {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private ClusterDefaultSnatStatus(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private ClusterDefaultSnatStatus(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

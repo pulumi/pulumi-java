@@ -28,11 +28,11 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      */
     private final @Nullable String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable(
-        String datasetId,
-        String projectId,
-        @Nullable String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tableId") @Nullable String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;

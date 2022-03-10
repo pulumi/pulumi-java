@@ -15,8 +15,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig 
      */
     private final String dataprocMetastoreService;
 
-    @OutputCustomType.Constructor({"dataprocMetastoreService"})
-    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig(String dataprocMetastoreService) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig(@OutputCustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
     }
 

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetEnvironmentConfigDatabaseConfig {
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private GetEnvironmentConfigDatabaseConfig(String machineType) {
+    @OutputCustomType.Constructor
+    private GetEnvironmentConfigDatabaseConfig(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 

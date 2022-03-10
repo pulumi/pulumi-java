@@ -83,16 +83,16 @@ public final class URLMapPathMatcher {
      */
     private final @Nullable List<URLMapPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor({"defaultRouteAction","defaultService","defaultUrlRedirect","description","headerAction","name","pathRules","routeRules"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcher(
-        @Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction,
-        @Nullable String defaultService,
-        @Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
-        @Nullable String description,
-        @Nullable URLMapPathMatcherHeaderAction headerAction,
-        String name,
-        @Nullable List<URLMapPathMatcherPathRule> pathRules,
-        @Nullable List<URLMapPathMatcherRouteRule> routeRules) {
+        @OutputCustomType.Parameter("defaultRouteAction") @Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction,
+        @OutputCustomType.Parameter("defaultService") @Nullable String defaultService,
+        @OutputCustomType.Parameter("defaultUrlRedirect") @Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headerAction") @Nullable URLMapPathMatcherHeaderAction headerAction,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<URLMapPathMatcherPathRule> pathRules,
+        @OutputCustomType.Parameter("routeRules") @Nullable List<URLMapPathMatcherRouteRule> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;

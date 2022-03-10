@@ -33,10 +33,10 @@ public final class SloRequestBasedSli {
      */
     private final @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio;
 
-    @OutputCustomType.Constructor({"distributionCut","goodTotalRatio"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSli(
-        @Nullable SloRequestBasedSliDistributionCut distributionCut,
-        @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
+        @OutputCustomType.Parameter("distributionCut") @Nullable SloRequestBasedSliDistributionCut distributionCut,
+        @OutputCustomType.Parameter("goodTotalRatio") @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

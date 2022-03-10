@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterMonitoringConfig {
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor({"enableComponents"})
-    private GetClusterMonitoringConfig(List<String> enableComponents) {
+    @OutputCustomType.Constructor
+    private GetClusterMonitoringConfig(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 

@@ -13,11 +13,11 @@ public final class GetClusterDnsConfig {
     private final String clusterDnsDomain;
     private final String clusterDnsScope;
 
-    @OutputCustomType.Constructor({"clusterDns","clusterDnsDomain","clusterDnsScope"})
+    @OutputCustomType.Constructor
     private GetClusterDnsConfig(
-        String clusterDns,
-        String clusterDnsDomain,
-        String clusterDnsScope) {
+        @OutputCustomType.Parameter("clusterDns") String clusterDns,
+        @OutputCustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
+        @OutputCustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;

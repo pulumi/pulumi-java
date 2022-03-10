@@ -28,16 +28,16 @@ public final class GetTopicResult {
     private final @Nullable String project;
     private final List<GetTopicSchemaSetting> schemaSettings;
 
-    @OutputCustomType.Constructor({"id","kmsKeyName","labels","messageRetentionDuration","messageStoragePolicies","name","project","schemaSettings"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String id,
-        String kmsKeyName,
-        Map<String,String> labels,
-        String messageRetentionDuration,
-        List<GetTopicMessageStoragePolicy> messageStoragePolicies,
-        String name,
-        @Nullable String project,
-        List<GetTopicSchemaSetting> schemaSettings) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @OutputCustomType.Parameter("messageStoragePolicies") List<GetTopicMessageStoragePolicy> messageStoragePolicies,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("schemaSettings") List<GetTopicSchemaSetting> schemaSettings) {
         this.id = id;
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class EnvironmentConfigEncryptionConfig {
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private EnvironmentConfigEncryptionConfig(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private EnvironmentConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

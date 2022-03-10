@@ -31,16 +31,16 @@ public final class CertificateCertificateDescription {
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions;
     private final @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds;
 
-    @OutputCustomType.Constructor({"aiaIssuingCertificateUrls","authorityKeyIds","certFingerprints","configValues","crlDistributionPoints","publicKeys","subjectDescriptions","subjectKeyIds"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescription(
-        @Nullable List<String> aiaIssuingCertificateUrls,
-        @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds,
-        @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints,
-        @Nullable List<CertificateCertificateDescriptionConfigValue> configValues,
-        @Nullable List<String> crlDistributionPoints,
-        @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions,
-        @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
+        @OutputCustomType.Parameter("aiaIssuingCertificateUrls") @Nullable List<String> aiaIssuingCertificateUrls,
+        @OutputCustomType.Parameter("authorityKeyIds") @Nullable List<CertificateCertificateDescriptionAuthorityKeyId> authorityKeyIds,
+        @OutputCustomType.Parameter("certFingerprints") @Nullable List<CertificateCertificateDescriptionCertFingerprint> certFingerprints,
+        @OutputCustomType.Parameter("configValues") @Nullable List<CertificateCertificateDescriptionConfigValue> configValues,
+        @OutputCustomType.Parameter("crlDistributionPoints") @Nullable List<String> crlDistributionPoints,
+        @OutputCustomType.Parameter("publicKeys") @Nullable List<CertificateCertificateDescriptionPublicKey> publicKeys,
+        @OutputCustomType.Parameter("subjectDescriptions") @Nullable List<CertificateCertificateDescriptionSubjectDescription> subjectDescriptions,
+        @OutputCustomType.Parameter("subjectKeyIds") @Nullable List<CertificateCertificateDescriptionSubjectKeyId> subjectKeyIds) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyIds = authorityKeyIds;
         this.certFingerprints = certFingerprints;

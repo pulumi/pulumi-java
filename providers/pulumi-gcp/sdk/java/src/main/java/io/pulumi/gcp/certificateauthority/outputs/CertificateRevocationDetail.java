@@ -14,10 +14,10 @@ public final class CertificateRevocationDetail {
     private final @Nullable String revocationState;
     private final @Nullable String revocationTime;
 
-    @OutputCustomType.Constructor({"revocationState","revocationTime"})
+    @OutputCustomType.Constructor
     private CertificateRevocationDetail(
-        @Nullable String revocationState,
-        @Nullable String revocationTime) {
+        @OutputCustomType.Parameter("revocationState") @Nullable String revocationState,
+        @OutputCustomType.Parameter("revocationTime") @Nullable String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }

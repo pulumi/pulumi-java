@@ -96,18 +96,18 @@ public final class AutoscalerAutoscalingPolicy {
      */
     private final @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","cpuUtilization","loadBalancingUtilization","maxReplicas","metrics","minReplicas","mode","scaleDownControl","scaleInControl","scalingSchedules"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicy(
-        @Nullable Integer cooldownPeriod,
-        @Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
-        @Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
-        Integer maxReplicas,
-        @Nullable List<AutoscalerAutoscalingPolicyMetric> metrics,
-        Integer minReplicas,
-        @Nullable String mode,
-        @Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
-        @Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl,
-        @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        @OutputCustomType.Parameter("cooldownPeriod") @Nullable Integer cooldownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") @Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
+        @OutputCustomType.Parameter("loadBalancingUtilization") @Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("metrics") @Nullable List<AutoscalerAutoscalingPolicyMetric> metrics,
+        @OutputCustomType.Parameter("minReplicas") Integer minReplicas,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("scaleDownControl") @Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
+        @OutputCustomType.Parameter("scaleInControl") @Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl,
+        @OutputCustomType.Parameter("scalingSchedules") @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;

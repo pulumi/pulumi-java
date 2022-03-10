@@ -28,11 +28,11 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendSer
      */
     private final Boolean replace;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","replace"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd(
-        String headerName,
-        String headerValue,
-        Boolean replace) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue,
+        @OutputCustomType.Parameter("replace") Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;

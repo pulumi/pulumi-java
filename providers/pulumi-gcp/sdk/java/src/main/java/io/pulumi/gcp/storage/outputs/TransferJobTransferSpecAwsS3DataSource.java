@@ -28,11 +28,11 @@ public final class TransferJobTransferSpecAwsS3DataSource {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"awsAccessKey","bucketName","roleArn"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecAwsS3DataSource(
-        @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
-        String bucketName,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("awsAccessKey") @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.roleArn = roleArn;

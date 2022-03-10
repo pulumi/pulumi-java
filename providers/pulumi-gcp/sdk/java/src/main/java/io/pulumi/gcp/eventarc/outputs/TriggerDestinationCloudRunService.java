@@ -27,11 +27,11 @@ public final class TriggerDestinationCloudRunService {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"path","region","service"})
+    @OutputCustomType.Constructor
     private TriggerDestinationCloudRunService(
-        @Nullable String path,
-        @Nullable String region,
-        String service) {
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("service") String service) {
         this.path = path;
         this.region = region;
         this.service = service;

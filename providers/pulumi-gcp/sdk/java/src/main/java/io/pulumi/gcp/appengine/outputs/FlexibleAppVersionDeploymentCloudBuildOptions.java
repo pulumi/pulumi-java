@@ -23,10 +23,10 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
      */
     private final @Nullable String cloudBuildTimeout;
 
-    @OutputCustomType.Constructor({"appYamlPath","cloudBuildTimeout"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionDeploymentCloudBuildOptions(
-        String appYamlPath,
-        @Nullable String cloudBuildTimeout) {
+        @OutputCustomType.Parameter("appYamlPath") String appYamlPath,
+        @OutputCustomType.Parameter("cloudBuildTimeout") @Nullable String cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }

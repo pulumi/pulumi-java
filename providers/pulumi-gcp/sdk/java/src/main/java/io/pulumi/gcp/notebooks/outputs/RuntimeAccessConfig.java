@@ -31,11 +31,11 @@ public final class RuntimeAccessConfig {
      */
     private final @Nullable String runtimeOwner;
 
-    @OutputCustomType.Constructor({"accessType","proxyUri","runtimeOwner"})
+    @OutputCustomType.Constructor
     private RuntimeAccessConfig(
-        @Nullable String accessType,
-        @Nullable String proxyUri,
-        @Nullable String runtimeOwner) {
+        @OutputCustomType.Parameter("accessType") @Nullable String accessType,
+        @OutputCustomType.Parameter("proxyUri") @Nullable String proxyUri,
+        @OutputCustomType.Parameter("runtimeOwner") @Nullable String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;

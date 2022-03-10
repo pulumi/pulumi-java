@@ -23,10 +23,10 @@ public final class AwsClusterFleet {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"membership","project"})
+    @OutputCustomType.Constructor
     private AwsClusterFleet(
-        @Nullable String membership,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("membership") @Nullable String membership,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.membership = membership;
         this.project = project;
     }

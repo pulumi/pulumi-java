@@ -24,11 +24,11 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
     private final String networkTier;
     private final String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"natIp","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateNetworkInterfaceAccessConfig(
-        String natIp,
-        String networkTier,
-        String publicPtrDomainName) {
+        @OutputCustomType.Parameter("natIp") String natIp,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") String publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;

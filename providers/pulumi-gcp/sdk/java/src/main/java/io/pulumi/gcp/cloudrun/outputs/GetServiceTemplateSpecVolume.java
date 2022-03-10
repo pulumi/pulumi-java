@@ -18,10 +18,10 @@ public final class GetServiceTemplateSpecVolume {
     private final String name;
     private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
-    @OutputCustomType.Constructor({"name","secrets"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecVolume(
-        String name,
-        List<GetServiceTemplateSpecVolumeSecret> secrets) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secrets") List<GetServiceTemplateSpecVolumeSecret> secrets) {
         this.name = name;
         this.secrets = secrets;
     }

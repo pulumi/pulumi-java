@@ -33,8 +33,8 @@ public final class NotificationConfigStreamingConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private NotificationConfigStreamingConfig(String filter) {
+    @OutputCustomType.Constructor
+    private NotificationConfigStreamingConfig(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 

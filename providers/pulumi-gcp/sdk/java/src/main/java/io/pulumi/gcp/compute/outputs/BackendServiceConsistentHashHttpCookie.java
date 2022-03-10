@@ -29,11 +29,11 @@ public final class BackendServiceConsistentHashHttpCookie {
      */
     private final @Nullable BackendServiceConsistentHashHttpCookieTtl ttl;
 
-    @OutputCustomType.Constructor({"name","path","ttl"})
+    @OutputCustomType.Constructor
     private BackendServiceConsistentHashHttpCookie(
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable BackendServiceConsistentHashHttpCookieTtl ttl) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("ttl") @Nullable BackendServiceConsistentHashHttpCookieTtl ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;

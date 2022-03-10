@@ -17,8 +17,8 @@ public final class WorkflowTemplateJobSparkSqlJobLoggingConfig {
      */
     private final @Nullable Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private WorkflowTemplateJobSparkSqlJobLoggingConfig(@Nullable Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplateJobSparkSqlJobLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") @Nullable Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

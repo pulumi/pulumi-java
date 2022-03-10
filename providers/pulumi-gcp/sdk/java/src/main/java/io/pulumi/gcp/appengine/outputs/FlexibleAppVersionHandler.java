@@ -58,15 +58,15 @@ public final class FlexibleAppVersionHandler {
      */
     private final @Nullable String urlRegex;
 
-    @OutputCustomType.Constructor({"authFailAction","login","redirectHttpResponseCode","script","securityLevel","staticFiles","urlRegex"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionHandler(
-        @Nullable String authFailAction,
-        @Nullable String login,
-        @Nullable String redirectHttpResponseCode,
-        @Nullable FlexibleAppVersionHandlerScript script,
-        @Nullable String securityLevel,
-        @Nullable FlexibleAppVersionHandlerStaticFiles staticFiles,
-        @Nullable String urlRegex) {
+        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("redirectHttpResponseCode") @Nullable String redirectHttpResponseCode,
+        @OutputCustomType.Parameter("script") @Nullable FlexibleAppVersionHandlerScript script,
+        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @OutputCustomType.Parameter("staticFiles") @Nullable FlexibleAppVersionHandlerStaticFiles staticFiles,
+        @OutputCustomType.Parameter("urlRegex") @Nullable String urlRegex) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.redirectHttpResponseCode = redirectHttpResponseCode;

@@ -13,11 +13,11 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
     private final Double memoryGb;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor({"cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigWebServer(
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.memoryGb = memoryGb;
         this.storageGb = storageGb;

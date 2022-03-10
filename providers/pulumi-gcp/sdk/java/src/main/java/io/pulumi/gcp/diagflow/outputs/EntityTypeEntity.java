@@ -29,10 +29,10 @@ public final class EntityTypeEntity {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"synonyms","value"})
+    @OutputCustomType.Constructor
     private EntityTypeEntity(
-        List<String> synonyms,
-        String value) {
+        @OutputCustomType.Parameter("synonyms") List<String> synonyms,
+        @OutputCustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }

@@ -24,10 +24,10 @@ public final class InstanceGroupManagerStatusStateful {
      */
     private final @Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs;
 
-    @OutputCustomType.Constructor({"hasStatefulConfig","perInstanceConfigs"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatusStateful(
-        @Nullable Boolean hasStatefulConfig,
-        @Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
+        @OutputCustomType.Parameter("hasStatefulConfig") @Nullable Boolean hasStatefulConfig,
+        @OutputCustomType.Parameter("perInstanceConfigs") @Nullable List<InstanceGroupManagerStatusStatefulPerInstanceConfig> perInstanceConfigs) {
         this.hasStatefulConfig = hasStatefulConfig;
         this.perInstanceConfigs = perInstanceConfigs;
     }

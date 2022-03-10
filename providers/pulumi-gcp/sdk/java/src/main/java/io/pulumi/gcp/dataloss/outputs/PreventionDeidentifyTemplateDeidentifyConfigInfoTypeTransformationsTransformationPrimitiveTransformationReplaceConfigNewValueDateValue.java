@@ -28,11 +28,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Integer year;
 
-    @OutputCustomType.Constructor({"day","month","year"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue(
-        @Nullable Integer day,
-        @Nullable Integer month,
-        @Nullable Integer year) {
+        @OutputCustomType.Parameter("day") @Nullable Integer day,
+        @OutputCustomType.Parameter("month") @Nullable Integer month,
+        @OutputCustomType.Parameter("year") @Nullable Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;

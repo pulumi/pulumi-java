@@ -97,17 +97,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable String signedRequestMode;
 
-    @OutputCustomType.Constructor({"cacheKeyPolicy","cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicy","signedRequestKeyset","signedRequestMode"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicy(
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy,
-        @Nullable String cacheMode,
-        @Nullable String clientTtl,
-        @Nullable String defaultTtl,
-        @Nullable String maxTtl,
-        @Nullable Boolean negativeCaching,
-        @Nullable Map<String,String> negativeCachingPolicy,
-        @Nullable String signedRequestKeyset,
-        @Nullable String signedRequestMode) {
+        @OutputCustomType.Parameter("cacheKeyPolicy") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy cacheKeyPolicy,
+        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") @Nullable String clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable String defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") @Nullable String maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicy") @Nullable Map<String,String> negativeCachingPolicy,
+        @OutputCustomType.Parameter("signedRequestKeyset") @Nullable String signedRequestKeyset,
+        @OutputCustomType.Parameter("signedRequestMode") @Nullable String signedRequestMode) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;

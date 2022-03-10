@@ -26,11 +26,11 @@ public final class FlexibleAppVersionResourcesVolume {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"name","sizeGb","volumeType"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionResourcesVolume(
-        String name,
-        Integer sizeGb,
-        String volumeType) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeGb") Integer sizeGb,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.name = name;
         this.sizeGb = sizeGb;
         this.volumeType = volumeType;

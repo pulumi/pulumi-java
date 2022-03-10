@@ -18,13 +18,13 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
     private final @Nullable String servicesSecondaryRangeName;
     private final @Nullable Boolean useIpAliases;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName","useIpAliases"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigNodeConfigIpAllocationPolicy(
-        @Nullable String clusterIpv4CidrBlock,
-        @Nullable String clusterSecondaryRangeName,
-        @Nullable String servicesIpv4CidrBlock,
-        @Nullable String servicesSecondaryRangeName,
-        @Nullable Boolean useIpAliases) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") @Nullable String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") @Nullable String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") @Nullable String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") @Nullable String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("useIpAliases") @Nullable Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

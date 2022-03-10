@@ -15,8 +15,8 @@ public final class FlexibleAppVersionHandlerScript {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor({"scriptPath"})
-    private FlexibleAppVersionHandlerScript(String scriptPath) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionHandlerScript(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 

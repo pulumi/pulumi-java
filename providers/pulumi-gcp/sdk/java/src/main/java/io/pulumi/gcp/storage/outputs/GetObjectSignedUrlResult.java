@@ -31,18 +31,18 @@ public final class GetObjectSignedUrlResult {
      */
     private final String signedUrl;
 
-    @OutputCustomType.Constructor({"bucket","contentMd5","contentType","credentials","duration","extensionHeaders","httpMethod","id","path","signedUrl"})
+    @OutputCustomType.Constructor
     private GetObjectSignedUrlResult(
-        String bucket,
-        @Nullable String contentMd5,
-        @Nullable String contentType,
-        @Nullable String credentials,
-        @Nullable String duration,
-        @Nullable Map<String,String> extensionHeaders,
-        @Nullable String httpMethod,
-        String id,
-        String path,
-        String signedUrl) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("contentMd5") @Nullable String contentMd5,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("extensionHeaders") @Nullable Map<String,String> extensionHeaders,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("signedUrl") String signedUrl) {
         this.bucket = bucket;
         this.contentMd5 = contentMd5;
         this.contentType = contentType;

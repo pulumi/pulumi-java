@@ -17,8 +17,8 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
      */
     private final Double target;
 
-    @OutputCustomType.Constructor({"target"})
-    private AutoscalarAutoscalingPolicyLoadBalancingUtilization(Double target) {
+    @OutputCustomType.Constructor
+    private AutoscalarAutoscalingPolicyLoadBalancingUtilization(@OutputCustomType.Parameter("target") Double target) {
         this.target = target;
     }
 

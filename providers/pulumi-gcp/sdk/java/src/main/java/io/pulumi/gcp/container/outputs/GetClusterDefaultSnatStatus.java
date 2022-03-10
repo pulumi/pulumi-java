@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterDefaultSnatStatus {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private GetClusterDefaultSnatStatus(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private GetClusterDefaultSnatStatus(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

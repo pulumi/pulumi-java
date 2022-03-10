@@ -62,14 +62,14 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType;
 
-    @OutputCustomType.Constructor({"commonAlphabet","context","cryptoKey","customAlphabet","radix","surrogateInfoType"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfig(
-        @Nullable String commonAlphabet,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey,
-        @Nullable String customAlphabet,
-        @Nullable Integer radix,
-        @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
+        @OutputCustomType.Parameter("commonAlphabet") @Nullable String commonAlphabet,
+        @OutputCustomType.Parameter("context") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContext context,
+        @OutputCustomType.Parameter("cryptoKey") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKey cryptoKey,
+        @OutputCustomType.Parameter("customAlphabet") @Nullable String customAlphabet,
+        @OutputCustomType.Parameter("radix") @Nullable Integer radix,
+        @OutputCustomType.Parameter("surrogateInfoType") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoType surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;

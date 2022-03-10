@@ -20,10 +20,10 @@ public final class GetClientOpenIdUserInfoResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"email","id"})
+    @OutputCustomType.Constructor
     private GetClientOpenIdUserInfoResult(
-        String email,
-        String id) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id) {
         this.email = email;
         this.id = id;
     }

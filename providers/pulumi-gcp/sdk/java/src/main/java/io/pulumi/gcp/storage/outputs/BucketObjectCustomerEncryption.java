@@ -22,10 +22,10 @@ public final class BucketObjectCustomerEncryption {
      */
     private final String encryptionKey;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionKey"})
+    @OutputCustomType.Constructor
     private BucketObjectCustomerEncryption(
-        @Nullable String encryptionAlgorithm,
-        String encryptionKey) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionKey") String encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionKey = encryptionKey;
     }

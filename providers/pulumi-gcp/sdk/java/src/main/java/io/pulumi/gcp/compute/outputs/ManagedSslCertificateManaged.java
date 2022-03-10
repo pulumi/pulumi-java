@@ -17,8 +17,8 @@ public final class ManagedSslCertificateManaged {
      */
     private final List<String> domains;
 
-    @OutputCustomType.Constructor({"domains"})
-    private ManagedSslCertificateManaged(List<String> domains) {
+    @OutputCustomType.Constructor
+    private ManagedSslCertificateManaged(@OutputCustomType.Parameter("domains") List<String> domains) {
         this.domains = domains;
     }
 

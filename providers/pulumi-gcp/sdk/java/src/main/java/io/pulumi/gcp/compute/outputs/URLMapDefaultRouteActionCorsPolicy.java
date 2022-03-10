@@ -60,16 +60,16 @@ public final class URLMapDefaultRouteActionCorsPolicy {
      */
     private final @Nullable Integer maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOriginRegexes","allowOrigins","disabled","exposeHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionCorsPolicy(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> allowHeaders,
-        @Nullable List<String> allowMethods,
-        @Nullable List<String> allowOriginRegexes,
-        @Nullable List<String> allowOrigins,
-        @Nullable Boolean disabled,
-        @Nullable List<String> exposeHeaders,
-        @Nullable Integer maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowHeaders") @Nullable List<String> allowHeaders,
+        @OutputCustomType.Parameter("allowMethods") @Nullable List<String> allowMethods,
+        @OutputCustomType.Parameter("allowOriginRegexes") @Nullable List<String> allowOriginRegexes,
+        @OutputCustomType.Parameter("allowOrigins") @Nullable List<String> allowOrigins,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

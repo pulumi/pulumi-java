@@ -51,13 +51,13 @@ public final class InstanceFileSharesNfsExportOption {
      */
     private final @Nullable String squashMode;
 
-    @OutputCustomType.Constructor({"accessMode","anonGid","anonUid","ipRanges","squashMode"})
+    @OutputCustomType.Constructor
     private InstanceFileSharesNfsExportOption(
-        @Nullable String accessMode,
-        @Nullable Integer anonGid,
-        @Nullable Integer anonUid,
-        @Nullable List<String> ipRanges,
-        @Nullable String squashMode) {
+        @OutputCustomType.Parameter("accessMode") @Nullable String accessMode,
+        @OutputCustomType.Parameter("anonGid") @Nullable Integer anonGid,
+        @OutputCustomType.Parameter("anonUid") @Nullable Integer anonUid,
+        @OutputCustomType.Parameter("ipRanges") @Nullable List<String> ipRanges,
+        @OutputCustomType.Parameter("squashMode") @Nullable String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;

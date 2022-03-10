@@ -28,11 +28,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      */
     private final @Nullable Boolean presentMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","name","presentMatch"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch(
-        @Nullable String exactMatch,
-        String name,
-        @Nullable Boolean presentMatch) {
+        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;

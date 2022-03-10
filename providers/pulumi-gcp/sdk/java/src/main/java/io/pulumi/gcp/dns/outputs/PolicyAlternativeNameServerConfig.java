@@ -19,8 +19,8 @@ public final class PolicyAlternativeNameServerConfig {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers;
 
-    @OutputCustomType.Constructor({"targetNameServers"})
-    private PolicyAlternativeNameServerConfig(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
+    @OutputCustomType.Constructor
+    private PolicyAlternativeNameServerConfig(@OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
         this.targetNameServers = targetNameServers;
     }
 

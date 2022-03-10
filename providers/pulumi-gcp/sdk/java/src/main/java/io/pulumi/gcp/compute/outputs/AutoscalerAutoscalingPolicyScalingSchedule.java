@@ -49,15 +49,15 @@ public final class AutoscalerAutoscalingPolicyScalingSchedule {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"description","disabled","durationSec","minRequiredReplicas","name","schedule","timeZone"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicyScalingSchedule(
-        @Nullable String description,
-        @Nullable Boolean disabled,
-        Integer durationSec,
-        Integer minRequiredReplicas,
-        String name,
-        String schedule,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("durationSec") Integer durationSec,
+        @OutputCustomType.Parameter("minRequiredReplicas") Integer minRequiredReplicas,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.description = description;
         this.disabled = disabled;
         this.durationSec = durationSec;

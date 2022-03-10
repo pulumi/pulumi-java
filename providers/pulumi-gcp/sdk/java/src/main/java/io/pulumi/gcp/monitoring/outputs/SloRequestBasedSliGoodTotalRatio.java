@@ -44,11 +44,11 @@ public final class SloRequestBasedSliGoodTotalRatio {
      */
     private final @Nullable String totalServiceFilter;
 
-    @OutputCustomType.Constructor({"badServiceFilter","goodServiceFilter","totalServiceFilter"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSliGoodTotalRatio(
-        @Nullable String badServiceFilter,
-        @Nullable String goodServiceFilter,
-        @Nullable String totalServiceFilter) {
+        @OutputCustomType.Parameter("badServiceFilter") @Nullable String badServiceFilter,
+        @OutputCustomType.Parameter("goodServiceFilter") @Nullable String goodServiceFilter,
+        @OutputCustomType.Parameter("totalServiceFilter") @Nullable String totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;

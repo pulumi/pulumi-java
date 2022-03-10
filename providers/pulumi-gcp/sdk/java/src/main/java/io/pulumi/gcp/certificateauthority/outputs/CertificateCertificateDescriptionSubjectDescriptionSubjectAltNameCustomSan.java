@@ -27,11 +27,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"critical","obectIds","value"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(
-        @Nullable Boolean critical,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
+        @OutputCustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.critical = critical;
         this.obectIds = obectIds;
         this.value = value;

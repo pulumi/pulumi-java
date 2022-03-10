@@ -25,10 +25,10 @@ public final class SnapshotSourceDiskEncryptionKey {
      */
     private final @Nullable String rawKey;
 
-    @OutputCustomType.Constructor({"kmsKeyServiceAccount","rawKey"})
+    @OutputCustomType.Constructor
     private SnapshotSourceDiskEncryptionKey(
-        @Nullable String kmsKeyServiceAccount,
-        @Nullable String rawKey) {
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey) {
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
     }

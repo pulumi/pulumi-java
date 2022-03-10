@@ -45,14 +45,14 @@ public final class WorkflowTemplateJobSparkRJob {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","loggingConfig","mainRFileUri","properties"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobSparkRJob(
-        @Nullable List<String> archiveUris,
-        @Nullable List<String> args,
-        @Nullable List<String> fileUris,
-        @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
-        String mainRFileUri,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

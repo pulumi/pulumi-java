@@ -21,10 +21,10 @@ public final class ClusterClusterConfigEndpointConfig {
     private final Boolean enableHttpPortAccess;
     private final @Nullable Map<String,Object> httpPorts;
 
-    @OutputCustomType.Constructor({"enableHttpPortAccess","httpPorts"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigEndpointConfig(
-        Boolean enableHttpPortAccess,
-        @Nullable Map<String,Object> httpPorts) {
+        @OutputCustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
+        @OutputCustomType.Parameter("httpPorts") @Nullable Map<String,Object> httpPorts) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }

@@ -15,8 +15,8 @@ public final class URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy {
      */
     private final String backendService;
 
-    @OutputCustomType.Constructor({"backendService"})
-    private URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(String backendService) {
+    @OutputCustomType.Constructor
+    private URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(@OutputCustomType.Parameter("backendService") String backendService) {
         this.backendService = backendService;
     }
 

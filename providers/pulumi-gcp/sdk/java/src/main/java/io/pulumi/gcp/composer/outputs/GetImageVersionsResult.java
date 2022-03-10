@@ -24,12 +24,12 @@ public final class GetImageVersionsResult {
     private final String project;
     private final String region;
 
-    @OutputCustomType.Constructor({"id","imageVersions","project","region"})
+    @OutputCustomType.Constructor
     private GetImageVersionsResult(
-        String id,
-        List<GetImageVersionsImageVersion> imageVersions,
-        String project,
-        String region) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageVersions") List<GetImageVersionsImageVersion> imageVersions,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region) {
         this.id = id;
         this.imageVersions = imageVersions;
         this.project = project;

@@ -18,8 +18,8 @@ public final class OrganizationSinkBigqueryOptions {
      */
     private final Boolean usePartitionedTables;
 
-    @OutputCustomType.Constructor({"usePartitionedTables"})
-    private OrganizationSinkBigqueryOptions(Boolean usePartitionedTables) {
+    @OutputCustomType.Constructor
+    private OrganizationSinkBigqueryOptions(@OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables) {
         this.usePartitionedTables = usePartitionedTables;
     }
 

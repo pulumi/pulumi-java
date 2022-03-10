@@ -19,11 +19,11 @@ public final class GetServiceTemplateSpecContainerEnv {
     private final String value;
     private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
-    @OutputCustomType.Constructor({"name","value","valueFroms"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerEnv(
-        String name,
-        String value,
-        List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueFroms") List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
         this.name = name;
         this.value = value;
         this.valueFroms = valueFroms;

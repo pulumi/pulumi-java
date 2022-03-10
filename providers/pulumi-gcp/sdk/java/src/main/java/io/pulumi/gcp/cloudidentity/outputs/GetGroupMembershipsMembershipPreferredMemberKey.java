@@ -25,10 +25,10 @@ public final class GetGroupMembershipsMembershipPreferredMemberKey {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"id","namespace"})
+    @OutputCustomType.Constructor
     private GetGroupMembershipsMembershipPreferredMemberKey(
-        String id,
-        String namespace) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.id = id;
         this.namespace = namespace;
     }

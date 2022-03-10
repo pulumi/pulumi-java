@@ -24,10 +24,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor({"code","ttl"})
+    @OutputCustomType.Constructor
     private BackendBucketCdnPolicyNegativeCachingPolicy(
-        @Nullable Integer code,
-        @Nullable Integer ttl) {
+        @OutputCustomType.Parameter("code") @Nullable Integer code,
+        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

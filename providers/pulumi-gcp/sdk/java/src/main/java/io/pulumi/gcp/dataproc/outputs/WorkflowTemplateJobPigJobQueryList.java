@@ -16,8 +16,8 @@ public final class WorkflowTemplateJobPigJobQueryList {
      */
     private final List<String> queries;
 
-    @OutputCustomType.Constructor({"queries"})
-    private WorkflowTemplateJobPigJobQueryList(List<String> queries) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplateJobPigJobQueryList(@OutputCustomType.Parameter("queries") List<String> queries) {
         this.queries = queries;
     }
 

@@ -16,11 +16,11 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
     private final List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules;
     private final List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties;
 
-    @OutputCustomType.Constructor({"retentionPolicies","schedules","snapshotProperties"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicy(
-        List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
-        List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
-        List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
+        @OutputCustomType.Parameter("retentionPolicies") List<GetResourcePolicySnapshotSchedulePolicyRetentionPolicy> retentionPolicies,
+        @OutputCustomType.Parameter("schedules") List<GetResourcePolicySnapshotSchedulePolicySchedule> schedules,
+        @OutputCustomType.Parameter("snapshotProperties") List<GetResourcePolicySnapshotSchedulePolicySnapshotProperty> snapshotProperties) {
         this.retentionPolicies = retentionPolicies;
         this.schedules = schedules;
         this.snapshotProperties = snapshotProperties;

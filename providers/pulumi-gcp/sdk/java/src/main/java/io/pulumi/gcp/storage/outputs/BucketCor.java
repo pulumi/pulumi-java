@@ -34,12 +34,12 @@ public final class BucketCor {
      */
     private final @Nullable List<String> responseHeaders;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","methods","origins","responseHeaders"})
+    @OutputCustomType.Constructor
     private BucketCor(
-        @Nullable Integer maxAgeSeconds,
-        @Nullable List<String> methods,
-        @Nullable List<String> origins,
-        @Nullable List<String> responseHeaders) {
+        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("origins") @Nullable List<String> origins,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;

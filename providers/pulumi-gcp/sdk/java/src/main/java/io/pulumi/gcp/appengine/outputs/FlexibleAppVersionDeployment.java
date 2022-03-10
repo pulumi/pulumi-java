@@ -41,12 +41,12 @@ public final class FlexibleAppVersionDeployment {
      */
     private final @Nullable FlexibleAppVersionDeploymentZip zip;
 
-    @OutputCustomType.Constructor({"cloudBuildOptions","container","files","zip"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionDeployment(
-        @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
-        @Nullable FlexibleAppVersionDeploymentContainer container,
-        @Nullable List<FlexibleAppVersionDeploymentFile> files,
-        @Nullable FlexibleAppVersionDeploymentZip zip) {
+        @OutputCustomType.Parameter("cloudBuildOptions") @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
+        @OutputCustomType.Parameter("container") @Nullable FlexibleAppVersionDeploymentContainer container,
+        @OutputCustomType.Parameter("files") @Nullable List<FlexibleAppVersionDeploymentFile> files,
+        @OutputCustomType.Parameter("zip") @Nullable FlexibleAppVersionDeploymentZip zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;

@@ -42,11 +42,11 @@ public final class GuestPoliciesPackage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"desiredState","manager","name"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackage(
-        @Nullable String desiredState,
-        @Nullable String manager,
-        String name) {
+        @OutputCustomType.Parameter("desiredState") @Nullable String desiredState,
+        @OutputCustomType.Parameter("manager") @Nullable String manager,
+        @OutputCustomType.Parameter("name") String name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = name;

@@ -168,27 +168,27 @@ public final class JobLoad {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor({"allowJaggedRows","allowQuotedNewlines","autodetect","createDisposition","destinationEncryptionConfiguration","destinationTable","encoding","fieldDelimiter","ignoreUnknownValues","maxBadRecords","nullMarker","projectionFields","quote","schemaUpdateOptions","skipLeadingRows","sourceFormat","sourceUris","timePartitioning","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobLoad(
-        @Nullable Boolean allowJaggedRows,
-        @Nullable Boolean allowQuotedNewlines,
-        @Nullable Boolean autodetect,
-        @Nullable String createDisposition,
-        @Nullable JobLoadDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        JobLoadDestinationTable destinationTable,
-        @Nullable String encoding,
-        @Nullable String fieldDelimiter,
-        @Nullable Boolean ignoreUnknownValues,
-        @Nullable Integer maxBadRecords,
-        @Nullable String nullMarker,
-        @Nullable List<String> projectionFields,
-        @Nullable String quote,
-        @Nullable List<String> schemaUpdateOptions,
-        @Nullable Integer skipLeadingRows,
-        @Nullable String sourceFormat,
-        List<String> sourceUris,
-        @Nullable JobLoadTimePartitioning timePartitioning,
-        @Nullable String writeDisposition) {
+        @OutputCustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
+        @OutputCustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
+        @OutputCustomType.Parameter("autodetect") @Nullable Boolean autodetect,
+        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobLoadDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") JobLoadDestinationTable destinationTable,
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
+        @OutputCustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
+        @OutputCustomType.Parameter("nullMarker") @Nullable String nullMarker,
+        @OutputCustomType.Parameter("projectionFields") @Nullable List<String> projectionFields,
+        @OutputCustomType.Parameter("quote") @Nullable String quote,
+        @OutputCustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
+        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows,
+        @OutputCustomType.Parameter("sourceFormat") @Nullable String sourceFormat,
+        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris,
+        @OutputCustomType.Parameter("timePartitioning") @Nullable JobLoadTimePartitioning timePartitioning,
+        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.autodetect = autodetect;

@@ -12,10 +12,10 @@ public final class GetRouterBgpAdvertisedIpRange {
     private final String description;
     private final String range;
 
-    @OutputCustomType.Constructor({"description","range"})
+    @OutputCustomType.Constructor
     private GetRouterBgpAdvertisedIpRange(
-        String description,
-        String range) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("range") String range) {
         this.description = description;
         this.range = range;
     }

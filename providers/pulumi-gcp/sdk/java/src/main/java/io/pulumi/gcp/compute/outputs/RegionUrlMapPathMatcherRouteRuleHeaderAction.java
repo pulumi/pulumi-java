@@ -39,12 +39,12 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
      */
     private final @Nullable List<String> responseHeadersToRemoves;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdds","requestHeadersToRemoves","responseHeadersToAdds","responseHeadersToRemoves"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleHeaderAction(
-        @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
-        @Nullable List<String> requestHeadersToRemoves,
-        @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
-        @Nullable List<String> responseHeadersToRemoves) {
+        @OutputCustomType.Parameter("requestHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
+        @OutputCustomType.Parameter("requestHeadersToRemoves") @Nullable List<String> requestHeadersToRemoves,
+        @OutputCustomType.Parameter("responseHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
+        @OutputCustomType.Parameter("responseHeadersToRemoves") @Nullable List<String> responseHeadersToRemoves) {
         this.requestHeadersToAdds = requestHeadersToAdds;
         this.requestHeadersToRemoves = requestHeadersToRemoves;
         this.responseHeadersToAdds = responseHeadersToAdds;

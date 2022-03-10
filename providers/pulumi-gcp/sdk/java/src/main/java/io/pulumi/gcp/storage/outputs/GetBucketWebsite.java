@@ -12,10 +12,10 @@ public final class GetBucketWebsite {
     private final String mainPageSuffix;
     private final String notFoundPage;
 
-    @OutputCustomType.Constructor({"mainPageSuffix","notFoundPage"})
+    @OutputCustomType.Constructor
     private GetBucketWebsite(
-        String mainPageSuffix,
-        String notFoundPage) {
+        @OutputCustomType.Parameter("mainPageSuffix") String mainPageSuffix,
+        @OutputCustomType.Parameter("notFoundPage") String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }

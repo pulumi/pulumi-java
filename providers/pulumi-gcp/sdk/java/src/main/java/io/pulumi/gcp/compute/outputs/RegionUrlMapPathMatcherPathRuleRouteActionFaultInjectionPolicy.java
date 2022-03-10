@@ -27,10 +27,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      */
     private final @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicy(
-        @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }

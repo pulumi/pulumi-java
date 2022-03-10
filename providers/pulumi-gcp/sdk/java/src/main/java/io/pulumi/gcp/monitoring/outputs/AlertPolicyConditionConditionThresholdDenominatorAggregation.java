@@ -104,12 +104,12 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
      */
     private final @Nullable String perSeriesAligner;
 
-    @OutputCustomType.Constructor({"alignmentPeriod","crossSeriesReducer","groupByFields","perSeriesAligner"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionThresholdDenominatorAggregation(
-        @Nullable String alignmentPeriod,
-        @Nullable String crossSeriesReducer,
-        @Nullable List<String> groupByFields,
-        @Nullable String perSeriesAligner) {
+        @OutputCustomType.Parameter("alignmentPeriod") @Nullable String alignmentPeriod,
+        @OutputCustomType.Parameter("crossSeriesReducer") @Nullable String crossSeriesReducer,
+        @OutputCustomType.Parameter("groupByFields") @Nullable List<String> groupByFields,
+        @OutputCustomType.Parameter("perSeriesAligner") @Nullable String perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;

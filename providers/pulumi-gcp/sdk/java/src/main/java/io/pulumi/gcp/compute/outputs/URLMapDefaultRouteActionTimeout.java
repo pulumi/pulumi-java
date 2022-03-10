@@ -25,10 +25,10 @@ public final class URLMapDefaultRouteActionTimeout {
      */
     private final @Nullable String seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionTimeout(
-        @Nullable Integer nanos,
-        @Nullable String seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") @Nullable String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

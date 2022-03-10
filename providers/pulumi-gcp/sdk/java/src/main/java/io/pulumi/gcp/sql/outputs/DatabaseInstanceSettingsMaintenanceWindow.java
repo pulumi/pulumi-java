@@ -29,11 +29,11 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
      */
     private final @Nullable String updateTrack;
 
-    @OutputCustomType.Constructor({"day","hour","updateTrack"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsMaintenanceWindow(
-        @Nullable Integer day,
-        @Nullable Integer hour,
-        @Nullable String updateTrack) {
+        @OutputCustomType.Parameter("day") @Nullable Integer day,
+        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
+        @OutputCustomType.Parameter("updateTrack") @Nullable String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;

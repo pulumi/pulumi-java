@@ -36,11 +36,11 @@ public final class RegionNetworkEndpointGroupAppEngine {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"service","urlMask","version"})
+    @OutputCustomType.Constructor
     private RegionNetworkEndpointGroupAppEngine(
-        @Nullable String service,
-        @Nullable String urlMask,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlMask") @Nullable String urlMask,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.service = service;
         this.urlMask = urlMask;
         this.version = version;

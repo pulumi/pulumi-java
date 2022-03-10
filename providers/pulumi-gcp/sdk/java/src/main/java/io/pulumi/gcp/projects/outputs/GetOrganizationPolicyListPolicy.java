@@ -18,12 +18,12 @@ public final class GetOrganizationPolicyListPolicy {
     private final Boolean inheritFromParent;
     private final String suggestedValue;
 
-    @OutputCustomType.Constructor({"allows","denies","inheritFromParent","suggestedValue"})
+    @OutputCustomType.Constructor
     private GetOrganizationPolicyListPolicy(
-        List<GetOrganizationPolicyListPolicyAllow> allows,
-        List<GetOrganizationPolicyListPolicyDeny> denies,
-        Boolean inheritFromParent,
-        String suggestedValue) {
+        @OutputCustomType.Parameter("allows") List<GetOrganizationPolicyListPolicyAllow> allows,
+        @OutputCustomType.Parameter("denies") List<GetOrganizationPolicyListPolicyDeny> denies,
+        @OutputCustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
+        @OutputCustomType.Parameter("suggestedValue") String suggestedValue) {
         this.allows = allows;
         this.denies = denies;
         this.inheritFromParent = inheritFromParent;

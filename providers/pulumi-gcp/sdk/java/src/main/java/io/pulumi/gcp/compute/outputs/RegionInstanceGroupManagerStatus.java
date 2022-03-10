@@ -30,11 +30,11 @@ public final class RegionInstanceGroupManagerStatus {
      */
     private final @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets;
 
-    @OutputCustomType.Constructor({"isStable","statefuls","versionTargets"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerStatus(
-        @Nullable Boolean isStable,
-        @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
-        @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
+        @OutputCustomType.Parameter("isStable") @Nullable Boolean isStable,
+        @OutputCustomType.Parameter("statefuls") @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
+        @OutputCustomType.Parameter("versionTargets") @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
         this.isStable = isStable;
         this.statefuls = statefuls;
         this.versionTargets = versionTargets;

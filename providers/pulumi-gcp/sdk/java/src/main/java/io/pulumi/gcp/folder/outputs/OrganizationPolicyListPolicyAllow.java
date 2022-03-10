@@ -24,10 +24,10 @@ public final class OrganizationPolicyListPolicyAllow {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"all","values"})
+    @OutputCustomType.Constructor
     private OrganizationPolicyListPolicyAllow(
-        @Nullable Boolean all,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("all") @Nullable Boolean all,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.all = all;
         this.values = values;
     }

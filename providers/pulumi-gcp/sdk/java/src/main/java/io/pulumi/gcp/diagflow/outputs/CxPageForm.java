@@ -18,8 +18,8 @@ public final class CxPageForm {
      */
     private final @Nullable List<CxPageFormParameter> parameters;
 
-    @OutputCustomType.Constructor({"parameters"})
-    private CxPageForm(@Nullable List<CxPageFormParameter> parameters) {
+    @OutputCustomType.Constructor
+    private CxPageForm(@OutputCustomType.Parameter("parameters") @Nullable List<CxPageFormParameter> parameters) {
         this.parameters = parameters;
     }
 

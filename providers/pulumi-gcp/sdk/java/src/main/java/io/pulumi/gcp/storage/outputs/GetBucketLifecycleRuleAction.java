@@ -12,10 +12,10 @@ public final class GetBucketLifecycleRuleAction {
     private final String storageClass;
     private final String type;
 
-    @OutputCustomType.Constructor({"storageClass","type"})
+    @OutputCustomType.Constructor
     private GetBucketLifecycleRuleAction(
-        String storageClass,
-        String type) {
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

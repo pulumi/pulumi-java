@@ -22,10 +22,10 @@ public final class GetIAMPolicyAuditConfig {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","service"})
+    @OutputCustomType.Constructor
     private GetIAMPolicyAuditConfig(
-        List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

@@ -118,20 +118,20 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","guestOsFeatures","index","initializeParams","$interface","kind","licenses","mode","source","type"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigDataDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable Boolean boot,
-        @Nullable String deviceName,
-        @Nullable List<String> guestOsFeatures,
-        @Nullable Integer index,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
-        @Nullable String $interface,
-        @Nullable String kind,
-        @Nullable List<String> licenses,
-        @Nullable String mode,
-        @Nullable String source,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("guestOsFeatures") @Nullable List<String> guestOsFeatures,
+        @OutputCustomType.Parameter("index") @Nullable Integer index,
+        @OutputCustomType.Parameter("initializeParams") @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
+        @OutputCustomType.Parameter("interface") @Nullable String $interface,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("licenses") @Nullable List<String> licenses,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

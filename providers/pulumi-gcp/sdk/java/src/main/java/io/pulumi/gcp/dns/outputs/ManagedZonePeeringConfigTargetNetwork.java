@@ -17,8 +17,8 @@ public final class ManagedZonePeeringConfigTargetNetwork {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"networkUrl"})
-    private ManagedZonePeeringConfigTargetNetwork(String networkUrl) {
+    @OutputCustomType.Constructor
+    private ManagedZonePeeringConfigTargetNetwork(@OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.networkUrl = networkUrl;
     }
 

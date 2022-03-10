@@ -14,10 +14,10 @@ public final class ClusterNodePoolManagement {
     private final @Nullable Boolean autoRepair;
     private final @Nullable Boolean autoUpgrade;
 
-    @OutputCustomType.Constructor({"autoRepair","autoUpgrade"})
+    @OutputCustomType.Constructor
     private ClusterNodePoolManagement(
-        @Nullable Boolean autoRepair,
-        @Nullable Boolean autoUpgrade) {
+        @OutputCustomType.Parameter("autoRepair") @Nullable Boolean autoRepair,
+        @OutputCustomType.Parameter("autoUpgrade") @Nullable Boolean autoUpgrade) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
     }

@@ -109,17 +109,17 @@ public final class ServiceTemplateSpecContainer {
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor({"args","commands","envFroms","envs","image","ports","resources","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainer(
-        @Nullable List<String> args,
-        @Nullable List<String> commands,
-        @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
-        @Nullable List<ServiceTemplateSpecContainerEnv> envs,
-        String image,
-        @Nullable List<ServiceTemplateSpecContainerPort> ports,
-        @Nullable ServiceTemplateSpecContainerResources resources,
-        @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
-        @Nullable String workingDir) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
+        @OutputCustomType.Parameter("envFroms") @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
+        @OutputCustomType.Parameter("envs") @Nullable List<ServiceTemplateSpecContainerEnv> envs,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("ports") @Nullable List<ServiceTemplateSpecContainerPort> ports,
+        @OutputCustomType.Parameter("resources") @Nullable ServiceTemplateSpecContainerResources resources,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;

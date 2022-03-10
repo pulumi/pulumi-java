@@ -16,11 +16,11 @@ public final class NodePoolNetworkConfig {
     private final @Nullable String podIpv4CidrBlock;
     private final String podRange;
 
-    @OutputCustomType.Constructor({"createPodRange","podIpv4CidrBlock","podRange"})
+    @OutputCustomType.Constructor
     private NodePoolNetworkConfig(
-        @Nullable Boolean createPodRange,
-        @Nullable String podIpv4CidrBlock,
-        String podRange) {
+        @OutputCustomType.Parameter("createPodRange") @Nullable Boolean createPodRange,
+        @OutputCustomType.Parameter("podIpv4CidrBlock") @Nullable String podIpv4CidrBlock,
+        @OutputCustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

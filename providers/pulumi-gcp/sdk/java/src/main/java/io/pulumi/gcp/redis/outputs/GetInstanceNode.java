@@ -12,10 +12,10 @@ public final class GetInstanceNode {
     private final String id;
     private final String zone;
 
-    @OutputCustomType.Constructor({"id","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceNode(
-        String id,
-        String zone) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.id = id;
         this.zone = zone;
     }

@@ -34,12 +34,12 @@ public final class WorkflowTemplateParameter {
      */
     private final @Nullable WorkflowTemplateParameterValidation validation;
 
-    @OutputCustomType.Constructor({"description","fields","name","validation"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateParameter(
-        @Nullable String description,
-        List<String> fields,
-        String name,
-        @Nullable WorkflowTemplateParameterValidation validation) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fields") List<String> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("validation") @Nullable WorkflowTemplateParameterValidation validation) {
         this.description = description;
         this.fields = fields;
         this.name = name;

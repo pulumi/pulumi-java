@@ -19,8 +19,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
      */
     private final String namespaceUrl;
 
-    @OutputCustomType.Constructor({"namespaceUrl"})
-    private ManagedZoneServiceDirectoryConfigNamespace(String namespaceUrl) {
+    @OutputCustomType.Constructor
+    private ManagedZoneServiceDirectoryConfigNamespace(@OutputCustomType.Parameter("namespaceUrl") String namespaceUrl) {
         this.namespaceUrl = namespaceUrl;
     }
 

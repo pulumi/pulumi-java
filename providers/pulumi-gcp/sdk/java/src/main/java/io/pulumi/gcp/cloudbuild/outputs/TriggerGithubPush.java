@@ -28,11 +28,11 @@ public final class TriggerGithubPush {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"branch","invertRegex","tag"})
+    @OutputCustomType.Constructor
     private TriggerGithubPush(
-        @Nullable String branch,
-        @Nullable Boolean invertRegex,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.branch = branch;
         this.invertRegex = invertRegex;
         this.tag = tag;

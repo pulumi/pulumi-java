@@ -14,10 +14,10 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
     private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReferences","optional"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerEnvFromSecretRef(
-        List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
-        Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReferences") List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.localObjectReferences = localObjectReferences;
         this.optional = optional;
     }

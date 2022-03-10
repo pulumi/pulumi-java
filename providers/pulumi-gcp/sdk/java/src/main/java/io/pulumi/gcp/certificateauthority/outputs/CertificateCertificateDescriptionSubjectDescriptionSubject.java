@@ -52,16 +52,16 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
      */
     private final @Nullable String streetAddress;
 
-    @OutputCustomType.Constructor({"commonName","countryCode","locality","organization","organizationalUnit","postalCode","province","streetAddress"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescriptionSubject(
-        @Nullable String commonName,
-        @Nullable String countryCode,
-        @Nullable String locality,
-        @Nullable String organization,
-        @Nullable String organizationalUnit,
-        @Nullable String postalCode,
-        @Nullable String province,
-        @Nullable String streetAddress) {
+        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
+        @OutputCustomType.Parameter("countryCode") @Nullable String countryCode,
+        @OutputCustomType.Parameter("locality") @Nullable String locality,
+        @OutputCustomType.Parameter("organization") @Nullable String organization,
+        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("province") @Nullable String province,
+        @OutputCustomType.Parameter("streetAddress") @Nullable String streetAddress) {
         this.commonName = commonName;
         this.countryCode = countryCode;
         this.locality = locality;

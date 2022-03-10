@@ -25,10 +25,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionFaultInjectionPolicy(
-        @Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }

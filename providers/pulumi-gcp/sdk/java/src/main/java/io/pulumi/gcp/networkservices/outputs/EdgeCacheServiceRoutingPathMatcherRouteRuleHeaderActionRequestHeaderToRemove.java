@@ -16,8 +16,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor({"headerName"})
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove(String headerName) {
+    @OutputCustomType.Constructor
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove(@OutputCustomType.Parameter("headerName") String headerName) {
         this.headerName = headerName;
     }
 

@@ -35,13 +35,13 @@ public final class GetCaCertsCert {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"cert","commonName","createTime","expirationTime","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private GetCaCertsCert(
-        String cert,
-        String commonName,
-        String createTime,
-        String expirationTime,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("cert") String cert,
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.commonName = commonName;
         this.createTime = createTime;

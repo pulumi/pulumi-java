@@ -48,14 +48,14 @@ public final class CxPageFormParameter {
      */
     private final @Nullable Boolean required;
 
-    @OutputCustomType.Constructor({"displayName","entityType","fillBehavior","isList","redact","required"})
+    @OutputCustomType.Constructor
     private CxPageFormParameter(
-        @Nullable String displayName,
-        @Nullable String entityType,
-        @Nullable CxPageFormParameterFillBehavior fillBehavior,
-        @Nullable Boolean isList,
-        @Nullable Boolean redact,
-        @Nullable Boolean required) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("entityType") @Nullable String entityType,
+        @OutputCustomType.Parameter("fillBehavior") @Nullable CxPageFormParameterFillBehavior fillBehavior,
+        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
+        @OutputCustomType.Parameter("redact") @Nullable Boolean redact,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required) {
         this.displayName = displayName;
         this.entityType = entityType;
         this.fillBehavior = fillBehavior;

@@ -30,11 +30,11 @@ public final class EdgeCacheOriginTimeout {
      */
     private final @Nullable String responseTimeout;
 
-    @OutputCustomType.Constructor({"connectTimeout","maxAttemptsTimeout","responseTimeout"})
+    @OutputCustomType.Constructor
     private EdgeCacheOriginTimeout(
-        @Nullable String connectTimeout,
-        @Nullable String maxAttemptsTimeout,
-        @Nullable String responseTimeout) {
+        @OutputCustomType.Parameter("connectTimeout") @Nullable String connectTimeout,
+        @OutputCustomType.Parameter("maxAttemptsTimeout") @Nullable String maxAttemptsTimeout,
+        @OutputCustomType.Parameter("responseTimeout") @Nullable String responseTimeout) {
         this.connectTimeout = connectTimeout;
         this.maxAttemptsTimeout = maxAttemptsTimeout;
         this.responseTimeout = responseTimeout;

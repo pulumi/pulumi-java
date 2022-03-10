@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigGcpFilestoreCsiDriverConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigGcpFilestoreCsiDriverConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -17,8 +17,8 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor({"text"})
-    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
+    @OutputCustomType.Constructor
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
         this.text = text;
     }
 

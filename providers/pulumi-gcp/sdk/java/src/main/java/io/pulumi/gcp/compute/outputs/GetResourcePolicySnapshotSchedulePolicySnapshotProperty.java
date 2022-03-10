@@ -16,11 +16,11 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty {
     private final Map<String,String> labels;
     private final List<String> storageLocations;
 
-    @OutputCustomType.Constructor({"guestFlush","labels","storageLocations"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicySnapshotProperty(
-        Boolean guestFlush,
-        Map<String,String> labels,
-        List<String> storageLocations) {
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations) {
         this.guestFlush = guestFlush;
         this.labels = labels;
         this.storageLocations = storageLocations;

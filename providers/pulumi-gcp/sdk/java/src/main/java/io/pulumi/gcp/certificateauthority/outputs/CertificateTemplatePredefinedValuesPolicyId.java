@@ -16,8 +16,8 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateTemplatePredefinedValuesPolicyId(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateTemplatePredefinedValuesPolicyId(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

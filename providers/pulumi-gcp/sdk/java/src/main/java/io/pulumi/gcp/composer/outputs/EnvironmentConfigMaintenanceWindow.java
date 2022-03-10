@@ -13,11 +13,11 @@ public final class EnvironmentConfigMaintenanceWindow {
     private final String recurrence;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","recurrence","startTime"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigMaintenanceWindow(
-        String endTime,
-        String recurrence,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.recurrence = recurrence;
         this.startTime = startTime;

@@ -16,8 +16,8 @@ public final class PatchDeploymentInstanceFilterGroupLabel {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private PatchDeploymentInstanceFilterGroupLabel(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private PatchDeploymentInstanceFilterGroupLabel(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

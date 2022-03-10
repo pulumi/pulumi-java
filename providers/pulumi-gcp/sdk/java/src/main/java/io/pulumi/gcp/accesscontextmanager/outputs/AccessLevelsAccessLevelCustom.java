@@ -18,8 +18,8 @@ public final class AccessLevelsAccessLevelCustom {
      */
     private final AccessLevelsAccessLevelCustomExpr expr;
 
-    @OutputCustomType.Constructor({"expr"})
-    private AccessLevelsAccessLevelCustom(AccessLevelsAccessLevelCustomExpr expr) {
+    @OutputCustomType.Constructor
+    private AccessLevelsAccessLevelCustom(@OutputCustomType.Parameter("expr") AccessLevelsAccessLevelCustomExpr expr) {
         this.expr = expr;
     }
 

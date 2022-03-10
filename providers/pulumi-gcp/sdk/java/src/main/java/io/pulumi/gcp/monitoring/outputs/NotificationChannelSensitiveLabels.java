@@ -30,11 +30,11 @@ public final class NotificationChannelSensitiveLabels {
      */
     private final @Nullable String serviceKey;
 
-    @OutputCustomType.Constructor({"authToken","password","serviceKey"})
+    @OutputCustomType.Constructor
     private NotificationChannelSensitiveLabels(
-        @Nullable String authToken,
-        @Nullable String password,
-        @Nullable String serviceKey) {
+        @OutputCustomType.Parameter("authToken") @Nullable String authToken,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("serviceKey") @Nullable String serviceKey) {
         this.authToken = authToken;
         this.password = password;
         this.serviceKey = serviceKey;

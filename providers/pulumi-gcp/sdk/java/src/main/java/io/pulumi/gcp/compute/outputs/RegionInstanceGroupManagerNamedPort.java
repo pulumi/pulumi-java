@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerNamedPort {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerNamedPort(
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.name = name;
         this.port = port;
     }

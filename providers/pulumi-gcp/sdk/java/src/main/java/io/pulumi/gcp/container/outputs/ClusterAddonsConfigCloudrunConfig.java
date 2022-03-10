@@ -25,10 +25,10 @@ public final class ClusterAddonsConfigCloudrunConfig {
      */
     private final @Nullable String loadBalancerType;
 
-    @OutputCustomType.Constructor({"disabled","loadBalancerType"})
+    @OutputCustomType.Constructor
     private ClusterAddonsConfigCloudrunConfig(
-        Boolean disabled,
-        @Nullable String loadBalancerType) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("loadBalancerType") @Nullable String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }

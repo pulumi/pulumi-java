@@ -32,12 +32,12 @@ public final class PolicySpecRuleCondition {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","expression","location","title"})
+    @OutputCustomType.Constructor
     private PolicySpecRuleCondition(
-        @Nullable String description,
-        @Nullable String expression,
-        @Nullable String location,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;

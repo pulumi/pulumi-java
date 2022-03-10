@@ -33,12 +33,12 @@ public final class DatabaseInstanceSettingsInsightsConfig {
      */
     private final @Nullable Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor({"queryInsightsEnabled","queryStringLength","recordApplicationTags","recordClientAddress"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsInsightsConfig(
-        @Nullable Boolean queryInsightsEnabled,
-        @Nullable Integer queryStringLength,
-        @Nullable Boolean recordApplicationTags,
-        @Nullable Boolean recordClientAddress) {
+        @OutputCustomType.Parameter("queryInsightsEnabled") @Nullable Boolean queryInsightsEnabled,
+        @OutputCustomType.Parameter("queryStringLength") @Nullable Integer queryStringLength,
+        @OutputCustomType.Parameter("recordApplicationTags") @Nullable Boolean recordApplicationTags,
+        @OutputCustomType.Parameter("recordClientAddress") @Nullable Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryStringLength = queryStringLength;
         this.recordApplicationTags = recordApplicationTags;

@@ -16,8 +16,8 @@ public final class FolderFeedFeedOutputConfig {
      */
     private final FolderFeedFeedOutputConfigPubsubDestination pubsubDestination;
 
-    @OutputCustomType.Constructor({"pubsubDestination"})
-    private FolderFeedFeedOutputConfig(FolderFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+    @OutputCustomType.Constructor
+    private FolderFeedFeedOutputConfig(@OutputCustomType.Parameter("pubsubDestination") FolderFeedFeedOutputConfigPubsubDestination pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 

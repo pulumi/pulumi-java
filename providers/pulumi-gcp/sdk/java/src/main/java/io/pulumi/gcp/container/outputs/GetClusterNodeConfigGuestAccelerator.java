@@ -14,11 +14,11 @@ public final class GetClusterNodeConfigGuestAccelerator {
     private final String gpuPartitionSize;
     private final String type;
 
-    @OutputCustomType.Constructor({"count","gpuPartitionSize","type"})
+    @OutputCustomType.Constructor
     private GetClusterNodeConfigGuestAccelerator(
-        Integer count,
-        String gpuPartitionSize,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("gpuPartitionSize") String gpuPartitionSize,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.gpuPartitionSize = gpuPartitionSize;
         this.type = type;

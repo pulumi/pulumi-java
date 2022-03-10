@@ -16,11 +16,11 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule {
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
     private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
 
-    @OutputCustomType.Constructor({"dailySchedules","hourlySchedules","weeklySchedules"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicySchedule(
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
-        List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
+        @OutputCustomType.Parameter("dailySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules,
+        @OutputCustomType.Parameter("hourlySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules,
+        @OutputCustomType.Parameter("weeklySchedules") List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules) {
         this.dailySchedules = dailySchedules;
         this.hourlySchedules = hourlySchedules;
         this.weeklySchedules = weeklySchedules;

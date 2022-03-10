@@ -12,10 +12,10 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow {
     private final String duration;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","startTime"})
+    @OutputCustomType.Constructor
     private GetClusterMaintenancePolicyDailyMaintenanceWindow(
-        String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }

@@ -23,10 +23,10 @@ public final class UptimeCheckConfigResourceGroup {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"groupId","resourceType"})
+    @OutputCustomType.Constructor
     private UptimeCheckConfigResourceGroup(
-        @Nullable String groupId,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }

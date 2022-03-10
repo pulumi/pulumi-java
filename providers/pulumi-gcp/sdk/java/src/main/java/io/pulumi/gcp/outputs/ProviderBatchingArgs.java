@@ -15,10 +15,10 @@ public final class ProviderBatchingArgs {
     private final @Nullable Input<Boolean> enableBatching;
     private final @Nullable Input<String> sendAfter;
 
-    @OutputCustomType.Constructor({"enableBatching","sendAfter"})
+    @OutputCustomType.Constructor
     private ProviderBatchingArgs(
-        @Nullable Input<Boolean> enableBatching,
-        @Nullable Input<String> sendAfter) {
+        @OutputCustomType.Parameter("enableBatching") @Nullable Input<Boolean> enableBatching,
+        @OutputCustomType.Parameter("sendAfter") @Nullable Input<String> sendAfter) {
         this.enableBatching = enableBatching;
         this.sendAfter = sendAfter;
     }

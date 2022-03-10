@@ -70,18 +70,18 @@ public final class UptimeCheckConfigHttpCheck {
      */
     private final @Nullable Boolean validateSsl;
 
-    @OutputCustomType.Constructor({"authInfo","body","contentType","headers","maskHeaders","path","port","requestMethod","useSsl","validateSsl"})
+    @OutputCustomType.Constructor
     private UptimeCheckConfigHttpCheck(
-        @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
-        @Nullable String body,
-        @Nullable String contentType,
-        @Nullable Map<String,String> headers,
-        @Nullable Boolean maskHeaders,
-        @Nullable String path,
-        @Nullable Integer port,
-        @Nullable String requestMethod,
-        @Nullable Boolean useSsl,
-        @Nullable Boolean validateSsl) {
+        @OutputCustomType.Parameter("authInfo") @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("maskHeaders") @Nullable Boolean maskHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("requestMethod") @Nullable String requestMethod,
+        @OutputCustomType.Parameter("useSsl") @Nullable Boolean useSsl,
+        @OutputCustomType.Parameter("validateSsl") @Nullable Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;

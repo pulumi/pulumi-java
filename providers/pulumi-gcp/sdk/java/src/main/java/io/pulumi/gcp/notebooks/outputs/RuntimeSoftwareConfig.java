@@ -55,15 +55,15 @@ public final class RuntimeSoftwareConfig {
      */
     private final @Nullable String postStartupScript;
 
-    @OutputCustomType.Constructor({"customGpuDriverPath","enableHealthMonitoring","idleShutdown","idleShutdownTimeout","installGpuDriver","notebookUpgradeSchedule","postStartupScript"})
+    @OutputCustomType.Constructor
     private RuntimeSoftwareConfig(
-        @Nullable String customGpuDriverPath,
-        @Nullable Boolean enableHealthMonitoring,
-        @Nullable Boolean idleShutdown,
-        @Nullable Integer idleShutdownTimeout,
-        @Nullable Boolean installGpuDriver,
-        @Nullable String notebookUpgradeSchedule,
-        @Nullable String postStartupScript) {
+        @OutputCustomType.Parameter("customGpuDriverPath") @Nullable String customGpuDriverPath,
+        @OutputCustomType.Parameter("enableHealthMonitoring") @Nullable Boolean enableHealthMonitoring,
+        @OutputCustomType.Parameter("idleShutdown") @Nullable Boolean idleShutdown,
+        @OutputCustomType.Parameter("idleShutdownTimeout") @Nullable Integer idleShutdownTimeout,
+        @OutputCustomType.Parameter("installGpuDriver") @Nullable Boolean installGpuDriver,
+        @OutputCustomType.Parameter("notebookUpgradeSchedule") @Nullable String notebookUpgradeSchedule,
+        @OutputCustomType.Parameter("postStartupScript") @Nullable String postStartupScript) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;

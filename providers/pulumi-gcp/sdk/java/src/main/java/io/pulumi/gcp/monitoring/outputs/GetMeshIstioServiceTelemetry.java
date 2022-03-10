@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetMeshIstioServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private GetMeshIstioServiceTelemetry(String resourceName) {
+    @OutputCustomType.Constructor
+    private GetMeshIstioServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

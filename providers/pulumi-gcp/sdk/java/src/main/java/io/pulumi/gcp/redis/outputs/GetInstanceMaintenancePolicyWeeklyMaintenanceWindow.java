@@ -15,11 +15,11 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
     private final String duration;
     private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
 
-    @OutputCustomType.Constructor({"day","duration","startTimes"})
+    @OutputCustomType.Constructor
     private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        String day,
-        String duration,
-        List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTimes") List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
         this.day = day;
         this.duration = duration;
         this.startTimes = startTimes;

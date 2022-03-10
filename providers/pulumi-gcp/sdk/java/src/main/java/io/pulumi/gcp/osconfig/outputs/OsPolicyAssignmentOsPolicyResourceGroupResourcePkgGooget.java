@@ -15,8 +15,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget(String name) {
+    @OutputCustomType.Constructor
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

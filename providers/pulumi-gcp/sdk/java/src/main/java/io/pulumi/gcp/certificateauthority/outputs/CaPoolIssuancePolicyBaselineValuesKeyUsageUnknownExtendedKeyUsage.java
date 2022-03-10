@@ -16,8 +16,8 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyU
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

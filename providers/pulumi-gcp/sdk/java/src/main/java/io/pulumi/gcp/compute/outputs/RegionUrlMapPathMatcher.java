@@ -64,14 +64,14 @@ public final class RegionUrlMapPathMatcher {
      */
     private final @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor({"defaultService","defaultUrlRedirect","description","name","pathRules","routeRules"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcher(
-        @Nullable String defaultService,
-        @Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
-        @Nullable String description,
-        String name,
-        @Nullable List<RegionUrlMapPathMatcherPathRule> pathRules,
-        @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules) {
+        @OutputCustomType.Parameter("defaultService") @Nullable String defaultService,
+        @OutputCustomType.Parameter("defaultUrlRedirect") @Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<RegionUrlMapPathMatcherPathRule> pathRules,
+        @OutputCustomType.Parameter("routeRules") @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules) {
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
         this.description = description;

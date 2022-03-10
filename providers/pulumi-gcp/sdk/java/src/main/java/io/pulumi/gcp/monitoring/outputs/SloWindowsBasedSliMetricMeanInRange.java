@@ -33,10 +33,10 @@ public final class SloWindowsBasedSliMetricMeanInRange {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor({"range","timeSeries"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliMetricMeanInRange(
-        SloWindowsBasedSliMetricMeanInRangeRange range,
-        String timeSeries) {
+        @OutputCustomType.Parameter("range") SloWindowsBasedSliMetricMeanInRangeRange range,
+        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }

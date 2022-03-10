@@ -19,13 +19,13 @@ public final class GetWebAppResult {
     private final String name;
     private final String project;
 
-    @OutputCustomType.Constructor({"appId","displayName","id","name","project"})
+    @OutputCustomType.Constructor
     private GetWebAppResult(
-        String appId,
-        String displayName,
-        String id,
-        String name,
-        String project) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project) {
         this.appId = appId;
         this.displayName = displayName;
         this.id = id;

@@ -20,12 +20,12 @@ public final class DomainMappingStatus {
     private final @Nullable Integer observedGeneration;
     private final @Nullable List<DomainMappingStatusResourceRecord> resourceRecords;
 
-    @OutputCustomType.Constructor({"conditions","mappedRouteName","observedGeneration","resourceRecords"})
+    @OutputCustomType.Constructor
     private DomainMappingStatus(
-        @Nullable List<DomainMappingStatusCondition> conditions,
-        @Nullable String mappedRouteName,
-        @Nullable Integer observedGeneration,
-        @Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<DomainMappingStatusCondition> conditions,
+        @OutputCustomType.Parameter("mappedRouteName") @Nullable String mappedRouteName,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("resourceRecords") @Nullable List<DomainMappingStatusResourceRecord> resourceRecords) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;

@@ -32,11 +32,11 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsage {
      */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyBaselineValuesKeyUsage(
-        CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage,
-        CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @OutputCustomType.Parameter("baseKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage baseKeyUsage,
+        @OutputCustomType.Parameter("extendedKeyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CaPoolIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

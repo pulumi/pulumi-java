@@ -47,13 +47,13 @@ public final class InstanceNetwork {
      */
     private final @Nullable String reservedIpRange;
 
-    @OutputCustomType.Constructor({"connectMode","ipAddresses","modes","network","reservedIpRange"})
+    @OutputCustomType.Constructor
     private InstanceNetwork(
-        @Nullable String connectMode,
-        @Nullable List<String> ipAddresses,
-        List<String> modes,
-        String network,
-        @Nullable String reservedIpRange) {
+        @OutputCustomType.Parameter("connectMode") @Nullable String connectMode,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("modes") List<String> modes,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("reservedIpRange") @Nullable String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;

@@ -16,8 +16,8 @@ public final class ClusterClusterConfigEncryptionConfig {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private ClusterClusterConfigEncryptionConfig(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private ClusterClusterConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

@@ -29,10 +29,10 @@ public final class RegionNetworkEndpointGroupCloudFunction {
      */
     private final @Nullable String urlMask;
 
-    @OutputCustomType.Constructor({"function","urlMask"})
+    @OutputCustomType.Constructor
     private RegionNetworkEndpointGroupCloudFunction(
-        @Nullable String function,
-        @Nullable String urlMask) {
+        @OutputCustomType.Parameter("function") @Nullable String function,
+        @OutputCustomType.Parameter("urlMask") @Nullable String urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }

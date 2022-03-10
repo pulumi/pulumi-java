@@ -27,11 +27,11 @@ public final class GetRegionInstanceGroupInstance {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"instance","namedPorts","status"})
+    @OutputCustomType.Constructor
     private GetRegionInstanceGroupInstance(
-        String instance,
-        List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
-        String status) {
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("namedPorts") List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
+        @OutputCustomType.Parameter("status") String status) {
         this.instance = instance;
         this.namedPorts = namedPorts;
         this.status = status;

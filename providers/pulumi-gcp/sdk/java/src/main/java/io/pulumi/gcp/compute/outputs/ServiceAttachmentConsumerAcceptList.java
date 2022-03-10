@@ -22,10 +22,10 @@ public final class ServiceAttachmentConsumerAcceptList {
      */
     private final String projectIdOrNum;
 
-    @OutputCustomType.Constructor({"connectionLimit","projectIdOrNum"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConsumerAcceptList(
-        Integer connectionLimit,
-        String projectIdOrNum) {
+        @OutputCustomType.Parameter("connectionLimit") Integer connectionLimit,
+        @OutputCustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
         this.connectionLimit = connectionLimit;
         this.projectIdOrNum = projectIdOrNum;
     }

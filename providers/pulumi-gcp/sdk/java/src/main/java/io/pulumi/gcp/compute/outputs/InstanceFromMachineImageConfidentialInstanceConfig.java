@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class InstanceFromMachineImageConfidentialInstanceConfig {
     private final Boolean enableConfidentialCompute;
 
-    @OutputCustomType.Constructor({"enableConfidentialCompute"})
-    private InstanceFromMachineImageConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
+    @OutputCustomType.Constructor
+    private InstanceFromMachineImageConfidentialInstanceConfig(@OutputCustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 

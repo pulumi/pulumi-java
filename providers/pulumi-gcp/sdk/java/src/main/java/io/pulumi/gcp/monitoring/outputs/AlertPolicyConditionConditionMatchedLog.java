@@ -28,10 +28,10 @@ public final class AlertPolicyConditionConditionMatchedLog {
      */
     private final @Nullable Map<String,String> labelExtractors;
 
-    @OutputCustomType.Constructor({"filter","labelExtractors"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionMatchedLog(
-        String filter,
-        @Nullable Map<String,String> labelExtractors) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("labelExtractors") @Nullable Map<String,String> labelExtractors) {
         this.filter = filter;
         this.labelExtractors = labelExtractors;
     }

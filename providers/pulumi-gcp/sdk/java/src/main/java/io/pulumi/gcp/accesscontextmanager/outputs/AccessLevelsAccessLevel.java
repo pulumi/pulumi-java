@@ -44,13 +44,13 @@ public final class AccessLevelsAccessLevel {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"basic","custom","description","name","title"})
+    @OutputCustomType.Constructor
     private AccessLevelsAccessLevel(
-        @Nullable AccessLevelsAccessLevelBasic basic,
-        @Nullable AccessLevelsAccessLevelCustom custom,
-        @Nullable String description,
-        String name,
-        String title) {
+        @OutputCustomType.Parameter("basic") @Nullable AccessLevelsAccessLevelBasic basic,
+        @OutputCustomType.Parameter("custom") @Nullable AccessLevelsAccessLevelCustom custom,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("title") String title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;

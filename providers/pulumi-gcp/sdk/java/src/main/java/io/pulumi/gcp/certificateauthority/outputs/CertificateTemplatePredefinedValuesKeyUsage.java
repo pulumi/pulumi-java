@@ -30,11 +30,11 @@ public final class CertificateTemplatePredefinedValuesKeyUsage {
      */
     private final @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor({"baseKeyUsage","extendedKeyUsage","unknownExtendedKeyUsages"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePredefinedValuesKeyUsage(
-        @Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage baseKeyUsage,
-        @Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @OutputCustomType.Parameter("baseKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageBaseKeyUsage baseKeyUsage,
+        @OutputCustomType.Parameter("extendedKeyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

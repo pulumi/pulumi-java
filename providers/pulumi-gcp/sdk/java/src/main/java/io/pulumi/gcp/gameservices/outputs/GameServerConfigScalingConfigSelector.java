@@ -17,8 +17,8 @@ public final class GameServerConfigScalingConfigSelector {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private GameServerConfigScalingConfigSelector(@Nullable Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private GameServerConfigScalingConfigSelector(@OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.labels = labels;
     }
 

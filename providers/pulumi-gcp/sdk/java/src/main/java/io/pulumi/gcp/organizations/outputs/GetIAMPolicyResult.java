@@ -27,12 +27,12 @@ public final class GetIAMPolicyResult {
      */
     private final String policyData;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","id","policyData"})
+    @OutputCustomType.Constructor
     private GetIAMPolicyResult(
-        @Nullable List<GetIAMPolicyAuditConfig> auditConfigs,
-        @Nullable List<GetIAMPolicyBinding> bindings,
-        String id,
-        String policyData) {
+        @OutputCustomType.Parameter("auditConfigs") @Nullable List<GetIAMPolicyAuditConfig> auditConfigs,
+        @OutputCustomType.Parameter("bindings") @Nullable List<GetIAMPolicyBinding> bindings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("policyData") String policyData) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.id = id;

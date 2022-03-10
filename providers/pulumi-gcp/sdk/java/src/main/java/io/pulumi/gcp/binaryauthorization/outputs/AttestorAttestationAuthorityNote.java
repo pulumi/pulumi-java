@@ -51,11 +51,11 @@ public final class AttestorAttestationAuthorityNote {
      */
     private final @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys;
 
-    @OutputCustomType.Constructor({"delegationServiceAccountEmail","noteReference","publicKeys"})
+    @OutputCustomType.Constructor
     private AttestorAttestationAuthorityNote(
-        @Nullable String delegationServiceAccountEmail,
-        String noteReference,
-        @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
+        @OutputCustomType.Parameter("delegationServiceAccountEmail") @Nullable String delegationServiceAccountEmail,
+        @OutputCustomType.Parameter("noteReference") String noteReference,
+        @OutputCustomType.Parameter("publicKeys") @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;

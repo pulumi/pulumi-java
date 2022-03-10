@@ -48,16 +48,16 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
      */
     private final @Nullable String syncWaitSecs;
 
-    @OutputCustomType.Constructor({"gcpServiceAccountEmail","httpsProxy","policyDir","secretType","syncBranch","syncRepo","syncRev","syncWaitSecs"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementConfigSyncGit(
-        @Nullable String gcpServiceAccountEmail,
-        @Nullable String httpsProxy,
-        @Nullable String policyDir,
-        @Nullable String secretType,
-        @Nullable String syncBranch,
-        @Nullable String syncRepo,
-        @Nullable String syncRev,
-        @Nullable String syncWaitSecs) {
+        @OutputCustomType.Parameter("gcpServiceAccountEmail") @Nullable String gcpServiceAccountEmail,
+        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @OutputCustomType.Parameter("policyDir") @Nullable String policyDir,
+        @OutputCustomType.Parameter("secretType") @Nullable String secretType,
+        @OutputCustomType.Parameter("syncBranch") @Nullable String syncBranch,
+        @OutputCustomType.Parameter("syncRepo") @Nullable String syncRepo,
+        @OutputCustomType.Parameter("syncRev") @Nullable String syncRev,
+        @OutputCustomType.Parameter("syncWaitSecs") @Nullable String syncWaitSecs) {
         this.gcpServiceAccountEmail = gcpServiceAccountEmail;
         this.httpsProxy = httpsProxy;
         this.policyDir = policyDir;

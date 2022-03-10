@@ -24,10 +24,10 @@ public final class EdgeCacheServiceLogConfig {
      */
     private final @Nullable Double sampleRate;
 
-    @OutputCustomType.Constructor({"enable","sampleRate"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceLogConfig(
-        @Nullable Boolean enable,
-        @Nullable Double sampleRate) {
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

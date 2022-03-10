@@ -29,11 +29,11 @@ public final class PreventionInspectTemplateInspectConfigLimits {
      */
     private final Integer maxFindingsPerRequest;
 
-    @OutputCustomType.Constructor({"maxFindingsPerInfoTypes","maxFindingsPerItem","maxFindingsPerRequest"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigLimits(
-        @Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> maxFindingsPerInfoTypes,
-        Integer maxFindingsPerItem,
-        Integer maxFindingsPerRequest) {
+        @OutputCustomType.Parameter("maxFindingsPerInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> maxFindingsPerInfoTypes,
+        @OutputCustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
+        @OutputCustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
         this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
         this.maxFindingsPerItem = maxFindingsPerItem;
         this.maxFindingsPerRequest = maxFindingsPerRequest;

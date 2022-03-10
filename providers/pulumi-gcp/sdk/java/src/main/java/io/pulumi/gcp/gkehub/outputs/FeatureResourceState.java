@@ -15,10 +15,10 @@ public final class FeatureResourceState {
     private final @Nullable Boolean hasResources;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"hasResources","state"})
+    @OutputCustomType.Constructor
     private FeatureResourceState(
-        @Nullable Boolean hasResources,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("hasResources") @Nullable Boolean hasResources,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.hasResources = hasResources;
         this.state = state;
     }

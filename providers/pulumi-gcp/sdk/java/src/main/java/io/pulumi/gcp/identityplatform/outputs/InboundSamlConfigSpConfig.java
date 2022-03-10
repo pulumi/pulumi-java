@@ -31,11 +31,11 @@ public final class InboundSamlConfigSpConfig {
      */
     private final @Nullable String spEntityId;
 
-    @OutputCustomType.Constructor({"callbackUri","spCertificates","spEntityId"})
+    @OutputCustomType.Constructor
     private InboundSamlConfigSpConfig(
-        @Nullable String callbackUri,
-        @Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates,
-        @Nullable String spEntityId) {
+        @OutputCustomType.Parameter("callbackUri") @Nullable String callbackUri,
+        @OutputCustomType.Parameter("spCertificates") @Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates,
+        @OutputCustomType.Parameter("spEntityId") @Nullable String spEntityId) {
         this.callbackUri = callbackUri;
         this.spCertificates = spCertificates;
         this.spEntityId = spEntityId;

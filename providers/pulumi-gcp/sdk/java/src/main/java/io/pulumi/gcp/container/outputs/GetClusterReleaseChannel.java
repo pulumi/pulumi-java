@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterReleaseChannel {
     private final String channel;
 
-    @OutputCustomType.Constructor({"channel"})
-    private GetClusterReleaseChannel(String channel) {
+    @OutputCustomType.Constructor
+    private GetClusterReleaseChannel(@OutputCustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 

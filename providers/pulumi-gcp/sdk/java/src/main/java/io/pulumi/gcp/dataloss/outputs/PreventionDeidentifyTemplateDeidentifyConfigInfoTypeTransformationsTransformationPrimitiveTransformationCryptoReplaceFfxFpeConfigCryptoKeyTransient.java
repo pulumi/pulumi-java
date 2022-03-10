@@ -15,8 +15,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient(String name) {
+    @OutputCustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyTransient(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

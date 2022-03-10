@@ -24,10 +24,10 @@ public final class EnterpriseKeyAndroidSettings {
      */
     private final @Nullable List<String> allowedPackageNames;
 
-    @OutputCustomType.Constructor({"allowAllPackageNames","allowedPackageNames"})
+    @OutputCustomType.Constructor
     private EnterpriseKeyAndroidSettings(
-        @Nullable Boolean allowAllPackageNames,
-        @Nullable List<String> allowedPackageNames) {
+        @OutputCustomType.Parameter("allowAllPackageNames") @Nullable Boolean allowAllPackageNames,
+        @OutputCustomType.Parameter("allowedPackageNames") @Nullable List<String> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }

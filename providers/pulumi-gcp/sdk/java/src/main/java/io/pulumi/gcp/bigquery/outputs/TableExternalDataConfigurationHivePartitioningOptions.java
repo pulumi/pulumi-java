@@ -44,11 +44,11 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      */
     private final @Nullable String sourceUriPrefix;
 
-    @OutputCustomType.Constructor({"mode","requirePartitionFilter","sourceUriPrefix"})
+    @OutputCustomType.Constructor
     private TableExternalDataConfigurationHivePartitioningOptions(
-        @Nullable String mode,
-        @Nullable Boolean requirePartitionFilter,
-        @Nullable String sourceUriPrefix) {
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("sourceUriPrefix") @Nullable String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;

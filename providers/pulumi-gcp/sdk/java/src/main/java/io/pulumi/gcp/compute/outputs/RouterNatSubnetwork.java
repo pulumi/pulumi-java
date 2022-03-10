@@ -33,11 +33,11 @@ public final class RouterNatSubnetwork {
      */
     private final List<String> sourceIpRangesToNats;
 
-    @OutputCustomType.Constructor({"name","secondaryIpRangeNames","sourceIpRangesToNats"})
+    @OutputCustomType.Constructor
     private RouterNatSubnetwork(
-        String name,
-        @Nullable List<String> secondaryIpRangeNames,
-        List<String> sourceIpRangesToNats) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secondaryIpRangeNames") @Nullable List<String> secondaryIpRangeNames,
+        @OutputCustomType.Parameter("sourceIpRangesToNats") List<String> sourceIpRangesToNats) {
         this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNats = sourceIpRangesToNats;

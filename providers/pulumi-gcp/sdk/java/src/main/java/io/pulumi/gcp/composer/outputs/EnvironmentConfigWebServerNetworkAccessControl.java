@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class EnvironmentConfigWebServerNetworkAccessControl {
     private final @Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
-    @OutputCustomType.Constructor({"allowedIpRanges"})
-    private EnvironmentConfigWebServerNetworkAccessControl(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+    @OutputCustomType.Constructor
+    private EnvironmentConfigWebServerNetworkAccessControl(@OutputCustomType.Parameter("allowedIpRanges") @Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 

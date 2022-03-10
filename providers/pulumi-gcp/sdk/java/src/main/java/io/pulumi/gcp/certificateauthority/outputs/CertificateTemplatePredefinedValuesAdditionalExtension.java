@@ -29,11 +29,11 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"critical","objectId","value"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePredefinedValuesAdditionalExtension(
-        @Nullable Boolean critical,
-        CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId,
-        String value) {
+        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
+        @OutputCustomType.Parameter("objectId") CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId,
+        @OutputCustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

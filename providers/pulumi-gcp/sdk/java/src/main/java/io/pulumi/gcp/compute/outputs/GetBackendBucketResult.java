@@ -29,18 +29,18 @@ public final class GetBackendBucketResult {
     private final @Nullable String project;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bucketName","cdnPolicies","creationTimestamp","customResponseHeaders","description","enableCdn","id","name","project","selfLink"})
+    @OutputCustomType.Constructor
     private GetBackendBucketResult(
-        String bucketName,
-        List<GetBackendBucketCdnPolicy> cdnPolicies,
-        String creationTimestamp,
-        List<String> customResponseHeaders,
-        String description,
-        Boolean enableCdn,
-        String id,
-        String name,
-        @Nullable String project,
-        String selfLink) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("cdnPolicies") List<GetBackendBucketCdnPolicy> cdnPolicies,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bucketName = bucketName;
         this.cdnPolicies = cdnPolicies;
         this.creationTimestamp = creationTimestamp;

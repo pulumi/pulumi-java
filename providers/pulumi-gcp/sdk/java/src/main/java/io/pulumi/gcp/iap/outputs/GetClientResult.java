@@ -19,13 +19,13 @@ public final class GetClientResult {
     private final String id;
     private final String secret;
 
-    @OutputCustomType.Constructor({"brand","clientId","displayName","id","secret"})
+    @OutputCustomType.Constructor
     private GetClientResult(
-        String brand,
-        String clientId,
-        String displayName,
-        String id,
-        String secret) {
+        @OutputCustomType.Parameter("brand") String brand,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.brand = brand;
         this.clientId = clientId;
         this.displayName = displayName;

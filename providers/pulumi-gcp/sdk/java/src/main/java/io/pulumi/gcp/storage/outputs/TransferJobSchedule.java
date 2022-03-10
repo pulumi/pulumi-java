@@ -29,11 +29,11 @@ public final class TransferJobSchedule {
      */
     private final @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay;
 
-    @OutputCustomType.Constructor({"scheduleEndDate","scheduleStartDate","startTimeOfDay"})
+    @OutputCustomType.Constructor
     private TransferJobSchedule(
-        @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
-        TransferJobScheduleScheduleStartDate scheduleStartDate,
-        @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        @OutputCustomType.Parameter("scheduleEndDate") @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
+        @OutputCustomType.Parameter("scheduleStartDate") TransferJobScheduleScheduleStartDate scheduleStartDate,
+        @OutputCustomType.Parameter("startTimeOfDay") @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
         this.scheduleEndDate = scheduleEndDate;
         this.scheduleStartDate = scheduleStartDate;
         this.startTimeOfDay = startTimeOfDay;

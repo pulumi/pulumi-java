@@ -53,14 +53,14 @@ public final class JobHttpTarget {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"body","headers","httpMethod","oauthToken","oidcToken","uri"})
+    @OutputCustomType.Constructor
     private JobHttpTarget(
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String httpMethod,
-        @Nullable JobHttpTargetOauthToken oauthToken,
-        @Nullable JobHttpTargetOidcToken oidcToken,
-        String uri) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("oauthToken") @Nullable JobHttpTargetOauthToken oauthToken,
+        @OutputCustomType.Parameter("oidcToken") @Nullable JobHttpTargetOidcToken oidcToken,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;

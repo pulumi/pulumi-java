@@ -18,8 +18,8 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfig {
      */
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private ClusterNodePoolNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private ClusterNodePoolNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 

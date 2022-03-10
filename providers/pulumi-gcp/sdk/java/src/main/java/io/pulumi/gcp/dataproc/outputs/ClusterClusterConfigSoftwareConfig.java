@@ -50,12 +50,12 @@ public final class ClusterClusterConfigSoftwareConfig {
     private final @Nullable Map<String,String> overrideProperties;
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor({"imageVersion","optionalComponents","overrideProperties","properties"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigSoftwareConfig(
-        @Nullable String imageVersion,
-        @Nullable List<String> optionalComponents,
-        @Nullable Map<String,String> overrideProperties,
-        @Nullable Map<String,Object> properties) {
+        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @OutputCustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
+        @OutputCustomType.Parameter("overrideProperties") @Nullable Map<String,String> overrideProperties,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.overrideProperties = overrideProperties;

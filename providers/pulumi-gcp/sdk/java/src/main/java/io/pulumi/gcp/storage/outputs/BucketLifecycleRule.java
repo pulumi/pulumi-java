@@ -21,10 +21,10 @@ public final class BucketLifecycleRule {
      */
     private final BucketLifecycleRuleCondition condition;
 
-    @OutputCustomType.Constructor({"action","condition"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRule(
-        BucketLifecycleRuleAction action,
-        BucketLifecycleRuleCondition condition) {
+        @OutputCustomType.Parameter("action") BucketLifecycleRuleAction action,
+        @OutputCustomType.Parameter("condition") BucketLifecycleRuleCondition condition) {
         this.action = action;
         this.condition = condition;
     }

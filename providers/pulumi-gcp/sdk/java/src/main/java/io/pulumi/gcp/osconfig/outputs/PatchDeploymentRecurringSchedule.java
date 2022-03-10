@@ -67,16 +67,16 @@ public final class PatchDeploymentRecurringSchedule {
      */
     private final @Nullable PatchDeploymentRecurringScheduleWeekly weekly;
 
-    @OutputCustomType.Constructor({"endTime","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringSchedule(
-        @Nullable String endTime,
-        @Nullable String lastExecuteTime,
-        @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
-        @Nullable String nextExecuteTime,
-        @Nullable String startTime,
-        PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
-        PatchDeploymentRecurringScheduleTimeZone timeZone,
-        @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("lastExecuteTime") @Nullable String lastExecuteTime,
+        @OutputCustomType.Parameter("monthly") @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
+        @OutputCustomType.Parameter("nextExecuteTime") @Nullable String nextExecuteTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("timeOfDay") PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
+        @OutputCustomType.Parameter("timeZone") PatchDeploymentRecurringScheduleTimeZone timeZone,
+        @OutputCustomType.Parameter("weekly") @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
         this.endTime = endTime;
         this.lastExecuteTime = lastExecuteTime;
         this.monthly = monthly;

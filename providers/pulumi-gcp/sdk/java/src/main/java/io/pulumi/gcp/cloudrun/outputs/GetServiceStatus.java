@@ -18,13 +18,13 @@ public final class GetServiceStatus {
     private final Integer observedGeneration;
     private final String url;
 
-    @OutputCustomType.Constructor({"conditions","latestCreatedRevisionName","latestReadyRevisionName","observedGeneration","url"})
+    @OutputCustomType.Constructor
     private GetServiceStatus(
-        List<GetServiceStatusCondition> conditions,
-        String latestCreatedRevisionName,
-        String latestReadyRevisionName,
-        Integer observedGeneration,
-        String url) {
+        @OutputCustomType.Parameter("conditions") List<GetServiceStatusCondition> conditions,
+        @OutputCustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
+        @OutputCustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("url") String url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;

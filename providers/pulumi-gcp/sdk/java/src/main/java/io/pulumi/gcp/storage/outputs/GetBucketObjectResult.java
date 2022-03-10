@@ -85,30 +85,30 @@ public final class GetBucketObjectResult {
     private final String storageClass;
     private final Boolean temporaryHold;
 
-    @OutputCustomType.Constructor({"bucket","cacheControl","content","contentDisposition","contentEncoding","contentLanguage","contentType","crc32c","customerEncryptions","detectMd5hash","eventBasedHold","id","kmsKeyName","md5hash","mediaLink","metadata","name","outputName","selfLink","source","storageClass","temporaryHold"})
+    @OutputCustomType.Constructor
     private GetBucketObjectResult(
-        @Nullable String bucket,
-        String cacheControl,
-        String content,
-        String contentDisposition,
-        String contentEncoding,
-        String contentLanguage,
-        String contentType,
-        String crc32c,
-        List<GetBucketObjectCustomerEncryption> customerEncryptions,
-        String detectMd5hash,
-        Boolean eventBasedHold,
-        String id,
-        String kmsKeyName,
-        String md5hash,
-        String mediaLink,
-        Map<String,String> metadata,
-        @Nullable String name,
-        String outputName,
-        String selfLink,
-        String source,
-        String storageClass,
-        Boolean temporaryHold) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("cacheControl") String cacheControl,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
+        @OutputCustomType.Parameter("contentEncoding") String contentEncoding,
+        @OutputCustomType.Parameter("contentLanguage") String contentLanguage,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("crc32c") String crc32c,
+        @OutputCustomType.Parameter("customerEncryptions") List<GetBucketObjectCustomerEncryption> customerEncryptions,
+        @OutputCustomType.Parameter("detectMd5hash") String detectMd5hash,
+        @OutputCustomType.Parameter("eventBasedHold") Boolean eventBasedHold,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("md5hash") String md5hash,
+        @OutputCustomType.Parameter("mediaLink") String mediaLink,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("outputName") String outputName,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("temporaryHold") Boolean temporaryHold) {
         this.bucket = bucket;
         this.cacheControl = cacheControl;
         this.content = content;

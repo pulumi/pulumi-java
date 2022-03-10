@@ -16,12 +16,12 @@ public final class GetBucketCor {
     private final List<String> origins;
     private final List<String> responseHeaders;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","methods","origins","responseHeaders"})
+    @OutputCustomType.Constructor
     private GetBucketCor(
-        Integer maxAgeSeconds,
-        List<String> methods,
-        List<String> origins,
-        List<String> responseHeaders) {
+        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("origins") List<String> origins,
+        @OutputCustomType.Parameter("responseHeaders") List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;

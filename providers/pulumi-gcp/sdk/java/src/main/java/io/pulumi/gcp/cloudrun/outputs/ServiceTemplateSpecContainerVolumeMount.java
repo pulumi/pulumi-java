@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerVolumeMount {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"mountPath","name"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerVolumeMount(
-        String mountPath,
-        String name) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("name") String name) {
         this.mountPath = mountPath;
         this.name = name;
     }

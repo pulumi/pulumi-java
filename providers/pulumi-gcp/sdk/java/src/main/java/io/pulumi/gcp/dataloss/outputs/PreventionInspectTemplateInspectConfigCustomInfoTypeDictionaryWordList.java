@@ -17,8 +17,8 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      */
     private final List<String> words;
 
-    @OutputCustomType.Constructor({"words"})
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(List<String> words) {
+    @OutputCustomType.Constructor
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList(@OutputCustomType.Parameter("words") List<String> words) {
         this.words = words;
     }
 

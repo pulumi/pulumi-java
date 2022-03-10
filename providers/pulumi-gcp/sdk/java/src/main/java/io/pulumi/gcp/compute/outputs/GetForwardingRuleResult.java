@@ -43,32 +43,32 @@ public final class GetForwardingRuleResult {
     private final String subnetwork;
     private final String target;
 
-    @OutputCustomType.Constructor({"allPorts","allowGlobalAccess","backendService","creationTimestamp","description","id","ipAddress","ipProtocol","isMirroringCollector","labelFingerprint","labels","loadBalancingScheme","name","network","networkTier","portRange","ports","project","region","selfLink","serviceLabel","serviceName","subnetwork","target"})
+    @OutputCustomType.Constructor
     private GetForwardingRuleResult(
-        Boolean allPorts,
-        Boolean allowGlobalAccess,
-        String backendService,
-        String creationTimestamp,
-        String description,
-        String id,
-        String ipAddress,
-        String ipProtocol,
-        Boolean isMirroringCollector,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String loadBalancingScheme,
-        String name,
-        String network,
-        String networkTier,
-        String portRange,
-        List<String> ports,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        String serviceLabel,
-        String serviceName,
-        String subnetwork,
-        String target) {
+        @OutputCustomType.Parameter("allPorts") Boolean allPorts,
+        @OutputCustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
+        @OutputCustomType.Parameter("backendService") String backendService,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("portRange") String portRange,
+        @OutputCustomType.Parameter("ports") List<String> ports,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceLabel") String serviceLabel,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("target") String target) {
         this.allPorts = allPorts;
         this.allowGlobalAccess = allowGlobalAccess;
         this.backendService = backendService;

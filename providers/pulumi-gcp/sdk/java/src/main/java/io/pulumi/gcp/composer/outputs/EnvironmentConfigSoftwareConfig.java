@@ -20,14 +20,14 @@ public final class EnvironmentConfigSoftwareConfig {
     private final @Nullable String pythonVersion;
     private final @Nullable Integer schedulerCount;
 
-    @OutputCustomType.Constructor({"airflowConfigOverrides","envVariables","imageVersion","pypiPackages","pythonVersion","schedulerCount"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigSoftwareConfig(
-        @Nullable Map<String,String> airflowConfigOverrides,
-        @Nullable Map<String,String> envVariables,
-        @Nullable String imageVersion,
-        @Nullable Map<String,String> pypiPackages,
-        @Nullable String pythonVersion,
-        @Nullable Integer schedulerCount) {
+        @OutputCustomType.Parameter("airflowConfigOverrides") @Nullable Map<String,String> airflowConfigOverrides,
+        @OutputCustomType.Parameter("envVariables") @Nullable Map<String,String> envVariables,
+        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @OutputCustomType.Parameter("pypiPackages") @Nullable Map<String,String> pypiPackages,
+        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @OutputCustomType.Parameter("schedulerCount") @Nullable Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;

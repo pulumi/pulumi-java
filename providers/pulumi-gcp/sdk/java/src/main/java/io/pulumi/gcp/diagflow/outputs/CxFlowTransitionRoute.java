@@ -49,14 +49,14 @@ public final class CxFlowTransitionRoute {
      */
     private final @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment;
 
-    @OutputCustomType.Constructor({"condition","intent","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private CxFlowTransitionRoute(
-        @Nullable String condition,
-        @Nullable String intent,
-        @Nullable String name,
-        @Nullable String targetFlow,
-        @Nullable String targetPage,
-        @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("intent") @Nullable String intent,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetFlow") @Nullable String targetFlow,
+        @OutputCustomType.Parameter("targetPage") @Nullable String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.name = name;

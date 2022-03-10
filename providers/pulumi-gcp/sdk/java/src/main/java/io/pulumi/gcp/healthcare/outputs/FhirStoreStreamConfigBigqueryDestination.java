@@ -22,10 +22,10 @@ public final class FhirStoreStreamConfigBigqueryDestination {
      */
     private final FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig;
 
-    @OutputCustomType.Constructor({"datasetUri","schemaConfig"})
+    @OutputCustomType.Constructor
     private FhirStoreStreamConfigBigqueryDestination(
-        String datasetUri,
-        FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
+        @OutputCustomType.Parameter("datasetUri") String datasetUri,
+        @OutputCustomType.Parameter("schemaConfig") FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
         this.datasetUri = datasetUri;
         this.schemaConfig = schemaConfig;
     }

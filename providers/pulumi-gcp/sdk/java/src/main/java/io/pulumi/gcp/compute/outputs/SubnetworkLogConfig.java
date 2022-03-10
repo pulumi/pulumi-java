@@ -55,13 +55,13 @@ public final class SubnetworkLogConfig {
      */
     private final @Nullable List<String> metadataFields;
 
-    @OutputCustomType.Constructor({"aggregationInterval","filterExpr","flowSampling","metadata","metadataFields"})
+    @OutputCustomType.Constructor
     private SubnetworkLogConfig(
-        @Nullable String aggregationInterval,
-        @Nullable String filterExpr,
-        @Nullable Double flowSampling,
-        @Nullable String metadata,
-        @Nullable List<String> metadataFields) {
+        @OutputCustomType.Parameter("aggregationInterval") @Nullable String aggregationInterval,
+        @OutputCustomType.Parameter("filterExpr") @Nullable String filterExpr,
+        @OutputCustomType.Parameter("flowSampling") @Nullable Double flowSampling,
+        @OutputCustomType.Parameter("metadata") @Nullable String metadata,
+        @OutputCustomType.Parameter("metadataFields") @Nullable List<String> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.filterExpr = filterExpr;
         this.flowSampling = flowSampling;

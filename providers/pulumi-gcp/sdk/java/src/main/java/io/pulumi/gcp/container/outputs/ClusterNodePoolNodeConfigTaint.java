@@ -25,11 +25,11 @@ public final class ClusterNodePoolNodeConfigTaint {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"effect","key","value"})
+    @OutputCustomType.Constructor
     private ClusterNodePoolNodeConfigTaint(
-        String effect,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("effect") String effect,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;

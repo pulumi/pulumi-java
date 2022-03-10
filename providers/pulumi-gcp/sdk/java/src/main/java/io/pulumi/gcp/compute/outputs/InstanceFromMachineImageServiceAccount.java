@@ -15,10 +15,10 @@ public final class InstanceFromMachineImageServiceAccount {
     private final @Nullable String email;
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"email","scopes"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageServiceAccount(
-        @Nullable String email,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }

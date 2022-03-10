@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodeConfigWorkloadMetadataConfig {
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private GetClusterNodeConfigWorkloadMetadataConfig(String mode) {
+    @OutputCustomType.Constructor
+    private GetClusterNodeConfigWorkloadMetadataConfig(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

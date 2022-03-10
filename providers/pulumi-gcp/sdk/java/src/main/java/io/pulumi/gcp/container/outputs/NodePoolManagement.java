@@ -22,10 +22,10 @@ public final class NodePoolManagement {
      */
     private final @Nullable Boolean autoUpgrade;
 
-    @OutputCustomType.Constructor({"autoRepair","autoUpgrade"})
+    @OutputCustomType.Constructor
     private NodePoolManagement(
-        @Nullable Boolean autoRepair,
-        @Nullable Boolean autoUpgrade) {
+        @OutputCustomType.Parameter("autoRepair") @Nullable Boolean autoRepair,
+        @OutputCustomType.Parameter("autoUpgrade") @Nullable Boolean autoUpgrade) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
     }

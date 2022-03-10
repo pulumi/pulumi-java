@@ -25,15 +25,15 @@ public final class GetAppEngineServiceResult {
     private final String serviceId;
     private final List<GetAppEngineServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"displayName","id","moduleId","name","project","serviceId","telemetries"})
+    @OutputCustomType.Constructor
     private GetAppEngineServiceResult(
-        String displayName,
-        String id,
-        String moduleId,
-        String name,
-        @Nullable String project,
-        String serviceId,
-        List<GetAppEngineServiceTelemetry> telemetries) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("moduleId") String moduleId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("telemetries") List<GetAppEngineServiceTelemetry> telemetries) {
         this.displayName = displayName;
         this.id = id;
         this.moduleId = moduleId;

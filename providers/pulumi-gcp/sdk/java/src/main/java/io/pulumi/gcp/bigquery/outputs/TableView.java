@@ -24,10 +24,10 @@ public final class TableView {
      */
     private final @Nullable Boolean useLegacySql;
 
-    @OutputCustomType.Constructor({"query","useLegacySql"})
+    @OutputCustomType.Constructor
     private TableView(
-        String query,
-        @Nullable Boolean useLegacySql) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql) {
         this.query = query;
         this.useLegacySql = useLegacySql;
     }

@@ -25,10 +25,10 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      */
     private final @Nullable String $interface;
 
-    @OutputCustomType.Constructor({"diskSizeGb","$interface"})
+    @OutputCustomType.Constructor
     private ReservationSpecificReservationInstancePropertiesLocalSsd(
-        Integer diskSizeGb,
-        @Nullable String $interface) {
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("interface") @Nullable String $interface) {
         this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }

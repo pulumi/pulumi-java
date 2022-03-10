@@ -42,13 +42,13 @@ public final class CertificateTemplatePredefinedValues {
      */
     private final @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePredefinedValues(
-        @Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions,
-        @Nullable List<String> aiaOcspServers,
-        @Nullable CertificateTemplatePredefinedValuesCaOptions caOptions,
-        @Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage,
-        @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CertificateTemplatePredefinedValuesAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") @Nullable CertificateTemplatePredefinedValuesCaOptions caOptions,
+        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateTemplatePredefinedValuesKeyUsage keyUsage,
+        @OutputCustomType.Parameter("policyIds") @Nullable List<CertificateTemplatePredefinedValuesPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

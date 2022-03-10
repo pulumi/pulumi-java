@@ -26,10 +26,10 @@ public final class ClusterClusterConfigInitializationAction {
      */
     private final @Nullable Integer timeoutSec;
 
-    @OutputCustomType.Constructor({"script","timeoutSec"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigInitializationAction(
-        String script,
-        @Nullable Integer timeoutSec) {
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("timeoutSec") @Nullable Integer timeoutSec) {
         this.script = script;
         this.timeoutSec = timeoutSec;
     }

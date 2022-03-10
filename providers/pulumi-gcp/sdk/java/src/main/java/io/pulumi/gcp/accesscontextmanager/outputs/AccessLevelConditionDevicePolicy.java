@@ -52,14 +52,14 @@ public final class AccessLevelConditionDevicePolicy {
      */
     private final @Nullable Boolean requireScreenLock;
 
-    @OutputCustomType.Constructor({"allowedDeviceManagementLevels","allowedEncryptionStatuses","osConstraints","requireAdminApproval","requireCorpOwned","requireScreenLock"})
+    @OutputCustomType.Constructor
     private AccessLevelConditionDevicePolicy(
-        @Nullable List<String> allowedDeviceManagementLevels,
-        @Nullable List<String> allowedEncryptionStatuses,
-        @Nullable List<AccessLevelConditionDevicePolicyOsConstraint> osConstraints,
-        @Nullable Boolean requireAdminApproval,
-        @Nullable Boolean requireCorpOwned,
-        @Nullable Boolean requireScreenLock) {
+        @OutputCustomType.Parameter("allowedDeviceManagementLevels") @Nullable List<String> allowedDeviceManagementLevels,
+        @OutputCustomType.Parameter("allowedEncryptionStatuses") @Nullable List<String> allowedEncryptionStatuses,
+        @OutputCustomType.Parameter("osConstraints") @Nullable List<AccessLevelConditionDevicePolicyOsConstraint> osConstraints,
+        @OutputCustomType.Parameter("requireAdminApproval") @Nullable Boolean requireAdminApproval,
+        @OutputCustomType.Parameter("requireCorpOwned") @Nullable Boolean requireCorpOwned,
+        @OutputCustomType.Parameter("requireScreenLock") @Nullable Boolean requireScreenLock) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         this.osConstraints = osConstraints;

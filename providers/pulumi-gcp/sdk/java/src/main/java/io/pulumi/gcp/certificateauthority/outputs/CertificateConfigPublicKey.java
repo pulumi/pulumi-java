@@ -23,10 +23,10 @@ public final class CertificateConfigPublicKey {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"format","key"})
+    @OutputCustomType.Constructor
     private CertificateConfigPublicKey(
-        String format,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.format = format;
         this.key = key;
     }

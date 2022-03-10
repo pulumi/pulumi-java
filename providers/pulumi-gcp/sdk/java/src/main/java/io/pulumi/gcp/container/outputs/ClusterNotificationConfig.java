@@ -15,8 +15,8 @@ public final class ClusterNotificationConfig {
      */
     private final ClusterNotificationConfigPubsub pubsub;
 
-    @OutputCustomType.Constructor({"pubsub"})
-    private ClusterNotificationConfig(ClusterNotificationConfigPubsub pubsub) {
+    @OutputCustomType.Constructor
+    private ClusterNotificationConfig(@OutputCustomType.Parameter("pubsub") ClusterNotificationConfigPubsub pubsub) {
         this.pubsub = pubsub;
     }
 

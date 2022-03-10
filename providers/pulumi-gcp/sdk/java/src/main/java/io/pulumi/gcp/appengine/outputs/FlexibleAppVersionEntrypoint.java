@@ -15,8 +15,8 @@ public final class FlexibleAppVersionEntrypoint {
      */
     private final String shell;
 
-    @OutputCustomType.Constructor({"shell"})
-    private FlexibleAppVersionEntrypoint(String shell) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionEntrypoint(@OutputCustomType.Parameter("shell") String shell) {
         this.shell = shell;
     }
 

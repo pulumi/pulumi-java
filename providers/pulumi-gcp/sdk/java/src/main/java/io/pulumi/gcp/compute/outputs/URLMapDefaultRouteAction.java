@@ -76,15 +76,15 @@ public final class URLMapDefaultRouteAction {
      */
     private final @Nullable List<URLMapDefaultRouteActionWeightedBackendService> weightedBackendServices;
 
-    @OutputCustomType.Constructor({"corsPolicy","faultInjectionPolicy","requestMirrorPolicy","retryPolicy","timeout","urlRewrite","weightedBackendServices"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteAction(
-        @Nullable URLMapDefaultRouteActionCorsPolicy corsPolicy,
-        @Nullable URLMapDefaultRouteActionFaultInjectionPolicy faultInjectionPolicy,
-        @Nullable URLMapDefaultRouteActionRequestMirrorPolicy requestMirrorPolicy,
-        @Nullable URLMapDefaultRouteActionRetryPolicy retryPolicy,
-        @Nullable URLMapDefaultRouteActionTimeout timeout,
-        @Nullable URLMapDefaultRouteActionUrlRewrite urlRewrite,
-        @Nullable List<URLMapDefaultRouteActionWeightedBackendService> weightedBackendServices) {
+        @OutputCustomType.Parameter("corsPolicy") @Nullable URLMapDefaultRouteActionCorsPolicy corsPolicy,
+        @OutputCustomType.Parameter("faultInjectionPolicy") @Nullable URLMapDefaultRouteActionFaultInjectionPolicy faultInjectionPolicy,
+        @OutputCustomType.Parameter("requestMirrorPolicy") @Nullable URLMapDefaultRouteActionRequestMirrorPolicy requestMirrorPolicy,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable URLMapDefaultRouteActionRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable URLMapDefaultRouteActionTimeout timeout,
+        @OutputCustomType.Parameter("urlRewrite") @Nullable URLMapDefaultRouteActionUrlRewrite urlRewrite,
+        @OutputCustomType.Parameter("weightedBackendServices") @Nullable List<URLMapDefaultRouteActionWeightedBackendService> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.requestMirrorPolicy = requestMirrorPolicy;

@@ -12,10 +12,10 @@ public final class GetSecretRotation {
     private final String nextRotationTime;
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private GetSecretRotation(
-        String nextRotationTime,
-        String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

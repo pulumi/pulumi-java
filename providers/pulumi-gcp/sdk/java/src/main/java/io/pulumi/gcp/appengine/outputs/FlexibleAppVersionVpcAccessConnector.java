@@ -15,8 +15,8 @@ public final class FlexibleAppVersionVpcAccessConnector {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private FlexibleAppVersionVpcAccessConnector(String name) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionVpcAccessConnector(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

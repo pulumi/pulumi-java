@@ -16,10 +16,10 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"key","name"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef(
-        String key,
-        String name) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

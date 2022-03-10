@@ -24,10 +24,10 @@ public final class DatabaseInstanceSettingsLocationPreference {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"followGaeApplication","zone"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsLocationPreference(
-        @Nullable String followGaeApplication,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("followGaeApplication") @Nullable String followGaeApplication,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }

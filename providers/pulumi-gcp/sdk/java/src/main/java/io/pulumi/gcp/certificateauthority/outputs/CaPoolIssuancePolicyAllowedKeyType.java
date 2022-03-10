@@ -25,10 +25,10 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      */
     private final @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa;
 
-    @OutputCustomType.Constructor({"ellipticCurve","rsa"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyAllowedKeyType(
-        @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
-        @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
+        @OutputCustomType.Parameter("ellipticCurve") @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
+        @OutputCustomType.Parameter("rsa") @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterResourceUsageExportConfigBigqueryDestination {
     private final String datasetId;
 
-    @OutputCustomType.Constructor({"datasetId"})
-    private GetClusterResourceUsageExportConfigBigqueryDestination(String datasetId) {
+    @OutputCustomType.Constructor
+    private GetClusterResourceUsageExportConfigBigqueryDestination(@OutputCustomType.Parameter("datasetId") String datasetId) {
         this.datasetId = datasetId;
     }
 

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterConfidentialNode {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterConfidentialNode(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterConfidentialNode(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -37,12 +37,12 @@ public final class Hl7StoreParserConfig {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"allowNullHeader","schema","segmentTerminator","version"})
+    @OutputCustomType.Constructor
     private Hl7StoreParserConfig(
-        @Nullable Boolean allowNullHeader,
-        @Nullable String schema,
-        @Nullable String segmentTerminator,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("allowNullHeader") @Nullable Boolean allowNullHeader,
+        @OutputCustomType.Parameter("schema") @Nullable String schema,
+        @OutputCustomType.Parameter("segmentTerminator") @Nullable String segmentTerminator,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.allowNullHeader = allowNullHeader;
         this.schema = schema;
         this.segmentTerminator = segmentTerminator;

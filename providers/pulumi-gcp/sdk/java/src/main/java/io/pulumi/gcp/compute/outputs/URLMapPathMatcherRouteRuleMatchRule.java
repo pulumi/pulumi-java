@@ -77,15 +77,15 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable String regexMatch;
 
-    @OutputCustomType.Constructor({"fullPathMatch","headerMatches","ignoreCase","metadataFilters","prefixMatch","queryParameterMatches","regexMatch"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRule(
-        @Nullable String fullPathMatch,
-        @Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
-        @Nullable Boolean ignoreCase,
-        @Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters,
-        @Nullable String prefixMatch,
-        @Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches,
-        @Nullable String regexMatch) {
+        @OutputCustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
+        @OutputCustomType.Parameter("headerMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
+        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @OutputCustomType.Parameter("metadataFilters") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @OutputCustomType.Parameter("queryParameterMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches,
+        @OutputCustomType.Parameter("regexMatch") @Nullable String regexMatch) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

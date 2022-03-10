@@ -32,13 +32,13 @@ public final class GetRuleResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"id","includedPermissions","name","stage","title"})
+    @OutputCustomType.Constructor
     private GetRuleResult(
-        String id,
-        List<String> includedPermissions,
-        String name,
-        String stage,
-        String title) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includedPermissions") List<String> includedPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("title") String title) {
         this.id = id;
         this.includedPermissions = includedPermissions;
         this.name = name;

@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPigJob {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobPigJob(
-        @Nullable Boolean continueOnFailure,
-        @Nullable List<String> jarFileUris,
-        @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobPigJobQueryList queryList,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPigJobQueryList queryList,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;

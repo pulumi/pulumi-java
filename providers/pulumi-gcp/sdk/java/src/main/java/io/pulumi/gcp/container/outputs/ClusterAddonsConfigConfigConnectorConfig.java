@@ -16,8 +16,8 @@ public final class ClusterAddonsConfigConfigConnectorConfig {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterAddonsConfigConfigConnectorConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterAddonsConfigConfigConnectorConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

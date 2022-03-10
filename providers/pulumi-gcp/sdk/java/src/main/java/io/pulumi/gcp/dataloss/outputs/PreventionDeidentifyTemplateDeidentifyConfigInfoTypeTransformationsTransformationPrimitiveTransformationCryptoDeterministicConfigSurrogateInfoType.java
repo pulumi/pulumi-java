@@ -17,8 +17,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoType(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

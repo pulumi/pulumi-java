@@ -55,16 +55,16 @@ public final class WorkflowTemplateJobHadoopJob {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","loggingConfig","mainClass","mainJarFileUri","properties"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobHadoopJob(
-        @Nullable List<String> archiveUris,
-        @Nullable List<String> args,
-        @Nullable List<String> fileUris,
-        @Nullable List<String> jarFileUris,
-        @Nullable WorkflowTemplateJobHadoopJobLoggingConfig loggingConfig,
-        @Nullable String mainClass,
-        @Nullable String mainJarFileUri,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobHadoopJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("mainClass") @Nullable String mainClass,
+        @OutputCustomType.Parameter("mainJarFileUri") @Nullable String mainJarFileUri,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

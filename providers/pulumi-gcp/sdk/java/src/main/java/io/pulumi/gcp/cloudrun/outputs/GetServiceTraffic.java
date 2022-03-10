@@ -15,11 +15,11 @@ public final class GetServiceTraffic {
     private final Integer percent;
     private final String revisionName;
 
-    @OutputCustomType.Constructor({"latestRevision","percent","revisionName"})
+    @OutputCustomType.Constructor
     private GetServiceTraffic(
-        Boolean latestRevision,
-        Integer percent,
-        String revisionName) {
+        @OutputCustomType.Parameter("latestRevision") Boolean latestRevision,
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revisionName") String revisionName) {
         this.latestRevision = latestRevision;
         this.percent = percent;
         this.revisionName = revisionName;

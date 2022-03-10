@@ -55,14 +55,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches;
 
-    @OutputCustomType.Constructor({"fullPathMatch","headerMatches","ignoreCase","pathTemplateMatch","prefixMatch","queryParameterMatches"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(
-        @Nullable String fullPathMatch,
-        @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
-        @Nullable Boolean ignoreCase,
-        @Nullable String pathTemplateMatch,
-        @Nullable String prefixMatch,
-        @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
+        @OutputCustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
+        @OutputCustomType.Parameter("headerMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
+        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @OutputCustomType.Parameter("pathTemplateMatch") @Nullable String pathTemplateMatch,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @OutputCustomType.Parameter("queryParameterMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

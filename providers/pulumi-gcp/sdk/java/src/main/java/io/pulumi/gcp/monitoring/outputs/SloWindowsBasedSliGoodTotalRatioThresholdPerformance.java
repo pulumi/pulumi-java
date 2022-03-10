@@ -33,10 +33,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio;
 
-    @OutputCustomType.Constructor({"distributionCut","goodTotalRatio"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformance(
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut distributionCut,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio) {
+        @OutputCustomType.Parameter("distributionCut") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut distributionCut,
+        @OutputCustomType.Parameter("goodTotalRatio") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

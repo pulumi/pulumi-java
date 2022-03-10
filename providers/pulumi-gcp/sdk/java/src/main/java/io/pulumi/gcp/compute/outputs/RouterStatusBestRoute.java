@@ -41,23 +41,23 @@ public final class RouterStatusBestRoute {
     private final String selfLink;
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"description","destRange","name","network","nextHopGateway","nextHopIlb","nextHopInstance","nextHopInstanceZone","nextHopIp","nextHopNetwork","nextHopVpnTunnel","priority","project","selfLink","tags"})
+    @OutputCustomType.Constructor
     private RouterStatusBestRoute(
-        String description,
-        String destRange,
-        String name,
-        String network,
-        String nextHopGateway,
-        String nextHopIlb,
-        String nextHopInstance,
-        String nextHopInstanceZone,
-        String nextHopIp,
-        String nextHopNetwork,
-        String nextHopVpnTunnel,
-        Integer priority,
-        String project,
-        String selfLink,
-        List<String> tags) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destRange") String destRange,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @OutputCustomType.Parameter("nextHopInstanceZone") String nextHopInstanceZone,
+        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
+        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.description = description;
         this.destRange = destRange;
         this.name = name;

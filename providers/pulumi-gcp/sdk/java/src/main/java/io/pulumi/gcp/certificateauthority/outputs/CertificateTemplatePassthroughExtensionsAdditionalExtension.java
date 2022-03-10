@@ -16,8 +16,8 @@ public final class CertificateTemplatePassthroughExtensionsAdditionalExtension {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateTemplatePassthroughExtensionsAdditionalExtension(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateTemplatePassthroughExtensionsAdditionalExtension(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

@@ -56,13 +56,13 @@ public final class QueueRetryConfig {
      */
     private final @Nullable String minBackoff;
 
-    @OutputCustomType.Constructor({"maxAttempts","maxBackoff","maxDoublings","maxRetryDuration","minBackoff"})
+    @OutputCustomType.Constructor
     private QueueRetryConfig(
-        @Nullable Integer maxAttempts,
-        @Nullable String maxBackoff,
-        @Nullable Integer maxDoublings,
-        @Nullable String maxRetryDuration,
-        @Nullable String minBackoff) {
+        @OutputCustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
+        @OutputCustomType.Parameter("maxBackoff") @Nullable String maxBackoff,
+        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoff") @Nullable String minBackoff) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;

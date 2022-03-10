@@ -31,10 +31,10 @@ public final class GlobalForwardingRuleMetadataFilter {
      */
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor({"filterLabels","filterMatchCriteria"})
+    @OutputCustomType.Constructor
     private GlobalForwardingRuleMetadataFilter(
-        List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
+        @OutputCustomType.Parameter("filterLabels") List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
+        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

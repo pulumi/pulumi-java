@@ -26,10 +26,10 @@ public final class AlertPolicyDocumentation {
      */
     private final @Nullable String mimeType;
 
-    @OutputCustomType.Constructor({"content","mimeType"})
+    @OutputCustomType.Constructor
     private AlertPolicyDocumentation(
-        @Nullable String content,
-        @Nullable String mimeType) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }

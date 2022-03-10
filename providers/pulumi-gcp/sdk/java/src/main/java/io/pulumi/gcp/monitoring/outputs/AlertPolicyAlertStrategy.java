@@ -25,10 +25,10 @@ public final class AlertPolicyAlertStrategy {
      */
     private final @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit;
 
-    @OutputCustomType.Constructor({"autoClose","notificationRateLimit"})
+    @OutputCustomType.Constructor
     private AlertPolicyAlertStrategy(
-        @Nullable String autoClose,
-        @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
+        @OutputCustomType.Parameter("autoClose") @Nullable String autoClose,
+        @OutputCustomType.Parameter("notificationRateLimit") @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
         this.autoClose = autoClose;
         this.notificationRateLimit = notificationRateLimit;
     }

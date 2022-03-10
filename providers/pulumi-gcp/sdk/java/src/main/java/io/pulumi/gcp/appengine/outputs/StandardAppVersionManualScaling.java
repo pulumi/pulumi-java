@@ -17,8 +17,8 @@ public final class StandardAppVersionManualScaling {
      */
     private final Integer instances;
 
-    @OutputCustomType.Constructor({"instances"})
-    private StandardAppVersionManualScaling(Integer instances) {
+    @OutputCustomType.Constructor
+    private StandardAppVersionManualScaling(@OutputCustomType.Parameter("instances") Integer instances) {
         this.instances = instances;
     }
 

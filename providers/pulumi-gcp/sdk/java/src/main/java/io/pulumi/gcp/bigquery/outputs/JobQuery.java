@@ -138,25 +138,25 @@ public final class JobQuery {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor({"allowLargeResults","createDisposition","defaultDataset","destinationEncryptionConfiguration","destinationTable","flattenResults","maximumBillingTier","maximumBytesBilled","parameterMode","priority","query","schemaUpdateOptions","scriptOptions","useLegacySql","useQueryCache","userDefinedFunctionResources","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobQuery(
-        @Nullable Boolean allowLargeResults,
-        @Nullable String createDisposition,
-        @Nullable JobQueryDefaultDataset defaultDataset,
-        @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @Nullable JobQueryDestinationTable destinationTable,
-        @Nullable Boolean flattenResults,
-        @Nullable Integer maximumBillingTier,
-        @Nullable String maximumBytesBilled,
-        @Nullable String parameterMode,
-        @Nullable String priority,
-        String query,
-        @Nullable List<String> schemaUpdateOptions,
-        @Nullable JobQueryScriptOptions scriptOptions,
-        @Nullable Boolean useLegacySql,
-        @Nullable Boolean useQueryCache,
-        @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
-        @Nullable String writeDisposition) {
+        @OutputCustomType.Parameter("allowLargeResults") @Nullable Boolean allowLargeResults,
+        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @OutputCustomType.Parameter("defaultDataset") @Nullable JobQueryDefaultDataset defaultDataset,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") @Nullable JobQueryDestinationTable destinationTable,
+        @OutputCustomType.Parameter("flattenResults") @Nullable Boolean flattenResults,
+        @OutputCustomType.Parameter("maximumBillingTier") @Nullable Integer maximumBillingTier,
+        @OutputCustomType.Parameter("maximumBytesBilled") @Nullable String maximumBytesBilled,
+        @OutputCustomType.Parameter("parameterMode") @Nullable String parameterMode,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
+        @OutputCustomType.Parameter("scriptOptions") @Nullable JobQueryScriptOptions scriptOptions,
+        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql,
+        @OutputCustomType.Parameter("useQueryCache") @Nullable Boolean useQueryCache,
+        @OutputCustomType.Parameter("userDefinedFunctionResources") @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
+        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.createDisposition = createDisposition;
         this.defaultDataset = defaultDataset;

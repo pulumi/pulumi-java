@@ -26,10 +26,10 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      */
     private final @Nullable Integer skipLeadingRows;
 
-    @OutputCustomType.Constructor({"range","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private TableExternalDataConfigurationGoogleSheetsOptions(
-        @Nullable String range,
-        @Nullable Integer skipLeadingRows) {
+        @OutputCustomType.Parameter("range") @Nullable String range,
+        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }

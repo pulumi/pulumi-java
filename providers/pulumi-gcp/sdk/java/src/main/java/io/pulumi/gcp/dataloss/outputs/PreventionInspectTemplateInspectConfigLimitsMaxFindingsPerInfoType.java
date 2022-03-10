@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      */
     private final Integer maxFindings;
 
-    @OutputCustomType.Constructor({"infoType","maxFindings"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType(
-        PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
-        Integer maxFindings) {
+        @OutputCustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
+        @OutputCustomType.Parameter("maxFindings") Integer maxFindings) {
         this.infoType = infoType;
         this.maxFindings = maxFindings;
     }

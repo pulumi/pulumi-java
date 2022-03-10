@@ -18,13 +18,13 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
     private final @Nullable Integer minCount;
     private final @Nullable Double storageGb;
 
-    @OutputCustomType.Constructor({"cpu","maxCount","memoryGb","minCount","storageGb"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWorkloadsConfigWorker(
-        @Nullable Double cpu,
-        @Nullable Integer maxCount,
-        @Nullable Double memoryGb,
-        @Nullable Integer minCount,
-        @Nullable Double storageGb) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("minCount") @Nullable Integer minCount,
+        @OutputCustomType.Parameter("storageGb") @Nullable Double storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;

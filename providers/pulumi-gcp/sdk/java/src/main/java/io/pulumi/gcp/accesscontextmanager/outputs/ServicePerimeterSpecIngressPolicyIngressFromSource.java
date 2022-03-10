@@ -34,10 +34,10 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSource {
      */
     private final @Nullable String resource;
 
-    @OutputCustomType.Constructor({"accessLevel","resource"})
+    @OutputCustomType.Constructor
     private ServicePerimeterSpecIngressPolicyIngressFromSource(
-        @Nullable String accessLevel,
-        @Nullable String resource) {
+        @OutputCustomType.Parameter("accessLevel") @Nullable String accessLevel,
+        @OutputCustomType.Parameter("resource") @Nullable String resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }

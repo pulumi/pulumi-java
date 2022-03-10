@@ -49,15 +49,15 @@ public final class FlexibleAppVersionLivenessCheck {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"checkInterval","failureThreshold","host","initialDelay","path","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionLivenessCheck(
-        @Nullable String checkInterval,
-        @Nullable Double failureThreshold,
-        @Nullable String host,
-        @Nullable String initialDelay,
-        String path,
-        @Nullable Double successThreshold,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("checkInterval") @Nullable String checkInterval,
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Double failureThreshold,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("initialDelay") @Nullable String initialDelay,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Double successThreshold,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
         this.host = host;

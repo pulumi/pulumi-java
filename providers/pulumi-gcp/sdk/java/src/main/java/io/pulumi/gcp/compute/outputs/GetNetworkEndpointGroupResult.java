@@ -52,19 +52,19 @@ public final class GetNetworkEndpointGroupResult {
     private final String subnetwork;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"defaultPort","description","id","name","network","networkEndpointType","project","selfLink","size","subnetwork","zone"})
+    @OutputCustomType.Constructor
     private GetNetworkEndpointGroupResult(
-        Integer defaultPort,
-        String description,
-        String id,
-        @Nullable String name,
-        String network,
-        String networkEndpointType,
-        @Nullable String project,
-        @Nullable String selfLink,
-        Integer size,
-        String subnetwork,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.defaultPort = defaultPort;
         this.description = description;
         this.id = id;

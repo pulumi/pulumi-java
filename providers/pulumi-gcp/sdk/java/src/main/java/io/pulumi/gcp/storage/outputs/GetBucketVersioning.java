@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetBucketVersioning {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetBucketVersioning(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetBucketVersioning(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -22,10 +22,10 @@ public final class GetUptimeCheckIPsResult {
      */
     private final List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps;
 
-    @OutputCustomType.Constructor({"id","uptimeCheckIps"})
+    @OutputCustomType.Constructor
     private GetUptimeCheckIPsResult(
-        String id,
-        List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("uptimeCheckIps") List<GetUptimeCheckIPsUptimeCheckIp> uptimeCheckIps) {
         this.id = id;
         this.uptimeCheckIps = uptimeCheckIps;
     }

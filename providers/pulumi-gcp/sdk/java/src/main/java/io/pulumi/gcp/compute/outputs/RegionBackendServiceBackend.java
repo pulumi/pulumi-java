@@ -129,20 +129,20 @@ public final class RegionBackendServiceBackend {
      */
     private final @Nullable Double maxUtilization;
 
-    @OutputCustomType.Constructor({"balancingMode","capacityScaler","description","failover","group","maxConnections","maxConnectionsPerEndpoint","maxConnectionsPerInstance","maxRate","maxRatePerEndpoint","maxRatePerInstance","maxUtilization"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceBackend(
-        @Nullable String balancingMode,
-        @Nullable Double capacityScaler,
-        @Nullable String description,
-        @Nullable Boolean failover,
-        String group,
-        @Nullable Integer maxConnections,
-        @Nullable Integer maxConnectionsPerEndpoint,
-        @Nullable Integer maxConnectionsPerInstance,
-        @Nullable Integer maxRate,
-        @Nullable Double maxRatePerEndpoint,
-        @Nullable Double maxRatePerInstance,
-        @Nullable Double maxUtilization) {
+        @OutputCustomType.Parameter("balancingMode") @Nullable String balancingMode,
+        @OutputCustomType.Parameter("capacityScaler") @Nullable Double capacityScaler,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("failover") @Nullable Boolean failover,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("maxConnections") @Nullable Integer maxConnections,
+        @OutputCustomType.Parameter("maxConnectionsPerEndpoint") @Nullable Integer maxConnectionsPerEndpoint,
+        @OutputCustomType.Parameter("maxConnectionsPerInstance") @Nullable Integer maxConnectionsPerInstance,
+        @OutputCustomType.Parameter("maxRate") @Nullable Integer maxRate,
+        @OutputCustomType.Parameter("maxRatePerEndpoint") @Nullable Double maxRatePerEndpoint,
+        @OutputCustomType.Parameter("maxRatePerInstance") @Nullable Double maxRatePerInstance,
+        @OutputCustomType.Parameter("maxUtilization") @Nullable Double maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;

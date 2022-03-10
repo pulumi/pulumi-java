@@ -14,10 +14,10 @@ public final class DeviceState {
     private final @Nullable String binaryData;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"binaryData","updateTime"})
+    @OutputCustomType.Constructor
     private DeviceState(
-        @Nullable String binaryData,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("binaryData") @Nullable String binaryData,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }

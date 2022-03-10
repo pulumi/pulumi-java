@@ -18,10 +18,10 @@ public final class FunctionSourceRepository {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"deployedUrl","url"})
+    @OutputCustomType.Constructor
     private FunctionSourceRepository(
-        @Nullable String deployedUrl,
-        String url) {
+        @OutputCustomType.Parameter("deployedUrl") @Nullable String deployedUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.deployedUrl = deployedUrl;
         this.url = url;
     }

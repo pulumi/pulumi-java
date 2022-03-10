@@ -54,15 +54,15 @@ public final class TagTemplateField {
      */
     private final TagTemplateFieldType type;
 
-    @OutputCustomType.Constructor({"description","displayName","fieldId","isRequired","name","order","type"})
+    @OutputCustomType.Constructor
     private TagTemplateField(
-        @Nullable String description,
-        @Nullable String displayName,
-        String fieldId,
-        @Nullable Boolean isRequired,
-        @Nullable String name,
-        @Nullable Integer order,
-        TagTemplateFieldType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("fieldId") String fieldId,
+        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("type") TagTemplateFieldType type) {
         this.description = description;
         this.displayName = displayName;
         this.fieldId = fieldId;

@@ -25,11 +25,11 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjec
      */
     private final String object;
 
-    @OutputCustomType.Constructor({"bucket","generationNumber","object"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject(
-        String bucket,
-        String generationNumber,
-        String object) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("generationNumber") String generationNumber,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generationNumber = generationNumber;
         this.object = object;

@@ -131,16 +131,16 @@ public final class AlertPolicyConditionConditionThreshold {
      */
     private final @Nullable AlertPolicyConditionConditionThresholdTrigger trigger;
 
-    @OutputCustomType.Constructor({"aggregations","comparison","denominatorAggregations","denominatorFilter","duration","filter","thresholdValue","trigger"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionThreshold(
-        @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
-        String comparison,
-        @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
-        @Nullable String denominatorFilter,
-        String duration,
-        @Nullable String filter,
-        @Nullable Double thresholdValue,
-        @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
+        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("denominatorAggregations") @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
+        @OutputCustomType.Parameter("denominatorFilter") @Nullable String denominatorFilter,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("thresholdValue") @Nullable Double thresholdValue,
+        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
         this.aggregations = aggregations;
         this.comparison = comparison;
         this.denominatorAggregations = denominatorAggregations;

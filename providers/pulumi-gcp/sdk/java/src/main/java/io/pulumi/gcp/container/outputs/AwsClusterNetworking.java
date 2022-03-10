@@ -26,11 +26,11 @@ public final class AwsClusterNetworking {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"podAddressCidrBlocks","serviceAddressCidrBlocks","vpcId"})
+    @OutputCustomType.Constructor
     private AwsClusterNetworking(
-        List<String> podAddressCidrBlocks,
-        List<String> serviceAddressCidrBlocks,
-        String vpcId) {
+        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.vpcId = vpcId;

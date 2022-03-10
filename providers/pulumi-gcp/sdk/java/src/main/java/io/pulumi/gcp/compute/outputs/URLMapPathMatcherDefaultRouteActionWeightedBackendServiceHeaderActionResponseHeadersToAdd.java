@@ -29,11 +29,11 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      */
     private final @Nullable Boolean replace;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","replace"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAdd(
-        @Nullable String headerName,
-        @Nullable String headerValue,
-        @Nullable Boolean replace) {
+        @OutputCustomType.Parameter("headerName") @Nullable String headerName,
+        @OutputCustomType.Parameter("headerValue") @Nullable String headerValue,
+        @OutputCustomType.Parameter("replace") @Nullable Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;

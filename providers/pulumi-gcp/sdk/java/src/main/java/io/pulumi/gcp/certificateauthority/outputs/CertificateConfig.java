@@ -30,11 +30,11 @@ public final class CertificateConfig {
      */
     private final CertificateConfigX509Config x509Config;
 
-    @OutputCustomType.Constructor({"publicKey","subjectConfig","x509Config"})
+    @OutputCustomType.Constructor
     private CertificateConfig(
-        CertificateConfigPublicKey publicKey,
-        CertificateConfigSubjectConfig subjectConfig,
-        CertificateConfigX509Config x509Config) {
+        @OutputCustomType.Parameter("publicKey") CertificateConfigPublicKey publicKey,
+        @OutputCustomType.Parameter("subjectConfig") CertificateConfigSubjectConfig subjectConfig,
+        @OutputCustomType.Parameter("x509Config") CertificateConfigX509Config x509Config) {
         this.publicKey = publicKey;
         this.subjectConfig = subjectConfig;
         this.x509Config = x509Config;

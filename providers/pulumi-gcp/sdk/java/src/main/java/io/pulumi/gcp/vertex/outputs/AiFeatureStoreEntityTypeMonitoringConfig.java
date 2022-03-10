@@ -18,8 +18,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
      */
     private final @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis;
 
-    @OutputCustomType.Constructor({"snapshotAnalysis"})
-    private AiFeatureStoreEntityTypeMonitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
+    @OutputCustomType.Constructor
+    private AiFeatureStoreEntityTypeMonitoringConfig(@OutputCustomType.Parameter("snapshotAnalysis") @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
         this.snapshotAnalysis = snapshotAnalysis;
     }
 

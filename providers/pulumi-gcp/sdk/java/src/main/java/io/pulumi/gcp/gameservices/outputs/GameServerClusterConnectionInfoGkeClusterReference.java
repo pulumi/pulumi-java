@@ -22,8 +22,8 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor({"cluster"})
-    private GameServerClusterConnectionInfoGkeClusterReference(String cluster) {
+    @OutputCustomType.Constructor
+    private GameServerClusterConnectionInfoGkeClusterReference(@OutputCustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 

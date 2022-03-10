@@ -22,12 +22,12 @@ public final class GetActiveFolderResult {
     private final String name;
     private final String parent;
 
-    @OutputCustomType.Constructor({"displayName","id","name","parent"})
+    @OutputCustomType.Constructor
     private GetActiveFolderResult(
-        String displayName,
-        String id,
-        String name,
-        String parent) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

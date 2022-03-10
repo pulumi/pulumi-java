@@ -16,8 +16,8 @@ public final class CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKey
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateTemplatePredefinedValuesKeyUsageUnknownExtendedKeyUsage(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

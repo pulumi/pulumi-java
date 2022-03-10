@@ -35,12 +35,12 @@ public final class AzureNodePoolConfig {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"rootVolume","sshConfig","tags","vmSize"})
+    @OutputCustomType.Constructor
     private AzureNodePoolConfig(
-        @Nullable AzureNodePoolConfigRootVolume rootVolume,
-        AzureNodePoolConfigSshConfig sshConfig,
-        @Nullable Map<String,String> tags,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("rootVolume") @Nullable AzureNodePoolConfigRootVolume rootVolume,
+        @OutputCustomType.Parameter("sshConfig") AzureNodePoolConfigSshConfig sshConfig,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.rootVolume = rootVolume;
         this.sshConfig = sshConfig;
         this.tags = tags;

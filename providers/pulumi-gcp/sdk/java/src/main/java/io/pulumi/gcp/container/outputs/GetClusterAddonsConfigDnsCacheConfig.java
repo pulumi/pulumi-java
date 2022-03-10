@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigDnsCacheConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterAddonsConfigDnsCacheConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigDnsCacheConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

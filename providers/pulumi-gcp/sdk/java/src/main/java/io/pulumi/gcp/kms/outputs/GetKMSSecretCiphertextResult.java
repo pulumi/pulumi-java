@@ -22,12 +22,12 @@ public final class GetKMSSecretCiphertextResult {
     private final String id;
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"ciphertext","cryptoKey","id","plaintext"})
+    @OutputCustomType.Constructor
     private GetKMSSecretCiphertextResult(
-        String ciphertext,
-        String cryptoKey,
-        String id,
-        String plaintext) {
+        @OutputCustomType.Parameter("ciphertext") String ciphertext,
+        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;
         this.id = id;

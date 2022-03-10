@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class JobHadoopConfigLoggingConfig {
     private final Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor({"driverLogLevels"})
-    private JobHadoopConfigLoggingConfig(Map<String,String> driverLogLevels) {
+    @OutputCustomType.Constructor
+    private JobHadoopConfigLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

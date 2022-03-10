@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget;
 
-    @OutputCustomType.Constructor({"namespacedGkeDeploymentTarget"})
-    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig(@OutputCustomType.Parameter("namespacedGkeDeploymentTarget") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget namespacedGkeDeploymentTarget) {
         this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
     }
 

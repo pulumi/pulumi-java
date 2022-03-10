@@ -56,14 +56,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable List<String> includedQueryParameters;
 
-    @OutputCustomType.Constructor({"excludeHost","excludeQueryString","excludedQueryParameters","includeProtocol","includedHeaderNames","includedQueryParameters"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(
-        @Nullable Boolean excludeHost,
-        @Nullable Boolean excludeQueryString,
-        @Nullable List<String> excludedQueryParameters,
-        @Nullable Boolean includeProtocol,
-        @Nullable List<String> includedHeaderNames,
-        @Nullable List<String> includedQueryParameters) {
+        @OutputCustomType.Parameter("excludeHost") @Nullable Boolean excludeHost,
+        @OutputCustomType.Parameter("excludeQueryString") @Nullable Boolean excludeQueryString,
+        @OutputCustomType.Parameter("excludedQueryParameters") @Nullable List<String> excludedQueryParameters,
+        @OutputCustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @OutputCustomType.Parameter("includedHeaderNames") @Nullable List<String> includedHeaderNames,
+        @OutputCustomType.Parameter("includedQueryParameters") @Nullable List<String> includedQueryParameters) {
         this.excludeHost = excludeHost;
         this.excludeQueryString = excludeQueryString;
         this.excludedQueryParameters = excludedQueryParameters;

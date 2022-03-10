@@ -22,10 +22,10 @@ public final class InstanceGroupManagerStatefulDisk {
      */
     private final String deviceName;
 
-    @OutputCustomType.Constructor({"deleteRule","deviceName"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatefulDisk(
-        @Nullable String deleteRule,
-        String deviceName) {
+        @OutputCustomType.Parameter("deleteRule") @Nullable String deleteRule,
+        @OutputCustomType.Parameter("deviceName") String deviceName) {
         this.deleteRule = deleteRule;
         this.deviceName = deviceName;
     }

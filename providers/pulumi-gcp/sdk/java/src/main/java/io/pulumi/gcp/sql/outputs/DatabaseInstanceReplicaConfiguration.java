@@ -75,19 +75,19 @@ public final class DatabaseInstanceReplicaConfiguration {
      */
     private final @Nullable Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","failoverTarget","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceReplicaConfiguration(
-        @Nullable String caCertificate,
-        @Nullable String clientCertificate,
-        @Nullable String clientKey,
-        @Nullable Integer connectRetryInterval,
-        @Nullable String dumpFilePath,
-        @Nullable Boolean failoverTarget,
-        @Nullable Integer masterHeartbeatPeriod,
-        @Nullable String password,
-        @Nullable String sslCipher,
-        @Nullable String username,
-        @Nullable Boolean verifyServerCertificate) {
+        @OutputCustomType.Parameter("caCertificate") @Nullable String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") @Nullable String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") @Nullable String clientKey,
+        @OutputCustomType.Parameter("connectRetryInterval") @Nullable Integer connectRetryInterval,
+        @OutputCustomType.Parameter("dumpFilePath") @Nullable String dumpFilePath,
+        @OutputCustomType.Parameter("failoverTarget") @Nullable Boolean failoverTarget,
+        @OutputCustomType.Parameter("masterHeartbeatPeriod") @Nullable Integer masterHeartbeatPeriod,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("sslCipher") @Nullable String sslCipher,
+        @OutputCustomType.Parameter("username") @Nullable String username,
+        @OutputCustomType.Parameter("verifyServerCertificate") @Nullable Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

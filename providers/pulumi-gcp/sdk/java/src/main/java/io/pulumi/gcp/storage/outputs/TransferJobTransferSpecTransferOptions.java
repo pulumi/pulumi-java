@@ -28,11 +28,11 @@ public final class TransferJobTransferSpecTransferOptions {
      */
     private final @Nullable Boolean overwriteObjectsAlreadyExistingInSink;
 
-    @OutputCustomType.Constructor({"deleteObjectsFromSourceAfterTransfer","deleteObjectsUniqueInSink","overwriteObjectsAlreadyExistingInSink"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecTransferOptions(
-        @Nullable Boolean deleteObjectsFromSourceAfterTransfer,
-        @Nullable Boolean deleteObjectsUniqueInSink,
-        @Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
+        @OutputCustomType.Parameter("deleteObjectsFromSourceAfterTransfer") @Nullable Boolean deleteObjectsFromSourceAfterTransfer,
+        @OutputCustomType.Parameter("deleteObjectsUniqueInSink") @Nullable Boolean deleteObjectsUniqueInSink,
+        @OutputCustomType.Parameter("overwriteObjectsAlreadyExistingInSink") @Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;

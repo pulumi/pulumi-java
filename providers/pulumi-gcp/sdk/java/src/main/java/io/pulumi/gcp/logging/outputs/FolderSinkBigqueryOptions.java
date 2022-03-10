@@ -18,8 +18,8 @@ public final class FolderSinkBigqueryOptions {
      */
     private final Boolean usePartitionedTables;
 
-    @OutputCustomType.Constructor({"usePartitionedTables"})
-    private FolderSinkBigqueryOptions(Boolean usePartitionedTables) {
+    @OutputCustomType.Constructor
+    private FolderSinkBigqueryOptions(@OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables) {
         this.usePartitionedTables = usePartitionedTables;
     }
 

@@ -23,15 +23,15 @@ public final class GetRegistryImageResult {
     private final @Nullable String region;
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"digest","id","imageUrl","name","project","region","tag"})
+    @OutputCustomType.Constructor
     private GetRegistryImageResult(
-        @Nullable String digest,
-        String id,
-        String imageUrl,
-        String name,
-        String project,
-        @Nullable String region,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageUrl") String imageUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.digest = digest;
         this.id = id;
         this.imageUrl = imageUrl;

@@ -58,19 +58,19 @@ public final class GetSSLPolicyResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","id","minTlsVersion","name","profile","project","selfLink"})
+    @OutputCustomType.Constructor
     private GetSSLPolicyResult(
-        String creationTimestamp,
-        List<String> customFeatures,
-        String description,
-        List<String> enabledFeatures,
-        String fingerprint,
-        String id,
-        String minTlsVersion,
-        String name,
-        String profile,
-        @Nullable String project,
-        String selfLink) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;

@@ -29,10 +29,10 @@ public final class ServicePerimeterStatusEgressPolicyEgressTo {
      */
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor({"operations","resources"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusEgressPolicyEgressTo(
-        @Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperation> operations,
-        @Nullable List<String> resources) {
+        @OutputCustomType.Parameter("operations") @Nullable List<ServicePerimeterStatusEgressPolicyEgressToOperation> operations,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
         this.operations = operations;
         this.resources = resources;
     }

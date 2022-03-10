@@ -57,14 +57,14 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      */
     private final @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType;
 
-    @OutputCustomType.Constructor({"dictionary","exclusionType","infoType","likelihood","regex","storedType"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigCustomInfoType(
-        @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary,
-        @Nullable String exclusionType,
-        PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType,
-        @Nullable String likelihood,
-        @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex,
-        @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
+        @OutputCustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary,
+        @OutputCustomType.Parameter("exclusionType") @Nullable String exclusionType,
+        @OutputCustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType,
+        @OutputCustomType.Parameter("likelihood") @Nullable String likelihood,
+        @OutputCustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex,
+        @OutputCustomType.Parameter("storedType") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;
         this.infoType = infoType;

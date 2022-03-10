@@ -14,10 +14,10 @@ public final class GetOrganizationPolicyListPolicyAllow {
     private final Boolean all;
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"all","values"})
+    @OutputCustomType.Constructor
     private GetOrganizationPolicyListPolicyAllow(
-        Boolean all,
-        List<String> values) {
+        @OutputCustomType.Parameter("all") Boolean all,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.all = all;
         this.values = values;
     }

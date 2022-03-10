@@ -47,14 +47,14 @@ public final class JobHiveConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","properties","queryFileUri","queryLists","scriptVariables"})
+    @OutputCustomType.Constructor
     private JobHiveConfig(
-        @Nullable Boolean continueOnFailure,
-        @Nullable List<String> jarFileUris,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable List<String> queryLists,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;

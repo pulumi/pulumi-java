@@ -51,11 +51,11 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
      */
     private final @Nullable List<String> retryConditions;
 
-    @OutputCustomType.Constructor({"numRetries","perTryTimeout","retryConditions"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy(
-        Integer numRetries,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
-        @Nullable List<String> retryConditions) {
+        @OutputCustomType.Parameter("numRetries") Integer numRetries,
+        @OutputCustomType.Parameter("perTryTimeout") @Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
+        @OutputCustomType.Parameter("retryConditions") @Nullable List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;

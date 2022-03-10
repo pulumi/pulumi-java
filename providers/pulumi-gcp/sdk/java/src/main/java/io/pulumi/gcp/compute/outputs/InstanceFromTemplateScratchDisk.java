@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class InstanceFromTemplateScratchDisk {
     private final String $interface;
 
-    @OutputCustomType.Constructor({"$interface"})
-    private InstanceFromTemplateScratchDisk(String $interface) {
+    @OutputCustomType.Constructor
+    private InstanceFromTemplateScratchDisk(@OutputCustomType.Parameter("interface") String $interface) {
         this.$interface = $interface;
     }
 

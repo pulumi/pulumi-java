@@ -23,10 +23,10 @@ public final class TableRangePartitioning {
      */
     private final TableRangePartitioningRange range;
 
-    @OutputCustomType.Constructor({"field","range"})
+    @OutputCustomType.Constructor
     private TableRangePartitioning(
-        String field,
-        TableRangePartitioningRange range) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("range") TableRangePartitioningRange range) {
         this.field = field;
         this.range = range;
     }

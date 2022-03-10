@@ -34,11 +34,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      */
     private final PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity;
 
-    @OutputCustomType.Constructor({"hotwordRegex","likelihoodAdjustment","proximity"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
+        @OutputCustomType.Parameter("hotwordRegex") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
+        @OutputCustomType.Parameter("likelihoodAdjustment") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
+        @OutputCustomType.Parameter("proximity") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;

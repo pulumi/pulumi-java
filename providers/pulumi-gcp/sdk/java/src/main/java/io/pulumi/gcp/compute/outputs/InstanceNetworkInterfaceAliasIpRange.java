@@ -27,10 +27,10 @@ public final class InstanceNetworkInterfaceAliasIpRange {
      */
     private final @Nullable String subnetworkRangeName;
 
-    @OutputCustomType.Constructor({"ipCidrRange","subnetworkRangeName"})
+    @OutputCustomType.Constructor
     private InstanceNetworkInterfaceAliasIpRange(
-        String ipCidrRange,
-        @Nullable String subnetworkRangeName) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("subnetworkRangeName") @Nullable String subnetworkRangeName) {
         this.ipCidrRange = ipCidrRange;
         this.subnetworkRangeName = subnetworkRangeName;
     }

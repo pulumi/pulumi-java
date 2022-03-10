@@ -46,13 +46,13 @@ public final class InstanceTemplateScheduling {
      */
     private final @Nullable Boolean preemptible;
 
-    @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
+    @OutputCustomType.Constructor
     private InstanceTemplateScheduling(
-        @Nullable Boolean automaticRestart,
-        @Nullable Integer minNodeCpus,
-        @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities,
-        @Nullable String onHostMaintenance,
-        @Nullable Boolean preemptible) {
+        @OutputCustomType.Parameter("automaticRestart") @Nullable Boolean automaticRestart,
+        @OutputCustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;

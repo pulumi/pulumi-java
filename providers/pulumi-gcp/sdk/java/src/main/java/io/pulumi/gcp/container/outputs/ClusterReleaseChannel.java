@@ -20,8 +20,8 @@ public final class ClusterReleaseChannel {
      */
     private final String channel;
 
-    @OutputCustomType.Constructor({"channel"})
-    private ClusterReleaseChannel(String channel) {
+    @OutputCustomType.Constructor
+    private ClusterReleaseChannel(@OutputCustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 

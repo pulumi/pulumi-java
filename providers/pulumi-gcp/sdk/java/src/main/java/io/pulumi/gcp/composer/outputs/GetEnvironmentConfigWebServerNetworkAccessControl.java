@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetEnvironmentConfigWebServerNetworkAccessControl {
     private final List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
-    @OutputCustomType.Constructor({"allowedIpRanges"})
-    private GetEnvironmentConfigWebServerNetworkAccessControl(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+    @OutputCustomType.Constructor
+    private GetEnvironmentConfigWebServerNetworkAccessControl(@OutputCustomType.Parameter("allowedIpRanges") List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 

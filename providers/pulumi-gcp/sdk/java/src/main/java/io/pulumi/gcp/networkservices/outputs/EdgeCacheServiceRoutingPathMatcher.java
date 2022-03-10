@@ -30,11 +30,11 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      */
     private final List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor({"description","name","routeRules"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcher(
-        @Nullable String description,
-        String name,
-        List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routeRules") List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
         this.description = description;
         this.name = name;
         this.routeRules = routeRules;

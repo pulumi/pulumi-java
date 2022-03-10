@@ -53,18 +53,18 @@ public final class GetInstanceGroupResult {
     private final Integer size;
     private final String zone;
 
-    @OutputCustomType.Constructor({"description","id","instances","name","namedPorts","network","project","selfLink","size","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceGroupResult(
-        String description,
-        String id,
-        List<String> instances,
-        @Nullable String name,
-        List<GetInstanceGroupNamedPort> namedPorts,
-        String network,
-        String project,
-        String selfLink,
-        Integer size,
-        String zone) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namedPorts") List<GetInstanceGroupNamedPort> namedPorts,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.description = description;
         this.id = id;
         this.instances = instances;

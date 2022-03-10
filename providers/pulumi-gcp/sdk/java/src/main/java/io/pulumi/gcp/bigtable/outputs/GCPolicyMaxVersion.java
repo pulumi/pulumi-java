@@ -15,8 +15,8 @@ public final class GCPolicyMaxVersion {
      */
     private final Integer number;
 
-    @OutputCustomType.Constructor({"number"})
-    private GCPolicyMaxVersion(Integer number) {
+    @OutputCustomType.Constructor
+    private GCPolicyMaxVersion(@OutputCustomType.Parameter("number") Integer number) {
         this.number = number;
     }
 

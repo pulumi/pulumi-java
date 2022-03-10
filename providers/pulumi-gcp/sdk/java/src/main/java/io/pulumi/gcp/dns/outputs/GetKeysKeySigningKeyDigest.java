@@ -22,10 +22,10 @@ public final class GetKeysKeySigningKeyDigest {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"digest","type"})
+    @OutputCustomType.Constructor
     private GetKeysKeySigningKeyDigest(
-        @Nullable String digest,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.digest = digest;
         this.type = type;
     }

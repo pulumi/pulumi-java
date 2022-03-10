@@ -35,11 +35,11 @@ public final class CxFlowNluSettings {
      */
     private final @Nullable String modelType;
 
-    @OutputCustomType.Constructor({"classificationThreshold","modelTrainingMode","modelType"})
+    @OutputCustomType.Constructor
     private CxFlowNluSettings(
-        @Nullable Double classificationThreshold,
-        @Nullable String modelTrainingMode,
-        @Nullable String modelType) {
+        @OutputCustomType.Parameter("classificationThreshold") @Nullable Double classificationThreshold,
+        @OutputCustomType.Parameter("modelTrainingMode") @Nullable String modelTrainingMode,
+        @OutputCustomType.Parameter("modelType") @Nullable String modelType) {
         this.classificationThreshold = classificationThreshold;
         this.modelTrainingMode = modelTrainingMode;
         this.modelType = modelType;

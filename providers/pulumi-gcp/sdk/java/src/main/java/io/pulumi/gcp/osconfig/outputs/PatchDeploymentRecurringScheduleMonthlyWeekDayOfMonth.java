@@ -22,10 +22,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor({"dayOfWeek","weekOrdinal"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(
-        String dayOfWeek,
-        Integer weekOrdinal) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.weekOrdinal = weekOrdinal;
     }

@@ -21,8 +21,8 @@ public final class TopicMessageStoragePolicy {
      */
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor({"allowedPersistenceRegions"})
-    private TopicMessageStoragePolicy(List<String> allowedPersistenceRegions) {
+    @OutputCustomType.Constructor
+    private TopicMessageStoragePolicy(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 

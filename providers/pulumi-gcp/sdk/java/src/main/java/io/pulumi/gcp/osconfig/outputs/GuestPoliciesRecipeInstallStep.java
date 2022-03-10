@@ -60,15 +60,15 @@ public final class GuestPoliciesRecipeInstallStep {
      */
     private final @Nullable GuestPoliciesRecipeInstallStepScriptRun scriptRun;
 
-    @OutputCustomType.Constructor({"archiveExtraction","dpkgInstallation","fileCopy","fileExec","msiInstallation","rpmInstallation","scriptRun"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStep(
-        @Nullable GuestPoliciesRecipeInstallStepArchiveExtraction archiveExtraction,
-        @Nullable GuestPoliciesRecipeInstallStepDpkgInstallation dpkgInstallation,
-        @Nullable GuestPoliciesRecipeInstallStepFileCopy fileCopy,
-        @Nullable GuestPoliciesRecipeInstallStepFileExec fileExec,
-        @Nullable GuestPoliciesRecipeInstallStepMsiInstallation msiInstallation,
-        @Nullable GuestPoliciesRecipeInstallStepRpmInstallation rpmInstallation,
-        @Nullable GuestPoliciesRecipeInstallStepScriptRun scriptRun) {
+        @OutputCustomType.Parameter("archiveExtraction") @Nullable GuestPoliciesRecipeInstallStepArchiveExtraction archiveExtraction,
+        @OutputCustomType.Parameter("dpkgInstallation") @Nullable GuestPoliciesRecipeInstallStepDpkgInstallation dpkgInstallation,
+        @OutputCustomType.Parameter("fileCopy") @Nullable GuestPoliciesRecipeInstallStepFileCopy fileCopy,
+        @OutputCustomType.Parameter("fileExec") @Nullable GuestPoliciesRecipeInstallStepFileExec fileExec,
+        @OutputCustomType.Parameter("msiInstallation") @Nullable GuestPoliciesRecipeInstallStepMsiInstallation msiInstallation,
+        @OutputCustomType.Parameter("rpmInstallation") @Nullable GuestPoliciesRecipeInstallStepRpmInstallation rpmInstallation,
+        @OutputCustomType.Parameter("scriptRun") @Nullable GuestPoliciesRecipeInstallStepScriptRun scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;

@@ -18,8 +18,8 @@ public final class ClusterIdentityServiceConfig {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ClusterIdentityServiceConfig(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ClusterIdentityServiceConfig(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

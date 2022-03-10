@@ -29,11 +29,11 @@ public final class JobQueryScriptOptions {
      */
     private final @Nullable String statementTimeoutMs;
 
-    @OutputCustomType.Constructor({"keyResultStatement","statementByteBudget","statementTimeoutMs"})
+    @OutputCustomType.Constructor
     private JobQueryScriptOptions(
-        @Nullable String keyResultStatement,
-        @Nullable String statementByteBudget,
-        @Nullable String statementTimeoutMs) {
+        @OutputCustomType.Parameter("keyResultStatement") @Nullable String keyResultStatement,
+        @OutputCustomType.Parameter("statementByteBudget") @Nullable String statementByteBudget,
+        @OutputCustomType.Parameter("statementTimeoutMs") @Nullable String statementTimeoutMs) {
         this.keyResultStatement = keyResultStatement;
         this.statementByteBudget = statementByteBudget;
         this.statementTimeoutMs = statementTimeoutMs;

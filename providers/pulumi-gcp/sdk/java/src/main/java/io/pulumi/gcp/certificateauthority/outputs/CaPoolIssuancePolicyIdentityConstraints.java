@@ -33,11 +33,11 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      */
     private final @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression;
 
-    @OutputCustomType.Constructor({"allowSubjectAltNamesPassthrough","allowSubjectPassthrough","celExpression"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyIdentityConstraints(
-        Boolean allowSubjectAltNamesPassthrough,
-        Boolean allowSubjectPassthrough,
-        @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
+        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @OutputCustomType.Parameter("celExpression") @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;

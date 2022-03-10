@@ -97,18 +97,18 @@ public final class TableExternalDataConfiguration {
      */
     private final List<String> sourceUris;
 
-    @OutputCustomType.Constructor({"autodetect","compression","csvOptions","googleSheetsOptions","hivePartitioningOptions","ignoreUnknownValues","maxBadRecords","schema","sourceFormat","sourceUris"})
+    @OutputCustomType.Constructor
     private TableExternalDataConfiguration(
-        Boolean autodetect,
-        @Nullable String compression,
-        @Nullable TableExternalDataConfigurationCsvOptions csvOptions,
-        @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions,
-        @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions,
-        @Nullable Boolean ignoreUnknownValues,
-        @Nullable Integer maxBadRecords,
-        @Nullable String schema,
-        String sourceFormat,
-        List<String> sourceUris) {
+        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("csvOptions") @Nullable TableExternalDataConfigurationCsvOptions csvOptions,
+        @OutputCustomType.Parameter("googleSheetsOptions") @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions,
+        @OutputCustomType.Parameter("hivePartitioningOptions") @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions,
+        @OutputCustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
+        @OutputCustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
+        @OutputCustomType.Parameter("schema") @Nullable String schema,
+        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
+        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris) {
         this.autodetect = autodetect;
         this.compression = compression;
         this.csvOptions = csvOptions;

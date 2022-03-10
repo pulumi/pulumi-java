@@ -16,8 +16,8 @@ public final class CertificateConfigX509ConfigPolicyId {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateConfigX509ConfigPolicyId(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateConfigX509ConfigPolicyId(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

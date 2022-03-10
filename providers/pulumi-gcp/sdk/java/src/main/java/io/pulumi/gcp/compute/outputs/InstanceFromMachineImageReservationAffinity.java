@@ -15,10 +15,10 @@ public final class InstanceFromMachineImageReservationAffinity {
     private final @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation;
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservation","type"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageReservationAffinity(
-        @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation,
-        String type) {
+        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }

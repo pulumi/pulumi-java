@@ -33,10 +33,10 @@ public final class SloWindowsBasedSliMetricSumInRange {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor({"range","timeSeries"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliMetricSumInRange(
-        SloWindowsBasedSliMetricSumInRangeRange range,
-        String timeSeries) {
+        @OutputCustomType.Parameter("range") SloWindowsBasedSliMetricSumInRangeRange range,
+        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }

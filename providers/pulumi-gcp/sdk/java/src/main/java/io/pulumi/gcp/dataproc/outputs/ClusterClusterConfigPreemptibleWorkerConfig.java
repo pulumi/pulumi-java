@@ -27,11 +27,11 @@ public final class ClusterClusterConfigPreemptibleWorkerConfig {
      */
     private final @Nullable Integer numInstances;
 
-    @OutputCustomType.Constructor({"diskConfig","instanceNames","numInstances"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigPreemptibleWorkerConfig(
-        @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig,
-        @Nullable List<String> instanceNames,
-        @Nullable Integer numInstances) {
+        @OutputCustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfig diskConfig,
+        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances) {
         this.diskConfig = diskConfig;
         this.instanceNames = instanceNames;
         this.numInstances = numInstances;

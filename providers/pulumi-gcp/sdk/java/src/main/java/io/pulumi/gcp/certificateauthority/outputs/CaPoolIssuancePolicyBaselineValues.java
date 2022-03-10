@@ -46,13 +46,13 @@ public final class CaPoolIssuancePolicyBaselineValues {
      */
     private final @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyBaselineValues(
-        @Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions,
-        @Nullable List<String> aiaOcspServers,
-        CaPoolIssuancePolicyBaselineValuesCaOptions caOptions,
-        CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage,
-        @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<CaPoolIssuancePolicyBaselineValuesAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") CaPoolIssuancePolicyBaselineValuesCaOptions caOptions,
+        @OutputCustomType.Parameter("keyUsage") CaPoolIssuancePolicyBaselineValuesKeyUsage keyUsage,
+        @OutputCustomType.Parameter("policyIds") @Nullable List<CaPoolIssuancePolicyBaselineValuesPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

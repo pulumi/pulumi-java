@@ -28,10 +28,10 @@ public final class OccurenceAttestation {
      */
     private final List<OccurenceAttestationSignature> signatures;
 
-    @OutputCustomType.Constructor({"serializedPayload","signatures"})
+    @OutputCustomType.Constructor
     private OccurenceAttestation(
-        String serializedPayload,
-        List<OccurenceAttestationSignature> signatures) {
+        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
+        @OutputCustomType.Parameter("signatures") List<OccurenceAttestationSignature> signatures) {
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;
     }

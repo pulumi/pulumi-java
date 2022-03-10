@@ -23,11 +23,11 @@ public final class GetFoldersResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor({"folders","id","parentId"})
+    @OutputCustomType.Constructor
     private GetFoldersResult(
-        List<GetFoldersFolder> folders,
-        String id,
-        String parentId) {
+        @OutputCustomType.Parameter("folders") List<GetFoldersFolder> folders,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId) {
         this.folders = folders;
         this.id = id;
         this.parentId = parentId;

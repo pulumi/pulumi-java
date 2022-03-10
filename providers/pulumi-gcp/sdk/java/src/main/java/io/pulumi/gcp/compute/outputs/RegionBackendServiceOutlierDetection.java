@@ -97,19 +97,19 @@ public final class RegionBackendServiceOutlierDetection {
      */
     private final @Nullable Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor({"baseEjectionTime","consecutiveErrors","consecutiveGatewayFailure","enforcingConsecutiveErrors","enforcingConsecutiveGatewayFailure","enforcingSuccessRate","interval","maxEjectionPercent","successRateMinimumHosts","successRateRequestVolume","successRateStdevFactor"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceOutlierDetection(
-        @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
-        @Nullable Integer consecutiveErrors,
-        @Nullable Integer consecutiveGatewayFailure,
-        @Nullable Integer enforcingConsecutiveErrors,
-        @Nullable Integer enforcingConsecutiveGatewayFailure,
-        @Nullable Integer enforcingSuccessRate,
-        @Nullable RegionBackendServiceOutlierDetectionInterval interval,
-        @Nullable Integer maxEjectionPercent,
-        @Nullable Integer successRateMinimumHosts,
-        @Nullable Integer successRateRequestVolume,
-        @Nullable Integer successRateStdevFactor) {
+        @OutputCustomType.Parameter("baseEjectionTime") @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
+        @OutputCustomType.Parameter("consecutiveErrors") @Nullable Integer consecutiveErrors,
+        @OutputCustomType.Parameter("consecutiveGatewayFailure") @Nullable Integer consecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingConsecutiveErrors") @Nullable Integer enforcingConsecutiveErrors,
+        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") @Nullable Integer enforcingConsecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingSuccessRate") @Nullable Integer enforcingSuccessRate,
+        @OutputCustomType.Parameter("interval") @Nullable RegionBackendServiceOutlierDetectionInterval interval,
+        @OutputCustomType.Parameter("maxEjectionPercent") @Nullable Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("successRateMinimumHosts") @Nullable Integer successRateMinimumHosts,
+        @OutputCustomType.Parameter("successRateRequestVolume") @Nullable Integer successRateRequestVolume,
+        @OutputCustomType.Parameter("successRateStdevFactor") @Nullable Integer successRateStdevFactor) {
         this.baseEjectionTime = baseEjectionTime;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

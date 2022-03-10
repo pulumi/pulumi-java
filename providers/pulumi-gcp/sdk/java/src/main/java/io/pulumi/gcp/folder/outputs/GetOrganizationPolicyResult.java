@@ -28,17 +28,17 @@ public final class GetOrganizationPolicyResult {
     private final String updateTime;
     private final Integer version;
 
-    @OutputCustomType.Constructor({"booleanPolicies","constraint","etag","folder","id","listPolicies","restorePolicies","updateTime","version"})
+    @OutputCustomType.Constructor
     private GetOrganizationPolicyResult(
-        List<GetOrganizationPolicyBooleanPolicy> booleanPolicies,
-        String constraint,
-        String etag,
-        String folder,
-        String id,
-        List<GetOrganizationPolicyListPolicy> listPolicies,
-        List<GetOrganizationPolicyRestorePolicy> restorePolicies,
-        String updateTime,
-        Integer version) {
+        @OutputCustomType.Parameter("booleanPolicies") List<GetOrganizationPolicyBooleanPolicy> booleanPolicies,
+        @OutputCustomType.Parameter("constraint") String constraint,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("folder") String folder,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("listPolicies") List<GetOrganizationPolicyListPolicy> listPolicies,
+        @OutputCustomType.Parameter("restorePolicies") List<GetOrganizationPolicyRestorePolicy> restorePolicies,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.booleanPolicies = booleanPolicies;
         this.constraint = constraint;
         this.etag = etag;

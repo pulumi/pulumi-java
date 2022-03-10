@@ -34,11 +34,11 @@ public final class JobPubsubTarget {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"attributes","data","topicName"})
+    @OutputCustomType.Constructor
     private JobPubsubTarget(
-        @Nullable Map<String,String> attributes,
-        @Nullable String data,
-        String topicName) {
+        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;

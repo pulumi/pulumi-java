@@ -41,12 +41,12 @@ public final class RoutineArgument {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"argumentKind","dataType","mode","name"})
+    @OutputCustomType.Constructor
     private RoutineArgument(
-        @Nullable String argumentKind,
-        @Nullable String dataType,
-        @Nullable String mode,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("argumentKind") @Nullable String argumentKind,
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;

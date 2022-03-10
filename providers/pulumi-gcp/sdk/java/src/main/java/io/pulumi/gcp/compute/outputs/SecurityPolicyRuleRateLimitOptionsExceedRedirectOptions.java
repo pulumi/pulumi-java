@@ -14,10 +14,10 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
     private final @Nullable String target;
     private final String type;
 
-    @OutputCustomType.Constructor({"target","type"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions(
-        @Nullable String target,
-        String type) {
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.target = target;
         this.type = type;
     }

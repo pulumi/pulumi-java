@@ -64,14 +64,14 @@ public final class ServiceTemplateSpec {
      */
     private final @Nullable List<ServiceTemplateSpecVolume> volumes;
 
-    @OutputCustomType.Constructor({"containerConcurrency","containers","serviceAccountName","servingState","timeoutSeconds","volumes"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpec(
-        @Nullable Integer containerConcurrency,
-        @Nullable List<ServiceTemplateSpecContainer> containers,
-        @Nullable String serviceAccountName,
-        @Nullable String servingState,
-        @Nullable Integer timeoutSeconds,
-        @Nullable List<ServiceTemplateSpecVolume> volumes) {
+        @OutputCustomType.Parameter("containerConcurrency") @Nullable Integer containerConcurrency,
+        @OutputCustomType.Parameter("containers") @Nullable List<ServiceTemplateSpecContainer> containers,
+        @OutputCustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
+        @OutputCustomType.Parameter("servingState") @Nullable String servingState,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
+        @OutputCustomType.Parameter("volumes") @Nullable List<ServiceTemplateSpecVolume> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.serviceAccountName = serviceAccountName;

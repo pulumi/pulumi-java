@@ -15,8 +15,8 @@ public final class GetInstanceNetworkPerformanceConfig {
      */
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor({"totalEgressBandwidthTier"})
-    private GetInstanceNetworkPerformanceConfig(String totalEgressBandwidthTier) {
+    @OutputCustomType.Constructor
+    private GetInstanceNetworkPerformanceConfig(@OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 

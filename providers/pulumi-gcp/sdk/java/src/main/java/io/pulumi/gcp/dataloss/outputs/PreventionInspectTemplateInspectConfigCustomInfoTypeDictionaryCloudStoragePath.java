@@ -15,8 +15,8 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(String path) {
+    @OutputCustomType.Constructor
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath(@OutputCustomType.Parameter("path") String path) {
         this.path = path;
     }
 

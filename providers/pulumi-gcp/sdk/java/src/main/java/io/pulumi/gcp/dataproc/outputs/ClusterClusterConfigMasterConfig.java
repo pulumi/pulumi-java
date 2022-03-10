@@ -54,15 +54,15 @@ public final class ClusterClusterConfigMasterConfig {
      */
     private final @Nullable Integer numInstances;
 
-    @OutputCustomType.Constructor({"accelerators","diskConfig","imageUri","instanceNames","machineType","minCpuPlatform","numInstances"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigMasterConfig(
-        @Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators,
-        @Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig,
-        @Nullable String imageUri,
-        @Nullable List<String> instanceNames,
-        @Nullable String machineType,
-        @Nullable String minCpuPlatform,
-        @Nullable Integer numInstances) {
+        @OutputCustomType.Parameter("accelerators") @Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators,
+        @OutputCustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig,
+        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
+        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;

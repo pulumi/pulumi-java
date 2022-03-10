@@ -24,10 +24,10 @@ public final class UptimeCheckConfigContentMatcher {
      */
     private final @Nullable String matcher;
 
-    @OutputCustomType.Constructor({"content","matcher"})
+    @OutputCustomType.Constructor
     private UptimeCheckConfigContentMatcher(
-        String content,
-        @Nullable String matcher) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("matcher") @Nullable String matcher) {
         this.content = content;
         this.matcher = matcher;
     }

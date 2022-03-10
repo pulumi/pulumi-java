@@ -17,8 +17,8 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      */
     private final @Nullable List<String> realms;
 
-    @OutputCustomType.Constructor({"realms"})
-    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(@Nullable List<String> realms) {
+    @OutputCustomType.Constructor
+    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(@OutputCustomType.Parameter("realms") @Nullable List<String> realms) {
         this.realms = realms;
     }
 

@@ -31,11 +31,11 @@ public final class ResourcePolicySnapshotSchedulePolicy {
      */
     private final @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties;
 
-    @OutputCustomType.Constructor({"retentionPolicy","schedule","snapshotProperties"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicy(
-        @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy,
-        ResourcePolicySnapshotSchedulePolicySchedule schedule,
-        @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicy retentionPolicy,
+        @OutputCustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicySchedule schedule,
+        @OutputCustomType.Parameter("snapshotProperties") @Nullable ResourcePolicySnapshotSchedulePolicySnapshotProperties snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
         this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;

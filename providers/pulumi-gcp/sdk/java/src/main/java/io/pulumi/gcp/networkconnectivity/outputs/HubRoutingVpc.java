@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class HubRoutingVpc {
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"uri"})
-    private HubRoutingVpc(@Nullable String uri) {
+    @OutputCustomType.Constructor
+    private HubRoutingVpc(@OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.uri = uri;
     }
 

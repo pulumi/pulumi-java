@@ -19,8 +19,8 @@ public final class ManagedZoneForwardingConfig {
      */
     private final List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers;
 
-    @OutputCustomType.Constructor({"targetNameServers"})
-    private ManagedZoneForwardingConfig(List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
+    @OutputCustomType.Constructor
+    private ManagedZoneForwardingConfig(@OutputCustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
         this.targetNameServers = targetNameServers;
     }
 

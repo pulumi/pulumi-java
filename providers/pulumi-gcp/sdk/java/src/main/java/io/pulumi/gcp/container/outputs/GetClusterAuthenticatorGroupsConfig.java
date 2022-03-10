@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAuthenticatorGroupsConfig {
     private final String securityGroup;
 
-    @OutputCustomType.Constructor({"securityGroup"})
-    private GetClusterAuthenticatorGroupsConfig(String securityGroup) {
+    @OutputCustomType.Constructor
+    private GetClusterAuthenticatorGroupsConfig(@OutputCustomType.Parameter("securityGroup") String securityGroup) {
         this.securityGroup = securityGroup;
     }
 

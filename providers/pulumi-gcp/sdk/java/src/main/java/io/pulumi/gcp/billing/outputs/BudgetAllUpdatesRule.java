@@ -45,12 +45,12 @@ public final class BudgetAllUpdatesRule {
      */
     private final @Nullable String schemaVersion;
 
-    @OutputCustomType.Constructor({"disableDefaultIamRecipients","monitoringNotificationChannels","pubsubTopic","schemaVersion"})
+    @OutputCustomType.Constructor
     private BudgetAllUpdatesRule(
-        @Nullable Boolean disableDefaultIamRecipients,
-        @Nullable List<String> monitoringNotificationChannels,
-        @Nullable String pubsubTopic,
-        @Nullable String schemaVersion) {
+        @OutputCustomType.Parameter("disableDefaultIamRecipients") @Nullable Boolean disableDefaultIamRecipients,
+        @OutputCustomType.Parameter("monitoringNotificationChannels") @Nullable List<String> monitoringNotificationChannels,
+        @OutputCustomType.Parameter("pubsubTopic") @Nullable String pubsubTopic,
+        @OutputCustomType.Parameter("schemaVersion") @Nullable String schemaVersion) {
         this.disableDefaultIamRecipients = disableDefaultIamRecipients;
         this.monitoringNotificationChannels = monitoringNotificationChannels;
         this.pubsubTopic = pubsubTopic;

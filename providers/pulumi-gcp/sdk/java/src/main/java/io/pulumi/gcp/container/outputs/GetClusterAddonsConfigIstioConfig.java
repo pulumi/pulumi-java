@@ -13,10 +13,10 @@ public final class GetClusterAddonsConfigIstioConfig {
     private final String auth;
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"auth","disabled"})
+    @OutputCustomType.Constructor
     private GetClusterAddonsConfigIstioConfig(
-        String auth,
-        Boolean disabled) {
+        @OutputCustomType.Parameter("auth") String auth,
+        @OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }

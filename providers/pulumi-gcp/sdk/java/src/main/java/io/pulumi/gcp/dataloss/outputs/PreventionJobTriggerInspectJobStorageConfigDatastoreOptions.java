@@ -24,10 +24,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      */
     private final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId;
 
-    @OutputCustomType.Constructor({"kind","partitionId"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(
-        PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
-        PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
+        @OutputCustomType.Parameter("kind") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
+        @OutputCustomType.Parameter("partitionId") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }

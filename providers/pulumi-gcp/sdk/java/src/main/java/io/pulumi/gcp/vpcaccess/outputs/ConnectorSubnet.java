@@ -23,10 +23,10 @@ public final class ConnectorSubnet {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"name","projectId"})
+    @OutputCustomType.Constructor
     private ConnectorSubnet(
-        @Nullable String name,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.name = name;
         this.projectId = projectId;
     }

@@ -27,10 +27,10 @@ public final class RegionAutoscalerAutoscalingPolicyCpuUtilization {
      */
     private final Double target;
 
-    @OutputCustomType.Constructor({"predictiveMethod","target"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyCpuUtilization(
-        @Nullable String predictiveMethod,
-        Double target) {
+        @OutputCustomType.Parameter("predictiveMethod") @Nullable String predictiveMethod,
+        @OutputCustomType.Parameter("target") Double target) {
         this.predictiveMethod = predictiveMethod;
         this.target = target;
     }

@@ -136,23 +136,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImages","dataDisk","encryptionConfig","guestAttributes","internalIpOnly","labels","machineType","metadata","network","nicType","shieldedInstanceConfig","subnet","tags","zone"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfig(
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
-        @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
-        RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
-        @Nullable Map<String,String> guestAttributes,
-        @Nullable Boolean internalIpOnly,
-        @Nullable Map<String,String> labels,
-        String machineType,
-        @Nullable Map<String,String> metadata,
-        @Nullable String network,
-        @Nullable String nicType,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @Nullable String subnet,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("acceleratorConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
+        @OutputCustomType.Parameter("containerImages") @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
+        @OutputCustomType.Parameter("dataDisk") RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("guestAttributes") @Nullable Map<String,String> guestAttributes,
+        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;

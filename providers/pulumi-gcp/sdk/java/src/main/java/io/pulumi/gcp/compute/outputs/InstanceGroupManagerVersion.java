@@ -28,11 +28,11 @@ public final class InstanceGroupManagerVersion {
      */
     private final @Nullable InstanceGroupManagerVersionTargetSize targetSize;
 
-    @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerVersion(
-        String instanceTemplate,
-        @Nullable String name,
-        @Nullable InstanceGroupManagerVersionTargetSize targetSize) {
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetSize") @Nullable InstanceGroupManagerVersionTargetSize targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;

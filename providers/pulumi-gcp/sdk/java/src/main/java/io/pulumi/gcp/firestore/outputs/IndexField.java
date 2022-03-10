@@ -31,11 +31,11 @@ public final class IndexField {
      */
     private final @Nullable String order;
 
-    @OutputCustomType.Constructor({"arrayConfig","fieldPath","order"})
+    @OutputCustomType.Constructor
     private IndexField(
-        @Nullable String arrayConfig,
-        @Nullable String fieldPath,
-        @Nullable String order) {
+        @OutputCustomType.Parameter("arrayConfig") @Nullable String arrayConfig,
+        @OutputCustomType.Parameter("fieldPath") @Nullable String fieldPath,
+        @OutputCustomType.Parameter("order") @Nullable String order) {
         this.arrayConfig = arrayConfig;
         this.fieldPath = fieldPath;
         this.order = order;

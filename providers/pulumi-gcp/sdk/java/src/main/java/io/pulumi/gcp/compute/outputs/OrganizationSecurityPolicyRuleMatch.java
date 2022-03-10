@@ -32,11 +32,11 @@ public final class OrganizationSecurityPolicyRuleMatch {
      */
     private final @Nullable String versionedExpr;
 
-    @OutputCustomType.Constructor({"config","description","versionedExpr"})
+    @OutputCustomType.Constructor
     private OrganizationSecurityPolicyRuleMatch(
-        OrganizationSecurityPolicyRuleMatchConfig config,
-        @Nullable String description,
-        @Nullable String versionedExpr) {
+        @OutputCustomType.Parameter("config") OrganizationSecurityPolicyRuleMatchConfig config,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("versionedExpr") @Nullable String versionedExpr) {
         this.config = config;
         this.description = description;
         this.versionedExpr = versionedExpr;

@@ -25,11 +25,11 @@ public final class TableRangePartitioningRange {
      */
     private final Integer start;
 
-    @OutputCustomType.Constructor({"end","interval","start"})
+    @OutputCustomType.Constructor
     private TableRangePartitioningRange(
-        Integer end,
-        Integer interval,
-        Integer start) {
+        @OutputCustomType.Parameter("end") Integer end,
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("start") Integer start) {
         this.end = end;
         this.interval = interval;
         this.start = start;

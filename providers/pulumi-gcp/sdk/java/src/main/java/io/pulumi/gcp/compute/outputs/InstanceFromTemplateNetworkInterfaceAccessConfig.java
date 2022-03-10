@@ -15,11 +15,11 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfig {
     private final @Nullable String networkTier;
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"natIp","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateNetworkInterfaceAccessConfig(
-        @Nullable String natIp,
-        @Nullable String networkTier,
-        @Nullable String publicPtrDomainName) {
+        @OutputCustomType.Parameter("natIp") @Nullable String natIp,
+        @OutputCustomType.Parameter("networkTier") @Nullable String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;

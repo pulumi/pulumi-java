@@ -18,12 +18,12 @@ public final class GetClusterClusterAutoscaling {
     private final Boolean enabled;
     private final List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
 
-    @OutputCustomType.Constructor({"autoProvisioningDefaults","autoscalingProfile","enabled","resourceLimits"})
+    @OutputCustomType.Constructor
     private GetClusterClusterAutoscaling(
-        List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults,
-        String autoscalingProfile,
-        Boolean enabled,
-        List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
+        @OutputCustomType.Parameter("autoProvisioningDefaults") List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults,
+        @OutputCustomType.Parameter("autoscalingProfile") String autoscalingProfile,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("resourceLimits") List<GetClusterClusterAutoscalingResourceLimit> resourceLimits) {
         this.autoProvisioningDefaults = autoProvisioningDefaults;
         this.autoscalingProfile = autoscalingProfile;
         this.enabled = enabled;

@@ -28,11 +28,11 @@ public final class MetricBucketOptionsExponentialBuckets {
      */
     private final @Nullable Double scale;
 
-    @OutputCustomType.Constructor({"growthFactor","numFiniteBuckets","scale"})
+    @OutputCustomType.Constructor
     private MetricBucketOptionsExponentialBuckets(
-        @Nullable Double growthFactor,
-        @Nullable Integer numFiniteBuckets,
-        @Nullable Double scale) {
+        @OutputCustomType.Parameter("growthFactor") @Nullable Double growthFactor,
+        @OutputCustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
+        @OutputCustomType.Parameter("scale") @Nullable Double scale) {
         this.growthFactor = growthFactor;
         this.numFiniteBuckets = numFiniteBuckets;
         this.scale = scale;

@@ -76,17 +76,17 @@ public final class BackendServiceCdnPolicy {
      */
     private final @Nullable Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor({"cacheKeyPolicy","cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicies","serveWhileStale","signedUrlCacheMaxAgeSec"})
+    @OutputCustomType.Constructor
     private BackendServiceCdnPolicy(
-        @Nullable BackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
-        @Nullable String cacheMode,
-        @Nullable Integer clientTtl,
-        @Nullable Integer defaultTtl,
-        @Nullable Integer maxTtl,
-        @Nullable Boolean negativeCaching,
-        @Nullable List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        @Nullable Integer serveWhileStale,
-        @Nullable Integer signedUrlCacheMaxAgeSec) {
+        @OutputCustomType.Parameter("cacheKeyPolicy") @Nullable BackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
+        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicies") @Nullable List<BackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @OutputCustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;

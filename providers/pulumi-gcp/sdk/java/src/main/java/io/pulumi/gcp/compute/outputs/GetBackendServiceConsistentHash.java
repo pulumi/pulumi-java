@@ -16,11 +16,11 @@ public final class GetBackendServiceConsistentHash {
     private final String httpHeaderName;
     private final Integer minimumRingSize;
 
-    @OutputCustomType.Constructor({"httpCookies","httpHeaderName","minimumRingSize"})
+    @OutputCustomType.Constructor
     private GetBackendServiceConsistentHash(
-        List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
-        String httpHeaderName,
-        Integer minimumRingSize) {
+        @OutputCustomType.Parameter("httpCookies") List<GetBackendServiceConsistentHashHttpCooky> httpCookies,
+        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @OutputCustomType.Parameter("minimumRingSize") Integer minimumRingSize) {
         this.httpCookies = httpCookies;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

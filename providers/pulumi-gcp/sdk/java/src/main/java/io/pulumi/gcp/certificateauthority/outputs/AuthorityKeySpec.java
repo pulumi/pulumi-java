@@ -25,10 +25,10 @@ public final class AuthorityKeySpec {
      */
     private final @Nullable String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor({"algorithm","cloudKmsKeyVersion"})
+    @OutputCustomType.Constructor
     private AuthorityKeySpec(
-        @Nullable String algorithm,
-        @Nullable String cloudKmsKeyVersion) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("cloudKmsKeyVersion") @Nullable String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }

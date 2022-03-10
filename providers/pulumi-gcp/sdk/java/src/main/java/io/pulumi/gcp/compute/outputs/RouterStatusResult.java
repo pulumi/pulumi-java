@@ -31,15 +31,15 @@ public final class RouterStatusResult {
     private final @Nullable String project;
     private final String region;
 
-    @OutputCustomType.Constructor({"bestRoutes","bestRoutesForRouters","id","name","network","project","region"})
+    @OutputCustomType.Constructor
     private RouterStatusResult(
-        List<RouterStatusBestRoute> bestRoutes,
-        List<RouterStatusBestRoutesForRouter> bestRoutesForRouters,
-        String id,
-        String name,
-        String network,
-        @Nullable String project,
-        String region) {
+        @OutputCustomType.Parameter("bestRoutes") List<RouterStatusBestRoute> bestRoutes,
+        @OutputCustomType.Parameter("bestRoutesForRouters") List<RouterStatusBestRoutesForRouter> bestRoutesForRouters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") String region) {
         this.bestRoutes = bestRoutes;
         this.bestRoutesForRouters = bestRoutesForRouters;
         this.id = id;

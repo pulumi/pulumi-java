@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource(
-        @Nullable Boolean allowInsecure,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs gcs,
-        @Nullable String localPath,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcs gcs,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;

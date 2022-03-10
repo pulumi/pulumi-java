@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      */
     private final @Nullable String gcePdKmsKeyName;
 
-    @OutputCustomType.Constructor({"gcePdKmsKeyName"})
-    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig(@Nullable String gcePdKmsKeyName) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig(@OutputCustomType.Parameter("gcePdKmsKeyName") @Nullable String gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 

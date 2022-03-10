@@ -18,8 +18,8 @@ public final class FeatureSpec {
      */
     private final @Nullable FeatureSpecMulticlusteringress multiclusteringress;
 
-    @OutputCustomType.Constructor({"multiclusteringress"})
-    private FeatureSpec(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
+    @OutputCustomType.Constructor
+    private FeatureSpec(@OutputCustomType.Parameter("multiclusteringress") @Nullable FeatureSpecMulticlusteringress multiclusteringress) {
         this.multiclusteringress = multiclusteringress;
     }
 

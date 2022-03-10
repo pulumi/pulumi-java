@@ -31,10 +31,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilter {
      */
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor({"filterLabels","filterMatchCriteria"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRuleMetadataFilter(
-        List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
+        @OutputCustomType.Parameter("filterLabels") List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel> filterLabels,
+        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

@@ -27,10 +27,10 @@ public final class TopicSchemaSettings {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor({"encoding","schema"})
+    @OutputCustomType.Constructor
     private TopicSchemaSettings(
-        @Nullable String encoding,
-        String schema) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

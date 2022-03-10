@@ -28,11 +28,11 @@ public final class NodeTemplateNodeTypeFlexibility {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpus","localSsd","memory"})
+    @OutputCustomType.Constructor
     private NodeTemplateNodeTypeFlexibility(
-        @Nullable String cpus,
-        @Nullable String localSsd,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpus") @Nullable String cpus,
+        @OutputCustomType.Parameter("localSsd") @Nullable String localSsd,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;

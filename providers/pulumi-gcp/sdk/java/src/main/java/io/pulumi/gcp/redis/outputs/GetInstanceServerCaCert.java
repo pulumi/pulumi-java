@@ -15,13 +15,13 @@ public final class GetInstanceServerCaCert {
     private final String serialNumber;
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"cert","createTime","expireTime","serialNumber","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private GetInstanceServerCaCert(
-        String cert,
-        String createTime,
-        String expireTime,
-        String serialNumber,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("cert") String cert,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.createTime = createTime;
         this.expireTime = expireTime;

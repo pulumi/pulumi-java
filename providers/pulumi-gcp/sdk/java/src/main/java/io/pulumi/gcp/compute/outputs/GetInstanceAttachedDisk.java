@@ -29,14 +29,14 @@ public final class GetInstanceAttachedDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","kmsKeySelfLink","mode","source"})
+    @OutputCustomType.Constructor
     private GetInstanceAttachedDisk(
-        String deviceName,
-        String diskEncryptionKeyRaw,
-        String diskEncryptionKeySha256,
-        String kmsKeySelfLink,
-        String mode,
-        String source) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
+        @OutputCustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
+        @OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source) {
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;

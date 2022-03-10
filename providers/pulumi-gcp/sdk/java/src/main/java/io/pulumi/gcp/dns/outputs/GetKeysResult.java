@@ -30,13 +30,13 @@ public final class GetKeysResult {
      */
     private final List<GetKeysZoneSigningKey> zoneSigningKeys;
 
-    @OutputCustomType.Constructor({"id","keySigningKeys","managedZone","project","zoneSigningKeys"})
+    @OutputCustomType.Constructor
     private GetKeysResult(
-        String id,
-        List<GetKeysKeySigningKey> keySigningKeys,
-        String managedZone,
-        String project,
-        List<GetKeysZoneSigningKey> zoneSigningKeys) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keySigningKeys") List<GetKeysKeySigningKey> keySigningKeys,
+        @OutputCustomType.Parameter("managedZone") String managedZone,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("zoneSigningKeys") List<GetKeysZoneSigningKey> zoneSigningKeys) {
         this.id = id;
         this.keySigningKeys = keySigningKeys;
         this.managedZone = managedZone;

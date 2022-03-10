@@ -27,11 +27,11 @@ public final class DatasetAccessView {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private DatasetAccessView(
-        String datasetId,
-        String projectId,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;

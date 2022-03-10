@@ -56,15 +56,15 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      */
     private final @Nullable String uploadPathRegex;
 
-    @OutputCustomType.Constructor({"applicationReadable","expiration","httpHeaders","mimeType","path","requireMatchingFile","uploadPathRegex"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionHandlerStaticFiles(
-        @Nullable Boolean applicationReadable,
-        @Nullable String expiration,
-        @Nullable Map<String,String> httpHeaders,
-        @Nullable String mimeType,
-        @Nullable String path,
-        @Nullable Boolean requireMatchingFile,
-        @Nullable String uploadPathRegex) {
+        @OutputCustomType.Parameter("applicationReadable") @Nullable Boolean applicationReadable,
+        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
+        @OutputCustomType.Parameter("httpHeaders") @Nullable Map<String,String> httpHeaders,
+        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("requireMatchingFile") @Nullable Boolean requireMatchingFile,
+        @OutputCustomType.Parameter("uploadPathRegex") @Nullable String uploadPathRegex) {
         this.applicationReadable = applicationReadable;
         this.expiration = expiration;
         this.httpHeaders = httpHeaders;

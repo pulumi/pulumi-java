@@ -61,15 +61,15 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
      */
     private final @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"description","headerAction","matchRules","origin","priority","routeAction","urlRedirect"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRule(
-        @Nullable String description,
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction,
-        List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules,
-        @Nullable String origin,
-        String priority,
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction,
-        @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headerAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction headerAction,
+        @OutputCustomType.Parameter("matchRules") List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule> matchRules,
+        @OutputCustomType.Parameter("origin") @Nullable String origin,
+        @OutputCustomType.Parameter("priority") String priority,
+        @OutputCustomType.Parameter("routeAction") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;

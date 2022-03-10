@@ -36,14 +36,14 @@ public final class GetDefaultServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"displayName","email","id","name","project","uniqueId"})
+    @OutputCustomType.Constructor
     private GetDefaultServiceAccountResult(
-        String displayName,
-        String email,
-        String id,
-        String name,
-        String project,
-        String uniqueId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;

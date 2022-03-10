@@ -34,12 +34,12 @@ public final class OrganizationSinkExclusion {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","disabled","filter","name"})
+    @OutputCustomType.Constructor
     private OrganizationSinkExclusion(
-        @Nullable String description,
-        @Nullable Boolean disabled,
-        String filter,
-        String name) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.disabled = disabled;
         this.filter = filter;

@@ -15,8 +15,8 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRefere
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(String name) {
+    @OutputCustomType.Constructor
+    private ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

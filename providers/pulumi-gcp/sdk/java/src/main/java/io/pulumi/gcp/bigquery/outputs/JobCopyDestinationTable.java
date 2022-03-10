@@ -28,11 +28,11 @@ public final class JobCopyDestinationTable {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private JobCopyDestinationTable(
-        @Nullable String datasetId,
-        @Nullable String projectId,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") @Nullable String datasetId,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;

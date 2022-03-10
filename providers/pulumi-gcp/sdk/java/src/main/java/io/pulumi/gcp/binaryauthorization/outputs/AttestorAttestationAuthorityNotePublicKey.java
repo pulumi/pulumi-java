@@ -51,12 +51,12 @@ public final class AttestorAttestationAuthorityNotePublicKey {
      */
     private final @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey;
 
-    @OutputCustomType.Constructor({"asciiArmoredPgpPublicKey","comment","id","pkixPublicKey"})
+    @OutputCustomType.Constructor
     private AttestorAttestationAuthorityNotePublicKey(
-        @Nullable String asciiArmoredPgpPublicKey,
-        @Nullable String comment,
-        @Nullable String id,
-        @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey) {
+        @OutputCustomType.Parameter("asciiArmoredPgpPublicKey") @Nullable String asciiArmoredPgpPublicKey,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("pkixPublicKey") @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.id = id;

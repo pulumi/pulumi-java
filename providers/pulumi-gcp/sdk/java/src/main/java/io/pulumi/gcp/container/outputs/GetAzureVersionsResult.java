@@ -30,13 +30,13 @@ public final class GetAzureVersionsResult {
      */
     private final List<String> validVersions;
 
-    @OutputCustomType.Constructor({"id","location","project","supportedRegions","validVersions"})
+    @OutputCustomType.Constructor
     private GetAzureVersionsResult(
-        String id,
-        @Nullable String location,
-        @Nullable String project,
-        List<String> supportedRegions,
-        List<String> validVersions) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("supportedRegions") List<String> supportedRegions,
+        @OutputCustomType.Parameter("validVersions") List<String> validVersions) {
         this.id = id;
         this.location = location;
         this.project = project;

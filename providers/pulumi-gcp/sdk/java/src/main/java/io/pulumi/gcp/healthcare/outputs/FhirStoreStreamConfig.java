@@ -30,10 +30,10 @@ public final class FhirStoreStreamConfig {
      */
     private final @Nullable List<String> resourceTypes;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","resourceTypes"})
+    @OutputCustomType.Constructor
     private FhirStoreStreamConfig(
-        FhirStoreStreamConfigBigqueryDestination bigqueryDestination,
-        @Nullable List<String> resourceTypes) {
+        @OutputCustomType.Parameter("bigqueryDestination") FhirStoreStreamConfigBigqueryDestination bigqueryDestination,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
         this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }

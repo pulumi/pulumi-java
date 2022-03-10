@@ -36,15 +36,15 @@ public final class GetRegionInstanceGroupResult {
      */
     private final Integer size;
 
-    @OutputCustomType.Constructor({"id","instances","name","project","region","selfLink","size"})
+    @OutputCustomType.Constructor
     private GetRegionInstanceGroupResult(
-        String id,
-        List<GetRegionInstanceGroupInstance> instances,
-        String name,
-        String project,
-        String region,
-        String selfLink,
-        Integer size) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<GetRegionInstanceGroupInstance> instances,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size) {
         this.id = id;
         this.instances = instances;
         this.name = name;

@@ -15,8 +15,8 @@ public final class PacketMirroringNetwork {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private PacketMirroringNetwork(String url) {
+    @OutputCustomType.Constructor
+    private PacketMirroringNetwork(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 

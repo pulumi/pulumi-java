@@ -101,23 +101,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfig {
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig;
 
-    @OutputCustomType.Constructor({"autoscalingConfig","encryptionConfig","endpointConfig","gceClusterConfig","gkeClusterConfig","initializationActions","lifecycleConfig","masterConfig","metastoreConfig","secondaryWorkerConfig","securityConfig","softwareConfig","stagingBucket","tempBucket","workerConfig"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfig(
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig,
-        @Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig,
-        @Nullable String stagingBucket,
-        @Nullable String tempBucket,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
+        @OutputCustomType.Parameter("autoscalingConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig autoscalingConfig,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("endpointConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigEndpointConfig endpointConfig,
+        @OutputCustomType.Parameter("gceClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig gceClusterConfig,
+        @OutputCustomType.Parameter("gkeClusterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig gkeClusterConfig,
+        @OutputCustomType.Parameter("initializationActions") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigInitializationAction> initializationActions,
+        @OutputCustomType.Parameter("lifecycleConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig lifecycleConfig,
+        @OutputCustomType.Parameter("masterConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMasterConfig masterConfig,
+        @OutputCustomType.Parameter("metastoreConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig metastoreConfig,
+        @OutputCustomType.Parameter("secondaryWorkerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig secondaryWorkerConfig,
+        @OutputCustomType.Parameter("securityConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfig securityConfig,
+        @OutputCustomType.Parameter("softwareConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig softwareConfig,
+        @OutputCustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
+        @OutputCustomType.Parameter("tempBucket") @Nullable String tempBucket,
+        @OutputCustomType.Parameter("workerConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfig workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.encryptionConfig = encryptionConfig;
         this.endpointConfig = endpointConfig;

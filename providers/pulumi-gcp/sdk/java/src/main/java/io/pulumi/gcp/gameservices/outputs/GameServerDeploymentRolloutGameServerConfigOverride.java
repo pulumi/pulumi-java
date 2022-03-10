@@ -24,10 +24,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
      */
     private final @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector;
 
-    @OutputCustomType.Constructor({"configVersion","realmsSelector"})
+    @OutputCustomType.Constructor
     private GameServerDeploymentRolloutGameServerConfigOverride(
-        @Nullable String configVersion,
-        @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
+        @OutputCustomType.Parameter("configVersion") @Nullable String configVersion,
+        @OutputCustomType.Parameter("realmsSelector") @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
         this.configVersion = configVersion;
         this.realmsSelector = realmsSelector;
     }
