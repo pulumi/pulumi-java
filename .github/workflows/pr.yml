@@ -47,10 +47,6 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-  build_sdk:
-    needs: prerequisites
-    runs-on: ubuntu-latest
-    steps:
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
       - name: Build Pulumi JVM Language Provider and Codegen
@@ -87,6 +83,28 @@ jobs:
         run: make provider.docker.install
       - name: Integration tests
         run: make integration_tests
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{matrix.pythonversion}}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-duration-seconds: 3600
+          role-session-name: ${{ env.PROVIDER }}@githubActions
+          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+      - name: Run tests
+        run: |
+          for provider in `ls tests/examples/*/ -d`; do
+            bash -c  "cd  $provider && pulumi preview";
+          done;
+      strategy:
+        fail-fast: true
   go-lint:
     container: golangci/golangci-lint:latest
     name: Lint ${{ matrix.directory }}
@@ -102,52 +120,3 @@ jobs:
       - name: Lint ${{ matrix.directory }}
         run: |
           cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
-  test:
-    name: test
-    needs: build_sdk
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v2
-    - name: Checkout Scripts Repo
-      uses: actions/checkout@v2
-      with:
-        path: ci-scripts
-        repository: pulumi/scripts
-    - name: Unshallow clone for tags
-      run: git fetch --prune --unshallow --tags
-    - name: Install Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: ${{matrix.goversion}}
-    - name: Install pulumictl
-      uses: jaxxstorm/action-install-gh-release@v1.2.0
-      with:
-        repo: pulumi/pulumictl
-    - name: Install Pulumi CLI
-      uses: pulumi/action-install-pulumi-cli@v2
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{matrix.pythonversion}}
-    - name: Download provider + tfgen binaries
-      uses: actions/download-artifact@v2
-      with:
-        name: ${{ env.PROVIDER }}-provider.tar.gz
-        path: ${{ github.workspace }}/bin
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-region: ${{ env.AWS_REGION }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        role-duration-seconds: 3600
-        role-session-name: ${{ env.PROVIDER }}@githubActions
-        role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-    - name: Run tests
-      run: |
-        for provider in `ls tests/examples/*/ -d`; do
-          bash -c  "cd  $provider && pulumi preview";
-        done;
-    strategy:
-      fail-fast: true
