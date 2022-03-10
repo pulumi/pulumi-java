@@ -49,12 +49,12 @@ public final class ContainerHost {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }

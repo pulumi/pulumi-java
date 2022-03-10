@@ -74,32 +74,32 @@ public final class ServiceAuthGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServerAddress(Input<String> serverAddress) {
+        public Builder serverAddress(Input<String> serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
-        public Builder setServerAddress(String serverAddress) {
+        public Builder serverAddress(String serverAddress) {
             this.serverAddress = Input.of(Objects.requireNonNull(serverAddress));
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

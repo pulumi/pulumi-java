@@ -111,62 +111,62 @@ public final class ServiceTaskSpecContainerSpecConfigGetArgs extends io.pulumi.r
     	      this.fileUid = defaults.fileUid;
         }
 
-        public Builder setConfigId(Input<String> configId) {
+        public Builder configId(Input<String> configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Input.of(Objects.requireNonNull(configId));
             return this;
         }
 
-        public Builder setConfigName(@Nullable Input<String> configName) {
+        public Builder configName(@Nullable Input<String> configName) {
             this.configName = configName;
             return this;
         }
 
-        public Builder setConfigName(@Nullable String configName) {
+        public Builder configName(@Nullable String configName) {
             this.configName = Input.ofNullable(configName);
             return this;
         }
 
-        public Builder setFileGid(@Nullable Input<String> fileGid) {
+        public Builder fileGid(@Nullable Input<String> fileGid) {
             this.fileGid = fileGid;
             return this;
         }
 
-        public Builder setFileGid(@Nullable String fileGid) {
+        public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = Input.ofNullable(fileGid);
             return this;
         }
 
-        public Builder setFileMode(@Nullable Input<Integer> fileMode) {
+        public Builder fileMode(@Nullable Input<Integer> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileMode(@Nullable Integer fileMode) {
+        public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = Input.ofNullable(fileMode);
             return this;
         }
 
-        public Builder setFileName(Input<String> fileName) {
+        public Builder fileName(Input<String> fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Input.of(Objects.requireNonNull(fileName));
             return this;
         }
 
-        public Builder setFileUid(@Nullable Input<String> fileUid) {
+        public Builder fileUid(@Nullable Input<String> fileUid) {
             this.fileUid = fileUid;
             return this;
         }
 
-        public Builder setFileUid(@Nullable String fileUid) {
+        public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = Input.ofNullable(fileUid);
             return this;
         }

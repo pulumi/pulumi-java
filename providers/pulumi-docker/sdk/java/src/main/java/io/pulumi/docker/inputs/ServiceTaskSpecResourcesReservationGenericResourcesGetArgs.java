@@ -63,22 +63,22 @@ public final class ServiceTaskSpecResourcesReservationGenericResourcesGetArgs ex
     	      this.namedResourcesSpecs = defaults.namedResourcesSpecs;
         }
 
-        public Builder setDiscreteResourcesSpecs(@Nullable Input<List<String>> discreteResourcesSpecs) {
+        public Builder discreteResourcesSpecs(@Nullable Input<List<String>> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
 
-        public Builder setDiscreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
+        public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = Input.ofNullable(discreteResourcesSpecs);
             return this;
         }
 
-        public Builder setNamedResourcesSpecs(@Nullable Input<List<String>> namedResourcesSpecs) {
+        public Builder namedResourcesSpecs(@Nullable Input<List<String>> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }
 
-        public Builder setNamedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
+        public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
             this.namedResourcesSpecs = Input.ofNullable(namedResourcesSpecs);
             return this;
         }

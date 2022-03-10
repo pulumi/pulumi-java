@@ -51,12 +51,12 @@ public final class ServiceTaskSpecResourcesReservationGenericResources {
     	      this.namedResourcesSpecs = defaults.namedResourcesSpecs;
         }
 
-        public Builder setDiscreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
+        public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
 
-        public Builder setNamedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
+        public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }

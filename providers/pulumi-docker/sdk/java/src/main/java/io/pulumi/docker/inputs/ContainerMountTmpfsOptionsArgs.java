@@ -62,22 +62,22 @@ public final class ContainerMountTmpfsOptionsArgs extends io.pulumi.resources.Re
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setMode(@Nullable Input<Integer> mode) {
+        public Builder mode(@Nullable Input<Integer> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Input<Integer> sizeBytes) {
+        public Builder sizeBytes(@Nullable Input<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }

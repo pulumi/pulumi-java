@@ -59,17 +59,17 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
     	      this.searches = defaults.searches;
         }
 
-        public Builder setNameservers(List<String> nameservers) {
+        public Builder nameservers(List<String> nameservers) {
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
 
-        public Builder setOptions(@Nullable List<String> options) {
+        public Builder options(@Nullable List<String> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSearches(@Nullable List<String> searches) {
+        public Builder searches(@Nullable List<String> searches) {
             this.searches = searches;
             return this;
         }

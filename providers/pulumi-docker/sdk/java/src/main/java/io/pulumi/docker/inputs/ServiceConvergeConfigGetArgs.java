@@ -62,22 +62,22 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setDelay(@Nullable Input<String> delay) {
+        public Builder delay(@Nullable Input<String> delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = Input.ofNullable(delay);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

@@ -62,22 +62,22 @@ public final class ServiceTaskSpecResourcesLimitsGetArgs extends io.pulumi.resou
     	      this.nanoCpus = defaults.nanoCpus;
         }
 
-        public Builder setMemoryBytes(@Nullable Input<Integer> memoryBytes) {
+        public Builder memoryBytes(@Nullable Input<Integer> memoryBytes) {
             this.memoryBytes = memoryBytes;
             return this;
         }
 
-        public Builder setMemoryBytes(@Nullable Integer memoryBytes) {
+        public Builder memoryBytes(@Nullable Integer memoryBytes) {
             this.memoryBytes = Input.ofNullable(memoryBytes);
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Input<Integer> nanoCpus) {
+        public Builder nanoCpus(@Nullable Input<Integer> nanoCpus) {
             this.nanoCpus = nanoCpus;
             return this;
         }
 
-        public Builder setNanoCpus(@Nullable Integer nanoCpus) {
+        public Builder nanoCpus(@Nullable Integer nanoCpus) {
             this.nanoCpus = Input.ofNullable(nanoCpus);
             return this;
         }

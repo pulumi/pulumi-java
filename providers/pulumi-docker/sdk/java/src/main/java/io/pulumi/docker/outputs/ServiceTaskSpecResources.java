@@ -52,12 +52,12 @@ public final class ServiceTaskSpecResources {
     	      this.reservation = defaults.reservation;
         }
 
-        public Builder setLimits(@Nullable ServiceTaskSpecResourcesLimits limits) {
+        public Builder limits(@Nullable ServiceTaskSpecResourcesLimits limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setReservation(@Nullable ServiceTaskSpecResourcesReservation reservation) {
+        public Builder reservation(@Nullable ServiceTaskSpecResourcesReservation reservation) {
             this.reservation = reservation;
             return this;
         }

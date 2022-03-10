@@ -61,22 +61,22 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends io.pulumi.resour
     	      this.os = defaults.os;
         }
 
-        public Builder setArchitecture(Input<String> architecture) {
+        public Builder architecture(Input<String> architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Input.of(Objects.requireNonNull(architecture));
             return this;
         }
 
-        public Builder setOs(Input<String> os) {
+        public Builder os(Input<String> os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
 
-        public Builder setOs(String os) {
+        public Builder os(String os) {
             this.os = Input.of(Objects.requireNonNull(os));
             return this;
         }

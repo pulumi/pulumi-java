@@ -70,22 +70,22 @@ public final class ServiceTaskSpecPlacement {
     	      this.prefs = defaults.prefs;
         }
 
-        public Builder setConstraints(@Nullable List<String> constraints) {
+        public Builder constraints(@Nullable List<String> constraints) {
             this.constraints = constraints;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setPlatforms(@Nullable List<ServiceTaskSpecPlacementPlatform> platforms) {
+        public Builder platforms(@Nullable List<ServiceTaskSpecPlacementPlatform> platforms) {
             this.platforms = platforms;
             return this;
         }
 
-        public Builder setPrefs(@Nullable List<String> prefs) {
+        public Builder prefs(@Nullable List<String> prefs) {
             this.prefs = prefs;
             return this;
         }

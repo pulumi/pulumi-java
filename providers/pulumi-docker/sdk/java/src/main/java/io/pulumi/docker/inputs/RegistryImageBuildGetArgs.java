@@ -428,322 +428,322 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     	      this.version = defaults.version;
         }
 
-        public Builder setAuthConfigs(@Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs) {
+        public Builder authConfigs(@Nullable Input<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs) {
             this.authConfigs = authConfigs;
             return this;
         }
 
-        public Builder setAuthConfigs(@Nullable List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
+        public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
             this.authConfigs = Input.ofNullable(authConfigs);
             return this;
         }
 
-        public Builder setBuildArgs(@Nullable Input<Map<String,String>> buildArgs) {
+        public Builder buildArgs(@Nullable Input<Map<String,String>> buildArgs) {
             this.buildArgs = buildArgs;
             return this;
         }
 
-        public Builder setBuildArgs(@Nullable Map<String,String> buildArgs) {
+        public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
             this.buildArgs = Input.ofNullable(buildArgs);
             return this;
         }
 
-        public Builder setBuildId(@Nullable Input<String> buildId) {
+        public Builder buildId(@Nullable Input<String> buildId) {
             this.buildId = buildId;
             return this;
         }
 
-        public Builder setBuildId(@Nullable String buildId) {
+        public Builder buildId(@Nullable String buildId) {
             this.buildId = Input.ofNullable(buildId);
             return this;
         }
 
-        public Builder setCacheFroms(@Nullable Input<List<String>> cacheFroms) {
+        public Builder cacheFroms(@Nullable Input<List<String>> cacheFroms) {
             this.cacheFroms = cacheFroms;
             return this;
         }
 
-        public Builder setCacheFroms(@Nullable List<String> cacheFroms) {
+        public Builder cacheFroms(@Nullable List<String> cacheFroms) {
             this.cacheFroms = Input.ofNullable(cacheFroms);
             return this;
         }
 
-        public Builder setCgroupParent(@Nullable Input<String> cgroupParent) {
+        public Builder cgroupParent(@Nullable Input<String> cgroupParent) {
             this.cgroupParent = cgroupParent;
             return this;
         }
 
-        public Builder setCgroupParent(@Nullable String cgroupParent) {
+        public Builder cgroupParent(@Nullable String cgroupParent) {
             this.cgroupParent = Input.ofNullable(cgroupParent);
             return this;
         }
 
-        public Builder setContext(Input<String> context) {
+        public Builder context(Input<String> context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setContext(String context) {
+        public Builder context(String context) {
             this.context = Input.of(Objects.requireNonNull(context));
             return this;
         }
 
-        public Builder setCpuPeriod(@Nullable Input<Integer> cpuPeriod) {
+        public Builder cpuPeriod(@Nullable Input<Integer> cpuPeriod) {
             this.cpuPeriod = cpuPeriod;
             return this;
         }
 
-        public Builder setCpuPeriod(@Nullable Integer cpuPeriod) {
+        public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
             this.cpuPeriod = Input.ofNullable(cpuPeriod);
             return this;
         }
 
-        public Builder setCpuQuota(@Nullable Input<Integer> cpuQuota) {
+        public Builder cpuQuota(@Nullable Input<Integer> cpuQuota) {
             this.cpuQuota = cpuQuota;
             return this;
         }
 
-        public Builder setCpuQuota(@Nullable Integer cpuQuota) {
+        public Builder cpuQuota(@Nullable Integer cpuQuota) {
             this.cpuQuota = Input.ofNullable(cpuQuota);
             return this;
         }
 
-        public Builder setCpuSetCpus(@Nullable Input<String> cpuSetCpus) {
+        public Builder cpuSetCpus(@Nullable Input<String> cpuSetCpus) {
             this.cpuSetCpus = cpuSetCpus;
             return this;
         }
 
-        public Builder setCpuSetCpus(@Nullable String cpuSetCpus) {
+        public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
             this.cpuSetCpus = Input.ofNullable(cpuSetCpus);
             return this;
         }
 
-        public Builder setCpuSetMems(@Nullable Input<String> cpuSetMems) {
+        public Builder cpuSetMems(@Nullable Input<String> cpuSetMems) {
             this.cpuSetMems = cpuSetMems;
             return this;
         }
 
-        public Builder setCpuSetMems(@Nullable String cpuSetMems) {
+        public Builder cpuSetMems(@Nullable String cpuSetMems) {
             this.cpuSetMems = Input.ofNullable(cpuSetMems);
             return this;
         }
 
-        public Builder setCpuShares(@Nullable Input<Integer> cpuShares) {
+        public Builder cpuShares(@Nullable Input<Integer> cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
 
-        public Builder setCpuShares(@Nullable Integer cpuShares) {
+        public Builder cpuShares(@Nullable Integer cpuShares) {
             this.cpuShares = Input.ofNullable(cpuShares);
             return this;
         }
 
-        public Builder setDockerfile(@Nullable Input<String> dockerfile) {
+        public Builder dockerfile(@Nullable Input<String> dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
 
-        public Builder setDockerfile(@Nullable String dockerfile) {
+        public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = Input.ofNullable(dockerfile);
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable Input<List<String>> extraHosts) {
+        public Builder extraHosts(@Nullable Input<List<String>> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable List<String> extraHosts) {
+        public Builder extraHosts(@Nullable List<String> extraHosts) {
             this.extraHosts = Input.ofNullable(extraHosts);
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Input<Boolean> forceRemove) {
+        public Builder forceRemove(@Nullable Input<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = Input.ofNullable(forceRemove);
             return this;
         }
 
-        public Builder setIsolation(@Nullable Input<String> isolation) {
+        public Builder isolation(@Nullable Input<String> isolation) {
             this.isolation = isolation;
             return this;
         }
 
-        public Builder setIsolation(@Nullable String isolation) {
+        public Builder isolation(@Nullable String isolation) {
             this.isolation = Input.ofNullable(isolation);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMemory(@Nullable Input<Integer> memory) {
+        public Builder memory(@Nullable Input<Integer> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable Integer memory) {
+        public Builder memory(@Nullable Integer memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }
 
-        public Builder setMemorySwap(@Nullable Input<Integer> memorySwap) {
+        public Builder memorySwap(@Nullable Input<Integer> memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
 
-        public Builder setMemorySwap(@Nullable Integer memorySwap) {
+        public Builder memorySwap(@Nullable Integer memorySwap) {
             this.memorySwap = Input.ofNullable(memorySwap);
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable Input<String> networkMode) {
+        public Builder networkMode(@Nullable Input<String> networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable String networkMode) {
+        public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = Input.ofNullable(networkMode);
             return this;
         }
 
-        public Builder setNoCache(@Nullable Input<Boolean> noCache) {
+        public Builder noCache(@Nullable Input<Boolean> noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = Input.ofNullable(noCache);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Input<String> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setPullParent(@Nullable Input<Boolean> pullParent) {
+        public Builder pullParent(@Nullable Input<Boolean> pullParent) {
             this.pullParent = pullParent;
             return this;
         }
 
-        public Builder setPullParent(@Nullable Boolean pullParent) {
+        public Builder pullParent(@Nullable Boolean pullParent) {
             this.pullParent = Input.ofNullable(pullParent);
             return this;
         }
 
-        public Builder setRemoteContext(@Nullable Input<String> remoteContext) {
+        public Builder remoteContext(@Nullable Input<String> remoteContext) {
             this.remoteContext = remoteContext;
             return this;
         }
 
-        public Builder setRemoteContext(@Nullable String remoteContext) {
+        public Builder remoteContext(@Nullable String remoteContext) {
             this.remoteContext = Input.ofNullable(remoteContext);
             return this;
         }
 
-        public Builder setRemove(@Nullable Input<Boolean> remove) {
+        public Builder remove(@Nullable Input<Boolean> remove) {
             this.remove = remove;
             return this;
         }
 
-        public Builder setRemove(@Nullable Boolean remove) {
+        public Builder remove(@Nullable Boolean remove) {
             this.remove = Input.ofNullable(remove);
             return this;
         }
 
-        public Builder setSecurityOpts(@Nullable Input<List<String>> securityOpts) {
+        public Builder securityOpts(@Nullable Input<List<String>> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
 
-        public Builder setSecurityOpts(@Nullable List<String> securityOpts) {
+        public Builder securityOpts(@Nullable List<String> securityOpts) {
             this.securityOpts = Input.ofNullable(securityOpts);
             return this;
         }
 
-        public Builder setSessionId(@Nullable Input<String> sessionId) {
+        public Builder sessionId(@Nullable Input<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
-        public Builder setSessionId(@Nullable String sessionId) {
+        public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = Input.ofNullable(sessionId);
             return this;
         }
 
-        public Builder setShmSize(@Nullable Input<Integer> shmSize) {
+        public Builder shmSize(@Nullable Input<Integer> shmSize) {
             this.shmSize = shmSize;
             return this;
         }
 
-        public Builder setShmSize(@Nullable Integer shmSize) {
+        public Builder shmSize(@Nullable Integer shmSize) {
             this.shmSize = Input.ofNullable(shmSize);
             return this;
         }
 
-        public Builder setSquash(@Nullable Input<Boolean> squash) {
+        public Builder squash(@Nullable Input<Boolean> squash) {
             this.squash = squash;
             return this;
         }
 
-        public Builder setSquash(@Nullable Boolean squash) {
+        public Builder squash(@Nullable Boolean squash) {
             this.squash = Input.ofNullable(squash);
             return this;
         }
 
-        public Builder setSuppressOutput(@Nullable Input<Boolean> suppressOutput) {
+        public Builder suppressOutput(@Nullable Input<Boolean> suppressOutput) {
             this.suppressOutput = suppressOutput;
             return this;
         }
 
-        public Builder setSuppressOutput(@Nullable Boolean suppressOutput) {
+        public Builder suppressOutput(@Nullable Boolean suppressOutput) {
             this.suppressOutput = Input.ofNullable(suppressOutput);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setUlimits(@Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
+        public Builder ulimits(@Nullable Input<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
-        public Builder setUlimits(@Nullable List<RegistryImageBuildUlimitGetArgs> ulimits) {
+        public Builder ulimits(@Nullable List<RegistryImageBuildUlimitGetArgs> ulimits) {
             this.ulimits = Input.ofNullable(ulimits);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

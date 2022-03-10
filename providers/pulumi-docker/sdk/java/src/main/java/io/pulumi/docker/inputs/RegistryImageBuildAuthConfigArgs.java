@@ -134,82 +134,82 @@ public final class RegistryImageBuildAuthConfigArgs extends io.pulumi.resources.
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuth(@Nullable Input<String> auth) {
+        public Builder auth(@Nullable Input<String> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable String auth) {
+        public Builder auth(@Nullable String auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setHostName(Input<String> hostName) {
+        public Builder hostName(Input<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Input.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder setIdentityToken(@Nullable Input<String> identityToken) {
+        public Builder identityToken(@Nullable Input<String> identityToken) {
             this.identityToken = identityToken;
             return this;
         }
 
-        public Builder setIdentityToken(@Nullable String identityToken) {
+        public Builder identityToken(@Nullable String identityToken) {
             this.identityToken = Input.ofNullable(identityToken);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setRegistryToken(@Nullable Input<String> registryToken) {
+        public Builder registryToken(@Nullable Input<String> registryToken) {
             this.registryToken = registryToken;
             return this;
         }
 
-        public Builder setRegistryToken(@Nullable String registryToken) {
+        public Builder registryToken(@Nullable String registryToken) {
             this.registryToken = Input.ofNullable(registryToken);
             return this;
         }
 
-        public Builder setServerAddress(@Nullable Input<String> serverAddress) {
+        public Builder serverAddress(@Nullable Input<String> serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
 
-        public Builder setServerAddress(@Nullable String serverAddress) {
+        public Builder serverAddress(@Nullable String serverAddress) {
             this.serverAddress = Input.ofNullable(serverAddress);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

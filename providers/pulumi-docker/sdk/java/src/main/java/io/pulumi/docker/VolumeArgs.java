@@ -106,42 +106,42 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = Input.ofNullable(driver);
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Input<Map<String,Object>> driverOpts) {
+        public Builder driverOpts(@Nullable Input<Map<String,Object>> driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Map<String,Object> driverOpts) {
+        public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
             this.driverOpts = Input.ofNullable(driverOpts);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<VolumeLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<VolumeLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<VolumeLabelArgs> labels) {
+        public Builder labels(@Nullable List<VolumeLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

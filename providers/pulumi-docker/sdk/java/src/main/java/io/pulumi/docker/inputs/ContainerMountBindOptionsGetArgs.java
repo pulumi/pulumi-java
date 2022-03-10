@@ -49,12 +49,12 @@ public final class ContainerMountBindOptionsGetArgs extends io.pulumi.resources.
     	      this.propagation = defaults.propagation;
         }
 
-        public Builder setPropagation(@Nullable Input<String> propagation) {
+        public Builder propagation(@Nullable Input<String> propagation) {
             this.propagation = propagation;
             return this;
         }
 
-        public Builder setPropagation(@Nullable String propagation) {
+        public Builder propagation(@Nullable String propagation) {
             this.propagation = Input.ofNullable(propagation);
             return this;
         }

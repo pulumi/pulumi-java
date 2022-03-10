@@ -75,27 +75,27 @@ public final class ProviderRegistryAuthArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConfigFile(@Nullable Input<String> configFile) {
+        public Builder configFile(@Nullable Input<String> configFile) {
             this.configFile = configFile;
             return this;
         }
 
-        public Builder setConfigFileContent(@Nullable Input<String> configFileContent) {
+        public Builder configFileContent(@Nullable Input<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
