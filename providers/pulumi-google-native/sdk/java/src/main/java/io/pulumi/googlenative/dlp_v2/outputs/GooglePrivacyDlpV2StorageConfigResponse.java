@@ -35,13 +35,13 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
     private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
     private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
-    @OutputCustomType.Constructor({"bigQueryOptions","cloudStorageOptions","datastoreOptions","hybridOptions","timespanConfig"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2StorageConfigResponse(
-        GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions,
-        GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions,
-        GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
-        GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
-        GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
+        @OutputCustomType.Parameter("bigQueryOptions") GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions,
+        @OutputCustomType.Parameter("cloudStorageOptions") GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions,
+        @OutputCustomType.Parameter("datastoreOptions") GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
+        @OutputCustomType.Parameter("hybridOptions") GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
+        @OutputCustomType.Parameter("timespanConfig") GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
         this.bigQueryOptions = bigQueryOptions;
         this.cloudStorageOptions = cloudStorageOptions;
         this.datastoreOptions = datastoreOptions;

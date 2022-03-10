@@ -53,16 +53,16 @@ public final class DomainProvisioningResponse {
      */
     private final List<String> expectedIps;
 
-    @OutputCustomType.Constructor({"certChallengeDiscoveredTxt","certChallengeDns","certChallengeHttp","certStatus","discoveredIps","dnsFetchTime","dnsStatus","expectedIps"})
+    @OutputCustomType.Constructor
     private DomainProvisioningResponse(
-        List<String> certChallengeDiscoveredTxt,
-        CertDnsChallengeResponse certChallengeDns,
-        CertHttpChallengeResponse certChallengeHttp,
-        String certStatus,
-        List<String> discoveredIps,
-        String dnsFetchTime,
-        String dnsStatus,
-        List<String> expectedIps) {
+        @OutputCustomType.Parameter("certChallengeDiscoveredTxt") List<String> certChallengeDiscoveredTxt,
+        @OutputCustomType.Parameter("certChallengeDns") CertDnsChallengeResponse certChallengeDns,
+        @OutputCustomType.Parameter("certChallengeHttp") CertHttpChallengeResponse certChallengeHttp,
+        @OutputCustomType.Parameter("certStatus") String certStatus,
+        @OutputCustomType.Parameter("discoveredIps") List<String> discoveredIps,
+        @OutputCustomType.Parameter("dnsFetchTime") String dnsFetchTime,
+        @OutputCustomType.Parameter("dnsStatus") String dnsStatus,
+        @OutputCustomType.Parameter("expectedIps") List<String> expectedIps) {
         this.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
         this.certChallengeDns = certChallengeDns;
         this.certChallengeHttp = certChallengeHttp;

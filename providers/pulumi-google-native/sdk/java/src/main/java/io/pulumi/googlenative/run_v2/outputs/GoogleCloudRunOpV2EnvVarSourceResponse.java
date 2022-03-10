@@ -15,8 +15,8 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse {
      */
     private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 
-    @OutputCustomType.Constructor({"secretKeyRef"})
-    private GoogleCloudRunOpV2EnvVarSourceResponse(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRunOpV2EnvVarSourceResponse(@OutputCustomType.Parameter("secretKeyRef") GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
     }
 

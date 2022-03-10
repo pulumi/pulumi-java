@@ -87,23 +87,23 @@ public final class KerberosConfigResponse {
      */
     private final String truststoreUri;
 
-    @OutputCustomType.Constructor({"crossRealmTrustAdminServer","crossRealmTrustKdc","crossRealmTrustRealm","crossRealmTrustSharedPasswordUri","enableKerberos","kdcDbKeyUri","keyPasswordUri","keystorePasswordUri","keystoreUri","kmsKeyUri","realm","rootPrincipalPasswordUri","tgtLifetimeHours","truststorePasswordUri","truststoreUri"})
+    @OutputCustomType.Constructor
     private KerberosConfigResponse(
-        String crossRealmTrustAdminServer,
-        String crossRealmTrustKdc,
-        String crossRealmTrustRealm,
-        String crossRealmTrustSharedPasswordUri,
-        Boolean enableKerberos,
-        String kdcDbKeyUri,
-        String keyPasswordUri,
-        String keystorePasswordUri,
-        String keystoreUri,
-        String kmsKeyUri,
-        String realm,
-        String rootPrincipalPasswordUri,
-        Integer tgtLifetimeHours,
-        String truststorePasswordUri,
-        String truststoreUri) {
+        @OutputCustomType.Parameter("crossRealmTrustAdminServer") String crossRealmTrustAdminServer,
+        @OutputCustomType.Parameter("crossRealmTrustKdc") String crossRealmTrustKdc,
+        @OutputCustomType.Parameter("crossRealmTrustRealm") String crossRealmTrustRealm,
+        @OutputCustomType.Parameter("crossRealmTrustSharedPasswordUri") String crossRealmTrustSharedPasswordUri,
+        @OutputCustomType.Parameter("enableKerberos") Boolean enableKerberos,
+        @OutputCustomType.Parameter("kdcDbKeyUri") String kdcDbKeyUri,
+        @OutputCustomType.Parameter("keyPasswordUri") String keyPasswordUri,
+        @OutputCustomType.Parameter("keystorePasswordUri") String keystorePasswordUri,
+        @OutputCustomType.Parameter("keystoreUri") String keystoreUri,
+        @OutputCustomType.Parameter("kmsKeyUri") String kmsKeyUri,
+        @OutputCustomType.Parameter("realm") String realm,
+        @OutputCustomType.Parameter("rootPrincipalPasswordUri") String rootPrincipalPasswordUri,
+        @OutputCustomType.Parameter("tgtLifetimeHours") Integer tgtLifetimeHours,
+        @OutputCustomType.Parameter("truststorePasswordUri") String truststorePasswordUri,
+        @OutputCustomType.Parameter("truststoreUri") String truststoreUri) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;

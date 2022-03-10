@@ -15,8 +15,8 @@ public final class ClassItemResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ClassItemResponse(String value) {
+    @OutputCustomType.Constructor
+    private ClassItemResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 

@@ -20,10 +20,10 @@ public final class RelatedUrlResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"label","url"})
+    @OutputCustomType.Constructor
     private RelatedUrlResponse(
-        String label,
-        String url) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }

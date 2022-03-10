@@ -27,11 +27,11 @@ public final class MembershipRoleResponse {
      */
     private final RestrictionEvaluationsResponse restrictionEvaluations;
 
-    @OutputCustomType.Constructor({"expiryDetail","name","restrictionEvaluations"})
+    @OutputCustomType.Constructor
     private MembershipRoleResponse(
-        ExpiryDetailResponse expiryDetail,
-        String name,
-        RestrictionEvaluationsResponse restrictionEvaluations) {
+        @OutputCustomType.Parameter("expiryDetail") ExpiryDetailResponse expiryDetail,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restrictionEvaluations") RestrictionEvaluationsResponse restrictionEvaluations) {
         this.expiryDetail = expiryDetail;
         this.name = name;
         this.restrictionEvaluations = restrictionEvaluations;

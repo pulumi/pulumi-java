@@ -20,10 +20,10 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
      */
     private final String urlMask;
 
-    @OutputCustomType.Constructor({"function","urlMask"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupCloudFunctionResponse(
-        String function,
-        String urlMask) {
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("urlMask") String urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }

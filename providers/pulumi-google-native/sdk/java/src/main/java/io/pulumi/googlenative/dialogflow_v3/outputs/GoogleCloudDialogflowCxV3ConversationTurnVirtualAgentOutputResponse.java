@@ -52,15 +52,15 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputRe
      */
     private final GoogleCloudDialogflowCxV3IntentResponse triggeredIntent;
 
-    @OutputCustomType.Constructor({"currentPage","diagnosticInfo","differences","sessionParameters","status","textResponses","triggeredIntent"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse(
-        GoogleCloudDialogflowCxV3PageResponse currentPage,
-        Map<String,String> diagnosticInfo,
-        List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences,
-        Map<String,String> sessionParameters,
-        GoogleRpcStatusResponse status,
-        List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses,
-        GoogleCloudDialogflowCxV3IntentResponse triggeredIntent) {
+        @OutputCustomType.Parameter("currentPage") GoogleCloudDialogflowCxV3PageResponse currentPage,
+        @OutputCustomType.Parameter("diagnosticInfo") Map<String,String> diagnosticInfo,
+        @OutputCustomType.Parameter("differences") List<GoogleCloudDialogflowCxV3TestRunDifferenceResponse> differences,
+        @OutputCustomType.Parameter("sessionParameters") Map<String,String> sessionParameters,
+        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status,
+        @OutputCustomType.Parameter("textResponses") List<GoogleCloudDialogflowCxV3ResponseMessageTextResponse> textResponses,
+        @OutputCustomType.Parameter("triggeredIntent") GoogleCloudDialogflowCxV3IntentResponse triggeredIntent) {
         this.currentPage = currentPage;
         this.diagnosticInfo = diagnosticInfo;
         this.differences = differences;

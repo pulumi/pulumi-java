@@ -34,12 +34,12 @@ public final class SourceContextResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"cloudRepo","gerrit","git","labels"})
+    @OutputCustomType.Constructor
     private SourceContextResponse(
-        CloudRepoSourceContextResponse cloudRepo,
-        GerritSourceContextResponse gerrit,
-        GitSourceContextResponse git,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("cloudRepo") CloudRepoSourceContextResponse cloudRepo,
+        @OutputCustomType.Parameter("gerrit") GerritSourceContextResponse gerrit,
+        @OutputCustomType.Parameter("git") GitSourceContextResponse git,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;

@@ -21,10 +21,10 @@ public final class GetNamespaceResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"labels","name"})
+    @OutputCustomType.Constructor
     private GetNamespaceResult(
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.labels = labels;
         this.name = name;
     }

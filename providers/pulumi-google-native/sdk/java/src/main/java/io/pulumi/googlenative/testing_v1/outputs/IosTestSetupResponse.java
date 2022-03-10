@@ -33,12 +33,12 @@ public final class IosTestSetupResponse {
      */
     private final List<IosDeviceFileResponse> pushFiles;
 
-    @OutputCustomType.Constructor({"additionalIpas","networkProfile","pullDirectories","pushFiles"})
+    @OutputCustomType.Constructor
     private IosTestSetupResponse(
-        List<FileReferenceResponse> additionalIpas,
-        String networkProfile,
-        List<IosDeviceFileResponse> pullDirectories,
-        List<IosDeviceFileResponse> pushFiles) {
+        @OutputCustomType.Parameter("additionalIpas") List<FileReferenceResponse> additionalIpas,
+        @OutputCustomType.Parameter("networkProfile") String networkProfile,
+        @OutputCustomType.Parameter("pullDirectories") List<IosDeviceFileResponse> pullDirectories,
+        @OutputCustomType.Parameter("pushFiles") List<IosDeviceFileResponse> pushFiles) {
         this.additionalIpas = additionalIpas;
         this.networkProfile = networkProfile;
         this.pullDirectories = pullDirectories;

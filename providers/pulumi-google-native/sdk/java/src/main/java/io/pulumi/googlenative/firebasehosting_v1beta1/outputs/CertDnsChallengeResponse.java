@@ -20,10 +20,10 @@ public final class CertDnsChallengeResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"domainName","token"})
+    @OutputCustomType.Constructor
     private CertDnsChallengeResponse(
-        String domainName,
-        String token) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("token") String token) {
         this.domainName = domainName;
         this.token = token;
     }

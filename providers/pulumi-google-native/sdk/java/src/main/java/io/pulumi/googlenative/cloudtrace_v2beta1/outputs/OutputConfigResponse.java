@@ -15,8 +15,8 @@ public final class OutputConfigResponse {
      */
     private final String destination;
 
-    @OutputCustomType.Constructor({"destination"})
-    private OutputConfigResponse(String destination) {
+    @OutputCustomType.Constructor
+    private OutputConfigResponse(@OutputCustomType.Parameter("destination") String destination) {
         this.destination = destination;
     }
 

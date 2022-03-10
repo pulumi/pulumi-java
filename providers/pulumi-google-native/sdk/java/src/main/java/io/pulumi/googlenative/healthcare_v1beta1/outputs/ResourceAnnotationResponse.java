@@ -15,8 +15,8 @@ public final class ResourceAnnotationResponse {
      */
     private final String label;
 
-    @OutputCustomType.Constructor({"label"})
-    private ResourceAnnotationResponse(String label) {
+    @OutputCustomType.Constructor
+    private ResourceAnnotationResponse(@OutputCustomType.Parameter("label") String label) {
         this.label = label;
     }
 

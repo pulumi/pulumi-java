@@ -38,13 +38,13 @@ public final class BigtableColumnFamilyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"columns","encoding","familyId","onlyReadLatest","type"})
+    @OutputCustomType.Constructor
     private BigtableColumnFamilyResponse(
-        List<BigtableColumnResponse> columns,
-        String encoding,
-        String familyId,
-        Boolean onlyReadLatest,
-        String type) {
+        @OutputCustomType.Parameter("columns") List<BigtableColumnResponse> columns,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("familyId") String familyId,
+        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @OutputCustomType.Parameter("type") String type) {
         this.columns = columns;
         this.encoding = encoding;
         this.familyId = familyId;

@@ -47,15 +47,15 @@ public final class GetConnectionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"cloudSql","creationTime","description","friendlyName","hasCredential","lastModifiedTime","name"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        CloudSqlPropertiesResponse cloudSql,
-        String creationTime,
-        String description,
-        String friendlyName,
-        Boolean hasCredential,
-        String lastModifiedTime,
-        String name) {
+        @OutputCustomType.Parameter("cloudSql") CloudSqlPropertiesResponse cloudSql,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.cloudSql = cloudSql;
         this.creationTime = creationTime;
         this.description = description;

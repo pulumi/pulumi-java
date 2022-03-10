@@ -15,8 +15,8 @@ public final class LegacyAbacResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private LegacyAbacResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private LegacyAbacResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

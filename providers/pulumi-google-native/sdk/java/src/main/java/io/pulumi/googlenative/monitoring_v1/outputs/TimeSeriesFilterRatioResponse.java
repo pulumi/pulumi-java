@@ -32,12 +32,12 @@ public final class TimeSeriesFilterRatioResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor({"denominator","numerator","pickTimeSeriesFilter","secondaryAggregation"})
+    @OutputCustomType.Constructor
     private TimeSeriesFilterRatioResponse(
-        RatioPartResponse denominator,
-        RatioPartResponse numerator,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
+        @OutputCustomType.Parameter("denominator") RatioPartResponse denominator,
+        @OutputCustomType.Parameter("numerator") RatioPartResponse numerator,
+        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.denominator = denominator;
         this.numerator = numerator;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;

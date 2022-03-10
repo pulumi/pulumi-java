@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
      */
     private final Integer minInstanceCount;
 
-    @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2RevisionScalingResponse(
-        Integer maxInstanceCount,
-        Integer minInstanceCount) {
+        @OutputCustomType.Parameter("maxInstanceCount") Integer maxInstanceCount,
+        @OutputCustomType.Parameter("minInstanceCount") Integer minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }

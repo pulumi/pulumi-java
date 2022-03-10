@@ -26,12 +26,12 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse {
     private final String ipv6Address;
     private final String kind;
 
-    @OutputCustomType.Constructor({"forwardingPath","ipv4Address","ipv6Address","kind"})
+    @OutputCustomType.Constructor
     private PolicyAlternativeNameServerConfigTargetNameServerResponse(
-        String forwardingPath,
-        String ipv4Address,
-        String ipv6Address,
-        String kind) {
+        @OutputCustomType.Parameter("forwardingPath") String forwardingPath,
+        @OutputCustomType.Parameter("ipv4Address") String ipv4Address,
+        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;

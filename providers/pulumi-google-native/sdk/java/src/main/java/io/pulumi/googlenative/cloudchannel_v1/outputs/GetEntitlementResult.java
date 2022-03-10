@@ -76,20 +76,20 @@ public final class GetEntitlementResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"associationInfo","commitmentSettings","createTime","name","offer","parameters","provisionedService","provisioningState","purchaseOrderId","suspensionReasons","trialSettings","updateTime"})
+    @OutputCustomType.Constructor
     private GetEntitlementResult(
-        GoogleCloudChannelV1AssociationInfoResponse associationInfo,
-        GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
-        String createTime,
-        String name,
-        String offer,
-        List<GoogleCloudChannelV1ParameterResponse> parameters,
-        GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
-        String provisioningState,
-        String purchaseOrderId,
-        List<String> suspensionReasons,
-        GoogleCloudChannelV1TrialSettingsResponse trialSettings,
-        String updateTime) {
+        @OutputCustomType.Parameter("associationInfo") GoogleCloudChannelV1AssociationInfoResponse associationInfo,
+        @OutputCustomType.Parameter("commitmentSettings") GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offer") String offer,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudChannelV1ParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisionedService") GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchaseOrderId") String purchaseOrderId,
+        @OutputCustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
+        @OutputCustomType.Parameter("trialSettings") GoogleCloudChannelV1TrialSettingsResponse trialSettings,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.associationInfo = associationInfo;
         this.commitmentSettings = commitmentSettings;
         this.createTime = createTime;

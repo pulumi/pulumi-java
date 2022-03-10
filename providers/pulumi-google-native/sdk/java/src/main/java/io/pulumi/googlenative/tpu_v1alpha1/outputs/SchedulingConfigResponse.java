@@ -20,10 +20,10 @@ public final class SchedulingConfigResponse {
      */
     private final Boolean reserved;
 
-    @OutputCustomType.Constructor({"preemptible","reserved"})
+    @OutputCustomType.Constructor
     private SchedulingConfigResponse(
-        Boolean preemptible,
-        Boolean reserved) {
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("reserved") Boolean reserved) {
         this.preemptible = preemptible;
         this.reserved = reserved;
     }

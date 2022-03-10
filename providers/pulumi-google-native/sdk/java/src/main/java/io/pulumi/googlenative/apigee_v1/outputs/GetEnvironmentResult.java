@@ -56,17 +56,17 @@ public final class GetEnvironmentResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"apiProxyType","createdAt","deploymentType","description","displayName","lastModifiedAt","name","properties","state"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String apiProxyType,
-        String createdAt,
-        String deploymentType,
-        String description,
-        String displayName,
-        String lastModifiedAt,
-        String name,
-        GoogleCloudApigeeV1PropertiesResponse properties,
-        String state) {
+        @OutputCustomType.Parameter("apiProxyType") String apiProxyType,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("deploymentType") String deploymentType,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
+        @OutputCustomType.Parameter("state") String state) {
         this.apiProxyType = apiProxyType;
         this.createdAt = createdAt;
         this.deploymentType = deploymentType;

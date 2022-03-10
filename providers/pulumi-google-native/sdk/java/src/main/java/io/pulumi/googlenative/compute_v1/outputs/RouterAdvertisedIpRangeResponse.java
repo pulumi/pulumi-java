@@ -20,10 +20,10 @@ public final class RouterAdvertisedIpRangeResponse {
      */
     private final String range;
 
-    @OutputCustomType.Constructor({"description","range"})
+    @OutputCustomType.Constructor
     private RouterAdvertisedIpRangeResponse(
-        String description,
-        String range) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("range") String range) {
         this.description = description;
         this.range = range;
     }

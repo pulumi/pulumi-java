@@ -27,11 +27,11 @@ public final class EnvironmentMatrixResponse {
      */
     private final IosDeviceListResponse iosDeviceList;
 
-    @OutputCustomType.Constructor({"androidDeviceList","androidMatrix","iosDeviceList"})
+    @OutputCustomType.Constructor
     private EnvironmentMatrixResponse(
-        AndroidDeviceListResponse androidDeviceList,
-        AndroidMatrixResponse androidMatrix,
-        IosDeviceListResponse iosDeviceList) {
+        @OutputCustomType.Parameter("androidDeviceList") AndroidDeviceListResponse androidDeviceList,
+        @OutputCustomType.Parameter("androidMatrix") AndroidMatrixResponse androidMatrix,
+        @OutputCustomType.Parameter("iosDeviceList") IosDeviceListResponse iosDeviceList) {
         this.androidDeviceList = androidDeviceList;
         this.androidMatrix = androidMatrix;
         this.iosDeviceList = iosDeviceList;

@@ -57,16 +57,16 @@ public final class WidgetResponse {
      */
     private final XyChartResponse xyChart;
 
-    @OutputCustomType.Constructor({"alertChart","blank","logsPanel","scorecard","text","timeSeriesTable","title","xyChart"})
+    @OutputCustomType.Constructor
     private WidgetResponse(
-        AlertChartResponse alertChart,
-        EmptyResponse blank,
-        LogsPanelResponse logsPanel,
-        ScorecardResponse scorecard,
-        TextResponse text,
-        TimeSeriesTableResponse timeSeriesTable,
-        String title,
-        XyChartResponse xyChart) {
+        @OutputCustomType.Parameter("alertChart") AlertChartResponse alertChart,
+        @OutputCustomType.Parameter("blank") EmptyResponse blank,
+        @OutputCustomType.Parameter("logsPanel") LogsPanelResponse logsPanel,
+        @OutputCustomType.Parameter("scorecard") ScorecardResponse scorecard,
+        @OutputCustomType.Parameter("text") TextResponse text,
+        @OutputCustomType.Parameter("timeSeriesTable") TimeSeriesTableResponse timeSeriesTable,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("xyChart") XyChartResponse xyChart) {
         this.alertChart = alertChart;
         this.blank = blank;
         this.logsPanel = logsPanel;

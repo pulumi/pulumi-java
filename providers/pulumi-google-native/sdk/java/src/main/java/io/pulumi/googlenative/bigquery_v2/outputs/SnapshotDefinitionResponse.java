@@ -21,10 +21,10 @@ public final class SnapshotDefinitionResponse {
      */
     private final String snapshotTime;
 
-    @OutputCustomType.Constructor({"baseTableReference","snapshotTime"})
+    @OutputCustomType.Constructor
     private SnapshotDefinitionResponse(
-        TableReferenceResponse baseTableReference,
-        String snapshotTime) {
+        @OutputCustomType.Parameter("baseTableReference") TableReferenceResponse baseTableReference,
+        @OutputCustomType.Parameter("snapshotTime") String snapshotTime) {
         this.baseTableReference = baseTableReference;
         this.snapshotTime = snapshotTime;
     }

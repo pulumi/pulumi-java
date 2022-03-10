@@ -69,19 +69,19 @@ public final class GetTaskResult {
      */
     private final String view;
 
-    @OutputCustomType.Constructor({"appEngineHttpRequest","createTime","dispatchCount","dispatchDeadline","firstAttempt","httpRequest","lastAttempt","name","responseCount","scheduleTime","view"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        AppEngineHttpRequestResponse appEngineHttpRequest,
-        String createTime,
-        Integer dispatchCount,
-        String dispatchDeadline,
-        AttemptResponse firstAttempt,
-        HttpRequestResponse httpRequest,
-        AttemptResponse lastAttempt,
-        String name,
-        Integer responseCount,
-        String scheduleTime,
-        String view) {
+        @OutputCustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dispatchCount") Integer dispatchCount,
+        @OutputCustomType.Parameter("dispatchDeadline") String dispatchDeadline,
+        @OutputCustomType.Parameter("firstAttempt") AttemptResponse firstAttempt,
+        @OutputCustomType.Parameter("httpRequest") HttpRequestResponse httpRequest,
+        @OutputCustomType.Parameter("lastAttempt") AttemptResponse lastAttempt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("responseCount") Integer responseCount,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
+        @OutputCustomType.Parameter("view") String view) {
         this.appEngineHttpRequest = appEngineHttpRequest;
         this.createTime = createTime;
         this.dispatchCount = dispatchCount;

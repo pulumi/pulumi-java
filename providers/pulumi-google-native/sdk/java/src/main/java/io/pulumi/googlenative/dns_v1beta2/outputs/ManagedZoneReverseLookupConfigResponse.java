@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ManagedZoneReverseLookupConfigResponse {
     private final String kind;
 
-    @OutputCustomType.Constructor({"kind"})
-    private ManagedZoneReverseLookupConfigResponse(String kind) {
+    @OutputCustomType.Constructor
+    private ManagedZoneReverseLookupConfigResponse(@OutputCustomType.Parameter("kind") String kind) {
         this.kind = kind;
     }
 

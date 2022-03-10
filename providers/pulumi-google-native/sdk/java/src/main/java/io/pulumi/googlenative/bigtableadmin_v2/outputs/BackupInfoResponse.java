@@ -30,12 +30,12 @@ public final class BackupInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"backup","endTime","sourceTable","startTime"})
+    @OutputCustomType.Constructor
     private BackupInfoResponse(
-        String backup,
-        String endTime,
-        String sourceTable,
-        String startTime) {
+        @OutputCustomType.Parameter("backup") String backup,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.backup = backup;
         this.endTime = endTime;
         this.sourceTable = sourceTable;

@@ -56,17 +56,17 @@ public final class GetTargetHttpProxyResult {
      */
     private final String urlMap;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","kind","name","proxyBind","region","selfLink","urlMap"})
+    @OutputCustomType.Constructor
     private GetTargetHttpProxyResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String region,
-        String selfLink,
-        String urlMap) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("urlMap") String urlMap) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

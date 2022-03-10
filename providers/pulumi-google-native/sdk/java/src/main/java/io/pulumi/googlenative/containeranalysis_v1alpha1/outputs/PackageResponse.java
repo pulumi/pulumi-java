@@ -22,10 +22,10 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"distribution","name"})
+    @OutputCustomType.Constructor
     private PackageResponse(
-        List<DistributionResponse> distribution,
-        String name) {
+        @OutputCustomType.Parameter("distribution") List<DistributionResponse> distribution,
+        @OutputCustomType.Parameter("name") String name) {
         this.distribution = distribution;
         this.name = name;
     }

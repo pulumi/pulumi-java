@@ -118,28 +118,28 @@ public final class GetIntentResult {
      */
     private final String webhookState;
 
-    @OutputCustomType.Constructor({"action","defaultResponsePlatforms","displayName","endInteraction","events","followupIntentInfo","inputContextNames","isFallback","liveAgentHandoff","messages","mlDisabled","name","outputContexts","parameters","parentFollowupIntentName","priority","resetContexts","rootFollowupIntentName","trainingPhrases","webhookState"})
+    @OutputCustomType.Constructor
     private GetIntentResult(
-        String action,
-        List<String> defaultResponsePlatforms,
-        String displayName,
-        Boolean endInteraction,
-        List<String> events,
-        List<GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse> followupIntentInfo,
-        List<String> inputContextNames,
-        Boolean isFallback,
-        Boolean liveAgentHandoff,
-        List<GoogleCloudDialogflowV2IntentMessageResponse> messages,
-        Boolean mlDisabled,
-        String name,
-        List<GoogleCloudDialogflowV2ContextResponse> outputContexts,
-        List<GoogleCloudDialogflowV2IntentParameterResponse> parameters,
-        String parentFollowupIntentName,
-        Integer priority,
-        Boolean resetContexts,
-        String rootFollowupIntentName,
-        List<GoogleCloudDialogflowV2IntentTrainingPhraseResponse> trainingPhrases,
-        String webhookState) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("defaultResponsePlatforms") List<String> defaultResponsePlatforms,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endInteraction") Boolean endInteraction,
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("followupIntentInfo") List<GoogleCloudDialogflowV2IntentFollowupIntentInfoResponse> followupIntentInfo,
+        @OutputCustomType.Parameter("inputContextNames") List<String> inputContextNames,
+        @OutputCustomType.Parameter("isFallback") Boolean isFallback,
+        @OutputCustomType.Parameter("liveAgentHandoff") Boolean liveAgentHandoff,
+        @OutputCustomType.Parameter("messages") List<GoogleCloudDialogflowV2IntentMessageResponse> messages,
+        @OutputCustomType.Parameter("mlDisabled") Boolean mlDisabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputContexts") List<GoogleCloudDialogflowV2ContextResponse> outputContexts,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowV2IntentParameterResponse> parameters,
+        @OutputCustomType.Parameter("parentFollowupIntentName") String parentFollowupIntentName,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("resetContexts") Boolean resetContexts,
+        @OutputCustomType.Parameter("rootFollowupIntentName") String rootFollowupIntentName,
+        @OutputCustomType.Parameter("trainingPhrases") List<GoogleCloudDialogflowV2IntentTrainingPhraseResponse> trainingPhrases,
+        @OutputCustomType.Parameter("webhookState") String webhookState) {
         this.action = action;
         this.defaultResponsePlatforms = defaultResponsePlatforms;
         this.displayName = displayName;

@@ -15,8 +15,8 @@ public final class ClusterConfigResponse {
      */
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
-    @OutputCustomType.Constructor({"clusterAutoscalingConfig"})
-    private ClusterConfigResponse(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
+    @OutputCustomType.Constructor
+    private ClusterConfigResponse(@OutputCustomType.Parameter("clusterAutoscalingConfig") ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
         this.clusterAutoscalingConfig = clusterAutoscalingConfig;
     }
 

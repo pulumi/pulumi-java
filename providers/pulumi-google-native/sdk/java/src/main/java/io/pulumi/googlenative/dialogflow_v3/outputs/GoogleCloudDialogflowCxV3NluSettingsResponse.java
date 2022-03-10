@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse {
      */
     private final String modelType;
 
-    @OutputCustomType.Constructor({"classificationThreshold","modelTrainingMode","modelType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3NluSettingsResponse(
-        Double classificationThreshold,
-        String modelTrainingMode,
-        String modelType) {
+        @OutputCustomType.Parameter("classificationThreshold") Double classificationThreshold,
+        @OutputCustomType.Parameter("modelTrainingMode") String modelTrainingMode,
+        @OutputCustomType.Parameter("modelType") String modelType) {
         this.classificationThreshold = classificationThreshold;
         this.modelTrainingMode = modelTrainingMode;
         this.modelType = modelType;

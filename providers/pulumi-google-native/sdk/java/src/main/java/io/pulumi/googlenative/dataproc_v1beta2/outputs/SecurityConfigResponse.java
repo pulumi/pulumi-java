@@ -15,8 +15,8 @@ public final class SecurityConfigResponse {
      */
     private final KerberosConfigResponse kerberosConfig;
 
-    @OutputCustomType.Constructor({"kerberosConfig"})
-    private SecurityConfigResponse(KerberosConfigResponse kerberosConfig) {
+    @OutputCustomType.Constructor
+    private SecurityConfigResponse(@OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 

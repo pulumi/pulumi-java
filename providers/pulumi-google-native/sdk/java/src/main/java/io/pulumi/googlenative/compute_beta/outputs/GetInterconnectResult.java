@@ -136,32 +136,32 @@ public final class GetInterconnectResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"adminEnabled","circuitInfos","creationTimestamp","customerName","description","expectedOutages","googleIpAddress","googleReferenceId","interconnectAttachments","interconnectType","kind","labelFingerprint","labels","linkType","location","name","nocContactEmail","operationalStatus","peerIpAddress","provisionedLinkCount","requestedLinkCount","satisfiesPzs","selfLink","state"})
+    @OutputCustomType.Constructor
     private GetInterconnectResult(
-        Boolean adminEnabled,
-        List<InterconnectCircuitInfoResponse> circuitInfos,
-        String creationTimestamp,
-        String customerName,
-        String description,
-        List<InterconnectOutageNotificationResponse> expectedOutages,
-        String googleIpAddress,
-        String googleReferenceId,
-        List<String> interconnectAttachments,
-        String interconnectType,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String linkType,
-        String location,
-        String name,
-        String nocContactEmail,
-        String operationalStatus,
-        String peerIpAddress,
-        Integer provisionedLinkCount,
-        Integer requestedLinkCount,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String state) {
+        @OutputCustomType.Parameter("adminEnabled") Boolean adminEnabled,
+        @OutputCustomType.Parameter("circuitInfos") List<InterconnectCircuitInfoResponse> circuitInfos,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customerName") String customerName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expectedOutages") List<InterconnectOutageNotificationResponse> expectedOutages,
+        @OutputCustomType.Parameter("googleIpAddress") String googleIpAddress,
+        @OutputCustomType.Parameter("googleReferenceId") String googleReferenceId,
+        @OutputCustomType.Parameter("interconnectAttachments") List<String> interconnectAttachments,
+        @OutputCustomType.Parameter("interconnectType") String interconnectType,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linkType") String linkType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nocContactEmail") String nocContactEmail,
+        @OutputCustomType.Parameter("operationalStatus") String operationalStatus,
+        @OutputCustomType.Parameter("peerIpAddress") String peerIpAddress,
+        @OutputCustomType.Parameter("provisionedLinkCount") Integer provisionedLinkCount,
+        @OutputCustomType.Parameter("requestedLinkCount") Integer requestedLinkCount,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("state") String state) {
         this.adminEnabled = adminEnabled;
         this.circuitInfos = circuitInfos;
         this.creationTimestamp = creationTimestamp;

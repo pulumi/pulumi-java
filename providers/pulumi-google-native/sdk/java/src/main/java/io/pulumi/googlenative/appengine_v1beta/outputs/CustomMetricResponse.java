@@ -36,13 +36,13 @@ public final class CustomMetricResponse {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor({"filter","metricName","singleInstanceAssignment","targetType","targetUtilization"})
+    @OutputCustomType.Constructor
     private CustomMetricResponse(
-        String filter,
-        String metricName,
-        Double singleInstanceAssignment,
-        String targetType,
-        Double targetUtilization) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.filter = filter;
         this.metricName = metricName;
         this.singleInstanceAssignment = singleInstanceAssignment;

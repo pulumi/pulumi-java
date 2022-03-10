@@ -20,10 +20,10 @@ public final class ProjectRepoIdResponse {
      */
     private final String repoName;
 
-    @OutputCustomType.Constructor({"project","repoName"})
+    @OutputCustomType.Constructor
     private ProjectRepoIdResponse(
-        String project,
-        String repoName) {
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName) {
         this.project = project;
         this.repoName = repoName;
     }

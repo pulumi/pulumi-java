@@ -59,17 +59,17 @@ public final class GetProviderResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"attributeCondition","attributeMapping","aws","description","disabled","displayName","name","oidc","state"})
+    @OutputCustomType.Constructor
     private GetProviderResult(
-        String attributeCondition,
-        Map<String,String> attributeMapping,
-        AwsResponse aws,
-        String description,
-        Boolean disabled,
-        String displayName,
-        String name,
-        OidcResponse oidc,
-        String state) {
+        @OutputCustomType.Parameter("attributeCondition") String attributeCondition,
+        @OutputCustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
+        @OutputCustomType.Parameter("aws") AwsResponse aws,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oidc") OidcResponse oidc,
+        @OutputCustomType.Parameter("state") String state) {
         this.attributeCondition = attributeCondition;
         this.attributeMapping = attributeMapping;
         this.aws = aws;

@@ -22,10 +22,10 @@ public final class OracleSchemaResponse {
      */
     private final String schemaName;
 
-    @OutputCustomType.Constructor({"oracleTables","schemaName"})
+    @OutputCustomType.Constructor
     private OracleSchemaResponse(
-        List<OracleTableResponse> oracleTables,
-        String schemaName) {
+        @OutputCustomType.Parameter("oracleTables") List<OracleTableResponse> oracleTables,
+        @OutputCustomType.Parameter("schemaName") String schemaName) {
         this.oracleTables = oracleTables;
         this.schemaName = schemaName;
     }

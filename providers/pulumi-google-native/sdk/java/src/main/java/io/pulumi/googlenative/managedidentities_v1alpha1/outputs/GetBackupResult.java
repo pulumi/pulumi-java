@@ -46,15 +46,15 @@ public final class GetBackupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","labels","name","state","statusMessage","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String statusMessage,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;

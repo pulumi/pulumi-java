@@ -52,16 +52,16 @@ public final class HttpHeaderMatchResponse {
      */
     private final String suffixMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","headerName","invertMatch","prefixMatch","presentMatch","rangeMatch","regexMatch","suffixMatch"})
+    @OutputCustomType.Constructor
     private HttpHeaderMatchResponse(
-        String exactMatch,
-        String headerName,
-        Boolean invertMatch,
-        String prefixMatch,
-        Boolean presentMatch,
-        Int64RangeMatchResponse rangeMatch,
-        String regexMatch,
-        String suffixMatch) {
+        @OutputCustomType.Parameter("exactMatch") String exactMatch,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("invertMatch") Boolean invertMatch,
+        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
+        @OutputCustomType.Parameter("presentMatch") Boolean presentMatch,
+        @OutputCustomType.Parameter("rangeMatch") Int64RangeMatchResponse rangeMatch,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch,
+        @OutputCustomType.Parameter("suffixMatch") String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;

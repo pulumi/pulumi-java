@@ -26,11 +26,11 @@ public final class InstanceGroupManagerVersionResponse {
      */
     private final FixedOrPercentResponse targetSize;
 
-    @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerVersionResponse(
-        String instanceTemplate,
-        String name,
-        FixedOrPercentResponse targetSize) {
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetSize") FixedOrPercentResponse targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;

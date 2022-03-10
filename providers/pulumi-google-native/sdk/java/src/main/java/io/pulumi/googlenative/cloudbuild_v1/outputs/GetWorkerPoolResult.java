@@ -62,18 +62,18 @@ public final class GetWorkerPoolResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"annotations","createTime","deleteTime","displayName","etag","name","privatePoolV1Config","state","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        Map<String,String> annotations,
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        String name,
-        PrivatePoolV1ConfigResponse privatePoolV1Config,
-        String state,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privatePoolV1Config") PrivatePoolV1ConfigResponse privatePoolV1Config,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.annotations = annotations;
         this.createTime = createTime;
         this.deleteTime = deleteTime;

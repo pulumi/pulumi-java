@@ -31,12 +31,12 @@ public final class FacetOptionsResponse {
      */
     private final String sourceName;
 
-    @OutputCustomType.Constructor({"numFacetBuckets","objectType","operatorName","sourceName"})
+    @OutputCustomType.Constructor
     private FacetOptionsResponse(
-        Integer numFacetBuckets,
-        String objectType,
-        String operatorName,
-        String sourceName) {
+        @OutputCustomType.Parameter("numFacetBuckets") Integer numFacetBuckets,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("operatorName") String operatorName,
+        @OutputCustomType.Parameter("sourceName") String sourceName) {
         this.numFacetBuckets = numFacetBuckets;
         this.objectType = objectType;
         this.operatorName = operatorName;

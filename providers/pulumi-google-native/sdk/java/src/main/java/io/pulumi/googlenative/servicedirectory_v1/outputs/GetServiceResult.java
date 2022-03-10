@@ -28,11 +28,11 @@ public final class GetServiceResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"annotations","endpoints","name"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        Map<String,String> annotations,
-        List<EndpointResponse> endpoints,
-        String name) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("name") String name) {
         this.annotations = annotations;
         this.endpoints = endpoints;
         this.name = name;

@@ -21,10 +21,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
      */
     private final String totalCount;
 
-    @OutputCustomType.Constructor({"instanceProperties","totalCount"})
+    @OutputCustomType.Constructor
     private FutureReservationSpecificSKUPropertiesResponse(
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
-        String totalCount) {
+        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
+        @OutputCustomType.Parameter("totalCount") String totalCount) {
         this.instanceProperties = instanceProperties;
         this.totalCount = totalCount;
     }

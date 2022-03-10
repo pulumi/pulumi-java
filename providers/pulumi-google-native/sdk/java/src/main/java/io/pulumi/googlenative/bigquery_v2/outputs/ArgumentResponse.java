@@ -31,12 +31,12 @@ public final class ArgumentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"argumentKind","dataType","mode","name"})
+    @OutputCustomType.Constructor
     private ArgumentResponse(
-        String argumentKind,
-        StandardSqlDataTypeResponse dataType,
-        String mode,
-        String name) {
+        @OutputCustomType.Parameter("argumentKind") String argumentKind,
+        @OutputCustomType.Parameter("dataType") StandardSqlDataTypeResponse dataType,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("name") String name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;

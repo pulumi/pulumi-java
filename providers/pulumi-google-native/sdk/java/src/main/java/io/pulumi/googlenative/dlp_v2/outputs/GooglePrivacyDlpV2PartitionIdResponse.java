@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"namespaceId","project"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2PartitionIdResponse(
-        String namespaceId,
-        String project) {
+        @OutputCustomType.Parameter("namespaceId") String namespaceId,
+        @OutputCustomType.Parameter("project") String project) {
         this.namespaceId = namespaceId;
         this.project = project;
     }

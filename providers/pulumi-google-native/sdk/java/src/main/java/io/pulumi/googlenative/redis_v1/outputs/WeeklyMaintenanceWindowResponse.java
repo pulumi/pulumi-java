@@ -26,11 +26,11 @@ public final class WeeklyMaintenanceWindowResponse {
      */
     private final TimeOfDayResponse startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private WeeklyMaintenanceWindowResponse(
-        String day,
-        String duration,
-        TimeOfDayResponse startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") TimeOfDayResponse startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

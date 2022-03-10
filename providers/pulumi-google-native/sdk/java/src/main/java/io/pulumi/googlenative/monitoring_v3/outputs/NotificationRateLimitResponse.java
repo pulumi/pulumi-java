@@ -15,8 +15,8 @@ public final class NotificationRateLimitResponse {
      */
     private final String period;
 
-    @OutputCustomType.Constructor({"period"})
-    private NotificationRateLimitResponse(String period) {
+    @OutputCustomType.Constructor
+    private NotificationRateLimitResponse(@OutputCustomType.Parameter("period") String period) {
         this.period = period;
     }
 

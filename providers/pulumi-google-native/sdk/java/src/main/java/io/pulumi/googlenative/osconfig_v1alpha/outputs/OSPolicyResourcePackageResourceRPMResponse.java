@@ -21,10 +21,10 @@ public final class OSPolicyResourcePackageResourceRPMResponse {
      */
     private final OSPolicyResourceFileResponse source;
 
-    @OutputCustomType.Constructor({"pullDeps","source"})
+    @OutputCustomType.Constructor
     private OSPolicyResourcePackageResourceRPMResponse(
-        Boolean pullDeps,
-        OSPolicyResourceFileResponse source) {
+        @OutputCustomType.Parameter("pullDeps") Boolean pullDeps,
+        @OutputCustomType.Parameter("source") OSPolicyResourceFileResponse source) {
         this.pullDeps = pullDeps;
         this.source = source;
     }

@@ -20,10 +20,10 @@ public final class BigQueryOptionsResponse {
      */
     private final Boolean usesTimestampColumnPartitioning;
 
-    @OutputCustomType.Constructor({"usePartitionedTables","usesTimestampColumnPartitioning"})
+    @OutputCustomType.Constructor
     private BigQueryOptionsResponse(
-        Boolean usePartitionedTables,
-        Boolean usesTimestampColumnPartitioning) {
+        @OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables,
+        @OutputCustomType.Parameter("usesTimestampColumnPartitioning") Boolean usesTimestampColumnPartitioning) {
         this.usePartitionedTables = usePartitionedTables;
         this.usesTimestampColumnPartitioning = usesTimestampColumnPartitioning;
     }

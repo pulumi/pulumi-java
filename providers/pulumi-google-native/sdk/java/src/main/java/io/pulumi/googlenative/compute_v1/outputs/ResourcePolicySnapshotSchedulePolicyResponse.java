@@ -27,11 +27,11 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
      */
     private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
-    @OutputCustomType.Constructor({"retentionPolicy","schedule","snapshotProperties"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyResponse(
-        ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
-        ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
-        ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
+        @OutputCustomType.Parameter("retentionPolicy") ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
+        @OutputCustomType.Parameter("snapshotProperties") ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
         this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;

@@ -27,11 +27,11 @@ public final class GetSessionEntityTypeResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"entities","entityOverrideMode","name"})
+    @OutputCustomType.Constructor
     private GetSessionEntityTypeResult(
-        List<GoogleCloudDialogflowV2EntityTypeEntityResponse> entities,
-        String entityOverrideMode,
-        String name) {
+        @OutputCustomType.Parameter("entities") List<GoogleCloudDialogflowV2EntityTypeEntityResponse> entities,
+        @OutputCustomType.Parameter("entityOverrideMode") String entityOverrideMode,
+        @OutputCustomType.Parameter("name") String name) {
         this.entities = entities;
         this.entityOverrideMode = entityOverrideMode;
         this.name = name;

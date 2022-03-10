@@ -61,18 +61,18 @@ public final class GetTargetSslProxyResult {
      */
     private final String sslPolicy;
 
-    @OutputCustomType.Constructor({"certificateMap","creationTimestamp","description","kind","name","proxyHeader","selfLink","service","sslCertificates","sslPolicy"})
+    @OutputCustomType.Constructor
     private GetTargetSslProxyResult(
-        String certificateMap,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        String proxyHeader,
-        String selfLink,
-        String service,
-        List<String> sslCertificates,
-        String sslPolicy) {
+        @OutputCustomType.Parameter("certificateMap") String certificateMap,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("sslCertificates") List<String> sslCertificates,
+        @OutputCustomType.Parameter("sslPolicy") String sslPolicy) {
         this.certificateMap = certificateMap;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -15,8 +15,8 @@ public final class RestrictionEvaluationsResponse {
      */
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
-    @OutputCustomType.Constructor({"memberRestrictionEvaluation"})
-    private RestrictionEvaluationsResponse(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+    @OutputCustomType.Constructor
+    private RestrictionEvaluationsResponse(@OutputCustomType.Parameter("memberRestrictionEvaluation") MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
         this.memberRestrictionEvaluation = memberRestrictionEvaluation;
     }
 

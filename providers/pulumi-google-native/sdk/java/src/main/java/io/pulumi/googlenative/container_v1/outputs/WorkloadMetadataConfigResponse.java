@@ -15,8 +15,8 @@ public final class WorkloadMetadataConfigResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private WorkloadMetadataConfigResponse(String mode) {
+    @OutputCustomType.Constructor
+    private WorkloadMetadataConfigResponse(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

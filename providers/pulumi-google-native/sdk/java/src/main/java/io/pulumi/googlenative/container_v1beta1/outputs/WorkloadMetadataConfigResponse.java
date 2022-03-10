@@ -20,10 +20,10 @@ public final class WorkloadMetadataConfigResponse {
      */
     private final String nodeMetadata;
 
-    @OutputCustomType.Constructor({"mode","nodeMetadata"})
+    @OutputCustomType.Constructor
     private WorkloadMetadataConfigResponse(
-        String mode,
-        String nodeMetadata) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("nodeMetadata") String nodeMetadata) {
         this.mode = mode;
         this.nodeMetadata = nodeMetadata;
     }

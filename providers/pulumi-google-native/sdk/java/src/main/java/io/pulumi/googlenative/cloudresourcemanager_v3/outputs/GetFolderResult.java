@@ -50,16 +50,16 @@ public final class GetFolderResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","displayName","etag","name","parent","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetFolderResult(
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        String name,
-        String parent,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

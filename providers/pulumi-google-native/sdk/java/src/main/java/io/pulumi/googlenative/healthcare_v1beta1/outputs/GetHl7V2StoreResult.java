@@ -46,14 +46,14 @@ public final class GetHl7V2StoreResult {
      */
     private final Boolean rejectDuplicateMessage;
 
-    @OutputCustomType.Constructor({"labels","name","notificationConfig","notificationConfigs","parserConfig","rejectDuplicateMessage"})
+    @OutputCustomType.Constructor
     private GetHl7V2StoreResult(
-        Map<String,String> labels,
-        String name,
-        NotificationConfigResponse notificationConfig,
-        List<Hl7V2NotificationConfigResponse> notificationConfigs,
-        ParserConfigResponse parserConfig,
-        Boolean rejectDuplicateMessage) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("notificationConfigs") List<Hl7V2NotificationConfigResponse> notificationConfigs,
+        @OutputCustomType.Parameter("parserConfig") ParserConfigResponse parserConfig,
+        @OutputCustomType.Parameter("rejectDuplicateMessage") Boolean rejectDuplicateMessage) {
         this.labels = labels;
         this.name = name;
         this.notificationConfig = notificationConfig;

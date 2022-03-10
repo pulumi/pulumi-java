@@ -78,20 +78,20 @@ public final class GetConnectionProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","forwardSshConnectivity","gcsProfile","labels","mysqlProfile","name","noConnectivity","oracleProfile","privateConnectivity","staticServiceIpConnectivity","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectionProfileResult(
-        String createTime,
-        String displayName,
-        ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
-        GcsProfileResponse gcsProfile,
-        Map<String,String> labels,
-        MysqlProfileResponse mysqlProfile,
-        String name,
-        NoConnectivitySettingsResponse noConnectivity,
-        OracleProfileResponse oracleProfile,
-        PrivateConnectivityResponse privateConnectivity,
-        StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("forwardSshConnectivity") ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
+        @OutputCustomType.Parameter("gcsProfile") GcsProfileResponse gcsProfile,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mysqlProfile") MysqlProfileResponse mysqlProfile,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noConnectivity") NoConnectivitySettingsResponse noConnectivity,
+        @OutputCustomType.Parameter("oracleProfile") OracleProfileResponse oracleProfile,
+        @OutputCustomType.Parameter("privateConnectivity") PrivateConnectivityResponse privateConnectivity,
+        @OutputCustomType.Parameter("staticServiceIpConnectivity") StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.forwardSshConnectivity = forwardSshConnectivity;

@@ -35,13 +35,13 @@ public final class DeprecationStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"deleted","deprecated","obsolete","replacement","state"})
+    @OutputCustomType.Constructor
     private DeprecationStatusResponse(
-        String deleted,
-        String deprecated,
-        String obsolete,
-        String replacement,
-        String state) {
+        @OutputCustomType.Parameter("deleted") String deleted,
+        @OutputCustomType.Parameter("deprecated") String deprecated,
+        @OutputCustomType.Parameter("obsolete") String obsolete,
+        @OutputCustomType.Parameter("replacement") String replacement,
+        @OutputCustomType.Parameter("state") String state) {
         this.deleted = deleted;
         this.deprecated = deprecated;
         this.obsolete = obsolete;

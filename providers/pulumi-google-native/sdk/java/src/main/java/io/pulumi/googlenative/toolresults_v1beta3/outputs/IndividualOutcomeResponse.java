@@ -24,12 +24,12 @@ public final class IndividualOutcomeResponse {
     private final DurationResponse runDuration;
     private final String stepId;
 
-    @OutputCustomType.Constructor({"multistepNumber","outcomeSummary","runDuration","stepId"})
+    @OutputCustomType.Constructor
     private IndividualOutcomeResponse(
-        Integer multistepNumber,
-        String outcomeSummary,
-        DurationResponse runDuration,
-        String stepId) {
+        @OutputCustomType.Parameter("multistepNumber") Integer multistepNumber,
+        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.multistepNumber = multistepNumber;
         this.outcomeSummary = outcomeSummary;
         this.runDuration = runDuration;

@@ -50,15 +50,15 @@ public final class HttpRouteRuleMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor({"fullPathMatch","headerMatches","ignoreCase","metadataFilters","prefixMatch","queryParameterMatches","regexMatch"})
+    @OutputCustomType.Constructor
     private HttpRouteRuleMatchResponse(
-        String fullPathMatch,
-        List<HttpHeaderMatchResponse> headerMatches,
-        Boolean ignoreCase,
-        List<MetadataFilterResponse> metadataFilters,
-        String prefixMatch,
-        List<HttpQueryParameterMatchResponse> queryParameterMatches,
-        String regexMatch) {
+        @OutputCustomType.Parameter("fullPathMatch") String fullPathMatch,
+        @OutputCustomType.Parameter("headerMatches") List<HttpHeaderMatchResponse> headerMatches,
+        @OutputCustomType.Parameter("ignoreCase") Boolean ignoreCase,
+        @OutputCustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
+        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
+        @OutputCustomType.Parameter("queryParameterMatches") List<HttpQueryParameterMatchResponse> queryParameterMatches,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

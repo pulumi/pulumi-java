@@ -26,11 +26,11 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"force","tableUri","writeDisposition"})
+    @OutputCustomType.Constructor
     private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(
-        Boolean force,
-        String tableUri,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("force") Boolean force,
+        @OutputCustomType.Parameter("tableUri") String tableUri,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.force = force;
         this.tableUri = tableUri;
         this.writeDisposition = writeDisposition;

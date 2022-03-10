@@ -26,11 +26,11 @@ public final class StatefulPolicyPreservedStateResponse {
      */
     private final Map<String,String> internalIPs;
 
-    @OutputCustomType.Constructor({"disks","externalIPs","internalIPs"})
+    @OutputCustomType.Constructor
     private StatefulPolicyPreservedStateResponse(
-        Map<String,String> disks,
-        Map<String,String> externalIPs,
-        Map<String,String> internalIPs) {
+        @OutputCustomType.Parameter("disks") Map<String,String> disks,
+        @OutputCustomType.Parameter("externalIPs") Map<String,String> externalIPs,
+        @OutputCustomType.Parameter("internalIPs") Map<String,String> internalIPs) {
         this.disks = disks;
         this.externalIPs = externalIPs;
         this.internalIPs = internalIPs;

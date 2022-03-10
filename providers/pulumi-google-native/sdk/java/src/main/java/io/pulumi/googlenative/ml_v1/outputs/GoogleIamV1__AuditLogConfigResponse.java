@@ -21,10 +21,10 @@ public final class GoogleIamV1__AuditLogConfigResponse {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"exemptedMembers","logType"})
+    @OutputCustomType.Constructor
     private GoogleIamV1__AuditLogConfigResponse(
-        List<String> exemptedMembers,
-        String logType) {
+        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }

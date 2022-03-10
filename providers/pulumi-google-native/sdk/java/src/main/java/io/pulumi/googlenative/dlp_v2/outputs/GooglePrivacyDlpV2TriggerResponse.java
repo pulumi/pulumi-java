@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2TriggerResponse {
      */
     private final GooglePrivacyDlpV2ScheduleResponse schedule;
 
-    @OutputCustomType.Constructor({"manual","schedule"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TriggerResponse(
-        GooglePrivacyDlpV2ManualResponse manual,
-        GooglePrivacyDlpV2ScheduleResponse schedule) {
+        @OutputCustomType.Parameter("manual") GooglePrivacyDlpV2ManualResponse manual,
+        @OutputCustomType.Parameter("schedule") GooglePrivacyDlpV2ScheduleResponse schedule) {
         this.manual = manual;
         this.schedule = schedule;
     }

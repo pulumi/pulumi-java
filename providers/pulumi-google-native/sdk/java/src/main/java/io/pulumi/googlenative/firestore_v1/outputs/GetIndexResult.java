@@ -32,12 +32,12 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"fields","name","queryScope","state"})
+    @OutputCustomType.Constructor
     private GetIndexResult(
-        List<GoogleFirestoreAdminV1IndexFieldResponse> fields,
-        String name,
-        String queryScope,
-        String state) {
+        @OutputCustomType.Parameter("fields") List<GoogleFirestoreAdminV1IndexFieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryScope") String queryScope,
+        @OutputCustomType.Parameter("state") String state) {
         this.fields = fields;
         this.name = name;
         this.queryScope = queryScope;

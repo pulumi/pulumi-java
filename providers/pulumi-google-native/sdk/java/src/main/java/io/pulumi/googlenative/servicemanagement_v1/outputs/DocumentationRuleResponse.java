@@ -25,11 +25,11 @@ public final class DocumentationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"deprecationDescription","description","selector"})
+    @OutputCustomType.Constructor
     private DocumentationRuleResponse(
-        String deprecationDescription,
-        String description,
-        String selector) {
+        @OutputCustomType.Parameter("deprecationDescription") String deprecationDescription,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.deprecationDescription = deprecationDescription;
         this.description = description;
         this.selector = selector;

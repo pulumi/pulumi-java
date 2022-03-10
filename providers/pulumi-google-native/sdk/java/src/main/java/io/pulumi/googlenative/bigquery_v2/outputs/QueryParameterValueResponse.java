@@ -27,11 +27,11 @@ public final class QueryParameterValueResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"arrayValues","structValues","value"})
+    @OutputCustomType.Constructor
     private QueryParameterValueResponse(
-        List<QueryParameterValueResponse> arrayValues,
-        Map<String,String> structValues,
-        String value) {
+        @OutputCustomType.Parameter("arrayValues") List<QueryParameterValueResponse> arrayValues,
+        @OutputCustomType.Parameter("structValues") Map<String,String> structValues,
+        @OutputCustomType.Parameter("value") String value) {
         this.arrayValues = arrayValues;
         this.structValues = structValues;
         this.value = value;

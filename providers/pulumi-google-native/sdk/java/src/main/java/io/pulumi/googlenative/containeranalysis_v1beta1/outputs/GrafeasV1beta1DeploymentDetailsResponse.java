@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
      */
     private final DeploymentResponse deployment;
 
-    @OutputCustomType.Constructor({"deployment"})
-    private GrafeasV1beta1DeploymentDetailsResponse(DeploymentResponse deployment) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1DeploymentDetailsResponse(@OutputCustomType.Parameter("deployment") DeploymentResponse deployment) {
         this.deployment = deployment;
     }
 

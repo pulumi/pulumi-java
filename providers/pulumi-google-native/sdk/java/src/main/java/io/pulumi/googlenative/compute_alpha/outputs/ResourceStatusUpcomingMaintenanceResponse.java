@@ -15,8 +15,8 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
      */
     private final Boolean canReschedule;
 
-    @OutputCustomType.Constructor({"canReschedule"})
-    private ResourceStatusUpcomingMaintenanceResponse(Boolean canReschedule) {
+    @OutputCustomType.Constructor
+    private ResourceStatusUpcomingMaintenanceResponse(@OutputCustomType.Parameter("canReschedule") Boolean canReschedule) {
         this.canReschedule = canReschedule;
     }
 

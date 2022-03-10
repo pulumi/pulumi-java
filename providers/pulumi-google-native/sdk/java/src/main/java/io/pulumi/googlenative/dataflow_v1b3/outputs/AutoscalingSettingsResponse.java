@@ -21,10 +21,10 @@ public final class AutoscalingSettingsResponse {
      */
     private final Integer maxNumWorkers;
 
-    @OutputCustomType.Constructor({"algorithm","maxNumWorkers"})
+    @OutputCustomType.Constructor
     private AutoscalingSettingsResponse(
-        String algorithm,
-        Integer maxNumWorkers) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("maxNumWorkers") Integer maxNumWorkers) {
         this.algorithm = algorithm;
         this.maxNumWorkers = maxNumWorkers;
     }

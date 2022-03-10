@@ -20,10 +20,10 @@ public final class PacketMirroringForwardingRuleInfoResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"canonicalUrl","url"})
+    @OutputCustomType.Constructor
     private PacketMirroringForwardingRuleInfoResponse(
-        String canonicalUrl,
-        String url) {
+        @OutputCustomType.Parameter("canonicalUrl") String canonicalUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.canonicalUrl = canonicalUrl;
         this.url = url;
     }

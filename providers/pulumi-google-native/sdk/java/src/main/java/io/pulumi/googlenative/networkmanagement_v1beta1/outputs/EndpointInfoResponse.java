@@ -51,16 +51,16 @@ public final class EndpointInfoResponse {
      */
     private final Integer sourcePort;
 
-    @OutputCustomType.Constructor({"destinationIp","destinationNetworkUri","destinationPort","protocol","sourceAgentUri","sourceIp","sourceNetworkUri","sourcePort"})
+    @OutputCustomType.Constructor
     private EndpointInfoResponse(
-        String destinationIp,
-        String destinationNetworkUri,
-        Integer destinationPort,
-        String protocol,
-        String sourceAgentUri,
-        String sourceIp,
-        String sourceNetworkUri,
-        Integer sourcePort) {
+        @OutputCustomType.Parameter("destinationIp") String destinationIp,
+        @OutputCustomType.Parameter("destinationNetworkUri") String destinationNetworkUri,
+        @OutputCustomType.Parameter("destinationPort") Integer destinationPort,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("sourceAgentUri") String sourceAgentUri,
+        @OutputCustomType.Parameter("sourceIp") String sourceIp,
+        @OutputCustomType.Parameter("sourceNetworkUri") String sourceNetworkUri,
+        @OutputCustomType.Parameter("sourcePort") Integer sourcePort) {
         this.destinationIp = destinationIp;
         this.destinationNetworkUri = destinationNetworkUri;
         this.destinationPort = destinationPort;

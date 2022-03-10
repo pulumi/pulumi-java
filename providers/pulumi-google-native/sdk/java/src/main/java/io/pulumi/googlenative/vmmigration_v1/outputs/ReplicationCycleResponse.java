@@ -21,10 +21,10 @@ public final class ReplicationCycleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"progressPercent","startTime"})
+    @OutputCustomType.Constructor
     private ReplicationCycleResponse(
-        Integer progressPercent,
-        String startTime) {
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.progressPercent = progressPercent;
         this.startTime = startTime;
     }

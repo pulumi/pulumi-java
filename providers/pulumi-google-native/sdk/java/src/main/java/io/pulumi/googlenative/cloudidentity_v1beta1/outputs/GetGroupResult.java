@@ -70,19 +70,19 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"additionalGroupKeys","createTime","description","displayName","dynamicGroupMetadata","groupKey","labels","name","parent","posixGroups","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        List<EntityKeyResponse> additionalGroupKeys,
-        String createTime,
-        String description,
-        String displayName,
-        DynamicGroupMetadataResponse dynamicGroupMetadata,
-        EntityKeyResponse groupKey,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        List<PosixGroupResponse> posixGroups,
-        String updateTime) {
+        @OutputCustomType.Parameter("additionalGroupKeys") List<EntityKeyResponse> additionalGroupKeys,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
+        @OutputCustomType.Parameter("groupKey") EntityKeyResponse groupKey,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("posixGroups") List<PosixGroupResponse> posixGroups,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.additionalGroupKeys = additionalGroupKeys;
         this.createTime = createTime;
         this.description = description;

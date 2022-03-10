@@ -43,14 +43,14 @@ public final class DevicePolicyResponse {
      */
     private final Boolean requireScreenlock;
 
-    @OutputCustomType.Constructor({"allowedDeviceManagementLevels","allowedEncryptionStatuses","osConstraints","requireAdminApproval","requireCorpOwned","requireScreenlock"})
+    @OutputCustomType.Constructor
     private DevicePolicyResponse(
-        List<String> allowedDeviceManagementLevels,
-        List<String> allowedEncryptionStatuses,
-        List<OsConstraintResponse> osConstraints,
-        Boolean requireAdminApproval,
-        Boolean requireCorpOwned,
-        Boolean requireScreenlock) {
+        @OutputCustomType.Parameter("allowedDeviceManagementLevels") List<String> allowedDeviceManagementLevels,
+        @OutputCustomType.Parameter("allowedEncryptionStatuses") List<String> allowedEncryptionStatuses,
+        @OutputCustomType.Parameter("osConstraints") List<OsConstraintResponse> osConstraints,
+        @OutputCustomType.Parameter("requireAdminApproval") Boolean requireAdminApproval,
+        @OutputCustomType.Parameter("requireCorpOwned") Boolean requireCorpOwned,
+        @OutputCustomType.Parameter("requireScreenlock") Boolean requireScreenlock) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         this.osConstraints = osConstraints;

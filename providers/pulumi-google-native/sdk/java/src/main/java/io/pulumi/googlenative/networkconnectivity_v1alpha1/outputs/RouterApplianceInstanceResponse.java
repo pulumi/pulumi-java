@@ -21,11 +21,11 @@ public final class RouterApplianceInstanceResponse {
      */
     private final String virtualMachine;
 
-    @OutputCustomType.Constructor({"ipAddress","networkInterface","virtualMachine"})
+    @OutputCustomType.Constructor
     private RouterApplianceInstanceResponse(
-        String ipAddress,
-        String networkInterface,
-        String virtualMachine) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("networkInterface") String networkInterface,
+        @OutputCustomType.Parameter("virtualMachine") String virtualMachine) {
         this.ipAddress = ipAddress;
         this.networkInterface = networkInterface;
         this.virtualMachine = virtualMachine;

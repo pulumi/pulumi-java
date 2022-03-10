@@ -61,18 +61,18 @@ public final class QuotaLimitResponse {
      */
     private final Map<String,String> values;
 
-    @OutputCustomType.Constructor({"defaultLimit","description","displayName","duration","freeTier","maxLimit","metric","name","unit","values"})
+    @OutputCustomType.Constructor
     private QuotaLimitResponse(
-        String defaultLimit,
-        String description,
-        String displayName,
-        String duration,
-        String freeTier,
-        String maxLimit,
-        String metric,
-        String name,
-        String unit,
-        Map<String,String> values) {
+        @OutputCustomType.Parameter("defaultLimit") String defaultLimit,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("freeTier") String freeTier,
+        @OutputCustomType.Parameter("maxLimit") String maxLimit,
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("values") Map<String,String> values) {
         this.defaultLimit = defaultLimit;
         this.description = description;
         this.displayName = displayName;

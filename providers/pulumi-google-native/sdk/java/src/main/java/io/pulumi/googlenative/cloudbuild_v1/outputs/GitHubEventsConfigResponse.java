@@ -42,14 +42,14 @@ public final class GitHubEventsConfigResponse {
      */
     private final PushFilterResponse push;
 
-    @OutputCustomType.Constructor({"enterpriseConfigResourceName","installationId","name","owner","pullRequest","push"})
+    @OutputCustomType.Constructor
     private GitHubEventsConfigResponse(
-        String enterpriseConfigResourceName,
-        String installationId,
-        String name,
-        String owner,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push) {
+        @OutputCustomType.Parameter("enterpriseConfigResourceName") String enterpriseConfigResourceName,
+        @OutputCustomType.Parameter("installationId") String installationId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @OutputCustomType.Parameter("push") PushFilterResponse push) {
         this.enterpriseConfigResourceName = enterpriseConfigResourceName;
         this.installationId = installationId;
         this.name = name;

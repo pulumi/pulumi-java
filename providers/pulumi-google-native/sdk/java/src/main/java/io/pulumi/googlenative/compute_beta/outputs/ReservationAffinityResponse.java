@@ -26,11 +26,11 @@ public final class ReservationAffinityResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"consumeReservationType","key","values"})
+    @OutputCustomType.Constructor
     private ReservationAffinityResponse(
-        String consumeReservationType,
-        String key,
-        List<String> values) {
+        @OutputCustomType.Parameter("consumeReservationType") String consumeReservationType,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;

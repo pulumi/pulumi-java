@@ -62,18 +62,18 @@ public final class GetBackupResult {
      */
     private final String versionTime;
 
-    @OutputCustomType.Constructor({"createTime","database","databaseDialect","encryptionInfo","expireTime","name","referencingDatabases","sizeBytes","state","versionTime"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        String createTime,
-        String database,
-        String databaseDialect,
-        EncryptionInfoResponse encryptionInfo,
-        String expireTime,
-        String name,
-        List<String> referencingDatabases,
-        String sizeBytes,
-        String state,
-        String versionTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("databaseDialect") String databaseDialect,
+        @OutputCustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("referencingDatabases") List<String> referencingDatabases,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("versionTime") String versionTime) {
         this.createTime = createTime;
         this.database = database;
         this.databaseDialect = databaseDialect;

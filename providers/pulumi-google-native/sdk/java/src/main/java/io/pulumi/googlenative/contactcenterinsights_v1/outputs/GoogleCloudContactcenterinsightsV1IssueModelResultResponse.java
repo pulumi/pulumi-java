@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
      */
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
-    @OutputCustomType.Constructor({"issueModel","issues"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelResultResponse(
-        String issueModel,
-        List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
+        @OutputCustomType.Parameter("issueModel") String issueModel,
+        @OutputCustomType.Parameter("issues") List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
         this.issueModel = issueModel;
         this.issues = issues;
     }

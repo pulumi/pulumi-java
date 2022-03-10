@@ -44,14 +44,14 @@ public final class ConditionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"conditionAbsent","conditionMatchedLog","conditionMonitoringQueryLanguage","conditionThreshold","displayName","name"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        MetricAbsenceResponse conditionAbsent,
-        LogMatchResponse conditionMatchedLog,
-        MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
-        MetricThresholdResponse conditionThreshold,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("conditionAbsent") MetricAbsenceResponse conditionAbsent,
+        @OutputCustomType.Parameter("conditionMatchedLog") LogMatchResponse conditionMatchedLog,
+        @OutputCustomType.Parameter("conditionMonitoringQueryLanguage") MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
+        @OutputCustomType.Parameter("conditionThreshold") MetricThresholdResponse conditionThreshold,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;

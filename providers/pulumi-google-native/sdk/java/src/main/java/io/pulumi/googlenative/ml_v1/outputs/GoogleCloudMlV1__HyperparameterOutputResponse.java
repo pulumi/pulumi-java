@@ -65,18 +65,18 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
      */
     private final Map<String,String> webAccessUris;
 
-    @OutputCustomType.Constructor({"allMetrics","builtInAlgorithmOutput","endTime","finalMetric","hyperparameters","isTrialStoppedEarly","startTime","state","trialId","webAccessUris"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__HyperparameterOutputResponse(
-        List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
-        GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        String endTime,
-        GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
-        Map<String,String> hyperparameters,
-        Boolean isTrialStoppedEarly,
-        String startTime,
-        String state,
-        String trialId,
-        Map<String,String> webAccessUris) {
+        @OutputCustomType.Parameter("allMetrics") List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
+        @OutputCustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("finalMetric") GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
+        @OutputCustomType.Parameter("hyperparameters") Map<String,String> hyperparameters,
+        @OutputCustomType.Parameter("isTrialStoppedEarly") Boolean isTrialStoppedEarly,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trialId") String trialId,
+        @OutputCustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
         this.allMetrics = allMetrics;
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         this.endTime = endTime;

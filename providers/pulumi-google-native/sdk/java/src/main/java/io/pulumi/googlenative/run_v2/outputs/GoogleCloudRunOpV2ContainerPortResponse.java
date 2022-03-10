@@ -21,10 +21,10 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"containerPort","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ContainerPortResponse(
-        Integer containerPort,
-        String name) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("name") String name) {
         this.containerPort = containerPort;
         this.name = name;
     }

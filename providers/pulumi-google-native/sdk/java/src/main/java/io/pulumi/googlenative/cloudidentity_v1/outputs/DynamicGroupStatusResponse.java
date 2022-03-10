@@ -20,10 +20,10 @@ public final class DynamicGroupStatusResponse {
      */
     private final String statusTime;
 
-    @OutputCustomType.Constructor({"status","statusTime"})
+    @OutputCustomType.Constructor
     private DynamicGroupStatusResponse(
-        String status,
-        String statusTime) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusTime") String statusTime) {
         this.status = status;
         this.statusTime = statusTime;
     }

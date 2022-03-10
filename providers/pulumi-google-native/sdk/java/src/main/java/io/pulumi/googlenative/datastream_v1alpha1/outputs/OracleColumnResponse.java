@@ -57,17 +57,17 @@ public final class OracleColumnResponse {
      */
     private final Integer scale;
 
-    @OutputCustomType.Constructor({"columnName","dataType","encoding","length","nullable","ordinalPosition","precision","primaryKey","scale"})
+    @OutputCustomType.Constructor
     private OracleColumnResponse(
-        String columnName,
-        String dataType,
-        String encoding,
-        Integer length,
-        Boolean nullable,
-        Integer ordinalPosition,
-        Integer precision,
-        Boolean primaryKey,
-        Integer scale) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("length") Integer length,
+        @OutputCustomType.Parameter("nullable") Boolean nullable,
+        @OutputCustomType.Parameter("ordinalPosition") Integer ordinalPosition,
+        @OutputCustomType.Parameter("precision") Integer precision,
+        @OutputCustomType.Parameter("primaryKey") Boolean primaryKey,
+        @OutputCustomType.Parameter("scale") Integer scale) {
         this.columnName = columnName;
         this.dataType = dataType;
         this.encoding = encoding;

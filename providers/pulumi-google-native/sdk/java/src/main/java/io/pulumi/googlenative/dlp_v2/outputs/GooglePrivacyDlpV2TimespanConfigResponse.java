@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse timestampField;
 
-    @OutputCustomType.Constructor({"enableAutoPopulationOfTimespanConfig","endTime","startTime","timestampField"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TimespanConfigResponse(
-        Boolean enableAutoPopulationOfTimespanConfig,
-        String endTime,
-        String startTime,
-        GooglePrivacyDlpV2FieldIdResponse timestampField) {
+        @OutputCustomType.Parameter("enableAutoPopulationOfTimespanConfig") Boolean enableAutoPopulationOfTimespanConfig,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timestampField") GooglePrivacyDlpV2FieldIdResponse timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;

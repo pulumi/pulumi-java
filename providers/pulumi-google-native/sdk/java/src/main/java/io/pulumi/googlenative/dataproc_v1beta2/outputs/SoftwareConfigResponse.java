@@ -27,11 +27,11 @@ public final class SoftwareConfigResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"imageVersion","optionalComponents","properties"})
+    @OutputCustomType.Constructor
     private SoftwareConfigResponse(
-        String imageVersion,
-        List<String> optionalComponents,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("imageVersion") String imageVersion,
+        @OutputCustomType.Parameter("optionalComponents") List<String> optionalComponents,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;

@@ -26,11 +26,11 @@ public final class StartActivityIntentResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"action","categories","uri"})
+    @OutputCustomType.Constructor
     private StartActivityIntentResponse(
-        String action,
-        List<String> categories,
-        String uri) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.action = action;
         this.categories = categories;
         this.uri = uri;

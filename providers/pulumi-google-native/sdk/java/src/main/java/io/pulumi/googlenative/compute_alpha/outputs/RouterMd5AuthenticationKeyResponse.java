@@ -20,10 +20,10 @@ public final class RouterMd5AuthenticationKeyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"key","name"})
+    @OutputCustomType.Constructor
     private RouterMd5AuthenticationKeyResponse(
-        String key,
-        String name) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

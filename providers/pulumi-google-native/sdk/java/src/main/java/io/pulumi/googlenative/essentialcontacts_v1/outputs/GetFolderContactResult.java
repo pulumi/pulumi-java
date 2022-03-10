@@ -41,14 +41,14 @@ public final class GetFolderContactResult {
      */
     private final String validationState;
 
-    @OutputCustomType.Constructor({"email","languageTag","name","notificationCategorySubscriptions","validateTime","validationState"})
+    @OutputCustomType.Constructor
     private GetFolderContactResult(
-        String email,
-        String languageTag,
-        String name,
-        List<String> notificationCategorySubscriptions,
-        String validateTime,
-        String validationState) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("languageTag") String languageTag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationCategorySubscriptions") List<String> notificationCategorySubscriptions,
+        @OutputCustomType.Parameter("validateTime") String validateTime,
+        @OutputCustomType.Parameter("validationState") String validationState) {
         this.email = email;
         this.languageTag = languageTag;
         this.name = name;

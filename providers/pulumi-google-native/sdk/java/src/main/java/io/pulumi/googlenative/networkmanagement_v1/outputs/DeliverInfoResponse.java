@@ -20,10 +20,10 @@ public final class DeliverInfoResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"resourceUri","target"})
+    @OutputCustomType.Constructor
     private DeliverInfoResponse(
-        String resourceUri,
-        String target) {
+        @OutputCustomType.Parameter("resourceUri") String resourceUri,
+        @OutputCustomType.Parameter("target") String target) {
         this.resourceUri = resourceUri;
         this.target = target;
     }

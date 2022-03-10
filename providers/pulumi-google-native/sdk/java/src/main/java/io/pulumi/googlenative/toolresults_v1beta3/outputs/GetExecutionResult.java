@@ -55,16 +55,16 @@ public final class GetExecutionResult {
      */
     private final String testExecutionMatrixId;
 
-    @OutputCustomType.Constructor({"completionTime","creationTime","dimensionDefinitions","executionId","outcome","specification","state","testExecutionMatrixId"})
+    @OutputCustomType.Constructor
     private GetExecutionResult(
-        TimestampResponse completionTime,
-        TimestampResponse creationTime,
-        List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
-        String executionId,
-        OutcomeResponse outcome,
-        SpecificationResponse specification,
-        String state,
-        String testExecutionMatrixId) {
+        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("dimensionDefinitions") List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
+        @OutputCustomType.Parameter("specification") SpecificationResponse specification,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testExecutionMatrixId") String testExecutionMatrixId) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.dimensionDefinitions = dimensionDefinitions;

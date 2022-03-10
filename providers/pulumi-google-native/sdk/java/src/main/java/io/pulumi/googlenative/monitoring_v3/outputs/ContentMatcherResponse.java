@@ -20,10 +20,10 @@ public final class ContentMatcherResponse {
      */
     private final String matcher;
 
-    @OutputCustomType.Constructor({"content","matcher"})
+    @OutputCustomType.Constructor
     private ContentMatcherResponse(
-        String content,
-        String matcher) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("matcher") String matcher) {
         this.content = content;
         this.matcher = matcher;
     }

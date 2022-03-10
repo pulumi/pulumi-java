@@ -21,10 +21,10 @@ public final class MetadataIntegrationResponse {
      */
     private final DataplexConfigResponse dataplexConfig;
 
-    @OutputCustomType.Constructor({"dataCatalogConfig","dataplexConfig"})
+    @OutputCustomType.Constructor
     private MetadataIntegrationResponse(
-        DataCatalogConfigResponse dataCatalogConfig,
-        DataplexConfigResponse dataplexConfig) {
+        @OutputCustomType.Parameter("dataCatalogConfig") DataCatalogConfigResponse dataCatalogConfig,
+        @OutputCustomType.Parameter("dataplexConfig") DataplexConfigResponse dataplexConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.dataplexConfig = dataplexConfig;
     }

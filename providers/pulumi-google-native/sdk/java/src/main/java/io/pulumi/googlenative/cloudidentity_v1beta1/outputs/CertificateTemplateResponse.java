@@ -20,10 +20,10 @@ public final class CertificateTemplateResponse {
      */
     private final Integer minorVersion;
 
-    @OutputCustomType.Constructor({"majorVersion","minorVersion"})
+    @OutputCustomType.Constructor
     private CertificateTemplateResponse(
-        Integer majorVersion,
-        Integer minorVersion) {
+        @OutputCustomType.Parameter("majorVersion") Integer majorVersion,
+        @OutputCustomType.Parameter("minorVersion") Integer minorVersion) {
         this.majorVersion = majorVersion;
         this.minorVersion = minorVersion;
     }

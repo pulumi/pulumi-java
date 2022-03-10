@@ -26,11 +26,11 @@ public final class WeekDayOfMonthResponse {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor({"dayOfWeek","dayOffset","weekOrdinal"})
+    @OutputCustomType.Constructor
     private WeekDayOfMonthResponse(
-        String dayOfWeek,
-        Integer dayOffset,
-        Integer weekOrdinal) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("dayOffset") Integer dayOffset,
+        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.dayOffset = dayOffset;
         this.weekOrdinal = weekOrdinal;

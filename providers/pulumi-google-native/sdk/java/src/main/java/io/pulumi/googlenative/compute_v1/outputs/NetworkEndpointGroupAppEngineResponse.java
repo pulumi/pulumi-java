@@ -25,11 +25,11 @@ public final class NetworkEndpointGroupAppEngineResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"service","urlMask","version"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupAppEngineResponse(
-        String service,
-        String urlMask,
-        String version) {
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("urlMask") String urlMask,
+        @OutputCustomType.Parameter("version") String version) {
         this.service = service;
         this.urlMask = urlMask;
         this.version = version;

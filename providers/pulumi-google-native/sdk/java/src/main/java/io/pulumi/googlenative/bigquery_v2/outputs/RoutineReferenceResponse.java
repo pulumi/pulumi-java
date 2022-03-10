@@ -25,11 +25,11 @@ public final class RoutineReferenceResponse {
      */
     private final String routineId;
 
-    @OutputCustomType.Constructor({"datasetId","project","routineId"})
+    @OutputCustomType.Constructor
     private RoutineReferenceResponse(
-        String datasetId,
-        String project,
-        String routineId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("routineId") String routineId) {
         this.datasetId = datasetId;
         this.project = project;
         this.routineId = routineId;

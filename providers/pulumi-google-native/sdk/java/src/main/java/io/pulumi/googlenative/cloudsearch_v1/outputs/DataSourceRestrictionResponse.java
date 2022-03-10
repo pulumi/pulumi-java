@@ -22,10 +22,10 @@ public final class DataSourceRestrictionResponse {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor({"filterOptions","source"})
+    @OutputCustomType.Constructor
     private DataSourceRestrictionResponse(
-        List<FilterOptionsResponse> filterOptions,
-        SourceResponse source) {
+        @OutputCustomType.Parameter("filterOptions") List<FilterOptionsResponse> filterOptions,
+        @OutputCustomType.Parameter("source") SourceResponse source) {
         this.filterOptions = filterOptions;
         this.source = source;
     }

@@ -21,10 +21,10 @@ public final class AttributeResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"attributeDefinitionId","values"})
+    @OutputCustomType.Constructor
     private AttributeResponse(
-        String attributeDefinitionId,
-        List<String> values) {
+        @OutputCustomType.Parameter("attributeDefinitionId") String attributeDefinitionId,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.attributeDefinitionId = attributeDefinitionId;
         this.values = values;
     }

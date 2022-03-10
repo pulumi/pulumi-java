@@ -48,15 +48,15 @@ public final class GetClusterResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"clusterConfig","defaultStorageType","encryptionConfig","location","name","serveNodes","state"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        ClusterConfigResponse clusterConfig,
-        String defaultStorageType,
-        EncryptionConfigResponse encryptionConfig,
-        String location,
-        String name,
-        Integer serveNodes,
-        String state) {
+        @OutputCustomType.Parameter("clusterConfig") ClusterConfigResponse clusterConfig,
+        @OutputCustomType.Parameter("defaultStorageType") String defaultStorageType,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serveNodes") Integer serveNodes,
+        @OutputCustomType.Parameter("state") String state) {
         this.clusterConfig = clusterConfig;
         this.defaultStorageType = defaultStorageType;
         this.encryptionConfig = encryptionConfig;

@@ -32,12 +32,12 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
      */
     private final String reply;
 
-    @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","reply"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String reply) {
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("reply") String reply) {
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
         this.queryRecord = queryRecord;

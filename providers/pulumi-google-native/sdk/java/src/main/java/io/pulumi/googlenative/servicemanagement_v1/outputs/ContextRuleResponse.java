@@ -36,13 +36,13 @@ public final class ContextRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"allowedRequestExtensions","allowedResponseExtensions","provided","requested","selector"})
+    @OutputCustomType.Constructor
     private ContextRuleResponse(
-        List<String> allowedRequestExtensions,
-        List<String> allowedResponseExtensions,
-        List<String> provided,
-        List<String> requested,
-        String selector) {
+        @OutputCustomType.Parameter("allowedRequestExtensions") List<String> allowedRequestExtensions,
+        @OutputCustomType.Parameter("allowedResponseExtensions") List<String> allowedResponseExtensions,
+        @OutputCustomType.Parameter("provided") List<String> provided,
+        @OutputCustomType.Parameter("requested") List<String> requested,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.allowedRequestExtensions = allowedRequestExtensions;
         this.allowedResponseExtensions = allowedResponseExtensions;
         this.provided = provided;

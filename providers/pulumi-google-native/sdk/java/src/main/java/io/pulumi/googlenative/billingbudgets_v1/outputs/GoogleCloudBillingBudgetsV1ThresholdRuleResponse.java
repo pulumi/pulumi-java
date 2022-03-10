@@ -21,10 +21,10 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse {
      */
     private final Double thresholdPercent;
 
-    @OutputCustomType.Constructor({"spendBasis","thresholdPercent"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1ThresholdRuleResponse(
-        String spendBasis,
-        Double thresholdPercent) {
+        @OutputCustomType.Parameter("spendBasis") String spendBasis,
+        @OutputCustomType.Parameter("thresholdPercent") Double thresholdPercent) {
         this.spendBasis = spendBasis;
         this.thresholdPercent = thresholdPercent;
     }

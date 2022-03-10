@@ -64,18 +64,18 @@ public final class GetModelResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"activeOperations","createTime","displayName","etag","modelHash","name","state","tags","tfliteModel","updateTime"})
+    @OutputCustomType.Constructor
     private GetModelResult(
-        List<OperationResponse> activeOperations,
-        String createTime,
-        String displayName,
-        String etag,
-        String modelHash,
-        String name,
-        ModelStateResponse state,
-        List<String> tags,
-        TfLiteModelResponse tfliteModel,
-        String updateTime) {
+        @OutputCustomType.Parameter("activeOperations") List<OperationResponse> activeOperations,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("modelHash") String modelHash,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") ModelStateResponse state,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("tfliteModel") TfLiteModelResponse tfliteModel,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.activeOperations = activeOperations;
         this.createTime = createTime;
         this.displayName = displayName;

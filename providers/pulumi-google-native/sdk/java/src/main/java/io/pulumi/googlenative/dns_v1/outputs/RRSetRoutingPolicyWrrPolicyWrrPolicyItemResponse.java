@@ -24,12 +24,12 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
      */
     private final Double weight;
 
-    @OutputCustomType.Constructor({"kind","rrdatas","signatureRrdatas","weight"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(
-        String kind,
-        List<String> rrdatas,
-        List<String> signatureRrdatas,
-        Double weight) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
+        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas,
+        @OutputCustomType.Parameter("weight") Double weight) {
         this.kind = kind;
         this.rrdatas = rrdatas;
         this.signatureRrdatas = signatureRrdatas;

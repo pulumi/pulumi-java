@@ -37,13 +37,13 @@ public final class BqmlIterationResultResponse {
      */
     private final Double trainingLoss;
 
-    @OutputCustomType.Constructor({"durationMs","evalLoss","index","learnRate","trainingLoss"})
+    @OutputCustomType.Constructor
     private BqmlIterationResultResponse(
-        String durationMs,
-        Double evalLoss,
-        Integer index,
-        Double learnRate,
-        Double trainingLoss) {
+        @OutputCustomType.Parameter("durationMs") String durationMs,
+        @OutputCustomType.Parameter("evalLoss") Double evalLoss,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("learnRate") Double learnRate,
+        @OutputCustomType.Parameter("trainingLoss") Double trainingLoss) {
         this.durationMs = durationMs;
         this.evalLoss = evalLoss;
         this.index = index;

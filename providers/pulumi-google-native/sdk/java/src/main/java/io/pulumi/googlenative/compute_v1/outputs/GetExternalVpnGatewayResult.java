@@ -58,17 +58,17 @@ public final class GetExternalVpnGatewayResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","interfaces","kind","labelFingerprint","labels","name","redundancyType","selfLink"})
+    @OutputCustomType.Constructor
     private GetExternalVpnGatewayResult(
-        String creationTimestamp,
-        String description,
-        List<ExternalVpnGatewayInterfaceResponse> interfaces,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String redundancyType,
-        String selfLink) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("interfaces") List<ExternalVpnGatewayInterfaceResponse> interfaces,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("redundancyType") String redundancyType,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.interfaces = interfaces;

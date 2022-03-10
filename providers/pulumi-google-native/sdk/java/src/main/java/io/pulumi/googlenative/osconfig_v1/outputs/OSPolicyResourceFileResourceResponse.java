@@ -36,13 +36,13 @@ public final class OSPolicyResourceFileResourceResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"content","file","path","permissions","state"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceFileResourceResponse(
-        String content,
-        OSPolicyResourceFileResponse file,
-        String path,
-        String permissions,
-        String state) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("state") String state) {
         this.content = content;
         this.file = file;
         this.path = path;

@@ -45,15 +45,15 @@ public final class GetPolicyResult {
      */
     private final List<PolicyNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"alternativeNameServerConfig","description","enableInboundForwarding","enableLogging","kind","name","networks"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
-        String description,
-        Boolean enableInboundForwarding,
-        Boolean enableLogging,
-        String kind,
-        String name,
-        List<PolicyNetworkResponse> networks) {
+        @OutputCustomType.Parameter("alternativeNameServerConfig") PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableInboundForwarding") Boolean enableInboundForwarding,
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networks") List<PolicyNetworkResponse> networks) {
         this.alternativeNameServerConfig = alternativeNameServerConfig;
         this.description = description;
         this.enableInboundForwarding = enableInboundForwarding;

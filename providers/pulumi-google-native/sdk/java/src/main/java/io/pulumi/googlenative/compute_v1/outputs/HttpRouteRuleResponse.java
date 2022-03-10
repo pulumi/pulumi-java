@@ -51,15 +51,15 @@ public final class HttpRouteRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor({"description","headerAction","matchRules","priority","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private HttpRouteRuleResponse(
-        String description,
-        HttpHeaderActionResponse headerAction,
-        List<HttpRouteRuleMatchResponse> matchRules,
-        Integer priority,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("matchRules") List<HttpRouteRuleMatchResponse> matchRules,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;

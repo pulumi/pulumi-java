@@ -42,14 +42,14 @@ public final class RewriteResponse {
      */
     private final CloudRunRewriteResponse run;
 
-    @OutputCustomType.Constructor({"dynamicLinks","function","glob","path","regex","run"})
+    @OutputCustomType.Constructor
     private RewriteResponse(
-        Boolean dynamicLinks,
-        String function,
-        String glob,
-        String path,
-        String regex,
-        CloudRunRewriteResponse run) {
+        @OutputCustomType.Parameter("dynamicLinks") Boolean dynamicLinks,
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("regex") String regex,
+        @OutputCustomType.Parameter("run") CloudRunRewriteResponse run) {
         this.dynamicLinks = dynamicLinks;
         this.function = function;
         this.glob = glob;

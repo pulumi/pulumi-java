@@ -32,12 +32,12 @@ public final class YumSettingsResponse {
      */
     private final Boolean security;
 
-    @OutputCustomType.Constructor({"excludes","exclusivePackages","minimal","security"})
+    @OutputCustomType.Constructor
     private YumSettingsResponse(
-        List<String> excludes,
-        List<String> exclusivePackages,
-        Boolean minimal,
-        Boolean security) {
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
+        @OutputCustomType.Parameter("minimal") Boolean minimal,
+        @OutputCustomType.Parameter("security") Boolean security) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.minimal = minimal;

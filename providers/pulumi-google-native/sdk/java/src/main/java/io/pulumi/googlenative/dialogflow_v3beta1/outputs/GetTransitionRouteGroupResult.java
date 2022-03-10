@@ -27,11 +27,11 @@ public final class GetTransitionRouteGroupResult {
      */
     private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor({"displayName","name","transitionRoutes"})
+    @OutputCustomType.Constructor
     private GetTransitionRouteGroupResult(
-        String displayName,
-        String name,
-        List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
         this.displayName = displayName;
         this.name = name;
         this.transitionRoutes = transitionRoutes;

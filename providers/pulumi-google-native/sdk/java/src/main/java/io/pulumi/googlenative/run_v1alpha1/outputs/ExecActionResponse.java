@@ -16,8 +16,8 @@ public final class ExecActionResponse {
      */
     private final List<String> command;
 
-    @OutputCustomType.Constructor({"command"})
-    private ExecActionResponse(List<String> command) {
+    @OutputCustomType.Constructor
+    private ExecActionResponse(@OutputCustomType.Parameter("command") List<String> command) {
         this.command = command;
     }
 

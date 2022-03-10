@@ -40,14 +40,14 @@ public final class KubernetesClusterStateResponse {
      */
     private final String versionInstalledErrorMessage;
 
-    @OutputCustomType.Constructor({"agonesVersionInstalled","agonesVersionTargeted","installationState","kubernetesVersionInstalled","provider","versionInstalledErrorMessage"})
+    @OutputCustomType.Constructor
     private KubernetesClusterStateResponse(
-        String agonesVersionInstalled,
-        String agonesVersionTargeted,
-        String installationState,
-        String kubernetesVersionInstalled,
-        String provider,
-        String versionInstalledErrorMessage) {
+        @OutputCustomType.Parameter("agonesVersionInstalled") String agonesVersionInstalled,
+        @OutputCustomType.Parameter("agonesVersionTargeted") String agonesVersionTargeted,
+        @OutputCustomType.Parameter("installationState") String installationState,
+        @OutputCustomType.Parameter("kubernetesVersionInstalled") String kubernetesVersionInstalled,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("versionInstalledErrorMessage") String versionInstalledErrorMessage) {
         this.agonesVersionInstalled = agonesVersionInstalled;
         this.agonesVersionTargeted = agonesVersionTargeted;
         this.installationState = installationState;

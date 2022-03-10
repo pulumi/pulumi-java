@@ -20,10 +20,10 @@ public final class MysqlSourceConfigResponse {
      */
     private final MysqlRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor({"allowlist","rejectlist"})
+    @OutputCustomType.Constructor
     private MysqlSourceConfigResponse(
-        MysqlRdbmsResponse allowlist,
-        MysqlRdbmsResponse rejectlist) {
+        @OutputCustomType.Parameter("allowlist") MysqlRdbmsResponse allowlist,
+        @OutputCustomType.Parameter("rejectlist") MysqlRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }

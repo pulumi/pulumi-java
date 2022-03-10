@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
      */
     private final Boolean hasCredential;
 
-    @OutputCustomType.Constructor({"cloudSql","connectionType","hasCredential"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(
-        GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
-        String connectionType,
-        Boolean hasCredential) {
+        @OutputCustomType.Parameter("cloudSql") GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
+        @OutputCustomType.Parameter("connectionType") String connectionType,
+        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential) {
         this.cloudSql = cloudSql;
         this.connectionType = connectionType;
         this.hasCredential = hasCredential;

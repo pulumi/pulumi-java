@@ -27,11 +27,11 @@ public final class SourceConfigResponse {
      */
     private final String sourceConnectionProfile;
 
-    @OutputCustomType.Constructor({"mysqlSourceConfig","oracleSourceConfig","sourceConnectionProfile"})
+    @OutputCustomType.Constructor
     private SourceConfigResponse(
-        MysqlSourceConfigResponse mysqlSourceConfig,
-        OracleSourceConfigResponse oracleSourceConfig,
-        String sourceConnectionProfile) {
+        @OutputCustomType.Parameter("mysqlSourceConfig") MysqlSourceConfigResponse mysqlSourceConfig,
+        @OutputCustomType.Parameter("oracleSourceConfig") OracleSourceConfigResponse oracleSourceConfig,
+        @OutputCustomType.Parameter("sourceConnectionProfile") String sourceConnectionProfile) {
         this.mysqlSourceConfig = mysqlSourceConfig;
         this.oracleSourceConfig = oracleSourceConfig;
         this.sourceConnectionProfile = sourceConnectionProfile;

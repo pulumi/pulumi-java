@@ -32,12 +32,12 @@ public final class ParserConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"allowNullHeader","schema","segmentTerminator","version"})
+    @OutputCustomType.Constructor
     private ParserConfigResponse(
-        Boolean allowNullHeader,
-        SchemaPackageResponse schema,
-        String segmentTerminator,
-        String version) {
+        @OutputCustomType.Parameter("allowNullHeader") Boolean allowNullHeader,
+        @OutputCustomType.Parameter("schema") SchemaPackageResponse schema,
+        @OutputCustomType.Parameter("segmentTerminator") String segmentTerminator,
+        @OutputCustomType.Parameter("version") String version) {
         this.allowNullHeader = allowNullHeader;
         this.schema = schema;
         this.segmentTerminator = segmentTerminator;

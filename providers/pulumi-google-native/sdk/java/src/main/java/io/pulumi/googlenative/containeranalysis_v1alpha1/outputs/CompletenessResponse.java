@@ -25,11 +25,11 @@ public final class CompletenessResponse {
      */
     private final Boolean materials;
 
-    @OutputCustomType.Constructor({"arguments","environment","materials"})
+    @OutputCustomType.Constructor
     private CompletenessResponse(
-        Boolean arguments,
-        Boolean environment,
-        Boolean materials) {
+        @OutputCustomType.Parameter("arguments") Boolean arguments,
+        @OutputCustomType.Parameter("environment") Boolean environment,
+        @OutputCustomType.Parameter("materials") Boolean materials) {
         this.arguments = arguments;
         this.environment = environment;
         this.materials = materials;

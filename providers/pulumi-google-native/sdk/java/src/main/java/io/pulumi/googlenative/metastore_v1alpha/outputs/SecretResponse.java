@@ -15,8 +15,8 @@ public final class SecretResponse {
      */
     private final String cloudSecret;
 
-    @OutputCustomType.Constructor({"cloudSecret"})
-    private SecretResponse(String cloudSecret) {
+    @OutputCustomType.Constructor
+    private SecretResponse(@OutputCustomType.Parameter("cloudSecret") String cloudSecret) {
         this.cloudSecret = cloudSecret;
     }
 

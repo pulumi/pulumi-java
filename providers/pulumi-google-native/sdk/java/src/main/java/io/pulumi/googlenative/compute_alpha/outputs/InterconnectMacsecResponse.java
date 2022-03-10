@@ -22,10 +22,10 @@ public final class InterconnectMacsecResponse {
      */
     private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
-    @OutputCustomType.Constructor({"failOpen","preSharedKeys"})
+    @OutputCustomType.Constructor
     private InterconnectMacsecResponse(
-        Boolean failOpen,
-        List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
+        @OutputCustomType.Parameter("failOpen") Boolean failOpen,
+        @OutputCustomType.Parameter("preSharedKeys") List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
         this.failOpen = failOpen;
         this.preSharedKeys = preSharedKeys;
     }

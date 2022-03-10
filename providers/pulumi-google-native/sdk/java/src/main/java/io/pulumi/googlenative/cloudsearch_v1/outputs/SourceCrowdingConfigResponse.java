@@ -20,10 +20,10 @@ public final class SourceCrowdingConfigResponse {
      */
     private final Integer numSuggestions;
 
-    @OutputCustomType.Constructor({"numResults","numSuggestions"})
+    @OutputCustomType.Constructor
     private SourceCrowdingConfigResponse(
-        Integer numResults,
-        Integer numSuggestions) {
+        @OutputCustomType.Parameter("numResults") Integer numResults,
+        @OutputCustomType.Parameter("numSuggestions") Integer numSuggestions) {
         this.numResults = numResults;
         this.numSuggestions = numSuggestions;
     }

@@ -15,8 +15,8 @@ public final class AppDevExperienceFeatureStateResponse {
      */
     private final StatusResponse networkingInstallSucceeded;
 
-    @OutputCustomType.Constructor({"networkingInstallSucceeded"})
-    private AppDevExperienceFeatureStateResponse(StatusResponse networkingInstallSucceeded) {
+    @OutputCustomType.Constructor
+    private AppDevExperienceFeatureStateResponse(@OutputCustomType.Parameter("networkingInstallSucceeded") StatusResponse networkingInstallSucceeded) {
         this.networkingInstallSucceeded = networkingInstallSucceeded;
     }
 

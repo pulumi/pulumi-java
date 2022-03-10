@@ -35,13 +35,13 @@ public final class MetadataExportResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"databaseDumpType","destinationGcsUri","endTime","startTime","state"})
+    @OutputCustomType.Constructor
     private MetadataExportResponse(
-        String databaseDumpType,
-        String destinationGcsUri,
-        String endTime,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("databaseDumpType") String databaseDumpType,
+        @OutputCustomType.Parameter("destinationGcsUri") String destinationGcsUri,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.databaseDumpType = databaseDumpType;
         this.destinationGcsUri = destinationGcsUri;
         this.endTime = endTime;

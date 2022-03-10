@@ -42,14 +42,14 @@ public final class OracleProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"connectionAttributes","databaseService","hostname","password","port","username"})
+    @OutputCustomType.Constructor
     private OracleProfileResponse(
-        Map<String,String> connectionAttributes,
-        String databaseService,
-        String hostname,
-        String password,
-        Integer port,
-        String username) {
+        @OutputCustomType.Parameter("connectionAttributes") Map<String,String> connectionAttributes,
+        @OutputCustomType.Parameter("databaseService") String databaseService,
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("username") String username) {
         this.connectionAttributes = connectionAttributes;
         this.databaseService = databaseService;
         this.hostname = hostname;

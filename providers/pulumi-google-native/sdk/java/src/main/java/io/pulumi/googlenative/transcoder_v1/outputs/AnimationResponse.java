@@ -27,11 +27,11 @@ public final class AnimationResponse {
      */
     private final AnimationStaticResponse animationStatic;
 
-    @OutputCustomType.Constructor({"animationEnd","animationFade","animationStatic"})
+    @OutputCustomType.Constructor
     private AnimationResponse(
-        AnimationEndResponse animationEnd,
-        AnimationFadeResponse animationFade,
-        AnimationStaticResponse animationStatic) {
+        @OutputCustomType.Parameter("animationEnd") AnimationEndResponse animationEnd,
+        @OutputCustomType.Parameter("animationFade") AnimationFadeResponse animationFade,
+        @OutputCustomType.Parameter("animationStatic") AnimationStaticResponse animationStatic) {
         this.animationEnd = animationEnd;
         this.animationFade = animationFade;
         this.animationStatic = animationStatic;

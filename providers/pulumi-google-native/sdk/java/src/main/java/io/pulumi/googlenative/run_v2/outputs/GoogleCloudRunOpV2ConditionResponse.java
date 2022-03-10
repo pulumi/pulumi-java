@@ -60,18 +60,18 @@ public final class GoogleCloudRunOpV2ConditionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"domainMappingReason","executionReason","internalReason","lastTransitionTime","message","reason","revisionReason","severity","state","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ConditionResponse(
-        String domainMappingReason,
-        String executionReason,
-        String internalReason,
-        String lastTransitionTime,
-        String message,
-        String reason,
-        String revisionReason,
-        String severity,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("domainMappingReason") String domainMappingReason,
+        @OutputCustomType.Parameter("executionReason") String executionReason,
+        @OutputCustomType.Parameter("internalReason") String internalReason,
+        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("revisionReason") String revisionReason,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.domainMappingReason = domainMappingReason;
         this.executionReason = executionReason;
         this.internalReason = internalReason;

@@ -70,19 +70,19 @@ public final class GetQueueResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appEngineHttpQueue","name","purgeTime","rateLimits","retryConfig","stackdriverLoggingConfig","state","stats","taskTtl","tombstoneTtl","type"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        AppEngineHttpQueueResponse appEngineHttpQueue,
-        String name,
-        String purgeTime,
-        RateLimitsResponse rateLimits,
-        RetryConfigResponse retryConfig,
-        StackdriverLoggingConfigResponse stackdriverLoggingConfig,
-        String state,
-        QueueStatsResponse stats,
-        String taskTtl,
-        String tombstoneTtl,
-        String type) {
+        @OutputCustomType.Parameter("appEngineHttpQueue") AppEngineHttpQueueResponse appEngineHttpQueue,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("purgeTime") String purgeTime,
+        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @OutputCustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stats") QueueStatsResponse stats,
+        @OutputCustomType.Parameter("taskTtl") String taskTtl,
+        @OutputCustomType.Parameter("tombstoneTtl") String tombstoneTtl,
+        @OutputCustomType.Parameter("type") String type) {
         this.appEngineHttpQueue = appEngineHttpQueue;
         this.name = name;
         this.purgeTime = purgeTime;

@@ -42,14 +42,14 @@ public final class GetWorkerPoolResult {
      */
     private final String workerCount;
 
-    @OutputCustomType.Constructor({"autoscale","channel","name","state","workerConfig","workerCount"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
-        String channel,
-        String name,
-        String state,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
-        String workerCount) {
+        @OutputCustomType.Parameter("autoscale") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
+        @OutputCustomType.Parameter("channel") String channel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workerConfig") GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
+        @OutputCustomType.Parameter("workerCount") String workerCount) {
         this.autoscale = autoscale;
         this.channel = channel;
         this.name = name;

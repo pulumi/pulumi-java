@@ -20,10 +20,10 @@ public final class CapacityResponse {
      */
     private final Integer subscribeMibPerSec;
 
-    @OutputCustomType.Constructor({"publishMibPerSec","subscribeMibPerSec"})
+    @OutputCustomType.Constructor
     private CapacityResponse(
-        Integer publishMibPerSec,
-        Integer subscribeMibPerSec) {
+        @OutputCustomType.Parameter("publishMibPerSec") Integer publishMibPerSec,
+        @OutputCustomType.Parameter("subscribeMibPerSec") Integer subscribeMibPerSec) {
         this.publishMibPerSec = publishMibPerSec;
         this.subscribeMibPerSec = subscribeMibPerSec;
     }

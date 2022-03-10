@@ -16,8 +16,8 @@ public final class ContextResponse {
      */
     private final List<ContextRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ContextResponse(List<ContextRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private ContextResponse(@OutputCustomType.Parameter("rules") List<ContextRuleResponse> rules) {
         this.rules = rules;
     }
 

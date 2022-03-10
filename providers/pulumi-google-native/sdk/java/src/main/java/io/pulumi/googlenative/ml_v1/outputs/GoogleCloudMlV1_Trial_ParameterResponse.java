@@ -31,12 +31,12 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"floatValue","intValue","parameter","stringValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_Trial_ParameterResponse(
-        Double floatValue,
-        String intValue,
-        String parameter,
-        String stringValue) {
+        @OutputCustomType.Parameter("floatValue") Double floatValue,
+        @OutputCustomType.Parameter("intValue") String intValue,
+        @OutputCustomType.Parameter("parameter") String parameter,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.floatValue = floatValue;
         this.intValue = intValue;
         this.parameter = parameter;

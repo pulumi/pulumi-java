@@ -21,10 +21,10 @@ public final class JobStatistics4Response {
      */
     private final String inputBytes;
 
-    @OutputCustomType.Constructor({"destinationUriFileCounts","inputBytes"})
+    @OutputCustomType.Constructor
     private JobStatistics4Response(
-        List<String> destinationUriFileCounts,
-        String inputBytes) {
+        @OutputCustomType.Parameter("destinationUriFileCounts") List<String> destinationUriFileCounts,
+        @OutputCustomType.Parameter("inputBytes") String inputBytes) {
         this.destinationUriFileCounts = destinationUriFileCounts;
         this.inputBytes = inputBytes;
     }

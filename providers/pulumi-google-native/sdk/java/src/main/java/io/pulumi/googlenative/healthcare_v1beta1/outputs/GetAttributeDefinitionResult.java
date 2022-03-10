@@ -41,14 +41,14 @@ public final class GetAttributeDefinitionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allowedValues","category","consentDefaultValues","dataMappingDefaultValue","description","name"})
+    @OutputCustomType.Constructor
     private GetAttributeDefinitionResult(
-        List<String> allowedValues,
-        String category,
-        List<String> consentDefaultValues,
-        String dataMappingDefaultValue,
-        String description,
-        String name) {
+        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("consentDefaultValues") List<String> consentDefaultValues,
+        @OutputCustomType.Parameter("dataMappingDefaultValue") String dataMappingDefaultValue,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name) {
         this.allowedValues = allowedValues;
         this.category = category;
         this.consentDefaultValues = consentDefaultValues;

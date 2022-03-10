@@ -30,12 +30,12 @@ public final class GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse {
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor({"dataset","latestShardResource","shardCount","tablePrefix"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse(
-        String dataset,
-        String latestShardResource,
-        String shardCount,
-        String tablePrefix) {
+        @OutputCustomType.Parameter("dataset") String dataset,
+        @OutputCustomType.Parameter("latestShardResource") String latestShardResource,
+        @OutputCustomType.Parameter("shardCount") String shardCount,
+        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
         this.dataset = dataset;
         this.latestShardResource = latestShardResource;
         this.shardCount = shardCount;

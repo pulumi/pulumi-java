@@ -25,11 +25,11 @@ public final class AssignmentOsTypeResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor({"osArchitecture","osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private AssignmentOsTypeResponse(
-        String osArchitecture,
-        String osShortName,
-        String osVersion) {
+        @OutputCustomType.Parameter("osArchitecture") String osArchitecture,
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") String osVersion) {
         this.osArchitecture = osArchitecture;
         this.osShortName = osShortName;
         this.osVersion = osVersion;

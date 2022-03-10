@@ -20,10 +20,10 @@ public final class SqlActiveDirectoryConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"domain","kind"})
+    @OutputCustomType.Constructor
     private SqlActiveDirectoryConfigResponse(
-        String domain,
-        String kind) {
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.domain = domain;
         this.kind = kind;
     }

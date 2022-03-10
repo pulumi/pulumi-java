@@ -20,10 +20,10 @@ public final class UrlRewriteResponse {
      */
     private final String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite"})
+    @OutputCustomType.Constructor
     private UrlRewriteResponse(
-        String hostRewrite,
-        String pathPrefixRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }

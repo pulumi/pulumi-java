@@ -20,10 +20,10 @@ public final class GetDatasetResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"name","timeZone"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        String name,
-        String timeZone) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.name = name;
         this.timeZone = timeZone;
     }

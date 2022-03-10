@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse {
      */
     private final String testTime;
 
-    @OutputCustomType.Constructor({"conversationTurns","environment","name","testResult","testTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3TestCaseResultResponse(
-        List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns,
-        String environment,
-        String name,
-        String testResult,
-        String testTime) {
+        @OutputCustomType.Parameter("conversationTurns") List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns,
+        @OutputCustomType.Parameter("environment") String environment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testResult") String testResult,
+        @OutputCustomType.Parameter("testTime") String testTime) {
         this.conversationTurns = conversationTurns;
         this.environment = environment;
         this.name = name;

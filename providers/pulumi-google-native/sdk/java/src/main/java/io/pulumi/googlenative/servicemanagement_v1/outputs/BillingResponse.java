@@ -16,8 +16,8 @@ public final class BillingResponse {
      */
     private final List<BillingDestinationResponse> consumerDestinations;
 
-    @OutputCustomType.Constructor({"consumerDestinations"})
-    private BillingResponse(List<BillingDestinationResponse> consumerDestinations) {
+    @OutputCustomType.Constructor
+    private BillingResponse(@OutputCustomType.Parameter("consumerDestinations") List<BillingDestinationResponse> consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
     }
 

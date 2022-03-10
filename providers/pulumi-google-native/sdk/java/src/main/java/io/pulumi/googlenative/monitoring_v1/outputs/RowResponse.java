@@ -22,10 +22,10 @@ public final class RowResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor({"weight","widgets"})
+    @OutputCustomType.Constructor
     private RowResponse(
-        String weight,
-        List<WidgetResponse> widgets) {
+        @OutputCustomType.Parameter("weight") String weight,
+        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.weight = weight;
         this.widgets = widgets;
     }

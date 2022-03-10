@@ -21,10 +21,10 @@ public final class CpuUtilizationResponse {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor({"aggregationWindowLength","targetUtilization"})
+    @OutputCustomType.Constructor
     private CpuUtilizationResponse(
-        String aggregationWindowLength,
-        Double targetUtilization) {
+        @OutputCustomType.Parameter("aggregationWindowLength") String aggregationWindowLength,
+        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.aggregationWindowLength = aggregationWindowLength;
         this.targetUtilization = targetUtilization;
     }

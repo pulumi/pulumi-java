@@ -25,11 +25,11 @@ public final class GitRepoSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"ref","repoType","uri"})
+    @OutputCustomType.Constructor
     private GitRepoSourceResponse(
-        String ref,
-        String repoType,
-        String uri) {
+        @OutputCustomType.Parameter("ref") String ref,
+        @OutputCustomType.Parameter("repoType") String repoType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.ref = ref;
         this.repoType = repoType;
         this.uri = uri;

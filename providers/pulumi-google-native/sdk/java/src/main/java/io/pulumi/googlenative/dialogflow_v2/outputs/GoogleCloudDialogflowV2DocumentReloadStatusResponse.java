@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"status","time"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2DocumentReloadStatusResponse(
-        GoogleRpcStatusResponse status,
-        String time) {
+        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status,
+        @OutputCustomType.Parameter("time") String time) {
         this.status = status;
         this.time = time;
     }

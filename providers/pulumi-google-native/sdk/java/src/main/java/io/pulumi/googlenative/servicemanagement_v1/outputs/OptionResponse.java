@@ -21,10 +21,10 @@ public final class OptionResponse {
      */
     private final Map<String,String> value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private OptionResponse(
-        String name,
-        Map<String,String> value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") Map<String,String> value) {
         this.name = name;
         this.value = value;
     }

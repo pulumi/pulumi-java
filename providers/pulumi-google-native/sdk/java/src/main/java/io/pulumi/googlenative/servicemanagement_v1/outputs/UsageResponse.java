@@ -27,11 +27,11 @@ public final class UsageResponse {
      */
     private final List<UsageRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"producerNotificationChannel","requirements","rules"})
+    @OutputCustomType.Constructor
     private UsageResponse(
-        String producerNotificationChannel,
-        List<String> requirements,
-        List<UsageRuleResponse> rules) {
+        @OutputCustomType.Parameter("producerNotificationChannel") String producerNotificationChannel,
+        @OutputCustomType.Parameter("requirements") List<String> requirements,
+        @OutputCustomType.Parameter("rules") List<UsageRuleResponse> rules) {
         this.producerNotificationChannel = producerNotificationChannel;
         this.requirements = requirements;
         this.rules = rules;

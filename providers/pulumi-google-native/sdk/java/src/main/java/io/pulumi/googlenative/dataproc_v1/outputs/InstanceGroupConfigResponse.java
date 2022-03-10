@@ -72,19 +72,19 @@ public final class InstanceGroupConfigResponse {
      */
     private final String preemptibility;
 
-    @OutputCustomType.Constructor({"accelerators","diskConfig","imageUri","instanceNames","instanceReferences","isPreemptible","machineTypeUri","managedGroupConfig","minCpuPlatform","numInstances","preemptibility"})
+    @OutputCustomType.Constructor
     private InstanceGroupConfigResponse(
-        List<AcceleratorConfigResponse> accelerators,
-        DiskConfigResponse diskConfig,
-        String imageUri,
-        List<String> instanceNames,
-        List<InstanceReferenceResponse> instanceReferences,
-        Boolean isPreemptible,
-        String machineTypeUri,
-        ManagedGroupConfigResponse managedGroupConfig,
-        String minCpuPlatform,
-        Integer numInstances,
-        String preemptibility) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @OutputCustomType.Parameter("diskConfig") DiskConfigResponse diskConfig,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("instanceNames") List<String> instanceNames,
+        @OutputCustomType.Parameter("instanceReferences") List<InstanceReferenceResponse> instanceReferences,
+        @OutputCustomType.Parameter("isPreemptible") Boolean isPreemptible,
+        @OutputCustomType.Parameter("machineTypeUri") String machineTypeUri,
+        @OutputCustomType.Parameter("managedGroupConfig") ManagedGroupConfigResponse managedGroupConfig,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("numInstances") Integer numInstances,
+        @OutputCustomType.Parameter("preemptibility") String preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;

@@ -25,11 +25,11 @@ public final class PackageResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"desiredState","manager","name"})
+    @OutputCustomType.Constructor
     private PackageResponse(
-        String desiredState,
-        String manager,
-        String name) {
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("manager") String manager,
+        @OutputCustomType.Parameter("name") String name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = name;

@@ -46,15 +46,15 @@ public final class GetHubResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","labels","name","state","uniqueId","updateTime"})
+    @OutputCustomType.Constructor
     private GetHubResult(
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String uniqueId,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.labels = labels;

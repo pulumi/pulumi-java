@@ -15,8 +15,8 @@ public final class KeyIdResponse {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor({"keyId"})
-    private KeyIdResponse(String keyId) {
+    @OutputCustomType.Constructor
+    private KeyIdResponse(@OutputCustomType.Parameter("keyId") String keyId) {
         this.keyId = keyId;
     }
 

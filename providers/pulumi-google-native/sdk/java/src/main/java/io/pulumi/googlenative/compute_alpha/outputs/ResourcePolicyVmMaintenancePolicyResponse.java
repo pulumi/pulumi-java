@@ -17,10 +17,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
      */
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
-    @OutputCustomType.Constructor({"concurrencyControlGroup","maintenanceWindow"})
+    @OutputCustomType.Constructor
     private ResourcePolicyVmMaintenancePolicyResponse(
-        ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
-        ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
+        @OutputCustomType.Parameter("concurrencyControlGroup") ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
+        @OutputCustomType.Parameter("maintenanceWindow") ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
         this.concurrencyControlGroup = concurrencyControlGroup;
         this.maintenanceWindow = maintenanceWindow;
     }

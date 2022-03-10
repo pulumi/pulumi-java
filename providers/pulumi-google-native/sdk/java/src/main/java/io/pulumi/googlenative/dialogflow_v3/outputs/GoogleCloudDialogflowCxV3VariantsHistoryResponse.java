@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryResponse {
      */
     private final GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants;
 
-    @OutputCustomType.Constructor({"updateTime","versionVariants"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3VariantsHistoryResponse(
-        String updateTime,
-        GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3VersionVariantsResponse versionVariants) {
         this.updateTime = updateTime;
         this.versionVariants = versionVariants;
     }

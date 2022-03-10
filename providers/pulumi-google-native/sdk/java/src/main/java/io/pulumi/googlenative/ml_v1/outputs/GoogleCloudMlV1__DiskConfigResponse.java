@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__DiskConfigResponse {
      */
     private final String bootDiskType;
 
-    @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__DiskConfigResponse(
-        Integer bootDiskSizeGb,
-        String bootDiskType) {
+        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") String bootDiskType) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
     }

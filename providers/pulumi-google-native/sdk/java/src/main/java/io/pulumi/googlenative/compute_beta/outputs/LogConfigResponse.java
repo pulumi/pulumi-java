@@ -27,11 +27,11 @@ public final class LogConfigResponse {
      */
     private final LogConfigDataAccessOptionsResponse dataAccess;
 
-    @OutputCustomType.Constructor({"cloudAudit","counter","dataAccess"})
+    @OutputCustomType.Constructor
     private LogConfigResponse(
-        LogConfigCloudAuditOptionsResponse cloudAudit,
-        LogConfigCounterOptionsResponse counter,
-        LogConfigDataAccessOptionsResponse dataAccess) {
+        @OutputCustomType.Parameter("cloudAudit") LogConfigCloudAuditOptionsResponse cloudAudit,
+        @OutputCustomType.Parameter("counter") LogConfigCounterOptionsResponse counter,
+        @OutputCustomType.Parameter("dataAccess") LogConfigDataAccessOptionsResponse dataAccess) {
         this.cloudAudit = cloudAudit;
         this.counter = counter;
         this.dataAccess = dataAccess;

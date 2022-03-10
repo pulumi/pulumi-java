@@ -43,14 +43,14 @@ public final class BitbucketServerTriggerConfigResponse {
      */
     private final String repoSlug;
 
-    @OutputCustomType.Constructor({"bitbucketServerConfig","bitbucketServerConfigResource","projectKey","pullRequest","push","repoSlug"})
+    @OutputCustomType.Constructor
     private BitbucketServerTriggerConfigResponse(
-        BitbucketServerConfigResponse bitbucketServerConfig,
-        String bitbucketServerConfigResource,
-        String projectKey,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push,
-        String repoSlug) {
+        @OutputCustomType.Parameter("bitbucketServerConfig") BitbucketServerConfigResponse bitbucketServerConfig,
+        @OutputCustomType.Parameter("bitbucketServerConfigResource") String bitbucketServerConfigResource,
+        @OutputCustomType.Parameter("projectKey") String projectKey,
+        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @OutputCustomType.Parameter("push") PushFilterResponse push,
+        @OutputCustomType.Parameter("repoSlug") String repoSlug) {
         this.bitbucketServerConfig = bitbucketServerConfig;
         this.bitbucketServerConfigResource = bitbucketServerConfigResource;
         this.projectKey = projectKey;

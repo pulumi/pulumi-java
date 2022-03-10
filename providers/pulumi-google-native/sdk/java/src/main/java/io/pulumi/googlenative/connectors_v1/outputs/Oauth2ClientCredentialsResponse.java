@@ -21,10 +21,10 @@ public final class Oauth2ClientCredentialsResponse {
      */
     private final SecretResponse clientSecret;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret"})
+    @OutputCustomType.Constructor
     private Oauth2ClientCredentialsResponse(
-        String clientId,
-        SecretResponse clientSecret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") SecretResponse clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }

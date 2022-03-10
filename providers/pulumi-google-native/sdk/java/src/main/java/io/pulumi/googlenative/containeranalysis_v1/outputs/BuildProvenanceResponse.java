@@ -75,20 +75,20 @@ public final class BuildProvenanceResponse {
      */
     private final String triggerId;
 
-    @OutputCustomType.Constructor({"buildOptions","builderVersion","builtArtifacts","commands","createTime","creator","endTime","logsUri","project","sourceProvenance","startTime","triggerId"})
+    @OutputCustomType.Constructor
     private BuildProvenanceResponse(
-        Map<String,String> buildOptions,
-        String builderVersion,
-        List<ArtifactResponse> builtArtifacts,
-        List<CommandResponse> commands,
-        String createTime,
-        String creator,
-        String endTime,
-        String logsUri,
-        String project,
-        SourceResponse sourceProvenance,
-        String startTime,
-        String triggerId) {
+        @OutputCustomType.Parameter("buildOptions") Map<String,String> buildOptions,
+        @OutputCustomType.Parameter("builderVersion") String builderVersion,
+        @OutputCustomType.Parameter("builtArtifacts") List<ArtifactResponse> builtArtifacts,
+        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("logsUri") String logsUri,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("sourceProvenance") SourceResponse sourceProvenance,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("triggerId") String triggerId) {
         this.buildOptions = buildOptions;
         this.builderVersion = builderVersion;
         this.builtArtifacts = builtArtifacts;

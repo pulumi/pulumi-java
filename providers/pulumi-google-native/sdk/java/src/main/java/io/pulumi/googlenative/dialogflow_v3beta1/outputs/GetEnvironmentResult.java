@@ -43,14 +43,14 @@ public final class GetEnvironmentResult {
      */
     private final List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs;
 
-    @OutputCustomType.Constructor({"description","displayName","name","testCasesConfig","updateTime","versionConfigs"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig,
-        String updateTime,
-        List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testCasesConfig") GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse testCasesConfig,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("versionConfigs") List<GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse> versionConfigs) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;

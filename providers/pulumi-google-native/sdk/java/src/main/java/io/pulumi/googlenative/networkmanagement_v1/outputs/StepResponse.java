@@ -121,27 +121,27 @@ public final class StepResponse {
      */
     private final VpnTunnelInfoResponse vpnTunnel;
 
-    @OutputCustomType.Constructor({"abort","causesDrop","cloudSqlInstance","deliver","description","drop","endpoint","firewall","forward","forwardingRule","gkeMaster","instance","loadBalancer","network","project","route","state","vpnGateway","vpnTunnel"})
+    @OutputCustomType.Constructor
     private StepResponse(
-        AbortInfoResponse abort,
-        Boolean causesDrop,
-        CloudSQLInstanceInfoResponse cloudSqlInstance,
-        DeliverInfoResponse deliver,
-        String description,
-        DropInfoResponse drop,
-        EndpointInfoResponse endpoint,
-        FirewallInfoResponse firewall,
-        ForwardInfoResponse forward,
-        ForwardingRuleInfoResponse forwardingRule,
-        GKEMasterInfoResponse gkeMaster,
-        InstanceInfoResponse instance,
-        LoadBalancerInfoResponse loadBalancer,
-        NetworkInfoResponse network,
-        String project,
-        RouteInfoResponse route,
-        String state,
-        VpnGatewayInfoResponse vpnGateway,
-        VpnTunnelInfoResponse vpnTunnel) {
+        @OutputCustomType.Parameter("abort") AbortInfoResponse abort,
+        @OutputCustomType.Parameter("causesDrop") Boolean causesDrop,
+        @OutputCustomType.Parameter("cloudSqlInstance") CloudSQLInstanceInfoResponse cloudSqlInstance,
+        @OutputCustomType.Parameter("deliver") DeliverInfoResponse deliver,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("drop") DropInfoResponse drop,
+        @OutputCustomType.Parameter("endpoint") EndpointInfoResponse endpoint,
+        @OutputCustomType.Parameter("firewall") FirewallInfoResponse firewall,
+        @OutputCustomType.Parameter("forward") ForwardInfoResponse forward,
+        @OutputCustomType.Parameter("forwardingRule") ForwardingRuleInfoResponse forwardingRule,
+        @OutputCustomType.Parameter("gkeMaster") GKEMasterInfoResponse gkeMaster,
+        @OutputCustomType.Parameter("instance") InstanceInfoResponse instance,
+        @OutputCustomType.Parameter("loadBalancer") LoadBalancerInfoResponse loadBalancer,
+        @OutputCustomType.Parameter("network") NetworkInfoResponse network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("route") RouteInfoResponse route,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("vpnGateway") VpnGatewayInfoResponse vpnGateway,
+        @OutputCustomType.Parameter("vpnTunnel") VpnTunnelInfoResponse vpnTunnel) {
         this.abort = abort;
         this.causesDrop = causesDrop;
         this.cloudSqlInstance = cloudSqlInstance;

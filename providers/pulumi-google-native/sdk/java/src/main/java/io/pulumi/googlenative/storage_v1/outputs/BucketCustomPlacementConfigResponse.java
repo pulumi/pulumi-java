@@ -16,8 +16,8 @@ public final class BucketCustomPlacementConfigResponse {
      */
     private final List<String> dataLocations;
 
-    @OutputCustomType.Constructor({"dataLocations"})
-    private BucketCustomPlacementConfigResponse(List<String> dataLocations) {
+    @OutputCustomType.Constructor
+    private BucketCustomPlacementConfigResponse(@OutputCustomType.Parameter("dataLocations") List<String> dataLocations) {
         this.dataLocations = dataLocations;
     }
 

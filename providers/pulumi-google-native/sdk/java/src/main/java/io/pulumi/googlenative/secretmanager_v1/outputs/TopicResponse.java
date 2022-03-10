@@ -15,8 +15,8 @@ public final class TopicResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private TopicResponse(String name) {
+    @OutputCustomType.Constructor
+    private TopicResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

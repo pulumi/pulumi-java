@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"name","siteId","updateTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ApiCategoryDataResponse(
-        String name,
-        String siteId,
-        String updateTime) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.name = name;
         this.siteId = siteId;
         this.updateTime = updateTime;

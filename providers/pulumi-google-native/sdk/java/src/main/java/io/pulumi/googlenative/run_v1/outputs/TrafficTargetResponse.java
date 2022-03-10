@@ -42,14 +42,14 @@ public final class TrafficTargetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"configurationName","latestRevision","percent","revisionName","tag","url"})
+    @OutputCustomType.Constructor
     private TrafficTargetResponse(
-        String configurationName,
-        Boolean latestRevision,
-        Integer percent,
-        String revisionName,
-        String tag,
-        String url) {
+        @OutputCustomType.Parameter("configurationName") String configurationName,
+        @OutputCustomType.Parameter("latestRevision") Boolean latestRevision,
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revisionName") String revisionName,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("url") String url) {
         this.configurationName = configurationName;
         this.latestRevision = latestRevision;
         this.percent = percent;

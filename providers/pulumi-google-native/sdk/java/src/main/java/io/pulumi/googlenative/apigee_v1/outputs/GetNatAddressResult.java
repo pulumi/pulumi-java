@@ -25,11 +25,11 @@ public final class GetNatAddressResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"ipAddress","name","state"})
+    @OutputCustomType.Constructor
     private GetNatAddressResult(
-        String ipAddress,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.ipAddress = ipAddress;
         this.name = name;
         this.state = state;

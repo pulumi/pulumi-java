@@ -55,17 +55,17 @@ public final class VpnTunnelInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","networkUri","region","remoteGateway","remoteGatewayIp","routingType","sourceGateway","sourceGatewayIp","uri"})
+    @OutputCustomType.Constructor
     private VpnTunnelInfoResponse(
-        String displayName,
-        String networkUri,
-        String region,
-        String remoteGateway,
-        String remoteGatewayIp,
-        String routingType,
-        String sourceGateway,
-        String sourceGatewayIp,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("remoteGateway") String remoteGateway,
+        @OutputCustomType.Parameter("remoteGatewayIp") String remoteGatewayIp,
+        @OutputCustomType.Parameter("routingType") String routingType,
+        @OutputCustomType.Parameter("sourceGateway") String sourceGateway,
+        @OutputCustomType.Parameter("sourceGatewayIp") String sourceGatewayIp,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.networkUri = networkUri;
         this.region = region;

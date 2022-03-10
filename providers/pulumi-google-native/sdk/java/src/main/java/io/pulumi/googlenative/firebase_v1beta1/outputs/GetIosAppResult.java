@@ -45,15 +45,15 @@ public final class GetIosAppResult {
      */
     private final String teamId;
 
-    @OutputCustomType.Constructor({"appId","appStoreId","bundleId","displayName","name","project","teamId"})
+    @OutputCustomType.Constructor
     private GetIosAppResult(
-        String appId,
-        String appStoreId,
-        String bundleId,
-        String displayName,
-        String name,
-        String project,
-        String teamId) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appStoreId") String appStoreId,
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("teamId") String teamId) {
         this.appId = appId;
         this.appStoreId = appStoreId;
         this.bundleId = bundleId;

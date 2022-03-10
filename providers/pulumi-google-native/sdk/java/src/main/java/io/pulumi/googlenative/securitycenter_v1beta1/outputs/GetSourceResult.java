@@ -25,11 +25,11 @@ public final class GetSourceResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetSourceResult(
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;

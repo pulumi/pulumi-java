@@ -20,10 +20,10 @@ public final class ParquetOptionsResponse {
      */
     private final Boolean enumAsString;
 
-    @OutputCustomType.Constructor({"enableListInference","enumAsString"})
+    @OutputCustomType.Constructor
     private ParquetOptionsResponse(
-        Boolean enableListInference,
-        Boolean enumAsString) {
+        @OutputCustomType.Parameter("enableListInference") Boolean enableListInference,
+        @OutputCustomType.Parameter("enumAsString") Boolean enumAsString) {
         this.enableListInference = enableListInference;
         this.enumAsString = enumAsString;
     }

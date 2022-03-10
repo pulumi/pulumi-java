@@ -16,8 +16,8 @@ public final class LabelSelectorResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private LabelSelectorResponse(Map<String,String> labels) {
+    @OutputCustomType.Constructor
+    private LabelSelectorResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

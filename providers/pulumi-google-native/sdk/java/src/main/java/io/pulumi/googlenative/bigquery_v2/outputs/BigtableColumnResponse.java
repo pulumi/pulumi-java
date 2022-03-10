@@ -37,14 +37,14 @@ public final class BigtableColumnResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encoding","fieldName","onlyReadLatest","qualifierEncoded","qualifierString","type"})
+    @OutputCustomType.Constructor
     private BigtableColumnResponse(
-        String encoding,
-        String fieldName,
-        Boolean onlyReadLatest,
-        String qualifierEncoded,
-        String qualifierString,
-        String type) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @OutputCustomType.Parameter("qualifierEncoded") String qualifierEncoded,
+        @OutputCustomType.Parameter("qualifierString") String qualifierString,
+        @OutputCustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.fieldName = fieldName;
         this.onlyReadLatest = onlyReadLatest;

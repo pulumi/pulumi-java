@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      */
     private final String unclassifiedConversationsCount;
 
-    @OutputCustomType.Constructor({"analyzedConversationsCount","issueStats","unclassifiedConversationsCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(
-        String analyzedConversationsCount,
-        Map<String,String> issueStats,
-        String unclassifiedConversationsCount) {
+        @OutputCustomType.Parameter("analyzedConversationsCount") String analyzedConversationsCount,
+        @OutputCustomType.Parameter("issueStats") Map<String,String> issueStats,
+        @OutputCustomType.Parameter("unclassifiedConversationsCount") String unclassifiedConversationsCount) {
         this.analyzedConversationsCount = analyzedConversationsCount;
         this.issueStats = issueStats;
         this.unclassifiedConversationsCount = unclassifiedConversationsCount;

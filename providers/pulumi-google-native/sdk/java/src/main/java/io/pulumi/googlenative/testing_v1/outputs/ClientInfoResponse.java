@@ -22,10 +22,10 @@ public final class ClientInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"clientInfoDetails","name"})
+    @OutputCustomType.Constructor
     private ClientInfoResponse(
-        List<ClientInfoDetailResponse> clientInfoDetails,
-        String name) {
+        @OutputCustomType.Parameter("clientInfoDetails") List<ClientInfoDetailResponse> clientInfoDetails,
+        @OutputCustomType.Parameter("name") String name) {
         this.clientInfoDetails = clientInfoDetails;
         this.name = name;
     }

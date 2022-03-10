@@ -20,10 +20,10 @@ public final class OAuthTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"scope","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private OAuthTokenResponse(
-        String scope,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.scope = scope;
         this.serviceAccountEmail = serviceAccountEmail;
     }

@@ -40,14 +40,14 @@ public final class VpnGatewayInfoResponse {
      */
     private final String vpnTunnelUri;
 
-    @OutputCustomType.Constructor({"displayName","ipAddress","networkUri","region","uri","vpnTunnelUri"})
+    @OutputCustomType.Constructor
     private VpnGatewayInfoResponse(
-        String displayName,
-        String ipAddress,
-        String networkUri,
-        String region,
-        String uri,
-        String vpnTunnelUri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("vpnTunnelUri") String vpnTunnelUri) {
         this.displayName = displayName;
         this.ipAddress = ipAddress;
         this.networkUri = networkUri;

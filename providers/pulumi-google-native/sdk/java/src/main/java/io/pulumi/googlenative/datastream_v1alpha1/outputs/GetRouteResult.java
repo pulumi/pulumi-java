@@ -47,15 +47,15 @@ public final class GetRouteResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","destinationAddress","destinationPort","displayName","labels","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        String createTime,
-        String destinationAddress,
-        Integer destinationPort,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destinationAddress") String destinationAddress,
+        @OutputCustomType.Parameter("destinationPort") Integer destinationPort,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destinationAddress = destinationAddress;
         this.destinationPort = destinationPort;

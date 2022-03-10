@@ -21,10 +21,10 @@ public final class LogsPanelResponse {
      */
     private final List<String> resourceNames;
 
-    @OutputCustomType.Constructor({"filter","resourceNames"})
+    @OutputCustomType.Constructor
     private LogsPanelResponse(
-        String filter,
-        List<String> resourceNames) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("resourceNames") List<String> resourceNames) {
         this.filter = filter;
         this.resourceNames = resourceNames;
     }

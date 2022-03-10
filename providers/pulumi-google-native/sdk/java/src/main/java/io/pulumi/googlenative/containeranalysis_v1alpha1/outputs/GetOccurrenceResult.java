@@ -141,31 +141,31 @@ public final class GetOccurrenceResult {
      */
     private final VulnerabilityDetailsResponse vulnerabilityDetails;
 
-    @OutputCustomType.Constructor({"attestation","buildDetails","compliance","createTime","deployment","derivedImage","discovered","dsseAttestation","envelope","installation","kind","name","noteName","remediation","resource","resourceUrl","sbom","spdxFile","spdxPackage","spdxRelationship","updateTime","upgrade","vulnerabilityDetails"})
+    @OutputCustomType.Constructor
     private GetOccurrenceResult(
-        AttestationResponse attestation,
-        BuildDetailsResponse buildDetails,
-        ComplianceOccurrenceResponse compliance,
-        String createTime,
-        DeploymentResponse deployment,
-        DerivedResponse derivedImage,
-        DiscoveredResponse discovered,
-        DSSEAttestationOccurrenceResponse dsseAttestation,
-        EnvelopeResponse envelope,
-        InstallationResponse installation,
-        String kind,
-        String name,
-        String noteName,
-        String remediation,
-        ResourceResponse resource,
-        String resourceUrl,
-        DocumentOccurrenceResponse sbom,
-        FileOccurrenceResponse spdxFile,
-        PackageInfoOccurrenceResponse spdxPackage,
-        RelationshipOccurrenceResponse spdxRelationship,
-        String updateTime,
-        UpgradeOccurrenceResponse upgrade,
-        VulnerabilityDetailsResponse vulnerabilityDetails) {
+        @OutputCustomType.Parameter("attestation") AttestationResponse attestation,
+        @OutputCustomType.Parameter("buildDetails") BuildDetailsResponse buildDetails,
+        @OutputCustomType.Parameter("compliance") ComplianceOccurrenceResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") DeploymentResponse deployment,
+        @OutputCustomType.Parameter("derivedImage") DerivedResponse derivedImage,
+        @OutputCustomType.Parameter("discovered") DiscoveredResponse discovered,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationOccurrenceResponse dsseAttestation,
+        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @OutputCustomType.Parameter("installation") InstallationResponse installation,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noteName") String noteName,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("resource") ResourceResponse resource,
+        @OutputCustomType.Parameter("resourceUrl") String resourceUrl,
+        @OutputCustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
+        @OutputCustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeOccurrenceResponse upgrade,
+        @OutputCustomType.Parameter("vulnerabilityDetails") VulnerabilityDetailsResponse vulnerabilityDetails) {
         this.attestation = attestation;
         this.buildDetails = buildDetails;
         this.compliance = compliance;

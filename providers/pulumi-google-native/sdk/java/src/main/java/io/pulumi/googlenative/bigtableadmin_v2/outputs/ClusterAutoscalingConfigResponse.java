@@ -21,10 +21,10 @@ public final class ClusterAutoscalingConfigResponse {
      */
     private final AutoscalingTargetsResponse autoscalingTargets;
 
-    @OutputCustomType.Constructor({"autoscalingLimits","autoscalingTargets"})
+    @OutputCustomType.Constructor
     private ClusterAutoscalingConfigResponse(
-        AutoscalingLimitsResponse autoscalingLimits,
-        AutoscalingTargetsResponse autoscalingTargets) {
+        @OutputCustomType.Parameter("autoscalingLimits") AutoscalingLimitsResponse autoscalingLimits,
+        @OutputCustomType.Parameter("autoscalingTargets") AutoscalingTargetsResponse autoscalingTargets) {
         this.autoscalingLimits = autoscalingLimits;
         this.autoscalingTargets = autoscalingTargets;
     }

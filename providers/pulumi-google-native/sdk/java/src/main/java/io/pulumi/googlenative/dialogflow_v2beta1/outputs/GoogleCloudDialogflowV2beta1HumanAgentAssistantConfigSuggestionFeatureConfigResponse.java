@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
-    @OutputCustomType.Constructor({"conversationModelConfig","conversationProcessConfig","enableEventBasedSuggestion","queryConfig","suggestionFeature","suggestionTriggerSettings"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig,
-        Boolean enableEventBasedSuggestion,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
-        GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
+        @OutputCustomType.Parameter("conversationModelConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig,
+        @OutputCustomType.Parameter("conversationProcessConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig,
+        @OutputCustomType.Parameter("enableEventBasedSuggestion") Boolean enableEventBasedSuggestion,
+        @OutputCustomType.Parameter("queryConfig") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
+        @OutputCustomType.Parameter("suggestionFeature") GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
+        @OutputCustomType.Parameter("suggestionTriggerSettings") GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
         this.conversationModelConfig = conversationModelConfig;
         this.conversationProcessConfig = conversationProcessConfig;
         this.enableEventBasedSuggestion = enableEventBasedSuggestion;

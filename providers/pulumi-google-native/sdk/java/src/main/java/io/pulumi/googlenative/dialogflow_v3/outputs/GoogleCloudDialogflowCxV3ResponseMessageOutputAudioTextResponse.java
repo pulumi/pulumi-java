@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","ssml","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse(
-        Boolean allowPlaybackInterruption,
-        String ssml,
-        String text) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("text") String text) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.ssml = ssml;
         this.text = text;

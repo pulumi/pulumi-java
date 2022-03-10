@@ -16,10 +16,10 @@ public final class ResponsePolicyGKEClusterResponse {
     private final String gkeClusterName;
     private final String kind;
 
-    @OutputCustomType.Constructor({"gkeClusterName","kind"})
+    @OutputCustomType.Constructor
     private ResponsePolicyGKEClusterResponse(
-        String gkeClusterName,
-        String kind) {
+        @OutputCustomType.Parameter("gkeClusterName") String gkeClusterName,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.gkeClusterName = gkeClusterName;
         this.kind = kind;
     }

@@ -27,11 +27,11 @@ public final class UpgradeOccurrenceResponse {
      */
     private final VersionResponse parsedVersion;
 
-    @OutputCustomType.Constructor({"distribution","$package","parsedVersion"})
+    @OutputCustomType.Constructor
     private UpgradeOccurrenceResponse(
-        UpgradeDistributionResponse distribution,
-        String $package,
-        VersionResponse parsedVersion) {
+        @OutputCustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("parsedVersion") VersionResponse parsedVersion) {
         this.distribution = distribution;
         this.$package = $package;
         this.parsedVersion = parsedVersion;

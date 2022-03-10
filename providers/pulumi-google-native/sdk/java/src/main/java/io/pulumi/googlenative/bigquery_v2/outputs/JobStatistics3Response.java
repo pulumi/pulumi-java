@@ -35,13 +35,13 @@ public final class JobStatistics3Response {
      */
     private final String outputRows;
 
-    @OutputCustomType.Constructor({"badRecords","inputFileBytes","inputFiles","outputBytes","outputRows"})
+    @OutputCustomType.Constructor
     private JobStatistics3Response(
-        String badRecords,
-        String inputFileBytes,
-        String inputFiles,
-        String outputBytes,
-        String outputRows) {
+        @OutputCustomType.Parameter("badRecords") String badRecords,
+        @OutputCustomType.Parameter("inputFileBytes") String inputFileBytes,
+        @OutputCustomType.Parameter("inputFiles") String inputFiles,
+        @OutputCustomType.Parameter("outputBytes") String outputBytes,
+        @OutputCustomType.Parameter("outputRows") String outputRows) {
         this.badRecords = badRecords;
         this.inputFileBytes = inputFileBytes;
         this.inputFiles = inputFiles;

@@ -26,11 +26,11 @@ public final class ResourcePolicyHourlyCycleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","hoursInCycle","startTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicyHourlyCycleResponse(
-        String duration,
-        Integer hoursInCycle,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("hoursInCycle") Integer hoursInCycle,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.hoursInCycle = hoursInCycle;
         this.startTime = startTime;

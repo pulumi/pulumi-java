@@ -16,8 +16,8 @@ public final class SearchConfigResponse {
      */
     private final List<SearchParameterResponse> searchParameters;
 
-    @OutputCustomType.Constructor({"searchParameters"})
-    private SearchConfigResponse(List<SearchParameterResponse> searchParameters) {
+    @OutputCustomType.Constructor
+    private SearchConfigResponse(@OutputCustomType.Parameter("searchParameters") List<SearchParameterResponse> searchParameters) {
         this.searchParameters = searchParameters;
     }
 

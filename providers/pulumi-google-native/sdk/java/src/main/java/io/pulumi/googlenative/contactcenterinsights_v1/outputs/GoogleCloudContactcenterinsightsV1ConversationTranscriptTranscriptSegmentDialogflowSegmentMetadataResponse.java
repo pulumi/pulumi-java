@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final Boolean smartReplyAllowlistCovered;
 
-    @OutputCustomType.Constructor({"smartReplyAllowlistCovered"})
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(Boolean smartReplyAllowlistCovered) {
+    @OutputCustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(@OutputCustomType.Parameter("smartReplyAllowlistCovered") Boolean smartReplyAllowlistCovered) {
         this.smartReplyAllowlistCovered = smartReplyAllowlistCovered;
     }
 

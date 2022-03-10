@@ -26,11 +26,11 @@ public final class EnvVarResponse {
      */
     private final EnvVarSourceResponse valueFrom;
 
-    @OutputCustomType.Constructor({"name","value","valueFrom"})
+    @OutputCustomType.Constructor
     private EnvVarResponse(
-        String name,
-        String value,
-        EnvVarSourceResponse valueFrom) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueFrom") EnvVarSourceResponse valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

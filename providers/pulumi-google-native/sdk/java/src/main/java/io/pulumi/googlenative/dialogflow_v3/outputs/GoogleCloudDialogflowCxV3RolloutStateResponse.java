@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
      */
     private final Integer stepIndex;
 
-    @OutputCustomType.Constructor({"startTime","step","stepIndex"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutStateResponse(
-        String startTime,
-        String step,
-        Integer stepIndex) {
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("step") String step,
+        @OutputCustomType.Parameter("stepIndex") Integer stepIndex) {
         this.startTime = startTime;
         this.step = step;
         this.stepIndex = stepIndex;

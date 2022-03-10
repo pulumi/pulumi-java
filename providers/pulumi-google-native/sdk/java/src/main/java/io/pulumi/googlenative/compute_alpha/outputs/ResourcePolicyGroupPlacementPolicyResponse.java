@@ -41,14 +41,14 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
      */
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor({"availabilityDomainCount","collocation","locality","scope","style","vmCount"})
+    @OutputCustomType.Constructor
     private ResourcePolicyGroupPlacementPolicyResponse(
-        Integer availabilityDomainCount,
-        String collocation,
-        String locality,
-        String scope,
-        String style,
-        Integer vmCount) {
+        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @OutputCustomType.Parameter("collocation") String collocation,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("style") String style,
+        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.locality = locality;

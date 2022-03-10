@@ -14,10 +14,10 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
     private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
     private final String kind;
 
-    @OutputCustomType.Constructor({"items","kind"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyWrrPolicyResponse(
-        List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
-        String kind) {
+        @OutputCustomType.Parameter("items") List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.items = items;
         this.kind = kind;
     }

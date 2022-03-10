@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
      */
     private final String sensitiveValueFrequencyUpperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","sensitiveValueFrequencyLowerBound","sensitiveValueFrequencyUpperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LDiversityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
-        String sensitiveValueFrequencyLowerBound,
-        String sensitiveValueFrequencyUpperBound) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
+        @OutputCustomType.Parameter("sensitiveValueFrequencyLowerBound") String sensitiveValueFrequencyLowerBound,
+        @OutputCustomType.Parameter("sensitiveValueFrequencyUpperBound") String sensitiveValueFrequencyUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

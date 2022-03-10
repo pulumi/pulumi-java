@@ -15,8 +15,8 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"location"})
-    private ReplicaResponse(String location) {
+    @OutputCustomType.Constructor
+    private ReplicaResponse(@OutputCustomType.Parameter("location") String location) {
         this.location = location;
     }
 

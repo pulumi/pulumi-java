@@ -27,11 +27,11 @@ public final class ScanRunErrorTraceResponse {
      */
     private final ScanConfigErrorResponse scanConfigError;
 
-    @OutputCustomType.Constructor({"code","mostCommonHttpErrorCode","scanConfigError"})
+    @OutputCustomType.Constructor
     private ScanRunErrorTraceResponse(
-        String code,
-        Integer mostCommonHttpErrorCode,
-        ScanConfigErrorResponse scanConfigError) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("mostCommonHttpErrorCode") Integer mostCommonHttpErrorCode,
+        @OutputCustomType.Parameter("scanConfigError") ScanConfigErrorResponse scanConfigError) {
         this.code = code;
         this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
         this.scanConfigError = scanConfigError;

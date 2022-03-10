@@ -20,10 +20,10 @@ public final class FeatureSettingsResponse {
      */
     private final Boolean useContainerOptimizedOs;
 
-    @OutputCustomType.Constructor({"splitHealthChecks","useContainerOptimizedOs"})
+    @OutputCustomType.Constructor
     private FeatureSettingsResponse(
-        Boolean splitHealthChecks,
-        Boolean useContainerOptimizedOs) {
+        @OutputCustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks,
+        @OutputCustomType.Parameter("useContainerOptimizedOs") Boolean useContainerOptimizedOs) {
         this.splitHealthChecks = splitHealthChecks;
         this.useContainerOptimizedOs = useContainerOptimizedOs;
     }

@@ -15,8 +15,8 @@ public final class ExternalVpnGatewayInterfaceResponse {
      */
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"ipAddress"})
-    private ExternalVpnGatewayInterfaceResponse(String ipAddress) {
+    @OutputCustomType.Constructor
+    private ExternalVpnGatewayInterfaceResponse(@OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.ipAddress = ipAddress;
     }
 

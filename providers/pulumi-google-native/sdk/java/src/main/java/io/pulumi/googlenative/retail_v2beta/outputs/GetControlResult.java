@@ -43,14 +43,14 @@ public final class GetControlResult {
      */
     private final List<String> solutionTypes;
 
-    @OutputCustomType.Constructor({"associatedServingConfigIds","displayName","facetSpec","name","rule","solutionTypes"})
+    @OutputCustomType.Constructor
     private GetControlResult(
-        List<String> associatedServingConfigIds,
-        String displayName,
-        GoogleCloudRetailV2betaSearchRequestFacetSpecResponse facetSpec,
-        String name,
-        GoogleCloudRetailV2betaRuleResponse rule,
-        List<String> solutionTypes) {
+        @OutputCustomType.Parameter("associatedServingConfigIds") List<String> associatedServingConfigIds,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("facetSpec") GoogleCloudRetailV2betaSearchRequestFacetSpecResponse facetSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rule") GoogleCloudRetailV2betaRuleResponse rule,
+        @OutputCustomType.Parameter("solutionTypes") List<String> solutionTypes) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         this.displayName = displayName;
         this.facetSpec = facetSpec;

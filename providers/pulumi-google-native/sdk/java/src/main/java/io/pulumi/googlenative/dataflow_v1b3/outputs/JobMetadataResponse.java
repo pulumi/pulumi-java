@@ -52,15 +52,15 @@ public final class JobMetadataResponse {
      */
     private final List<SpannerIODetailsResponse> spannerDetails;
 
-    @OutputCustomType.Constructor({"bigTableDetails","bigqueryDetails","datastoreDetails","fileDetails","pubsubDetails","sdkVersion","spannerDetails"})
+    @OutputCustomType.Constructor
     private JobMetadataResponse(
-        List<BigTableIODetailsResponse> bigTableDetails,
-        List<BigQueryIODetailsResponse> bigqueryDetails,
-        List<DatastoreIODetailsResponse> datastoreDetails,
-        List<FileIODetailsResponse> fileDetails,
-        List<PubSubIODetailsResponse> pubsubDetails,
-        SdkVersionResponse sdkVersion,
-        List<SpannerIODetailsResponse> spannerDetails) {
+        @OutputCustomType.Parameter("bigTableDetails") List<BigTableIODetailsResponse> bigTableDetails,
+        @OutputCustomType.Parameter("bigqueryDetails") List<BigQueryIODetailsResponse> bigqueryDetails,
+        @OutputCustomType.Parameter("datastoreDetails") List<DatastoreIODetailsResponse> datastoreDetails,
+        @OutputCustomType.Parameter("fileDetails") List<FileIODetailsResponse> fileDetails,
+        @OutputCustomType.Parameter("pubsubDetails") List<PubSubIODetailsResponse> pubsubDetails,
+        @OutputCustomType.Parameter("sdkVersion") SdkVersionResponse sdkVersion,
+        @OutputCustomType.Parameter("spannerDetails") List<SpannerIODetailsResponse> spannerDetails) {
         this.bigTableDetails = bigTableDetails;
         this.bigqueryDetails = bigqueryDetails;
         this.datastoreDetails = datastoreDetails;

@@ -63,18 +63,18 @@ public final class GetBitbucketServerConfigResult {
      */
     private final String webhookKey;
 
-    @OutputCustomType.Constructor({"apiKey","connectedRepositories","createTime","hostUri","name","peeredNetwork","secrets","sslCa","username","webhookKey"})
+    @OutputCustomType.Constructor
     private GetBitbucketServerConfigResult(
-        String apiKey,
-        List<BitbucketServerRepositoryIdResponse> connectedRepositories,
-        String createTime,
-        String hostUri,
-        String name,
-        String peeredNetwork,
-        BitbucketServerSecretsResponse secrets,
-        String sslCa,
-        String username,
-        String webhookKey) {
+        @OutputCustomType.Parameter("apiKey") String apiKey,
+        @OutputCustomType.Parameter("connectedRepositories") List<BitbucketServerRepositoryIdResponse> connectedRepositories,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("hostUri") String hostUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork,
+        @OutputCustomType.Parameter("secrets") BitbucketServerSecretsResponse secrets,
+        @OutputCustomType.Parameter("sslCa") String sslCa,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("webhookKey") String webhookKey) {
         this.apiKey = apiKey;
         this.connectedRepositories = connectedRepositories;
         this.createTime = createTime;

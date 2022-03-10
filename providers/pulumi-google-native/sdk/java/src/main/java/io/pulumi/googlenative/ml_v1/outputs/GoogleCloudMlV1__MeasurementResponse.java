@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__MeasurementResponse {
      */
     private final String stepCount;
 
-    @OutputCustomType.Constructor({"elapsedTime","metrics","stepCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__MeasurementResponse(
-        String elapsedTime,
-        List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
-        String stepCount) {
+        @OutputCustomType.Parameter("elapsedTime") String elapsedTime,
+        @OutputCustomType.Parameter("metrics") List<GoogleCloudMlV1_Measurement_MetricResponse> metrics,
+        @OutputCustomType.Parameter("stepCount") String stepCount) {
         this.elapsedTime = elapsedTime;
         this.metrics = metrics;
         this.stepCount = stepCount;

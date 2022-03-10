@@ -95,24 +95,24 @@ public final class SavedAttachedDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKey","diskSizeGb","diskType","guestOsFeatures","index","$interface","kind","licenses","mode","source","storageBytes","storageBytesStatus","type"})
+    @OutputCustomType.Constructor
     private SavedAttachedDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        String $interface,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String storageBytes,
-        String storageBytesStatus,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes,
+        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

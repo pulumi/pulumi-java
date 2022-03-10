@@ -52,16 +52,16 @@ public final class GetWorkerPoolResult {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","name","networkConfig","region","state","updateTime","workerConfig"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        String createTime,
-        String deleteTime,
-        String name,
-        NetworkConfigResponse networkConfig,
-        String region,
-        String state,
-        String updateTime,
-        WorkerConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.name = name;

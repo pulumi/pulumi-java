@@ -54,16 +54,16 @@ public final class GetTestCaseResult {
      */
     private final GoogleCloudDialogflowCxV3TestConfigResponse testConfig;
 
-    @OutputCustomType.Constructor({"creationTime","displayName","lastTestResult","name","notes","tags","testCaseConversationTurns","testConfig"})
+    @OutputCustomType.Constructor
     private GetTestCaseResult(
-        String creationTime,
-        String displayName,
-        GoogleCloudDialogflowCxV3TestCaseResultResponse lastTestResult,
-        String name,
-        String notes,
-        List<String> tags,
-        List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns,
-        GoogleCloudDialogflowCxV3TestConfigResponse testConfig) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("lastTestResult") GoogleCloudDialogflowCxV3TestCaseResultResponse lastTestResult,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") String notes,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("testCaseConversationTurns") List<GoogleCloudDialogflowCxV3ConversationTurnResponse> testCaseConversationTurns,
+        @OutputCustomType.Parameter("testConfig") GoogleCloudDialogflowCxV3TestConfigResponse testConfig) {
         this.creationTime = creationTime;
         this.displayName = displayName;
         this.lastTestResult = lastTestResult;

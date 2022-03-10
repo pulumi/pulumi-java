@@ -15,8 +15,8 @@ public final class ApprovalConfigResponse {
      */
     private final Boolean approvalRequired;
 
-    @OutputCustomType.Constructor({"approvalRequired"})
-    private ApprovalConfigResponse(Boolean approvalRequired) {
+    @OutputCustomType.Constructor
+    private ApprovalConfigResponse(@OutputCustomType.Parameter("approvalRequired") Boolean approvalRequired) {
         this.approvalRequired = approvalRequired;
     }
 

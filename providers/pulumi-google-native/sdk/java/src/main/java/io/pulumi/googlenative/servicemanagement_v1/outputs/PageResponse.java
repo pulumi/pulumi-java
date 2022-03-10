@@ -26,11 +26,11 @@ public final class PageResponse {
      */
     private final List<PageResponse> subpages;
 
-    @OutputCustomType.Constructor({"content","name","subpages"})
+    @OutputCustomType.Constructor
     private PageResponse(
-        String content,
-        String name,
-        List<PageResponse> subpages) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subpages") List<PageResponse> subpages) {
         this.content = content;
         this.name = name;
         this.subpages = subpages;

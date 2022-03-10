@@ -22,10 +22,10 @@ public final class LinkedRouterApplianceInstancesResponse {
      */
     private final Boolean siteToSiteDataTransfer;
 
-    @OutputCustomType.Constructor({"instances","siteToSiteDataTransfer"})
+    @OutputCustomType.Constructor
     private LinkedRouterApplianceInstancesResponse(
-        List<RouterApplianceInstanceResponse> instances,
-        Boolean siteToSiteDataTransfer) {
+        @OutputCustomType.Parameter("instances") List<RouterApplianceInstanceResponse> instances,
+        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }

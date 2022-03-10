@@ -21,10 +21,10 @@ public final class SecretResponse {
      */
     private final Map<String,String> secretEnv;
 
-    @OutputCustomType.Constructor({"kmsKeyName","secretEnv"})
+    @OutputCustomType.Constructor
     private SecretResponse(
-        String kmsKeyName,
-        Map<String,String> secretEnv) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("secretEnv") Map<String,String> secretEnv) {
         this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }

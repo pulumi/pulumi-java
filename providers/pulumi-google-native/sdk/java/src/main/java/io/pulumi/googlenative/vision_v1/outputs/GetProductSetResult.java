@@ -31,12 +31,12 @@ public final class GetProductSetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","indexError","indexTime","name"})
+    @OutputCustomType.Constructor
     private GetProductSetResult(
-        String displayName,
-        StatusResponse indexError,
-        String indexTime,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("indexError") StatusResponse indexError,
+        @OutputCustomType.Parameter("indexTime") String indexTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.indexError = indexError;
         this.indexTime = indexTime;

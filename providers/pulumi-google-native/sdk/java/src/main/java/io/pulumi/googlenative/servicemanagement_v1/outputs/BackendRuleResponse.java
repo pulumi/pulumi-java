@@ -48,16 +48,16 @@ public final class BackendRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"address","deadline","disableAuth","jwtAudience","operationDeadline","pathTranslation","protocol","selector"})
+    @OutputCustomType.Constructor
     private BackendRuleResponse(
-        String address,
-        Double deadline,
-        Boolean disableAuth,
-        String jwtAudience,
-        Double operationDeadline,
-        String pathTranslation,
-        String protocol,
-        String selector) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("deadline") Double deadline,
+        @OutputCustomType.Parameter("disableAuth") Boolean disableAuth,
+        @OutputCustomType.Parameter("jwtAudience") String jwtAudience,
+        @OutputCustomType.Parameter("operationDeadline") Double operationDeadline,
+        @OutputCustomType.Parameter("pathTranslation") String pathTranslation,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.address = address;
         this.deadline = deadline;
         this.disableAuth = disableAuth;

@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItemRespons
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","image","info","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageCarouselSelectItemResponse(
-        String description,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("info") GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse info,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.image = image;
         this.info = info;

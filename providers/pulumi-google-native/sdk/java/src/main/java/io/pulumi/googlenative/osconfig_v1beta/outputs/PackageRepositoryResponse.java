@@ -33,12 +33,12 @@ public final class PackageRepositoryResponse {
      */
     private final ZypperRepositoryResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private PackageRepositoryResponse(
-        AptRepositoryResponse apt,
-        GooRepositoryResponse goo,
-        YumRepositoryResponse yum,
-        ZypperRepositoryResponse zypper) {
+        @OutputCustomType.Parameter("apt") AptRepositoryResponse apt,
+        @OutputCustomType.Parameter("goo") GooRepositoryResponse goo,
+        @OutputCustomType.Parameter("yum") YumRepositoryResponse yum,
+        @OutputCustomType.Parameter("zypper") ZypperRepositoryResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

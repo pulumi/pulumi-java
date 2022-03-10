@@ -100,25 +100,25 @@ public final class SchedulingResponse {
      */
     private final String terminationTime;
 
-    @OutputCustomType.Constructor({"automaticRestart","availabilityDomain","currentCpus","currentMemoryMb","hostErrorTimeoutSeconds","instanceTerminationAction","latencyTolerant","locationHint","maintenanceFreezeDurationHours","maintenanceInterval","maxRunDuration","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible","provisioningModel","terminationTime"})
+    @OutputCustomType.Constructor
     private SchedulingResponse(
-        Boolean automaticRestart,
-        Integer availabilityDomain,
-        Integer currentCpus,
-        String currentMemoryMb,
-        Integer hostErrorTimeoutSeconds,
-        String instanceTerminationAction,
-        Boolean latencyTolerant,
-        String locationHint,
-        Integer maintenanceFreezeDurationHours,
-        String maintenanceInterval,
-        DurationResponse maxRunDuration,
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible,
-        String provisioningModel,
-        String terminationTime) {
+        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @OutputCustomType.Parameter("availabilityDomain") Integer availabilityDomain,
+        @OutputCustomType.Parameter("currentCpus") Integer currentCpus,
+        @OutputCustomType.Parameter("currentMemoryMb") String currentMemoryMb,
+        @OutputCustomType.Parameter("hostErrorTimeoutSeconds") Integer hostErrorTimeoutSeconds,
+        @OutputCustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
+        @OutputCustomType.Parameter("latencyTolerant") Boolean latencyTolerant,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("maintenanceFreezeDurationHours") Integer maintenanceFreezeDurationHours,
+        @OutputCustomType.Parameter("maintenanceInterval") String maintenanceInterval,
+        @OutputCustomType.Parameter("maxRunDuration") DurationResponse maxRunDuration,
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("provisioningModel") String provisioningModel,
+        @OutputCustomType.Parameter("terminationTime") String terminationTime) {
         this.automaticRestart = automaticRestart;
         this.availabilityDomain = availabilityDomain;
         this.currentCpus = currentCpus;

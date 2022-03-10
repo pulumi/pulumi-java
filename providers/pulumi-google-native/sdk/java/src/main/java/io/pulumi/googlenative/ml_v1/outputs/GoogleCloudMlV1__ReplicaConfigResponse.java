@@ -43,14 +43,14 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse {
      */
     private final String tpuTfVersion;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerArgs","containerCommand","diskConfig","imageUri","tpuTfVersion"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ReplicaConfigResponse(
-        GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        List<String> containerArgs,
-        List<String> containerCommand,
-        GoogleCloudMlV1__DiskConfigResponse diskConfig,
-        String imageUri,
-        String tpuTfVersion) {
+        @OutputCustomType.Parameter("acceleratorConfig") GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("containerArgs") List<String> containerArgs,
+        @OutputCustomType.Parameter("containerCommand") List<String> containerCommand,
+        @OutputCustomType.Parameter("diskConfig") GoogleCloudMlV1__DiskConfigResponse diskConfig,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("tpuTfVersion") String tpuTfVersion) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerArgs = containerArgs;
         this.containerCommand = containerCommand;

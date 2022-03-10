@@ -53,16 +53,16 @@ public final class GetPrivateConnectionResult {
      */
     private final VpcPeeringConfigResponse vpcPeeringConfig;
 
-    @OutputCustomType.Constructor({"createTime","displayName","error","labels","name","state","updateTime","vpcPeeringConfig"})
+    @OutputCustomType.Constructor
     private GetPrivateConnectionResult(
-        String createTime,
-        String displayName,
-        ErrorResponse error,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String updateTime,
-        VpcPeeringConfigResponse vpcPeeringConfig) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("error") ErrorResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vpcPeeringConfig") VpcPeeringConfigResponse vpcPeeringConfig) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.error = error;

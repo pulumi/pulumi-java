@@ -21,10 +21,10 @@ public final class ReusableConfigWrapperResponse {
      */
     private final ReusableConfigValuesResponse reusableConfigValues;
 
-    @OutputCustomType.Constructor({"reusableConfig","reusableConfigValues"})
+    @OutputCustomType.Constructor
     private ReusableConfigWrapperResponse(
-        String reusableConfig,
-        ReusableConfigValuesResponse reusableConfigValues) {
+        @OutputCustomType.Parameter("reusableConfig") String reusableConfig,
+        @OutputCustomType.Parameter("reusableConfigValues") ReusableConfigValuesResponse reusableConfigValues) {
         this.reusableConfig = reusableConfig;
         this.reusableConfigValues = reusableConfigValues;
     }

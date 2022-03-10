@@ -30,12 +30,12 @@ public final class ScheduleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"cronJobDuration","cronSpec","endTime","startTime"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        String cronJobDuration,
-        String cronSpec,
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("cronJobDuration") String cronJobDuration,
+        @OutputCustomType.Parameter("cronSpec") String cronSpec,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.cronJobDuration = cronJobDuration;
         this.cronSpec = cronSpec;
         this.endTime = endTime;

@@ -21,10 +21,10 @@ public final class AcceleratorConfigResponse {
      */
     private final String acceleratorTypeUri;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorTypeUri"})
+    @OutputCustomType.Constructor
     private AcceleratorConfigResponse(
-        Integer acceleratorCount,
-        String acceleratorTypeUri) {
+        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorTypeUri") String acceleratorTypeUri) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorTypeUri = acceleratorTypeUri;
     }

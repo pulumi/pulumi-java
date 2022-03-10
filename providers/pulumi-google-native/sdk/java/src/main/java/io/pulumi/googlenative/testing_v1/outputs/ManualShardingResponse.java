@@ -16,8 +16,8 @@ public final class ManualShardingResponse {
      */
     private final List<TestTargetsForShardResponse> testTargetsForShard;
 
-    @OutputCustomType.Constructor({"testTargetsForShard"})
-    private ManualShardingResponse(List<TestTargetsForShardResponse> testTargetsForShard) {
+    @OutputCustomType.Constructor
+    private ManualShardingResponse(@OutputCustomType.Parameter("testTargetsForShard") List<TestTargetsForShardResponse> testTargetsForShard) {
         this.testTargetsForShard = testTargetsForShard;
     }
 

@@ -25,11 +25,11 @@ public final class UrlDispatchRuleResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"domain","path","service"})
+    @OutputCustomType.Constructor
     private UrlDispatchRuleResponse(
-        String domain,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;

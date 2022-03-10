@@ -33,12 +33,12 @@ public final class LocationResponse {
      */
     private final Double radiusInMiles;
 
-    @OutputCustomType.Constructor({"latLng","locationType","postalAddress","radiusInMiles"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        LatLngResponse latLng,
-        String locationType,
-        PostalAddressResponse postalAddress,
-        Double radiusInMiles) {
+        @OutputCustomType.Parameter("latLng") LatLngResponse latLng,
+        @OutputCustomType.Parameter("locationType") String locationType,
+        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress,
+        @OutputCustomType.Parameter("radiusInMiles") Double radiusInMiles) {
         this.latLng = latLng;
         this.locationType = locationType;
         this.postalAddress = postalAddress;

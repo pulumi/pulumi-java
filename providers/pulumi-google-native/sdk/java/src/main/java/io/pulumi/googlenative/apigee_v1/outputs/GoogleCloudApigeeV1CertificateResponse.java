@@ -16,8 +16,8 @@ public final class GoogleCloudApigeeV1CertificateResponse {
      */
     private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
-    @OutputCustomType.Constructor({"certInfo"})
-    private GoogleCloudApigeeV1CertificateResponse(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
+    @OutputCustomType.Constructor
+    private GoogleCloudApigeeV1CertificateResponse(@OutputCustomType.Parameter("certInfo") List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
         this.certInfo = certInfo;
     }
 

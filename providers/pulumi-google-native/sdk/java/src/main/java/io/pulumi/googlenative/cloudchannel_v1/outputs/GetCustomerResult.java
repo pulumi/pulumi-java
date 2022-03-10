@@ -73,20 +73,20 @@ public final class GetCustomerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"alternateEmail","channelPartnerId","cloudIdentityId","cloudIdentityInfo","createTime","domain","languageCode","name","orgDisplayName","orgPostalAddress","primaryContactInfo","updateTime"})
+    @OutputCustomType.Constructor
     private GetCustomerResult(
-        String alternateEmail,
-        String channelPartnerId,
-        String cloudIdentityId,
-        GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo,
-        String createTime,
-        String domain,
-        String languageCode,
-        String name,
-        String orgDisplayName,
-        GoogleTypePostalAddressResponse orgPostalAddress,
-        GoogleCloudChannelV1ContactInfoResponse primaryContactInfo,
-        String updateTime) {
+        @OutputCustomType.Parameter("alternateEmail") String alternateEmail,
+        @OutputCustomType.Parameter("channelPartnerId") String channelPartnerId,
+        @OutputCustomType.Parameter("cloudIdentityId") String cloudIdentityId,
+        @OutputCustomType.Parameter("cloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse cloudIdentityInfo,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orgDisplayName") String orgDisplayName,
+        @OutputCustomType.Parameter("orgPostalAddress") GoogleTypePostalAddressResponse orgPostalAddress,
+        @OutputCustomType.Parameter("primaryContactInfo") GoogleCloudChannelV1ContactInfoResponse primaryContactInfo,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.alternateEmail = alternateEmail;
         this.channelPartnerId = channelPartnerId;
         this.cloudIdentityId = cloudIdentityId;

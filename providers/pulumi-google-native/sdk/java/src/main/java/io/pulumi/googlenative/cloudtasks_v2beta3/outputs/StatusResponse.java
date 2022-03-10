@@ -28,11 +28,11 @@ public final class StatusResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private StatusResponse(
-        Integer code,
-        List<Map<String,String>> details,
-        String message) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("details") List<Map<String,String>> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

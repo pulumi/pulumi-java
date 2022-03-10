@@ -54,16 +54,16 @@ public final class GetAuthorizedCertificateResult {
      */
     private final List<String> visibleDomainMappings;
 
-    @OutputCustomType.Constructor({"certificateRawData","displayName","domainMappingsCount","domainNames","expireTime","managedCertificate","name","visibleDomainMappings"})
+    @OutputCustomType.Constructor
     private GetAuthorizedCertificateResult(
-        CertificateRawDataResponse certificateRawData,
-        String displayName,
-        Integer domainMappingsCount,
-        List<String> domainNames,
-        String expireTime,
-        ManagedCertificateResponse managedCertificate,
-        String name,
-        List<String> visibleDomainMappings) {
+        @OutputCustomType.Parameter("certificateRawData") CertificateRawDataResponse certificateRawData,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("domainMappingsCount") Integer domainMappingsCount,
+        @OutputCustomType.Parameter("domainNames") List<String> domainNames,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("managedCertificate") ManagedCertificateResponse managedCertificate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("visibleDomainMappings") List<String> visibleDomainMappings) {
         this.certificateRawData = certificateRawData;
         this.displayName = displayName;
         this.domainMappingsCount = domainMappingsCount;

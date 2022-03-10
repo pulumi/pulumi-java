@@ -15,8 +15,8 @@ public final class StreamingConfigResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private StreamingConfigResponse(String filter) {
+    @OutputCustomType.Constructor
+    private StreamingConfigResponse(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 

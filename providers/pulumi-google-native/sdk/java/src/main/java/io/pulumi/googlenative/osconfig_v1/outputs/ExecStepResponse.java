@@ -20,10 +20,10 @@ public final class ExecStepResponse {
      */
     private final ExecStepConfigResponse windowsExecStepConfig;
 
-    @OutputCustomType.Constructor({"linuxExecStepConfig","windowsExecStepConfig"})
+    @OutputCustomType.Constructor
     private ExecStepResponse(
-        ExecStepConfigResponse linuxExecStepConfig,
-        ExecStepConfigResponse windowsExecStepConfig) {
+        @OutputCustomType.Parameter("linuxExecStepConfig") ExecStepConfigResponse linuxExecStepConfig,
+        @OutputCustomType.Parameter("windowsExecStepConfig") ExecStepConfigResponse windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }

@@ -15,8 +15,8 @@ public final class SourceScoringConfigResponse {
      */
     private final String sourceImportance;
 
-    @OutputCustomType.Constructor({"sourceImportance"})
-    private SourceScoringConfigResponse(String sourceImportance) {
+    @OutputCustomType.Constructor
+    private SourceScoringConfigResponse(@OutputCustomType.Parameter("sourceImportance") String sourceImportance) {
         this.sourceImportance = sourceImportance;
     }
 

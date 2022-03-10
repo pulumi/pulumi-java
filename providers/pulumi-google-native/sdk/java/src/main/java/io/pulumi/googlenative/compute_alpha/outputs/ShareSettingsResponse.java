@@ -32,12 +32,12 @@ public final class ShareSettingsResponse {
      */
     private final String shareType;
 
-    @OutputCustomType.Constructor({"folderMap","projectMap","projects","shareType"})
+    @OutputCustomType.Constructor
     private ShareSettingsResponse(
-        Map<String,String> folderMap,
-        Map<String,String> projectMap,
-        List<String> projects,
-        String shareType) {
+        @OutputCustomType.Parameter("folderMap") Map<String,String> folderMap,
+        @OutputCustomType.Parameter("projectMap") Map<String,String> projectMap,
+        @OutputCustomType.Parameter("projects") List<String> projects,
+        @OutputCustomType.Parameter("shareType") String shareType) {
         this.folderMap = folderMap;
         this.projectMap = projectMap;
         this.projects = projects;

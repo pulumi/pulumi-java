@@ -16,8 +16,8 @@ public final class StandardSqlTableTypeResponse {
      */
     private final List<StandardSqlFieldResponse> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private StandardSqlTableTypeResponse(List<StandardSqlFieldResponse> columns) {
+    @OutputCustomType.Constructor
+    private StandardSqlTableTypeResponse(@OutputCustomType.Parameter("columns") List<StandardSqlFieldResponse> columns) {
         this.columns = columns;
     }
 

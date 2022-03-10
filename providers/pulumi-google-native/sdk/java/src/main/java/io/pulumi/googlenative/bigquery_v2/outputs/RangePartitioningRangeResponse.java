@@ -25,11 +25,11 @@ public final class RangePartitioningRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor({"end","interval","start"})
+    @OutputCustomType.Constructor
     private RangePartitioningRangeResponse(
-        String end,
-        String interval,
-        String start) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("start") String start) {
         this.end = end;
         this.interval = interval;
         this.start = start;

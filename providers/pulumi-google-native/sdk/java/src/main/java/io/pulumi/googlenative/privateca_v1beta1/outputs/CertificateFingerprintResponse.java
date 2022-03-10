@@ -15,8 +15,8 @@ public final class CertificateFingerprintResponse {
      */
     private final String sha256Hash;
 
-    @OutputCustomType.Constructor({"sha256Hash"})
-    private CertificateFingerprintResponse(String sha256Hash) {
+    @OutputCustomType.Constructor
+    private CertificateFingerprintResponse(@OutputCustomType.Parameter("sha256Hash") String sha256Hash) {
         this.sha256Hash = sha256Hash;
     }
 

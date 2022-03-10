@@ -98,24 +98,24 @@ public final class GetDeviceResult {
      */
     private final DeviceStateResponse state;
 
-    @OutputCustomType.Constructor({"blocked","config","credentials","gatewayConfig","lastConfigAckTime","lastConfigSendTime","lastErrorStatus","lastErrorTime","lastEventTime","lastHeartbeatTime","lastStateTime","logLevel","metadata","name","numId","state"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        Boolean blocked,
-        DeviceConfigResponse config,
-        List<DeviceCredentialResponse> credentials,
-        GatewayConfigResponse gatewayConfig,
-        String lastConfigAckTime,
-        String lastConfigSendTime,
-        StatusResponse lastErrorStatus,
-        String lastErrorTime,
-        String lastEventTime,
-        String lastHeartbeatTime,
-        String lastStateTime,
-        String logLevel,
-        Map<String,String> metadata,
-        String name,
-        String numId,
-        DeviceStateResponse state) {
+        @OutputCustomType.Parameter("blocked") Boolean blocked,
+        @OutputCustomType.Parameter("config") DeviceConfigResponse config,
+        @OutputCustomType.Parameter("credentials") List<DeviceCredentialResponse> credentials,
+        @OutputCustomType.Parameter("gatewayConfig") GatewayConfigResponse gatewayConfig,
+        @OutputCustomType.Parameter("lastConfigAckTime") String lastConfigAckTime,
+        @OutputCustomType.Parameter("lastConfigSendTime") String lastConfigSendTime,
+        @OutputCustomType.Parameter("lastErrorStatus") StatusResponse lastErrorStatus,
+        @OutputCustomType.Parameter("lastErrorTime") String lastErrorTime,
+        @OutputCustomType.Parameter("lastEventTime") String lastEventTime,
+        @OutputCustomType.Parameter("lastHeartbeatTime") String lastHeartbeatTime,
+        @OutputCustomType.Parameter("lastStateTime") String lastStateTime,
+        @OutputCustomType.Parameter("logLevel") String logLevel,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numId") String numId,
+        @OutputCustomType.Parameter("state") DeviceStateResponse state) {
         this.blocked = blocked;
         this.config = config;
         this.credentials = credentials;

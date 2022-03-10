@@ -16,8 +16,8 @@ public final class SourceResponse {
      */
     private final List<FileResponse> files;
 
-    @OutputCustomType.Constructor({"files"})
-    private SourceResponse(List<FileResponse> files) {
+    @OutputCustomType.Constructor
+    private SourceResponse(@OutputCustomType.Parameter("files") List<FileResponse> files) {
         this.files = files;
     }
 

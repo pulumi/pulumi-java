@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
      */
     private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
-    @OutputCustomType.Constructor({"infoTypeTransformations","recordTransformations","transformationErrorHandling"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeidentifyConfigResponse(
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
-        GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
+        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @OutputCustomType.Parameter("recordTransformations") GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
+        @OutputCustomType.Parameter("transformationErrorHandling") GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
         this.infoTypeTransformations = infoTypeTransformations;
         this.recordTransformations = recordTransformations;
         this.transformationErrorHandling = transformationErrorHandling;

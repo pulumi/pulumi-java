@@ -15,8 +15,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
      */
     private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
-    @OutputCustomType.Constructor({"layer7DdosDefenseConfig"})
-    private SecurityPolicyAdaptiveProtectionConfigResponse(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyAdaptiveProtectionConfigResponse(@OutputCustomType.Parameter("layer7DdosDefenseConfig") SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
     }
 

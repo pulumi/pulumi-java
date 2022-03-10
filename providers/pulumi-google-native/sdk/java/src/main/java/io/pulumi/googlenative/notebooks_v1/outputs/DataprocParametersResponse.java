@@ -15,8 +15,8 @@ public final class DataprocParametersResponse {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor({"cluster"})
-    private DataprocParametersResponse(String cluster) {
+    @OutputCustomType.Constructor
+    private DataprocParametersResponse(@OutputCustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 

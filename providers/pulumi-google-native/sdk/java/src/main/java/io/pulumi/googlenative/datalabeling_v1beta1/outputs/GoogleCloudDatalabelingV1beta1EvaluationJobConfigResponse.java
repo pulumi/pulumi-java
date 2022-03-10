@@ -70,18 +70,18 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
 
-    @OutputCustomType.Constructor({"bigqueryImportKeys","boundingPolyConfig","evaluationConfig","evaluationJobAlertConfig","exampleCount","exampleSamplePercentage","humanAnnotationConfig","imageClassificationConfig","inputConfig","textClassificationConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(
-        Map<String,String> bigqueryImportKeys,
-        GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig,
-        GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig,
-        GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig,
-        Integer exampleCount,
-        Double exampleSamplePercentage,
-        GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig,
-        GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
-        GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
-        GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
+        @OutputCustomType.Parameter("bigqueryImportKeys") Map<String,String> bigqueryImportKeys,
+        @OutputCustomType.Parameter("boundingPolyConfig") GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig,
+        @OutputCustomType.Parameter("evaluationConfig") GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig,
+        @OutputCustomType.Parameter("evaluationJobAlertConfig") GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig,
+        @OutputCustomType.Parameter("exampleCount") Integer exampleCount,
+        @OutputCustomType.Parameter("exampleSamplePercentage") Double exampleSamplePercentage,
+        @OutputCustomType.Parameter("humanAnnotationConfig") GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig,
+        @OutputCustomType.Parameter("imageClassificationConfig") GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig,
+        @OutputCustomType.Parameter("inputConfig") GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig,
+        @OutputCustomType.Parameter("textClassificationConfig") GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig) {
         this.bigqueryImportKeys = bigqueryImportKeys;
         this.boundingPolyConfig = boundingPolyConfig;
         this.evaluationConfig = evaluationConfig;

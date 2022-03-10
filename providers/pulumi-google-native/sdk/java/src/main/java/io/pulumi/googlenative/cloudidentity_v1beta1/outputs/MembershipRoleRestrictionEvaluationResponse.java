@@ -15,8 +15,8 @@ public final class MembershipRoleRestrictionEvaluationResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private MembershipRoleRestrictionEvaluationResponse(String state) {
+    @OutputCustomType.Constructor
+    private MembershipRoleRestrictionEvaluationResponse(@OutputCustomType.Parameter("state") String state) {
         this.state = state;
     }
 

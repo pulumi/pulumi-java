@@ -57,17 +57,17 @@ public final class AccessConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"externalIpv6","externalIpv6PrefixLength","kind","name","natIP","networkTier","publicPtrDomainName","setPublicPtr","type"})
+    @OutputCustomType.Constructor
     private AccessConfigResponse(
-        String externalIpv6,
-        Integer externalIpv6PrefixLength,
-        String kind,
-        String name,
-        String natIP,
-        String networkTier,
-        String publicPtrDomainName,
-        Boolean setPublicPtr,
-        String type) {
+        @OutputCustomType.Parameter("externalIpv6") String externalIpv6,
+        @OutputCustomType.Parameter("externalIpv6PrefixLength") Integer externalIpv6PrefixLength,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natIP") String natIP,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") String publicPtrDomainName,
+        @OutputCustomType.Parameter("setPublicPtr") Boolean setPublicPtr,
+        @OutputCustomType.Parameter("type") String type) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.kind = kind;

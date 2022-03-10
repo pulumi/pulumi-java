@@ -36,13 +36,13 @@ public final class AndroidRoboTestResponse {
      */
     private final Integer maxSteps;
 
-    @OutputCustomType.Constructor({"appInitialActivity","bootstrapPackageId","bootstrapRunnerClass","maxDepth","maxSteps"})
+    @OutputCustomType.Constructor
     private AndroidRoboTestResponse(
-        String appInitialActivity,
-        String bootstrapPackageId,
-        String bootstrapRunnerClass,
-        Integer maxDepth,
-        Integer maxSteps) {
+        @OutputCustomType.Parameter("appInitialActivity") String appInitialActivity,
+        @OutputCustomType.Parameter("bootstrapPackageId") String bootstrapPackageId,
+        @OutputCustomType.Parameter("bootstrapRunnerClass") String bootstrapRunnerClass,
+        @OutputCustomType.Parameter("maxDepth") Integer maxDepth,
+        @OutputCustomType.Parameter("maxSteps") Integer maxSteps) {
         this.appInitialActivity = appInitialActivity;
         this.bootstrapPackageId = bootstrapPackageId;
         this.bootstrapRunnerClass = bootstrapRunnerClass;

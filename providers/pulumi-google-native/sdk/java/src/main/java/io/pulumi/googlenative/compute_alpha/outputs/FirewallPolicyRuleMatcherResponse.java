@@ -63,18 +63,18 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
-    @OutputCustomType.Constructor({"destAddressGroups","destFqdns","destIpRanges","destRegionCodes","layer4Configs","srcAddressGroups","srcFqdns","srcIpRanges","srcRegionCodes","srcSecureTags"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        List<String> destAddressGroups,
-        List<String> destFqdns,
-        List<String> destIpRanges,
-        List<String> destRegionCodes,
-        List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        List<String> srcAddressGroups,
-        List<String> srcFqdns,
-        List<String> srcIpRanges,
-        List<String> srcRegionCodes,
-        List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+        @OutputCustomType.Parameter("destAddressGroups") List<String> destAddressGroups,
+        @OutputCustomType.Parameter("destFqdns") List<String> destFqdns,
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
+        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcAddressGroups") List<String> srcAddressGroups,
+        @OutputCustomType.Parameter("srcFqdns") List<String> srcFqdns,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
+        @OutputCustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
+        @OutputCustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
         this.destAddressGroups = destAddressGroups;
         this.destFqdns = destFqdns;
         this.destIpRanges = destIpRanges;

@@ -36,13 +36,13 @@ public final class ExecutionConfigResponse {
      */
     private final String subnetworkUri;
 
-    @OutputCustomType.Constructor({"kmsKey","networkTags","networkUri","serviceAccount","subnetworkUri"})
+    @OutputCustomType.Constructor
     private ExecutionConfigResponse(
-        String kmsKey,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String subnetworkUri) {
+        @OutputCustomType.Parameter("kmsKey") String kmsKey,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri) {
         this.kmsKey = kmsKey;
         this.networkTags = networkTags;
         this.networkUri = networkUri;

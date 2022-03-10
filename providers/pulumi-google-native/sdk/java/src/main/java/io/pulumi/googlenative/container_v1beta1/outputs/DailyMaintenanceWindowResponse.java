@@ -20,10 +20,10 @@ public final class DailyMaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","startTime"})
+    @OutputCustomType.Constructor
     private DailyMaintenanceWindowResponse(
-        String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }

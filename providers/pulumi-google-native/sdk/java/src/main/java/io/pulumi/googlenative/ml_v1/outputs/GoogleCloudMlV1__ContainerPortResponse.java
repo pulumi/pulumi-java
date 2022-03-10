@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
      */
     private final Integer containerPort;
 
-    @OutputCustomType.Constructor({"containerPort"})
-    private GoogleCloudMlV1__ContainerPortResponse(Integer containerPort) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1__ContainerPortResponse(@OutputCustomType.Parameter("containerPort") Integer containerPort) {
         this.containerPort = containerPort;
     }
 

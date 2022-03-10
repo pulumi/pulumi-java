@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
      */
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
-    @OutputCustomType.Constructor({"valueFrequencyHistogramBuckets"})
-    private GooglePrivacyDlpV2CategoricalStatsResultResponse(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse(@OutputCustomType.Parameter("valueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
         this.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
     }
 

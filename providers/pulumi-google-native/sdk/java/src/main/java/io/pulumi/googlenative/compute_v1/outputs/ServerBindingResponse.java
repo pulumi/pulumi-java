@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ServerBindingResponse {
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ServerBindingResponse(String type) {
+    @OutputCustomType.Constructor
+    private ServerBindingResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

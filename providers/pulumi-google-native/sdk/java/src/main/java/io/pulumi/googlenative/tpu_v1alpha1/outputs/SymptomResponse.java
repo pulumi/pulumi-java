@@ -30,12 +30,12 @@ public final class SymptomResponse {
      */
     private final String workerId;
 
-    @OutputCustomType.Constructor({"createTime","details","symptomType","workerId"})
+    @OutputCustomType.Constructor
     private SymptomResponse(
-        String createTime,
-        String details,
-        String symptomType,
-        String workerId) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("symptomType") String symptomType,
+        @OutputCustomType.Parameter("workerId") String workerId) {
         this.createTime = createTime;
         this.details = details;
         this.symptomType = symptomType;

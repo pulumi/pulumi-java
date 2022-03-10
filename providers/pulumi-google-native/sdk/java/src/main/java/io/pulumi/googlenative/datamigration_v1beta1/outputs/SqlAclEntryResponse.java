@@ -30,12 +30,12 @@ public final class SqlAclEntryResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"expireTime","label","ttl","value"})
+    @OutputCustomType.Constructor
     private SqlAclEntryResponse(
-        String expireTime,
-        String label,
-        String ttl,
-        String value) {
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("value") String value) {
         this.expireTime = expireTime;
         this.label = label;
         this.ttl = ttl;

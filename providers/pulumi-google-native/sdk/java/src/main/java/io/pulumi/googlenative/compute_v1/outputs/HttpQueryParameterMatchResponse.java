@@ -31,12 +31,12 @@ public final class HttpQueryParameterMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","name","presentMatch","regexMatch"})
+    @OutputCustomType.Constructor
     private HttpQueryParameterMatchResponse(
-        String exactMatch,
-        String name,
-        Boolean presentMatch,
-        String regexMatch) {
+        @OutputCustomType.Parameter("exactMatch") String exactMatch,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("presentMatch") Boolean presentMatch,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;

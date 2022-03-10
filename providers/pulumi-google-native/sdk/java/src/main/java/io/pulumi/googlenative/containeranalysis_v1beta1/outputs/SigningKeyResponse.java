@@ -30,12 +30,12 @@ public final class SigningKeyResponse {
      */
     private final String publicKeyValue;
 
-    @OutputCustomType.Constructor({"keyId","keyScheme","keyType","publicKeyValue"})
+    @OutputCustomType.Constructor
     private SigningKeyResponse(
-        String keyId,
-        String keyScheme,
-        String keyType,
-        String publicKeyValue) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyScheme") String keyScheme,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("publicKeyValue") String publicKeyValue) {
         this.keyId = keyId;
         this.keyScheme = keyScheme;
         this.keyType = keyType;

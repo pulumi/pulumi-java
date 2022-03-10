@@ -20,10 +20,10 @@ public final class SortOptionsResponse {
      */
     private final String sortOrder;
 
-    @OutputCustomType.Constructor({"operatorName","sortOrder"})
+    @OutputCustomType.Constructor
     private SortOptionsResponse(
-        String operatorName,
-        String sortOrder) {
+        @OutputCustomType.Parameter("operatorName") String operatorName,
+        @OutputCustomType.Parameter("sortOrder") String sortOrder) {
         this.operatorName = operatorName;
         this.sortOrder = sortOrder;
     }

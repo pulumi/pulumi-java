@@ -117,27 +117,27 @@ public final class GetNoteResult {
      */
     private final VulnerabilityNoteResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestation","build","compliance","createTime","deployment","discovery","dsseAttestation","expirationTime","image","kind","longDescription","name","$package","relatedNoteNames","relatedUrl","shortDescription","updateTime","upgrade","vulnerability"})
+    @OutputCustomType.Constructor
     private GetNoteResult(
-        AttestationNoteResponse attestation,
-        BuildNoteResponse build,
-        ComplianceNoteResponse compliance,
-        String createTime,
-        DeploymentNoteResponse deployment,
-        DiscoveryNoteResponse discovery,
-        DSSEAttestationNoteResponse dsseAttestation,
-        String expirationTime,
-        ImageNoteResponse image,
-        String kind,
-        String longDescription,
-        String name,
-        PackageNoteResponse $package,
-        List<String> relatedNoteNames,
-        List<RelatedUrlResponse> relatedUrl,
-        String shortDescription,
-        String updateTime,
-        UpgradeNoteResponse upgrade,
-        VulnerabilityNoteResponse vulnerability) {
+        @OutputCustomType.Parameter("attestation") AttestationNoteResponse attestation,
+        @OutputCustomType.Parameter("build") BuildNoteResponse build,
+        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") DeploymentNoteResponse deployment,
+        @OutputCustomType.Parameter("discovery") DiscoveryNoteResponse discovery,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("image") ImageNoteResponse image,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("package") PackageNoteResponse $package,
+        @OutputCustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
+        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @OutputCustomType.Parameter("vulnerability") VulnerabilityNoteResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;

@@ -31,12 +31,12 @@ public final class GerritSourceContextResponse {
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","gerritProject","hostUri","revisionId"})
+    @OutputCustomType.Constructor
     private GerritSourceContextResponse(
-        AliasContextResponse aliasContext,
-        String gerritProject,
-        String hostUri,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("gerritProject") String gerritProject,
+        @OutputCustomType.Parameter("hostUri") String hostUri,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.gerritProject = gerritProject;
         this.hostUri = hostUri;

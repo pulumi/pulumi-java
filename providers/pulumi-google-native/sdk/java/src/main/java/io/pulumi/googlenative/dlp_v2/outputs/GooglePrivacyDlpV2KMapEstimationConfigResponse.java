@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
      */
     private final String regionCode;
 
-    @OutputCustomType.Constructor({"auxiliaryTables","quasiIds","regionCode"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationConfigResponse(
-        List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables,
-        List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds,
-        String regionCode) {
+        @OutputCustomType.Parameter("auxiliaryTables") List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables,
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds,
+        @OutputCustomType.Parameter("regionCode") String regionCode) {
         this.auxiliaryTables = auxiliaryTables;
         this.quasiIds = quasiIds;
         this.regionCode = regionCode;

@@ -16,10 +16,10 @@ public final class PolicyNetworkResponse {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"kind","networkUrl"})
+    @OutputCustomType.Constructor
     private PolicyNetworkResponse(
-        String kind,
-        String networkUrl) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.kind = kind;
         this.networkUrl = networkUrl;
     }

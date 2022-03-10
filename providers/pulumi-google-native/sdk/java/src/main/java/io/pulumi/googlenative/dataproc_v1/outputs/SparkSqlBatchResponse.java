@@ -27,11 +27,11 @@ public final class SparkSqlBatchResponse {
      */
     private final Map<String,String> queryVariables;
 
-    @OutputCustomType.Constructor({"jarFileUris","queryFileUri","queryVariables"})
+    @OutputCustomType.Constructor
     private SparkSqlBatchResponse(
-        List<String> jarFileUris,
-        String queryFileUri,
-        Map<String,String> queryVariables) {
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryVariables") Map<String,String> queryVariables) {
         this.jarFileUris = jarFileUris;
         this.queryFileUri = queryFileUri;
         this.queryVariables = queryVariables;

@@ -95,24 +95,24 @@ public final class NetworkInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","fingerprint","internalIpv6PrefixLength","ipv6AccessConfigs","ipv6AccessType","ipv6Address","kind","name","network","networkIP","nicType","queueCount","stackType","subinterfaces","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        List<AccessConfigResponse> accessConfigs,
-        List<AliasIpRangeResponse> aliasIpRanges,
-        String fingerprint,
-        Integer internalIpv6PrefixLength,
-        List<AccessConfigResponse> ipv6AccessConfigs,
-        String ipv6AccessType,
-        String ipv6Address,
-        String kind,
-        String name,
-        String network,
-        String networkIP,
-        String nicType,
-        Integer queueCount,
-        String stackType,
-        List<NetworkInterfaceSubInterfaceResponse> subinterfaces,
-        String subnetwork) {
+        @OutputCustomType.Parameter("accessConfigs") List<AccessConfigResponse> accessConfigs,
+        @OutputCustomType.Parameter("aliasIpRanges") List<AliasIpRangeResponse> aliasIpRanges,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("internalIpv6PrefixLength") Integer internalIpv6PrefixLength,
+        @OutputCustomType.Parameter("ipv6AccessConfigs") List<AccessConfigResponse> ipv6AccessConfigs,
+        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkIP") String networkIP,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("queueCount") Integer queueCount,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("subinterfaces") List<NetworkInterfaceSubInterfaceResponse> subinterfaces,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.fingerprint = fingerprint;

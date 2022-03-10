@@ -20,10 +20,10 @@ public final class NodeInitializationActionResponse {
      */
     private final String executionTimeout;
 
-    @OutputCustomType.Constructor({"executableFile","executionTimeout"})
+    @OutputCustomType.Constructor
     private NodeInitializationActionResponse(
-        String executableFile,
-        String executionTimeout) {
+        @OutputCustomType.Parameter("executableFile") String executableFile,
+        @OutputCustomType.Parameter("executionTimeout") String executionTimeout) {
         this.executableFile = executableFile;
         this.executionTimeout = executionTimeout;
     }

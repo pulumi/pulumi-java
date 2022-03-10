@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      */
     private final Boolean enableStackdriverLogging;
 
-    @OutputCustomType.Constructor({"enableInteractionLogging","enableStackdriverLogging"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(
-        Boolean enableInteractionLogging,
-        Boolean enableStackdriverLogging) {
+        @OutputCustomType.Parameter("enableInteractionLogging") Boolean enableInteractionLogging,
+        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
         this.enableInteractionLogging = enableInteractionLogging;
         this.enableStackdriverLogging = enableStackdriverLogging;
     }

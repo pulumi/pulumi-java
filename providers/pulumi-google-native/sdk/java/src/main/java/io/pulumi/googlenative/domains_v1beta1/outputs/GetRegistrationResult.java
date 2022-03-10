@@ -75,20 +75,20 @@ public final class GetRegistrationResult {
      */
     private final List<String> supportedPrivacy;
 
-    @OutputCustomType.Constructor({"contactSettings","createTime","dnsSettings","domainName","expireTime","issues","labels","managementSettings","name","pendingContactSettings","state","supportedPrivacy"})
+    @OutputCustomType.Constructor
     private GetRegistrationResult(
-        ContactSettingsResponse contactSettings,
-        String createTime,
-        DnsSettingsResponse dnsSettings,
-        String domainName,
-        String expireTime,
-        List<String> issues,
-        Map<String,String> labels,
-        ManagementSettingsResponse managementSettings,
-        String name,
-        ContactSettingsResponse pendingContactSettings,
-        String state,
-        List<String> supportedPrivacy) {
+        @OutputCustomType.Parameter("contactSettings") ContactSettingsResponse contactSettings,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dnsSettings") DnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("issues") List<String> issues,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("managementSettings") ManagementSettingsResponse managementSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pendingContactSettings") ContactSettingsResponse pendingContactSettings,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("supportedPrivacy") List<String> supportedPrivacy) {
         this.contactSettings = contactSettings;
         this.createTime = createTime;
         this.dnsSettings = dnsSettings;

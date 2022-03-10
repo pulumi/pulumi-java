@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse(List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse(@OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
         this.items = items;
     }
 

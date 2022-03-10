@@ -46,15 +46,15 @@ public final class GetDatastoreResult {
      */
     private final String targetType;
 
-    @OutputCustomType.Constructor({"createTime","datastoreConfig","displayName","lastUpdateTime","org","self","targetType"})
+    @OutputCustomType.Constructor
     private GetDatastoreResult(
-        String createTime,
-        GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig,
-        String displayName,
-        String lastUpdateTime,
-        String org,
-        String self,
-        String targetType) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("datastoreConfig") GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("org") String org,
+        @OutputCustomType.Parameter("self") String self,
+        @OutputCustomType.Parameter("targetType") String targetType) {
         this.createTime = createTime;
         this.datastoreConfig = datastoreConfig;
         this.displayName = displayName;

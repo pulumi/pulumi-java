@@ -25,11 +25,11 @@ public final class InconclusiveDetailResponse {
      */
     private final Boolean infrastructureFailure;
 
-    @OutputCustomType.Constructor({"abortedByUser","hasErrorLogs","infrastructureFailure"})
+    @OutputCustomType.Constructor
     private InconclusiveDetailResponse(
-        Boolean abortedByUser,
-        Boolean hasErrorLogs,
-        Boolean infrastructureFailure) {
+        @OutputCustomType.Parameter("abortedByUser") Boolean abortedByUser,
+        @OutputCustomType.Parameter("hasErrorLogs") Boolean hasErrorLogs,
+        @OutputCustomType.Parameter("infrastructureFailure") Boolean infrastructureFailure) {
         this.abortedByUser = abortedByUser;
         this.hasErrorLogs = hasErrorLogs;
         this.infrastructureFailure = infrastructureFailure;

@@ -31,12 +31,12 @@ public final class GoogleCloudMlV1__PredictionOutputResponse {
      */
     private final String predictionCount;
 
-    @OutputCustomType.Constructor({"errorCount","nodeHours","outputPath","predictionCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__PredictionOutputResponse(
-        String errorCount,
-        Double nodeHours,
-        String outputPath,
-        String predictionCount) {
+        @OutputCustomType.Parameter("errorCount") String errorCount,
+        @OutputCustomType.Parameter("nodeHours") Double nodeHours,
+        @OutputCustomType.Parameter("outputPath") String outputPath,
+        @OutputCustomType.Parameter("predictionCount") String predictionCount) {
         this.errorCount = errorCount;
         this.nodeHours = nodeHours;
         this.outputPath = outputPath;

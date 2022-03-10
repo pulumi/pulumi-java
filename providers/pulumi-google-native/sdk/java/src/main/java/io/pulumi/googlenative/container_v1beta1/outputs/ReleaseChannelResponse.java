@@ -15,8 +15,8 @@ public final class ReleaseChannelResponse {
      */
     private final String channel;
 
-    @OutputCustomType.Constructor({"channel"})
-    private ReleaseChannelResponse(String channel) {
+    @OutputCustomType.Constructor
+    private ReleaseChannelResponse(@OutputCustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 

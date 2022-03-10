@@ -38,13 +38,13 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      */
     private final String minCpuPlatform;
 
-    @OutputCustomType.Constructor({"guestAccelerators","localSsds","locationHint","machineType","minCpuPlatform"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(
-        List<AcceleratorConfigResponse> guestAccelerators,
-        List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
-        String locationHint,
-        String machineType,
-        String minCpuPlatform) {
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("localSsds") List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.locationHint = locationHint;

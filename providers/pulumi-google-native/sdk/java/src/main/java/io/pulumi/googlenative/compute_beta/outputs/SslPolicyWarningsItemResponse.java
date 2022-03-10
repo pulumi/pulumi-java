@@ -27,11 +27,11 @@ public final class SslPolicyWarningsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","data","message"})
+    @OutputCustomType.Constructor
     private SslPolicyWarningsItemResponse(
-        String code,
-        List<SslPolicyWarningsItemDataItemResponse> data,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("data") List<SslPolicyWarningsItemDataItemResponse> data,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.data = data;
         this.message = message;

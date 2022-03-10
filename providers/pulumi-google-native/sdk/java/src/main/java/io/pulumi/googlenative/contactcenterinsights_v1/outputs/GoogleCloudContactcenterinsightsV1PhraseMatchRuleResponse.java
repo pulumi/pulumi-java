@@ -27,11 +27,11 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
      */
     private final String query;
 
-    @OutputCustomType.Constructor({"config","negated","query"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(
-        GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
-        Boolean negated,
-        String query) {
+        @OutputCustomType.Parameter("config") GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config,
+        @OutputCustomType.Parameter("negated") Boolean negated,
+        @OutputCustomType.Parameter("query") String query) {
         this.config = config;
         this.negated = negated;
         this.query = query;

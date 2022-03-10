@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
      */
     private final Integer target;
 
-    @OutputCustomType.Constructor({"name","target"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__MetricSpecResponse(
-        String name,
-        Integer target) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") Integer target) {
         this.name = name;
         this.target = target;
     }

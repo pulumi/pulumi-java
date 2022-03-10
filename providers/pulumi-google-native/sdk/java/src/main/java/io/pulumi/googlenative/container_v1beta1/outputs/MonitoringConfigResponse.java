@@ -21,10 +21,10 @@ public final class MonitoringConfigResponse {
      */
     private final ManagedPrometheusConfigResponse managedPrometheusConfig;
 
-    @OutputCustomType.Constructor({"componentConfig","managedPrometheusConfig"})
+    @OutputCustomType.Constructor
     private MonitoringConfigResponse(
-        MonitoringComponentConfigResponse componentConfig,
-        ManagedPrometheusConfigResponse managedPrometheusConfig) {
+        @OutputCustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig,
+        @OutputCustomType.Parameter("managedPrometheusConfig") ManagedPrometheusConfigResponse managedPrometheusConfig) {
         this.componentConfig = componentConfig;
         this.managedPrometheusConfig = managedPrometheusConfig;
     }

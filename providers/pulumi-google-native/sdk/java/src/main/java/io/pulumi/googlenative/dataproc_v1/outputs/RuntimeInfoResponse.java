@@ -26,11 +26,11 @@ public final class RuntimeInfoResponse {
      */
     private final String outputUri;
 
-    @OutputCustomType.Constructor({"diagnosticOutputUri","endpoints","outputUri"})
+    @OutputCustomType.Constructor
     private RuntimeInfoResponse(
-        String diagnosticOutputUri,
-        Map<String,String> endpoints,
-        String outputUri) {
+        @OutputCustomType.Parameter("diagnosticOutputUri") String diagnosticOutputUri,
+        @OutputCustomType.Parameter("endpoints") Map<String,String> endpoints,
+        @OutputCustomType.Parameter("outputUri") String outputUri) {
         this.diagnosticOutputUri = diagnosticOutputUri;
         this.endpoints = endpoints;
         this.outputUri = outputUri;

@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      */
     private final Integer customerChannel;
 
-    @OutputCustomType.Constructor({"agentChannel","customerChannel"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(
-        Integer agentChannel,
-        Integer customerChannel) {
+        @OutputCustomType.Parameter("agentChannel") Integer agentChannel,
+        @OutputCustomType.Parameter("customerChannel") Integer customerChannel) {
         this.agentChannel = agentChannel;
         this.customerChannel = customerChannel;
     }

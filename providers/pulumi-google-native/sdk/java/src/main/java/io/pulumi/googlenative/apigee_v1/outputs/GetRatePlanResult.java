@@ -105,26 +105,26 @@ public final class GetRatePlanResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"apiproduct","billingPeriod","consumptionPricingRates","consumptionPricingType","createdAt","currencyCode","description","displayName","endTime","fixedFeeFrequency","fixedRecurringFee","lastModifiedAt","name","revenueShareRates","revenueShareType","setupFee","startTime","state"})
+    @OutputCustomType.Constructor
     private GetRatePlanResult(
-        String apiproduct,
-        String billingPeriod,
-        List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
-        String consumptionPricingType,
-        String createdAt,
-        String currencyCode,
-        String description,
-        String displayName,
-        String endTime,
-        Integer fixedFeeFrequency,
-        GoogleTypeMoneyResponse fixedRecurringFee,
-        String lastModifiedAt,
-        String name,
-        List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
-        String revenueShareType,
-        GoogleTypeMoneyResponse setupFee,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("apiproduct") String apiproduct,
+        @OutputCustomType.Parameter("billingPeriod") String billingPeriod,
+        @OutputCustomType.Parameter("consumptionPricingRates") List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
+        @OutputCustomType.Parameter("consumptionPricingType") String consumptionPricingType,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("fixedFeeFrequency") Integer fixedFeeFrequency,
+        @OutputCustomType.Parameter("fixedRecurringFee") GoogleTypeMoneyResponse fixedRecurringFee,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revenueShareRates") List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
+        @OutputCustomType.Parameter("revenueShareType") String revenueShareType,
+        @OutputCustomType.Parameter("setupFee") GoogleTypeMoneyResponse setupFee,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.apiproduct = apiproduct;
         this.billingPeriod = billingPeriod;
         this.consumptionPricingRates = consumptionPricingRates;

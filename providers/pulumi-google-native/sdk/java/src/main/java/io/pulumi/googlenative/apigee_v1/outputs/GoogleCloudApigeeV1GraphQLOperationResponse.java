@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse {
      */
     private final List<String> operationTypes;
 
-    @OutputCustomType.Constructor({"operation","operationTypes"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1GraphQLOperationResponse(
-        String operation,
-        List<String> operationTypes) {
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("operationTypes") List<String> operationTypes) {
         this.operation = operation;
         this.operationTypes = operationTypes;
     }

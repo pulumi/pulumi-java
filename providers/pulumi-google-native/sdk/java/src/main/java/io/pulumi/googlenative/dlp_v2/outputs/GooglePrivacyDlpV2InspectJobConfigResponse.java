@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
      */
     private final GooglePrivacyDlpV2StorageConfigResponse storageConfig;
 
-    @OutputCustomType.Constructor({"actions","inspectConfig","inspectTemplateName","storageConfig"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectJobConfigResponse(
-        List<GooglePrivacyDlpV2ActionResponse> actions,
-        GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        String inspectTemplateName,
-        GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
+        @OutputCustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
+        @OutputCustomType.Parameter("inspectConfig") GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
+        @OutputCustomType.Parameter("inspectTemplateName") String inspectTemplateName,
+        @OutputCustomType.Parameter("storageConfig") GooglePrivacyDlpV2StorageConfigResponse storageConfig) {
         this.actions = actions;
         this.inspectConfig = inspectConfig;
         this.inspectTemplateName = inspectTemplateName;

@@ -15,8 +15,8 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
      */
     private final String onHealthCheck;
 
-    @OutputCustomType.Constructor({"onHealthCheck"})
-    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(String onHealthCheck) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(@OutputCustomType.Parameter("onHealthCheck") String onHealthCheck) {
         this.onHealthCheck = onHealthCheck;
     }
 

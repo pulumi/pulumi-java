@@ -15,8 +15,8 @@ public final class EmailPreferencesResponse {
      */
     private final Boolean enableFailureEmail;
 
-    @OutputCustomType.Constructor({"enableFailureEmail"})
-    private EmailPreferencesResponse(Boolean enableFailureEmail) {
+    @OutputCustomType.Constructor
+    private EmailPreferencesResponse(@OutputCustomType.Parameter("enableFailureEmail") Boolean enableFailureEmail) {
         this.enableFailureEmail = enableFailureEmail;
     }
 

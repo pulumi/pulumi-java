@@ -20,10 +20,10 @@ public final class SslCertificateSelfManagedSslCertificateResponse {
      */
     private final String privateKey;
 
-    @OutputCustomType.Constructor({"certificate","privateKey"})
+    @OutputCustomType.Constructor
     private SslCertificateSelfManagedSslCertificateResponse(
-        String certificate,
-        String privateKey) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("privateKey") String privateKey) {
         this.certificate = certificate;
         this.privateKey = privateKey;
     }

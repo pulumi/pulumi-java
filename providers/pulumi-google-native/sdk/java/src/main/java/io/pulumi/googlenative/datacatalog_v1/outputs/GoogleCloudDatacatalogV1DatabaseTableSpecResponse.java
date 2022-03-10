@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(String type) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1DatabaseTableSpecResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

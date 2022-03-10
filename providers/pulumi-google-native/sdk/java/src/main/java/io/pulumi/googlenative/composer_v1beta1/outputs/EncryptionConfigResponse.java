@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private EncryptionConfigResponse(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

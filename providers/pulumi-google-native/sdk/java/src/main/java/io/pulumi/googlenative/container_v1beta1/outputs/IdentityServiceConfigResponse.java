@@ -15,8 +15,8 @@ public final class IdentityServiceConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private IdentityServiceConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private IdentityServiceConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

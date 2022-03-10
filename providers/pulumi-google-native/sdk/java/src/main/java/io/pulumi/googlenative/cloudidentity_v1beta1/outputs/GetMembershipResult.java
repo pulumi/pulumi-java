@@ -48,15 +48,15 @@ public final class GetMembershipResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","memberKey","name","preferredMemberKey","roles","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetMembershipResult(
-        String createTime,
-        EntityKeyResponse memberKey,
-        String name,
-        EntityKeyResponse preferredMemberKey,
-        List<MembershipRoleResponse> roles,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("memberKey") EntityKeyResponse memberKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preferredMemberKey") EntityKeyResponse preferredMemberKey,
+        @OutputCustomType.Parameter("roles") List<MembershipRoleResponse> roles,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.memberKey = memberKey;
         this.name = name;

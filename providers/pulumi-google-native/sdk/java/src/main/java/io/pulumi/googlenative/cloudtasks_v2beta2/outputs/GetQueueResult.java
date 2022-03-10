@@ -65,18 +65,18 @@ public final class GetQueueResult {
      */
     private final String tombstoneTtl;
 
-    @OutputCustomType.Constructor({"appEngineHttpTarget","name","pullTarget","purgeTime","rateLimits","retryConfig","state","stats","taskTtl","tombstoneTtl"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        AppEngineHttpTargetResponse appEngineHttpTarget,
-        String name,
-        PullTargetResponse pullTarget,
-        String purgeTime,
-        RateLimitsResponse rateLimits,
-        RetryConfigResponse retryConfig,
-        String state,
-        QueueStatsResponse stats,
-        String taskTtl,
-        String tombstoneTtl) {
+        @OutputCustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pullTarget") PullTargetResponse pullTarget,
+        @OutputCustomType.Parameter("purgeTime") String purgeTime,
+        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stats") QueueStatsResponse stats,
+        @OutputCustomType.Parameter("taskTtl") String taskTtl,
+        @OutputCustomType.Parameter("tombstoneTtl") String tombstoneTtl) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.name = name;
         this.pullTarget = pullTarget;

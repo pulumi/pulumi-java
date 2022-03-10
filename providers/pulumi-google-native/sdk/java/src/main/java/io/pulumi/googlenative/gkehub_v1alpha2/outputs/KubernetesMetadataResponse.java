@@ -41,14 +41,14 @@ public final class KubernetesMetadataResponse {
      */
     private final Integer vcpuCount;
 
-    @OutputCustomType.Constructor({"kubernetesApiServerVersion","memoryMb","nodeCount","nodeProviderId","updateTime","vcpuCount"})
+    @OutputCustomType.Constructor
     private KubernetesMetadataResponse(
-        String kubernetesApiServerVersion,
-        Integer memoryMb,
-        Integer nodeCount,
-        String nodeProviderId,
-        String updateTime,
-        Integer vcpuCount) {
+        @OutputCustomType.Parameter("kubernetesApiServerVersion") String kubernetesApiServerVersion,
+        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("nodeProviderId") String nodeProviderId,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vcpuCount") Integer vcpuCount) {
         this.kubernetesApiServerVersion = kubernetesApiServerVersion;
         this.memoryMb = memoryMb;
         this.nodeCount = nodeCount;

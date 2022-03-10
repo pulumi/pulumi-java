@@ -73,20 +73,20 @@ public final class BackendResponse {
      */
     private final Double maxUtilization;
 
-    @OutputCustomType.Constructor({"balancingMode","capacityScaler","description","failover","group","maxConnections","maxConnectionsPerEndpoint","maxConnectionsPerInstance","maxRate","maxRatePerEndpoint","maxRatePerInstance","maxUtilization"})
+    @OutputCustomType.Constructor
     private BackendResponse(
-        String balancingMode,
-        Double capacityScaler,
-        String description,
-        Boolean failover,
-        String group,
-        Integer maxConnections,
-        Integer maxConnectionsPerEndpoint,
-        Integer maxConnectionsPerInstance,
-        Integer maxRate,
-        Double maxRatePerEndpoint,
-        Double maxRatePerInstance,
-        Double maxUtilization) {
+        @OutputCustomType.Parameter("balancingMode") String balancingMode,
+        @OutputCustomType.Parameter("capacityScaler") Double capacityScaler,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("failover") Boolean failover,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
+        @OutputCustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
+        @OutputCustomType.Parameter("maxRate") Integer maxRate,
+        @OutputCustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
+        @OutputCustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
+        @OutputCustomType.Parameter("maxUtilization") Double maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;

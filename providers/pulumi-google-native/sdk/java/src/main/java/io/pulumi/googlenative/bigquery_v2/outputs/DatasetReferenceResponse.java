@@ -20,10 +20,10 @@ public final class DatasetReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"datasetId","project"})
+    @OutputCustomType.Constructor
     private DatasetReferenceResponse(
-        String datasetId,
-        String project) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("project") String project) {
         this.datasetId = datasetId;
         this.project = project;
     }

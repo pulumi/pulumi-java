@@ -21,10 +21,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse {
      */
     private final Boolean useDefault;
 
-    @OutputCustomType.Constructor({"breakglassJustification","useDefault"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2BinaryAuthorizationResponse(
-        String breakglassJustification,
-        Boolean useDefault) {
+        @OutputCustomType.Parameter("breakglassJustification") String breakglassJustification,
+        @OutputCustomType.Parameter("useDefault") Boolean useDefault) {
         this.breakglassJustification = breakglassJustification;
         this.useDefault = useDefault;
     }

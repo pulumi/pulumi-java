@@ -46,15 +46,15 @@ public final class GetServiceBindingResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","endpointFilter","labels","name","service","updateTime"})
+    @OutputCustomType.Constructor
     private GetServiceBindingResult(
-        String createTime,
-        String description,
-        String endpointFilter,
-        Map<String,String> labels,
-        String name,
-        String service,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointFilter") String endpointFilter,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.endpointFilter = endpointFilter;

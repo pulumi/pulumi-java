@@ -20,10 +20,10 @@ public final class RouterApplianceInstanceResponse {
      */
     private final String virtualMachine;
 
-    @OutputCustomType.Constructor({"ipAddress","virtualMachine"})
+    @OutputCustomType.Constructor
     private RouterApplianceInstanceResponse(
-        String ipAddress,
-        String virtualMachine) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("virtualMachine") String virtualMachine) {
         this.ipAddress = ipAddress;
         this.virtualMachine = virtualMachine;
     }

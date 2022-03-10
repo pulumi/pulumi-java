@@ -86,22 +86,22 @@ public final class GetRoutineResult {
      */
     private final Boolean strictMode;
 
-    @OutputCustomType.Constructor({"arguments","creationTime","definitionBody","description","determinismLevel","etag","importedLibraries","language","lastModifiedTime","returnTableType","returnType","routineReference","routineType","strictMode"})
+    @OutputCustomType.Constructor
     private GetRoutineResult(
-        List<ArgumentResponse> arguments,
-        String creationTime,
-        String definitionBody,
-        String description,
-        String determinismLevel,
-        String etag,
-        List<String> importedLibraries,
-        String language,
-        String lastModifiedTime,
-        StandardSqlTableTypeResponse returnTableType,
-        StandardSqlDataTypeResponse returnType,
-        RoutineReferenceResponse routineReference,
-        String routineType,
-        Boolean strictMode) {
+        @OutputCustomType.Parameter("arguments") List<ArgumentResponse> arguments,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("definitionBody") String definitionBody,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("determinismLevel") String determinismLevel,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("importedLibraries") List<String> importedLibraries,
+        @OutputCustomType.Parameter("language") String language,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("returnTableType") StandardSqlTableTypeResponse returnTableType,
+        @OutputCustomType.Parameter("returnType") StandardSqlDataTypeResponse returnType,
+        @OutputCustomType.Parameter("routineReference") RoutineReferenceResponse routineReference,
+        @OutputCustomType.Parameter("routineType") String routineType,
+        @OutputCustomType.Parameter("strictMode") Boolean strictMode) {
         this.arguments = arguments;
         this.creationTime = creationTime;
         this.definitionBody = definitionBody;

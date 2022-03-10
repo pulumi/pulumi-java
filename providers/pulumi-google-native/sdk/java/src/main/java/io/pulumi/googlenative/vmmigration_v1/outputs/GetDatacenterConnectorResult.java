@@ -61,18 +61,18 @@ public final class GetDatacenterConnectorResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"bucket","createTime","error","name","registrationId","serviceAccount","state","stateTime","updateTime","version"})
+    @OutputCustomType.Constructor
     private GetDatacenterConnectorResult(
-        String bucket,
-        String createTime,
-        StatusResponse error,
-        String name,
-        String registrationId,
-        String serviceAccount,
-        String state,
-        String stateTime,
-        String updateTime,
-        String version) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registrationId") String registrationId,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateTime") String stateTime,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("version") String version) {
         this.bucket = bucket;
         this.createTime = createTime;
         this.error = error;

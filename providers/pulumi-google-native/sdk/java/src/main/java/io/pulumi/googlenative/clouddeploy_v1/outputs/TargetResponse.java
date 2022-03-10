@@ -81,21 +81,21 @@ public final class TargetResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"annotations","anthosCluster","createTime","description","etag","executionConfigs","gke","labels","name","requireApproval","targetId","uid","updateTime"})
+    @OutputCustomType.Constructor
     private TargetResponse(
-        Map<String,String> annotations,
-        AnthosClusterResponse anthosCluster,
-        String createTime,
-        String description,
-        String etag,
-        List<ExecutionConfigResponse> executionConfigs,
-        GkeClusterResponse gke,
-        Map<String,String> labels,
-        String name,
-        Boolean requireApproval,
-        String targetId,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("anthosCluster") AnthosClusterResponse anthosCluster,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("executionConfigs") List<ExecutionConfigResponse> executionConfigs,
+        @OutputCustomType.Parameter("gke") GkeClusterResponse gke,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requireApproval") Boolean requireApproval,
+        @OutputCustomType.Parameter("targetId") String targetId,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.annotations = annotations;
         this.anthosCluster = anthosCluster;
         this.createTime = createTime;

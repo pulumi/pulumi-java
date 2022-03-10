@@ -22,10 +22,10 @@ public final class PrimaryStepResponse {
      */
     private final String rollUp;
 
-    @OutputCustomType.Constructor({"individualOutcome","rollUp"})
+    @OutputCustomType.Constructor
     private PrimaryStepResponse(
-        List<IndividualOutcomeResponse> individualOutcome,
-        String rollUp) {
+        @OutputCustomType.Parameter("individualOutcome") List<IndividualOutcomeResponse> individualOutcome,
+        @OutputCustomType.Parameter("rollUp") String rollUp) {
         this.individualOutcome = individualOutcome;
         this.rollUp = rollUp;
     }

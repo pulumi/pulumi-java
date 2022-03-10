@@ -21,10 +21,10 @@ public final class TlsContextResponse {
      */
     private final TlsValidationContextResponse validationContext;
 
-    @OutputCustomType.Constructor({"certificateContext","validationContext"})
+    @OutputCustomType.Constructor
     private TlsContextResponse(
-        TlsCertificateContextResponse certificateContext,
-        TlsValidationContextResponse validationContext) {
+        @OutputCustomType.Parameter("certificateContext") TlsCertificateContextResponse certificateContext,
+        @OutputCustomType.Parameter("validationContext") TlsValidationContextResponse validationContext) {
         this.certificateContext = certificateContext;
         this.validationContext = validationContext;
     }

@@ -20,10 +20,10 @@ public final class GcsProfileResponse {
      */
     private final String rootPath;
 
-    @OutputCustomType.Constructor({"bucket","rootPath"})
+    @OutputCustomType.Constructor
     private GcsProfileResponse(
-        String bucket,
-        String rootPath) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("rootPath") String rootPath) {
         this.bucket = bucket;
         this.rootPath = rootPath;
     }

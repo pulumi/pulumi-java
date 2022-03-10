@@ -53,16 +53,16 @@ public final class ProbeResponse {
      */
     private final Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"exec","failureThreshold","httpGet","initialDelaySeconds","periodSeconds","successThreshold","tcpSocket","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private ProbeResponse(
-        ExecActionResponse exec,
-        Integer failureThreshold,
-        HTTPGetActionResponse httpGet,
-        Integer initialDelaySeconds,
-        Integer periodSeconds,
-        Integer successThreshold,
-        TCPSocketActionResponse tcpSocket,
-        Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("exec") ExecActionResponse exec,
+        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @OutputCustomType.Parameter("httpGet") HTTPGetActionResponse httpGet,
+        @OutputCustomType.Parameter("initialDelaySeconds") Integer initialDelaySeconds,
+        @OutputCustomType.Parameter("periodSeconds") Integer periodSeconds,
+        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
+        @OutputCustomType.Parameter("tcpSocket") TCPSocketActionResponse tcpSocket,
+        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.httpGet = httpGet;

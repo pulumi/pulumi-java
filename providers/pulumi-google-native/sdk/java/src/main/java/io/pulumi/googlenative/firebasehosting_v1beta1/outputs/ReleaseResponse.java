@@ -42,14 +42,14 @@ public final class ReleaseResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor({"message","name","releaseTime","releaseUser","type","version"})
+    @OutputCustomType.Constructor
     private ReleaseResponse(
-        String message,
-        String name,
-        String releaseTime,
-        ActingUserResponse releaseUser,
-        String type,
-        VersionResponse version) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("releaseTime") String releaseTime,
+        @OutputCustomType.Parameter("releaseUser") ActingUserResponse releaseUser,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") VersionResponse version) {
         this.message = message;
         this.name = name;
         this.releaseTime = releaseTime;

@@ -54,16 +54,16 @@ public final class GetServerTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"allowOpen","createTime","description","labels","mtlsPolicy","name","serverCertificate","updateTime"})
+    @OutputCustomType.Constructor
     private GetServerTlsPolicyResult(
-        Boolean allowOpen,
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        MTLSPolicyResponse mtlsPolicy,
-        String name,
-        GoogleCloudNetworksecurityV1CertificateProviderResponse serverCertificate,
-        String updateTime) {
+        @OutputCustomType.Parameter("allowOpen") Boolean allowOpen,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mtlsPolicy") MTLSPolicyResponse mtlsPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverCertificate") GoogleCloudNetworksecurityV1CertificateProviderResponse serverCertificate,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.allowOpen = allowOpen;
         this.createTime = createTime;
         this.description = description;

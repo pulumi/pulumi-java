@@ -36,13 +36,13 @@ public final class GoogleCloudDatacatalogV1beta1ColumnSchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"column","description","mode","subcolumns","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1ColumnSchemaResponse(
-        String column,
-        String description,
-        String mode,
-        List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns,
-        String type) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("subcolumns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> subcolumns,
+        @OutputCustomType.Parameter("type") String type) {
         this.column = column;
         this.description = description;
         this.mode = mode;

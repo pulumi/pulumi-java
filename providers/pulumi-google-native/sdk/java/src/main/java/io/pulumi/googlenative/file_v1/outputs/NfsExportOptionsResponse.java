@@ -36,13 +36,13 @@ public final class NfsExportOptionsResponse {
      */
     private final String squashMode;
 
-    @OutputCustomType.Constructor({"accessMode","anonGid","anonUid","ipRanges","squashMode"})
+    @OutputCustomType.Constructor
     private NfsExportOptionsResponse(
-        String accessMode,
-        String anonGid,
-        String anonUid,
-        List<String> ipRanges,
-        String squashMode) {
+        @OutputCustomType.Parameter("accessMode") String accessMode,
+        @OutputCustomType.Parameter("anonGid") String anonGid,
+        @OutputCustomType.Parameter("anonUid") String anonUid,
+        @OutputCustomType.Parameter("ipRanges") List<String> ipRanges,
+        @OutputCustomType.Parameter("squashMode") String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;

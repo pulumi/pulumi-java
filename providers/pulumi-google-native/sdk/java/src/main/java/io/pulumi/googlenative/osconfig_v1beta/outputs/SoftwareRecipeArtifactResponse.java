@@ -27,11 +27,11 @@ public final class SoftwareRecipeArtifactResponse {
      */
     private final SoftwareRecipeArtifactRemoteResponse remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","remote"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeArtifactResponse(
-        Boolean allowInsecure,
-        SoftwareRecipeArtifactGcsResponse gcs,
-        SoftwareRecipeArtifactRemoteResponse remote) {
+        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") SoftwareRecipeArtifactGcsResponse gcs,
+        @OutputCustomType.Parameter("remote") SoftwareRecipeArtifactRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.remote = remote;

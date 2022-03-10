@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final Map<String,String> fileHashes;
 
-    @OutputCustomType.Constructor({"additionalContexts","artifactStorageSourceUri","context","fileHashes"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<SourceContextResponse> additionalContexts,
-        String artifactStorageSourceUri,
-        SourceContextResponse context,
-        Map<String,String> fileHashes) {
+        @OutputCustomType.Parameter("additionalContexts") List<SourceContextResponse> additionalContexts,
+        @OutputCustomType.Parameter("artifactStorageSourceUri") String artifactStorageSourceUri,
+        @OutputCustomType.Parameter("context") SourceContextResponse context,
+        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSourceUri = artifactStorageSourceUri;
         this.context = context;

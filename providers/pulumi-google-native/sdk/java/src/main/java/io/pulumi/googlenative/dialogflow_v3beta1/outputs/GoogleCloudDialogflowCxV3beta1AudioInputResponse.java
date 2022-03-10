@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config;
 
-    @OutputCustomType.Constructor({"audio","config"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1AudioInputResponse(
-        String audio,
-        GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config) {
+        @OutputCustomType.Parameter("audio") String audio,
+        @OutputCustomType.Parameter("config") GoogleCloudDialogflowCxV3beta1InputAudioConfigResponse config) {
         this.audio = audio;
         this.config = config;
     }

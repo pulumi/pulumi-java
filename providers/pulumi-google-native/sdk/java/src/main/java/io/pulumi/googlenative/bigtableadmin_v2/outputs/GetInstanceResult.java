@@ -41,14 +41,14 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","displayName","labels","name","state","type"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String createTime,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.labels = labels;

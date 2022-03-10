@@ -59,18 +59,18 @@ public final class GetScheduleResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","cronSchedule","description","displayName","executionTemplate","name","recentExecutions","state","timeZone","updateTime"})
+    @OutputCustomType.Constructor
     private GetScheduleResult(
-        String createTime,
-        String cronSchedule,
-        String description,
-        String displayName,
-        ExecutionTemplateResponse executionTemplate,
-        String name,
-        List<ExecutionResponse> recentExecutions,
-        String state,
-        String timeZone,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("cronSchedule") String cronSchedule,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recentExecutions") List<ExecutionResponse> recentExecutions,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.cronSchedule = cronSchedule;
         this.description = description;

@@ -32,12 +32,12 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
      */
     private final String trackingMode;
 
-    @OutputCustomType.Constructor({"connectionPersistenceOnUnhealthyBackends","enableStrongAffinity","idleTimeoutSec","trackingMode"})
+    @OutputCustomType.Constructor
     private BackendServiceConnectionTrackingPolicyResponse(
-        String connectionPersistenceOnUnhealthyBackends,
-        Boolean enableStrongAffinity,
-        Integer idleTimeoutSec,
-        String trackingMode) {
+        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") String connectionPersistenceOnUnhealthyBackends,
+        @OutputCustomType.Parameter("enableStrongAffinity") Boolean enableStrongAffinity,
+        @OutputCustomType.Parameter("idleTimeoutSec") Integer idleTimeoutSec,
+        @OutputCustomType.Parameter("trackingMode") String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.enableStrongAffinity = enableStrongAffinity;
         this.idleTimeoutSec = idleTimeoutSec;

@@ -30,12 +30,12 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
      */
     private final String runtimeVersion;
 
-    @OutputCustomType.Constructor({"framework","modelPath","pythonVersion","runtimeVersion"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(
-        String framework,
-        String modelPath,
-        String pythonVersion,
-        String runtimeVersion) {
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("modelPath") String modelPath,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion) {
         this.framework = framework;
         this.modelPath = modelPath;
         this.pythonVersion = pythonVersion;

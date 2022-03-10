@@ -21,10 +21,10 @@ public final class ExplainQueryStepResponse {
      */
     private final List<String> substeps;
 
-    @OutputCustomType.Constructor({"kind","substeps"})
+    @OutputCustomType.Constructor
     private ExplainQueryStepResponse(
-        String kind,
-        List<String> substeps) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("substeps") List<String> substeps) {
         this.kind = kind;
         this.substeps = substeps;
     }

@@ -31,12 +31,12 @@ public final class GetSessionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"approximateLastUseTime","createTime","labels","name"})
+    @OutputCustomType.Constructor
     private GetSessionResult(
-        String approximateLastUseTime,
-        String createTime,
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("approximateLastUseTime") String approximateLastUseTime,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.approximateLastUseTime = approximateLastUseTime;
         this.createTime = createTime;
         this.labels = labels;

@@ -15,8 +15,8 @@ public final class CustomLevelResponse {
      */
     private final ExprResponse expr;
 
-    @OutputCustomType.Constructor({"expr"})
-    private CustomLevelResponse(ExprResponse expr) {
+    @OutputCustomType.Constructor
+    private CustomLevelResponse(@OutputCustomType.Parameter("expr") ExprResponse expr) {
         this.expr = expr;
     }
 

@@ -21,10 +21,10 @@ public final class CommonFeatureSpecResponse {
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
-    @OutputCustomType.Constructor({"appdevexperience","multiclusteringress"})
+    @OutputCustomType.Constructor
     private CommonFeatureSpecResponse(
-        AppDevExperienceFeatureSpecResponse appdevexperience,
-        MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
+        @OutputCustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
         this.appdevexperience = appdevexperience;
         this.multiclusteringress = multiclusteringress;
     }

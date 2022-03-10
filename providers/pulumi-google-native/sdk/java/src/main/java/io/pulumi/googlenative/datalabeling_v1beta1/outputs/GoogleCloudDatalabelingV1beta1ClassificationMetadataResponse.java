@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      */
     private final Boolean isMultiLabel;
 
-    @OutputCustomType.Constructor({"isMultiLabel"})
-    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(Boolean isMultiLabel) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(@OutputCustomType.Parameter("isMultiLabel") Boolean isMultiLabel) {
         this.isMultiLabel = isMultiLabel;
     }
 

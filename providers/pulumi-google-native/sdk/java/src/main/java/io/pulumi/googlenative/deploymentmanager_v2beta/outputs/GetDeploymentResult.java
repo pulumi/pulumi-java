@@ -70,19 +70,19 @@ public final class GetDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"description","fingerprint","insertTime","labels","manifest","name","operation","selfLink","target","update","updateTime"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        String description,
-        String fingerprint,
-        String insertTime,
-        List<DeploymentLabelEntryResponse> labels,
-        String manifest,
-        String name,
-        OperationResponse operation,
-        String selfLink,
-        TargetConfigurationResponse target,
-        DeploymentUpdateResponse update,
-        String updateTime) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("labels") List<DeploymentLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("manifest") String manifest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") OperationResponse operation,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("target") TargetConfigurationResponse target,
+        @OutputCustomType.Parameter("update") DeploymentUpdateResponse update,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.description = description;
         this.fingerprint = fingerprint;
         this.insertTime = insertTime;

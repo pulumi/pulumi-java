@@ -20,10 +20,10 @@ public final class SDKInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"language","version"})
+    @OutputCustomType.Constructor
     private SDKInfoResponse(
-        String language,
-        String version) {
+        @OutputCustomType.Parameter("language") String language,
+        @OutputCustomType.Parameter("version") String version) {
         this.language = language;
         this.version = version;
     }

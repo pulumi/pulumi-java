@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor({"dictionary","excludeInfoTypes","matchingType","regex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ExclusionRuleResponse(
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
-        String matchingType,
-        GooglePrivacyDlpV2RegexResponse regex) {
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("excludeInfoTypes") GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
+        @OutputCustomType.Parameter("matchingType") String matchingType,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;

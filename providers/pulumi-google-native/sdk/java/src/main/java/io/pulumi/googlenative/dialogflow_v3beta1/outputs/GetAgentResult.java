@@ -79,21 +79,21 @@ public final class GetAgentResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"advancedSettings","avatarUri","defaultLanguageCode","description","displayName","enableSpellCorrection","enableStackdriverLogging","name","securitySettings","speechToTextSettings","startFlow","supportedLanguageCodes","timeZone"})
+    @OutputCustomType.Constructor
     private GetAgentResult(
-        GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
-        String avatarUri,
-        String defaultLanguageCode,
-        String description,
-        String displayName,
-        Boolean enableSpellCorrection,
-        Boolean enableStackdriverLogging,
-        String name,
-        String securitySettings,
-        GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
-        String startFlow,
-        List<String> supportedLanguageCodes,
-        String timeZone) {
+        @OutputCustomType.Parameter("advancedSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
+        @OutputCustomType.Parameter("avatarUri") String avatarUri,
+        @OutputCustomType.Parameter("defaultLanguageCode") String defaultLanguageCode,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableSpellCorrection") Boolean enableSpellCorrection,
+        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securitySettings") String securitySettings,
+        @OutputCustomType.Parameter("speechToTextSettings") GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
+        @OutputCustomType.Parameter("startFlow") String startFlow,
+        @OutputCustomType.Parameter("supportedLanguageCodes") List<String> supportedLanguageCodes,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.advancedSettings = advancedSettings;
         this.avatarUri = avatarUri;
         this.defaultLanguageCode = defaultLanguageCode;

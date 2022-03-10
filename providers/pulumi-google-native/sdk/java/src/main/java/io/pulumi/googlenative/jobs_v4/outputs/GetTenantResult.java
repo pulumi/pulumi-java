@@ -20,10 +20,10 @@ public final class GetTenantResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"externalId","name"})
+    @OutputCustomType.Constructor
     private GetTenantResult(
-        String externalId,
-        String name) {
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("name") String name) {
         this.externalId = externalId;
         this.name = name;
     }

@@ -34,12 +34,12 @@ public final class UpgradeNoteResponse {
      */
     private final WindowsUpdateResponse windowsUpdate;
 
-    @OutputCustomType.Constructor({"distributions","$package","version","windowsUpdate"})
+    @OutputCustomType.Constructor
     private UpgradeNoteResponse(
-        List<UpgradeDistributionResponse> distributions,
-        String $package,
-        VersionResponse version,
-        WindowsUpdateResponse windowsUpdate) {
+        @OutputCustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("version") VersionResponse version,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;

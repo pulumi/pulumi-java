@@ -25,11 +25,11 @@ public final class GetEnvgroupAttachmentResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"createdAt","environment","name"})
+    @OutputCustomType.Constructor
     private GetEnvgroupAttachmentResult(
-        String createdAt,
-        String environment,
-        String name) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("environment") String environment,
+        @OutputCustomType.Parameter("name") String name) {
         this.createdAt = createdAt;
         this.environment = environment;
         this.name = name;

@@ -15,8 +15,8 @@ public final class HttpConfigResponse {
      */
     private final String httpEnabledState;
 
-    @OutputCustomType.Constructor({"httpEnabledState"})
-    private HttpConfigResponse(String httpEnabledState) {
+    @OutputCustomType.Constructor
+    private HttpConfigResponse(@OutputCustomType.Parameter("httpEnabledState") String httpEnabledState) {
         this.httpEnabledState = httpEnabledState;
     }
 

@@ -30,12 +30,12 @@ public final class ClusterStatusResponse {
      */
     private final String substate;
 
-    @OutputCustomType.Constructor({"detail","state","stateStartTime","substate"})
+    @OutputCustomType.Constructor
     private ClusterStatusResponse(
-        String detail,
-        String state,
-        String stateStartTime,
-        String substate) {
+        @OutputCustomType.Parameter("detail") String detail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateStartTime") String stateStartTime,
+        @OutputCustomType.Parameter("substate") String substate) {
         this.detail = detail;
         this.state = state;
         this.stateStartTime = stateStartTime;

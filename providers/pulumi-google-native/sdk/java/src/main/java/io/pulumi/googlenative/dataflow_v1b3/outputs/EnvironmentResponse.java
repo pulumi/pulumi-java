@@ -99,25 +99,25 @@ public final class EnvironmentResponse {
      */
     private final String workerZone;
 
-    @OutputCustomType.Constructor({"clusterManagerApiService","dataset","debugOptions","experiments","flexResourceSchedulingGoal","internalExperiments","sdkPipelineOptions","serviceAccountEmail","serviceKmsKeyName","serviceOptions","shuffleMode","tempStoragePrefix","userAgent","version","workerPools","workerRegion","workerZone"})
+    @OutputCustomType.Constructor
     private EnvironmentResponse(
-        String clusterManagerApiService,
-        String dataset,
-        DebugOptionsResponse debugOptions,
-        List<String> experiments,
-        String flexResourceSchedulingGoal,
-        Map<String,String> internalExperiments,
-        Map<String,String> sdkPipelineOptions,
-        String serviceAccountEmail,
-        String serviceKmsKeyName,
-        List<String> serviceOptions,
-        String shuffleMode,
-        String tempStoragePrefix,
-        Map<String,String> userAgent,
-        Map<String,String> version,
-        List<WorkerPoolResponse> workerPools,
-        String workerRegion,
-        String workerZone) {
+        @OutputCustomType.Parameter("clusterManagerApiService") String clusterManagerApiService,
+        @OutputCustomType.Parameter("dataset") String dataset,
+        @OutputCustomType.Parameter("debugOptions") DebugOptionsResponse debugOptions,
+        @OutputCustomType.Parameter("experiments") List<String> experiments,
+        @OutputCustomType.Parameter("flexResourceSchedulingGoal") String flexResourceSchedulingGoal,
+        @OutputCustomType.Parameter("internalExperiments") Map<String,String> internalExperiments,
+        @OutputCustomType.Parameter("sdkPipelineOptions") Map<String,String> sdkPipelineOptions,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("serviceKmsKeyName") String serviceKmsKeyName,
+        @OutputCustomType.Parameter("serviceOptions") List<String> serviceOptions,
+        @OutputCustomType.Parameter("shuffleMode") String shuffleMode,
+        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @OutputCustomType.Parameter("userAgent") Map<String,String> userAgent,
+        @OutputCustomType.Parameter("version") Map<String,String> version,
+        @OutputCustomType.Parameter("workerPools") List<WorkerPoolResponse> workerPools,
+        @OutputCustomType.Parameter("workerRegion") String workerRegion,
+        @OutputCustomType.Parameter("workerZone") String workerZone) {
         this.clusterManagerApiService = clusterManagerApiService;
         this.dataset = dataset;
         this.debugOptions = debugOptions;

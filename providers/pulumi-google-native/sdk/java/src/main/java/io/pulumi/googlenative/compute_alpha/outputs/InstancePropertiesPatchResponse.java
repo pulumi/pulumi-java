@@ -21,10 +21,10 @@ public final class InstancePropertiesPatchResponse {
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"labels","metadata"})
+    @OutputCustomType.Constructor
     private InstancePropertiesPatchResponse(
-        Map<String,String> labels,
-        Map<String,String> metadata) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
         this.labels = labels;
         this.metadata = metadata;
     }

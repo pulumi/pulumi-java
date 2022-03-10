@@ -20,10 +20,10 @@ public final class CompensationRangeResponse {
      */
     private final MoneyResponse minCompensation;
 
-    @OutputCustomType.Constructor({"maxCompensation","minCompensation"})
+    @OutputCustomType.Constructor
     private CompensationRangeResponse(
-        MoneyResponse maxCompensation,
-        MoneyResponse minCompensation) {
+        @OutputCustomType.Parameter("maxCompensation") MoneyResponse maxCompensation,
+        @OutputCustomType.Parameter("minCompensation") MoneyResponse minCompensation) {
         this.maxCompensation = maxCompensation;
         this.minCompensation = minCompensation;
     }

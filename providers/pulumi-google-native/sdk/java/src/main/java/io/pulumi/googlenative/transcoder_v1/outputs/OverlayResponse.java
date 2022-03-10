@@ -22,10 +22,10 @@ public final class OverlayResponse {
      */
     private final ImageResponse image;
 
-    @OutputCustomType.Constructor({"animations","image"})
+    @OutputCustomType.Constructor
     private OverlayResponse(
-        List<AnimationResponse> animations,
-        ImageResponse image) {
+        @OutputCustomType.Parameter("animations") List<AnimationResponse> animations,
+        @OutputCustomType.Parameter("image") ImageResponse image) {
         this.animations = animations;
         this.image = image;
     }

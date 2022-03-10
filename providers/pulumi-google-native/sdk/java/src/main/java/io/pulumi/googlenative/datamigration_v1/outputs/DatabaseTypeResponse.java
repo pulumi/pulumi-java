@@ -20,10 +20,10 @@ public final class DatabaseTypeResponse {
      */
     private final String provider;
 
-    @OutputCustomType.Constructor({"engine","provider"})
+    @OutputCustomType.Constructor
     private DatabaseTypeResponse(
-        String engine,
-        String provider) {
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("provider") String provider) {
         this.engine = engine;
         this.provider = provider;
     }

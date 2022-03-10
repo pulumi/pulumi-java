@@ -15,8 +15,8 @@ public final class AppEngineHttpQueueResponse {
      */
     private final AppEngineRoutingResponse appEngineRoutingOverride;
 
-    @OutputCustomType.Constructor({"appEngineRoutingOverride"})
-    private AppEngineHttpQueueResponse(AppEngineRoutingResponse appEngineRoutingOverride) {
+    @OutputCustomType.Constructor
+    private AppEngineHttpQueueResponse(@OutputCustomType.Parameter("appEngineRoutingOverride") AppEngineRoutingResponse appEngineRoutingOverride) {
         this.appEngineRoutingOverride = appEngineRoutingOverride;
     }
 

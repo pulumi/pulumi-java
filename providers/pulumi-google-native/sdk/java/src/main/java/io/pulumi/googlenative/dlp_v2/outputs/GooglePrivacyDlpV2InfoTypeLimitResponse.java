@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
      */
     private final Integer maxFindings;
 
-    @OutputCustomType.Constructor({"infoType","maxFindings"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeLimitResponse(
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        Integer maxFindings) {
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
+        @OutputCustomType.Parameter("maxFindings") Integer maxFindings) {
         this.infoType = infoType;
         this.maxFindings = maxFindings;
     }

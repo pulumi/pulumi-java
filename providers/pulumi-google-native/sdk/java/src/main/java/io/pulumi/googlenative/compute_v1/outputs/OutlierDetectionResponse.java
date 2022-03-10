@@ -66,19 +66,19 @@ public final class OutlierDetectionResponse {
      */
     private final Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor({"baseEjectionTime","consecutiveErrors","consecutiveGatewayFailure","enforcingConsecutiveErrors","enforcingConsecutiveGatewayFailure","enforcingSuccessRate","interval","maxEjectionPercent","successRateMinimumHosts","successRateRequestVolume","successRateStdevFactor"})
+    @OutputCustomType.Constructor
     private OutlierDetectionResponse(
-        DurationResponse baseEjectionTime,
-        Integer consecutiveErrors,
-        Integer consecutiveGatewayFailure,
-        Integer enforcingConsecutiveErrors,
-        Integer enforcingConsecutiveGatewayFailure,
-        Integer enforcingSuccessRate,
-        DurationResponse interval,
-        Integer maxEjectionPercent,
-        Integer successRateMinimumHosts,
-        Integer successRateRequestVolume,
-        Integer successRateStdevFactor) {
+        @OutputCustomType.Parameter("baseEjectionTime") DurationResponse baseEjectionTime,
+        @OutputCustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
+        @OutputCustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
+        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
+        @OutputCustomType.Parameter("interval") DurationResponse interval,
+        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
+        @OutputCustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
+        @OutputCustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
         this.baseEjectionTime = baseEjectionTime;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

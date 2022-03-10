@@ -83,21 +83,21 @@ public final class TransferSpecResponse {
      */
     private final TransferOptionsResponse transferOptions;
 
-    @OutputCustomType.Constructor({"awsS3DataSource","azureBlobStorageDataSource","gcsDataSink","gcsDataSource","gcsIntermediateDataLocation","httpDataSource","objectConditions","posixDataSink","posixDataSource","sinkAgentPoolName","sourceAgentPoolName","transferManifest","transferOptions"})
+    @OutputCustomType.Constructor
     private TransferSpecResponse(
-        AwsS3DataResponse awsS3DataSource,
-        AzureBlobStorageDataResponse azureBlobStorageDataSource,
-        GcsDataResponse gcsDataSink,
-        GcsDataResponse gcsDataSource,
-        GcsDataResponse gcsIntermediateDataLocation,
-        HttpDataResponse httpDataSource,
-        ObjectConditionsResponse objectConditions,
-        PosixFilesystemResponse posixDataSink,
-        PosixFilesystemResponse posixDataSource,
-        String sinkAgentPoolName,
-        String sourceAgentPoolName,
-        TransferManifestResponse transferManifest,
-        TransferOptionsResponse transferOptions) {
+        @OutputCustomType.Parameter("awsS3DataSource") AwsS3DataResponse awsS3DataSource,
+        @OutputCustomType.Parameter("azureBlobStorageDataSource") AzureBlobStorageDataResponse azureBlobStorageDataSource,
+        @OutputCustomType.Parameter("gcsDataSink") GcsDataResponse gcsDataSink,
+        @OutputCustomType.Parameter("gcsDataSource") GcsDataResponse gcsDataSource,
+        @OutputCustomType.Parameter("gcsIntermediateDataLocation") GcsDataResponse gcsIntermediateDataLocation,
+        @OutputCustomType.Parameter("httpDataSource") HttpDataResponse httpDataSource,
+        @OutputCustomType.Parameter("objectConditions") ObjectConditionsResponse objectConditions,
+        @OutputCustomType.Parameter("posixDataSink") PosixFilesystemResponse posixDataSink,
+        @OutputCustomType.Parameter("posixDataSource") PosixFilesystemResponse posixDataSource,
+        @OutputCustomType.Parameter("sinkAgentPoolName") String sinkAgentPoolName,
+        @OutputCustomType.Parameter("sourceAgentPoolName") String sourceAgentPoolName,
+        @OutputCustomType.Parameter("transferManifest") TransferManifestResponse transferManifest,
+        @OutputCustomType.Parameter("transferOptions") TransferOptionsResponse transferOptions) {
         this.awsS3DataSource = awsS3DataSource;
         this.azureBlobStorageDataSource = azureBlobStorageDataSource;
         this.gcsDataSink = gcsDataSink;

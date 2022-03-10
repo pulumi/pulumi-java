@@ -21,10 +21,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
      */
     private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
-    @OutputCustomType.Constructor({"dataflowFlexTemplateRequest","dataflowLaunchTemplateRequest"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1WorkloadResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
-        GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
+        @OutputCustomType.Parameter("dataflowFlexTemplateRequest") GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
+        @OutputCustomType.Parameter("dataflowLaunchTemplateRequest") GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
         this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
         this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
     }

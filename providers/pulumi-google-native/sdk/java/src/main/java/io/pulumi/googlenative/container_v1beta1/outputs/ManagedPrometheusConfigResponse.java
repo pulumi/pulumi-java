@@ -15,8 +15,8 @@ public final class ManagedPrometheusConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private ManagedPrometheusConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private ManagedPrometheusConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

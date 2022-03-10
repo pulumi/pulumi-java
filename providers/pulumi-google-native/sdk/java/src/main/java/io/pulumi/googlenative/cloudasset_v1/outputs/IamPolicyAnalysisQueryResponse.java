@@ -45,14 +45,14 @@ public final class IamPolicyAnalysisQueryResponse {
      */
     private final String scope;
 
-    @OutputCustomType.Constructor({"accessSelector","conditionContext","identitySelector","options","resourceSelector","scope"})
+    @OutputCustomType.Constructor
     private IamPolicyAnalysisQueryResponse(
-        AccessSelectorResponse accessSelector,
-        ConditionContextResponse conditionContext,
-        IdentitySelectorResponse identitySelector,
-        OptionsResponse options,
-        ResourceSelectorResponse resourceSelector,
-        String scope) {
+        @OutputCustomType.Parameter("accessSelector") AccessSelectorResponse accessSelector,
+        @OutputCustomType.Parameter("conditionContext") ConditionContextResponse conditionContext,
+        @OutputCustomType.Parameter("identitySelector") IdentitySelectorResponse identitySelector,
+        @OutputCustomType.Parameter("options") OptionsResponse options,
+        @OutputCustomType.Parameter("resourceSelector") ResourceSelectorResponse resourceSelector,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.accessSelector = accessSelector;
         this.conditionContext = conditionContext;
         this.identitySelector = identitySelector;

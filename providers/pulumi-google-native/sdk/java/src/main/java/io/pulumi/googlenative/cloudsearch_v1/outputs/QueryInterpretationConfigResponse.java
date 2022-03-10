@@ -20,10 +20,10 @@ public final class QueryInterpretationConfigResponse {
      */
     private final Boolean forceVerbatimMode;
 
-    @OutputCustomType.Constructor({"forceDisableSupplementalResults","forceVerbatimMode"})
+    @OutputCustomType.Constructor
     private QueryInterpretationConfigResponse(
-        Boolean forceDisableSupplementalResults,
-        Boolean forceVerbatimMode) {
+        @OutputCustomType.Parameter("forceDisableSupplementalResults") Boolean forceDisableSupplementalResults,
+        @OutputCustomType.Parameter("forceVerbatimMode") Boolean forceVerbatimMode) {
         this.forceDisableSupplementalResults = forceDisableSupplementalResults;
         this.forceVerbatimMode = forceVerbatimMode;
     }

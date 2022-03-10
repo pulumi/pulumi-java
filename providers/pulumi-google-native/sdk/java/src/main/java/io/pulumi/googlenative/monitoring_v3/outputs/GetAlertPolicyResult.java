@@ -78,20 +78,20 @@ public final class GetAlertPolicyResult {
      */
     private final StatusResponse validity;
 
-    @OutputCustomType.Constructor({"alertStrategy","combiner","conditions","creationRecord","displayName","documentation","enabled","mutationRecord","name","notificationChannels","userLabels","validity"})
+    @OutputCustomType.Constructor
     private GetAlertPolicyResult(
-        AlertStrategyResponse alertStrategy,
-        String combiner,
-        List<ConditionResponse> conditions,
-        MutationRecordResponse creationRecord,
-        String displayName,
-        DocumentationResponse documentation,
-        Boolean enabled,
-        MutationRecordResponse mutationRecord,
-        String name,
-        List<String> notificationChannels,
-        Map<String,String> userLabels,
-        StatusResponse validity) {
+        @OutputCustomType.Parameter("alertStrategy") AlertStrategyResponse alertStrategy,
+        @OutputCustomType.Parameter("combiner") String combiner,
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("mutationRecord") MutationRecordResponse mutationRecord,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationChannels") List<String> notificationChannels,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("validity") StatusResponse validity) {
         this.alertStrategy = alertStrategy;
         this.combiner = combiner;
         this.conditions = conditions;

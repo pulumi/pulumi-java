@@ -31,12 +31,12 @@ public final class AndroidAttributesResponse {
      */
     private final Boolean supportsWorkProfile;
 
-    @OutputCustomType.Constructor({"enabledUnknownSources","ownerProfileAccount","ownershipPrivilege","supportsWorkProfile"})
+    @OutputCustomType.Constructor
     private AndroidAttributesResponse(
-        Boolean enabledUnknownSources,
-        Boolean ownerProfileAccount,
-        String ownershipPrivilege,
-        Boolean supportsWorkProfile) {
+        @OutputCustomType.Parameter("enabledUnknownSources") Boolean enabledUnknownSources,
+        @OutputCustomType.Parameter("ownerProfileAccount") Boolean ownerProfileAccount,
+        @OutputCustomType.Parameter("ownershipPrivilege") String ownershipPrivilege,
+        @OutputCustomType.Parameter("supportsWorkProfile") Boolean supportsWorkProfile) {
         this.enabledUnknownSources = enabledUnknownSources;
         this.ownerProfileAccount = ownerProfileAccount;
         this.ownershipPrivilege = ownershipPrivilege;

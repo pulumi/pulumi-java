@@ -26,11 +26,11 @@ public final class GetOverrideResult {
      */
     private final GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig;
 
-    @OutputCustomType.Constructor({"apiProxy","name","samplingConfig"})
+    @OutputCustomType.Constructor
     private GetOverrideResult(
-        String apiProxy,
-        String name,
-        GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
+        @OutputCustomType.Parameter("apiProxy") String apiProxy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("samplingConfig") GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
         this.apiProxy = apiProxy;
         this.name = name;
         this.samplingConfig = samplingConfig;

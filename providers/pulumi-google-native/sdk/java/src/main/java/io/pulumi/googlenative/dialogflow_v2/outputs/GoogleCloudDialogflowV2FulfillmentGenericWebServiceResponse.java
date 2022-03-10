@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"isCloudFunction","password","requestHeaders","uri","username"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse(
-        Boolean isCloudFunction,
-        String password,
-        Map<String,String> requestHeaders,
-        String uri,
-        String username) {
+        @OutputCustomType.Parameter("isCloudFunction") Boolean isCloudFunction,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("requestHeaders") Map<String,String> requestHeaders,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") String username) {
         this.isCloudFunction = isCloudFunction;
         this.password = password;
         this.requestHeaders = requestHeaders;

@@ -59,17 +59,17 @@ public final class GetDocumentResult {
      */
     private final String rawContent;
 
-    @OutputCustomType.Constructor({"contentUri","displayName","enableAutoReload","knowledgeTypes","latestReloadStatus","metadata","mimeType","name","rawContent"})
+    @OutputCustomType.Constructor
     private GetDocumentResult(
-        String contentUri,
-        String displayName,
-        Boolean enableAutoReload,
-        List<String> knowledgeTypes,
-        GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
-        Map<String,String> metadata,
-        String mimeType,
-        String name,
-        String rawContent) {
+        @OutputCustomType.Parameter("contentUri") String contentUri,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableAutoReload") Boolean enableAutoReload,
+        @OutputCustomType.Parameter("knowledgeTypes") List<String> knowledgeTypes,
+        @OutputCustomType.Parameter("latestReloadStatus") GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rawContent") String rawContent) {
         this.contentUri = contentUri;
         this.displayName = displayName;
         this.enableAutoReload = enableAutoReload;

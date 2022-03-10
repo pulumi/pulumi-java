@@ -61,18 +61,18 @@ public final class GetWorkflowResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","labels","name","revisionCreateTime","revisionId","serviceAccount","sourceContents","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetWorkflowResult(
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        String revisionCreateTime,
-        String revisionId,
-        String serviceAccount,
-        String sourceContents,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("sourceContents") String sourceContents,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.labels = labels;

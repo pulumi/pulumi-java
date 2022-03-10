@@ -20,10 +20,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"resource","service"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1DataSourceResponse(
-        String resource,
-        String service) {
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("service") String service) {
         this.resource = resource;
         this.service = service;
     }

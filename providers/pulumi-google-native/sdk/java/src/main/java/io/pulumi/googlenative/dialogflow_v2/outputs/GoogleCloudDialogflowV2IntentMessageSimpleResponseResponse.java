@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse {
      */
     private final String textToSpeech;
 
-    @OutputCustomType.Constructor({"displayText","ssml","textToSpeech"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(
-        String displayText,
-        String ssml,
-        String textToSpeech) {
+        @OutputCustomType.Parameter("displayText") String displayText,
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("textToSpeech") String textToSpeech) {
         this.displayText = displayText;
         this.ssml = ssml;
         this.textToSpeech = textToSpeech;

@@ -41,14 +41,14 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor({"dimensions","endTimestamp","metrics","outputFormat","startTimestamp","timeUnit"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1QueryMetadataResponse(
-        List<String> dimensions,
-        String endTimestamp,
-        List<String> metrics,
-        String outputFormat,
-        String startTimestamp,
-        String timeUnit) {
+        @OutputCustomType.Parameter("dimensions") List<String> dimensions,
+        @OutputCustomType.Parameter("endTimestamp") String endTimestamp,
+        @OutputCustomType.Parameter("metrics") List<String> metrics,
+        @OutputCustomType.Parameter("outputFormat") String outputFormat,
+        @OutputCustomType.Parameter("startTimestamp") String startTimestamp,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
         this.dimensions = dimensions;
         this.endTimestamp = endTimestamp;
         this.metrics = metrics;

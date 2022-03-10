@@ -27,11 +27,11 @@ public final class RegionSslPolicyWarningsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","data","message"})
+    @OutputCustomType.Constructor
     private RegionSslPolicyWarningsItemResponse(
-        String code,
-        List<RegionSslPolicyWarningsItemDataItemResponse> data,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("data") List<RegionSslPolicyWarningsItemDataItemResponse> data,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.data = data;
         this.message = message;

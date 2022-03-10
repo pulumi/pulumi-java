@@ -20,10 +20,10 @@ public final class SchemaSettingsResponse {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor({"encoding","schema"})
+    @OutputCustomType.Constructor
     private SchemaSettingsResponse(
-        String encoding,
-        String schema) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

@@ -58,17 +58,17 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","dynamicGroupMetadata","groupKey","labels","name","parent","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String createTime,
-        String description,
-        String displayName,
-        DynamicGroupMetadataResponse dynamicGroupMetadata,
-        EntityKeyResponse groupKey,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
+        @OutputCustomType.Parameter("groupKey") EntityKeyResponse groupKey,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

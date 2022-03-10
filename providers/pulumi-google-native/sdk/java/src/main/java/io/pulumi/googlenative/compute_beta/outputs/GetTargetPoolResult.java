@@ -67,19 +67,19 @@ public final class GetTargetPoolResult {
      */
     private final String sessionAffinity;
 
-    @OutputCustomType.Constructor({"backupPool","creationTimestamp","description","failoverRatio","healthChecks","instances","kind","name","region","selfLink","sessionAffinity"})
+    @OutputCustomType.Constructor
     private GetTargetPoolResult(
-        String backupPool,
-        String creationTimestamp,
-        String description,
-        Double failoverRatio,
-        List<String> healthChecks,
-        List<String> instances,
-        String kind,
-        String name,
-        String region,
-        String selfLink,
-        String sessionAffinity) {
+        @OutputCustomType.Parameter("backupPool") String backupPool,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("failoverRatio") Double failoverRatio,
+        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sessionAffinity") String sessionAffinity) {
         this.backupPool = backupPool;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

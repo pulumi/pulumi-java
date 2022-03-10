@@ -32,12 +32,12 @@ public final class ServiceResolverResponse {
      */
     private final String serviceDirectoryService;
 
-    @OutputCustomType.Constructor({"endpointFilter","hostname","serverCertificates","serviceDirectoryService"})
+    @OutputCustomType.Constructor
     private ServiceResolverResponse(
-        String endpointFilter,
-        String hostname,
-        List<CertificateResponse> serverCertificates,
-        String serviceDirectoryService) {
+        @OutputCustomType.Parameter("endpointFilter") String endpointFilter,
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("serverCertificates") List<CertificateResponse> serverCertificates,
+        @OutputCustomType.Parameter("serviceDirectoryService") String serviceDirectoryService) {
         this.endpointFilter = endpointFilter;
         this.hostname = hostname;
         this.serverCertificates = serverCertificates;

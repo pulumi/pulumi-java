@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final VmImageResponse vmImage;
 
-    @OutputCustomType.Constructor({"containerImage","createTime","description","displayName","name","postStartupScript","vmImage"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        ContainerImageResponse containerImage,
-        String createTime,
-        String description,
-        String displayName,
-        String name,
-        String postStartupScript,
-        VmImageResponse vmImage) {
+        @OutputCustomType.Parameter("containerImage") ContainerImageResponse containerImage,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("postStartupScript") String postStartupScript,
+        @OutputCustomType.Parameter("vmImage") VmImageResponse vmImage) {
         this.containerImage = containerImage;
         this.createTime = createTime;
         this.description = description;

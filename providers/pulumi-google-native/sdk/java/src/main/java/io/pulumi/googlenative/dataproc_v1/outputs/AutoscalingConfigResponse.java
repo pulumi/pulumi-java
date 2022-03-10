@@ -15,8 +15,8 @@ public final class AutoscalingConfigResponse {
      */
     private final String policyUri;
 
-    @OutputCustomType.Constructor({"policyUri"})
-    private AutoscalingConfigResponse(String policyUri) {
+    @OutputCustomType.Constructor
+    private AutoscalingConfigResponse(@OutputCustomType.Parameter("policyUri") String policyUri) {
         this.policyUri = policyUri;
     }
 

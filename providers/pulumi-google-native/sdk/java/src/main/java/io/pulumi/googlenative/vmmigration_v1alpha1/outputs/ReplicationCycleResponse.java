@@ -43,14 +43,14 @@ public final class ReplicationCycleResponse {
      */
     private final String totalPauseDuration;
 
-    @OutputCustomType.Constructor({"endTime","progress","progressPercent","startTime","steps","totalPauseDuration"})
+    @OutputCustomType.Constructor
     private ReplicationCycleResponse(
-        String endTime,
-        Integer progress,
-        Integer progressPercent,
-        String startTime,
-        List<CycleStepResponse> steps,
-        String totalPauseDuration) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("progress") Integer progress,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("steps") List<CycleStepResponse> steps,
+        @OutputCustomType.Parameter("totalPauseDuration") String totalPauseDuration) {
         this.endTime = endTime;
         this.progress = progress;
         this.progressPercent = progressPercent;

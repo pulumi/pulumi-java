@@ -50,16 +50,16 @@ public final class GitHubEnterpriseSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor({"oauthClientIdName","oauthClientIdVersionName","oauthSecretName","oauthSecretVersionName","privateKeyName","privateKeyVersionName","webhookSecretName","webhookSecretVersionName"})
+    @OutputCustomType.Constructor
     private GitHubEnterpriseSecretsResponse(
-        String oauthClientIdName,
-        String oauthClientIdVersionName,
-        String oauthSecretName,
-        String oauthSecretVersionName,
-        String privateKeyName,
-        String privateKeyVersionName,
-        String webhookSecretName,
-        String webhookSecretVersionName) {
+        @OutputCustomType.Parameter("oauthClientIdName") String oauthClientIdName,
+        @OutputCustomType.Parameter("oauthClientIdVersionName") String oauthClientIdVersionName,
+        @OutputCustomType.Parameter("oauthSecretName") String oauthSecretName,
+        @OutputCustomType.Parameter("oauthSecretVersionName") String oauthSecretVersionName,
+        @OutputCustomType.Parameter("privateKeyName") String privateKeyName,
+        @OutputCustomType.Parameter("privateKeyVersionName") String privateKeyVersionName,
+        @OutputCustomType.Parameter("webhookSecretName") String webhookSecretName,
+        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.oauthClientIdName = oauthClientIdName;
         this.oauthClientIdVersionName = oauthClientIdVersionName;
         this.oauthSecretName = oauthSecretName;

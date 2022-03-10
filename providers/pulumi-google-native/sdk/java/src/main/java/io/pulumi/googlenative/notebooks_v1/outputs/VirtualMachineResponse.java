@@ -26,11 +26,11 @@ public final class VirtualMachineResponse {
      */
     private final VirtualMachineConfigResponse virtualMachineConfig;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","virtualMachineConfig"})
+    @OutputCustomType.Constructor
     private VirtualMachineResponse(
-        String instanceId,
-        String instanceName,
-        VirtualMachineConfigResponse virtualMachineConfig) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceName") String instanceName,
+        @OutputCustomType.Parameter("virtualMachineConfig") VirtualMachineConfigResponse virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;

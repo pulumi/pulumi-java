@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor({"displayName","issue","score"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(
-        String displayName,
-        String issue,
-        Double score) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("issue") String issue,
+        @OutputCustomType.Parameter("score") Double score) {
         this.displayName = displayName;
         this.issue = issue;
         this.score = score;

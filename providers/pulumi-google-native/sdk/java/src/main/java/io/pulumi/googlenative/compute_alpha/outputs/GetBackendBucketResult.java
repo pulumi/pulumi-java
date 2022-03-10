@@ -73,20 +73,20 @@ public final class GetBackendBucketResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor({"bucketName","cdnPolicy","compressionMode","creationTimestamp","customResponseHeaders","description","edgeSecurityPolicy","enableCdn","kind","name","selfLink","selfLinkWithId"})
+    @OutputCustomType.Constructor
     private GetBackendBucketResult(
-        String bucketName,
-        BackendBucketCdnPolicyResponse cdnPolicy,
-        String compressionMode,
-        String creationTimestamp,
-        List<String> customResponseHeaders,
-        String description,
-        String edgeSecurityPolicy,
-        Boolean enableCdn,
-        String kind,
-        String name,
-        String selfLink,
-        String selfLinkWithId) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("cdnPolicy") BackendBucketCdnPolicyResponse cdnPolicy,
+        @OutputCustomType.Parameter("compressionMode") String compressionMode,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
+        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.bucketName = bucketName;
         this.cdnPolicy = cdnPolicy;
         this.compressionMode = compressionMode;

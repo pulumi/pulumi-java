@@ -26,11 +26,11 @@ public final class ManifestResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","muxStreams","type"})
+    @OutputCustomType.Constructor
     private ManifestResponse(
-        String fileName,
-        List<String> muxStreams,
-        String type) {
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("muxStreams") List<String> muxStreams,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.muxStreams = muxStreams;
         this.type = type;

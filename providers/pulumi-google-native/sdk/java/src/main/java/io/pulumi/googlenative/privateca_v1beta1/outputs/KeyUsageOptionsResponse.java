@@ -55,17 +55,17 @@ public final class KeyUsageOptionsResponse {
      */
     private final Boolean keyEncipherment;
 
-    @OutputCustomType.Constructor({"certSign","contentCommitment","crlSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyEncipherment"})
+    @OutputCustomType.Constructor
     private KeyUsageOptionsResponse(
-        Boolean certSign,
-        Boolean contentCommitment,
-        Boolean crlSign,
-        Boolean dataEncipherment,
-        Boolean decipherOnly,
-        Boolean digitalSignature,
-        Boolean encipherOnly,
-        Boolean keyAgreement,
-        Boolean keyEncipherment) {
+        @OutputCustomType.Parameter("certSign") Boolean certSign,
+        @OutputCustomType.Parameter("contentCommitment") Boolean contentCommitment,
+        @OutputCustomType.Parameter("crlSign") Boolean crlSign,
+        @OutputCustomType.Parameter("dataEncipherment") Boolean dataEncipherment,
+        @OutputCustomType.Parameter("decipherOnly") Boolean decipherOnly,
+        @OutputCustomType.Parameter("digitalSignature") Boolean digitalSignature,
+        @OutputCustomType.Parameter("encipherOnly") Boolean encipherOnly,
+        @OutputCustomType.Parameter("keyAgreement") Boolean keyAgreement,
+        @OutputCustomType.Parameter("keyEncipherment") Boolean keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;

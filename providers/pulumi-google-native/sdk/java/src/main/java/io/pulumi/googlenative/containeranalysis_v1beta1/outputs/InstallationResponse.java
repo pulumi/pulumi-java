@@ -22,10 +22,10 @@ public final class InstallationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"location","name"})
+    @OutputCustomType.Constructor
     private InstallationResponse(
-        List<LocationResponse> location,
-        String name) {
+        @OutputCustomType.Parameter("location") List<LocationResponse> location,
+        @OutputCustomType.Parameter("name") String name) {
         this.location = location;
         this.name = name;
     }

@@ -58,17 +58,17 @@ public final class GetChannelResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","labels","name","release","retainedReleaseCount","ttl","updateTime","url"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        String createTime,
-        String expireTime,
-        Map<String,String> labels,
-        String name,
-        ReleaseResponse release,
-        Integer retainedReleaseCount,
-        String ttl,
-        String updateTime,
-        String url) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("release") ReleaseResponse release,
+        @OutputCustomType.Parameter("retainedReleaseCount") Integer retainedReleaseCount,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("url") String url) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.labels = labels;

@@ -21,10 +21,10 @@ public final class IngressPolicyResponse {
      */
     private final IngressToResponse ingressTo;
 
-    @OutputCustomType.Constructor({"ingressFrom","ingressTo"})
+    @OutputCustomType.Constructor
     private IngressPolicyResponse(
-        IngressFromResponse ingressFrom,
-        IngressToResponse ingressTo) {
+        @OutputCustomType.Parameter("ingressFrom") IngressFromResponse ingressFrom,
+        @OutputCustomType.Parameter("ingressTo") IngressToResponse ingressTo) {
         this.ingressFrom = ingressFrom;
         this.ingressTo = ingressTo;
     }

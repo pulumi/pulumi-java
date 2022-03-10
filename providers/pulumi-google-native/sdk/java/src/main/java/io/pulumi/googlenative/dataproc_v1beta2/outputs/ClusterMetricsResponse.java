@@ -21,10 +21,10 @@ public final class ClusterMetricsResponse {
      */
     private final Map<String,String> yarnMetrics;
 
-    @OutputCustomType.Constructor({"hdfsMetrics","yarnMetrics"})
+    @OutputCustomType.Constructor
     private ClusterMetricsResponse(
-        Map<String,String> hdfsMetrics,
-        Map<String,String> yarnMetrics) {
+        @OutputCustomType.Parameter("hdfsMetrics") Map<String,String> hdfsMetrics,
+        @OutputCustomType.Parameter("yarnMetrics") Map<String,String> yarnMetrics) {
         this.hdfsMetrics = hdfsMetrics;
         this.yarnMetrics = yarnMetrics;
     }

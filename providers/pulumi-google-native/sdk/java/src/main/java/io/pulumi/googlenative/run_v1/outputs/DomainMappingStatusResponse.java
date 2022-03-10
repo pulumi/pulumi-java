@@ -39,13 +39,13 @@ public final class DomainMappingStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"conditions","mappedRouteName","observedGeneration","resourceRecords","url"})
+    @OutputCustomType.Constructor
     private DomainMappingStatusResponse(
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String mappedRouteName,
-        Integer observedGeneration,
-        List<ResourceRecordResponse> resourceRecords,
-        String url) {
+        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @OutputCustomType.Parameter("mappedRouteName") String mappedRouteName,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @OutputCustomType.Parameter("url") String url) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;

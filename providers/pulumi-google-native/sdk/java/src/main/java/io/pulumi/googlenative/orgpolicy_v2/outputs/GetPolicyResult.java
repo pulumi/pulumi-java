@@ -21,10 +21,10 @@ public final class GetPolicyResult {
      */
     private final GoogleCloudOrgpolicyV2PolicySpecResponse spec;
 
-    @OutputCustomType.Constructor({"name","spec"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        String name,
-        GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("spec") GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
         this.name = name;
         this.spec = spec;
     }

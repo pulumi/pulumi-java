@@ -15,8 +15,8 @@ public final class FailurePolicyResponse {
      */
     private final RetryResponse retry;
 
-    @OutputCustomType.Constructor({"retry"})
-    private FailurePolicyResponse(RetryResponse retry) {
+    @OutputCustomType.Constructor
+    private FailurePolicyResponse(@OutputCustomType.Parameter("retry") RetryResponse retry) {
         this.retry = retry;
     }
 

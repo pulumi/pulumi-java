@@ -56,17 +56,17 @@ public final class GetCanaryEvaluationResult {
      */
     private final String verdict;
 
-    @OutputCustomType.Constructor({"control","createTime","endTime","metricLabels","name","startTime","state","treatment","verdict"})
+    @OutputCustomType.Constructor
     private GetCanaryEvaluationResult(
-        String control,
-        String createTime,
-        String endTime,
-        GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels,
-        String name,
-        String startTime,
-        String state,
-        String treatment,
-        String verdict) {
+        @OutputCustomType.Parameter("control") String control,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("metricLabels") GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse metricLabels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("treatment") String treatment,
+        @OutputCustomType.Parameter("verdict") String verdict) {
         this.control = control;
         this.createTime = createTime;
         this.endTime = endTime;

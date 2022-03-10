@@ -41,14 +41,14 @@ public final class GetPerfSampleSeriesResult {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"basicPerfSampleSeries","executionId","historyId","project","sampleSeriesId","stepId"})
+    @OutputCustomType.Constructor
     private GetPerfSampleSeriesResult(
-        BasicPerfSampleSeriesResponse basicPerfSampleSeries,
-        String executionId,
-        String historyId,
-        String project,
-        String sampleSeriesId,
-        String stepId) {
+        @OutputCustomType.Parameter("basicPerfSampleSeries") BasicPerfSampleSeriesResponse basicPerfSampleSeries,
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("sampleSeriesId") String sampleSeriesId,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.basicPerfSampleSeries = basicPerfSampleSeries;
         this.executionId = executionId;
         this.historyId = historyId;

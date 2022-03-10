@@ -136,30 +136,30 @@ public final class GetNoteResult {
      */
     private final VulnerabilityTypeResponse vulnerabilityType;
 
-    @OutputCustomType.Constructor({"attestationAuthority","baseImage","buildType","compliance","createTime","deployable","discovery","dsseAttestation","expirationTime","kind","longDescription","name","$package","relatedUrl","sbom","shortDescription","spdxFile","spdxPackage","spdxRelationship","updateTime","upgrade","vulnerabilityType"})
+    @OutputCustomType.Constructor
     private GetNoteResult(
-        AttestationAuthorityResponse attestationAuthority,
-        BasisResponse baseImage,
-        BuildTypeResponse buildType,
-        ComplianceNoteResponse compliance,
-        String createTime,
-        DeployableResponse deployable,
-        DiscoveryResponse discovery,
-        DSSEAttestationNoteResponse dsseAttestation,
-        String expirationTime,
-        String kind,
-        String longDescription,
-        String name,
-        PackageResponse $package,
-        List<RelatedUrlResponse> relatedUrl,
-        DocumentNoteResponse sbom,
-        String shortDescription,
-        FileNoteResponse spdxFile,
-        PackageInfoNoteResponse spdxPackage,
-        RelationshipNoteResponse spdxRelationship,
-        String updateTime,
-        UpgradeNoteResponse upgrade,
-        VulnerabilityTypeResponse vulnerabilityType) {
+        @OutputCustomType.Parameter("attestationAuthority") AttestationAuthorityResponse attestationAuthority,
+        @OutputCustomType.Parameter("baseImage") BasisResponse baseImage,
+        @OutputCustomType.Parameter("buildType") BuildTypeResponse buildType,
+        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployable") DeployableResponse deployable,
+        @OutputCustomType.Parameter("discovery") DiscoveryResponse discovery,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("package") PackageResponse $package,
+        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @OutputCustomType.Parameter("sbom") DocumentNoteResponse sbom,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription,
+        @OutputCustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @OutputCustomType.Parameter("vulnerabilityType") VulnerabilityTypeResponse vulnerabilityType) {
         this.attestationAuthority = attestationAuthority;
         this.baseImage = baseImage;
         this.buildType = buildType;

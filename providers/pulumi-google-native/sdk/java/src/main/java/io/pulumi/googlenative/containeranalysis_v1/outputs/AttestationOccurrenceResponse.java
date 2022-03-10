@@ -28,11 +28,11 @@ public final class AttestationOccurrenceResponse {
      */
     private final List<SignatureResponse> signatures;
 
-    @OutputCustomType.Constructor({"jwts","serializedPayload","signatures"})
+    @OutputCustomType.Constructor
     private AttestationOccurrenceResponse(
-        List<JwtResponse> jwts,
-        String serializedPayload,
-        List<SignatureResponse> signatures) {
+        @OutputCustomType.Parameter("jwts") List<JwtResponse> jwts,
+        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
+        @OutputCustomType.Parameter("signatures") List<SignatureResponse> signatures) {
         this.jwts = jwts;
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;

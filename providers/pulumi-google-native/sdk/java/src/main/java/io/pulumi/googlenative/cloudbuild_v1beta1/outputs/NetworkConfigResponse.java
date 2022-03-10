@@ -15,8 +15,8 @@ public final class NetworkConfigResponse {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor({"peeredNetwork"})
-    private NetworkConfigResponse(String peeredNetwork) {
+    @OutputCustomType.Constructor
+    private NetworkConfigResponse(@OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.peeredNetwork = peeredNetwork;
     }
 

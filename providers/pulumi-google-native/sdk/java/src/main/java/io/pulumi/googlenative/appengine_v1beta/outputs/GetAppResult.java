@@ -80,22 +80,22 @@ public final class GetAppResult {
      */
     private final String servingStatus;
 
-    @OutputCustomType.Constructor({"authDomain","codeBucket","databaseType","defaultBucket","defaultCookieExpiration","defaultHostname","dispatchRules","featureSettings","gcrDomain","iap","location","name","serviceAccount","servingStatus"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        String authDomain,
-        String codeBucket,
-        String databaseType,
-        String defaultBucket,
-        String defaultCookieExpiration,
-        String defaultHostname,
-        List<UrlDispatchRuleResponse> dispatchRules,
-        FeatureSettingsResponse featureSettings,
-        String gcrDomain,
-        IdentityAwareProxyResponse iap,
-        String location,
-        String name,
-        String serviceAccount,
-        String servingStatus) {
+        @OutputCustomType.Parameter("authDomain") String authDomain,
+        @OutputCustomType.Parameter("codeBucket") String codeBucket,
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("defaultBucket") String defaultBucket,
+        @OutputCustomType.Parameter("defaultCookieExpiration") String defaultCookieExpiration,
+        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
+        @OutputCustomType.Parameter("dispatchRules") List<UrlDispatchRuleResponse> dispatchRules,
+        @OutputCustomType.Parameter("featureSettings") FeatureSettingsResponse featureSettings,
+        @OutputCustomType.Parameter("gcrDomain") String gcrDomain,
+        @OutputCustomType.Parameter("iap") IdentityAwareProxyResponse iap,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("servingStatus") String servingStatus) {
         this.authDomain = authDomain;
         this.codeBucket = codeBucket;
         this.databaseType = databaseType;

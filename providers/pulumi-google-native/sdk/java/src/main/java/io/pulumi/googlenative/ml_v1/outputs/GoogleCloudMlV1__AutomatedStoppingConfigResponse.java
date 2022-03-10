@@ -13,10 +13,10 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse {
     private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
     private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
-    @OutputCustomType.Constructor({"decayCurveStoppingConfig","medianAutomatedStoppingConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__AutomatedStoppingConfigResponse(
-        GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
-        GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
+        @OutputCustomType.Parameter("decayCurveStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
+        @OutputCustomType.Parameter("medianAutomatedStoppingConfig") GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
         this.decayCurveStoppingConfig = decayCurveStoppingConfig;
         this.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
     }

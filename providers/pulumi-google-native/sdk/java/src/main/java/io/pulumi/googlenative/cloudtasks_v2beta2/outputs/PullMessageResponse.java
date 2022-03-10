@@ -20,10 +20,10 @@ public final class PullMessageResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"payload","tag"})
+    @OutputCustomType.Constructor
     private PullMessageResponse(
-        String payload,
-        String tag) {
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.payload = payload;
         this.tag = tag;
     }

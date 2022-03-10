@@ -22,10 +22,10 @@ public final class BoundingPolyResponse {
      */
     private final List<VertexResponse> vertices;
 
-    @OutputCustomType.Constructor({"normalizedVertices","vertices"})
+    @OutputCustomType.Constructor
     private BoundingPolyResponse(
-        List<NormalizedVertexResponse> normalizedVertices,
-        List<VertexResponse> vertices) {
+        @OutputCustomType.Parameter("normalizedVertices") List<NormalizedVertexResponse> normalizedVertices,
+        @OutputCustomType.Parameter("vertices") List<VertexResponse> vertices) {
         this.normalizedVertices = normalizedVertices;
         this.vertices = vertices;
     }

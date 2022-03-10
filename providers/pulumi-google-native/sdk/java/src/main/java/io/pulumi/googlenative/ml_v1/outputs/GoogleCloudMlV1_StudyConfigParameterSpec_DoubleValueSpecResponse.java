@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      */
     private final Double minValue;
 
-    @OutputCustomType.Constructor({"maxValue","minValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(
-        Double maxValue,
-        Double minValue) {
+        @OutputCustomType.Parameter("maxValue") Double maxValue,
+        @OutputCustomType.Parameter("minValue") Double minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }

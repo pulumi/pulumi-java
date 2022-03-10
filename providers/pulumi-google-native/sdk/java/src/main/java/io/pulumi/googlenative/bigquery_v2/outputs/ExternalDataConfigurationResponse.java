@@ -95,23 +95,23 @@ public final class ExternalDataConfigurationResponse {
      */
     private final List<String> sourceUris;
 
-    @OutputCustomType.Constructor({"autodetect","avroOptions","bigtableOptions","compression","connectionId","csvOptions","decimalTargetTypes","googleSheetsOptions","hivePartitioningOptions","ignoreUnknownValues","maxBadRecords","parquetOptions","schema","sourceFormat","sourceUris"})
+    @OutputCustomType.Constructor
     private ExternalDataConfigurationResponse(
-        Boolean autodetect,
-        AvroOptionsResponse avroOptions,
-        BigtableOptionsResponse bigtableOptions,
-        String compression,
-        String connectionId,
-        CsvOptionsResponse csvOptions,
-        List<String> decimalTargetTypes,
-        GoogleSheetsOptionsResponse googleSheetsOptions,
-        HivePartitioningOptionsResponse hivePartitioningOptions,
-        Boolean ignoreUnknownValues,
-        Integer maxBadRecords,
-        ParquetOptionsResponse parquetOptions,
-        TableSchemaResponse schema,
-        String sourceFormat,
-        List<String> sourceUris) {
+        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
+        @OutputCustomType.Parameter("avroOptions") AvroOptionsResponse avroOptions,
+        @OutputCustomType.Parameter("bigtableOptions") BigtableOptionsResponse bigtableOptions,
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("connectionId") String connectionId,
+        @OutputCustomType.Parameter("csvOptions") CsvOptionsResponse csvOptions,
+        @OutputCustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
+        @OutputCustomType.Parameter("googleSheetsOptions") GoogleSheetsOptionsResponse googleSheetsOptions,
+        @OutputCustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
+        @OutputCustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
+        @OutputCustomType.Parameter("maxBadRecords") Integer maxBadRecords,
+        @OutputCustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
+        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
+        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris) {
         this.autodetect = autodetect;
         this.avroOptions = avroOptions;
         this.bigtableOptions = bigtableOptions;

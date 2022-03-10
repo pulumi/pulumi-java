@@ -21,10 +21,10 @@ public final class SegmentSettingsResponse {
      */
     private final String segmentDuration;
 
-    @OutputCustomType.Constructor({"individualSegments","segmentDuration"})
+    @OutputCustomType.Constructor
     private SegmentSettingsResponse(
-        Boolean individualSegments,
-        String segmentDuration) {
+        @OutputCustomType.Parameter("individualSegments") Boolean individualSegments,
+        @OutputCustomType.Parameter("segmentDuration") String segmentDuration) {
         this.individualSegments = individualSegments;
         this.segmentDuration = segmentDuration;
     }

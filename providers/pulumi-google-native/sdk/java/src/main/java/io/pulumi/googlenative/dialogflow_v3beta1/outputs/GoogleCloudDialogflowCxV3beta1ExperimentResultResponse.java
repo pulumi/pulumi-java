@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics;
 
-    @OutputCustomType.Constructor({"lastUpdateTime","versionMetrics"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultResponse(
-        String lastUpdateTime,
-        List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("versionMetrics") List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse> versionMetrics) {
         this.lastUpdateTime = lastUpdateTime;
         this.versionMetrics = versionMetrics;
     }

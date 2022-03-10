@@ -17,10 +17,10 @@ public final class ManagedZonePeeringConfigResponse {
      */
     private final ManagedZonePeeringConfigTargetNetworkResponse targetNetwork;
 
-    @OutputCustomType.Constructor({"kind","targetNetwork"})
+    @OutputCustomType.Constructor
     private ManagedZonePeeringConfigResponse(
-        String kind,
-        ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("targetNetwork") ManagedZonePeeringConfigTargetNetworkResponse targetNetwork) {
         this.kind = kind;
         this.targetNetwork = targetNetwork;
     }

@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private GoogleCloudRetailV2alphaRuleFilterActionResponse(String filter) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2alphaRuleFilterActionResponse(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 

@@ -83,22 +83,22 @@ public final class GetCryptoKeyVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"algorithm","attestation","createTime","destroyEventTime","destroyTime","externalProtectionLevelOptions","generateTime","importFailureReason","importJob","importTime","name","protectionLevel","reimportEligible","state"})
+    @OutputCustomType.Constructor
     private GetCryptoKeyVersionResult(
-        String algorithm,
-        KeyOperationAttestationResponse attestation,
-        String createTime,
-        String destroyEventTime,
-        String destroyTime,
-        ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions,
-        String generateTime,
-        String importFailureReason,
-        String importJob,
-        String importTime,
-        String name,
-        String protectionLevel,
-        Boolean reimportEligible,
-        String state) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destroyEventTime") String destroyEventTime,
+        @OutputCustomType.Parameter("destroyTime") String destroyTime,
+        @OutputCustomType.Parameter("externalProtectionLevelOptions") ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions,
+        @OutputCustomType.Parameter("generateTime") String generateTime,
+        @OutputCustomType.Parameter("importFailureReason") String importFailureReason,
+        @OutputCustomType.Parameter("importJob") String importJob,
+        @OutputCustomType.Parameter("importTime") String importTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
+        @OutputCustomType.Parameter("reimportEligible") Boolean reimportEligible,
+        @OutputCustomType.Parameter("state") String state) {
         this.algorithm = algorithm;
         this.attestation = attestation;
         this.createTime = createTime;

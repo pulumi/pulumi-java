@@ -75,21 +75,21 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createdAt","description","diskEncryptionKeyName","displayName","host","ipRange","lastModifiedAt","location","name","peeringCidrRange","port","runtimeVersion","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String createdAt,
-        String description,
-        String diskEncryptionKeyName,
-        String displayName,
-        String host,
-        String ipRange,
-        String lastModifiedAt,
-        String location,
-        String name,
-        String peeringCidrRange,
-        String port,
-        String runtimeVersion,
-        String state) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskEncryptionKeyName") String diskEncryptionKeyName,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringCidrRange") String peeringCidrRange,
+        @OutputCustomType.Parameter("port") String port,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.description = description;
         this.diskEncryptionKeyName = diskEncryptionKeyName;

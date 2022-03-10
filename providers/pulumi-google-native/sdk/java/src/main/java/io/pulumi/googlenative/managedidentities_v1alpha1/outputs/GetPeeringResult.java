@@ -51,16 +51,16 @@ public final class GetPeeringResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authorizedNetwork","createTime","domainResource","labels","name","state","statusMessage","updateTime"})
+    @OutputCustomType.Constructor
     private GetPeeringResult(
-        String authorizedNetwork,
-        String createTime,
-        String domainResource,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String statusMessage,
-        String updateTime) {
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("domainResource") String domainResource,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.domainResource = domainResource;

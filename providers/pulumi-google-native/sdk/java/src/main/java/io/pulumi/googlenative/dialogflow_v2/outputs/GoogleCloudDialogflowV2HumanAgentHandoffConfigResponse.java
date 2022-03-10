@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
      */
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
-    @OutputCustomType.Constructor({"livePersonConfig","salesforceLiveAgentConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(
-        GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
-        GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
+        @OutputCustomType.Parameter("livePersonConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
+        @OutputCustomType.Parameter("salesforceLiveAgentConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
         this.livePersonConfig = livePersonConfig;
         this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
     }

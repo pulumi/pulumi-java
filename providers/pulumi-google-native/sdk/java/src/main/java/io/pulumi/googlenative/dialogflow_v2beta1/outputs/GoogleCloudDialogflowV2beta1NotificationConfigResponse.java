@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"messageFormat","topic"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1NotificationConfigResponse(
-        String messageFormat,
-        String topic) {
+        @OutputCustomType.Parameter("messageFormat") String messageFormat,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.topic = topic;
     }

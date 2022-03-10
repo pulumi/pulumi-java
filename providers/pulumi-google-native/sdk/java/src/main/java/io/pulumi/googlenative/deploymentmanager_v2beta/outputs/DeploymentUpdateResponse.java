@@ -27,11 +27,11 @@ public final class DeploymentUpdateResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor({"description","labels","manifest"})
+    @OutputCustomType.Constructor
     private DeploymentUpdateResponse(
-        String description,
-        List<DeploymentUpdateLabelEntryResponse> labels,
-        String manifest) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("manifest") String manifest) {
         this.description = description;
         this.labels = labels;
         this.manifest = manifest;

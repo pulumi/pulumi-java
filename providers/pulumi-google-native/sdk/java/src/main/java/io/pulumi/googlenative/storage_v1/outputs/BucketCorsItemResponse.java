@@ -32,12 +32,12 @@ public final class BucketCorsItemResponse {
      */
     private final List<String> responseHeader;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","method","origin","responseHeader"})
+    @OutputCustomType.Constructor
     private BucketCorsItemResponse(
-        Integer maxAgeSeconds,
-        List<String> method,
-        List<String> origin,
-        List<String> responseHeader) {
+        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("method") List<String> method,
+        @OutputCustomType.Parameter("origin") List<String> origin,
+        @OutputCustomType.Parameter("responseHeader") List<String> responseHeader) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.method = method;
         this.origin = origin;

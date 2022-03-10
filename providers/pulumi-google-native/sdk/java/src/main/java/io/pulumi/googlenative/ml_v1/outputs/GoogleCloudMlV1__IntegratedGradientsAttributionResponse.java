@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionResponse {
      */
     private final Integer numIntegralSteps;
 
-    @OutputCustomType.Constructor({"numIntegralSteps"})
-    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse(Integer numIntegralSteps) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse(@OutputCustomType.Parameter("numIntegralSteps") Integer numIntegralSteps) {
         this.numIntegralSteps = numIntegralSteps;
     }
 

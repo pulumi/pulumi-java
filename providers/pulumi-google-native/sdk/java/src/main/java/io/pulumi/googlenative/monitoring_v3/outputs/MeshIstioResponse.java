@@ -25,11 +25,11 @@ public final class MeshIstioResponse {
      */
     private final String serviceNamespace;
 
-    @OutputCustomType.Constructor({"meshUid","serviceName","serviceNamespace"})
+    @OutputCustomType.Constructor
     private MeshIstioResponse(
-        String meshUid,
-        String serviceName,
-        String serviceNamespace) {
+        @OutputCustomType.Parameter("meshUid") String meshUid,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace) {
         this.meshUid = meshUid;
         this.serviceName = serviceName;
         this.serviceNamespace = serviceNamespace;

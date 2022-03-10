@@ -58,17 +58,17 @@ public final class GetSecuritySettingResult {
      */
     private final Integer retentionWindowDays;
 
-    @OutputCustomType.Constructor({"deidentifyTemplate","displayName","insightsExportSettings","inspectTemplate","name","purgeDataTypes","redactionScope","redactionStrategy","retentionWindowDays"})
+    @OutputCustomType.Constructor
     private GetSecuritySettingResult(
-        String deidentifyTemplate,
-        String displayName,
-        GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse insightsExportSettings,
-        String inspectTemplate,
-        String name,
-        List<String> purgeDataTypes,
-        String redactionScope,
-        String redactionStrategy,
-        Integer retentionWindowDays) {
+        @OutputCustomType.Parameter("deidentifyTemplate") String deidentifyTemplate,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("insightsExportSettings") GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsResponse insightsExportSettings,
+        @OutputCustomType.Parameter("inspectTemplate") String inspectTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("purgeDataTypes") List<String> purgeDataTypes,
+        @OutputCustomType.Parameter("redactionScope") String redactionScope,
+        @OutputCustomType.Parameter("redactionStrategy") String redactionStrategy,
+        @OutputCustomType.Parameter("retentionWindowDays") Integer retentionWindowDays) {
         this.deidentifyTemplate = deidentifyTemplate;
         this.displayName = displayName;
         this.insightsExportSettings = insightsExportSettings;

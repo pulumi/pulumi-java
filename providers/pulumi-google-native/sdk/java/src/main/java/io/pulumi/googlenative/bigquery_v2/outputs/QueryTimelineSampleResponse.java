@@ -35,13 +35,13 @@ public final class QueryTimelineSampleResponse {
      */
     private final String totalSlotMs;
 
-    @OutputCustomType.Constructor({"activeUnits","completedUnits","elapsedMs","pendingUnits","totalSlotMs"})
+    @OutputCustomType.Constructor
     private QueryTimelineSampleResponse(
-        String activeUnits,
-        String completedUnits,
-        String elapsedMs,
-        String pendingUnits,
-        String totalSlotMs) {
+        @OutputCustomType.Parameter("activeUnits") String activeUnits,
+        @OutputCustomType.Parameter("completedUnits") String completedUnits,
+        @OutputCustomType.Parameter("elapsedMs") String elapsedMs,
+        @OutputCustomType.Parameter("pendingUnits") String pendingUnits,
+        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs) {
         this.activeUnits = activeUnits;
         this.completedUnits = completedUnits;
         this.elapsedMs = elapsedMs;

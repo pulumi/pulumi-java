@@ -119,29 +119,29 @@ public final class GetOrganizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addonsConfig","analyticsRegion","attributes","authorizedNetwork","billingType","caCertificate","createdAt","customerName","description","displayName","environments","expiresAt","lastModifiedAt","name","portalDisabled","project","properties","runtimeDatabaseEncryptionKeyName","runtimeType","state","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
-        String analyticsRegion,
-        List<String> attributes,
-        String authorizedNetwork,
-        String billingType,
-        String caCertificate,
-        String createdAt,
-        String customerName,
-        String description,
-        String displayName,
-        List<String> environments,
-        String expiresAt,
-        String lastModifiedAt,
-        String name,
-        Boolean portalDisabled,
-        String project,
-        GoogleCloudApigeeV1PropertiesResponse properties,
-        String runtimeDatabaseEncryptionKeyName,
-        String runtimeType,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("addonsConfig") GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
+        @OutputCustomType.Parameter("analyticsRegion") String analyticsRegion,
+        @OutputCustomType.Parameter("attributes") List<String> attributes,
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("billingType") String billingType,
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("customerName") String customerName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("environments") List<String> environments,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("portalDisabled") Boolean portalDisabled,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
+        @OutputCustomType.Parameter("runtimeDatabaseEncryptionKeyName") String runtimeDatabaseEncryptionKeyName,
+        @OutputCustomType.Parameter("runtimeType") String runtimeType,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.addonsConfig = addonsConfig;
         this.analyticsRegion = analyticsRegion;
         this.attributes = attributes;

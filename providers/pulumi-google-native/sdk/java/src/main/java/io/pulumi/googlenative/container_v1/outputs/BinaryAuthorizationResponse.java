@@ -15,8 +15,8 @@ public final class BinaryAuthorizationResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private BinaryAuthorizationResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private BinaryAuthorizationResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

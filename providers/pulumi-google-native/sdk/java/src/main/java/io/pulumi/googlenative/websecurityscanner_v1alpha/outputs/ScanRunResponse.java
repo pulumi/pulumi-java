@@ -57,17 +57,17 @@ public final class ScanRunResponse {
      */
     private final String urlsTestedCount;
 
-    @OutputCustomType.Constructor({"endTime","executionState","hasVulnerabilities","name","progressPercent","resultState","startTime","urlsCrawledCount","urlsTestedCount"})
+    @OutputCustomType.Constructor
     private ScanRunResponse(
-        String endTime,
-        String executionState,
-        Boolean hasVulnerabilities,
-        String name,
-        Integer progressPercent,
-        String resultState,
-        String startTime,
-        String urlsCrawledCount,
-        String urlsTestedCount) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("executionState") String executionState,
+        @OutputCustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("resultState") String resultState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
+        @OutputCustomType.Parameter("urlsTestedCount") String urlsTestedCount) {
         this.endTime = endTime;
         this.executionState = executionState;
         this.hasVulnerabilities = hasVulnerabilities;

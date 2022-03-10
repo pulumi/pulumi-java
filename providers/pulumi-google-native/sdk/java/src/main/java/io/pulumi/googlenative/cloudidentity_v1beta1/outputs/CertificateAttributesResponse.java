@@ -56,17 +56,17 @@ public final class CertificateAttributesResponse {
      */
     private final String validityStartTime;
 
-    @OutputCustomType.Constructor({"certificateTemplate","fingerprint","issuer","serialNumber","subject","thumbprint","validationState","validityExpirationTime","validityStartTime"})
+    @OutputCustomType.Constructor
     private CertificateAttributesResponse(
-        CertificateTemplateResponse certificateTemplate,
-        String fingerprint,
-        String issuer,
-        String serialNumber,
-        String subject,
-        String thumbprint,
-        String validationState,
-        String validityExpirationTime,
-        String validityStartTime) {
+        @OutputCustomType.Parameter("certificateTemplate") CertificateTemplateResponse certificateTemplate,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("validationState") String validationState,
+        @OutputCustomType.Parameter("validityExpirationTime") String validityExpirationTime,
+        @OutputCustomType.Parameter("validityStartTime") String validityStartTime) {
         this.certificateTemplate = certificateTemplate;
         this.fingerprint = fingerprint;
         this.issuer = issuer;

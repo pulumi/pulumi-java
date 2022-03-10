@@ -27,11 +27,11 @@ public final class JobStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"errorResult","errors","state"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        ErrorProtoResponse errorResult,
-        List<ErrorProtoResponse> errors,
-        String state) {
+        @OutputCustomType.Parameter("errorResult") ErrorProtoResponse errorResult,
+        @OutputCustomType.Parameter("errors") List<ErrorProtoResponse> errors,
+        @OutputCustomType.Parameter("state") String state) {
         this.errorResult = errorResult;
         this.errors = errors;
         this.state = state;

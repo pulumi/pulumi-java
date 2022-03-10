@@ -39,13 +39,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
      */
     private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
-    @OutputCustomType.Constructor({"config","createTime","errors","state","stats"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2StoredInfoTypeVersionResponse(
-        GooglePrivacyDlpV2StoredInfoTypeConfigResponse config,
-        String createTime,
-        List<GooglePrivacyDlpV2ErrorResponse> errors,
-        String state,
-        GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
+        @OutputCustomType.Parameter("config") GooglePrivacyDlpV2StoredInfoTypeConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stats") GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats) {
         this.config = config;
         this.createTime = createTime;
         this.errors = errors;

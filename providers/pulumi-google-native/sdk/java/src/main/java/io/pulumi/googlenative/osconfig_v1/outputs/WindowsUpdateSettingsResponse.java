@@ -26,11 +26,11 @@ public final class WindowsUpdateSettingsResponse {
      */
     private final List<String> exclusivePatches;
 
-    @OutputCustomType.Constructor({"classifications","excludes","exclusivePatches"})
+    @OutputCustomType.Constructor
     private WindowsUpdateSettingsResponse(
-        List<String> classifications,
-        List<String> excludes,
-        List<String> exclusivePatches) {
+        @OutputCustomType.Parameter("classifications") List<String> classifications,
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

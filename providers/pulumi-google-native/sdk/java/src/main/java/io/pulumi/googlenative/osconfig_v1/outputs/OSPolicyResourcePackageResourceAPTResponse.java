@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceAPTResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OSPolicyResourcePackageResourceAPTResponse(String name) {
+    @OutputCustomType.Constructor
+    private OSPolicyResourcePackageResourceAPTResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

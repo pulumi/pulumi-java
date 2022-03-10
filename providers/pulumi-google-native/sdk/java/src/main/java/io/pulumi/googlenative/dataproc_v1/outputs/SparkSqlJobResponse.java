@@ -44,14 +44,14 @@ public final class SparkSqlJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private SparkSqlJobResponse(
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
+        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;

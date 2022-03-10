@@ -20,10 +20,10 @@ public final class AbortInfoResponse {
      */
     private final String resourceUri;
 
-    @OutputCustomType.Constructor({"cause","resourceUri"})
+    @OutputCustomType.Constructor
     private AbortInfoResponse(
-        String cause,
-        String resourceUri) {
+        @OutputCustomType.Parameter("cause") String cause,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
         this.cause = cause;
         this.resourceUri = resourceUri;
     }

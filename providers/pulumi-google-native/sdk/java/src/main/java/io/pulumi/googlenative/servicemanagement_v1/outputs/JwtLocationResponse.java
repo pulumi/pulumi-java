@@ -25,11 +25,11 @@ public final class JwtLocationResponse {
      */
     private final String valuePrefix;
 
-    @OutputCustomType.Constructor({"header","query","valuePrefix"})
+    @OutputCustomType.Constructor
     private JwtLocationResponse(
-        String header,
-        String query,
-        String valuePrefix) {
+        @OutputCustomType.Parameter("header") String header,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("valuePrefix") String valuePrefix) {
         this.header = header;
         this.query = query;
         this.valuePrefix = valuePrefix;

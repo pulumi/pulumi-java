@@ -50,15 +50,15 @@ public final class ApiResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"methods","mixins","name","options","sourceContext","syntax","version"})
+    @OutputCustomType.Constructor
     private ApiResponse(
-        List<MethodResponse> methods,
-        List<MixinResponse> mixins,
-        String name,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax,
-        String version) {
+        @OutputCustomType.Parameter("methods") List<MethodResponse> methods,
+        @OutputCustomType.Parameter("mixins") List<MixinResponse> mixins,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @OutputCustomType.Parameter("syntax") String syntax,
+        @OutputCustomType.Parameter("version") String version) {
         this.methods = methods;
         this.mixins = mixins;
         this.name = name;

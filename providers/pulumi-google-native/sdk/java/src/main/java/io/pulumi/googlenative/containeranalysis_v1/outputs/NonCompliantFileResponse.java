@@ -25,11 +25,11 @@ public final class NonCompliantFileResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"displayCommand","path","reason"})
+    @OutputCustomType.Constructor
     private NonCompliantFileResponse(
-        String displayCommand,
-        String path,
-        String reason) {
+        @OutputCustomType.Parameter("displayCommand") String displayCommand,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.displayCommand = displayCommand;
         this.path = path;
         this.reason = reason;

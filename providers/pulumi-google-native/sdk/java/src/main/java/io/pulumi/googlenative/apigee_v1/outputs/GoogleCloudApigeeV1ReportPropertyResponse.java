@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse {
      */
     private final List<GoogleCloudApigeeV1AttributeResponse> value;
 
-    @OutputCustomType.Constructor({"property","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ReportPropertyResponse(
-        String property,
-        List<GoogleCloudApigeeV1AttributeResponse> value) {
+        @OutputCustomType.Parameter("property") String property,
+        @OutputCustomType.Parameter("value") List<GoogleCloudApigeeV1AttributeResponse> value) {
         this.property = property;
         this.value = value;
     }

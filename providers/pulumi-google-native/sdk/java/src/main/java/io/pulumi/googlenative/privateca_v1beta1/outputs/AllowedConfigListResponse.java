@@ -16,8 +16,8 @@ public final class AllowedConfigListResponse {
      */
     private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
-    @OutputCustomType.Constructor({"allowedConfigValues"})
-    private AllowedConfigListResponse(List<ReusableConfigWrapperResponse> allowedConfigValues) {
+    @OutputCustomType.Constructor
+    private AllowedConfigListResponse(@OutputCustomType.Parameter("allowedConfigValues") List<ReusableConfigWrapperResponse> allowedConfigValues) {
         this.allowedConfigValues = allowedConfigValues;
     }
 

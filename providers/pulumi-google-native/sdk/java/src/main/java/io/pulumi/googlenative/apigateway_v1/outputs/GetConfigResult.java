@@ -70,19 +70,19 @@ public final class GetConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","gatewayServiceAccount","grpcServices","labels","managedServiceConfigs","name","openapiDocuments","serviceConfigId","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        String createTime,
-        String displayName,
-        String gatewayServiceAccount,
-        List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices,
-        Map<String,String> labels,
-        List<ApigatewayApiConfigFileResponse> managedServiceConfigs,
-        String name,
-        List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments,
-        String serviceConfigId,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("gatewayServiceAccount") String gatewayServiceAccount,
+        @OutputCustomType.Parameter("grpcServices") List<ApigatewayApiConfigGrpcServiceDefinitionResponse> grpcServices,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("managedServiceConfigs") List<ApigatewayApiConfigFileResponse> managedServiceConfigs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("openapiDocuments") List<ApigatewayApiConfigOpenApiDocumentResponse> openapiDocuments,
+        @OutputCustomType.Parameter("serviceConfigId") String serviceConfigId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.gatewayServiceAccount = gatewayServiceAccount;

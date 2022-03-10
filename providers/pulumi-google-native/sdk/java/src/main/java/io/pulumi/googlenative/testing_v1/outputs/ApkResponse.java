@@ -21,10 +21,10 @@ public final class ApkResponse {
      */
     private final String packageName;
 
-    @OutputCustomType.Constructor({"location","packageName"})
+    @OutputCustomType.Constructor
     private ApkResponse(
-        FileReferenceResponse location,
-        String packageName) {
+        @OutputCustomType.Parameter("location") FileReferenceResponse location,
+        @OutputCustomType.Parameter("packageName") String packageName) {
         this.location = location;
         this.packageName = packageName;
     }

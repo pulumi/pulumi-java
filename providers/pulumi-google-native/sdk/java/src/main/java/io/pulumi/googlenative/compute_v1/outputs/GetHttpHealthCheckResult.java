@@ -71,20 +71,20 @@ public final class GetHttpHealthCheckResult {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"checkIntervalSec","creationTimestamp","description","healthyThreshold","host","kind","name","port","requestPath","selfLink","timeoutSec","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetHttpHealthCheckResult(
-        Integer checkIntervalSec,
-        String creationTimestamp,
-        String description,
-        Integer healthyThreshold,
-        String host,
-        String kind,
-        String name,
-        Integer port,
-        String requestPath,
-        String selfLink,
-        Integer timeoutSec,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("requestPath") String requestPath,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

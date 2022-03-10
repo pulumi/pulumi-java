@@ -21,10 +21,10 @@ public final class BasisResponse {
      */
     private final String resourceUrl;
 
-    @OutputCustomType.Constructor({"fingerprint","resourceUrl"})
+    @OutputCustomType.Constructor
     private BasisResponse(
-        FingerprintResponse fingerprint,
-        String resourceUrl) {
+        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @OutputCustomType.Parameter("resourceUrl") String resourceUrl) {
         this.fingerprint = fingerprint;
         this.resourceUrl = resourceUrl;
     }

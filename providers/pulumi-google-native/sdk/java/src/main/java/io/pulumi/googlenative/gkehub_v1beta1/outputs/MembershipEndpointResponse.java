@@ -45,14 +45,14 @@ public final class MembershipEndpointResponse {
      */
     private final OnPremClusterResponse onPremCluster;
 
-    @OutputCustomType.Constructor({"edgeCluster","gkeCluster","kubernetesMetadata","kubernetesResource","multiCloudCluster","onPremCluster"})
+    @OutputCustomType.Constructor
     private MembershipEndpointResponse(
-        EdgeClusterResponse edgeCluster,
-        GkeClusterResponse gkeCluster,
-        KubernetesMetadataResponse kubernetesMetadata,
-        KubernetesResourceResponse kubernetesResource,
-        MultiCloudClusterResponse multiCloudCluster,
-        OnPremClusterResponse onPremCluster) {
+        @OutputCustomType.Parameter("edgeCluster") EdgeClusterResponse edgeCluster,
+        @OutputCustomType.Parameter("gkeCluster") GkeClusterResponse gkeCluster,
+        @OutputCustomType.Parameter("kubernetesMetadata") KubernetesMetadataResponse kubernetesMetadata,
+        @OutputCustomType.Parameter("kubernetesResource") KubernetesResourceResponse kubernetesResource,
+        @OutputCustomType.Parameter("multiCloudCluster") MultiCloudClusterResponse multiCloudCluster,
+        @OutputCustomType.Parameter("onPremCluster") OnPremClusterResponse onPremCluster) {
         this.edgeCluster = edgeCluster;
         this.gkeCluster = gkeCluster;
         this.kubernetesMetadata = kubernetesMetadata;

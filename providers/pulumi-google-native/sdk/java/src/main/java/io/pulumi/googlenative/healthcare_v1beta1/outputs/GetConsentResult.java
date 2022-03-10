@@ -63,18 +63,18 @@ public final class GetConsentResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"consentArtifact","expireTime","metadata","name","policies","revisionCreateTime","revisionId","state","ttl","userId"})
+    @OutputCustomType.Constructor
     private GetConsentResult(
-        String consentArtifact,
-        String expireTime,
-        Map<String,String> metadata,
-        String name,
-        List<GoogleCloudHealthcareV1beta1ConsentPolicyResponse> policies,
-        String revisionCreateTime,
-        String revisionId,
-        String state,
-        String ttl,
-        String userId) {
+        @OutputCustomType.Parameter("consentArtifact") String consentArtifact,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policies") List<GoogleCloudHealthcareV1beta1ConsentPolicyResponse> policies,
+        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.consentArtifact = consentArtifact;
         this.expireTime = expireTime;
         this.metadata = metadata;

@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse() {
     }
 

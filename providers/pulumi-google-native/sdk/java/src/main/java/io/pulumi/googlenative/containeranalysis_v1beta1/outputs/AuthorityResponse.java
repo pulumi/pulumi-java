@@ -15,8 +15,8 @@ public final class AuthorityResponse {
      */
     private final HintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private AuthorityResponse(HintResponse hint) {
+    @OutputCustomType.Constructor
+    private AuthorityResponse(@OutputCustomType.Parameter("hint") HintResponse hint) {
         this.hint = hint;
     }
 

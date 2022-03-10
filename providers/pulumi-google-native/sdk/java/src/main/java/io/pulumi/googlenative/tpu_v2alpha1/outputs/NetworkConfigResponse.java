@@ -31,12 +31,12 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"canIpForward","enableExternalIps","network","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        Boolean canIpForward,
-        Boolean enableExternalIps,
-        String network,
-        String subnetwork) {
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("enableExternalIps") Boolean enableExternalIps,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.canIpForward = canIpForward;
         this.enableExternalIps = enableExternalIps;
         this.network = network;

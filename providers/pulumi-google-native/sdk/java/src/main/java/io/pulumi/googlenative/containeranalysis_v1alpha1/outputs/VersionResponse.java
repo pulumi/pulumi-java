@@ -37,13 +37,13 @@ public final class VersionResponse {
      */
     private final String revision;
 
-    @OutputCustomType.Constructor({"epoch","inclusive","kind","name","revision"})
+    @OutputCustomType.Constructor
     private VersionResponse(
-        Integer epoch,
-        Boolean inclusive,
-        String kind,
-        String name,
-        String revision) {
+        @OutputCustomType.Parameter("epoch") Integer epoch,
+        @OutputCustomType.Parameter("inclusive") Boolean inclusive,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revision") String revision) {
         this.epoch = epoch;
         this.inclusive = inclusive;
         this.kind = kind;

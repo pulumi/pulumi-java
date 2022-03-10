@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"metadata"})
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(Map<String,String> metadata) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(@OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
         this.metadata = metadata;
     }
 

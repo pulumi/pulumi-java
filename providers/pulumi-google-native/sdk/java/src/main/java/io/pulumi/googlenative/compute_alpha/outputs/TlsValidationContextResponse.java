@@ -26,11 +26,11 @@ public final class TlsValidationContextResponse {
      */
     private final String validationSource;
 
-    @OutputCustomType.Constructor({"certificatePath","sdsConfig","validationSource"})
+    @OutputCustomType.Constructor
     private TlsValidationContextResponse(
-        String certificatePath,
-        SdsConfigResponse sdsConfig,
-        String validationSource) {
+        @OutputCustomType.Parameter("certificatePath") String certificatePath,
+        @OutputCustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig,
+        @OutputCustomType.Parameter("validationSource") String validationSource) {
         this.certificatePath = certificatePath;
         this.sdsConfig = sdsConfig;
         this.validationSource = validationSource;

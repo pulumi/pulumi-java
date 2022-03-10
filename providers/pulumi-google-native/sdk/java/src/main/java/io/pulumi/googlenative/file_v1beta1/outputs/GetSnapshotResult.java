@@ -41,14 +41,14 @@ public final class GetSnapshotResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createTime","description","filesystemUsedBytes","labels","name","state"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String createTime,
-        String description,
-        String filesystemUsedBytes,
-        Map<String,String> labels,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filesystemUsedBytes") String filesystemUsedBytes,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.filesystemUsedBytes = filesystemUsedBytes;

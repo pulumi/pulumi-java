@@ -26,11 +26,11 @@ public final class AptSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"excludes","exclusivePackages","type"})
+    @OutputCustomType.Constructor
     private AptSettingsResponse(
-        List<String> excludes,
-        List<String> exclusivePackages,
-        String type) {
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
+        @OutputCustomType.Parameter("type") String type) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.type = type;

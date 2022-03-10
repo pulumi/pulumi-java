@@ -20,10 +20,10 @@ public final class ScoringConfigResponse {
      */
     private final Boolean disablePersonalization;
 
-    @OutputCustomType.Constructor({"disableFreshness","disablePersonalization"})
+    @OutputCustomType.Constructor
     private ScoringConfigResponse(
-        Boolean disableFreshness,
-        Boolean disablePersonalization) {
+        @OutputCustomType.Parameter("disableFreshness") Boolean disableFreshness,
+        @OutputCustomType.Parameter("disablePersonalization") Boolean disablePersonalization) {
         this.disableFreshness = disableFreshness;
         this.disablePersonalization = disablePersonalization;
     }

@@ -30,12 +30,12 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"platform","resource","urlMask","version"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupServerlessDeploymentResponse(
-        String platform,
-        String resource,
-        String urlMask,
-        String version) {
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("urlMask") String urlMask,
+        @OutputCustomType.Parameter("version") String version) {
         this.platform = platform;
         this.resource = resource;
         this.urlMask = urlMask;

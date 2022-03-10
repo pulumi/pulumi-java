@@ -22,10 +22,10 @@ public final class HttpResponse {
      */
     private final List<HttpRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"fullyDecodeReservedExpansion","rules"})
+    @OutputCustomType.Constructor
     private HttpResponse(
-        Boolean fullyDecodeReservedExpansion,
-        List<HttpRuleResponse> rules) {
+        @OutputCustomType.Parameter("fullyDecodeReservedExpansion") Boolean fullyDecodeReservedExpansion,
+        @OutputCustomType.Parameter("rules") List<HttpRuleResponse> rules) {
         this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
         this.rules = rules;
     }

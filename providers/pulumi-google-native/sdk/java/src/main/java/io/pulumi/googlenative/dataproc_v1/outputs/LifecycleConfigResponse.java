@@ -30,12 +30,12 @@ public final class LifecycleConfigResponse {
      */
     private final String idleStartTime;
 
-    @OutputCustomType.Constructor({"autoDeleteTime","autoDeleteTtl","idleDeleteTtl","idleStartTime"})
+    @OutputCustomType.Constructor
     private LifecycleConfigResponse(
-        String autoDeleteTime,
-        String autoDeleteTtl,
-        String idleDeleteTtl,
-        String idleStartTime) {
+        @OutputCustomType.Parameter("autoDeleteTime") String autoDeleteTime,
+        @OutputCustomType.Parameter("autoDeleteTtl") String autoDeleteTtl,
+        @OutputCustomType.Parameter("idleDeleteTtl") String idleDeleteTtl,
+        @OutputCustomType.Parameter("idleStartTime") String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.autoDeleteTtl = autoDeleteTtl;
         this.idleDeleteTtl = idleDeleteTtl;

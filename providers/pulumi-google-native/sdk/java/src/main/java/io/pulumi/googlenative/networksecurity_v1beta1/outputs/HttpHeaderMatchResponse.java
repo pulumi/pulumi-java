@@ -20,10 +20,10 @@ public final class HttpHeaderMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor({"headerName","regexMatch"})
+    @OutputCustomType.Constructor
     private HttpHeaderMatchResponse(
-        String headerName,
-        String regexMatch) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
         this.headerName = headerName;
         this.regexMatch = regexMatch;
     }

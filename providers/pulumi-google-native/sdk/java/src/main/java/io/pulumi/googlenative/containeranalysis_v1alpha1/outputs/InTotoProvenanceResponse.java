@@ -30,12 +30,12 @@ public final class InTotoProvenanceResponse {
      */
     private final RecipeResponse recipe;
 
-    @OutputCustomType.Constructor({"builderConfig","materials","metadata","recipe"})
+    @OutputCustomType.Constructor
     private InTotoProvenanceResponse(
-        BuilderConfigResponse builderConfig,
-        List<String> materials,
-        MetadataResponse metadata,
-        RecipeResponse recipe) {
+        @OutputCustomType.Parameter("builderConfig") BuilderConfigResponse builderConfig,
+        @OutputCustomType.Parameter("materials") List<String> materials,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("recipe") RecipeResponse recipe) {
         this.builderConfig = builderConfig;
         this.materials = materials;
         this.metadata = metadata;

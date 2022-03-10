@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
      */
     private final String equivalenceClassSizeUpperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","equivalenceClassSizeLowerBound","equivalenceClassSizeUpperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
-        String equivalenceClassSizeLowerBound,
-        String equivalenceClassSizeUpperBound) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
+        @OutputCustomType.Parameter("equivalenceClassSizeLowerBound") String equivalenceClassSizeLowerBound,
+        @OutputCustomType.Parameter("equivalenceClassSizeUpperBound") String equivalenceClassSizeUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

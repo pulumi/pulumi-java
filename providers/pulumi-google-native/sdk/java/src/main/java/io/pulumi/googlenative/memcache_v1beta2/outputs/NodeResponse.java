@@ -48,15 +48,15 @@ public final class NodeResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"host","nodeId","parameters","port","state","updateAvailable","zone"})
+    @OutputCustomType.Constructor
     private NodeResponse(
-        String host,
-        String nodeId,
-        MemcacheParametersResponse parameters,
-        Integer port,
-        String state,
-        Boolean updateAvailable,
-        String zone) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateAvailable") Boolean updateAvailable,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.parameters = parameters;

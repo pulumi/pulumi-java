@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"function","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1CustomReportMetricResponse(
-        String function,
-        String name) {
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("name") String name) {
         this.function = function;
         this.name = name;
     }

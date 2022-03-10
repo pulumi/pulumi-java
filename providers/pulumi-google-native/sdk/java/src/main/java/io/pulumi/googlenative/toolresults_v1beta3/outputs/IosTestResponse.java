@@ -39,13 +39,13 @@ public final class IosTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor({"iosAppInfo","iosRoboTest","iosTestLoop","iosXcTest","testTimeout"})
+    @OutputCustomType.Constructor
     private IosTestResponse(
-        IosAppInfoResponse iosAppInfo,
-        IosRoboTestResponse iosRoboTest,
-        IosTestLoopResponse iosTestLoop,
-        IosXcTestResponse iosXcTest,
-        DurationResponse testTimeout) {
+        @OutputCustomType.Parameter("iosAppInfo") IosAppInfoResponse iosAppInfo,
+        @OutputCustomType.Parameter("iosRoboTest") IosRoboTestResponse iosRoboTest,
+        @OutputCustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
+        @OutputCustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
+        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.iosAppInfo = iosAppInfo;
         this.iosRoboTest = iosRoboTest;
         this.iosTestLoop = iosTestLoop;

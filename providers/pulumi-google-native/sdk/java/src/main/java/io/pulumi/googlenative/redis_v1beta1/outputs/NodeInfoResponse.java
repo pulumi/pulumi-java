@@ -15,8 +15,8 @@ public final class NodeInfoResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"zone"})
-    private NodeInfoResponse(String zone) {
+    @OutputCustomType.Constructor
+    private NodeInfoResponse(@OutputCustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 

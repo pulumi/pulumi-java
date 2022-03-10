@@ -59,17 +59,17 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final List<String> testTargets;
 
-    @OutputCustomType.Constructor({"appApk","appBundle","appPackageId","orchestratorOption","shardingOption","testApk","testPackageId","testRunnerClass","testTargets"})
+    @OutputCustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        String orchestratorOption,
-        ShardingOptionResponse shardingOption,
-        FileReferenceResponse testApk,
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets) {
+        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @OutputCustomType.Parameter("appPackageId") String appPackageId,
+        @OutputCustomType.Parameter("orchestratorOption") String orchestratorOption,
+        @OutputCustomType.Parameter("shardingOption") ShardingOptionResponse shardingOption,
+        @OutputCustomType.Parameter("testApk") FileReferenceResponse testApk,
+        @OutputCustomType.Parameter("testPackageId") String testPackageId,
+        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @OutputCustomType.Parameter("testTargets") List<String> testTargets) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;

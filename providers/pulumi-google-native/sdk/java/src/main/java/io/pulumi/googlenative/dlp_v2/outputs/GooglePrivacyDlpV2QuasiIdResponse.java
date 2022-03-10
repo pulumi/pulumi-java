@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2QuasiIdResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor({"customTag","field","inferred","infoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2QuasiIdResponse(
-        String customTag,
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GoogleProtobufEmptyResponse inferred,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @OutputCustomType.Parameter("customTag") String customTag,
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("inferred") GoogleProtobufEmptyResponse inferred,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.customTag = customTag;
         this.field = field;
         this.inferred = inferred;

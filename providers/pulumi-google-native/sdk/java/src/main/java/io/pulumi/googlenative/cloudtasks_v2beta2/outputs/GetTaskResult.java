@@ -48,15 +48,15 @@ public final class GetTaskResult {
      */
     private final String view;
 
-    @OutputCustomType.Constructor({"appEngineHttpRequest","createTime","name","pullMessage","scheduleTime","status","view"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        AppEngineHttpRequestResponse appEngineHttpRequest,
-        String createTime,
-        String name,
-        PullMessageResponse pullMessage,
-        String scheduleTime,
-        TaskStatusResponse status,
-        String view) {
+        @OutputCustomType.Parameter("appEngineHttpRequest") AppEngineHttpRequestResponse appEngineHttpRequest,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pullMessage") PullMessageResponse pullMessage,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
+        @OutputCustomType.Parameter("status") TaskStatusResponse status,
+        @OutputCustomType.Parameter("view") String view) {
         this.appEngineHttpRequest = appEngineHttpRequest;
         this.createTime = createTime;
         this.name = name;

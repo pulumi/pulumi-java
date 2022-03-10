@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse {
      */
     private final List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
 
-    @OutputCustomType.Constructor({"suggestions"})
-    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse(@OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions) {
         this.suggestions = suggestions;
     }
 

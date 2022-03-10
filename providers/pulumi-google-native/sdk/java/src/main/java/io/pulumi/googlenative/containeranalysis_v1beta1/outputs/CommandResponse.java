@@ -36,13 +36,13 @@ public final class CommandResponse {
      */
     private final List<String> waitFor;
 
-    @OutputCustomType.Constructor({"args","dir","env","name","waitFor"})
+    @OutputCustomType.Constructor
     private CommandResponse(
-        List<String> args,
-        String dir,
-        List<String> env,
-        String name,
-        List<String> waitFor) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("dir") String dir,
+        @OutputCustomType.Parameter("env") List<String> env,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("waitFor") List<String> waitFor) {
         this.args = args;
         this.dir = dir;
         this.env = env;

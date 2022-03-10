@@ -62,18 +62,18 @@ public final class GetRegionTargetHttpProxyResult {
      */
     private final String urlMap;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","httpFilters","kind","name","proxyBind","region","selfLink","urlMap"})
+    @OutputCustomType.Constructor
     private GetRegionTargetHttpProxyResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        List<String> httpFilters,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String region,
-        String selfLink,
-        String urlMap) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("httpFilters") List<String> httpFilters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("urlMap") String urlMap) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;

@@ -27,11 +27,11 @@ public final class ArtifactObjectsResponse {
      */
     private final TimeSpanResponse timing;
 
-    @OutputCustomType.Constructor({"location","paths","timing"})
+    @OutputCustomType.Constructor
     private ArtifactObjectsResponse(
-        String location,
-        List<String> paths,
-        TimeSpanResponse timing) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("timing") TimeSpanResponse timing) {
         this.location = location;
         this.paths = paths;
         this.timing = timing;

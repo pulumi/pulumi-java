@@ -54,16 +54,16 @@ public final class GetModelResult {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor({"defaultVersion","description","etag","labels","name","onlinePredictionConsoleLogging","onlinePredictionLogging","regions"})
+    @OutputCustomType.Constructor
     private GetModelResult(
-        GoogleCloudMlV1__VersionResponse defaultVersion,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        Boolean onlinePredictionConsoleLogging,
-        Boolean onlinePredictionLogging,
-        List<String> regions) {
+        @OutputCustomType.Parameter("defaultVersion") GoogleCloudMlV1__VersionResponse defaultVersion,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("onlinePredictionConsoleLogging") Boolean onlinePredictionConsoleLogging,
+        @OutputCustomType.Parameter("onlinePredictionLogging") Boolean onlinePredictionLogging,
+        @OutputCustomType.Parameter("regions") List<String> regions) {
         this.defaultVersion = defaultVersion;
         this.description = description;
         this.etag = etag;

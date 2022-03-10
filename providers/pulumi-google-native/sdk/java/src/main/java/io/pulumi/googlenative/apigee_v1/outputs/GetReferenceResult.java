@@ -30,12 +30,12 @@ public final class GetReferenceResult {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"description","name","refers","resourceType"})
+    @OutputCustomType.Constructor
     private GetReferenceResult(
-        String description,
-        String name,
-        String refers,
-        String resourceType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("refers") String refers,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.description = description;
         this.name = name;
         this.refers = refers;

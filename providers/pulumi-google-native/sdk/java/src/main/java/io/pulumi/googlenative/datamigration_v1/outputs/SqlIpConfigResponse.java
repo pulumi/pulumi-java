@@ -33,12 +33,12 @@ public final class SqlIpConfigResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor({"authorizedNetworks","enableIpv4","privateNetwork","requireSsl"})
+    @OutputCustomType.Constructor
     private SqlIpConfigResponse(
-        List<SqlAclEntryResponse> authorizedNetworks,
-        Boolean enableIpv4,
-        String privateNetwork,
-        Boolean requireSsl) {
+        @OutputCustomType.Parameter("authorizedNetworks") List<SqlAclEntryResponse> authorizedNetworks,
+        @OutputCustomType.Parameter("enableIpv4") Boolean enableIpv4,
+        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
+        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.authorizedNetworks = authorizedNetworks;
         this.enableIpv4 = enableIpv4;
         this.privateNetwork = privateNetwork;

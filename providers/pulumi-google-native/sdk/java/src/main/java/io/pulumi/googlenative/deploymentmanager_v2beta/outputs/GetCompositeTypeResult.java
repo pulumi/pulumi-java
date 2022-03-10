@@ -50,16 +50,16 @@ public final class GetCompositeTypeResult {
      */
     private final TemplateContentsResponse templateContents;
 
-    @OutputCustomType.Constructor({"description","insertTime","labels","name","operation","selfLink","status","templateContents"})
+    @OutputCustomType.Constructor
     private GetCompositeTypeResult(
-        String description,
-        String insertTime,
-        List<CompositeTypeLabelEntryResponse> labels,
-        String name,
-        OperationResponse operation,
-        String selfLink,
-        String status,
-        TemplateContentsResponse templateContents) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("labels") List<CompositeTypeLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") OperationResponse operation,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("templateContents") TemplateContentsResponse templateContents) {
         this.description = description;
         this.insertTime = insertTime;
         this.labels = labels;

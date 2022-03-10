@@ -163,34 +163,34 @@ public final class GetConfigResult {
      */
     private final UsageResponse usage;
 
-    @OutputCustomType.Constructor({"apis","authentication","backend","billing","configVersion","context","control","customError","documentation","endpoints","enums","http","logging","logs","metrics","monitoredResources","monitoring","name","producerProjectId","quota","sourceInfo","systemParameters","systemTypes","title","types","usage"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        List<ApiResponse> apis,
-        AuthenticationResponse authentication,
-        BackendResponse backend,
-        BillingResponse billing,
-        Integer configVersion,
-        ContextResponse context,
-        ControlResponse control,
-        CustomErrorResponse customError,
-        DocumentationResponse documentation,
-        List<EndpointResponse> endpoints,
-        List<EnumResponse> enums,
-        HttpResponse http,
-        LoggingResponse logging,
-        List<LogDescriptorResponse> logs,
-        List<MetricDescriptorResponse> metrics,
-        List<MonitoredResourceDescriptorResponse> monitoredResources,
-        MonitoringResponse monitoring,
-        String name,
-        String producerProjectId,
-        QuotaResponse quota,
-        SourceInfoResponse sourceInfo,
-        SystemParametersResponse systemParameters,
-        List<TypeResponse> systemTypes,
-        String title,
-        List<TypeResponse> types,
-        UsageResponse usage) {
+        @OutputCustomType.Parameter("apis") List<ApiResponse> apis,
+        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("backend") BackendResponse backend,
+        @OutputCustomType.Parameter("billing") BillingResponse billing,
+        @OutputCustomType.Parameter("configVersion") Integer configVersion,
+        @OutputCustomType.Parameter("context") ContextResponse context,
+        @OutputCustomType.Parameter("control") ControlResponse control,
+        @OutputCustomType.Parameter("customError") CustomErrorResponse customError,
+        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("enums") List<EnumResponse> enums,
+        @OutputCustomType.Parameter("http") HttpResponse http,
+        @OutputCustomType.Parameter("logging") LoggingResponse logging,
+        @OutputCustomType.Parameter("logs") List<LogDescriptorResponse> logs,
+        @OutputCustomType.Parameter("metrics") List<MetricDescriptorResponse> metrics,
+        @OutputCustomType.Parameter("monitoredResources") List<MonitoredResourceDescriptorResponse> monitoredResources,
+        @OutputCustomType.Parameter("monitoring") MonitoringResponse monitoring,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
+        @OutputCustomType.Parameter("quota") QuotaResponse quota,
+        @OutputCustomType.Parameter("sourceInfo") SourceInfoResponse sourceInfo,
+        @OutputCustomType.Parameter("systemParameters") SystemParametersResponse systemParameters,
+        @OutputCustomType.Parameter("systemTypes") List<TypeResponse> systemTypes,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("types") List<TypeResponse> types,
+        @OutputCustomType.Parameter("usage") UsageResponse usage) {
         this.apis = apis;
         this.authentication = authentication;
         this.backend = backend;

@@ -31,12 +31,12 @@ public final class NodePoolAutoscalingResponse {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"autoprovisioned","enabled","maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private NodePoolAutoscalingResponse(
-        Boolean autoprovisioned,
-        Boolean enabled,
-        Integer maxNodeCount,
-        Integer minNodeCount) {
+        @OutputCustomType.Parameter("autoprovisioned") Boolean autoprovisioned,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.autoprovisioned = autoprovisioned;
         this.enabled = enabled;
         this.maxNodeCount = maxNodeCount;

@@ -68,18 +68,18 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse {
      */
     private final GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData;
 
-    @OutputCustomType.Constructor({"annotationEndBoundary","annotationStartBoundary","channelTag","entityMentionData","holdData","intentMatchData","interruptionData","phraseMatchData","sentimentData","silenceData"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1CallAnnotationResponse(
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary,
-        Integer channelTag,
-        GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData,
-        GoogleCloudContactcenterinsightsV1HoldDataResponse holdData,
-        GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData,
-        GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData,
-        GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
-        GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
+        @OutputCustomType.Parameter("annotationEndBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary,
+        @OutputCustomType.Parameter("annotationStartBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary,
+        @OutputCustomType.Parameter("channelTag") Integer channelTag,
+        @OutputCustomType.Parameter("entityMentionData") GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData,
+        @OutputCustomType.Parameter("holdData") GoogleCloudContactcenterinsightsV1HoldDataResponse holdData,
+        @OutputCustomType.Parameter("intentMatchData") GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData,
+        @OutputCustomType.Parameter("interruptionData") GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData,
+        @OutputCustomType.Parameter("phraseMatchData") GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData,
+        @OutputCustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData,
+        @OutputCustomType.Parameter("silenceData") GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
         this.annotationEndBoundary = annotationEndBoundary;
         this.annotationStartBoundary = annotationStartBoundary;
         this.channelTag = channelTag;

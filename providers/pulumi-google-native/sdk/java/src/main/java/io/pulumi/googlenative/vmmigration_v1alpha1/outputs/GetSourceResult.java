@@ -48,15 +48,15 @@ public final class GetSourceResult {
      */
     private final VmwareSourceDetailsResponse vmware;
 
-    @OutputCustomType.Constructor({"createTime","description","error","labels","name","updateTime","vmware"})
+    @OutputCustomType.Constructor
     private GetSourceResult(
-        String createTime,
-        String description,
-        StatusResponse error,
-        Map<String,String> labels,
-        String name,
-        String updateTime,
-        VmwareSourceDetailsResponse vmware) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vmware") VmwareSourceDetailsResponse vmware) {
         this.createTime = createTime;
         this.description = description;
         this.error = error;

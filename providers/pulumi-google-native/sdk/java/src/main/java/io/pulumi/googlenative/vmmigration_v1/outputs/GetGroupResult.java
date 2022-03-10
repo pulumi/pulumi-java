@@ -35,13 +35,13 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String createTime,
-        String description,
-        String displayName,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

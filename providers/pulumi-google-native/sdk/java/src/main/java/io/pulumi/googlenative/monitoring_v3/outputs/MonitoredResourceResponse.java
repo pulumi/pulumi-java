@@ -21,10 +21,10 @@ public final class MonitoredResourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"labels","type"})
+    @OutputCustomType.Constructor
     private MonitoredResourceResponse(
-        Map<String,String> labels,
-        String type) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("type") String type) {
         this.labels = labels;
         this.type = type;
     }

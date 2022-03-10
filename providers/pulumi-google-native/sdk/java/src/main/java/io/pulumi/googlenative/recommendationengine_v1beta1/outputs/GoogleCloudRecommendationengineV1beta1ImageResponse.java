@@ -26,11 +26,11 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
      */
     private final Integer width;
 
-    @OutputCustomType.Constructor({"height","uri","width"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ImageResponse(
-        Integer height,
-        String uri,
-        Integer width) {
+        @OutputCustomType.Parameter("height") Integer height,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("width") Integer width) {
         this.height = height;
         this.uri = uri;
         this.width = width;

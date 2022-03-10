@@ -41,14 +41,14 @@ public final class GetArchiveDeploymentResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"createdAt","gcsUri","labels","name","operation","updatedAt"})
+    @OutputCustomType.Constructor
     private GetArchiveDeploymentResult(
-        String createdAt,
-        String gcsUri,
-        Map<String,String> labels,
-        String name,
-        String operation,
-        String updatedAt) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("gcsUri") String gcsUri,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.gcsUri = gcsUri;
         this.labels = labels;

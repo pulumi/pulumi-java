@@ -31,12 +31,12 @@ public final class PipelineParameterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"defaultValue","description","localCopy","name"})
+    @OutputCustomType.Constructor
     private PipelineParameterResponse(
-        String defaultValue,
-        String description,
-        LocalCopyResponse localCopy,
-        String name) {
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("localCopy") LocalCopyResponse localCopy,
+        @OutputCustomType.Parameter("name") String name) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.localCopy = localCopy;

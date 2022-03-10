@@ -30,12 +30,12 @@ public final class SslConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","type"})
+    @OutputCustomType.Constructor
     private SslConfigResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        String type) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("type") String type) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

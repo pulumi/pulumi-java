@@ -36,13 +36,13 @@ public final class RetryConfigResponse {
      */
     private final Integer retryCount;
 
-    @OutputCustomType.Constructor({"maxBackoffDuration","maxDoublings","maxRetryDuration","minBackoffDuration","retryCount"})
+    @OutputCustomType.Constructor
     private RetryConfigResponse(
-        String maxBackoffDuration,
-        Integer maxDoublings,
-        String maxRetryDuration,
-        String minBackoffDuration,
-        Integer retryCount) {
+        @OutputCustomType.Parameter("maxBackoffDuration") String maxBackoffDuration,
+        @OutputCustomType.Parameter("maxDoublings") Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoffDuration") String minBackoffDuration,
+        @OutputCustomType.Parameter("retryCount") Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;

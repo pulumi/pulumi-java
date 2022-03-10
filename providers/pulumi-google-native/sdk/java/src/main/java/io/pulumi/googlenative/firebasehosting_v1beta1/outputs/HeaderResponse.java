@@ -26,11 +26,11 @@ public final class HeaderResponse {
      */
     private final String regex;
 
-    @OutputCustomType.Constructor({"glob","headers","regex"})
+    @OutputCustomType.Constructor
     private HeaderResponse(
-        String glob,
-        Map<String,String> headers,
-        String regex) {
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("regex") String regex) {
         this.glob = glob;
         this.headers = headers;
         this.regex = regex;

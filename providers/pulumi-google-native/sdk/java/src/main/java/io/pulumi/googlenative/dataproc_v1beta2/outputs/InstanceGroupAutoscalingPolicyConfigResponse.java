@@ -25,11 +25,11 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","weight"})
+    @OutputCustomType.Constructor
     private InstanceGroupAutoscalingPolicyConfigResponse(
-        Integer maxInstances,
-        Integer minInstances,
-        Integer weight) {
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") Integer minInstances,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;

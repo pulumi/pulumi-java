@@ -30,12 +30,12 @@ public final class RowAccessPolicyReferenceResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","policyId","project","tableId"})
+    @OutputCustomType.Constructor
     private RowAccessPolicyReferenceResponse(
-        String datasetId,
-        String policyId,
-        String project,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.policyId = policyId;
         this.project = project;

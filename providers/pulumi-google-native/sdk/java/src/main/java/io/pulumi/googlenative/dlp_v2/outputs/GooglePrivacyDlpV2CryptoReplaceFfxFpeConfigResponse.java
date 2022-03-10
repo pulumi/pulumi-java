@@ -44,14 +44,14 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor({"commonAlphabet","context","cryptoKey","customAlphabet","radix","surrogateInfoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(
-        String commonAlphabet,
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        String customAlphabet,
-        Integer radix,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @OutputCustomType.Parameter("commonAlphabet") String commonAlphabet,
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("customAlphabet") String customAlphabet,
+        @OutputCustomType.Parameter("radix") Integer radix,
+        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;

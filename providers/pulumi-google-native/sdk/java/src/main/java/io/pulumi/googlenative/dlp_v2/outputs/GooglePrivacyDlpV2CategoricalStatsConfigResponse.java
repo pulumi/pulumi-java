@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor({"field"})
-    private GooglePrivacyDlpV2CategoricalStatsConfigResponse(GooglePrivacyDlpV2FieldIdResponse field) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CategoricalStatsConfigResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 

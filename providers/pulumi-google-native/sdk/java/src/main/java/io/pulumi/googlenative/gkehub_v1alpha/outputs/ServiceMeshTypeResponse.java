@@ -20,10 +20,10 @@ public final class ServiceMeshTypeResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor({"code","displayName"})
+    @OutputCustomType.Constructor
     private ServiceMeshTypeResponse(
-        String code,
-        String displayName) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("displayName") String displayName) {
         this.code = code;
         this.displayName = displayName;
     }

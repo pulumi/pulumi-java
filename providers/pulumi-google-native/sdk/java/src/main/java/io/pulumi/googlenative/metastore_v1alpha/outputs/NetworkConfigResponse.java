@@ -16,8 +16,8 @@ public final class NetworkConfigResponse {
      */
     private final List<ConsumerResponse> consumers;
 
-    @OutputCustomType.Constructor({"consumers"})
-    private NetworkConfigResponse(List<ConsumerResponse> consumers) {
+    @OutputCustomType.Constructor
+    private NetworkConfigResponse(@OutputCustomType.Parameter("consumers") List<ConsumerResponse> consumers) {
         this.consumers = consumers;
     }
 

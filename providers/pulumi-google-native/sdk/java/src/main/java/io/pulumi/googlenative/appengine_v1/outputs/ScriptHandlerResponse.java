@@ -15,8 +15,8 @@ public final class ScriptHandlerResponse {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor({"scriptPath"})
-    private ScriptHandlerResponse(String scriptPath) {
+    @OutputCustomType.Constructor
+    private ScriptHandlerResponse(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 

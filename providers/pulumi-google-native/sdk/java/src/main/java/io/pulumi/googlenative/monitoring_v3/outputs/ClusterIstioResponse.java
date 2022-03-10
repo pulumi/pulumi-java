@@ -30,12 +30,12 @@ public final class ClusterIstioResponse {
      */
     private final String serviceNamespace;
 
-    @OutputCustomType.Constructor({"clusterName","location","serviceName","serviceNamespace"})
+    @OutputCustomType.Constructor
     private ClusterIstioResponse(
-        String clusterName,
-        String location,
-        String serviceName,
-        String serviceNamespace) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace) {
         this.clusterName = clusterName;
         this.location = location;
         this.serviceName = serviceName;

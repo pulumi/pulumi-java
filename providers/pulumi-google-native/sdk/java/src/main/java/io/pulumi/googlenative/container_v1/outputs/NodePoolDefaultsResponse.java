@@ -15,8 +15,8 @@ public final class NodePoolDefaultsResponse {
      */
     private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
-    @OutputCustomType.Constructor({"nodeConfigDefaults"})
-    private NodePoolDefaultsResponse(NodeConfigDefaultsResponse nodeConfigDefaults) {
+    @OutputCustomType.Constructor
+    private NodePoolDefaultsResponse(@OutputCustomType.Parameter("nodeConfigDefaults") NodeConfigDefaultsResponse nodeConfigDefaults) {
         this.nodeConfigDefaults = nodeConfigDefaults;
     }
 

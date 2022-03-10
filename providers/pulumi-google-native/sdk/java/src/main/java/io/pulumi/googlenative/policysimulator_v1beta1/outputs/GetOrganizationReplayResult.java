@@ -32,12 +32,12 @@ public final class GetOrganizationReplayResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","name","resultsSummary","state"})
+    @OutputCustomType.Constructor
     private GetOrganizationReplayResult(
-        GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config,
-        String name,
-        GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary,
-        String state) {
+        @OutputCustomType.Parameter("config") GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse config,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultsSummary") GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse resultsSummary,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.name = name;
         this.resultsSummary = resultsSummary;

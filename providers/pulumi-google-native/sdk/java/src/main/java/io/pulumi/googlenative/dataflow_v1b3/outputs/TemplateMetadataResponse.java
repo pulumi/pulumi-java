@@ -27,11 +27,11 @@ public final class TemplateMetadataResponse {
      */
     private final List<ParameterMetadataResponse> parameters;
 
-    @OutputCustomType.Constructor({"description","name","parameters"})
+    @OutputCustomType.Constructor
     private TemplateMetadataResponse(
-        String description,
-        String name,
-        List<ParameterMetadataResponse> parameters) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<ParameterMetadataResponse> parameters) {
         this.description = description;
         this.name = name;
         this.parameters = parameters;

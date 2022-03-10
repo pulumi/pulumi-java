@@ -62,17 +62,17 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words;
 
-    @OutputCustomType.Constructor({"channelTag","confidence","dialogflowSegmentMetadata","languageCode","messageTime","segmentParticipant","sentiment","text","words"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse(
-        Integer channelTag,
-        Double confidence,
-        GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata,
-        String languageCode,
-        String messageTime,
-        GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
-        String text,
-        List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
+        @OutputCustomType.Parameter("channelTag") Integer channelTag,
+        @OutputCustomType.Parameter("confidence") Double confidence,
+        @OutputCustomType.Parameter("dialogflowSegmentMetadata") GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse dialogflowSegmentMetadata,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("messageTime") String messageTime,
+        @OutputCustomType.Parameter("segmentParticipant") GoogleCloudContactcenterinsightsV1ConversationParticipantResponse segmentParticipant,
+        @OutputCustomType.Parameter("sentiment") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("words") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse> words) {
         this.channelTag = channelTag;
         this.confidence = confidence;
         this.dialogflowSegmentMetadata = dialogflowSegmentMetadata;

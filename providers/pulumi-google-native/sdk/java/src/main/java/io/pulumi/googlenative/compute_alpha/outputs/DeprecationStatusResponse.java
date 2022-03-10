@@ -41,14 +41,14 @@ public final class DeprecationStatusResponse {
      */
     private final RolloutPolicyResponse stateOverride;
 
-    @OutputCustomType.Constructor({"deleted","deprecated","obsolete","replacement","state","stateOverride"})
+    @OutputCustomType.Constructor
     private DeprecationStatusResponse(
-        String deleted,
-        String deprecated,
-        String obsolete,
-        String replacement,
-        String state,
-        RolloutPolicyResponse stateOverride) {
+        @OutputCustomType.Parameter("deleted") String deleted,
+        @OutputCustomType.Parameter("deprecated") String deprecated,
+        @OutputCustomType.Parameter("obsolete") String obsolete,
+        @OutputCustomType.Parameter("replacement") String replacement,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateOverride") RolloutPolicyResponse stateOverride) {
         this.deleted = deleted;
         this.deprecated = deprecated;
         this.obsolete = obsolete;

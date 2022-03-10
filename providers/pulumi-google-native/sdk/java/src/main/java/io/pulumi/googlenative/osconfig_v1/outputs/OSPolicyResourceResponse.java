@@ -33,12 +33,12 @@ public final class OSPolicyResourceResponse {
      */
     private final OSPolicyResourceRepositoryResourceResponse repository;
 
-    @OutputCustomType.Constructor({"exec","file","pkg","repository"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceResponse(
-        OSPolicyResourceExecResourceResponse exec,
-        OSPolicyResourceFileResourceResponse file,
-        OSPolicyResourcePackageResourceResponse pkg,
-        OSPolicyResourceRepositoryResourceResponse repository) {
+        @OutputCustomType.Parameter("exec") OSPolicyResourceExecResourceResponse exec,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResourceResponse file,
+        @OutputCustomType.Parameter("pkg") OSPolicyResourcePackageResourceResponse pkg,
+        @OutputCustomType.Parameter("repository") OSPolicyResourceRepositoryResourceResponse repository) {
         this.exec = exec;
         this.file = file;
         this.pkg = pkg;

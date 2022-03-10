@@ -20,10 +20,10 @@ public final class SchematizedDataResponse {
      */
     private final String error;
 
-    @OutputCustomType.Constructor({"data","error"})
+    @OutputCustomType.Constructor
     private SchematizedDataResponse(
-        String data,
-        String error) {
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("error") String error) {
         this.data = data;
         this.error = error;
     }

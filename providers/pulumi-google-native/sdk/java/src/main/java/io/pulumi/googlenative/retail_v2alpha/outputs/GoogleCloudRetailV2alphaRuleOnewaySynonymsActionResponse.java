@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor({"onewayTerms","queryTerms","synonyms"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaRuleOnewaySynonymsActionResponse(
-        List<String> onewayTerms,
-        List<String> queryTerms,
-        List<String> synonyms) {
+        @OutputCustomType.Parameter("onewayTerms") List<String> onewayTerms,
+        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
+        @OutputCustomType.Parameter("synonyms") List<String> synonyms) {
         this.onewayTerms = onewayTerms;
         this.queryTerms = queryTerms;
         this.synonyms = synonyms;

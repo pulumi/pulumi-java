@@ -85,21 +85,21 @@ public final class SourceInstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor({"canIpForward","deletionProtection","description","disks","guestAccelerators","labels","machineType","metadata","minCpuPlatform","networkInterfaces","scheduling","serviceAccounts","tags"})
+    @OutputCustomType.Constructor
     private SourceInstancePropertiesResponse(
-        Boolean canIpForward,
-        Boolean deletionProtection,
-        String description,
-        List<SavedAttachedDiskResponse> disks,
-        List<AcceleratorConfigResponse> guestAccelerators,
-        Map<String,String> labels,
-        String machineType,
-        MetadataResponse metadata,
-        String minCpuPlatform,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        SchedulingResponse scheduling,
-        List<ServiceAccountResponse> serviceAccounts,
-        TagsResponse tags) {
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<SavedAttachedDiskResponse> disks,
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @OutputCustomType.Parameter("tags") TagsResponse tags) {
         this.canIpForward = canIpForward;
         this.deletionProtection = deletionProtection;
         this.description = description;

@@ -109,27 +109,27 @@ public final class GetRouteResult {
      */
     private final List<RouteWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor({"asPaths","creationTimestamp","description","destRange","kind","name","network","nextHopGateway","nextHopIlb","nextHopInstance","nextHopIp","nextHopNetwork","nextHopPeering","nextHopVpnTunnel","priority","routeType","selfLink","tags","warnings"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        List<RouteAsPathResponse> asPaths,
-        String creationTimestamp,
-        String description,
-        String destRange,
-        String kind,
-        String name,
-        String network,
-        String nextHopGateway,
-        String nextHopIlb,
-        String nextHopInstance,
-        String nextHopIp,
-        String nextHopNetwork,
-        String nextHopPeering,
-        String nextHopVpnTunnel,
-        Integer priority,
-        String routeType,
-        String selfLink,
-        List<String> tags,
-        List<RouteWarningsItemResponse> warnings) {
+        @OutputCustomType.Parameter("asPaths") List<RouteAsPathResponse> asPaths,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destRange") String destRange,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
+        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @OutputCustomType.Parameter("nextHopPeering") String nextHopPeering,
+        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeType") String routeType,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("warnings") List<RouteWarningsItemResponse> warnings) {
         this.asPaths = asPaths;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

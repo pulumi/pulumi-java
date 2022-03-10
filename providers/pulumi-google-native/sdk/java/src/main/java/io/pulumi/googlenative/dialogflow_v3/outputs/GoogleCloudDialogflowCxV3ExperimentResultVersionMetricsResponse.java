@@ -28,11 +28,11 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"metrics","sessionCount","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(
-        List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
-        Integer sessionCount,
-        String version) {
+        @OutputCustomType.Parameter("metrics") List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
+        @OutputCustomType.Parameter("sessionCount") Integer sessionCount,
+        @OutputCustomType.Parameter("version") String version) {
         this.metrics = metrics;
         this.sessionCount = sessionCount;
         this.version = version;

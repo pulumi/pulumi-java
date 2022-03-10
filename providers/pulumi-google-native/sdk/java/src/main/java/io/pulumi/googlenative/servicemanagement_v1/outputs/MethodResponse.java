@@ -48,15 +48,15 @@ public final class MethodResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor({"name","options","requestStreaming","requestTypeUrl","responseStreaming","responseTypeUrl","syntax"})
+    @OutputCustomType.Constructor
     private MethodResponse(
-        String name,
-        List<OptionResponse> options,
-        Boolean requestStreaming,
-        String requestTypeUrl,
-        Boolean responseStreaming,
-        String responseTypeUrl,
-        String syntax) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("requestStreaming") Boolean requestStreaming,
+        @OutputCustomType.Parameter("requestTypeUrl") String requestTypeUrl,
+        @OutputCustomType.Parameter("responseStreaming") Boolean responseStreaming,
+        @OutputCustomType.Parameter("responseTypeUrl") String responseTypeUrl,
+        @OutputCustomType.Parameter("syntax") String syntax) {
         this.name = name;
         this.options = options;
         this.requestStreaming = requestStreaming;

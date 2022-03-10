@@ -26,11 +26,11 @@ public final class TextMappingResponse {
      */
     private final Integer inputTrack;
 
-    @OutputCustomType.Constructor({"atomKey","inputKey","inputTrack"})
+    @OutputCustomType.Constructor
     private TextMappingResponse(
-        String atomKey,
-        String inputKey,
-        Integer inputTrack) {
+        @OutputCustomType.Parameter("atomKey") String atomKey,
+        @OutputCustomType.Parameter("inputKey") String inputKey,
+        @OutputCustomType.Parameter("inputTrack") Integer inputTrack) {
         this.atomKey = atomKey;
         this.inputKey = inputKey;
         this.inputTrack = inputTrack;

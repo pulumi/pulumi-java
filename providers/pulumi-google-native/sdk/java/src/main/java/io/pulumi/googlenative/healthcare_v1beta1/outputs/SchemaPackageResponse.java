@@ -39,13 +39,13 @@ public final class SchemaPackageResponse {
      */
     private final String unexpectedSegmentHandling;
 
-    @OutputCustomType.Constructor({"ignoreMinOccurs","schemas","schematizedParsingType","types","unexpectedSegmentHandling"})
+    @OutputCustomType.Constructor
     private SchemaPackageResponse(
-        Boolean ignoreMinOccurs,
-        List<Hl7SchemaConfigResponse> schemas,
-        String schematizedParsingType,
-        List<Hl7TypesConfigResponse> types,
-        String unexpectedSegmentHandling) {
+        @OutputCustomType.Parameter("ignoreMinOccurs") Boolean ignoreMinOccurs,
+        @OutputCustomType.Parameter("schemas") List<Hl7SchemaConfigResponse> schemas,
+        @OutputCustomType.Parameter("schematizedParsingType") String schematizedParsingType,
+        @OutputCustomType.Parameter("types") List<Hl7TypesConfigResponse> types,
+        @OutputCustomType.Parameter("unexpectedSegmentHandling") String unexpectedSegmentHandling) {
         this.ignoreMinOccurs = ignoreMinOccurs;
         this.schemas = schemas;
         this.schematizedParsingType = schematizedParsingType;

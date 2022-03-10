@@ -21,17 +21,17 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
     private final Double minRelProgress;
     private final Boolean warmStart;
 
-    @OutputCustomType.Constructor({"earlyStop","l1Reg","l2Reg","learnRate","learnRateStrategy","lineSearchInitLearnRate","maxIteration","minRelProgress","warmStart"})
+    @OutputCustomType.Constructor
     private BqmlTrainingRunTrainingOptionsResponse(
-        Boolean earlyStop,
-        Double l1Reg,
-        Double l2Reg,
-        Double learnRate,
-        String learnRateStrategy,
-        Double lineSearchInitLearnRate,
-        String maxIteration,
-        Double minRelProgress,
-        Boolean warmStart) {
+        @OutputCustomType.Parameter("earlyStop") Boolean earlyStop,
+        @OutputCustomType.Parameter("l1Reg") Double l1Reg,
+        @OutputCustomType.Parameter("l2Reg") Double l2Reg,
+        @OutputCustomType.Parameter("learnRate") Double learnRate,
+        @OutputCustomType.Parameter("learnRateStrategy") String learnRateStrategy,
+        @OutputCustomType.Parameter("lineSearchInitLearnRate") Double lineSearchInitLearnRate,
+        @OutputCustomType.Parameter("maxIteration") String maxIteration,
+        @OutputCustomType.Parameter("minRelProgress") Double minRelProgress,
+        @OutputCustomType.Parameter("warmStart") Boolean warmStart) {
         this.earlyStop = earlyStop;
         this.l1Reg = l1Reg;
         this.l2Reg = l2Reg;

@@ -15,8 +15,8 @@ public final class JwtResponse {
      */
     private final String compactJwt;
 
-    @OutputCustomType.Constructor({"compactJwt"})
-    private JwtResponse(String compactJwt) {
+    @OutputCustomType.Constructor
+    private JwtResponse(@OutputCustomType.Parameter("compactJwt") String compactJwt) {
         this.compactJwt = compactJwt;
     }
 

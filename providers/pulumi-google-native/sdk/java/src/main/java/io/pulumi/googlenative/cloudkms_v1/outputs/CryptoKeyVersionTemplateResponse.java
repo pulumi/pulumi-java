@@ -20,10 +20,10 @@ public final class CryptoKeyVersionTemplateResponse {
      */
     private final String protectionLevel;
 
-    @OutputCustomType.Constructor({"algorithm","protectionLevel"})
+    @OutputCustomType.Constructor
     private CryptoKeyVersionTemplateResponse(
-        String algorithm,
-        String protectionLevel) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

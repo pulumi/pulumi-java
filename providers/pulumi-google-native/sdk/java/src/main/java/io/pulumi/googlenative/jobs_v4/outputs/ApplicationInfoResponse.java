@@ -26,11 +26,11 @@ public final class ApplicationInfoResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor({"emails","instruction","uris"})
+    @OutputCustomType.Constructor
     private ApplicationInfoResponse(
-        List<String> emails,
-        String instruction,
-        List<String> uris) {
+        @OutputCustomType.Parameter("emails") List<String> emails,
+        @OutputCustomType.Parameter("instruction") String instruction,
+        @OutputCustomType.Parameter("uris") List<String> uris) {
         this.emails = emails;
         this.instruction = instruction;
         this.uris = uris;

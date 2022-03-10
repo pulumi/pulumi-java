@@ -35,13 +35,13 @@ public final class ApprovalResultResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"approvalTime","approverAccount","comment","decision","url"})
+    @OutputCustomType.Constructor
     private ApprovalResultResponse(
-        String approvalTime,
-        String approverAccount,
-        String comment,
-        String decision,
-        String url) {
+        @OutputCustomType.Parameter("approvalTime") String approvalTime,
+        @OutputCustomType.Parameter("approverAccount") String approverAccount,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("decision") String decision,
+        @OutputCustomType.Parameter("url") String url) {
         this.approvalTime = approvalTime;
         this.approverAccount = approverAccount;
         this.comment = comment;

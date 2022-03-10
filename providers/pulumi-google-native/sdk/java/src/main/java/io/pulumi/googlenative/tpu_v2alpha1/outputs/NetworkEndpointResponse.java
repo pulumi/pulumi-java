@@ -27,11 +27,11 @@ public final class NetworkEndpointResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"accessConfig","ipAddress","port"})
+    @OutputCustomType.Constructor
     private NetworkEndpointResponse(
-        AccessConfigResponse accessConfig,
-        String ipAddress,
-        Integer port) {
+        @OutputCustomType.Parameter("accessConfig") AccessConfigResponse accessConfig,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.accessConfig = accessConfig;
         this.ipAddress = ipAddress;
         this.port = port;

@@ -26,11 +26,11 @@ public final class PushFilterResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"branch","invertRegex","tag"})
+    @OutputCustomType.Constructor
     private PushFilterResponse(
-        String branch,
-        Boolean invertRegex,
-        String tag) {
+        @OutputCustomType.Parameter("branch") String branch,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.branch = branch;
         this.invertRegex = invertRegex;
         this.tag = tag;

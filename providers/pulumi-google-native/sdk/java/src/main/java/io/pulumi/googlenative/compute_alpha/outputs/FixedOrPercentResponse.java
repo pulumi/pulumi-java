@@ -25,11 +25,11 @@ public final class FixedOrPercentResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor({"calculated","fixed","percent"})
+    @OutputCustomType.Constructor
     private FixedOrPercentResponse(
-        Integer calculated,
-        Integer fixed,
-        Integer percent) {
+        @OutputCustomType.Parameter("calculated") Integer calculated,
+        @OutputCustomType.Parameter("fixed") Integer fixed,
+        @OutputCustomType.Parameter("percent") Integer percent) {
         this.calculated = calculated;
         this.fixed = fixed;
         this.percent = percent;

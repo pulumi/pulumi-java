@@ -21,10 +21,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      */
     private final String ruleVisibility;
 
-    @OutputCustomType.Constructor({"enable","ruleVisibility"})
+    @OutputCustomType.Constructor
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(
-        Boolean enable,
-        String ruleVisibility) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("ruleVisibility") String ruleVisibility) {
         this.enable = enable;
         this.ruleVisibility = ruleVisibility;
     }

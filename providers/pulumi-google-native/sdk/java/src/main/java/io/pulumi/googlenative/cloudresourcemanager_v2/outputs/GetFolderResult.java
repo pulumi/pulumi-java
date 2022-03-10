@@ -35,13 +35,13 @@ public final class GetFolderResult {
      */
     private final String parent;
 
-    @OutputCustomType.Constructor({"createTime","displayName","lifecycleState","name","parent"})
+    @OutputCustomType.Constructor
     private GetFolderResult(
-        String createTime,
-        String displayName,
-        String lifecycleState,
-        String name,
-        String parent) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.lifecycleState = lifecycleState;

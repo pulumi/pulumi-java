@@ -43,14 +43,14 @@ public final class ResultsResponse {
      */
     private final String numArtifacts;
 
-    @OutputCustomType.Constructor({"artifactManifest","artifactTiming","buildStepImages","buildStepOutputs","images","numArtifacts"})
+    @OutputCustomType.Constructor
     private ResultsResponse(
-        String artifactManifest,
-        TimeSpanResponse artifactTiming,
-        List<String> buildStepImages,
-        List<String> buildStepOutputs,
-        List<BuiltImageResponse> images,
-        String numArtifacts) {
+        @OutputCustomType.Parameter("artifactManifest") String artifactManifest,
+        @OutputCustomType.Parameter("artifactTiming") TimeSpanResponse artifactTiming,
+        @OutputCustomType.Parameter("buildStepImages") List<String> buildStepImages,
+        @OutputCustomType.Parameter("buildStepOutputs") List<String> buildStepOutputs,
+        @OutputCustomType.Parameter("images") List<BuiltImageResponse> images,
+        @OutputCustomType.Parameter("numArtifacts") String numArtifacts) {
         this.artifactManifest = artifactManifest;
         this.artifactTiming = artifactTiming;
         this.buildStepImages = buildStepImages;

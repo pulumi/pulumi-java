@@ -20,10 +20,10 @@ public final class ScanConfigErrorResponse {
      */
     private final String fieldName;
 
-    @OutputCustomType.Constructor({"code","fieldName"})
+    @OutputCustomType.Constructor
     private ScanConfigErrorResponse(
-        String code,
-        String fieldName) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("fieldName") String fieldName) {
         this.code = code;
         this.fieldName = fieldName;
     }

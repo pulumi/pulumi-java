@@ -35,13 +35,13 @@ public final class GetAndroidAppResult {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"appId","displayName","name","packageName","project"})
+    @OutputCustomType.Constructor
     private GetAndroidAppResult(
-        String appId,
-        String displayName,
-        String name,
-        String packageName,
-        String project) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageName") String packageName,
+        @OutputCustomType.Parameter("project") String project) {
         this.appId = appId;
         this.displayName = displayName;
         this.name = name;

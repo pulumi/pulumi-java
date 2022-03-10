@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse upperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","lowerBound","upperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(
-        Double bucketSize,
-        GooglePrivacyDlpV2ValueResponse lowerBound,
-        GooglePrivacyDlpV2ValueResponse upperBound) {
+        @OutputCustomType.Parameter("bucketSize") Double bucketSize,
+        @OutputCustomType.Parameter("lowerBound") GooglePrivacyDlpV2ValueResponse lowerBound,
+        @OutputCustomType.Parameter("upperBound") GooglePrivacyDlpV2ValueResponse upperBound) {
         this.bucketSize = bucketSize;
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;

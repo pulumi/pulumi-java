@@ -26,11 +26,11 @@ public final class IosDeviceFileResponse {
      */
     private final String devicePath;
 
-    @OutputCustomType.Constructor({"bundleId","content","devicePath"})
+    @OutputCustomType.Constructor
     private IosDeviceFileResponse(
-        String bundleId,
-        FileReferenceResponse content,
-        String devicePath) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("content") FileReferenceResponse content,
+        @OutputCustomType.Parameter("devicePath") String devicePath) {
         this.bundleId = bundleId;
         this.content = content;
         this.devicePath = devicePath;

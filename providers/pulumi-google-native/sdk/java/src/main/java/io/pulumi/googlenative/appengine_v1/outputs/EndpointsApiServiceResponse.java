@@ -31,12 +31,12 @@ public final class EndpointsApiServiceResponse {
      */
     private final String rolloutStrategy;
 
-    @OutputCustomType.Constructor({"configId","disableTraceSampling","name","rolloutStrategy"})
+    @OutputCustomType.Constructor
     private EndpointsApiServiceResponse(
-        String configId,
-        Boolean disableTraceSampling,
-        String name,
-        String rolloutStrategy) {
+        @OutputCustomType.Parameter("configId") String configId,
+        @OutputCustomType.Parameter("disableTraceSampling") Boolean disableTraceSampling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rolloutStrategy") String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;

@@ -25,11 +25,11 @@ public final class ResourceLimitResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"maximum","minimum","resourceType"})
+    @OutputCustomType.Constructor
     private ResourceLimitResponse(
-        String maximum,
-        String minimum,
-        String resourceType) {
+        @OutputCustomType.Parameter("maximum") String maximum,
+        @OutputCustomType.Parameter("minimum") String minimum,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;

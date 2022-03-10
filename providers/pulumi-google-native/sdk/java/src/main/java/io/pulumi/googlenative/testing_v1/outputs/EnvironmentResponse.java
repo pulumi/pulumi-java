@@ -21,10 +21,10 @@ public final class EnvironmentResponse {
      */
     private final IosDeviceResponse iosDevice;
 
-    @OutputCustomType.Constructor({"androidDevice","iosDevice"})
+    @OutputCustomType.Constructor
     private EnvironmentResponse(
-        AndroidDeviceResponse androidDevice,
-        IosDeviceResponse iosDevice) {
+        @OutputCustomType.Parameter("androidDevice") AndroidDeviceResponse androidDevice,
+        @OutputCustomType.Parameter("iosDevice") IosDeviceResponse iosDevice) {
         this.androidDevice = androidDevice;
         this.iosDevice = iosDevice;
     }

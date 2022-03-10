@@ -40,14 +40,14 @@ public final class CloudSQLInstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","externalIp","internalIp","networkUri","region","uri"})
+    @OutputCustomType.Constructor
     private CloudSQLInstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String internalIp,
-        String networkUri,
-        String region,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("internalIp") String internalIp,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.internalIp = internalIp;

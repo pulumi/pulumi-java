@@ -12,10 +12,10 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse {
     private final String jsonParsing;
     private final String logLevel;
 
-    @OutputCustomType.Constructor({"jsonParsing","logLevel"})
+    @OutputCustomType.Constructor
     private SecurityPolicyAdvancedOptionsConfigResponse(
-        String jsonParsing,
-        String logLevel) {
+        @OutputCustomType.Parameter("jsonParsing") String jsonParsing,
+        @OutputCustomType.Parameter("logLevel") String logLevel) {
         this.jsonParsing = jsonParsing;
         this.logLevel = logLevel;
     }

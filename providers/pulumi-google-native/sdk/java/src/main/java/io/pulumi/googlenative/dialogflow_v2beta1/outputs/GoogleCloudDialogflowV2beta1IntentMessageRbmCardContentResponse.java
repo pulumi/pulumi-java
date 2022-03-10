@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","media","suggestions","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("media") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
+        @OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.media = media;
         this.suggestions = suggestions;

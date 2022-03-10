@@ -21,10 +21,10 @@ public final class BasicAutoscalingAlgorithmResponse {
      */
     private final BasicYarnAutoscalingConfigResponse yarnConfig;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","yarnConfig"})
+    @OutputCustomType.Constructor
     private BasicAutoscalingAlgorithmResponse(
-        String cooldownPeriod,
-        BasicYarnAutoscalingConfigResponse yarnConfig) {
+        @OutputCustomType.Parameter("cooldownPeriod") String cooldownPeriod,
+        @OutputCustomType.Parameter("yarnConfig") BasicYarnAutoscalingConfigResponse yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.yarnConfig = yarnConfig;
     }

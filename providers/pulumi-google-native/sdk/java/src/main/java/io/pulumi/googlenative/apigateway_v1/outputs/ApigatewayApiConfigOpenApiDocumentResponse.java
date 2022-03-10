@@ -15,8 +15,8 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
      */
     private final ApigatewayApiConfigFileResponse document;
 
-    @OutputCustomType.Constructor({"document"})
-    private ApigatewayApiConfigOpenApiDocumentResponse(ApigatewayApiConfigFileResponse document) {
+    @OutputCustomType.Constructor
+    private ApigatewayApiConfigOpenApiDocumentResponse(@OutputCustomType.Parameter("document") ApigatewayApiConfigFileResponse document) {
         this.document = document;
     }
 

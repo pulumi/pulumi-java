@@ -27,12 +27,12 @@ public final class NetworkInterfaceSubInterfaceResponse {
      */
     private final Integer vlan;
 
-    @OutputCustomType.Constructor({"ipAddress","ipAllocationMode","subnetwork","vlan"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceSubInterfaceResponse(
-        String ipAddress,
-        String ipAllocationMode,
-        String subnetwork,
-        Integer vlan) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("ipAllocationMode") String ipAllocationMode,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("vlan") Integer vlan) {
         this.ipAddress = ipAddress;
         this.ipAllocationMode = ipAllocationMode;
         this.subnetwork = subnetwork;

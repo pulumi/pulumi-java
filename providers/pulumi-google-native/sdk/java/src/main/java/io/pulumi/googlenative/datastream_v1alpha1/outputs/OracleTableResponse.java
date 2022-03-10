@@ -22,10 +22,10 @@ public final class OracleTableResponse {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"oracleColumns","tableName"})
+    @OutputCustomType.Constructor
     private OracleTableResponse(
-        List<OracleColumnResponse> oracleColumns,
-        String tableName) {
+        @OutputCustomType.Parameter("oracleColumns") List<OracleColumnResponse> oracleColumns,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.oracleColumns = oracleColumns;
         this.tableName = tableName;
     }

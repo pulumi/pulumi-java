@@ -34,12 +34,12 @@ public final class ScorecardResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"gaugeView","sparkChartView","thresholds","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private ScorecardResponse(
-        GaugeViewResponse gaugeView,
-        SparkChartViewResponse sparkChartView,
-        List<ThresholdResponse> thresholds,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("gaugeView") GaugeViewResponse gaugeView,
+        @OutputCustomType.Parameter("sparkChartView") SparkChartViewResponse sparkChartView,
+        @OutputCustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.gaugeView = gaugeView;
         this.sparkChartView = sparkChartView;
         this.thresholds = thresholds;

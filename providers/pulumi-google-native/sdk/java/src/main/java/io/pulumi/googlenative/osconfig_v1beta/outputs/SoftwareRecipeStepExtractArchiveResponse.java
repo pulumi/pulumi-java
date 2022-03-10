@@ -25,11 +25,11 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactId","destination","type"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepExtractArchiveResponse(
-        String artifactId,
-        String destination,
-        String type) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.type = type;

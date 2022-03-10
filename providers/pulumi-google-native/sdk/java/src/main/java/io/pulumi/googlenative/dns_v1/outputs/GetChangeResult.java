@@ -39,14 +39,14 @@ public final class GetChangeResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"additions","deletions","isServing","kind","startTime","status"})
+    @OutputCustomType.Constructor
     private GetChangeResult(
-        List<ResourceRecordSetResponse> additions,
-        List<ResourceRecordSetResponse> deletions,
-        Boolean isServing,
-        String kind,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("additions") List<ResourceRecordSetResponse> additions,
+        @OutputCustomType.Parameter("deletions") List<ResourceRecordSetResponse> deletions,
+        @OutputCustomType.Parameter("isServing") Boolean isServing,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.additions = additions;
         this.deletions = deletions;
         this.isServing = isServing;

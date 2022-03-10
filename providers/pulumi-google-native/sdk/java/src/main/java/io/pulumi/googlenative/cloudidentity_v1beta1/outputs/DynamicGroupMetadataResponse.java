@@ -22,10 +22,10 @@ public final class DynamicGroupMetadataResponse {
      */
     private final DynamicGroupStatusResponse status;
 
-    @OutputCustomType.Constructor({"queries","status"})
+    @OutputCustomType.Constructor
     private DynamicGroupMetadataResponse(
-        List<DynamicGroupQueryResponse> queries,
-        DynamicGroupStatusResponse status) {
+        @OutputCustomType.Parameter("queries") List<DynamicGroupQueryResponse> queries,
+        @OutputCustomType.Parameter("status") DynamicGroupStatusResponse status) {
         this.queries = queries;
         this.status = status;
     }

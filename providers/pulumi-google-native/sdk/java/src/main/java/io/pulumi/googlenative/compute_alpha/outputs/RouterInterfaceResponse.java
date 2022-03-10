@@ -50,16 +50,16 @@ public final class RouterInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"ipRange","linkedInterconnectAttachment","linkedVpnTunnel","managementType","name","privateIpAddress","redundantInterface","subnetwork"})
+    @OutputCustomType.Constructor
     private RouterInterfaceResponse(
-        String ipRange,
-        String linkedInterconnectAttachment,
-        String linkedVpnTunnel,
-        String managementType,
-        String name,
-        String privateIpAddress,
-        String redundantInterface,
-        String subnetwork) {
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("linkedInterconnectAttachment") String linkedInterconnectAttachment,
+        @OutputCustomType.Parameter("linkedVpnTunnel") String linkedVpnTunnel,
+        @OutputCustomType.Parameter("managementType") String managementType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("redundantInterface") String redundantInterface,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.ipRange = ipRange;
         this.linkedInterconnectAttachment = linkedInterconnectAttachment;
         this.linkedVpnTunnel = linkedVpnTunnel;

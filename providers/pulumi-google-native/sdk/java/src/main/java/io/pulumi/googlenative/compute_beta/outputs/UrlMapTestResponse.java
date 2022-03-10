@@ -48,15 +48,15 @@ public final class UrlMapTestResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"description","expectedOutputUrl","expectedRedirectResponseCode","headers","host","path","service"})
+    @OutputCustomType.Constructor
     private UrlMapTestResponse(
-        String description,
-        String expectedOutputUrl,
-        Integer expectedRedirectResponseCode,
-        List<UrlMapTestHeaderResponse> headers,
-        String host,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expectedOutputUrl") String expectedOutputUrl,
+        @OutputCustomType.Parameter("expectedRedirectResponseCode") Integer expectedRedirectResponseCode,
+        @OutputCustomType.Parameter("headers") List<UrlMapTestHeaderResponse> headers,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.description = description;
         this.expectedOutputUrl = expectedOutputUrl;
         this.expectedRedirectResponseCode = expectedRedirectResponseCode;

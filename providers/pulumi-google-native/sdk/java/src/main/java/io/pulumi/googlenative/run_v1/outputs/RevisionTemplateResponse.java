@@ -21,10 +21,10 @@ public final class RevisionTemplateResponse {
      */
     private final RevisionSpecResponse spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private RevisionTemplateResponse(
-        ObjectMetaResponse metadata,
-        RevisionSpecResponse spec) {
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") RevisionSpecResponse spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

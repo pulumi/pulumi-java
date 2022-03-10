@@ -26,11 +26,11 @@ public final class BackendServiceFailoverPolicyResponse {
      */
     private final Double failoverRatio;
 
-    @OutputCustomType.Constructor({"disableConnectionDrainOnFailover","dropTrafficIfUnhealthy","failoverRatio"})
+    @OutputCustomType.Constructor
     private BackendServiceFailoverPolicyResponse(
-        Boolean disableConnectionDrainOnFailover,
-        Boolean dropTrafficIfUnhealthy,
-        Double failoverRatio) {
+        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") Boolean disableConnectionDrainOnFailover,
+        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") Boolean dropTrafficIfUnhealthy,
+        @OutputCustomType.Parameter("failoverRatio") Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;

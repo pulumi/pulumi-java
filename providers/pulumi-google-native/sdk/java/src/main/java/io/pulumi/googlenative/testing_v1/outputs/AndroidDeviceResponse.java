@@ -30,12 +30,12 @@ public final class AndroidDeviceResponse {
      */
     private final String orientation;
 
-    @OutputCustomType.Constructor({"androidModelId","androidVersionId","locale","orientation"})
+    @OutputCustomType.Constructor
     private AndroidDeviceResponse(
-        String androidModelId,
-        String androidVersionId,
-        String locale,
-        String orientation) {
+        @OutputCustomType.Parameter("androidModelId") String androidModelId,
+        @OutputCustomType.Parameter("androidVersionId") String androidVersionId,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("orientation") String orientation) {
         this.androidModelId = androidModelId;
         this.androidVersionId = androidVersionId;
         this.locale = locale;

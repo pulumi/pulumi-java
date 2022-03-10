@@ -21,10 +21,10 @@ public final class RestoreInfoResponse {
      */
     private final String sourceType;
 
-    @OutputCustomType.Constructor({"backupInfo","sourceType"})
+    @OutputCustomType.Constructor
     private RestoreInfoResponse(
-        BackupInfoResponse backupInfo,
-        String sourceType) {
+        @OutputCustomType.Parameter("backupInfo") BackupInfoResponse backupInfo,
+        @OutputCustomType.Parameter("sourceType") String sourceType) {
         this.backupInfo = backupInfo;
         this.sourceType = sourceType;
     }

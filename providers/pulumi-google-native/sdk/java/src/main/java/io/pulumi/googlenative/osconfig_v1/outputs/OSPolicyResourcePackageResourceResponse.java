@@ -57,16 +57,16 @@ public final class OSPolicyResourcePackageResourceResponse {
      */
     private final OSPolicyResourcePackageResourceZypperResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","deb","desiredState","googet","msi","rpm","yum","zypper"})
+    @OutputCustomType.Constructor
     private OSPolicyResourcePackageResourceResponse(
-        OSPolicyResourcePackageResourceAPTResponse apt,
-        OSPolicyResourcePackageResourceDebResponse deb,
-        String desiredState,
-        OSPolicyResourcePackageResourceGooGetResponse googet,
-        OSPolicyResourcePackageResourceMSIResponse msi,
-        OSPolicyResourcePackageResourceRPMResponse rpm,
-        OSPolicyResourcePackageResourceYUMResponse yum,
-        OSPolicyResourcePackageResourceZypperResponse zypper) {
+        @OutputCustomType.Parameter("apt") OSPolicyResourcePackageResourceAPTResponse apt,
+        @OutputCustomType.Parameter("deb") OSPolicyResourcePackageResourceDebResponse deb,
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("googet") OSPolicyResourcePackageResourceGooGetResponse googet,
+        @OutputCustomType.Parameter("msi") OSPolicyResourcePackageResourceMSIResponse msi,
+        @OutputCustomType.Parameter("rpm") OSPolicyResourcePackageResourceRPMResponse rpm,
+        @OutputCustomType.Parameter("yum") OSPolicyResourcePackageResourceYUMResponse yum,
+        @OutputCustomType.Parameter("zypper") OSPolicyResourcePackageResourceZypperResponse zypper) {
         this.apt = apt;
         this.deb = deb;
         this.desiredState = desiredState;

@@ -15,8 +15,8 @@ public final class SoftwareRecipeStepInstallRpmResponse {
      */
     private final String artifactId;
 
-    @OutputCustomType.Constructor({"artifactId"})
-    private SoftwareRecipeStepInstallRpmResponse(String artifactId) {
+    @OutputCustomType.Constructor
+    private SoftwareRecipeStepInstallRpmResponse(@OutputCustomType.Parameter("artifactId") String artifactId) {
         this.artifactId = artifactId;
     }
 

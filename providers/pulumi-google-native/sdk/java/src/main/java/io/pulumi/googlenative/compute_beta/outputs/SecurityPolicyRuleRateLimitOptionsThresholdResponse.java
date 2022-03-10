@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
      */
     private final Integer intervalSec;
 
-    @OutputCustomType.Constructor({"count","intervalSec"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsThresholdResponse(
-        Integer count,
-        Integer intervalSec) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("intervalSec") Integer intervalSec) {
         this.count = count;
         this.intervalSec = intervalSec;
     }

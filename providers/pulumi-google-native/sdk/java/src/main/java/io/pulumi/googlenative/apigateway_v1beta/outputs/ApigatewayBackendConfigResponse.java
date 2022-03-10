@@ -15,8 +15,8 @@ public final class ApigatewayBackendConfigResponse {
      */
     private final String googleServiceAccount;
 
-    @OutputCustomType.Constructor({"googleServiceAccount"})
-    private ApigatewayBackendConfigResponse(String googleServiceAccount) {
+    @OutputCustomType.Constructor
+    private ApigatewayBackendConfigResponse(@OutputCustomType.Parameter("googleServiceAccount") String googleServiceAccount) {
         this.googleServiceAccount = googleServiceAccount;
     }
 

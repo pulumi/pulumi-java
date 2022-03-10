@@ -40,13 +40,13 @@ public final class DeploymentResponse {
      */
     private final ZipInfoResponse zip;
 
-    @OutputCustomType.Constructor({"build","cloudBuildOptions","container","files","zip"})
+    @OutputCustomType.Constructor
     private DeploymentResponse(
-        BuildInfoResponse build,
-        CloudBuildOptionsResponse cloudBuildOptions,
-        ContainerInfoResponse container,
-        Map<String,String> files,
-        ZipInfoResponse zip) {
+        @OutputCustomType.Parameter("build") BuildInfoResponse build,
+        @OutputCustomType.Parameter("cloudBuildOptions") CloudBuildOptionsResponse cloudBuildOptions,
+        @OutputCustomType.Parameter("container") ContainerInfoResponse container,
+        @OutputCustomType.Parameter("files") Map<String,String> files,
+        @OutputCustomType.Parameter("zip") ZipInfoResponse zip) {
         this.build = build;
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;

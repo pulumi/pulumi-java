@@ -37,13 +37,13 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
      */
     private final String integrationType;
 
-    @OutputCustomType.Constructor({"allowAllDomains","allowAmpTraffic","allowedDomains","challengeSecurityPreference","integrationType"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(
-        Boolean allowAllDomains,
-        Boolean allowAmpTraffic,
-        List<String> allowedDomains,
-        String challengeSecurityPreference,
-        String integrationType) {
+        @OutputCustomType.Parameter("allowAllDomains") Boolean allowAllDomains,
+        @OutputCustomType.Parameter("allowAmpTraffic") Boolean allowAmpTraffic,
+        @OutputCustomType.Parameter("allowedDomains") List<String> allowedDomains,
+        @OutputCustomType.Parameter("challengeSecurityPreference") String challengeSecurityPreference,
+        @OutputCustomType.Parameter("integrationType") String integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;

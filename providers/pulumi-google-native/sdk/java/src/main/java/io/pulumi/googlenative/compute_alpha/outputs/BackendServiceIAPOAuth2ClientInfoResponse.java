@@ -25,11 +25,11 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
      */
     private final String developerEmailAddress;
 
-    @OutputCustomType.Constructor({"applicationName","clientName","developerEmailAddress"})
+    @OutputCustomType.Constructor
     private BackendServiceIAPOAuth2ClientInfoResponse(
-        String applicationName,
-        String clientName,
-        String developerEmailAddress) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("clientName") String clientName,
+        @OutputCustomType.Parameter("developerEmailAddress") String developerEmailAddress) {
         this.applicationName = applicationName;
         this.clientName = clientName;
         this.developerEmailAddress = developerEmailAddress;

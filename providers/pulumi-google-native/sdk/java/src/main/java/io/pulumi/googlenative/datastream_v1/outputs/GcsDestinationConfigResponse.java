@@ -38,13 +38,13 @@ public final class GcsDestinationConfigResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"avroFileFormat","fileRotationInterval","fileRotationMb","jsonFileFormat","path"})
+    @OutputCustomType.Constructor
     private GcsDestinationConfigResponse(
-        AvroFileFormatResponse avroFileFormat,
-        String fileRotationInterval,
-        Integer fileRotationMb,
-        JsonFileFormatResponse jsonFileFormat,
-        String path) {
+        @OutputCustomType.Parameter("avroFileFormat") AvroFileFormatResponse avroFileFormat,
+        @OutputCustomType.Parameter("fileRotationInterval") String fileRotationInterval,
+        @OutputCustomType.Parameter("fileRotationMb") Integer fileRotationMb,
+        @OutputCustomType.Parameter("jsonFileFormat") JsonFileFormatResponse jsonFileFormat,
+        @OutputCustomType.Parameter("path") String path) {
         this.avroFileFormat = avroFileFormat;
         this.fileRotationInterval = fileRotationInterval;
         this.fileRotationMb = fileRotationMb;

@@ -35,13 +35,13 @@ public final class MethodMapResponse {
      */
     private final String update;
 
-    @OutputCustomType.Constructor({"create","delete","get","setIamPolicy","update"})
+    @OutputCustomType.Constructor
     private MethodMapResponse(
-        String create,
-        String delete,
-        String get,
-        String setIamPolicy,
-        String update) {
+        @OutputCustomType.Parameter("create") String create,
+        @OutputCustomType.Parameter("delete") String delete,
+        @OutputCustomType.Parameter("get") String get,
+        @OutputCustomType.Parameter("setIamPolicy") String setIamPolicy,
+        @OutputCustomType.Parameter("update") String update) {
         this.create = create;
         this.delete = delete;
         this.get = get;

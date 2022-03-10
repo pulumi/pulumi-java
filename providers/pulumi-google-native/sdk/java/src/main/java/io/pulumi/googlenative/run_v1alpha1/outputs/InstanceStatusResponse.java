@@ -52,16 +52,16 @@ public final class InstanceStatusResponse {
      */
     private final Integer succeeded;
 
-    @OutputCustomType.Constructor({"completionTime","failed","index","lastAttemptResult","lastExitCode","restarted","startTime","succeeded"})
+    @OutputCustomType.Constructor
     private InstanceStatusResponse(
-        String completionTime,
-        Integer failed,
-        Integer index,
-        InstanceAttemptResultResponse lastAttemptResult,
-        Integer lastExitCode,
-        Integer restarted,
-        String startTime,
-        Integer succeeded) {
+        @OutputCustomType.Parameter("completionTime") String completionTime,
+        @OutputCustomType.Parameter("failed") Integer failed,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("lastAttemptResult") InstanceAttemptResultResponse lastAttemptResult,
+        @OutputCustomType.Parameter("lastExitCode") Integer lastExitCode,
+        @OutputCustomType.Parameter("restarted") Integer restarted,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("succeeded") Integer succeeded) {
         this.completionTime = completionTime;
         this.failed = failed;
         this.index = index;

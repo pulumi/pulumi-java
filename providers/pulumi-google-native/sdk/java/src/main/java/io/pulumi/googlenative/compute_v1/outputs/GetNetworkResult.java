@@ -70,19 +70,19 @@ public final class GetNetworkResult {
      */
     private final List<String> subnetworks;
 
-    @OutputCustomType.Constructor({"autoCreateSubnetworks","creationTimestamp","description","gatewayIPv4","kind","mtu","name","peerings","routingConfig","selfLink","subnetworks"})
+    @OutputCustomType.Constructor
     private GetNetworkResult(
-        Boolean autoCreateSubnetworks,
-        String creationTimestamp,
-        String description,
-        String gatewayIPv4,
-        String kind,
-        Integer mtu,
-        String name,
-        List<NetworkPeeringResponse> peerings,
-        NetworkRoutingConfigResponse routingConfig,
-        String selfLink,
-        List<String> subnetworks) {
+        @OutputCustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mtu") Integer mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
+        @OutputCustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

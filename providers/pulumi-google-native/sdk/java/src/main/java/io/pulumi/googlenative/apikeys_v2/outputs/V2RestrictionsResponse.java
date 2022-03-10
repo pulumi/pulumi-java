@@ -40,13 +40,13 @@ public final class V2RestrictionsResponse {
      */
     private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
-    @OutputCustomType.Constructor({"androidKeyRestrictions","apiTargets","browserKeyRestrictions","iosKeyRestrictions","serverKeyRestrictions"})
+    @OutputCustomType.Constructor
     private V2RestrictionsResponse(
-        V2AndroidKeyRestrictionsResponse androidKeyRestrictions,
-        List<V2ApiTargetResponse> apiTargets,
-        V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
-        V2IosKeyRestrictionsResponse iosKeyRestrictions,
-        V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
+        @OutputCustomType.Parameter("androidKeyRestrictions") V2AndroidKeyRestrictionsResponse androidKeyRestrictions,
+        @OutputCustomType.Parameter("apiTargets") List<V2ApiTargetResponse> apiTargets,
+        @OutputCustomType.Parameter("browserKeyRestrictions") V2BrowserKeyRestrictionsResponse browserKeyRestrictions,
+        @OutputCustomType.Parameter("iosKeyRestrictions") V2IosKeyRestrictionsResponse iosKeyRestrictions,
+        @OutputCustomType.Parameter("serverKeyRestrictions") V2ServerKeyRestrictionsResponse serverKeyRestrictions) {
         this.androidKeyRestrictions = androidKeyRestrictions;
         this.apiTargets = apiTargets;
         this.browserKeyRestrictions = browserKeyRestrictions;

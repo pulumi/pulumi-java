@@ -38,13 +38,13 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      */
     private final Double minProbability;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","maxProbability","minProbability"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
-        Double maxProbability,
-        Double minProbability) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
+        @OutputCustomType.Parameter("maxProbability") Double maxProbability,
+        @OutputCustomType.Parameter("minProbability") Double minProbability) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;

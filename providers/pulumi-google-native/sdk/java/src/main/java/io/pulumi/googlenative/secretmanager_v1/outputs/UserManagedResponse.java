@@ -16,8 +16,8 @@ public final class UserManagedResponse {
      */
     private final List<ReplicaResponse> replicas;
 
-    @OutputCustomType.Constructor({"replicas"})
-    private UserManagedResponse(List<ReplicaResponse> replicas) {
+    @OutputCustomType.Constructor
+    private UserManagedResponse(@OutputCustomType.Parameter("replicas") List<ReplicaResponse> replicas) {
         this.replicas = replicas;
     }
 

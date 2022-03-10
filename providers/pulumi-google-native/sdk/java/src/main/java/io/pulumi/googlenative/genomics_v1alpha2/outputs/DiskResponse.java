@@ -42,14 +42,14 @@ public final class DiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"mountPoint","name","readOnly","sizeGb","source","type"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        String mountPoint,
-        String name,
-        Boolean readOnly,
-        Integer sizeGb,
-        String source,
-        String type) {
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
+        @OutputCustomType.Parameter("sizeGb") Integer sizeGb,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("type") String type) {
         this.mountPoint = mountPoint;
         this.name = name;
         this.readOnly = readOnly;

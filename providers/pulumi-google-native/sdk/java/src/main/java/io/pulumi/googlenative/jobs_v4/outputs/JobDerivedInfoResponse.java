@@ -22,10 +22,10 @@ public final class JobDerivedInfoResponse {
      */
     private final List<LocationResponse> locations;
 
-    @OutputCustomType.Constructor({"jobCategories","locations"})
+    @OutputCustomType.Constructor
     private JobDerivedInfoResponse(
-        List<String> jobCategories,
-        List<LocationResponse> locations) {
+        @OutputCustomType.Parameter("jobCategories") List<String> jobCategories,
+        @OutputCustomType.Parameter("locations") List<LocationResponse> locations) {
         this.jobCategories = jobCategories;
         this.locations = locations;
     }

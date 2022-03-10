@@ -18,10 +18,10 @@ public final class ManagedZoneForwardingConfigResponse {
      */
     private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
-    @OutputCustomType.Constructor({"kind","targetNameServers"})
+    @OutputCustomType.Constructor
     private ManagedZoneForwardingConfigResponse(
-        String kind,
-        List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }

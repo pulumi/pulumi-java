@@ -15,8 +15,8 @@ public final class TimeZoneResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private TimeZoneResponse(String version) {
+    @OutputCustomType.Constructor
+    private TimeZoneResponse(@OutputCustomType.Parameter("version") String version) {
         this.version = version;
     }
 

@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OSPolicyResourcePackageResourceYUMResponse(String name) {
+    @OutputCustomType.Constructor
+    private OSPolicyResourcePackageResourceYUMResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 

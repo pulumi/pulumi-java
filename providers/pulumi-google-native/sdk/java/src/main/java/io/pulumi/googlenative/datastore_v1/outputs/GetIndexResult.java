@@ -42,14 +42,14 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"ancestor","indexId","kind","project","properties","state"})
+    @OutputCustomType.Constructor
     private GetIndexResult(
-        String ancestor,
-        String indexId,
-        String kind,
-        String project,
-        List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties,
-        String state) {
+        @OutputCustomType.Parameter("ancestor") String ancestor,
+        @OutputCustomType.Parameter("indexId") String indexId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("properties") List<GoogleDatastoreAdminV1IndexedPropertyResponse> properties,
+        @OutputCustomType.Parameter("state") String state) {
         this.ancestor = ancestor;
         this.indexId = indexId;
         this.kind = kind;

@@ -68,19 +68,19 @@ public final class GetJobResult {
      */
     private final Integer ttlAfterCompletionDays;
 
-    @OutputCustomType.Constructor({"config","createTime","endTime","error","inputUri","name","outputUri","startTime","state","templateId","ttlAfterCompletionDays"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        JobConfigResponse config,
-        String createTime,
-        String endTime,
-        StatusResponse error,
-        String inputUri,
-        String name,
-        String outputUri,
-        String startTime,
-        String state,
-        String templateId,
-        Integer ttlAfterCompletionDays) {
+        @OutputCustomType.Parameter("config") JobConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("inputUri") String inputUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputUri") String outputUri,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("templateId") String templateId,
+        @OutputCustomType.Parameter("ttlAfterCompletionDays") Integer ttlAfterCompletionDays) {
         this.config = config;
         this.createTime = createTime;
         this.endTime = endTime;

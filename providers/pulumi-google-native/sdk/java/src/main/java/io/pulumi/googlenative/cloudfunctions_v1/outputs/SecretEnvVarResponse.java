@@ -30,12 +30,12 @@ public final class SecretEnvVarResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"key","project","secret","version"})
+    @OutputCustomType.Constructor
     private SecretEnvVarResponse(
-        String key,
-        String project,
-        String secret,
-        String version) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("version") String version) {
         this.key = key;
         this.project = project;
         this.secret = secret;

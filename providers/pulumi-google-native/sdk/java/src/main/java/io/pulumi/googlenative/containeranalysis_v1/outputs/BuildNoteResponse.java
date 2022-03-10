@@ -15,8 +15,8 @@ public final class BuildNoteResponse {
      */
     private final String builderVersion;
 
-    @OutputCustomType.Constructor({"builderVersion"})
-    private BuildNoteResponse(String builderVersion) {
+    @OutputCustomType.Constructor
+    private BuildNoteResponse(@OutputCustomType.Parameter("builderVersion") String builderVersion) {
         this.builderVersion = builderVersion;
     }
 

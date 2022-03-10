@@ -20,10 +20,10 @@ public final class StatusResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"code","description"})
+    @OutputCustomType.Constructor
     private StatusResponse(
-        String code,
-        String description) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") String description) {
         this.code = code;
         this.description = description;
     }

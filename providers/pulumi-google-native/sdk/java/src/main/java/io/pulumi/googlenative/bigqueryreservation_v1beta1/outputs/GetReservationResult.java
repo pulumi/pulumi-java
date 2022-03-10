@@ -36,13 +36,13 @@ public final class GetReservationResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"creationTime","ignoreIdleSlots","name","slotCapacity","updateTime"})
+    @OutputCustomType.Constructor
     private GetReservationResult(
-        String creationTime,
-        Boolean ignoreIdleSlots,
-        String name,
-        String slotCapacity,
-        String updateTime) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("ignoreIdleSlots") Boolean ignoreIdleSlots,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("slotCapacity") String slotCapacity,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.creationTime = creationTime;
         this.ignoreIdleSlots = ignoreIdleSlots;
         this.name = name;

@@ -59,17 +59,17 @@ public final class JobConfigurationExtractResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"compression","destinationFormat","destinationUri","destinationUris","fieldDelimiter","printHeader","sourceModel","sourceTable","useAvroLogicalTypes"})
+    @OutputCustomType.Constructor
     private JobConfigurationExtractResponse(
-        String compression,
-        String destinationFormat,
-        String destinationUri,
-        List<String> destinationUris,
-        String fieldDelimiter,
-        Boolean printHeader,
-        ModelReferenceResponse sourceModel,
-        TableReferenceResponse sourceTable,
-        Boolean useAvroLogicalTypes) {
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("destinationFormat") String destinationFormat,
+        @OutputCustomType.Parameter("destinationUri") String destinationUri,
+        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
+        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @OutputCustomType.Parameter("printHeader") Boolean printHeader,
+        @OutputCustomType.Parameter("sourceModel") ModelReferenceResponse sourceModel,
+        @OutputCustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
+        @OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUri = destinationUri;

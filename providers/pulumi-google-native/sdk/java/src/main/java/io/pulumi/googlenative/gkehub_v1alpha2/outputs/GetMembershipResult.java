@@ -79,21 +79,21 @@ public final class GetMembershipResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authority","createTime","deleteTime","description","endpoint","externalId","infrastructureType","labels","lastConnectionTime","name","state","uniqueId","updateTime"})
+    @OutputCustomType.Constructor
     private GetMembershipResult(
-        AuthorityResponse authority,
-        String createTime,
-        String deleteTime,
-        String description,
-        MembershipEndpointResponse endpoint,
-        String externalId,
-        String infrastructureType,
-        Map<String,String> labels,
-        String lastConnectionTime,
-        String name,
-        MembershipStateResponse state,
-        String uniqueId,
-        String updateTime) {
+        @OutputCustomType.Parameter("authority") AuthorityResponse authority,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpoint") MembershipEndpointResponse endpoint,
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("infrastructureType") String infrastructureType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastConnectionTime") String lastConnectionTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") MembershipStateResponse state,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authority = authority;
         this.createTime = createTime;
         this.deleteTime = deleteTime;

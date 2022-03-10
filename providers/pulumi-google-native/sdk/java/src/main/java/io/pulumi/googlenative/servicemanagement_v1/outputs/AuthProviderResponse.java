@@ -37,13 +37,13 @@ public final class AuthProviderResponse {
      */
     private final List<JwtLocationResponse> jwtLocations;
 
-    @OutputCustomType.Constructor({"audiences","authorizationUrl","issuer","jwksUri","jwtLocations"})
+    @OutputCustomType.Constructor
     private AuthProviderResponse(
-        String audiences,
-        String authorizationUrl,
-        String issuer,
-        String jwksUri,
-        List<JwtLocationResponse> jwtLocations) {
+        @OutputCustomType.Parameter("audiences") String audiences,
+        @OutputCustomType.Parameter("authorizationUrl") String authorizationUrl,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("jwksUri") String jwksUri,
+        @OutputCustomType.Parameter("jwtLocations") List<JwtLocationResponse> jwtLocations) {
         this.audiences = audiences;
         this.authorizationUrl = authorizationUrl;
         this.issuer = issuer;

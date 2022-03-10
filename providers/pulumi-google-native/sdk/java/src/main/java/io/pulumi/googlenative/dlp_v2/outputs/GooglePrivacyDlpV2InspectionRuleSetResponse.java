@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
      */
     private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"infoTypes","rules"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleSetResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
+        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @OutputCustomType.Parameter("rules") List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
         this.infoTypes = infoTypes;
         this.rules = rules;
     }

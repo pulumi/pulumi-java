@@ -77,20 +77,20 @@ public final class GetStreamResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"backfillAll","backfillNone","createTime","customerManagedEncryptionKey","destinationConfig","displayName","errors","labels","name","sourceConfig","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        BackfillAllStrategyResponse backfillAll,
-        BackfillNoneStrategyResponse backfillNone,
-        String createTime,
-        String customerManagedEncryptionKey,
-        DestinationConfigResponse destinationConfig,
-        String displayName,
-        List<ErrorResponse> errors,
-        Map<String,String> labels,
-        String name,
-        SourceConfigResponse sourceConfig,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("backfillAll") BackfillAllStrategyResponse backfillAll,
+        @OutputCustomType.Parameter("backfillNone") BackfillNoneStrategyResponse backfillNone,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("customerManagedEncryptionKey") String customerManagedEncryptionKey,
+        @OutputCustomType.Parameter("destinationConfig") DestinationConfigResponse destinationConfig,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("errors") List<ErrorResponse> errors,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sourceConfig") SourceConfigResponse sourceConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.backfillAll = backfillAll;
         this.backfillNone = backfillNone;
         this.createTime = createTime;

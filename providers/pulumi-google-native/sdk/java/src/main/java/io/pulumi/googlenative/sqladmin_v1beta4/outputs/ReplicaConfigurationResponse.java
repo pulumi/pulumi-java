@@ -27,11 +27,11 @@ public final class ReplicaConfigurationResponse {
      */
     private final MySqlReplicaConfigurationResponse mysqlReplicaConfiguration;
 
-    @OutputCustomType.Constructor({"failoverTarget","kind","mysqlReplicaConfiguration"})
+    @OutputCustomType.Constructor
     private ReplicaConfigurationResponse(
-        Boolean failoverTarget,
-        String kind,
-        MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
+        @OutputCustomType.Parameter("failoverTarget") Boolean failoverTarget,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mysqlReplicaConfiguration") MySqlReplicaConfigurationResponse mysqlReplicaConfiguration) {
         this.failoverTarget = failoverTarget;
         this.kind = kind;
         this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;

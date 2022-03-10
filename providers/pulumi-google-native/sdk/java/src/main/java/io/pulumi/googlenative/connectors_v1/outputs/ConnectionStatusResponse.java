@@ -25,11 +25,11 @@ public final class ConnectionStatusResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"description","state","status"})
+    @OutputCustomType.Constructor
     private ConnectionStatusResponse(
-        String description,
-        String state,
-        String status) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status) {
         this.description = description;
         this.state = state;
         this.status = status;

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AttestationAuthorityResponse {
     private final AttestationAuthorityHintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private AttestationAuthorityResponse(AttestationAuthorityHintResponse hint) {
+    @OutputCustomType.Constructor
+    private AttestationAuthorityResponse(@OutputCustomType.Parameter("hint") AttestationAuthorityHintResponse hint) {
         this.hint = hint;
     }
 

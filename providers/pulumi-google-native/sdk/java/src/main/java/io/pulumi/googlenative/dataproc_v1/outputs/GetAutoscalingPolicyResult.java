@@ -34,13 +34,13 @@ public final class GetAutoscalingPolicyResult {
      */
     private final InstanceGroupAutoscalingPolicyConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"basicAlgorithm","labels","name","secondaryWorkerConfig","workerConfig"})
+    @OutputCustomType.Constructor
     private GetAutoscalingPolicyResult(
-        BasicAutoscalingAlgorithmResponse basicAlgorithm,
-        Map<String,String> labels,
-        String name,
-        InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
-        InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("basicAlgorithm") BasicAutoscalingAlgorithmResponse basicAlgorithm,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secondaryWorkerConfig") InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
+        @OutputCustomType.Parameter("workerConfig") InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
         this.basicAlgorithm = basicAlgorithm;
         this.labels = labels;
         this.name = name;

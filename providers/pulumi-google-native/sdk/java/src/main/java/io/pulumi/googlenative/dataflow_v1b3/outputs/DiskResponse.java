@@ -26,11 +26,11 @@ public final class DiskResponse {
      */
     private final Integer sizeGb;
 
-    @OutputCustomType.Constructor({"diskType","mountPoint","sizeGb"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        String diskType,
-        String mountPoint,
-        Integer sizeGb) {
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("sizeGb") Integer sizeGb) {
         this.diskType = diskType;
         this.mountPoint = mountPoint;
         this.sizeGb = sizeGb;

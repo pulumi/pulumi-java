@@ -34,12 +34,12 @@ public final class ToolExecutionResponse {
      */
     private final List<ToolOutputReferenceResponse> toolOutputs;
 
-    @OutputCustomType.Constructor({"commandLineArguments","exitCode","toolLogs","toolOutputs"})
+    @OutputCustomType.Constructor
     private ToolExecutionResponse(
-        List<String> commandLineArguments,
-        ToolExitCodeResponse exitCode,
-        List<FileReferenceResponse> toolLogs,
-        List<ToolOutputReferenceResponse> toolOutputs) {
+        @OutputCustomType.Parameter("commandLineArguments") List<String> commandLineArguments,
+        @OutputCustomType.Parameter("exitCode") ToolExitCodeResponse exitCode,
+        @OutputCustomType.Parameter("toolLogs") List<FileReferenceResponse> toolLogs,
+        @OutputCustomType.Parameter("toolOutputs") List<ToolOutputReferenceResponse> toolOutputs) {
         this.commandLineArguments = commandLineArguments;
         this.exitCode = exitCode;
         this.toolLogs = toolLogs;

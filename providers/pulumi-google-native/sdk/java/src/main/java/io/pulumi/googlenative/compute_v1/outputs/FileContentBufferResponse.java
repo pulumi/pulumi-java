@@ -20,10 +20,10 @@ public final class FileContentBufferResponse {
      */
     private final String fileType;
 
-    @OutputCustomType.Constructor({"content","fileType"})
+    @OutputCustomType.Constructor
     private FileContentBufferResponse(
-        String content,
-        String fileType) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("fileType") String fileType) {
         this.content = content;
         this.fileType = fileType;
     }

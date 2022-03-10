@@ -15,8 +15,8 @@ public final class WebServerConfigResponse {
      */
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private WebServerConfigResponse(String machineType) {
+    @OutputCustomType.Constructor
+    private WebServerConfigResponse(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 

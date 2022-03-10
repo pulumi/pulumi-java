@@ -88,23 +88,23 @@ public final class GetBackupRunResult {
      */
     private final String windowStartTime;
 
-    @OutputCustomType.Constructor({"backupKind","description","diskEncryptionConfiguration","diskEncryptionStatus","endTime","enqueuedTime","error","instance","kind","location","selfLink","startTime","status","type","windowStartTime"})
+    @OutputCustomType.Constructor
     private GetBackupRunResult(
-        String backupKind,
-        String description,
-        DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        DiskEncryptionStatusResponse diskEncryptionStatus,
-        String endTime,
-        String enqueuedTime,
-        OperationErrorResponse error,
-        String instance,
-        String kind,
-        String location,
-        String selfLink,
-        String startTime,
-        String status,
-        String type,
-        String windowStartTime) {
+        @OutputCustomType.Parameter("backupKind") String backupKind,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @OutputCustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("enqueuedTime") String enqueuedTime,
+        @OutputCustomType.Parameter("error") OperationErrorResponse error,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("windowStartTime") String windowStartTime) {
         this.backupKind = backupKind;
         this.description = description;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;

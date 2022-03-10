@@ -30,12 +30,12 @@ public final class StageSourceResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"name","originalTransformOrCollection","sizeBytes","userName"})
+    @OutputCustomType.Constructor
     private StageSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String sizeBytes,
-        String userName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originalTransformOrCollection") String originalTransformOrCollection,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransformOrCollection = originalTransformOrCollection;
         this.sizeBytes = sizeBytes;

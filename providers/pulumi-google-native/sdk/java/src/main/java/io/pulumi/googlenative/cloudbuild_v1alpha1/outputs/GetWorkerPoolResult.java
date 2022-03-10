@@ -62,18 +62,18 @@ public final class GetWorkerPoolResult {
      */
     private final String workerCount;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","name","project","regions","serviceAccountEmail","status","updateTime","workerConfig","workerCount"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        String createTime,
-        String deleteTime,
-        String name,
-        String project,
-        List<String> regions,
-        String serviceAccountEmail,
-        String status,
-        String updateTime,
-        WorkerConfigResponse workerConfig,
-        String workerCount) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("regions") List<String> regions,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig,
+        @OutputCustomType.Parameter("workerCount") String workerCount) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.name = name;

@@ -43,14 +43,14 @@ public final class InstanceSpecResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","containers","restartPolicy","serviceAccountName","terminationGracePeriodSeconds","volumes"})
+    @OutputCustomType.Constructor
     private InstanceSpecResponse(
-        String activeDeadlineSeconds,
-        List<ContainerResponse> containers,
-        String restartPolicy,
-        String serviceAccountName,
-        String terminationGracePeriodSeconds,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
+        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("restartPolicy") String restartPolicy,
+        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @OutputCustomType.Parameter("terminationGracePeriodSeconds") String terminationGracePeriodSeconds,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.containers = containers;
         this.restartPolicy = restartPolicy;

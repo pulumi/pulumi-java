@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2StoredTypeResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"createTime","name"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2StoredTypeResponse(
-        String createTime,
-        String name) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.createTime = createTime;
         this.name = name;
     }

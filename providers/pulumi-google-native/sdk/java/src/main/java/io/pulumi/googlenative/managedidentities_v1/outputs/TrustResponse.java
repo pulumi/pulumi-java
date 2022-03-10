@@ -67,19 +67,19 @@ public final class TrustResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","lastTrustHeartbeatTime","selectiveAuthentication","state","stateDescription","targetDnsIpAddresses","targetDomainName","trustDirection","trustHandshakeSecret","trustType","updateTime"})
+    @OutputCustomType.Constructor
     private TrustResponse(
-        String createTime,
-        String lastTrustHeartbeatTime,
-        Boolean selectiveAuthentication,
-        String state,
-        String stateDescription,
-        List<String> targetDnsIpAddresses,
-        String targetDomainName,
-        String trustDirection,
-        String trustHandshakeSecret,
-        String trustType,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("lastTrustHeartbeatTime") String lastTrustHeartbeatTime,
+        @OutputCustomType.Parameter("selectiveAuthentication") Boolean selectiveAuthentication,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateDescription") String stateDescription,
+        @OutputCustomType.Parameter("targetDnsIpAddresses") List<String> targetDnsIpAddresses,
+        @OutputCustomType.Parameter("targetDomainName") String targetDomainName,
+        @OutputCustomType.Parameter("trustDirection") String trustDirection,
+        @OutputCustomType.Parameter("trustHandshakeSecret") String trustHandshakeSecret,
+        @OutputCustomType.Parameter("trustType") String trustType,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.lastTrustHeartbeatTime = lastTrustHeartbeatTime;
         this.selectiveAuthentication = selectiveAuthentication;

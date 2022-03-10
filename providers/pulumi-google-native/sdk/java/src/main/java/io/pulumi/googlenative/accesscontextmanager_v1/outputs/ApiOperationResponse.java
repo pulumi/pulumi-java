@@ -22,10 +22,10 @@ public final class ApiOperationResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"methodSelectors","serviceName"})
+    @OutputCustomType.Constructor
     private ApiOperationResponse(
-        List<MethodSelectorResponse> methodSelectors,
-        String serviceName) {
+        @OutputCustomType.Parameter("methodSelectors") List<MethodSelectorResponse> methodSelectors,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.methodSelectors = methodSelectors;
         this.serviceName = serviceName;
     }

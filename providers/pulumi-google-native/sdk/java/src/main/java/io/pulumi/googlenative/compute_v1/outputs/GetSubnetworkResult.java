@@ -124,30 +124,30 @@ public final class GetSubnetworkResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","enableFlowLogs","externalIpv6Prefix","fingerprint","gatewayAddress","ipCidrRange","ipv6AccessType","ipv6CidrRange","kind","logConfig","name","network","privateIpGoogleAccess","privateIpv6GoogleAccess","purpose","region","role","secondaryIpRanges","selfLink","stackType","state"})
+    @OutputCustomType.Constructor
     private GetSubnetworkResult(
-        String creationTimestamp,
-        String description,
-        Boolean enableFlowLogs,
-        String externalIpv6Prefix,
-        String fingerprint,
-        String gatewayAddress,
-        String ipCidrRange,
-        String ipv6AccessType,
-        String ipv6CidrRange,
-        String kind,
-        SubnetworkLogConfigResponse logConfig,
-        String name,
-        String network,
-        Boolean privateIpGoogleAccess,
-        String privateIpv6GoogleAccess,
-        String purpose,
-        String region,
-        String role,
-        List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
-        String selfLink,
-        String stackType,
-        String state) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
+        @OutputCustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @OutputCustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("logConfig") SubnetworkLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("secondaryIpRanges") List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("state") String state) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.enableFlowLogs = enableFlowLogs;

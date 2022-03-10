@@ -15,8 +15,8 @@ public final class DefaultSnatStatusResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private DefaultSnatStatusResponse(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private DefaultSnatStatusResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

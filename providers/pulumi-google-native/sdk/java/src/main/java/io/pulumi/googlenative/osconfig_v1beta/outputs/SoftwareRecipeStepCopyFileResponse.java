@@ -31,12 +31,12 @@ public final class SoftwareRecipeStepCopyFileResponse {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"artifactId","destination","overwrite","permissions"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepCopyFileResponse(
-        String artifactId,
-        String destination,
-        Boolean overwrite,
-        String permissions) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("overwrite") Boolean overwrite,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;

@@ -16,8 +16,8 @@ public final class StackTraceResponse {
      */
     private final List<StackTraceElementResponse> elements;
 
-    @OutputCustomType.Constructor({"elements"})
-    private StackTraceResponse(List<StackTraceElementResponse> elements) {
+    @OutputCustomType.Constructor
+    private StackTraceResponse(@OutputCustomType.Parameter("elements") List<StackTraceElementResponse> elements) {
         this.elements = elements;
     }
 

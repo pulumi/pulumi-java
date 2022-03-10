@@ -15,8 +15,8 @@ public final class IosTestLoopResponse {
      */
     private final String bundleId;
 
-    @OutputCustomType.Constructor({"bundleId"})
-    private IosTestLoopResponse(String bundleId) {
+    @OutputCustomType.Constructor
+    private IosTestLoopResponse(@OutputCustomType.Parameter("bundleId") String bundleId) {
         this.bundleId = bundleId;
     }
 

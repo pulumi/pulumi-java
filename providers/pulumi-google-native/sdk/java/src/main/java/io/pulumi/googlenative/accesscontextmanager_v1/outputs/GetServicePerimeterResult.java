@@ -47,15 +47,15 @@ public final class GetServicePerimeterResult {
      */
     private final Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor({"description","name","perimeterType","spec","status","title","useExplicitDryRunSpec"})
+    @OutputCustomType.Constructor
     private GetServicePerimeterResult(
-        String description,
-        String name,
-        String perimeterType,
-        ServicePerimeterConfigResponse spec,
-        ServicePerimeterConfigResponse status,
-        String title,
-        Boolean useExplicitDryRunSpec) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") String perimeterType,
+        @OutputCustomType.Parameter("spec") ServicePerimeterConfigResponse spec,
+        @OutputCustomType.Parameter("status") ServicePerimeterConfigResponse status,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("useExplicitDryRunSpec") Boolean useExplicitDryRunSpec) {
         this.description = description;
         this.name = name;
         this.perimeterType = perimeterType;

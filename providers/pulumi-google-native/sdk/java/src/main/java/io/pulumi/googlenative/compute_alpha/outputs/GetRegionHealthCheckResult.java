@@ -91,28 +91,28 @@ public final class GetRegionHealthCheckResult {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"checkIntervalSec","creationTimestamp","description","grpcHealthCheck","healthyThreshold","http2HealthCheck","httpHealthCheck","httpsHealthCheck","kind","logConfig","name","region","selfLink","selfLinkWithId","sslHealthCheck","tcpHealthCheck","timeoutSec","type","udpHealthCheck","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetRegionHealthCheckResult(
-        Integer checkIntervalSec,
-        String creationTimestamp,
-        String description,
-        GRPCHealthCheckResponse grpcHealthCheck,
-        Integer healthyThreshold,
-        HTTP2HealthCheckResponse http2HealthCheck,
-        HTTPHealthCheckResponse httpHealthCheck,
-        HTTPSHealthCheckResponse httpsHealthCheck,
-        String kind,
-        HealthCheckLogConfigResponse logConfig,
-        String name,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        SSLHealthCheckResponse sslHealthCheck,
-        TCPHealthCheckResponse tcpHealthCheck,
-        Integer timeoutSec,
-        String type,
-        UDPHealthCheckResponse udpHealthCheck,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("grpcHealthCheck") GRPCHealthCheckResponse grpcHealthCheck,
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("http2HealthCheck") HTTP2HealthCheckResponse http2HealthCheck,
+        @OutputCustomType.Parameter("httpHealthCheck") HTTPHealthCheckResponse httpHealthCheck,
+        @OutputCustomType.Parameter("httpsHealthCheck") HTTPSHealthCheckResponse httpsHealthCheck,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("logConfig") HealthCheckLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sslHealthCheck") SSLHealthCheckResponse sslHealthCheck,
+        @OutputCustomType.Parameter("tcpHealthCheck") TCPHealthCheckResponse tcpHealthCheck,
+        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("udpHealthCheck") UDPHealthCheckResponse udpHealthCheck,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

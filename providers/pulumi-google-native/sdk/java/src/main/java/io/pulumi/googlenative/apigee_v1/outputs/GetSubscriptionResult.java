@@ -40,14 +40,14 @@ public final class GetSubscriptionResult {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"apiproduct","createdAt","endTime","lastModifiedAt","name","startTime"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        String apiproduct,
-        String createdAt,
-        String endTime,
-        String lastModifiedAt,
-        String name,
-        String startTime) {
+        @OutputCustomType.Parameter("apiproduct") String apiproduct,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.apiproduct = apiproduct;
         this.createdAt = createdAt;
         this.endTime = endTime;

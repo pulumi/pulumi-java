@@ -22,10 +22,10 @@ public final class TargetConfigurationResponse {
      */
     private final List<ImportFileResponse> imports;
 
-    @OutputCustomType.Constructor({"config","imports"})
+    @OutputCustomType.Constructor
     private TargetConfigurationResponse(
-        ConfigFileResponse config,
-        List<ImportFileResponse> imports) {
+        @OutputCustomType.Parameter("config") ConfigFileResponse config,
+        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports) {
         this.config = config;
         this.imports = imports;
     }

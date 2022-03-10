@@ -80,21 +80,21 @@ public final class GetPacketMirroringResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor({"collectorIlb","creationTimestamp","description","enable","filter","kind","mirroredResources","name","network","priority","region","selfLink","selfLinkWithId"})
+    @OutputCustomType.Constructor
     private GetPacketMirroringResult(
-        PacketMirroringForwardingRuleInfoResponse collectorIlb,
-        String creationTimestamp,
-        String description,
-        String enable,
-        PacketMirroringFilterResponse filter,
-        String kind,
-        PacketMirroringMirroredResourceInfoResponse mirroredResources,
-        String name,
-        PacketMirroringNetworkInfoResponse network,
-        Integer priority,
-        String region,
-        String selfLink,
-        String selfLinkWithId) {
+        @OutputCustomType.Parameter("collectorIlb") PacketMirroringForwardingRuleInfoResponse collectorIlb,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enable") String enable,
+        @OutputCustomType.Parameter("filter") PacketMirroringFilterResponse filter,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mirroredResources") PacketMirroringMirroredResourceInfoResponse mirroredResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") PacketMirroringNetworkInfoResponse network,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.collectorIlb = collectorIlb;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

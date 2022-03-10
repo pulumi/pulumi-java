@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1SuggestionFeatureResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private GoogleCloudDialogflowV2beta1SuggestionFeatureResponse(String type) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1SuggestionFeatureResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

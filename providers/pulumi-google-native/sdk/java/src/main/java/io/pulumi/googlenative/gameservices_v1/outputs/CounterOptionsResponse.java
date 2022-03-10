@@ -27,11 +27,11 @@ public final class CounterOptionsResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor({"customFields","field","metric"})
+    @OutputCustomType.Constructor
     private CounterOptionsResponse(
-        List<CustomFieldResponse> customFields,
-        String field,
-        String metric) {
+        @OutputCustomType.Parameter("customFields") List<CustomFieldResponse> customFields,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("metric") String metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;

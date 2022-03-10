@@ -15,8 +15,8 @@ public final class AutomaticResponse {
      */
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption"})
-    private AutomaticResponse(CustomerManagedEncryptionResponse customerManagedEncryption) {
+    @OutputCustomType.Constructor
+    private AutomaticResponse(@OutputCustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption) {
         this.customerManagedEncryption = customerManagedEncryption;
     }
 

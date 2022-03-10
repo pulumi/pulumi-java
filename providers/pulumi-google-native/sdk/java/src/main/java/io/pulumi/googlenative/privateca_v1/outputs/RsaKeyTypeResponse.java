@@ -20,10 +20,10 @@ public final class RsaKeyTypeResponse {
      */
     private final String minModulusSize;
 
-    @OutputCustomType.Constructor({"maxModulusSize","minModulusSize"})
+    @OutputCustomType.Constructor
     private RsaKeyTypeResponse(
-        String maxModulusSize,
-        String minModulusSize) {
+        @OutputCustomType.Parameter("maxModulusSize") String maxModulusSize,
+        @OutputCustomType.Parameter("minModulusSize") String minModulusSize) {
         this.maxModulusSize = maxModulusSize;
         this.minModulusSize = minModulusSize;
     }

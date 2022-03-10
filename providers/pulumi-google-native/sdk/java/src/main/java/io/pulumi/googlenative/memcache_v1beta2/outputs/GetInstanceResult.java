@@ -103,25 +103,25 @@ public final class GetInstanceResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"authorizedNetwork","createTime","discoveryEndpoint","displayName","instanceMessages","labels","memcacheFullVersion","memcacheNodes","memcacheVersion","name","nodeConfig","nodeCount","parameters","state","updateAvailable","updateTime","zones"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String authorizedNetwork,
-        String createTime,
-        String discoveryEndpoint,
-        String displayName,
-        List<InstanceMessageResponse> instanceMessages,
-        Map<String,String> labels,
-        String memcacheFullVersion,
-        List<NodeResponse> memcacheNodes,
-        String memcacheVersion,
-        String name,
-        NodeConfigResponse nodeConfig,
-        Integer nodeCount,
-        MemcacheParametersResponse parameters,
-        String state,
-        Boolean updateAvailable,
-        String updateTime,
-        List<String> zones) {
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("discoveryEndpoint") String discoveryEndpoint,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("instanceMessages") List<InstanceMessageResponse> instanceMessages,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("memcacheFullVersion") String memcacheFullVersion,
+        @OutputCustomType.Parameter("memcacheNodes") List<NodeResponse> memcacheNodes,
+        @OutputCustomType.Parameter("memcacheVersion") String memcacheVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateAvailable") Boolean updateAvailable,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.discoveryEndpoint = discoveryEndpoint;

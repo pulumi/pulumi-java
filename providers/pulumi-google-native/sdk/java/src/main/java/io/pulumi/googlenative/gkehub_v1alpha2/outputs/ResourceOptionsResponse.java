@@ -26,11 +26,11 @@ public final class ResourceOptionsResponse {
      */
     private final Boolean v1beta1Crd;
 
-    @OutputCustomType.Constructor({"connectVersion","k8sVersion","v1beta1Crd"})
+    @OutputCustomType.Constructor
     private ResourceOptionsResponse(
-        String connectVersion,
-        String k8sVersion,
-        Boolean v1beta1Crd) {
+        @OutputCustomType.Parameter("connectVersion") String connectVersion,
+        @OutputCustomType.Parameter("k8sVersion") String k8sVersion,
+        @OutputCustomType.Parameter("v1beta1Crd") Boolean v1beta1Crd) {
         this.connectVersion = connectVersion;
         this.k8sVersion = k8sVersion;
         this.v1beta1Crd = v1beta1Crd;

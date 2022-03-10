@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2SecretKeySelectorResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"secret","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2SecretKeySelectorResponse(
-        String secret,
-        String version) {
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("version") String version) {
         this.secret = secret;
         this.version = version;
     }

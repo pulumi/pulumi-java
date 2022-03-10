@@ -20,10 +20,10 @@ public final class NodeConfigResponse {
      */
     private final Integer memorySizeMb;
 
-    @OutputCustomType.Constructor({"cpuCount","memorySizeMb"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        Integer cpuCount,
-        Integer memorySizeMb) {
+        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
+        @OutputCustomType.Parameter("memorySizeMb") Integer memorySizeMb) {
         this.cpuCount = cpuCount;
         this.memorySizeMb = memorySizeMb;
     }

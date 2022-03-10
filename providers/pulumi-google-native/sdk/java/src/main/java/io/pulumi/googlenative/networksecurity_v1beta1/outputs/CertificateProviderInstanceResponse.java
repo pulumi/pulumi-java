@@ -15,8 +15,8 @@ public final class CertificateProviderInstanceResponse {
      */
     private final String pluginInstance;
 
-    @OutputCustomType.Constructor({"pluginInstance"})
-    private CertificateProviderInstanceResponse(String pluginInstance) {
+    @OutputCustomType.Constructor
+    private CertificateProviderInstanceResponse(@OutputCustomType.Parameter("pluginInstance") String pluginInstance) {
         this.pluginInstance = pluginInstance;
     }
 

@@ -16,8 +16,8 @@ public final class GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor({"synonyms"})
-    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse(List<String> synonyms) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2alphaRuleTwowaySynonymsActionResponse(@OutputCustomType.Parameter("synonyms") List<String> synonyms) {
         this.synonyms = synonyms;
     }
 

@@ -43,14 +43,14 @@ public final class SparkRJobResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","loggingConfig","mainRFileUri","properties"})
+    @OutputCustomType.Constructor
     private SparkRJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainRFileUri,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

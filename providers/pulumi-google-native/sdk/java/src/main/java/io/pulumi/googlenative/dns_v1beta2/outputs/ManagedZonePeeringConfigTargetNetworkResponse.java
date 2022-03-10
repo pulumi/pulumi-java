@@ -21,11 +21,11 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"deactivateTime","kind","networkUrl"})
+    @OutputCustomType.Constructor
     private ManagedZonePeeringConfigTargetNetworkResponse(
-        String deactivateTime,
-        String kind,
-        String networkUrl) {
+        @OutputCustomType.Parameter("deactivateTime") String deactivateTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.deactivateTime = deactivateTime;
         this.kind = kind;
         this.networkUrl = networkUrl;

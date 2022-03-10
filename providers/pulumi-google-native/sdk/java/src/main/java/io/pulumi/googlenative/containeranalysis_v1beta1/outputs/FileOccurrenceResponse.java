@@ -47,15 +47,15 @@ public final class FileOccurrenceResponse {
      */
     private final String notice;
 
-    @OutputCustomType.Constructor({"attributions","comment","contributors","copyright","filesLicenseInfo","licenseConcluded","notice"})
+    @OutputCustomType.Constructor
     private FileOccurrenceResponse(
-        List<String> attributions,
-        String comment,
-        List<String> contributors,
-        String copyright,
-        List<String> filesLicenseInfo,
-        LicenseResponse licenseConcluded,
-        String notice) {
+        @OutputCustomType.Parameter("attributions") List<String> attributions,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("contributors") List<String> contributors,
+        @OutputCustomType.Parameter("copyright") String copyright,
+        @OutputCustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
+        @OutputCustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
+        @OutputCustomType.Parameter("notice") String notice) {
         this.attributions = attributions;
         this.comment = comment;
         this.contributors = contributors;

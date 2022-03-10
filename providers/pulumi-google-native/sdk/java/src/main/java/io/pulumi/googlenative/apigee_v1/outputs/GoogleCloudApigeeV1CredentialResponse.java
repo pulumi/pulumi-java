@@ -53,16 +53,16 @@ public final class GoogleCloudApigeeV1CredentialResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiProducts","attributes","consumerKey","consumerSecret","expiresAt","issuedAt","scopes","status"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1CredentialResponse(
-        List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String consumerKey,
-        String consumerSecret,
-        String expiresAt,
-        String issuedAt,
-        List<String> scopes,
-        String status) {
+        @OutputCustomType.Parameter("apiProducts") List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("consumerKey") String consumerKey,
+        @OutputCustomType.Parameter("consumerSecret") String consumerSecret,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("issuedAt") String issuedAt,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.attributes = attributes;
         this.consumerKey = consumerKey;

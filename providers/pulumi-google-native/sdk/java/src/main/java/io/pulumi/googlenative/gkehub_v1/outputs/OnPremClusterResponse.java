@@ -26,11 +26,11 @@ public final class OnPremClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"adminCluster","clusterMissing","resourceLink"})
+    @OutputCustomType.Constructor
     private OnPremClusterResponse(
-        Boolean adminCluster,
-        Boolean clusterMissing,
-        String resourceLink) {
+        @OutputCustomType.Parameter("adminCluster") Boolean adminCluster,
+        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.adminCluster = adminCluster;
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;

@@ -16,8 +16,8 @@ public final class TrafficPercentStrategyResponse {
      */
     private final Map<String,String> percentages;
 
-    @OutputCustomType.Constructor({"percentages"})
-    private TrafficPercentStrategyResponse(Map<String,String> percentages) {
+    @OutputCustomType.Constructor
+    private TrafficPercentStrategyResponse(@OutputCustomType.Parameter("percentages") Map<String,String> percentages) {
         this.percentages = percentages;
     }
 

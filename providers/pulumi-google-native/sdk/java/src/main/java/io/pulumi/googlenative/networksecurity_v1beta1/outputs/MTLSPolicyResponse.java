@@ -16,8 +16,8 @@ public final class MTLSPolicyResponse {
      */
     private final List<ValidationCAResponse> clientValidationCa;
 
-    @OutputCustomType.Constructor({"clientValidationCa"})
-    private MTLSPolicyResponse(List<ValidationCAResponse> clientValidationCa) {
+    @OutputCustomType.Constructor
+    private MTLSPolicyResponse(@OutputCustomType.Parameter("clientValidationCa") List<ValidationCAResponse> clientValidationCa) {
         this.clientValidationCa = clientValidationCa;
     }
 

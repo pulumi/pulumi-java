@@ -22,10 +22,10 @@ public final class MosaicLayoutResponse {
      */
     private final List<TileResponse> tiles;
 
-    @OutputCustomType.Constructor({"columns","tiles"})
+    @OutputCustomType.Constructor
     private MosaicLayoutResponse(
-        Integer columns,
-        List<TileResponse> tiles) {
+        @OutputCustomType.Parameter("columns") Integer columns,
+        @OutputCustomType.Parameter("tiles") List<TileResponse> tiles) {
         this.columns = columns;
         this.tiles = tiles;
     }

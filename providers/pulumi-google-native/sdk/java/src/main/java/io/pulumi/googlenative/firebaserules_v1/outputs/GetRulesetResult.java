@@ -32,12 +32,12 @@ public final class GetRulesetResult {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor({"createTime","metadata","name","source"})
+    @OutputCustomType.Constructor
     private GetRulesetResult(
-        String createTime,
-        MetadataResponse metadata,
-        String name,
-        SourceResponse source) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") SourceResponse source) {
         this.createTime = createTime;
         this.metadata = metadata;
         this.name = name;

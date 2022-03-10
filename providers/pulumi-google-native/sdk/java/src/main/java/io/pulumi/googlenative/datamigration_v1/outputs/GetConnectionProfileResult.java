@@ -70,19 +70,19 @@ public final class GetConnectionProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"cloudsql","createTime","displayName","error","labels","mysql","name","postgresql","provider","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectionProfileResult(
-        CloudSqlConnectionProfileResponse cloudsql,
-        String createTime,
-        String displayName,
-        StatusResponse error,
-        Map<String,String> labels,
-        MySqlConnectionProfileResponse mysql,
-        String name,
-        PostgreSqlConnectionProfileResponse postgresql,
-        String provider,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("cloudsql") CloudSqlConnectionProfileResponse cloudsql,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mysql") MySqlConnectionProfileResponse mysql,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("postgresql") PostgreSqlConnectionProfileResponse postgresql,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.cloudsql = cloudsql;
         this.createTime = createTime;
         this.displayName = displayName;

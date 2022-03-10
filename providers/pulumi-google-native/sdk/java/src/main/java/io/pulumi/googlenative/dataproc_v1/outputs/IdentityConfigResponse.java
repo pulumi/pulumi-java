@@ -16,8 +16,8 @@ public final class IdentityConfigResponse {
      */
     private final Map<String,String> userServiceAccountMapping;
 
-    @OutputCustomType.Constructor({"userServiceAccountMapping"})
-    private IdentityConfigResponse(Map<String,String> userServiceAccountMapping) {
+    @OutputCustomType.Constructor
+    private IdentityConfigResponse(@OutputCustomType.Parameter("userServiceAccountMapping") Map<String,String> userServiceAccountMapping) {
         this.userServiceAccountMapping = userServiceAccountMapping;
     }
 

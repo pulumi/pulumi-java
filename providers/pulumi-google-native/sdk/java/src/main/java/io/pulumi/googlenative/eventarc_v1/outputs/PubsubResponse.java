@@ -20,10 +20,10 @@ public final class PubsubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"subscription","topic"})
+    @OutputCustomType.Constructor
     private PubsubResponse(
-        String subscription,
-        String topic) {
+        @OutputCustomType.Parameter("subscription") String subscription,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.subscription = subscription;
         this.topic = topic;
     }

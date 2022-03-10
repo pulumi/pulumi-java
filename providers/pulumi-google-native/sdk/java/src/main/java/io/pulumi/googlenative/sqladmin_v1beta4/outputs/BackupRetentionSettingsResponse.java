@@ -21,10 +21,10 @@ public final class BackupRetentionSettingsResponse {
      */
     private final String retentionUnit;
 
-    @OutputCustomType.Constructor({"retainedBackups","retentionUnit"})
+    @OutputCustomType.Constructor
     private BackupRetentionSettingsResponse(
-        Integer retainedBackups,
-        String retentionUnit) {
+        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @OutputCustomType.Parameter("retentionUnit") String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }

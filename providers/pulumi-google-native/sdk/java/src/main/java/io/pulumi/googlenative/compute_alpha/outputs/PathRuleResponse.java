@@ -33,12 +33,12 @@ public final class PathRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor({"paths","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private PathRuleResponse(
-        List<String> paths,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;

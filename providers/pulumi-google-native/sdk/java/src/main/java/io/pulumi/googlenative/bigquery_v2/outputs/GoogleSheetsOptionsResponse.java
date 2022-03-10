@@ -20,10 +20,10 @@ public final class GoogleSheetsOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor({"range","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private GoogleSheetsOptionsResponse(
-        String range,
-        String skipLeadingRows) {
+        @OutputCustomType.Parameter("range") String range,
+        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }

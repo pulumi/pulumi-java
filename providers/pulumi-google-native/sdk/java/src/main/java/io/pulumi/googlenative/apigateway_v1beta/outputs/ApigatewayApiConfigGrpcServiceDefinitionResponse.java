@@ -21,10 +21,10 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
      */
     private final List<ApigatewayApiConfigFileResponse> source;
 
-    @OutputCustomType.Constructor({"fileDescriptorSet","source"})
+    @OutputCustomType.Constructor
     private ApigatewayApiConfigGrpcServiceDefinitionResponse(
-        ApigatewayApiConfigFileResponse fileDescriptorSet,
-        List<ApigatewayApiConfigFileResponse> source) {
+        @OutputCustomType.Parameter("fileDescriptorSet") ApigatewayApiConfigFileResponse fileDescriptorSet,
+        @OutputCustomType.Parameter("source") List<ApigatewayApiConfigFileResponse> source) {
         this.fileDescriptorSet = fileDescriptorSet;
         this.source = source;
     }

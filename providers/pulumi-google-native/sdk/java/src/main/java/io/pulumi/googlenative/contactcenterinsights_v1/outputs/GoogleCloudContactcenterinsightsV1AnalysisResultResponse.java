@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
      */
     private final String endTime;
 
-    @OutputCustomType.Constructor({"callAnalysisMetadata","endTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnalysisResultResponse(
-        GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
-        String endTime) {
+        @OutputCustomType.Parameter("callAnalysisMetadata") GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
+        @OutputCustomType.Parameter("endTime") String endTime) {
         this.callAnalysisMetadata = callAnalysisMetadata;
         this.endTime = endTime;
     }

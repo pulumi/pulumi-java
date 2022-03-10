@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SecurityPolicyDdosProtectionConfigResponse {
     private final String ddosProtection;
 
-    @OutputCustomType.Constructor({"ddosProtection"})
-    private SecurityPolicyDdosProtectionConfigResponse(String ddosProtection) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyDdosProtectionConfigResponse(@OutputCustomType.Parameter("ddosProtection") String ddosProtection) {
         this.ddosProtection = ddosProtection;
     }
 

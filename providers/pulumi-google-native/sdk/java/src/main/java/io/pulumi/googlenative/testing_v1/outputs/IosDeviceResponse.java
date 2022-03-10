@@ -30,12 +30,12 @@ public final class IosDeviceResponse {
      */
     private final String orientation;
 
-    @OutputCustomType.Constructor({"iosModelId","iosVersionId","locale","orientation"})
+    @OutputCustomType.Constructor
     private IosDeviceResponse(
-        String iosModelId,
-        String iosVersionId,
-        String locale,
-        String orientation) {
+        @OutputCustomType.Parameter("iosModelId") String iosModelId,
+        @OutputCustomType.Parameter("iosVersionId") String iosVersionId,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("orientation") String orientation) {
         this.iosModelId = iosModelId;
         this.iosVersionId = iosVersionId;
         this.locale = locale;

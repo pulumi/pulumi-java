@@ -12,10 +12,10 @@ public final class Uint128Response {
     private final String high;
     private final String low;
 
-    @OutputCustomType.Constructor({"high","low"})
+    @OutputCustomType.Constructor
     private Uint128Response(
-        String high,
-        String low) {
+        @OutputCustomType.Parameter("high") String high,
+        @OutputCustomType.Parameter("low") String low) {
         this.high = high;
         this.low = low;
     }

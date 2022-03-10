@@ -21,10 +21,10 @@ public final class CisBenchmarkResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor({"profileLevel","severity"})
+    @OutputCustomType.Constructor
     private CisBenchmarkResponse(
-        Integer profileLevel,
-        String severity) {
+        @OutputCustomType.Parameter("profileLevel") Integer profileLevel,
+        @OutputCustomType.Parameter("severity") String severity) {
         this.profileLevel = profileLevel;
         this.severity = severity;
     }

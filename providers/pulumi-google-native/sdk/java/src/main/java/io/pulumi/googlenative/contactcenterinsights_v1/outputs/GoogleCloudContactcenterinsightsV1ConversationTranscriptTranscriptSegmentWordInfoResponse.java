@@ -31,12 +31,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      */
     private final String word;
 
-    @OutputCustomType.Constructor({"confidence","endOffset","startOffset","word"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(
-        Double confidence,
-        String endOffset,
-        String startOffset,
-        String word) {
+        @OutputCustomType.Parameter("confidence") Double confidence,
+        @OutputCustomType.Parameter("endOffset") String endOffset,
+        @OutputCustomType.Parameter("startOffset") String startOffset,
+        @OutputCustomType.Parameter("word") String word) {
         this.confidence = confidence;
         this.endOffset = endOffset;
         this.startOffset = startOffset;

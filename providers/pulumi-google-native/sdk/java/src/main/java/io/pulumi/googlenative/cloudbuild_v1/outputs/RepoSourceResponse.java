@@ -52,16 +52,16 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","dir","invertRegex","project","repoName","substitutions","tagName"})
+    @OutputCustomType.Constructor
     private RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String dir,
-        Boolean invertRegex,
-        String project,
-        String repoName,
-        Map<String,String> substitutions,
-        String tagName) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("commitSha") String commitSha,
+        @OutputCustomType.Parameter("dir") String dir,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName,
+        @OutputCustomType.Parameter("substitutions") Map<String,String> substitutions,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;

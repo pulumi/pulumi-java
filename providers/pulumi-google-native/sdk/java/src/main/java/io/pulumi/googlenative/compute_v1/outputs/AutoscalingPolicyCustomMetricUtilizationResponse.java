@@ -36,13 +36,13 @@ public final class AutoscalingPolicyCustomMetricUtilizationResponse {
      */
     private final String utilizationTargetType;
 
-    @OutputCustomType.Constructor({"filter","metric","singleInstanceAssignment","utilizationTarget","utilizationTargetType"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyCustomMetricUtilizationResponse(
-        String filter,
-        String metric,
-        Double singleInstanceAssignment,
-        Double utilizationTarget,
-        String utilizationTargetType) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
+        @OutputCustomType.Parameter("utilizationTarget") Double utilizationTarget,
+        @OutputCustomType.Parameter("utilizationTargetType") String utilizationTargetType) {
         this.filter = filter;
         this.metric = metric;
         this.singleInstanceAssignment = singleInstanceAssignment;

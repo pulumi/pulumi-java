@@ -50,16 +50,16 @@ public final class GetProcessorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","defaultProcessorVersion","displayName","kmsKeyName","name","processEndpoint","state","type"})
+    @OutputCustomType.Constructor
     private GetProcessorResult(
-        String createTime,
-        String defaultProcessorVersion,
-        String displayName,
-        String kmsKeyName,
-        String name,
-        String processEndpoint,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("defaultProcessorVersion") String defaultProcessorVersion,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processEndpoint") String processEndpoint,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.defaultProcessorVersion = defaultProcessorVersion;
         this.displayName = displayName;

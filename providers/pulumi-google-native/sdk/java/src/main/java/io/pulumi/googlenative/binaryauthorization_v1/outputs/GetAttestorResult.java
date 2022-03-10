@@ -31,12 +31,12 @@ public final class GetAttestorResult {
      */
     private final UserOwnedGrafeasNoteResponse userOwnedGrafeasNote;
 
-    @OutputCustomType.Constructor({"description","name","updateTime","userOwnedGrafeasNote"})
+    @OutputCustomType.Constructor
     private GetAttestorResult(
-        String description,
-        String name,
-        String updateTime,
-        UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("userOwnedGrafeasNote") UserOwnedGrafeasNoteResponse userOwnedGrafeasNote) {
         this.description = description;
         this.name = name;
         this.updateTime = updateTime;

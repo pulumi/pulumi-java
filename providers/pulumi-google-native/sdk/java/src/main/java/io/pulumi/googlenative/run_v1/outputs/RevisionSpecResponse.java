@@ -47,15 +47,15 @@ public final class RevisionSpecResponse {
     private final Integer timeoutSeconds;
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"containerConcurrency","containers","enableServiceLinks","imagePullSecrets","serviceAccountName","timeoutSeconds","volumes"})
+    @OutputCustomType.Constructor
     private RevisionSpecResponse(
-        Integer containerConcurrency,
-        List<ContainerResponse> containers,
-        Boolean enableServiceLinks,
-        List<LocalObjectReferenceResponse> imagePullSecrets,
-        String serviceAccountName,
-        Integer timeoutSeconds,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("enableServiceLinks") Boolean enableServiceLinks,
+        @OutputCustomType.Parameter("imagePullSecrets") List<LocalObjectReferenceResponse> imagePullSecrets,
+        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.enableServiceLinks = enableServiceLinks;

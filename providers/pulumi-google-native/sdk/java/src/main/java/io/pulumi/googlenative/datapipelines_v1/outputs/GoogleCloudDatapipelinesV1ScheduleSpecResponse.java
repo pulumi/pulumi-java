@@ -25,11 +25,11 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecResponse {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"nextJobTime","schedule","timeZone"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1ScheduleSpecResponse(
-        String nextJobTime,
-        String schedule,
-        String timeZone) {
+        @OutputCustomType.Parameter("nextJobTime") String nextJobTime,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.nextJobTime = nextJobTime;
         this.schedule = schedule;
         this.timeZone = timeZone;

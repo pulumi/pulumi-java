@@ -53,16 +53,16 @@ public final class PySparkJobResponse {
      */
     private final List<String> pythonFileUris;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","loggingConfig","mainPythonFileUri","properties","pythonFileUris"})
+    @OutputCustomType.Constructor
     private PySparkJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainPythonFileUri,
-        Map<String,String> properties,
-        List<String> pythonFileUris) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("mainPythonFileUri") String mainPythonFileUri,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("pythonFileUris") List<String> pythonFileUris) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

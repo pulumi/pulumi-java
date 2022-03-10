@@ -16,8 +16,8 @@ public final class IosDeviceListResponse {
      */
     private final List<IosDeviceResponse> iosDevices;
 
-    @OutputCustomType.Constructor({"iosDevices"})
-    private IosDeviceListResponse(List<IosDeviceResponse> iosDevices) {
+    @OutputCustomType.Constructor
+    private IosDeviceListResponse(@OutputCustomType.Parameter("iosDevices") List<IosDeviceResponse> iosDevices) {
         this.iosDevices = iosDevices;
     }
 

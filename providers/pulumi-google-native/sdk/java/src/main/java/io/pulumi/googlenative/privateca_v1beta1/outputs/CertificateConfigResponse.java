@@ -27,11 +27,11 @@ public final class CertificateConfigResponse {
      */
     private final SubjectConfigResponse subjectConfig;
 
-    @OutputCustomType.Constructor({"publicKey","reusableConfig","subjectConfig"})
+    @OutputCustomType.Constructor
     private CertificateConfigResponse(
-        PublicKeyResponse publicKey,
-        ReusableConfigWrapperResponse reusableConfig,
-        SubjectConfigResponse subjectConfig) {
+        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("reusableConfig") ReusableConfigWrapperResponse reusableConfig,
+        @OutputCustomType.Parameter("subjectConfig") SubjectConfigResponse subjectConfig) {
         this.publicKey = publicKey;
         this.reusableConfig = reusableConfig;
         this.subjectConfig = subjectConfig;

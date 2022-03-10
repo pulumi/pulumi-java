@@ -55,16 +55,16 @@ public final class AndroidRoboTestResponse {
      */
     private final List<RoboStartingIntentResponse> startingIntents;
 
-    @OutputCustomType.Constructor({"appApk","appBundle","appInitialActivity","appPackageId","roboDirectives","roboMode","roboScript","startingIntents"})
+    @OutputCustomType.Constructor
     private AndroidRoboTestResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appInitialActivity,
-        String appPackageId,
-        List<RoboDirectiveResponse> roboDirectives,
-        String roboMode,
-        FileReferenceResponse roboScript,
-        List<RoboStartingIntentResponse> startingIntents) {
+        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @OutputCustomType.Parameter("appInitialActivity") String appInitialActivity,
+        @OutputCustomType.Parameter("appPackageId") String appPackageId,
+        @OutputCustomType.Parameter("roboDirectives") List<RoboDirectiveResponse> roboDirectives,
+        @OutputCustomType.Parameter("roboMode") String roboMode,
+        @OutputCustomType.Parameter("roboScript") FileReferenceResponse roboScript,
+        @OutputCustomType.Parameter("startingIntents") List<RoboStartingIntentResponse> startingIntents) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appInitialActivity = appInitialActivity;

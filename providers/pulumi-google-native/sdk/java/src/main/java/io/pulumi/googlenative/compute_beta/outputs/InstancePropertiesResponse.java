@@ -142,31 +142,31 @@ public final class InstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor({"advancedMachineFeatures","canIpForward","confidentialInstanceConfig","description","disks","displayDevice","guestAccelerators","labels","machineType","metadata","minCpuPlatform","networkInterfaces","networkPerformanceConfig","postKeyRevocationActionType","privateIpv6GoogleAccess","reservationAffinity","resourceManagerTags","resourcePolicies","scheduling","serviceAccounts","shieldedInstanceConfig","shieldedVmConfig","tags"})
+    @OutputCustomType.Constructor
     private InstancePropertiesResponse(
-        AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        Boolean canIpForward,
-        ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        String description,
-        List<AttachedDiskResponse> disks,
-        DisplayDeviceResponse displayDevice,
-        List<AcceleratorConfigResponse> guestAccelerators,
-        Map<String,String> labels,
-        String machineType,
-        MetadataResponse metadata,
-        String minCpuPlatform,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        NetworkPerformanceConfigResponse networkPerformanceConfig,
-        String postKeyRevocationActionType,
-        String privateIpv6GoogleAccess,
-        ReservationAffinityResponse reservationAffinity,
-        Map<String,String> resourceManagerTags,
-        List<String> resourcePolicies,
-        SchedulingResponse scheduling,
-        List<ServiceAccountResponse> serviceAccounts,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        ShieldedVmConfigResponse shieldedVmConfig,
-        TagsResponse tags) {
+        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<AttachedDiskResponse> disks,
+        @OutputCustomType.Parameter("displayDevice") DisplayDeviceResponse displayDevice,
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @OutputCustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("shieldedVmConfig") ShieldedVmConfigResponse shieldedVmConfig,
+        @OutputCustomType.Parameter("tags") TagsResponse tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;

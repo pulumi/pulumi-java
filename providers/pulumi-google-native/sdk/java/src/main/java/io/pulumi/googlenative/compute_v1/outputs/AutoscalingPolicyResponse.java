@@ -58,17 +58,17 @@ public final class AutoscalingPolicyResponse {
      */
     private final Map<String,String> scalingSchedules;
 
-    @OutputCustomType.Constructor({"coolDownPeriodSec","cpuUtilization","customMetricUtilizations","loadBalancingUtilization","maxNumReplicas","minNumReplicas","mode","scaleInControl","scalingSchedules"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyResponse(
-        Integer coolDownPeriodSec,
-        AutoscalingPolicyCpuUtilizationResponse cpuUtilization,
-        List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations,
-        AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization,
-        Integer maxNumReplicas,
-        Integer minNumReplicas,
-        String mode,
-        AutoscalingPolicyScaleInControlResponse scaleInControl,
-        Map<String,String> scalingSchedules) {
+        @OutputCustomType.Parameter("coolDownPeriodSec") Integer coolDownPeriodSec,
+        @OutputCustomType.Parameter("cpuUtilization") AutoscalingPolicyCpuUtilizationResponse cpuUtilization,
+        @OutputCustomType.Parameter("customMetricUtilizations") List<AutoscalingPolicyCustomMetricUtilizationResponse> customMetricUtilizations,
+        @OutputCustomType.Parameter("loadBalancingUtilization") AutoscalingPolicyLoadBalancingUtilizationResponse loadBalancingUtilization,
+        @OutputCustomType.Parameter("maxNumReplicas") Integer maxNumReplicas,
+        @OutputCustomType.Parameter("minNumReplicas") Integer minNumReplicas,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("scaleInControl") AutoscalingPolicyScaleInControlResponse scaleInControl,
+        @OutputCustomType.Parameter("scalingSchedules") Map<String,String> scalingSchedules) {
         this.coolDownPeriodSec = coolDownPeriodSec;
         this.cpuUtilization = cpuUtilization;
         this.customMetricUtilizations = customMetricUtilizations;

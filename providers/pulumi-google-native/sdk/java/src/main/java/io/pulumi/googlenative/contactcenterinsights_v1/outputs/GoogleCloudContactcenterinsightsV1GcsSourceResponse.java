@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
      */
     private final String transcriptUri;
 
-    @OutputCustomType.Constructor({"audioUri","transcriptUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1GcsSourceResponse(
-        String audioUri,
-        String transcriptUri) {
+        @OutputCustomType.Parameter("audioUri") String audioUri,
+        @OutputCustomType.Parameter("transcriptUri") String transcriptUri) {
         this.audioUri = audioUri;
         this.transcriptUri = transcriptUri;
     }

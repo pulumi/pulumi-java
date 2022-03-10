@@ -12,10 +12,10 @@ public final class BasicAuthResponse {
     private final String password;
     private final String user;
 
-    @OutputCustomType.Constructor({"password","user"})
+    @OutputCustomType.Constructor
     private BasicAuthResponse(
-        String password,
-        String user) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("user") String user) {
         this.password = password;
         this.user = user;
     }

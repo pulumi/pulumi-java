@@ -32,12 +32,12 @@ public final class RouterNatRuleResponse {
      */
     private final Integer ruleNumber;
 
-    @OutputCustomType.Constructor({"action","description","match","ruleNumber"})
+    @OutputCustomType.Constructor
     private RouterNatRuleResponse(
-        RouterNatRuleActionResponse action,
-        String description,
-        String match,
-        Integer ruleNumber) {
+        @OutputCustomType.Parameter("action") RouterNatRuleActionResponse action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("match") String match,
+        @OutputCustomType.Parameter("ruleNumber") Integer ruleNumber) {
         this.action = action;
         this.description = description;
         this.match = match;

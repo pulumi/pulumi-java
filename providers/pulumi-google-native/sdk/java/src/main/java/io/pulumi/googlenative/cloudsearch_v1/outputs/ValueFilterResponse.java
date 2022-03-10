@@ -21,10 +21,10 @@ public final class ValueFilterResponse {
      */
     private final ValueResponse value;
 
-    @OutputCustomType.Constructor({"operatorName","value"})
+    @OutputCustomType.Constructor
     private ValueFilterResponse(
-        String operatorName,
-        ValueResponse value) {
+        @OutputCustomType.Parameter("operatorName") String operatorName,
+        @OutputCustomType.Parameter("value") ValueResponse value) {
         this.operatorName = operatorName;
         this.value = value;
     }

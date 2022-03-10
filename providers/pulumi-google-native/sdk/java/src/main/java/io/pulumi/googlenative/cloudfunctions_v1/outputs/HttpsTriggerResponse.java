@@ -20,10 +20,10 @@ public final class HttpsTriggerResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"securityLevel","url"})
+    @OutputCustomType.Constructor
     private HttpsTriggerResponse(
-        String securityLevel,
-        String url) {
+        @OutputCustomType.Parameter("securityLevel") String securityLevel,
+        @OutputCustomType.Parameter("url") String url) {
         this.securityLevel = securityLevel;
         this.url = url;
     }

@@ -27,11 +27,11 @@ public final class BasicAutoscalingAlgorithmResponse {
      */
     private final BasicYarnAutoscalingConfigResponse yarnConfig;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","sparkStandaloneConfig","yarnConfig"})
+    @OutputCustomType.Constructor
     private BasicAutoscalingAlgorithmResponse(
-        String cooldownPeriod,
-        SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
-        BasicYarnAutoscalingConfigResponse yarnConfig) {
+        @OutputCustomType.Parameter("cooldownPeriod") String cooldownPeriod,
+        @OutputCustomType.Parameter("sparkStandaloneConfig") SparkStandaloneAutoscalingConfigResponse sparkStandaloneConfig,
+        @OutputCustomType.Parameter("yarnConfig") BasicYarnAutoscalingConfigResponse yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.sparkStandaloneConfig = sparkStandaloneConfig;
         this.yarnConfig = yarnConfig;

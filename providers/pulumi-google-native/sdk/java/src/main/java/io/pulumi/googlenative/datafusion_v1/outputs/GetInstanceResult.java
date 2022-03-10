@@ -152,35 +152,35 @@ public final class GetInstanceResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"accelerators","apiEndpoint","availableVersion","createTime","cryptoKeyConfig","dataprocServiceAccount","description","disabledReason","displayName","enableRbac","enableStackdriverLogging","enableStackdriverMonitoring","gcsBucket","labels","name","networkConfig","options","p4ServiceAccount","privateInstance","serviceEndpoint","state","stateMessage","tenantProjectId","type","updateTime","version","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        List<AcceleratorResponse> accelerators,
-        String apiEndpoint,
-        List<VersionResponse> availableVersion,
-        String createTime,
-        CryptoKeyConfigResponse cryptoKeyConfig,
-        String dataprocServiceAccount,
-        String description,
-        List<String> disabledReason,
-        String displayName,
-        Boolean enableRbac,
-        Boolean enableStackdriverLogging,
-        Boolean enableStackdriverMonitoring,
-        String gcsBucket,
-        Map<String,String> labels,
-        String name,
-        NetworkConfigResponse networkConfig,
-        Map<String,String> options,
-        String p4ServiceAccount,
-        Boolean privateInstance,
-        String serviceEndpoint,
-        String state,
-        String stateMessage,
-        String tenantProjectId,
-        String type,
-        String updateTime,
-        String version,
-        String zone) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorResponse> accelerators,
+        @OutputCustomType.Parameter("apiEndpoint") String apiEndpoint,
+        @OutputCustomType.Parameter("availableVersion") List<VersionResponse> availableVersion,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("cryptoKeyConfig") CryptoKeyConfigResponse cryptoKeyConfig,
+        @OutputCustomType.Parameter("dataprocServiceAccount") String dataprocServiceAccount,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabledReason") List<String> disabledReason,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableRbac") Boolean enableRbac,
+        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @OutputCustomType.Parameter("enableStackdriverMonitoring") Boolean enableStackdriverMonitoring,
+        @OutputCustomType.Parameter("gcsBucket") String gcsBucket,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("options") Map<String,String> options,
+        @OutputCustomType.Parameter("p4ServiceAccount") String p4ServiceAccount,
+        @OutputCustomType.Parameter("privateInstance") Boolean privateInstance,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("tenantProjectId") String tenantProjectId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.accelerators = accelerators;
         this.apiEndpoint = apiEndpoint;
         this.availableVersion = availableVersion;

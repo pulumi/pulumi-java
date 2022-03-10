@@ -42,14 +42,14 @@ public final class GetDomainResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"domainName","domainRedirect","provisioning","site","status","updateTime"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        String domainName,
-        DomainRedirectResponse domainRedirect,
-        DomainProvisioningResponse provisioning,
-        String site,
-        String status,
-        String updateTime) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainRedirect") DomainRedirectResponse domainRedirect,
+        @OutputCustomType.Parameter("provisioning") DomainProvisioningResponse provisioning,
+        @OutputCustomType.Parameter("site") String site,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.domainName = domainName;
         this.domainRedirect = domainRedirect;
         this.provisioning = provisioning;

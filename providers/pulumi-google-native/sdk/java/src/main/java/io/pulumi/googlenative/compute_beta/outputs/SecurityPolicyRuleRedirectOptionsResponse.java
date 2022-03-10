@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"target","type"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRedirectOptionsResponse(
-        String target,
-        String type) {
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.target = target;
         this.type = type;
     }

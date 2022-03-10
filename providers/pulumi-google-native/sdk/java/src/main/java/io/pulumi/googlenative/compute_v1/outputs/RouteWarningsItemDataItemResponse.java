@@ -20,10 +20,10 @@ public final class RouteWarningsItemDataItemResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private RouteWarningsItemDataItemResponse(
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

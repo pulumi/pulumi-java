@@ -21,10 +21,10 @@ public final class DeadLetterPolicyResponse {
      */
     private final Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor({"deadLetterTopic","maxDeliveryAttempts"})
+    @OutputCustomType.Constructor
     private DeadLetterPolicyResponse(
-        String deadLetterTopic,
-        Integer maxDeliveryAttempts) {
+        @OutputCustomType.Parameter("deadLetterTopic") String deadLetterTopic,
+        @OutputCustomType.Parameter("maxDeliveryAttempts") Integer maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }

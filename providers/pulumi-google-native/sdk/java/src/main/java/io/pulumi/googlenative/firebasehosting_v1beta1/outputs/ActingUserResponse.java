@@ -20,10 +20,10 @@ public final class ActingUserResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor({"email","imageUrl"})
+    @OutputCustomType.Constructor
     private ActingUserResponse(
-        String email,
-        String imageUrl) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
         this.email = email;
         this.imageUrl = imageUrl;
     }

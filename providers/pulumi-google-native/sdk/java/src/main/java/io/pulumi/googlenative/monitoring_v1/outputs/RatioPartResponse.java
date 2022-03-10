@@ -21,10 +21,10 @@ public final class RatioPartResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"aggregation","filter"})
+    @OutputCustomType.Constructor
     private RatioPartResponse(
-        AggregationResponse aggregation,
-        String filter) {
+        @OutputCustomType.Parameter("aggregation") AggregationResponse aggregation,
+        @OutputCustomType.Parameter("filter") String filter) {
         this.aggregation = aggregation;
         this.filter = filter;
     }

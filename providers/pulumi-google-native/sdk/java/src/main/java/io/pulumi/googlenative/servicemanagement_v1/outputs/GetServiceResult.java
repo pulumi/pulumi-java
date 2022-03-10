@@ -20,10 +20,10 @@ public final class GetServiceResult {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"producerProjectId","serviceName"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String producerProjectId,
-        String serviceName) {
+        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.producerProjectId = producerProjectId;
         this.serviceName = serviceName;
     }

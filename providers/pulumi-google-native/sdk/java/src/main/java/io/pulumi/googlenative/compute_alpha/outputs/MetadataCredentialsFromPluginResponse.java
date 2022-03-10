@@ -20,10 +20,10 @@ public final class MetadataCredentialsFromPluginResponse {
      */
     private final String structConfig;
 
-    @OutputCustomType.Constructor({"name","structConfig"})
+    @OutputCustomType.Constructor
     private MetadataCredentialsFromPluginResponse(
-        String name,
-        String structConfig) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("structConfig") String structConfig) {
         this.name = name;
         this.structConfig = structConfig;
     }

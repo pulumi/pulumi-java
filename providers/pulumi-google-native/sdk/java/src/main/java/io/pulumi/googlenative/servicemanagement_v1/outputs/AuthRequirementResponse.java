@@ -20,10 +20,10 @@ public final class AuthRequirementResponse {
      */
     private final String providerId;
 
-    @OutputCustomType.Constructor({"audiences","providerId"})
+    @OutputCustomType.Constructor
     private AuthRequirementResponse(
-        String audiences,
-        String providerId) {
+        @OutputCustomType.Parameter("audiences") String audiences,
+        @OutputCustomType.Parameter("providerId") String providerId) {
         this.audiences = audiences;
         this.providerId = providerId;
     }

@@ -47,15 +47,15 @@ public final class GetBackupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createTime","description","endTime","name","restoringServices","serviceRevision","state"})
+    @OutputCustomType.Constructor
     private GetBackupResult(
-        String createTime,
-        String description,
-        String endTime,
-        String name,
-        List<String> restoringServices,
-        ServiceResponse serviceRevision,
-        String state) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoringServices") List<String> restoringServices,
+        @OutputCustomType.Parameter("serviceRevision") ServiceResponse serviceRevision,
+        @OutputCustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.endTime = endTime;

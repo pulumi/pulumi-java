@@ -100,25 +100,25 @@ public final class GetRegionCommitmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoRenew","category","creationTimestamp","description","endTimestamp","kind","licenseResource","name","plan","region","reservations","resources","selfLink","startTimestamp","status","statusMessage","type"})
+    @OutputCustomType.Constructor
     private GetRegionCommitmentResult(
-        Boolean autoRenew,
-        String category,
-        String creationTimestamp,
-        String description,
-        String endTimestamp,
-        String kind,
-        LicenseResourceCommitmentResponse licenseResource,
-        String name,
-        String plan,
-        String region,
-        List<ReservationResponse> reservations,
-        List<ResourceCommitmentResponse> resources,
-        String selfLink,
-        String startTimestamp,
-        String status,
-        String statusMessage,
-        String type) {
+        @OutputCustomType.Parameter("autoRenew") Boolean autoRenew,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTimestamp") String endTimestamp,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseResource") LicenseResourceCommitmentResponse licenseResource,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") String plan,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("reservations") List<ReservationResponse> reservations,
+        @OutputCustomType.Parameter("resources") List<ResourceCommitmentResponse> resources,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("startTimestamp") String startTimestamp,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoRenew = autoRenew;
         this.category = category;
         this.creationTimestamp = creationTimestamp;

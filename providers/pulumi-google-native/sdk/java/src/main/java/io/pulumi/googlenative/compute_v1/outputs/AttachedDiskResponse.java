@@ -92,23 +92,23 @@ public final class AttachedDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKey","diskSizeGb","guestOsFeatures","index","initializeParams","$interface","kind","licenses","mode","shieldedInstanceInitialState","source","type"})
+    @OutputCustomType.Constructor
     private AttachedDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String diskSizeGb,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        AttachedDiskInitializeParamsResponse initializeParams,
-        String $interface,
-        String kind,
-        List<String> licenses,
-        String mode,
-        InitialStateConfigResponse shieldedInstanceInitialState,
-        String source,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("initializeParams") AttachedDiskInitializeParamsResponse initializeParams,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

@@ -68,19 +68,19 @@ public final class GetWorkerPoolResult {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"annotations","createTime","deleteTime","displayName","etag","name","networkConfig","state","uid","updateTime","workerConfig"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        Map<String,String> annotations,
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        String name,
-        NetworkConfigResponse networkConfig,
-        String state,
-        String uid,
-        String updateTime,
-        WorkerConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.annotations = annotations;
         this.createTime = createTime;
         this.deleteTime = deleteTime;

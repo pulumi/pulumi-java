@@ -36,13 +36,13 @@ public final class GetPolicyTagResult {
      */
     private final String parentPolicyTag;
 
-    @OutputCustomType.Constructor({"childPolicyTags","description","displayName","name","parentPolicyTag"})
+    @OutputCustomType.Constructor
     private GetPolicyTagResult(
-        List<String> childPolicyTags,
-        String description,
-        String displayName,
-        String name,
-        String parentPolicyTag) {
+        @OutputCustomType.Parameter("childPolicyTags") List<String> childPolicyTags,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentPolicyTag") String parentPolicyTag) {
         this.childPolicyTags = childPolicyTags;
         this.description = description;
         this.displayName = displayName;

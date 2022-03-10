@@ -30,12 +30,12 @@ public final class AclEntryResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"expirationTime","kind","name","value"})
+    @OutputCustomType.Constructor
     private AclEntryResponse(
-        String expirationTime,
-        String kind,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.expirationTime = expirationTime;
         this.kind = kind;
         this.name = name;

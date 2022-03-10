@@ -40,13 +40,13 @@ public final class ReusableConfigValuesResponse {
      */
     private final List<ObjectIdResponse> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private ReusableConfigValuesResponse(
-        List<X509ExtensionResponse> additionalExtensions,
-        List<String> aiaOcspServers,
-        CaOptionsResponse caOptions,
-        KeyUsageResponse keyUsage,
-        List<ObjectIdResponse> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") List<X509ExtensionResponse> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") CaOptionsResponse caOptions,
+        @OutputCustomType.Parameter("keyUsage") KeyUsageResponse keyUsage,
+        @OutputCustomType.Parameter("policyIds") List<ObjectIdResponse> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;

@@ -22,10 +22,10 @@ public final class EndpointConfigResponse {
      */
     private final Map<String,String> httpPorts;
 
-    @OutputCustomType.Constructor({"enableHttpPortAccess","httpPorts"})
+    @OutputCustomType.Constructor
     private EndpointConfigResponse(
-        Boolean enableHttpPortAccess,
-        Map<String,String> httpPorts) {
+        @OutputCustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
+        @OutputCustomType.Parameter("httpPorts") Map<String,String> httpPorts) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }

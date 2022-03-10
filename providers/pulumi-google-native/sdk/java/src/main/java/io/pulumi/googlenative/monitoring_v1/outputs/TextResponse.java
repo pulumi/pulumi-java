@@ -20,10 +20,10 @@ public final class TextResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"content","format"})
+    @OutputCustomType.Constructor
     private TextResponse(
-        String content,
-        String format) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("format") String format) {
         this.content = content;
         this.format = format;
     }

@@ -25,11 +25,11 @@ public final class AcceleratorConfigResponse {
      */
     private final String gpuPartitionSize;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType","gpuPartitionSize"})
+    @OutputCustomType.Constructor
     private AcceleratorConfigResponse(
-        String acceleratorCount,
-        String acceleratorType,
-        String gpuPartitionSize) {
+        @OutputCustomType.Parameter("acceleratorCount") String acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("gpuPartitionSize") String gpuPartitionSize) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
         this.gpuPartitionSize = gpuPartitionSize;

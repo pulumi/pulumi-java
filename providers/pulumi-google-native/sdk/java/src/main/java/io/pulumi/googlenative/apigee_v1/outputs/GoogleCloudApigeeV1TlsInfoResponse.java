@@ -58,17 +58,17 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
      */
     private final String trustStore;
 
-    @OutputCustomType.Constructor({"ciphers","clientAuthEnabled","commonName","enabled","ignoreValidationErrors","keyAlias","keyStore","protocols","trustStore"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1TlsInfoResponse(
-        List<String> ciphers,
-        Boolean clientAuthEnabled,
-        GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
-        Boolean enabled,
-        Boolean ignoreValidationErrors,
-        String keyAlias,
-        String keyStore,
-        List<String> protocols,
-        String trustStore) {
+        @OutputCustomType.Parameter("ciphers") List<String> ciphers,
+        @OutputCustomType.Parameter("clientAuthEnabled") Boolean clientAuthEnabled,
+        @OutputCustomType.Parameter("commonName") GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("ignoreValidationErrors") Boolean ignoreValidationErrors,
+        @OutputCustomType.Parameter("keyAlias") String keyAlias,
+        @OutputCustomType.Parameter("keyStore") String keyStore,
+        @OutputCustomType.Parameter("protocols") List<String> protocols,
+        @OutputCustomType.Parameter("trustStore") String trustStore) {
         this.ciphers = ciphers;
         this.clientAuthEnabled = clientAuthEnabled;
         this.commonName = commonName;

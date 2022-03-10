@@ -30,12 +30,12 @@ public final class DiskUtilizationResponse {
      */
     private final Integer targetWriteOpsPerSecond;
 
-    @OutputCustomType.Constructor({"targetReadBytesPerSecond","targetReadOpsPerSecond","targetWriteBytesPerSecond","targetWriteOpsPerSecond"})
+    @OutputCustomType.Constructor
     private DiskUtilizationResponse(
-        Integer targetReadBytesPerSecond,
-        Integer targetReadOpsPerSecond,
-        Integer targetWriteBytesPerSecond,
-        Integer targetWriteOpsPerSecond) {
+        @OutputCustomType.Parameter("targetReadBytesPerSecond") Integer targetReadBytesPerSecond,
+        @OutputCustomType.Parameter("targetReadOpsPerSecond") Integer targetReadOpsPerSecond,
+        @OutputCustomType.Parameter("targetWriteBytesPerSecond") Integer targetWriteBytesPerSecond,
+        @OutputCustomType.Parameter("targetWriteOpsPerSecond") Integer targetWriteOpsPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;

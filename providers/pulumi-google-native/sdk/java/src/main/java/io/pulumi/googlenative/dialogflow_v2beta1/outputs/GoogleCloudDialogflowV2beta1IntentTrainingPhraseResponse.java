@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","parts","timesAddedCount","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentTrainingPhraseResponse(
-        String name,
-        List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts,
-        Integer timesAddedCount,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parts") List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse> parts,
+        @OutputCustomType.Parameter("timesAddedCount") Integer timesAddedCount,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.parts = parts;
         this.timesAddedCount = timesAddedCount;

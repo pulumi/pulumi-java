@@ -36,13 +36,13 @@ public final class ConditionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"iam","op","svc","sys","values"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        String iam,
-        String op,
-        String svc,
-        String sys,
-        List<String> values) {
+        @OutputCustomType.Parameter("iam") String iam,
+        @OutputCustomType.Parameter("op") String op,
+        @OutputCustomType.Parameter("svc") String svc,
+        @OutputCustomType.Parameter("sys") String sys,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.iam = iam;
         this.op = op;
         this.svc = svc;

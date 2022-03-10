@@ -15,8 +15,8 @@ public final class GoogleCloudApigeeV1AdvancedApiOpsConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GoogleCloudApigeeV1AdvancedApiOpsConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

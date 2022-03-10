@@ -47,16 +47,16 @@ public final class GetDatabaseResult {
     private final String selfLink;
     private final SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails;
 
-    @OutputCustomType.Constructor({"charset","collation","instance","kind","name","project","selfLink","sqlserverDatabaseDetails"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        String charset,
-        String collation,
-        String instance,
-        String kind,
-        String name,
-        String project,
-        String selfLink,
-        SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
+        @OutputCustomType.Parameter("charset") String charset,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sqlserverDatabaseDetails") SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
         this.charset = charset;
         this.collation = collation;
         this.instance = instance;

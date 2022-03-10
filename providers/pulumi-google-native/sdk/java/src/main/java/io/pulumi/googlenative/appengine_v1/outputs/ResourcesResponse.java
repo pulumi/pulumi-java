@@ -38,13 +38,13 @@ public final class ResourcesResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"cpu","diskGb","kmsKeyReference","memoryGb","volumes"})
+    @OutputCustomType.Constructor
     private ResourcesResponse(
-        Double cpu,
-        Double diskGb,
-        String kmsKeyReference,
-        Double memoryGb,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("diskGb") Double diskGb,
+        @OutputCustomType.Parameter("kmsKeyReference") String kmsKeyReference,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.kmsKeyReference = kmsKeyReference;

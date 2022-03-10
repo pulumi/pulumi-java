@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2InfoTypeResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeResponse(
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

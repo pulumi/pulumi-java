@@ -22,10 +22,10 @@ public final class ApigatewayAuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","service"})
+    @OutputCustomType.Constructor
     private ApigatewayAuditConfigResponse(
-        List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

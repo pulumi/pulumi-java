@@ -21,10 +21,10 @@ public final class EnvironmentConfigResponse {
      */
     private final PeripheralsConfigResponse peripheralsConfig;
 
-    @OutputCustomType.Constructor({"executionConfig","peripheralsConfig"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigResponse(
-        ExecutionConfigResponse executionConfig,
-        PeripheralsConfigResponse peripheralsConfig) {
+        @OutputCustomType.Parameter("executionConfig") ExecutionConfigResponse executionConfig,
+        @OutputCustomType.Parameter("peripheralsConfig") PeripheralsConfigResponse peripheralsConfig) {
         this.executionConfig = executionConfig;
         this.peripheralsConfig = peripheralsConfig;
     }

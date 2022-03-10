@@ -15,8 +15,8 @@ public final class NodeConfigDefaultsResponse {
      */
     private final GcfsConfigResponse gcfsConfig;
 
-    @OutputCustomType.Constructor({"gcfsConfig"})
-    private NodeConfigDefaultsResponse(GcfsConfigResponse gcfsConfig) {
+    @OutputCustomType.Constructor
+    private NodeConfigDefaultsResponse(@OutputCustomType.Parameter("gcfsConfig") GcfsConfigResponse gcfsConfig) {
         this.gcfsConfig = gcfsConfig;
     }
 

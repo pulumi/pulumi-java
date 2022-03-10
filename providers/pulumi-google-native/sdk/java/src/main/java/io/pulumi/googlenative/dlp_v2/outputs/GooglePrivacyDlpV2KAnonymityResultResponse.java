@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
      */
     private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
-    @OutputCustomType.Constructor({"equivalenceClassHistogramBuckets"})
-    private GooglePrivacyDlpV2KAnonymityResultResponse(List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2KAnonymityResultResponse(@OutputCustomType.Parameter("equivalenceClassHistogramBuckets") List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
         this.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
     }
 

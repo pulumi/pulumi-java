@@ -133,31 +133,31 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientRequestId","createTime","createdFromSnapshotId","currentState","currentStateTime","environment","jobMetadata","labels","location","name","pipelineDescription","project","replaceJobId","replacedByJobId","requestedState","satisfiesPzs","stageStates","startTime","steps","stepsLocation","tempFiles","transformNameMapping","type"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        String clientRequestId,
-        String createTime,
-        String createdFromSnapshotId,
-        String currentState,
-        String currentStateTime,
-        EnvironmentResponse environment,
-        JobMetadataResponse jobMetadata,
-        Map<String,String> labels,
-        String location,
-        String name,
-        PipelineDescriptionResponse pipelineDescription,
-        String project,
-        String replaceJobId,
-        String replacedByJobId,
-        String requestedState,
-        Boolean satisfiesPzs,
-        List<ExecutionStageStateResponse> stageStates,
-        String startTime,
-        List<StepResponse> steps,
-        String stepsLocation,
-        List<String> tempFiles,
-        Map<String,String> transformNameMapping,
-        String type) {
+        @OutputCustomType.Parameter("clientRequestId") String clientRequestId,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("createdFromSnapshotId") String createdFromSnapshotId,
+        @OutputCustomType.Parameter("currentState") String currentState,
+        @OutputCustomType.Parameter("currentStateTime") String currentStateTime,
+        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
+        @OutputCustomType.Parameter("jobMetadata") JobMetadataResponse jobMetadata,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pipelineDescription") PipelineDescriptionResponse pipelineDescription,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("replaceJobId") String replaceJobId,
+        @OutputCustomType.Parameter("replacedByJobId") String replacedByJobId,
+        @OutputCustomType.Parameter("requestedState") String requestedState,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("stageStates") List<ExecutionStageStateResponse> stageStates,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("steps") List<StepResponse> steps,
+        @OutputCustomType.Parameter("stepsLocation") String stepsLocation,
+        @OutputCustomType.Parameter("tempFiles") List<String> tempFiles,
+        @OutputCustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientRequestId = clientRequestId;
         this.createTime = createTime;
         this.createdFromSnapshotId = createdFromSnapshotId;

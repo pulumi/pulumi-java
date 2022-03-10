@@ -31,12 +31,12 @@ public final class StandardSchedulerSettingsResponse {
      */
     private final Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","targetCpuUtilization","targetThroughputUtilization"})
+    @OutputCustomType.Constructor
     private StandardSchedulerSettingsResponse(
-        Integer maxInstances,
-        Integer minInstances,
-        Double targetCpuUtilization,
-        Double targetThroughputUtilization) {
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") Integer minInstances,
+        @OutputCustomType.Parameter("targetCpuUtilization") Double targetCpuUtilization,
+        @OutputCustomType.Parameter("targetThroughputUtilization") Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;

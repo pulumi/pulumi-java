@@ -20,10 +20,10 @@ public final class BucketWebsiteResponse {
      */
     private final String notFoundPage;
 
-    @OutputCustomType.Constructor({"mainPageSuffix","notFoundPage"})
+    @OutputCustomType.Constructor
     private BucketWebsiteResponse(
-        String mainPageSuffix,
-        String notFoundPage) {
+        @OutputCustomType.Parameter("mainPageSuffix") String mainPageSuffix,
+        @OutputCustomType.Parameter("notFoundPage") String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }

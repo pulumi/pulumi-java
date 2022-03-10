@@ -20,10 +20,10 @@ public final class CloudSqlCredentialResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","username"})
+    @OutputCustomType.Constructor
     private CloudSqlCredentialResponse(
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

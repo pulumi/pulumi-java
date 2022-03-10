@@ -58,17 +58,17 @@ public final class BackupConfigurationResponse {
      */
     private final Integer transactionLogRetentionDays;
 
-    @OutputCustomType.Constructor({"backupRetentionSettings","binaryLogEnabled","enabled","kind","location","pointInTimeRecoveryEnabled","replicationLogArchivingEnabled","startTime","transactionLogRetentionDays"})
+    @OutputCustomType.Constructor
     private BackupConfigurationResponse(
-        BackupRetentionSettingsResponse backupRetentionSettings,
-        Boolean binaryLogEnabled,
-        Boolean enabled,
-        String kind,
-        String location,
-        Boolean pointInTimeRecoveryEnabled,
-        Boolean replicationLogArchivingEnabled,
-        String startTime,
-        Integer transactionLogRetentionDays) {
+        @OutputCustomType.Parameter("backupRetentionSettings") BackupRetentionSettingsResponse backupRetentionSettings,
+        @OutputCustomType.Parameter("binaryLogEnabled") Boolean binaryLogEnabled,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") Boolean pointInTimeRecoveryEnabled,
+        @OutputCustomType.Parameter("replicationLogArchivingEnabled") Boolean replicationLogArchivingEnabled,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("transactionLogRetentionDays") Integer transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;

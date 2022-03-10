@@ -37,14 +37,14 @@ public final class MasterAuthResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfig","clientKey","clusterCaCertificate","password","username"})
+    @OutputCustomType.Constructor
     private MasterAuthResponse(
-        String clientCertificate,
-        ClientCertificateConfigResponse clientCertificateConfig,
-        String clientKey,
-        String clusterCaCertificate,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfig") ClientCertificateConfigResponse clientCertificateConfig,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;

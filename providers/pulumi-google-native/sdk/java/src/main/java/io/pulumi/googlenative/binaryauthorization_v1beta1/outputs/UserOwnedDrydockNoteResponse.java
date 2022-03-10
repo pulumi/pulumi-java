@@ -27,11 +27,11 @@ public final class UserOwnedDrydockNoteResponse {
      */
     private final List<AttestorPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor({"delegationServiceAccountEmail","noteReference","publicKeys"})
+    @OutputCustomType.Constructor
     private UserOwnedDrydockNoteResponse(
-        String delegationServiceAccountEmail,
-        String noteReference,
-        List<AttestorPublicKeyResponse> publicKeys) {
+        @OutputCustomType.Parameter("delegationServiceAccountEmail") String delegationServiceAccountEmail,
+        @OutputCustomType.Parameter("noteReference") String noteReference,
+        @OutputCustomType.Parameter("publicKeys") List<AttestorPublicKeyResponse> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;

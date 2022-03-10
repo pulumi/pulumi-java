@@ -20,10 +20,10 @@ public final class FailureInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"detail","type"})
+    @OutputCustomType.Constructor
     private FailureInfoResponse(
-        String detail,
-        String type) {
+        @OutputCustomType.Parameter("detail") String detail,
+        @OutputCustomType.Parameter("type") String type) {
         this.detail = detail;
         this.type = type;
     }

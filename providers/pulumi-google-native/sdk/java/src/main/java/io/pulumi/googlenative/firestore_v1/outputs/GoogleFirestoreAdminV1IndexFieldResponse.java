@@ -25,11 +25,11 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse {
      */
     private final String order;
 
-    @OutputCustomType.Constructor({"arrayConfig","fieldPath","order"})
+    @OutputCustomType.Constructor
     private GoogleFirestoreAdminV1IndexFieldResponse(
-        String arrayConfig,
-        String fieldPath,
-        String order) {
+        @OutputCustomType.Parameter("arrayConfig") String arrayConfig,
+        @OutputCustomType.Parameter("fieldPath") String fieldPath,
+        @OutputCustomType.Parameter("order") String order) {
         this.arrayConfig = arrayConfig;
         this.fieldPath = fieldPath;
         this.order = order;

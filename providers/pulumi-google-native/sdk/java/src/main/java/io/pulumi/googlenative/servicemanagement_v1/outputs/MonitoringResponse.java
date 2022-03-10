@@ -21,10 +21,10 @@ public final class MonitoringResponse {
      */
     private final List<MonitoringDestinationResponse> producerDestinations;
 
-    @OutputCustomType.Constructor({"consumerDestinations","producerDestinations"})
+    @OutputCustomType.Constructor
     private MonitoringResponse(
-        List<MonitoringDestinationResponse> consumerDestinations,
-        List<MonitoringDestinationResponse> producerDestinations) {
+        @OutputCustomType.Parameter("consumerDestinations") List<MonitoringDestinationResponse> consumerDestinations,
+        @OutputCustomType.Parameter("producerDestinations") List<MonitoringDestinationResponse> producerDestinations) {
         this.consumerDestinations = consumerDestinations;
         this.producerDestinations = producerDestinations;
     }

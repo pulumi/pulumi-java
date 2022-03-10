@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
      */
     private final String minimumRingSize;
 
-    @OutputCustomType.Constructor({"httpCookie","httpHeaderName","minimumRingSize"})
+    @OutputCustomType.Constructor
     private ConsistentHashLoadBalancerSettingsResponse(
-        ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
-        String httpHeaderName,
-        String minimumRingSize) {
+        @OutputCustomType.Parameter("httpCookie") ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
+        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @OutputCustomType.Parameter("minimumRingSize") String minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

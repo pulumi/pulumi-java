@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
      */
     private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
-    @OutputCustomType.Constructor({"transformations"})
-    private GooglePrivacyDlpV2InfoTypeTransformationsResponse(List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse(@OutputCustomType.Parameter("transformations") List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
         this.transformations = transformations;
     }
 

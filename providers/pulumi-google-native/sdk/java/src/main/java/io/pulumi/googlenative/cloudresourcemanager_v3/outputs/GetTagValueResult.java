@@ -50,16 +50,16 @@ public final class GetTagValueResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","etag","name","namespacedName","parent","shortName","updateTime"})
+    @OutputCustomType.Constructor
     private GetTagValueResult(
-        String createTime,
-        String description,
-        String etag,
-        String name,
-        String namespacedName,
-        String parent,
-        String shortName,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespacedName") String namespacedName,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("shortName") String shortName,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

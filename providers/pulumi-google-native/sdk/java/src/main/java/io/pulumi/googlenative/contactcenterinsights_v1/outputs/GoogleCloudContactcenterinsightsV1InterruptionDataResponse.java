@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1InterruptionDataResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1InterruptionDataResponse() {
     }
 

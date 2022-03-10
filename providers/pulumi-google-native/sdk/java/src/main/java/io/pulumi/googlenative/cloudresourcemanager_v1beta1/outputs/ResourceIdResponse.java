@@ -15,8 +15,8 @@ public final class ResourceIdResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ResourceIdResponse(String type) {
+    @OutputCustomType.Constructor
+    private ResourceIdResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 

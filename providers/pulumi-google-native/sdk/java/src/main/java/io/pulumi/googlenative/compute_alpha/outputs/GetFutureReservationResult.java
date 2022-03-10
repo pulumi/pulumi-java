@@ -70,20 +70,20 @@ public final class GetFutureReservationResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","name","namePrefix","selfLink","selfLinkWithId","shareSettings","specificSkuProperties","status","timeWindow","zone"})
+    @OutputCustomType.Constructor
     private GetFutureReservationResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        String namePrefix,
-        String selfLink,
-        String selfLinkWithId,
-        ShareSettingsResponse shareSettings,
-        FutureReservationSpecificSKUPropertiesResponse specificSkuProperties,
-        FutureReservationStatusResponse status,
-        FutureReservationTimeWindowResponse timeWindow,
-        String zone) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @OutputCustomType.Parameter("specificSkuProperties") FutureReservationSpecificSKUPropertiesResponse specificSkuProperties,
+        @OutputCustomType.Parameter("status") FutureReservationStatusResponse status,
+        @OutputCustomType.Parameter("timeWindow") FutureReservationTimeWindowResponse timeWindow,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

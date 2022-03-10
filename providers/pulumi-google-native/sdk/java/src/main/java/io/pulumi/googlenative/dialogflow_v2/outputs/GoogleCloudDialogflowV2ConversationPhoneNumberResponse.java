@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor({"phoneNumber"})
-    private GoogleCloudDialogflowV2ConversationPhoneNumberResponse(String phoneNumber) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2ConversationPhoneNumberResponse(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

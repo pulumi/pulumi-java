@@ -37,13 +37,13 @@ public final class AppEngineHttpRequestResponse {
      */
     private final String relativeUrl;
 
-    @OutputCustomType.Constructor({"appEngineRouting","headers","httpMethod","payload","relativeUrl"})
+    @OutputCustomType.Constructor
     private AppEngineHttpRequestResponse(
-        AppEngineRoutingResponse appEngineRouting,
-        Map<String,String> headers,
-        String httpMethod,
-        String payload,
-        String relativeUrl) {
+        @OutputCustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("relativeUrl") String relativeUrl) {
         this.appEngineRouting = appEngineRouting;
         this.headers = headers;
         this.httpMethod = httpMethod;

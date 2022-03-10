@@ -16,8 +16,8 @@ public final class ResponsePolicyRuleLocalDataResponse {
      */
     private final List<ResourceRecordSetResponse> localDatas;
 
-    @OutputCustomType.Constructor({"localDatas"})
-    private ResponsePolicyRuleLocalDataResponse(List<ResourceRecordSetResponse> localDatas) {
+    @OutputCustomType.Constructor
+    private ResponsePolicyRuleLocalDataResponse(@OutputCustomType.Parameter("localDatas") List<ResourceRecordSetResponse> localDatas) {
         this.localDatas = localDatas;
     }
 

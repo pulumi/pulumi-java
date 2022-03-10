@@ -31,12 +31,12 @@ public final class GetIngressRuleResult {
      */
     private final String sourceRange;
 
-    @OutputCustomType.Constructor({"action","description","priority","sourceRange"})
+    @OutputCustomType.Constructor
     private GetIngressRuleResult(
-        String action,
-        String description,
-        Integer priority,
-        String sourceRange) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("sourceRange") String sourceRange) {
         this.action = action;
         this.description = description;
         this.priority = priority;

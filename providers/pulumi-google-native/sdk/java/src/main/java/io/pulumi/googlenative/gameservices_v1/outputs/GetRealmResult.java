@@ -46,15 +46,15 @@ public final class GetRealmResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","etag","labels","name","timeZone","updateTime"})
+    @OutputCustomType.Constructor
     private GetRealmResult(
-        String createTime,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        String timeZone,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.etag = etag;

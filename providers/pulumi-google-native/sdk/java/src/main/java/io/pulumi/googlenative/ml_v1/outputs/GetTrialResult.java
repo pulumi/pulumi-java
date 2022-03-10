@@ -64,18 +64,18 @@ public final class GetTrialResult {
      */
     private final Boolean trialInfeasible;
 
-    @OutputCustomType.Constructor({"clientId","endTime","finalMeasurement","infeasibleReason","measurements","name","parameters","startTime","state","trialInfeasible"})
+    @OutputCustomType.Constructor
     private GetTrialResult(
-        String clientId,
-        String endTime,
-        GoogleCloudMlV1__MeasurementResponse finalMeasurement,
-        String infeasibleReason,
-        List<GoogleCloudMlV1__MeasurementResponse> measurements,
-        String name,
-        List<GoogleCloudMlV1_Trial_ParameterResponse> parameters,
-        String startTime,
-        String state,
-        Boolean trialInfeasible) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("finalMeasurement") GoogleCloudMlV1__MeasurementResponse finalMeasurement,
+        @OutputCustomType.Parameter("infeasibleReason") String infeasibleReason,
+        @OutputCustomType.Parameter("measurements") List<GoogleCloudMlV1__MeasurementResponse> measurements,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudMlV1_Trial_ParameterResponse> parameters,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trialInfeasible") Boolean trialInfeasible) {
         this.clientId = clientId;
         this.endTime = endTime;
         this.finalMeasurement = finalMeasurement;

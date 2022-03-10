@@ -16,8 +16,8 @@ public final class MysqlRdbmsResponse {
      */
     private final List<MysqlDatabaseResponse> mysqlDatabases;
 
-    @OutputCustomType.Constructor({"mysqlDatabases"})
-    private MysqlRdbmsResponse(List<MysqlDatabaseResponse> mysqlDatabases) {
+    @OutputCustomType.Constructor
+    private MysqlRdbmsResponse(@OutputCustomType.Parameter("mysqlDatabases") List<MysqlDatabaseResponse> mysqlDatabases) {
         this.mysqlDatabases = mysqlDatabases;
     }
 

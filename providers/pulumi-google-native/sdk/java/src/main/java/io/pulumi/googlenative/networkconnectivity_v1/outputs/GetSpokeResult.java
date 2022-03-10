@@ -69,19 +69,19 @@ public final class GetSpokeResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","hub","labels","linkedInterconnectAttachments","linkedRouterApplianceInstances","linkedVpnTunnels","name","state","uniqueId","updateTime"})
+    @OutputCustomType.Constructor
     private GetSpokeResult(
-        String createTime,
-        String description,
-        String hub,
-        Map<String,String> labels,
-        LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments,
-        LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances,
-        LinkedVpnTunnelsResponse linkedVpnTunnels,
-        String name,
-        String state,
-        String uniqueId,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hub") String hub,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linkedInterconnectAttachments") LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments,
+        @OutputCustomType.Parameter("linkedRouterApplianceInstances") LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances,
+        @OutputCustomType.Parameter("linkedVpnTunnels") LinkedVpnTunnelsResponse linkedVpnTunnels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.hub = hub;

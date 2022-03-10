@@ -15,8 +15,8 @@ public final class GoogleCloudStorageResponse {
      */
     private final String gcsPath;
 
-    @OutputCustomType.Constructor({"gcsPath"})
-    private GoogleCloudStorageResponse(String gcsPath) {
+    @OutputCustomType.Constructor
+    private GoogleCloudStorageResponse(@OutputCustomType.Parameter("gcsPath") String gcsPath) {
         this.gcsPath = gcsPath;
     }
 

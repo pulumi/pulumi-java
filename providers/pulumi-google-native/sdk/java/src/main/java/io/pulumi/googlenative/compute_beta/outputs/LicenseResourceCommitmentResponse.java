@@ -25,11 +25,11 @@ public final class LicenseResourceCommitmentResponse {
      */
     private final String license;
 
-    @OutputCustomType.Constructor({"amount","coresPerLicense","license"})
+    @OutputCustomType.Constructor
     private LicenseResourceCommitmentResponse(
-        String amount,
-        String coresPerLicense,
-        String license) {
+        @OutputCustomType.Parameter("amount") String amount,
+        @OutputCustomType.Parameter("coresPerLicense") String coresPerLicense,
+        @OutputCustomType.Parameter("license") String license) {
         this.amount = amount;
         this.coresPerLicense = coresPerLicense;
         this.license = license;

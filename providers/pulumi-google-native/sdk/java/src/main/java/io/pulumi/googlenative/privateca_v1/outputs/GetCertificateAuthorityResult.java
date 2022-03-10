@@ -102,25 +102,25 @@ public final class GetCertificateAuthorityResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"accessUrls","caCertificateDescriptions","config","createTime","deleteTime","expireTime","gcsBucket","keySpec","labels","lifetime","name","pemCaCertificates","state","subordinateConfig","tier","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityResult(
-        AccessUrlsResponse accessUrls,
-        List<CertificateDescriptionResponse> caCertificateDescriptions,
-        CertificateConfigResponse config,
-        String createTime,
-        String deleteTime,
-        String expireTime,
-        String gcsBucket,
-        KeyVersionSpecResponse keySpec,
-        Map<String,String> labels,
-        String lifetime,
-        String name,
-        List<String> pemCaCertificates,
-        String state,
-        SubordinateConfigResponse subordinateConfig,
-        String tier,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("accessUrls") AccessUrlsResponse accessUrls,
+        @OutputCustomType.Parameter("caCertificateDescriptions") List<CertificateDescriptionResponse> caCertificateDescriptions,
+        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("gcsBucket") String gcsBucket,
+        @OutputCustomType.Parameter("keySpec") KeyVersionSpecResponse keySpec,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pemCaCertificates") List<String> pemCaCertificates,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subordinateConfig") SubordinateConfigResponse subordinateConfig,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.accessUrls = accessUrls;
         this.caCertificateDescriptions = caCertificateDescriptions;
         this.config = config;

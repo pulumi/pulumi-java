@@ -25,11 +25,11 @@ public final class RuntimeAccessConfigResponse {
      */
     private final String runtimeOwner;
 
-    @OutputCustomType.Constructor({"accessType","proxyUri","runtimeOwner"})
+    @OutputCustomType.Constructor
     private RuntimeAccessConfigResponse(
-        String accessType,
-        String proxyUri,
-        String runtimeOwner) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("proxyUri") String proxyUri,
+        @OutputCustomType.Parameter("runtimeOwner") String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;

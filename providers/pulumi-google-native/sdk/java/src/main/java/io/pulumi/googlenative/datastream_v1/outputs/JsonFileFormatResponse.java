@@ -20,10 +20,10 @@ public final class JsonFileFormatResponse {
      */
     private final String schemaFileFormat;
 
-    @OutputCustomType.Constructor({"compression","schemaFileFormat"})
+    @OutputCustomType.Constructor
     private JsonFileFormatResponse(
-        String compression,
-        String schemaFileFormat) {
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("schemaFileFormat") String schemaFileFormat) {
         this.compression = compression;
         this.schemaFileFormat = schemaFileFormat;
     }
